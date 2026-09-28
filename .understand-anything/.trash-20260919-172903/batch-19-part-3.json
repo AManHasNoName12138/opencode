@@ -1,0 +1,829 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/tool/edit.ts",
+      "type": "file",
+      "name": "edit.ts",
+      "filePath": "packages/opencode/src/tool/edit.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、EditTool、SimpleReplacer、LineTrimmedReplacer、BlockAnchorReplacer、WhitespaceNormalizedReplacer、IndentationFlexibleReplacer；内部处理包含 normalizeLineEndings、detectLineEnding、convertToLineEnding、lock、levenshtein、trimDiff、replace。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/edit.ts:levenshtein",
+      "type": "function",
+      "name": "levenshtein",
+      "filePath": "packages/opencode/src/tool/edit.ts",
+      "lineRange": [
+        226,
+        242
+      ],
+      "summary": "在旧版工具调用层中执行 levenshtein，接收 a、b 参数；调用 Math.max、Array.from、Math.min 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/edit.ts:trimDiff",
+      "type": "function",
+      "name": "trimDiff",
+      "filePath": "packages/opencode/src/tool/edit.ts",
+      "lineRange": [
+        646,
+        680
+      ],
+      "summary": "在旧版工具调用层中执行 trimDiff，接收 diff 参数；调用 diff.split、lines.filter、line.startsWith、line.slice、content.trim、content.match、Math.min 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/edit.ts:replace",
+      "type": "function",
+      "name": "replace",
+      "filePath": "packages/opencode/src/tool/edit.ts",
+      "lineRange": [
+        682,
+        729
+      ],
+      "summary": "在旧版工具调用层中执行 replace，接收 content、oldString、newString、replaceAll 参数；调用 replacer、content.indexOf、isDisproportionateMatch、content.replaceAll、content.lastIndexOf、content.substring 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "file",
+      "name": "external-directory.ts",
+      "filePath": "packages/opencode/src/tool/external-directory.ts",
+      "summary": "在旧版工具调用层中提供 assertExternalDirectoryEffect、assertExternalDirectory；内部处理包含 assertExternalDirectory。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/external-directory.ts:assertExternalDirectory",
+      "type": "function",
+      "name": "assertExternalDirectory",
+      "filePath": "packages/opencode/src/tool/external-directory.ts",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "在旧版工具调用层中执行 assertExternalDirectory，接收 ctx、target、options 参数；调用 Effect.runPromise、assertExternalDirectoryEffect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/glob.ts",
+      "type": "file",
+      "name": "glob.ts",
+      "filePath": "packages/opencode/src/tool/glob.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、GlobTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/grep.ts",
+      "type": "file",
+      "name": "grep.ts",
+      "filePath": "packages/opencode/src/tool/grep.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、GrepTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/invalid.ts",
+      "type": "file",
+      "name": "invalid.ts",
+      "filePath": "packages/opencode/src/tool/invalid.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、InvalidTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/json-schema.ts",
+      "type": "file",
+      "name": "json-schema.ts",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "summary": "在旧版工具调用层中提供 fromSchema、fromTool；内部处理包含 fromSchema、fromTool、normalize、isRecord、isJsonSchema、isNonFiniteNumber、isEmptyStructUnion。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "type": "function",
+      "name": "fromSchema",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        8,
+        22
+      ],
+      "summary": "在旧版工具调用层中执行 fromSchema，接收 schema 参数；调用 cache.get、Schema.toJsonSchemaDocument、normalize、Object.keys、dropDefinitionsIfResolved、inlineLocalReferences、isJsonSchema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:fromTool",
+      "type": "function",
+      "name": "fromTool",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        24,
+        26
+      ],
+      "summary": "在旧版工具调用层中执行 fromTool，接收 tool 参数；调用 fromSchema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:normalize",
+      "type": "function",
+      "name": "normalize",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        28,
+        88
+      ],
+      "summary": "在旧版工具调用层中执行 normalize，接收 value、options 参数；调用 Array.isArray、value.map、normalize、isRecord、value.required.filter、Object.fromEntries、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:canFlattenAllOf",
+      "type": "function",
+      "name": "canFlattenAllOf",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        110,
+        119
+      ],
+      "summary": "在旧版工具调用层中执行 canFlattenAllOf，接收 allOf、parent 参数；调用 Object.keys、allOf.every、keys.has、keys.add 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:inlineLocalReferences",
+      "type": "function",
+      "name": "inlineLocalReferences",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        121,
+        144
+      ],
+      "summary": "在旧版工具调用层中执行 inlineLocalReferences，接收 value、definitions、seen 参数；调用 Array.isArray、value.map、inlineLocalReferences、isRecord、value.$ref.match、seen.has、Object.fromEntries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/json-schema.ts:hasLocalReference",
+      "type": "function",
+      "name": "hasLocalReference",
+      "filePath": "packages/opencode/src/tool/json-schema.ts",
+      "lineRange": [
+        152,
+        162
+      ],
+      "summary": "在旧版工具调用层中执行 hasLocalReference，接收 value 参数；调用 Array.isArray、value.some、isRecord、value.$ref.startsWith、Object.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/lsp.ts",
+      "type": "file",
+      "name": "lsp.ts",
+      "filePath": "packages/opencode/src/tool/lsp.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、LspTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/mcp-websearch.ts",
+      "type": "file",
+      "name": "mcp-websearch.ts",
+      "filePath": "packages/opencode/src/tool/mcp-websearch.ts",
+      "summary": "在旧版工具调用层中提供 EXA_URL、PARALLEL_URL、parseResponse、SearchArgs、ParallelSearchArgs、call；内部处理包含 parsePayload、McpRequest、call。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/mcp-websearch.ts:McpRequest",
+      "type": "function",
+      "name": "McpRequest",
+      "filePath": "packages/opencode/src/tool/mcp-websearch.ts",
+      "lineRange": [
+        58,
+        67
+      ],
+      "summary": "在旧版工具调用层中执行 McpRequest，接收 args 参数；调用 Schema.Struct、Schema.Literal 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/mcp-websearch.ts:call",
+      "type": "function",
+      "name": "call",
+      "filePath": "packages/opencode/src/tool/mcp-websearch.ts",
+      "lineRange": [
+        69,
+        96
+      ],
+      "summary": "在旧版工具调用层中执行 call，接收 http、url、tool、args、value、timeout、headers 参数；调用 Effect.gen、HttpClientRequest.post、HttpClientRequest.accept、HttpClientRequest.setHeaders、HttpClientRequest.schemaBodyJson、McpRequest、HttpClient.filterStatusOk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/plan.ts",
+      "type": "file",
+      "name": "plan.ts",
+      "filePath": "packages/opencode/src/tool/plan.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、PlanExitTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/question.ts",
+      "type": "file",
+      "name": "question.ts",
+      "filePath": "packages/opencode/src/tool/question.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、QuestionTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/read.ts",
+      "type": "file",
+      "name": "read.ts",
+      "filePath": "packages/opencode/src/tool/read.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、ReadTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "function:packages/opencode/src/tool/edit.ts:levenshtein",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "function:packages/opencode/src/tool/edit.ts:trimDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "function:packages/opencode/src/tool/edit.ts:trimDiff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "function:packages/opencode/src/tool/edit.ts:replace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "function:packages/opencode/src/tool/edit.ts:replace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/tool/edit.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "file:packages/opencode/src/util/bom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/external-directory.ts",
+      "target": "function:packages/opencode/src/tool/external-directory.ts:assertExternalDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/external-directory.ts",
+      "target": "function:packages/opencode/src/tool/external-directory.ts:assertExternalDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/external-directory.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/external-directory.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/external-directory.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/glob.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/glob.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/glob.ts",
+      "target": "file:packages/opencode/src/tool/glob.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/glob.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/grep.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/grep.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/grep.ts",
+      "target": "file:packages/opencode/src/tool/grep.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/grep.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/invalid.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:fromTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:fromTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:normalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:canFlattenAllOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:inlineLocalReferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:hasLocalReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/json-schema.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "file:packages/opencode/src/tool/lsp.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/mcp-websearch.ts",
+      "target": "function:packages/opencode/src/tool/mcp-websearch.ts:McpRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/mcp-websearch.ts",
+      "target": "function:packages/opencode/src/tool/mcp-websearch.ts:call",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/mcp-websearch.ts",
+      "target": "function:packages/opencode/src/tool/mcp-websearch.ts:call",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/tool/plan-exit.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/question.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/question.ts",
+      "target": "file:packages/opencode/src/tool/question.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/question.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/session/instruction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/tool/read.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "file:packages/opencode/src/util/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:normalize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:inlineLocalReferences",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/json-schema.ts:fromTool",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:fromSchema",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/json-schema.ts:normalize",
+      "target": "function:packages/opencode/src/tool/json-schema.ts:canFlattenAllOf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/mcp-websearch.ts:call",
+      "target": "function:packages/opencode/src/tool/mcp-websearch.ts:McpRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1700 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "type": "file",
+      "name": "scrollback.surface.test.ts",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「turn summary starts at the left edge、theme swaps restyle active reasoning without resetting the stream、theme swaps preserve streamed markdown parser state、finalizes markdown tables for streamed and coalesced input、holds markdown code blocks until final commit and keeps newline ownership、renders todo and question summaries without boilerplate footer copy、inserts spacers for new visible groups」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:claim",
+      "type": "function",
+      "name": "claim",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        27,
+        39
+      ],
+      "summary": "在命令行入口与命令执行层中执行 claim，接收 renderer 参数；调用 Reflect.get、queue.claim、Array.isArray 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        62,
+        90
+      ],
+      "summary": "在命令行入口与命令执行层中执行 setup，接收 input 参数；调用 createTestRenderer、active.push、treeSitterClient.setMockResult 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:assistant",
+      "type": "function",
+      "name": "assistant",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        92,
+        101
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistant，接收 text、phase 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:reasoning",
+      "type": "function",
+      "name": "reasoning",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        103,
+        112
+      ],
+      "summary": "在命令行入口与命令执行层中执行 reasoning，接收 text、phase 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolPart",
+      "type": "function",
+      "name": "toolPart",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        222,
+        232
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolPart，接收 tool、state、id、messageID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolCommit",
+      "type": "function",
+      "name": "toolCommit",
+      "filePath": "packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "lineRange": [
+        234,
+        257
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolCommit，接收 input 参数；调用 toolPart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "type": "file",
+      "name": "session-data.test.ts",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run session data、buffers delayed assistant text until the role is known、keeps leading whitespace buffered until real assistant content arrives、drops delayed text once the message resolves to a user role、suppresses reasoning commits when thinking is disabled、keeps permission precedence over queued questions、refreshes the active permission view when tool input arrives later」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:assistant",
+      "type": "function",
+      "name": "assistant",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        16,
+        36
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistant，接收 id、extra 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:user",
+      "type": "function",
+      "name": "user",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        38,
+        49
+      ],
+      "summary": "在命令行入口与命令执行层中执行 user，接收 id 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:text",
+      "type": "function",
+      "name": "text",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        51,
+        65
+      ],
+      "summary": "在命令行入口与命令执行层中执行 text，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:reasoning",
+      "type": "function",
+      "name": "reasoning",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        67,
+        81
+      ],
+      "summary": "在命令行入口与命令执行层中执行 reasoning，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:delta",
+      "type": "function",
+      "name": "delta",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        83,
+        94
+      ],
+      "summary": "在命令行入口与命令执行层中执行 delta，接收 messageID、partID、value 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-data.test.ts:tool",
+      "type": "function",
+      "name": "tool",
+      "filePath": "packages/opencode/test/cli/run/session-data.test.ts",
+      "lineRange": [
+        96,
+        111
+      ],
+      "summary": "在命令行入口与命令执行层中执行 tool，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "type": "file",
+      "name": "session-replay.test.ts",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run session replay、replays persisted user, assistant, and turn summary history into scrollback commits、uses provider model names for replayed turn summaries when available、replays one turn summary for the final assistant in a multi-step turn、keeps the footer in a running state for resumed active tools、does not replay turn summaries for shell-mode commands、merges failed local rows ahead of later pe」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:userMessage",
+      "type": "function",
+      "name": "userMessage",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        6,
+        31
+      ],
+      "summary": "在命令行入口与命令执行层中执行 userMessage，接收 id、text 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantInfo",
+      "type": "function",
+      "name": "assistantInfo",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        33,
+        67
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistantInfo，接收 id、input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantMessage",
+      "type": "function",
+      "name": "assistantMessage",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        69,
+        103
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistantMessage，接收 id、text、input 参数；调用 assistantInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:provider",
+      "type": "function",
+      "name": "provider",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        105,
+        160
+      ],
+      "summary": "在命令行入口与命令执行层中执行 provider，接收 name 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:runningToolMessage",
+      "type": "function",
+      "name": "runningToolMessage",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        162,
+        185
+      ],
+      "summary": "在命令行入口与命令执行层中执行 runningToolMessage，接收 id 参数；调用 assistantInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:shellUserMessage",
+      "type": "function",
+      "name": "shellUserMessage",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        187,
+        213
+      ],
+      "summary": "在命令行入口与命令执行层中执行 shellUserMessage，接收 id 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session-replay.test.ts:shellAssistantMessage",
+      "type": "function",
+      "name": "shellAssistantMessage",
+      "filePath": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "lineRange": [
+        215,
+        250
+      ],
+      "summary": "在命令行入口与命令执行层中执行 shellAssistantMessage，接收 id、parentID 参数；调用 assistantInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "type": "file",
+      "name": "session.shared.test.ts",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run session shared、builds user prompt text from text, file, and agent parts、reuses existing mentions when file and agent parts have no source、dedupes consecutive history entries, drops blanks, and copies prompt parts、returns the latest matching variant for the active model」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session.shared.test.ts:userMessage",
+      "type": "function",
+      "name": "userMessage",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "lineRange": [
+        21,
+        38
+      ],
+      "summary": "在命令行入口与命令执行层中执行 userMessage，接收 id、parts、variant 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session.shared.test.ts:assistantMessage",
+      "type": "function",
+      "name": "assistantMessage",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "lineRange": [
+        40,
+        71
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistantMessage，接收 id、parts 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session.shared.test.ts:textPart",
+      "type": "function",
+      "name": "textPart",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "lineRange": [
+        73,
+        82
+      ],
+      "summary": "在命令行入口与命令执行层中执行 textPart，接收 id、messageID、text、input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session.shared.test.ts:agentPart",
+      "type": "function",
+      "name": "agentPart",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "lineRange": [
+        84,
+        93
+      ],
+      "summary": "在命令行入口与命令执行层中执行 agentPart，接收 id、messageID、name、source 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/session.shared.test.ts:filePart",
+      "type": "function",
+      "name": "filePart",
+      "filePath": "packages/opencode/test/cli/run/session.shared.test.ts",
+      "lineRange": [
+        95,
+        106
+      ],
+      "summary": "在命令行入口与命令执行层中执行 filePart，接收 id、messageID、url、input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "type": "file",
+      "name": "stream.test.ts",
+      "filePath": "packages/opencode/test/cli/run/stream.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run stream bridge、defaults status patches to running phase」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.test.ts:footer",
+      "type": "function",
+      "name": "footer",
+      "filePath": "packages/opencode/test/cli/run/stream.test.ts",
+      "lineRange": [
+        5,
+        26
+      ],
+      "summary": "在命令行入口与命令执行层中执行 footer；调用 events.push、commits.push、Promise.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "type": "file",
+      "name": "stream.transport.test.ts",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run stream transport、does not replay persisted main-session history during bootstrap by default、replays persisted main-session history during bootstrap when enabled、caps replayed bootstrap history to the configured number of messages、skips buffered pre-bootstrap deltas already covered by replay history、applies buffered pre-bootstrap deltas not yet persisted、preserves running footer state for resum」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:defer",
+      "type": "function",
+      "name": "defer",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        20,
+        29
+      ],
+      "summary": "在命令行入口与命令执行层中执行 defer。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:waitFor",
+      "type": "function",
+      "name": "waitFor",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        31,
+        43
+      ],
+      "summary": "在命令行入口与命令执行层中执行 waitFor，接收 check、timeout 参数；调用 Date.now、check、Bun.sleep 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:busy",
+      "type": "function",
+      "name": "busy",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        45,
+        56
+      ],
+      "summary": "在命令行入口与命令执行层中执行 busy，接收 sessionID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:idle",
+      "type": "function",
+      "name": "idle",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        58,
+        69
+      ],
+      "summary": "在命令行入口与命令执行层中执行 idle，接收 sessionID 参数；调用 Promise.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:retry",
+      "type": "function",
+      "name": "retry",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        71,
+        85
+      ],
+      "summary": "在命令行入口与命令执行层中执行 retry，接收 sessionID、attempt、message 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistant",
+      "type": "function",
+      "name": "assistant",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        87,
+        100
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistant，接收 id 参数；调用 assistantMessage 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:feed",
+      "type": "function",
+      "name": "feed",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        104,
+        141
+      ],
+      "summary": "在命令行入口与命令执行层中执行 feed，接收 returnValue 参数；调用 list.shift 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistantMessage",
+      "type": "function",
+      "name": "assistantMessage",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        189,
+        220
+      ],
+      "summary": "在命令行入口与命令执行层中执行 assistantMessage，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:runningTool",
+      "type": "function",
+      "name": "runningTool",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        222,
+        247
+      ],
+      "summary": "在命令行入口与命令执行层中执行 runningTool，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:completedTool",
+      "type": "function",
+      "name": "completedTool",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        249,
+        278
+      ],
+      "summary": "在命令行入口与命令执行层中执行 completedTool，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:textUpdated",
+      "type": "function",
+      "name": "textUpdated",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        290,
+        300
+      ],
+      "summary": "在命令行入口与命令执行层中执行 textUpdated，接收 part 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:reasoningPart",
+      "type": "function",
+      "name": "reasoningPart",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        302,
+        311
+      ],
+      "summary": "在命令行入口与命令执行层中执行 reasoningPart，接收 id、messageID、text 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:reasoningUpdated",
+      "type": "function",
+      "name": "reasoningUpdated",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        313,
+        323
+      ],
+      "summary": "在命令行入口与命令执行层中执行 reasoningUpdated，接收 part 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:toolUpdated",
+      "type": "function",
+      "name": "toolUpdated",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        325,
+        335
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolUpdated，接收 part 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:textDelta",
+      "type": "function",
+      "name": "textDelta",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        337,
+        349
+      ],
+      "summary": "在命令行入口与命令执行层中执行 textDelta，接收 messageID、partID、delta、sessionID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:child",
+      "type": "function",
+      "name": "child",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        351,
+        364
+      ],
+      "summary": "在命令行入口与命令执行层中执行 child，接收 id 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:footer",
+      "type": "function",
+      "name": "footer",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        374,
+        414
+      ],
+      "summary": "在命令行入口与命令执行层中执行 footer，接收 fn 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/stream.transport.test.ts:sdk",
+      "type": "function",
+      "name": "sdk",
+      "filePath": "packages/opencode/test/cli/run/stream.transport.test.ts",
+      "lineRange": [
+        416,
+        452
+      ],
+      "summary": "在命令行入口与命令执行层中执行 sdk，接收 input 参数；调用 sse、emptyStream、globalSse、wrapGlobalStream、ok、spyOn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "type": "file",
+      "name": "subagent-data.test.ts",
+      "filePath": "packages/opencode/test/cli/run/subagent-data.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run subagent data、bootstraps tabs and child blockers from parent task parts、marks interrupted task tabs as cancelled during bootstrap、captures child activity and blocker metadata in the footer detail state、replays bootstrapped child session messages into inspector commits、marks a running tab cancelled when the child session aborts」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/subagent-data.test.ts:visible",
+      "type": "function",
+      "name": "visible",
+      "filePath": "packages/opencode/test/cli/run/subagent-data.test.ts",
+      "lineRange": [
+        15,
+        40
+      ],
+      "summary": "在命令行入口与命令执行层中执行 visible，接收 commits 参数；调用 commits.flatMap、entryBody、body.snapshot.items.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/subagent-data.test.ts:taskMessage",
+      "type": "function",
+      "name": "taskMessage",
+      "filePath": "packages/opencode/test/cli/run/subagent-data.test.ts",
+      "lineRange": [
+        52,
+        136
+      ],
+      "summary": "在命令行入口与命令执行层中执行 taskMessage，接收 sessionID、status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/subagent-data.test.ts:question",
+      "type": "function",
+      "name": "question",
+      "filePath": "packages/opencode/test/cli/run/subagent-data.test.ts",
+      "lineRange": [
+        138,
+        151
+      ],
+      "summary": "在命令行入口与命令执行层中执行 question，接收 id、sessionID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/subagent-data.test.ts:childMessage",
+      "type": "function",
+      "name": "childMessage",
+      "filePath": "packages/opencode/test/cli/run/subagent-data.test.ts",
+      "lineRange": [
+        153,
+        210
+      ],
+      "summary": "在命令行入口与命令执行层中执行 childMessage，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/theme.test.ts",
+      "type": "file",
+      "name": "theme.test.ts",
+      "filePath": "packages/opencode/test/cli/run/theme.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「falls back when palette lookup fails、returns syntax styles and indexed splash colors、keeps footer surfaces exact while scrollback stays palette matched、uses refreshed background brightness when cached renderer mode is stale、keeps renderer mode when refreshed default background is unavailable、keeps dark surfaces neutral on saturated backgrounds、keeps light surfaces close to neutral on warm backgrou」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/theme.test.ts:terminalColors",
+      "type": "function",
+      "name": "terminalColors",
+      "filePath": "packages/opencode/test/cli/run/theme.test.ts",
+      "lineRange": [
+        7,
+        20
+      ],
+      "summary": "在命令行入口与命令执行层中执行 terminalColors，接收 input 参数；调用 Array.from 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/theme.test.ts:renderer",
+      "type": "function",
+      "name": "renderer",
+      "filePath": "packages/opencode/test/cli/run/theme.test.ts",
+      "lineRange": [
+        22,
+        39
+      ],
+      "summary": "在命令行入口与命令执行层中执行 renderer，接收 input 参数；调用 terminalColors 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "type": "file",
+      "name": "variant.shared.test.ts",
+      "filePath": "packages/opencode/test/cli/run/variant.shared.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run variant shared、prefers cli then session then saved variants、cycles through variants and back to default、formats model labels、picks the latest matching variant from raw session messages、reads and writes saved variants through a runtime-backed app fs layer、repairs malformed saved variant state on the next write」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/variant.shared.test.ts:userMessage",
+      "type": "function",
+      "name": "userMessage",
+      "filePath": "packages/opencode/test/cli/run/variant.shared.test.ts",
+      "lineRange": [
+        83,
+        100
+      ],
+      "summary": "在命令行入口与命令执行层中执行 userMessage，接收 id、input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remap",
+      "type": "function",
+      "name": "remap",
+      "filePath": "packages/opencode/test/cli/run/variant.shared.test.ts",
+      "lineRange": [
+        104,
+        114
+      ],
+      "summary": "在命令行入口与命令执行层中执行 remap，接收 root、file 参数；调用 file.startsWith、path.join、path.relative 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remappedFs",
+      "type": "function",
+      "name": "remappedFs",
+      "filePath": "packages/opencode/test/cli/run/variant.shared.test.ts",
+      "lineRange": [
+        116,
+        128
+      ],
+      "summary": "在命令行入口与命令执行层中执行 remappedFs，接收 root 参数；调用 Layer.effect、Effect.gen、FSUtil.Service.of、fs.readJson、remap、fs.writeJson、Layer.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:claim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:assistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:reasoning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/scrollback.surface.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:assistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:user",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:reasoning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:delta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-data.test.ts:tool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:userMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:runningToolMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:shellUserMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:shellAssistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-replay.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-replay.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session-replay.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session.shared.test.ts:userMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session.shared.test.ts:assistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session.shared.test.ts:textPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session.shared.test.ts:agentPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/session.shared.test.ts:filePart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/session.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.test.ts:footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:defer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:waitFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:busy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:idle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:retry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:feed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:runningTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:completedTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:textUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:reasoningPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:reasoningUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:toolUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:textDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:child",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:sdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/stream.transport.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/stream.transport.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/stream.transport.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/subagent-data.test.ts:visible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/subagent-data.test.ts:taskMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/subagent-data.test.ts:question",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "function:packages/opencode/test/cli/run/subagent-data.test.ts:childMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/subagent-data.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/theme.test.ts",
+      "target": "function:packages/opencode/test/cli/run/theme.test.ts:terminalColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/theme.test.ts",
+      "target": "function:packages/opencode/test/cli/run/theme.test.ts:renderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/theme.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/theme.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/variant.shared.test.ts:userMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remappedFs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/variant.shared.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolCommit",
+      "target": "function:packages/opencode/test/cli/run/scrollback.surface.test.ts:toolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantMessage",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/session-replay.test.ts:runningToolMessage",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/session-replay.test.ts:shellAssistantMessage",
+      "target": "function:packages/opencode/test/cli/run/session-replay.test.ts:assistantInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistant",
+      "target": "function:packages/opencode/test/cli/run/stream.transport.test.ts:assistantMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/subagent-data.test.ts:visible",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/theme.test.ts:renderer",
+      "target": "function:packages/opencode/test/cli/run/theme.test.ts:terminalColors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remappedFs",
+      "target": "function:packages/opencode/test/cli/run/variant.shared.test.ts:remap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

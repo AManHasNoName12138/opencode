@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "service:packages/stats/server/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "packages/stats/server/Dockerfile",
+      "summary": "Dockerfile 描述容器、服务或部署入口，支撑 opencode 的运行环境和交付流程。",
+      "tags": [
+        "deployment",
+        "api-handler",
+        "dockerfile"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/stats/server/Dockerfile:base",
+      "type": "service",
+      "name": "base",
+      "filePath": "packages/stats/server/Dockerfile",
+      "lineRange": [
+        1,
+        7
+      ],
+      "summary": "packages/stats/server/Dockerfile 定义服务 base，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/stats/server/Dockerfile:pruner",
+      "type": "service",
+      "name": "pruner",
+      "filePath": "packages/stats/server/Dockerfile",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "packages/stats/server/Dockerfile 定义服务 pruner，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/stats/server/Dockerfile:installer",
+      "type": "service",
+      "name": "installer",
+      "filePath": "packages/stats/server/Dockerfile",
+      "lineRange": [
+        14,
+        22
+      ],
+      "summary": "packages/stats/server/Dockerfile 定义服务 installer，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/stats/server/Dockerfile:runner",
+      "type": "service",
+      "name": "runner",
+      "filePath": "packages/stats/server/Dockerfile",
+      "lineRange": [
+        23,
+        33
+      ],
+      "summary": "packages/stats/server/Dockerfile 定义服务 runner，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:packages/stats/server/Dockerfile",
+      "target": "service:packages/stats/server/Dockerfile:base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/stats/server/Dockerfile",
+      "target": "service:packages/stats/server/Dockerfile:pruner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/stats/server/Dockerfile",
+      "target": "service:packages/stats/server/Dockerfile:installer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/stats/server/Dockerfile",
+      "target": "service:packages/stats/server/Dockerfile:runner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

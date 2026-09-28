@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/effect-drizzle-sqlite/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/effect-drizzle-sqlite/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「Effect Drizzle SQLite」。",
+      "tags": [
+        "文档",
+        "模块",
+        "开发规范"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/effect-drizzle-sqlite/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/effect-drizzle-sqlite/package.json",
+      "summary": "声明 @opencode-ai/effect-drizzle-sqlite 的包信息与公共导出入口，脚本包括 test、typecheck；依赖包括 drizzle-orm、effect。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/effect-drizzle-sqlite/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/effect-drizzle-sqlite/tsconfig.json",
+      "summary": "配置 packages/effect-drizzle-sqlite 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/effect-drizzle-sqlite/AGENTS.md",
+      "target": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/effect-drizzle-sqlite/package.json",
+      "target": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/effect-drizzle-sqlite/tsconfig.json",
+      "target": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

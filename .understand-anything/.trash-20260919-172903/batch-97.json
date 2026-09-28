@@ -1,0 +1,343 @@
+{
+  "nodes": [
+    {
+      "id": "file:infra/app.ts",
+      "type": "file",
+      "name": "app.ts",
+      "filePath": "infra/app.ts",
+      "summary": "部署公共 Cloudflare Worker、Durable Object 绑定和存储，同时发布 Astro 文档站与 Web 应用，向各服务注入所需资源引用。",
+      "tags": [
+        "部署",
+        "云资源",
+        "应用入口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:infra/console.ts",
+      "type": "file",
+      "name": "console.ts",
+      "filePath": "infra/console.ts",
+      "summary": "组装控制台所需的 PlanetScale 数据库分支、认证 Worker、支付与统计服务，按部署阶段连接 Cloudflare、AWS 和密钥资源。",
+      "tags": [
+        "部署",
+        "云资源",
+        "日志标准库"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:infra/enterprise.ts",
+      "type": "file",
+      "name": "enterprise.ts",
+      "filePath": "infra/enterprise.ts",
+      "summary": "部署企业分享 SolidStart 站点与 Cloudflare 存储桶，连接支持 API 密钥，并通过环境变量配置 R2 存储适配器。",
+      "tags": [
+        "部署",
+        "云资源",
+        "企业产品"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:infra/lake.ts",
+      "type": "file",
+      "name": "lake.ts",
+      "filePath": "infra/lake.ts",
+      "summary": "建立 AWS S3 Tables 数据湖、Glue 联邦目录、Athena 查询环境与错误存储，并配置摄取服务、集群、网络与访问权限。",
+      "tags": [
+        "部署",
+        "云资源",
+        "推理数据湖"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:infra/monitoring.ts",
+      "type": "file",
+      "name": "monitoring.ts",
+      "filePath": "infra/monitoring.ts",
+      "summary": "监控告警基础设施组装，声明 DiscordAlerts（honeycombio.WebhookRecipient）、IncreasedModelHttpErrorsGo（honeycombio.Trigger）、IncreasedModelHttpErrorsZen（honeycombio.Trigger）、LowModelTpsGo（honeycombio.Trigger）、LowModelTpsZen（honeycombio.Trigger）、IncreasedProviderHttpErrors（honeycombio.Trigger），连接服务所需的权限、数据存储与环境资源。",
+      "tags": [
+        "部署",
+        "云资源",
+        "监控告警"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:infra/monitoring.ts:modelHttpErrorsQuery",
+      "type": "function",
+      "name": "modelHttpErrorsQuery",
+      "filePath": "infra/monitoring.ts",
+      "lineRange": [
+        41,
+        86
+      ],
+      "summary": "云端部署的监控告警处理函数 modelHttpErrorsQuery，调用 calculatedField、honeycombio.getQuerySpecificationOutput 完成该步骤。",
+      "tags": [
+        "函数",
+        "部署",
+        "云资源"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:infra/monitoring.ts:providerHttpErrorsQuery",
+      "type": "function",
+      "name": "providerHttpErrorsQuery",
+      "filePath": "infra/monitoring.ts",
+      "lineRange": [
+        88,
+        130
+      ],
+      "summary": "云端部署的监控告警处理函数 providerHttpErrorsQuery，调用 calculatedField、honeycombio.getQuerySpecificationOutput 完成该步骤。",
+      "tags": [
+        "函数",
+        "部署",
+        "云资源"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:infra/monitoring.ts:modelLowTpsQuery",
+      "type": "function",
+      "name": "modelLowTpsQuery",
+      "filePath": "infra/monitoring.ts",
+      "lineRange": [
+        132,
+        158
+      ],
+      "summary": "云端部署的监控告警处理函数 modelLowTpsQuery，调用 honeycombio.getQuerySpecificationOutput 完成该步骤。",
+      "tags": [
+        "函数",
+        "部署",
+        "云资源"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:infra/secret.ts",
+      "type": "file",
+      "name": "secret.ts",
+      "filePath": "infra/secret.ts",
+      "summary": "部署密钥基础设施组装，声明 R2AccessKey（sst.Secret）、R2SecretKey（sst.Secret）、HONEYCOMB_API_KEY（sst.Secret）、HoneycombWebhookSecret（random.RandomPassword）、SUPPORT_API_KEY（sst.Secret）、UpstashRedisRestUrl（sst.Secret），连接服务所需的权限、数据存储与环境资源。",
+      "tags": [
+        "部署",
+        "云资源",
+        "部署密钥"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:infra/stage.ts",
+      "type": "file",
+      "name": "stage.ts",
+      "filePath": "infra/stage.ts",
+      "summary": "部署环境基础设施组装，声明 TrustCenter（cloudflare.DnsRecord）、TrustCenterVerification（cloudflare.DnsRecord）、RegionalHostname（cloudflare.RegionalHostname），连接服务所需的权限、数据存储与环境资源。",
+      "tags": [
+        "部署",
+        "云资源",
+        "部署环境"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:infra/stats.ts",
+      "type": "file",
+      "name": "stats.ts",
+      "filePath": "infra/stats.ts",
+      "summary": "定义推理事件的 Iceberg 数据结构与摄取链路，并部署统计数据库、统计网站和定期聚合同步所需资源。",
+      "tags": [
+        "部署",
+        "云资源",
+        "统计站点"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:infra/app.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:infra/app.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:infra/secret.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/enterprise.ts",
+      "target": "file:infra/secret.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/enterprise.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/lake.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/monitoring.ts",
+      "target": "function:infra/monitoring.ts:modelHttpErrorsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:infra/monitoring.ts",
+      "target": "function:infra/monitoring.ts:providerHttpErrorsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:infra/monitoring.ts",
+      "target": "function:infra/monitoring.ts:modelLowTpsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:infra/monitoring.ts",
+      "target": "file:infra/secret.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/monitoring.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/stats.ts",
+      "target": "file:infra/app.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/stats.ts",
+      "target": "file:infra/lake.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/stats.ts",
+      "target": "file:infra/stage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/app.ts",
+      "target": "file:packages/function/src/api.ts",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/app.ts",
+      "target": "config:packages/web/package.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/app.ts",
+      "target": "config:packages/app/package.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:packages/console/function/src/auth.ts",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:packages/console/function/src/log-processor.ts",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "file:packages/console/function/src/stat.ts",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/console.ts",
+      "target": "config:packages/console/app/package.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/enterprise.ts",
+      "target": "config:packages/enterprise/package.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/stats.ts",
+      "target": "config:packages/stats/app/package.json",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/stats.ts",
+      "target": "service:packages/stats/server/Dockerfile",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:infra/lake.ts",
+      "target": "service:packages/stats/server/Dockerfile",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

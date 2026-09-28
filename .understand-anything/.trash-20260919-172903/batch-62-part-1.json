@@ -1,0 +1,2159 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "type": "file",
+      "name": "demo.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 createRunDemo；内部处理包含 permissionKind、questionKind、note、clearSubagent、showSubagent、wait、split。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:clearSubagent",
+      "type": "function",
+      "name": "clearSubagent",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        164,
+        174
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 clearSubagent，接收 footer 参数；调用 footer.event 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:showSubagent",
+      "type": "function",
+      "name": "showSubagent",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        176,
+        216
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 showSubagent，接收 state、input 参数；调用 state.footer.event、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "function",
+      "name": "wait",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        218,
+        243
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 wait，接收 ms、signal 参数；调用 setTimeout、resolve、signal.removeEventListener、signal.addEventListener 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "function",
+      "name": "feed",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        259,
+        274
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 feed，接收 state、event 参数；调用 reduceSessionData、state.limits、writeSessionOutput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "type": "function",
+      "name": "open",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        276,
+        312
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 open，接收 state 参数；调用 take、feed、Date.now、process.cwd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "type": "function",
+      "name": "emitText",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        314,
+        375
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitText，接收 state、body、signal 参数；调用 open、take、Date.now、feed、split、wait 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "type": "function",
+      "name": "emitReasoning",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        377,
+        438
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitReasoning，接收 state、body、signal 参数；调用 open、take、Date.now、feed、split、wait 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        440,
+        449
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 make，接收 state、tool、input 参数；调用 open、take、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "type": "function",
+      "name": "startTool",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        451,
+        475
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 startTool，接收 state、ref、metadata 参数；调用 feed、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:askPermission",
+      "type": "function",
+      "name": "askPermission",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        477,
+        501
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 askPermission，接收 state、item 参数；调用 startTool、take、state.perms.set、feed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "function",
+      "name": "doneTool",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        503,
+        538
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 doneTool，接收 state、ref、output 参数；调用 feed、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:failTool",
+      "type": "function",
+      "name": "failTool",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        540,
+        566
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 failTool，接收 state、ref、error 参数；调用 feed、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitError",
+      "type": "function",
+      "name": "emitError",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        568,
+        583
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitError，接收 state、text 参数；调用 Date.now、feed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "type": "function",
+      "name": "emitBash",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        585,
+        600
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitBash，接收 state、signal 参数；调用 make、process.cwd、startTool、wait、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitWrite",
+      "type": "function",
+      "name": "emitWrite",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        602,
+        613
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitWrite，接收 state 参数；调用 path.join、process.cwd、make、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitEdit",
+      "type": "function",
+      "name": "emitEdit",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        615,
+        627
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitEdit，接收 state 参数；调用 path.join、process.cwd、make、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPatch",
+      "type": "function",
+      "name": "emitPatch",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        629,
+        656
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitPatch，接收 state 参数；调用 path.join、process.cwd、make、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "type": "function",
+      "name": "emitTask",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        658,
+        734
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitTask，接收 state 参数；调用 make、doneTool、Date.now、showSubagent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTodo",
+      "type": "function",
+      "name": "emitTodo",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        736,
+        758
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitTodo，接收 state 参数；调用 make、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestionTool",
+      "type": "function",
+      "name": "emitQuestionTool",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        760,
+        791
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitQuestionTool，接收 state 参数；调用 make、doneTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPermission",
+      "type": "function",
+      "name": "emitPermission",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        793,
+        927
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitPermission，接收 state、kind 参数；调用 process.cwd、path.join、make、askPermission、path.dirname 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestion",
+      "type": "function",
+      "name": "emitQuestion",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        929,
+        1021
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitQuestion，接收 state、kind 参数；调用 make、startTool、take、state.asks.set、feed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "type": "function",
+      "name": "emitFmt",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        1023,
+        1101
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 emitFmt，接收 state、kind、body、signal 参数；调用 emitText、emitReasoning、emitBash、emitWrite、emitEdit、emitPatch、emitTask 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:intro",
+      "type": "function",
+      "name": "intro",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        1103,
+        1119
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 intro，接收 state 参数；调用 note、PERMISSIONS.join、QUESTIONS.join、KINDS.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "type": "function",
+      "name": "createRunDemo",
+      "filePath": "packages/opencode/src/cli/cmd/run/demo.ts",
+      "lineRange": [
+        1121,
+        1274
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createRunDemo，接收 input 参数；调用 createSessionData 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "file",
+      "name": "entry.body.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 RUN_ENTRY_NONE、cleanRunText、entryFlags、entryDone、entryCanStream、entryBody；内部处理包含 cleanRunText、textBody、codeBody、markdownBody、userBody、reasoningBody、systemBody。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:cleanRunText",
+      "type": "function",
+      "name": "cleanRunText",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 cleanRunText，接收 text 参数；调用 text.replace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:textBody",
+      "type": "function",
+      "name": "textBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        17,
+        26
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 textBody，接收 content 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:codeBody",
+      "type": "function",
+      "name": "codeBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        28,
+        38
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 codeBody，接收 content、filetype 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:markdownBody",
+      "type": "function",
+      "name": "markdownBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        40,
+        49
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 markdownBody，接收 content 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:reasoningBody",
+      "type": "function",
+      "name": "reasoningBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        61,
+        75
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 reasoningBody，接收 raw 参数；调用 raw.replace、clean.match、clean.slice、body.startsWith、codeBody、body.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryFlags",
+      "type": "function",
+      "name": "entryFlags",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        81,
+        135
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryFlags，接收 commit 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryDone",
+      "type": "function",
+      "name": "entryDone",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        137,
+        147
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryDone，接收 commit 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryCanStream",
+      "type": "function",
+      "name": "entryCanStream",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        149,
+        163
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryCanStream，接收 commit、body 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "function",
+      "name": "entryBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "lineRange": [
+        165,
+        205
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryBody，接收 commit 参数；调用 cleanRunText、userBody、toolEntryBody、textBody、markdownBody、reasoningBody、systemBody 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "type": "file",
+      "name": "footer.command.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 RUN_COMMAND_PANEL_ROWS、RUN_SUBAGENT_PANEL_ROWS、RunCommandMenuBody、RunSubagentSelectBody、RunQueuedPromptSelectBody、RunSkillSelectBody、RunVariantSelectBody；内部处理包含 countLabel、categoryRank、subagentStatusLabel、handleKey、match、PanelShell、RunCommandMenuBody。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:categoryRank",
+      "type": "function",
+      "name": "categoryRank",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        99,
+        109
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 categoryRank，接收 category 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:subagentStatusLabel",
+      "type": "function",
+      "name": "subagentStatusLabel",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        111,
+        125
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 subagentStatusLabel，接收 status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "function",
+      "name": "handleKey",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        127,
+        191
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 handleKey，接收 input 参数；调用 input.event.name.toLowerCase、input.event.preventDefault、input.close、input.menu.move、input.menu.reveal、input.menu.selected、input.select 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "function",
+      "name": "match",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        193,
+        202
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 match，接收 query、entries 参数；调用 query.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:PanelShell",
+      "type": "function",
+      "name": "PanelShell",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        204,
+        332
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 PanelShell，接收 props 参数；调用 background、props.theme、countLabel、props.inputRef、queueMicrotask、input.focus、minimal 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "type": "function",
+      "name": "RunCommandMenuBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        334,
+        574
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunCommandMenuBody，接收 props 参数；调用 createSignal、createMemo、props.commands、props.subagents、activeSubagentCount、skills、props.queued 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "type": "function",
+      "name": "RunSubagentSelectBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        576,
+        676
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunSubagentSelectBody，接收 props 参数；调用 createSignal、createMemo、props.tabs、subagentStatusLabel、props.current、match、query 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "type": "function",
+      "name": "RunQueuedPromptSelectBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        678,
+        773
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunQueuedPromptSelectBody，接收 props 参数；调用 createSignal、createMemo、props.prompts、prompt.prompt.text.replaceAll、match、query、entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "type": "function",
+      "name": "RunSkillSelectBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        775,
+        850
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunSkillSelectBody，接收 props 参数；调用 createSignal、createMemo、props.commands、a.display.localeCompare、match、query、entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "type": "function",
+      "name": "RunVariantSelectBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        852,
+        948
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunVariantSelectBody，接收 props 参数；调用 createSignal、createMemo、props.current、props.variants、match、query、entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "type": "function",
+      "name": "RunModelSelectBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "lineRange": [
+        950,
+        1070
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunModelSelectBody，接收 props 参数；调用 createSignal、createMemo、props.providers、Object.entries、props.current、Number、a.providerName.localeCompare 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "file",
+      "name": "footer.menu.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 FOOTER_MENU_ROWS、createFooterMenuState、RunFooterMenu；内部处理包含 maxOffset、previewMargin、revealOffset、moveOffset、createFooterMenuState、RunFooterMenu。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:revealOffset",
+      "type": "function",
+      "name": "revealOffset",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "lineRange": [
+        30,
+        41
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 revealOffset，接收 value、input 参数；调用 maxOffset、Math.min 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:moveOffset",
+      "type": "function",
+      "name": "moveOffset",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "lineRange": [
+        43,
+        55
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 moveOffset，接收 value、input 参数；调用 maxOffset、previewMargin、Math.max、Math.min 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "function",
+      "name": "createFooterMenuState",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "lineRange": [
+        57,
+        115
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createFooterMenuState，接收 input 参数；调用 createSignal、createMemo、Math.max、Math.min、limit、input.count、createEffect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:RunFooterMenu",
+      "type": "function",
+      "name": "RunFooterMenu",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "lineRange": [
+        117,
+        351
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunFooterMenu，接收 props 参数；调用 useTerminalDimensions、createSignal、createMemo、props.items、all.push、createEffect、groupedRows 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "type": "file",
+      "name": "footer.permission.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 RejectField、RunPermissionBody；内部处理包含 buttons、RejectField、RunPermissionBody。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:buttons",
+      "type": "function",
+      "name": "buttons",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "lineRange": [
+        37,
+        66
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 buttons，接收 list、selected、theme、disabled、onHover、onSelect 参数；调用 onHover、onSelect、permissionLabel 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RejectField",
+      "type": "function",
+      "name": "RejectField",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "lineRange": [
+        69,
+        130
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RejectField，接收 props 参数；调用 createEffect、area.setText、queueMicrotask、area.focus、props.onChange、event.preventDefault、props.onCancel 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "type": "function",
+      "name": "RunPermissionBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "lineRange": [
+        132,
+        472
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunPermissionBody，接收 props 参数；调用 useTerminalDimensions、createSignal、createPermissionBodyState、createMemo、permissionInfo、toolFiletype、info 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:clearSubagent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:showSubagent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:askPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:failTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitEdit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTodo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestionTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:intro",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:cleanRunText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:cleanRunText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:textBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:codeBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:markdownBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:reasoningBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryDone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryDone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryCanStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryCanStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:categoryRank",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:subagentStatusLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:PanelShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:revealOffset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:moveOffset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:RunFooterMenu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:RunFooterMenu",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:buttons",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RejectField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RejectField",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.width.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/permission.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:askPermission",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:askPermission",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:failTool",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitError",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitWrite",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitWrite",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitEdit",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitEdit",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPatch",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPatch",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:showSubagent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTodo",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTodo",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestionTool",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestionTool",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:doneTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPermission",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPermission",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:askPermission",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestion",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestion",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:startTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestion",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:feed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitReasoning",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitBash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitWrite",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitEdit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitPatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTask",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitTodo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitQuestionTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:emitFmt",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:wait",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:createSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:reasoningBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:codeBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:cleanRunText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:textBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:markdownBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:reasoningBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:categoryRank",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunCommandMenuBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:subagentStatusLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSubagentSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunQueuedPromptSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunSkillSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunVariantSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:RunModelSelectBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.command.tsx:handleKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:revealOffset",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:RunFooterMenu",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:moveOffset",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:RunFooterMenu",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:revealOffset",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:buttons",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:createPermissionBodyState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFiletype",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.width.ts:footerWidthPolicy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionEscape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionAlwaysLines",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:buttons",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.permission.tsx:RunPermissionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/permission.shared.ts:permissionHover",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

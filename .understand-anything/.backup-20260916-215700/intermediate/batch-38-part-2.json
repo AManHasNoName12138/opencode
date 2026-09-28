@@ -1,0 +1,1464 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/debug/v2.ts",
+      "type": "file",
+      "name": "v2.ts",
+      "filePath": "packages/opencode/src/cli/cmd/debug/v2.ts",
+      "summary": "在命令行入口与命令执行层中提供 V2Command 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/export.ts",
+      "type": "file",
+      "name": "export.ts",
+      "filePath": "packages/opencode/src/cli/cmd/export.ts",
+      "summary": "在命令行入口与命令执行层中提供 ExportCommand；内部处理包含 redact、data、span、diff、source、filepart、part。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/export.ts:source",
+      "type": "function",
+      "name": "source",
+      "filePath": "packages/opencode/src/cli/cmd/export.ts",
+      "lineRange": [
+        35,
+        58
+      ],
+      "summary": "在命令行入口与命令执行层中执行 source，接收 part 参数；调用 redact、span 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/export.ts:part",
+      "type": "function",
+      "name": "part",
+      "filePath": "packages/opencode/src/cli/cmd/export.ts",
+      "lineRange": [
+        69,
+        159
+      ],
+      "summary": "在命令行入口与命令执行层中执行 part，接收 part 参数；调用 redact、data、filepart、part.files.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/export.ts:sanitize",
+      "type": "function",
+      "name": "sanitize",
+      "filePath": "packages/opencode/src/cli/cmd/export.ts",
+      "lineRange": [
+        163,
+        220
+      ],
+      "summary": "在命令行入口与命令执行层中执行 sanitize，接收 data 参数；调用 redact、diff、data.messages.map、msg.parts.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/generate.ts",
+      "type": "file",
+      "name": "generate.ts",
+      "filePath": "packages/opencode/src/cli/cmd/generate.ts",
+      "summary": "在命令行入口与命令执行层中提供 GenerateCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/github.ts",
+      "type": "file",
+      "name": "github.ts",
+      "filePath": "packages/opencode/src/cli/cmd/github.ts",
+      "summary": "在命令行入口与命令执行层中提供 extractResponseText、formatPromptTooLargeError、parseGitHubRemote、GithubInstallCommand、GithubRunCommand、GithubCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "type": "file",
+      "name": "mcp.ts",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "summary": "在命令行入口与命令执行层中提供 McpCommand、McpListCommand、McpAuthCommand、McpAuthListCommand、McpLogoutCommand、McpAddCommand、McpDebugCommand；内部处理包含 getAuthStatusIcon、getAuthStatusText、isMcpConfigured、isMcpRemote、configuredServers、oauthServers、listState。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:getAuthStatusIcon",
+      "type": "function",
+      "name": "getAuthStatusIcon",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        24,
+        33
+      ],
+      "summary": "在命令行入口与命令执行层中执行 getAuthStatusIcon，接收 status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:getAuthStatusText",
+      "type": "function",
+      "name": "getAuthStatusText",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        35,
+        44
+      ],
+      "summary": "在命令行入口与命令执行层中执行 getAuthStatusText，接收 status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:listState",
+      "type": "function",
+      "name": "listState",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        68,
+        80
+      ],
+      "summary": "在命令行入口与命令执行层中执行 listState；调用 Effect.gen、cfg.get、mcp.status、Effect.all、Object.fromEntries、configuredServers、mcp.hasStoredTokens 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:authState",
+      "type": "function",
+      "name": "authState",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        82,
+        93
+      ],
+      "summary": "在命令行入口与命令执行层中执行 authState；调用 Effect.gen、cfg.get、Effect.all、Object.fromEntries、oauthServers、mcp.getAuthStatus 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:resolveConfigPath",
+      "type": "function",
+      "name": "resolveConfigPath",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        394,
+        410
+      ],
+      "summary": "在命令行入口与命令执行层中执行 resolveConfigPath，接收 baseDir、global 参数；调用 path.join、candidates.push、Filesystem.exists 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/mcp.ts:addMcpToConfig",
+      "type": "function",
+      "name": "addMcpToConfig",
+      "filePath": "packages/opencode/src/cli/cmd/mcp.ts",
+      "lineRange": [
+        412,
+        427
+      ],
+      "summary": "在命令行入口与命令执行层中执行 addMcpToConfig，接收 name、mcpConfig、configPath 参数；调用 Filesystem.exists、Filesystem.readText、modify、applyEdits、Filesystem.write 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/models.ts",
+      "type": "file",
+      "name": "models.ts",
+      "filePath": "packages/opencode/src/cli/cmd/models.ts",
+      "summary": "在命令行入口与命令执行层中提供 ModelsCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "file",
+      "name": "plug.ts",
+      "filePath": "packages/opencode/src/cli/cmd/plug.ts",
+      "summary": "在命令行入口与命令执行层中提供 createPlugTask、PluginCommand；内部处理包含 cause、createPlugTask。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "type": "function",
+      "name": "createPlugTask",
+      "filePath": "packages/opencode/src/cli/cmd/plug.ts",
+      "lineRange": [
+        70,
+        176
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createPlugTask，接收 input、dep 参数；调用 Boolean、dep.spinner、install.start、installPlugin、install.stop、dep.log.error、cause 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "type": "file",
+      "name": "pr.ts",
+      "filePath": "packages/opencode/src/cli/cmd/pr.ts",
+      "summary": "在命令行入口与命令执行层中提供 PrCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "type": "file",
+      "name": "providers.ts",
+      "filePath": "packages/opencode/src/cli/cmd/providers.ts",
+      "summary": "在命令行入口与命令执行层中提供 resolvePluginProviders、ProvidersCommand、ProvidersListCommand、ProvidersLoginCommand、ProvidersLogoutCommand；内部处理包含 promptValue、cliTry、resolvePluginProviders。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/providers.ts:resolvePluginProviders",
+      "type": "function",
+      "name": "resolvePluginProviders",
+      "filePath": "packages/opencode/src/cli/cmd/providers.ts",
+      "lineRange": [
+        212,
+        237
+      ],
+      "summary": "在命令行入口与命令执行层中执行 resolvePluginProviders，接收 input 参数；调用 seen.has、seen.add、Object.hasOwn、input.disabled.has、input.enabled.has、result.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run.ts",
+      "type": "file",
+      "name": "run.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run.ts",
+      "summary": "在命令行入口与命令执行层中提供 RunCommand、runMini；内部处理包含 pick、resolveRunInput、inline、block、formatRunError、tool、toolError。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run.ts:resolveRunInput",
+      "type": "function",
+      "name": "resolveRunInput",
+      "filePath": "packages/opencode/src/cli/cmd/run.ts",
+      "lineRange": [
+        40,
+        50
+      ],
+      "summary": "在命令行入口与命令执行层中执行 resolveRunInput，接收 value、piped 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run.ts:tool",
+      "type": "function",
+      "name": "tool",
+      "filePath": "packages/opencode/src/cli/cmd/run.ts",
+      "lineRange": [
+        90,
+        106
+      ],
+      "summary": "在命令行入口与命令执行层中执行 tool，接收 part 参数；调用 import、toolInlineInfo、block、inline 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run.ts:toolError",
+      "type": "function",
+      "name": "toolError",
+      "filePath": "packages/opencode/src/cli/cmd/run.ts",
+      "lineRange": [
+        108,
+        124
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolError，接收 part 参数；调用 import、toolInlineInfo、inline 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run.ts:runMini",
+      "type": "function",
+      "name": "runMini",
+      "filePath": "packages/opencode/src/cli/cmd/run.ts",
+      "lineRange": [
+        982,
+        1016
+      ],
+      "summary": "在命令行入口与命令执行层中执行 runMini，接收 input 参数；调用 RunCommand.handler 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/serve.ts",
+      "type": "file",
+      "name": "serve.ts",
+      "filePath": "packages/opencode/src/cli/cmd/serve.ts",
+      "summary": "在命令行入口与命令执行层中提供 ServeCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/opencode/src/cli/cmd/session.ts",
+      "summary": "在命令行入口与命令执行层中提供 SessionCommand、SessionDeleteCommand、SessionListCommand；内部处理包含 pagerCmd、formatSessionTable、formatSessionJSON。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/session.ts:pagerCmd",
+      "type": "function",
+      "name": "pagerCmd",
+      "filePath": "packages/opencode/src/cli/cmd/session.ts",
+      "lineRange": [
+        17,
+        42
+      ],
+      "summary": "在命令行入口与命令执行层中执行 pagerCmd；调用 which、Filesystem.stat、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/session.ts:formatSessionTable",
+      "type": "function",
+      "name": "formatSessionTable",
+      "filePath": "packages/opencode/src/cli/cmd/session.ts",
+      "lineRange": [
+        118,
+        135
+      ],
+      "summary": "在命令行入口与命令执行层中执行 formatSessionTable，接收 sessions 参数；调用 Math.max、sessions.map、lines.push、Locale.truncate、Locale.todayTimeOrDateTime、session.id.padEnd、truncatedTitle.padEnd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/session.ts:formatSessionJSON",
+      "type": "function",
+      "name": "formatSessionJSON",
+      "filePath": "packages/opencode/src/cli/cmd/session.ts",
+      "lineRange": [
+        137,
+        147
+      ],
+      "summary": "在命令行入口与命令执行层中执行 formatSessionJSON，接收 sessions 参数；调用 sessions.map、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "type": "file",
+      "name": "tui.ts",
+      "filePath": "packages/opencode/src/cli/cmd/tui.ts",
+      "summary": "在命令行入口与命令执行层中提供 resolveThreadDirectory、TuiThreadCommand；内部处理包含 createWorkerFetch、createEventSource、target、input、resolveThreadDirectory。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/tui.ts:createWorkerFetch",
+      "type": "function",
+      "name": "createWorkerFetch",
+      "filePath": "packages/opencode/src/cli/cmd/tui.ts",
+      "lineRange": [
+        24,
+        40
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createWorkerFetch，接收 client 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/tui.ts:resolveThreadDirectory",
+      "type": "function",
+      "name": "resolveThreadDirectory",
+      "filePath": "packages/opencode/src/cli/cmd/tui.ts",
+      "lineRange": [
+        66,
+        70
+      ],
+      "summary": "在命令行入口与命令执行层中执行 resolveThreadDirectory，接收 project、envPWD、cwd 参数；调用 process.cwd、Filesystem.resolve、path.isAbsolute、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "type": "file",
+      "name": "uninstall.ts",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "summary": "在命令行入口与命令执行层中提供 UninstallCommand；内部处理包含 collectRemovalTargets、showRemovalSummary、executeUninstall、getShellConfigFile、cleanShellConfig、getDirectorySize、formatSize。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:collectRemovalTargets",
+      "type": "function",
+      "name": "collectRemovalTargets",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        90,
+        102
+      ],
+      "summary": "在命令行入口与命令执行层中执行 collectRemovalTargets，接收 args、method 参数；调用 getShellConfigFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:showRemovalSummary",
+      "type": "function",
+      "name": "showRemovalSummary",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        104,
+        142
+      ],
+      "summary": "在命令行入口与命令执行层中执行 showRemovalSummary，接收 targets、method 参数；调用 prompts.log.message、getDirectorySize、formatSize、prompts.log.info、shortenPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:executeUninstall",
+      "type": "function",
+      "name": "executeUninstall",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        144,
+        233
+      ],
+      "summary": "在命令行入口与命令执行层中执行 executeUninstall，接收 method、targets 参数；调用 prompts.spinner、prompts.log.step、dir.label.toLowerCase、spinner.start、fs.rm、spinner.stop、errors.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:getShellConfigFile",
+      "type": "function",
+      "name": "getShellConfigFile",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        235,
+        275
+      ],
+      "summary": "在命令行入口与命令执行层中执行 getShellConfigFile；调用 path.basename、os.homedir、path.join、Filesystem.readText、content.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:cleanShellConfig",
+      "type": "function",
+      "name": "cleanShellConfig",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        277,
+        315
+      ],
+      "summary": "在命令行入口与命令执行层中执行 cleanShellConfig，接收 file 参数；调用 Filesystem.readText、content.split、line.trim、trimmed.includes、trimmed.startsWith、filtered.push、filtered.pop 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/uninstall.ts:getDirectorySize",
+      "type": "function",
+      "name": "getDirectorySize",
+      "filePath": "packages/opencode/src/cli/cmd/uninstall.ts",
+      "lineRange": [
+        317,
+        338
+      ],
+      "summary": "在命令行入口与命令执行层中执行 getDirectorySize，接收 dir 参数；调用 walk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/upgrade.ts",
+      "type": "file",
+      "name": "upgrade.ts",
+      "filePath": "packages/opencode/src/cli/cmd/upgrade.ts",
+      "summary": "在命令行入口与命令执行层中提供 UpgradeCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/web.ts",
+      "type": "file",
+      "name": "web.ts",
+      "filePath": "packages/opencode/src/cli/cmd/web.ts",
+      "summary": "在命令行入口与命令执行层中提供 WebCommand；内部处理包含 getNetworkIPs。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/web.ts:getNetworkIPs",
+      "type": "function",
+      "name": "getNetworkIPs",
+      "filePath": "packages/opencode/src/cli/cmd/web.ts",
+      "lineRange": [
+        9,
+        29
+      ],
+      "summary": "在命令行入口与命令执行层中执行 getNetworkIPs；调用 networkInterfaces、Object.keys、netInfo.address.startsWith、results.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/debug/v2.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "function:packages/opencode/src/cli/cmd/export.ts:source",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "function:packages/opencode/src/cli/cmd/export.ts:part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "function:packages/opencode/src/cli/cmd/export.ts:sanitize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/export.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/github.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/github.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:getAuthStatusIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:getAuthStatusText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:listState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:authState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:resolveConfigPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "function:packages/opencode/src/cli/cmd/mcp.ts:addMcpToConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/mcp.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/models.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/models.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/config/paths.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/plugin/install.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/plugin/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/pr.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "function:packages/opencode/src/cli/cmd/providers.ts:resolvePluginProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "function:packages/opencode/src/cli/cmd/providers.ts:resolvePluginProviders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/cli/effect/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run.ts:resolveRunInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run.ts:tool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run.ts:toolError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run.ts:runMini",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run.ts:runMini",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.stdin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "file:packages/opencode/src/cli/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/serve.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/serve.ts",
+      "target": "file:packages/opencode/src/cli/network.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "function:packages/opencode/src/cli/cmd/session.ts:pagerCmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "function:packages/opencode/src/cli/cmd/session.ts:formatSessionTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "function:packages/opencode/src/cli/cmd/session.ts:formatSessionJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/session.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "function:packages/opencode/src/cli/cmd/tui.ts:createWorkerFetch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "function:packages/opencode/src/cli/cmd/tui.ts:resolveThreadDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "function:packages/opencode/src/cli/cmd/tui.ts:resolveThreadDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/cli/network.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/cli/tui/worker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/util/rpc.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:collectRemovalTargets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:showRemovalSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:executeUninstall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:getShellConfigFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:cleanShellConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:getDirectorySize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/uninstall.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/upgrade.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/upgrade.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/web.ts",
+      "target": "function:packages/opencode/src/cli/cmd/web.ts:getNetworkIPs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/web.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/web.ts",
+      "target": "file:packages/opencode/src/cli/network.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/web.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "target": "function:packages/opencode/src/plugin/install.ts:installPlugin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "target": "function:packages/opencode/src/plugin/install.ts:readPluginManifest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "target": "function:packages/opencode/src/plugin/install.ts:patchPluginConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/uninstall.ts:collectRemovalTargets",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:getShellConfigFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/uninstall.ts:showRemovalSummary",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:getDirectorySize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/uninstall.ts:executeUninstall",
+      "target": "function:packages/opencode/src/cli/cmd/uninstall.ts:cleanShellConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

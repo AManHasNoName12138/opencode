@@ -1,0 +1,1326 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/src/schema/messages.ts",
+      "type": "file",
+      "name": "messages.ts",
+      "filePath": "packages/llm/src/schema/messages.ts",
+      "summary": "定义 SystemPart、TextPart、MediaPart、ToolContent、ToolFileContent、ToolTextContent、ToolResultValue 等共享数据契约，并通过 makeSystemPart、isToolResultValue、toolResultText 提供转换操作，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/llm/src/schema/messages.ts:Message",
+      "type": "class",
+      "name": "Message",
+      "filePath": "packages/llm/src/schema/messages.ts",
+      "lineRange": [
+        183,
+        189
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 Message 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/messages.ts:ToolDefinition",
+      "type": "class",
+      "name": "ToolDefinition",
+      "filePath": "packages/llm/src/schema/messages.ts",
+      "lineRange": [
+        224,
+        232
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ToolDefinition 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/messages.ts:ToolChoice",
+      "type": "class",
+      "name": "ToolChoice",
+      "filePath": "packages/llm/src/schema/messages.ts",
+      "lineRange": [
+        241,
+        244
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ToolChoice 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/messages.ts:LLMRequest",
+      "type": "class",
+      "name": "LLMRequest",
+      "filePath": "packages/llm/src/schema/messages.ts",
+      "lineRange": [
+        271,
+        284
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 LLMRequest 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/schema/options.ts",
+      "type": "file",
+      "name": "options.ts",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "summary": "定义 mergeJsonRecords、ProviderOptions、mergeProviderOptions、HttpOptions、mergeHttpOptions、GenerationOptions、mergeGenerationOptions 等共享数据契约，并通过 mergeJsonRecords、mergeStringRecords、mergeProviderOptions、mergeHttpOptions、latestGeneration、mergeGenerationOptions 提供转换操作，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "type": "function",
+      "name": "mergeJsonRecords",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        6,
+        20
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 mergeJsonRecords，接收 ...items 参数；调用 items.filter、Object.values、Object.entries、isRecord、mergeJsonRecords、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/options.ts:mergeStringRecords",
+      "type": "function",
+      "name": "mergeStringRecords",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        22,
+        34
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 mergeStringRecords，接收 ...items 参数；调用 items.filter、Object.fromEntries、defined.flatMap、Object.entries、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/options.ts:mergeProviderOptions",
+      "type": "function",
+      "name": "mergeProviderOptions",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        39,
+        51
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 mergeProviderOptions，接收 ...items 参数；调用 Object.entries、mergeJsonRecords、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/options.ts:mergeHttpOptions",
+      "type": "function",
+      "name": "mergeHttpOptions",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        66,
+        72
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 mergeHttpOptions，接收 ...items 参数；调用 mergeJsonRecords、items.map、mergeStringRecords 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/options.ts:mergeGenerationOptions",
+      "type": "function",
+      "name": "mergeGenerationOptions",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        110,
+        122
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 mergeGenerationOptions，接收 ...items 参数；调用 latestGeneration、Object.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:HttpOptions",
+      "type": "class",
+      "name": "HttpOptions",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 HttpOptions 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:GenerationOptions",
+      "type": "class",
+      "name": "GenerationOptions",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        74,
+        83
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 GenerationOptions 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:ModelLimits",
+      "type": "class",
+      "name": "ModelLimits",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        124,
+        127
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ModelLimits 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:ModelDefaults",
+      "type": "class",
+      "name": "ModelDefaults",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        137,
+        142
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ModelDefaults 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:ModelCompatibility",
+      "type": "class",
+      "name": "ModelCompatibility",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        169,
+        171
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ModelCompatibility 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:Model",
+      "type": "class",
+      "name": "Model",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        180,
+        222
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 Model 类，提供 constructor、make、input、update 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/options.ts:CacheHint",
+      "type": "class",
+      "name": "CacheHint",
+      "filePath": "packages/llm/src/schema/options.ts",
+      "lineRange": [
+        245,
+        248
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 CacheHint 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/tool-runtime.ts",
+      "type": "file",
+      "name": "tool-runtime.ts",
+      "filePath": "packages/llm/src/tool-runtime.ts",
+      "summary": "根据模型产生的工具调用分派宿主工具，先解码输入再执行，并把执行结果或失败转换成工具运行结果。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/tool-runtime.ts:dispatch",
+      "type": "function",
+      "name": "dispatch",
+      "filePath": "packages/llm/src/tool-runtime.ts",
+      "lineRange": [
+        23,
+        35
+      ],
+      "summary": "在packages/llm中执行 dispatch，接收 tools、call 参数；调用 Effect.succeed、result、decodeAndExecute、Effect.map、Effect.catchTag 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/tool-runtime.ts:decodeAndExecute",
+      "type": "function",
+      "name": "decodeAndExecute",
+      "filePath": "packages/llm/src/tool-runtime.ts",
+      "lineRange": [
+        37,
+        61
+      ],
+      "summary": "在packages/llm中执行 decodeAndExecute，接收 tool、call 参数；调用 tool._decode、Effect.mapError、Effect.flatMap、tool._encode、Effect.map、ToolResultValue.is、ToolOutput.fromResultValue 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/tool-runtime.ts:result",
+      "type": "function",
+      "name": "result",
+      "filePath": "packages/llm/src/tool-runtime.ts",
+      "lineRange": [
+        63,
+        76
+      ],
+      "summary": "在packages/llm中执行 result，接收 call、value、error 参数；调用 ToolResultValue.is、LLMEvent.toolError、String、LLMEvent.toolResult 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/llm/src/tool.ts",
+      "summary": "用 Schema 与执行函数构造 Tool，将宿主工具集合转换为模型可见定义，并通过 ToolFailure 表达解码或执行失败。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/tool.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/llm/src/tool.ts",
+      "lineRange": [
+        165,
+        206
+      ],
+      "summary": "在packages/llm中执行 make，接收 config 参数；调用 project、Schema.decodeUnknownEffect、Schema.encodeEffect、toJsonSchema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/tool.ts:toDefinitions",
+      "type": "function",
+      "name": "toDefinitions",
+      "filePath": "packages/llm/src/tool.ts",
+      "lineRange": [
+        221,
+        230
+      ],
+      "summary": "在packages/llm中执行 toDefinitions，接收 tools 参数；调用 Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/tool.ts:project",
+      "type": "function",
+      "name": "project",
+      "filePath": "packages/llm/src/tool.ts",
+      "lineRange": [
+        238,
+        249
+      ],
+      "summary": "在packages/llm中执行 project，接收 toModelOutput、toStructuredOutput、parameters、callID、output 参数；调用 ToolOutput.make、toStructuredOutput、toModelOutput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/utils/record.ts",
+      "type": "file",
+      "name": "record.ts",
+      "filePath": "packages/llm/src/utils/record.ts",
+      "summary": "在packages/llm中提供 isRecord 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "function",
+      "name": "isRecord",
+      "filePath": "packages/llm/src/utils/record.ts",
+      "lineRange": [
+        2,
+        3
+      ],
+      "summary": "在packages/llm中执行 isRecord，接收 value 参数；调用 Array.isArray 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/adapter.test.ts",
+      "type": "file",
+      "name": "adapter.test.ts",
+      "filePath": "packages/llm/test/adapter.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「llm route、stream and generate use the route pipeline、selects routes by model route value、builds models from configured routes、does not register duplicate route ids globally」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/auth-options.types.ts",
+      "type": "file",
+      "name": "auth-options.types.ts",
+      "filePath": "packages/llm/test/auth-options.types.ts",
+      "summary": "为 packages/llm 测试提供样本与环境，用于运行相关验证。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/auth.test.ts",
+      "type": "file",
+      "name": "auth.test.ts",
+      "filePath": "packages/llm/test/auth.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Auth、renders a config credential as bearer auth、falls back between credential sources before rendering、composes header auth in sequence、renders a direct secret as a custom header、renders bearer auth into a custom header、falls back between full auth values」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/cache-policy.test.ts",
+      "type": "file",
+      "name": "cache-policy.test.ts",
+      "filePath": "packages/llm/test/cache-policy.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「applyCachePolicy、undefined cache resolves to、granular object form: tools-only marks just tools、auto policy preserves manual CacheHints on other parts、ttlSeconds in the policy flows through to wire markers、messages: { tail: 2 } marks the last 2 message boundaries、returns the same request reference when policy is a no-op (pure function)」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:Message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:Message",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:ToolDefinition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:ToolDefinition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:ToolChoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:ToolChoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:LLMRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "class:packages/llm/src/schema/messages.ts:LLMRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "file:packages/llm/src/schema/ids.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "file:packages/llm/src/schema/options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/messages.ts",
+      "target": "file:packages/llm/src/utils/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeStringRecords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeProviderOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeProviderOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeHttpOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeHttpOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeGenerationOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "function:packages/llm/src/schema/options.ts:mergeGenerationOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:HttpOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:HttpOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:GenerationOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:GenerationOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelLimits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelLimits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelDefaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelDefaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:ModelCompatibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:Model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:Model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:CacheHint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "class:packages/llm/src/schema/options.ts:CacheHint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "file:packages/llm/src/schema/ids.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/options.ts",
+      "target": "file:packages/llm/src/utils/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "function:packages/llm/src/tool-runtime.ts:dispatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "function:packages/llm/src/tool-runtime.ts:dispatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "function:packages/llm/src/tool-runtime.ts:decodeAndExecute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "function:packages/llm/src/tool-runtime.ts:result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "function:packages/llm/src/tool.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "function:packages/llm/src/tool.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "function:packages/llm/src/tool.ts:toDefinitions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "function:packages/llm/src/tool.ts:toDefinitions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "function:packages/llm/src/tool.ts:project",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/utils/record.ts",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/utils/record.ts",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/adapter.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/azure.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/azure.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/github-copilot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/github-copilot.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openrouter.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/openrouter.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/xai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/providers/xai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth-options.types.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/auth.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/cache-policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/cache-policy.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/gemini.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/gemini.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/cache-policy.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/options.ts:mergeProviderOptions",
+      "target": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/options.ts:mergeHttpOptions",
+      "target": "function:packages/llm/src/schema/options.ts:mergeJsonRecords",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/options.ts:mergeHttpOptions",
+      "target": "function:packages/llm/src/schema/options.ts:mergeStringRecords",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/tool-runtime.ts:dispatch",
+      "target": "function:packages/llm/src/tool-runtime.ts:result",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/tool-runtime.ts:dispatch",
+      "target": "function:packages/llm/src/tool-runtime.ts:decodeAndExecute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/tool.ts:make",
+      "target": "function:packages/llm/src/tool.ts:project",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

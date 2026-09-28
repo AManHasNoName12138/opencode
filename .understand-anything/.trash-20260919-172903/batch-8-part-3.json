@@ -1,0 +1,1193 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/context/permission.tsx",
+      "type": "file",
+      "name": "permission.tsx",
+      "filePath": "packages/app/src/context/permission.tsx",
+      "summary": "管理权限请求的界面状态和自动批准偏好，提供会话操作所需的权限上下文。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/permission.tsx:isNonAllowRule",
+      "type": "function",
+      "name": "isNonAllowRule",
+      "filePath": "packages/app/src/context/permission.tsx",
+      "lineRange": [
+        32,
+        43
+      ],
+      "summary": "判断Non允许Rule，输入包括 rule。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/permission.tsx:createServerPermissionState",
+      "type": "function",
+      "name": "createServerPermissionState",
+      "filePath": "packages/app/src/context/permission.tsx",
+      "lineRange": [
+        190,
+        484
+      ],
+      "summary": "创建服务器权限状态，调用 persisted、Persist.serverGlobal、createStore、input.sdk.event.listen 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/platform.tsx",
+      "type": "file",
+      "name": "platform.tsx",
+      "filePath": "packages/app/src/context/platform.tsx",
+      "summary": "管理platform的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 { use: usePlatform, provider: PlatformProvider }。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/prompt-state.test.ts",
+      "type": "file",
+      "name": "prompt-state.test.ts",
+      "filePath": "packages/app/src/context/prompt-state.test.ts",
+      "summary": "验证提示词状态相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“prompt state initialization”、“initializes prompt text, cursor, and model together”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/prompt-state.ts",
+      "type": "file",
+      "name": "prompt-state.ts",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "summary": "创建会话和草稿作用域的提示词状态，比较内容片段并管理提示词就绪状态。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:isPartEqual",
+      "type": "function",
+      "name": "isPartEqual",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        91,
+        108
+      ],
+      "summary": "判断片段相等，调用 isSelectionEqual 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:isPromptEqual",
+      "type": "function",
+      "name": "isPromptEqual",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        110,
+        116
+      ],
+      "summary": "判断提示词相等，调用 isPartEqual 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:contextItemKey",
+      "type": "function",
+      "name": "contextItemKey",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        137,
+        148
+      ],
+      "summary": "实现 contextItemKey 的提示词状态操作，调用 item.comment?.trim、checksum、digest.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:isCommentItem",
+      "type": "function",
+      "name": "isCommentItem",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        150,
+        152
+      ],
+      "summary": "判断评论条目，调用 item.comment?.trim 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createPromptActions",
+      "type": "function",
+      "name": "createPromptActions",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        154,
+        170
+      ],
+      "summary": "提供提示词设置和重置操作，复制输入片段并批量更新正文与光标位置。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:promptStore",
+      "type": "function",
+      "name": "promptStore",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        178,
+        189
+      ],
+      "summary": "从可选初始正文和模型构造提示词存储，设置初始光标并建立空评论上下文。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createPromptStateValue",
+      "type": "function",
+      "name": "createPromptStateValue",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        191,
+        238
+      ],
+      "summary": "把提示词存储包装为正文、光标、模型及评论上下文操作，并对评论去重、更新和替换保持稳定身份。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createPromptSession",
+      "type": "function",
+      "name": "createPromptSession",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        245,
+        252
+      ],
+      "summary": "为服务器及会话或草稿作用域创建持久化提示词状态，并通过平台存储读取和保存。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createDraftPromptSession",
+      "type": "function",
+      "name": "createDraftPromptSession",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        254,
+        256
+      ],
+      "summary": "按草稿标识创建持久化提示词状态，使未创建会话的输入也能恢复。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createPromptReady",
+      "type": "function",
+      "name": "createPromptReady",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        260,
+        264
+      ],
+      "summary": "把当前提示词会话的就绪函数与异步加载 Promise 暴露为可随会话切换更新的接口。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt-state.ts:createPromptState",
+      "type": "function",
+      "name": "createPromptState",
+      "filePath": "packages/app/src/context/prompt-state.ts",
+      "lineRange": [
+        266,
+        273
+      ],
+      "summary": "创建无需持久化加载的提示词状态，提供立即就绪标志及相同的编辑接口。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/prompt.tsx",
+      "type": "file",
+      "name": "prompt.tsx",
+      "filePath": "packages/app/src/context/prompt.tsx",
+      "summary": "按当前标签页选择提示词草稿，向输入组件提供正文、模型、附件与评论上下文。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt.tsx:selectPromptTab",
+      "type": "function",
+      "name": "selectPromptTab",
+      "filePath": "packages/app/src/context/prompt.tsx",
+      "lineRange": [
+        48,
+        55
+      ],
+      "summary": "选择提示词标签页，调用 tabs.find 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/prompt.tsx:createTabPromptState",
+      "type": "function",
+      "name": "createTabPromptState",
+      "filePath": "packages/app/src/context/prompt.tsx",
+      "lineRange": [
+        67,
+        71
+      ],
+      "summary": "创建标签页提示词状态，调用 tabs.state、createPromptSession 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/sdk.tsx",
+      "type": "file",
+      "name": "sdk.tsx",
+      "filePath": "packages/app/src/context/sdk.tsx",
+      "summary": "管理SDK的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 { use: useSDK, provider: SDKProvider }。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/server-sdk.test.ts",
+      "type": "file",
+      "name": "server-sdk.test.ts",
+      "filePath": "packages/app/src/context/server-sdk.test.ts",
+      "summary": "验证服务器SDK相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“resumeStreamAfterPageShow”、“restarts a stream only after a back-forward cache restore”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "file",
+      "name": "server-sdk.tsx",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "summary": "建立各服务器的 SDK 与事件流，规范化和合并事件，在页面恢复时重连，并提供 Protocol 访问入口。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:adaptServerEvent",
+      "type": "function",
+      "name": "adaptServerEvent",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        28,
+        57
+      ],
+      "summary": "把服务器事件转换为前端消费的统一事件形式。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:enqueueServerEvent",
+      "type": "function",
+      "name": "enqueueServerEvent",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        68,
+        77
+      ],
+      "summary": "实现 enqueueServerEvent 的服务器SDK操作，调用 coalescedKey、queue.push 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:coalesceServerEvents",
+      "type": "function",
+      "name": "coalesceServerEvents",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        79,
+        139
+      ],
+      "summary": "合并同一批服务器事件，减少重复状态更新。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:resumeStreamAfterPageShow",
+      "type": "function",
+      "name": "resumeStreamAfterPageShow",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        162,
+        165
+      ],
+      "summary": "实现 resumeStreamAfterPageShow 的服务器SDK操作，调用 start 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "type": "function",
+      "name": "createServerSdkContextBase",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        187,
+        373
+      ],
+      "summary": "创建服务器SDK上下文Base，调用 usePlatform、createApiForServer、createSdkForServer、detectServerProtocol 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "type": "function",
+      "name": "createServerSdkContext",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        379,
+        384
+      ],
+      "summary": "建立服务器 SDK、事件流与事件分发的响应式上下文。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:useServerProtocol",
+      "type": "function",
+      "name": "useServerProtocol",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        403,
+        406
+      ],
+      "summary": "连接服务器协议，调用 useServerSDK、createMemo、serverSDK 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/server-sdk.tsx:createDirSdkContext",
+      "type": "function",
+      "name": "createDirSdkContext",
+      "filePath": "packages/app/src/context/server-sdk.tsx",
+      "lineRange": [
+        412,
+        444
+      ],
+      "summary": "创建DirSDK上下文，调用 serverSDK.createClient、createGlobalEmitter、serverSDK.event.on、emitter.emit 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/server-session-v2-reducer.test.ts",
+      "type": "file",
+      "name": "server-session-v2-reducer.test.ts",
+      "filePath": "packages/app/src/context/server-session-v2-reducer.test.ts",
+      "summary": "验证服务器会话新版归并器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“v2 session reducer”、“projects promoted input and streaming assistant content”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "function:packages/app/src/context/permission.tsx:isNonAllowRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "function:packages/app/src/context/permission.tsx:createServerPermissionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/permission-auto-respond.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/utils/base64.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/permission.tsx",
+      "target": "file:packages/app/src/utils/session-route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/permission.tsx:createServerPermissionState",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/platform.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/platform.tsx",
+      "target": "file:packages/app/src/desktop-menu.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/platform.tsx",
+      "target": "file:packages/app/src/updater.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/platform.tsx",
+      "target": "file:packages/app/src/utils/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/platform.tsx",
+      "target": "file:packages/app/src/wsl/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.test.ts",
+      "target": "file:packages/app/src/context/prompt-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/context/prompt-state.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:isPartEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:isPromptEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:isPromptEqual",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:contextItemKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:isCommentItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:isCommentItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptActions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:promptStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptStateValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createDraftPromptSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createDraftPromptSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptReady",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptReady",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/utils/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt-state.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/prompt-state.ts:isPromptEqual",
+      "target": "function:packages/app/src/context/prompt-state.ts:isPartEqual",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/prompt-state.ts:createPromptStateValue",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptActions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/prompt-state.ts:createPromptStateValue",
+      "target": "function:packages/app/src/context/prompt-state.ts:isPromptEqual",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/prompt-state.ts:createPromptState",
+      "target": "function:packages/app/src/context/prompt-state.ts:promptStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/prompt-state.ts:createPromptState",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptStateValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "function:packages/app/src/context/prompt.tsx:selectPromptTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "function:packages/app/src/context/prompt.tsx:selectPromptTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "function:packages/app/src/context/prompt.tsx:createTabPromptState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "function:packages/app/src/context/prompt.tsx:createTabPromptState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/prompt-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/utils/session-route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/prompt.tsx:createTabPromptState",
+      "target": "function:packages/app/src/context/prompt-state.ts:createPromptSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/sdk.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.test.ts",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/context/server-sdk.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:adaptServerEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:adaptServerEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:enqueueServerEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:enqueueServerEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:coalesceServerEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:coalesceServerEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:resumeStreamAfterPageShow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:resumeStreamAfterPageShow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:useServerProtocol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:useServerProtocol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createDirSdkContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/utils/refcount.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/utils/server-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/utils/server-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sdk.tsx",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "target": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "target": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "target": "function:packages/app/src/utils/server-protocol.ts:detectServerProtocol",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "target": "function:packages/app/src/context/server-sdk.tsx:resumeStreamAfterPageShow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "target": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContextBase",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "target": "function:packages/app/src/utils/refcount.ts:createRefCountMap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createDirSdkContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/server-sdk.tsx:createDirSdkContext",
+      "target": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/server-session-v2-reducer.test.ts",
+      "target": "file:packages/app/src/context/server-session-v2-reducer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

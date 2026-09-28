@@ -1,0 +1,943 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/main/apps.ts",
+      "type": "file",
+      "name": "apps.ts",
+      "filePath": "packages/desktop/src/main/apps.ts",
+      "summary": "为 desktop 提供apps相关数据处理接口。 对外提供 checkAppExists、resolveAppPath。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/apps.ts:checkAppExists",
+      "type": "function",
+      "name": "checkAppExists",
+      "filePath": "packages/desktop/src/main/apps.ts",
+      "lineRange": [
+        13,
+        17
+      ],
+      "summary": "检查AppExists，调用 checkMacosApp 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/apps.ts:resolveAppPath",
+      "type": "function",
+      "name": "resolveAppPath",
+      "filePath": "packages/desktop/src/main/apps.ts",
+      "lineRange": [
+        19,
+        22
+      ],
+      "summary": "解析App路径，调用 resolveWindowsAppPath 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/apps.ts:checkMacosApp",
+      "type": "function",
+      "name": "checkMacosApp",
+      "filePath": "packages/desktop/src/main/apps.ts",
+      "lineRange": [
+        24,
+        37
+      ],
+      "summary": "检查MacosApp，调用 locations.push、exists、execFilePromise 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/apps.ts:resolveWindowsAppPath",
+      "type": "function",
+      "name": "resolveWindowsAppPath",
+      "filePath": "packages/desktop/src/main/apps.ts",
+      "lineRange": [
+        39,
+        136
+      ],
+      "summary": "解析窗口App路径，调用 execFilePromise、r.stdout.toString、line.trim、paths.find 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/attachment-picker.test.ts",
+      "type": "file",
+      "name": "attachment-picker.test.ts",
+      "filePath": "packages/desktop/src/main/attachment-picker.test.ts",
+      "summary": "验证附件选择器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“assertAttachmentBudget”、“accepts selections within the media ingest limit”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/attachment-picker.ts",
+      "type": "file",
+      "name": "attachment-picker.ts",
+      "filePath": "packages/desktop/src/main/attachment-picker.ts",
+      "summary": "记录用户选择文件的读取授权，并校验附件大小预算后读取文件内容。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/attachment-picker.ts:createPickedFileAuthorizations",
+      "type": "function",
+      "name": "createPickedFileAuthorizations",
+      "filePath": "packages/desktop/src/main/attachment-picker.ts",
+      "lineRange": [
+        7,
+        32
+      ],
+      "summary": "记录文件选择授权并约束后续附件读取。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/attachment-picker.ts:assertAttachmentBudget",
+      "type": "function",
+      "name": "assertAttachmentBudget",
+      "filePath": "packages/desktop/src/main/attachment-picker.ts",
+      "lineRange": [
+        34,
+        38
+      ],
+      "summary": "检查附件读取是否超出允许的大小预算。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/attachment-picker.ts:readAttachment",
+      "type": "function",
+      "name": "readAttachment",
+      "filePath": "packages/desktop/src/main/attachment-picker.ts",
+      "lineRange": [
+        40,
+        57
+      ],
+      "summary": "读取附件，调用 open、file.stat、nativeT、Buffer.allocUnsafe 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/background-cli.ts",
+      "type": "file",
+      "name": "background-cli.ts",
+      "filePath": "packages/desktop/src/main/background-cli.ts",
+      "summary": "准备桌面携带的 CLI 可执行文件，在候选状态目录探测已有 V2 后台服务，再启动或复用服务并读取连接地址和认证凭据。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/background-cli.ts:startBackgroundCli",
+      "type": "function",
+      "name": "startBackgroundCli",
+      "filePath": "packages/desktop/src/main/background-cli.ts",
+      "lineRange": [
+        19,
+        58
+      ],
+      "summary": "选择或暂存 CLI 版本，探测多个状态目录中的后台服务，再执行服务启动并读取认证凭据。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/background-cli.ts:installCli",
+      "type": "function",
+      "name": "installCli",
+      "filePath": "packages/desktop/src/main/background-cli.ts",
+      "lineRange": [
+        60,
+        78
+      ],
+      "summary": "把内置 CLI 按版本复制到用户数据目录，复用已有文件，并以临时文件和重命名完成安装。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/background-cli.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/desktop/src/main/background-cli.ts",
+      "lineRange": [
+        80,
+        108
+      ],
+      "summary": "以指定状态目录运行后台 CLI 命令，记录执行结果并在读取敏感凭据时遮蔽标准输出日志。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/constants.ts",
+      "type": "file",
+      "name": "constants.ts",
+      "filePath": "packages/desktop/src/main/constants.ts",
+      "summary": "为 desktop 提供constants相关数据处理接口。 对外提供 CHANNEL、UPDATER_ENABLED。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/debug.ts",
+      "type": "file",
+      "name": "debug.ts",
+      "filePath": "packages/desktop/src/main/debug.ts",
+      "summary": "为 desktop 提供调试相关数据处理接口。 对外提供 setForceFocus。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "type": "function",
+      "name": "setForceFocus",
+      "filePath": "packages/desktop/src/main/debug.ts",
+      "lineRange": [
+        16,
+        67
+      ],
+      "summary": "设置Force焦点，调用 debuggerApi.isAttached、focusDebuggerOwners.delete、forcedFocusNodes.delete、debuggerApi.attach 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/debug.ts:readDocumentNodeId",
+      "type": "function",
+      "name": "readDocumentNodeId",
+      "filePath": "packages/desktop/src/main/debug.ts",
+      "lineRange": [
+        69,
+        82
+      ],
+      "summary": "读取Document节点标识，输入包括 value。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/debug.ts:readNodeIds",
+      "type": "function",
+      "name": "readNodeIds",
+      "filePath": "packages/desktop/src/main/debug.ts",
+      "lineRange": [
+        84,
+        95
+      ],
+      "summary": "读取节点标识，调用 value.nodeIds.every 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "type": "file",
+      "name": "desktop-menu-actions.ts",
+      "filePath": "packages/desktop/src/main/desktop-menu-actions.ts",
+      "summary": "为 desktop 提供桌面菜单actions相关数据处理接口。 对外提供 runDesktopMenuAction。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "type": "function",
+      "name": "runDesktopMenuAction",
+      "filePath": "packages/desktop/src/main/desktop-menu-actions.ts",
+      "lineRange": [
+        10,
+        78
+      ],
+      "summary": "运行桌面菜单Action，调用 handlers.checkForUpdates、handlers.relaunch、createMainWindow、win?.close 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/draft-store.test.ts",
+      "type": "file",
+      "name": "draft-store.test.ts",
+      "filePath": "packages/desktop/src/main/draft-store.test.ts",
+      "summary": "验证草稿存储相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“flushes the latest buffered draft and stores blobs”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/draft-store.ts",
+      "type": "file",
+      "name": "draft-store.ts",
+      "filePath": "packages/desktop/src/main/draft-store.ts",
+      "summary": "在桌面用户数据目录中持久化草稿与附件，为 IPC 提供可刷新和关闭的本地存储。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/draft-store.ts:createDesktopDraftStore",
+      "type": "function",
+      "name": "createDesktopDraftStore",
+      "filePath": "packages/desktop/src/main/draft-store.ts",
+      "lineRange": [
+        16,
+        82
+      ],
+      "summary": "创建桌面草稿持久化存储，提供草稿与附件的读写及生命周期方法。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/external-url.test.ts",
+      "type": "file",
+      "name": "external-url.test.ts",
+      "filePath": "packages/desktop/src/main/external-url.test.ts",
+      "summary": "验证外部URL相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“external URLs”、“opens web URLs externally”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/external-url.ts",
+      "type": "file",
+      "name": "external-url.ts",
+      "filePath": "packages/desktop/src/main/external-url.ts",
+      "summary": "检查外部地址和本地文件路径，集中决定桌面窗口允许打开的链接目标。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/external-url.ts:resolveExternalURL",
+      "type": "function",
+      "name": "resolveExternalURL",
+      "filePath": "packages/desktop/src/main/external-url.ts",
+      "lineRange": [
+        3,
+        8
+      ],
+      "summary": "解析外部地址并筛选允许交给系统打开的 URL。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/external-url.ts:resolveLocalFilePath",
+      "type": "function",
+      "name": "resolveLocalFilePath",
+      "filePath": "packages/desktop/src/main/external-url.ts",
+      "lineRange": [
+        10,
+        19
+      ],
+      "summary": "将可接受的本地文件地址解析为系统文件路径。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/index.test.ts",
+      "type": "file",
+      "name": "index.test.ts",
+      "filePath": "packages/desktop/src/main/index.test.ts",
+      "summary": "验证索引相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“desktop initialization”、“forwards loading task failures before renderer initialization”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/desktop/src/main/index.ts",
+      "summary": "启动 Electron 主进程，配置单实例、代理、证书和深层链接，注册 IPC、更新及退出清理。根据 sidecar 版本选择 V1 子进程或 V2 后台 CLI，并初始化 WSL 服务与窗口。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/index.ts:ensureLoopbackNoProxy",
+      "type": "function",
+      "name": "ensureLoopbackNoProxy",
+      "filePath": "packages/desktop/src/main/index.ts",
+      "lineRange": [
+        95,
+        113
+      ],
+      "summary": "确保Loopback无Proxy，调用 upsert 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:checkAppExists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:checkAppExists",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:resolveAppPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:resolveAppPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:checkMacosApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/apps.ts",
+      "target": "function:packages/desktop/src/main/apps.ts:resolveWindowsAppPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/main/apps.ts:checkAppExists",
+      "target": "function:packages/desktop/src/main/apps.ts:checkMacosApp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/apps.ts:resolveAppPath",
+      "target": "function:packages/desktop/src/main/apps.ts:resolveWindowsAppPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.test.ts",
+      "target": "file:packages/desktop/src/main/attachment-picker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "file:packages/desktop/src/main/attachment-picker.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:createPickedFileAuthorizations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:createPickedFileAuthorizations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:assertAttachmentBudget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:assertAttachmentBudget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:readAttachment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:readAttachment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/attachment-picker.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/attachment-picker.ts:assertAttachmentBudget",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/attachment-picker.ts:readAttachment",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/background-cli.ts",
+      "target": "function:packages/desktop/src/main/background-cli.ts:startBackgroundCli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/background-cli.ts",
+      "target": "function:packages/desktop/src/main/background-cli.ts:startBackgroundCli",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/background-cli.ts",
+      "target": "function:packages/desktop/src/main/background-cli.ts:installCli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/background-cli.ts",
+      "target": "function:packages/desktop/src/main/background-cli.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/main/background-cli.ts:startBackgroundCli",
+      "target": "function:packages/desktop/src/main/background-cli.ts:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/background-cli.ts:startBackgroundCli",
+      "target": "function:packages/desktop/src/main/background-cli.ts:installCli",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/debug.ts",
+      "target": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/debug.ts",
+      "target": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/debug.ts",
+      "target": "function:packages/desktop/src/main/debug.ts:readDocumentNodeId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/debug.ts",
+      "target": "function:packages/desktop/src/main/debug.ts:readNodeIds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "target": "function:packages/desktop/src/main/debug.ts:readDocumentNodeId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "target": "function:packages/desktop/src/main/debug.ts:readNodeIds",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "target": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "target": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "target": "file:packages/desktop/src/main/windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "target": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/draft-store.test.ts",
+      "target": "file:packages/desktop/src/main/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/draft-store.ts",
+      "target": "file:packages/desktop/src/main/draft-store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/draft-store.ts",
+      "target": "function:packages/desktop/src/main/draft-store.ts:createDesktopDraftStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/draft-store.ts",
+      "target": "function:packages/desktop/src/main/draft-store.ts:createDesktopDraftStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.test.ts",
+      "target": "file:packages/desktop/src/main/external-url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.ts",
+      "target": "file:packages/desktop/src/main/external-url.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.ts",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveExternalURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.ts",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveExternalURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.ts",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveLocalFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/external-url.ts",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveLocalFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.test.ts",
+      "target": "file:packages/desktop/src/main/initialization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "function:packages/desktop/src/main/index.ts:ensureLoopbackNoProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/apps.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/background-cli.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/constants.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/initialization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/ipc.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/menu.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/migrate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/onboarding.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/store-cleanup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/updater.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/window-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/index.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

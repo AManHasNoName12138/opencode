@@ -1,0 +1,933 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "type": "file",
+      "name": "runtime.boot.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 resolveModelInfo、resolveSessionInfo、resolveRunTuiConfig、resolveDiffStyle；内部处理包含 loadConfig、emptyModelInfo、emptySessionInfo、defaultRunTuiConfig、runTuiConfig、resolveModelInfo、resolveSessionInfo。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:runTuiConfig",
+      "type": "function",
+      "name": "runTuiConfig",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "lineRange": [
+        76,
+        86
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runTuiConfig，接收 config 参数；调用 defaultRunTuiConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveModelInfo",
+      "type": "function",
+      "name": "resolveModelInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "lineRange": [
+        178,
+        184
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveModelInfo，接收 sdk、directory、model 参数；调用 runtime.runPromise、svc.resolveModelInfo、emptyModelInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveSessionInfo",
+      "type": "function",
+      "name": "resolveSessionInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "lineRange": [
+        187,
+        193
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveSessionInfo，接收 sdk、sessionID、model 参数；调用 runtime.runPromise、svc.resolveSessionInfo、emptySessionInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveRunTuiConfig",
+      "type": "function",
+      "name": "resolveRunTuiConfig",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "lineRange": [
+        196,
+        198
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveRunTuiConfig；调用 runtime.runPromise、svc.resolveRunTuiConfig、defaultRunTuiConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveDiffStyle",
+      "type": "function",
+      "name": "resolveDiffStyle",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "lineRange": [
+        200,
+        202
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveDiffStyle；调用 runtime.runPromise、svc.resolveDiffStyle 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "type": "file",
+      "name": "runtime.lifecycle.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 createRuntimeLifecycle；内部处理包含 shutdown、splashInfo、footerLabels、directoryLabel、queueSplash、createRuntimeLifecycle。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:shutdown",
+      "type": "function",
+      "name": "shutdown",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        91,
+        107
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 shutdown，接收 renderer 参数；调用 renderer.destroy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:splashInfo",
+      "type": "function",
+      "name": "splashInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        109,
+        122
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 splashInfo，接收 title、history 参数；调用 SessionApi.isDefaultTitle、history.find、item.text.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:footerLabels",
+      "type": "function",
+      "name": "footerLabels",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        124,
+        138
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 footerLabels，接收 input 参数；调用 Locale.titlecase、formatModelLabel 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:directoryLabel",
+      "type": "function",
+      "name": "directoryLabel",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        140,
+        149
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 directoryLabel，接收 directory 参数；调用 path.resolve、resolved.startsWith、resolved.replace、display.replaceAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:queueSplash",
+      "type": "function",
+      "name": "queueSplash",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        151,
+        169
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 queueSplash，接收 renderer、state、phase、write 参数；调用 renderer.writeToScrollback、renderer.requestRender 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "type": "function",
+      "name": "createRuntimeLifecycle",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "lineRange": [
+        176,
+        406
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createRuntimeLifecycle，接收 input 参数；调用 resolveInteractiveStdin、createCliRenderer、resolveRunTheme、renderer.setBackgroundColor、createDefaultOpenTuiKeymap、registerOpencodeKeymap、splashInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "type": "file",
+      "name": "runtime.queue.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 runPromptQueue；内部处理包含 defer、runPromptQueue。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:defer",
+      "type": "function",
+      "name": "defer",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "lineRange": [
+        43,
+        52
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 defer。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:runPromptQueue",
+      "type": "function",
+      "name": "runPromptQueue",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "lineRange": [
+        59,
+        349
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runPromptQueue，接收 input 参数；调用 defer、input.footer.onPrompt、submit、input.footer.onClose、close、input.footer.onQueuedRemove、state.queued.find 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "type": "file",
+      "name": "runtime.shared.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 reusePendingTask 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.shared.ts:reusePendingTask",
+      "type": "function",
+      "name": "reusePendingTask",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "lineRange": [
+        5,
+        17
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 reusePendingTask，接收 slot、run 参数；调用 run 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 pickVariant、resolveVariant、runPromptQueue、runInteractiveLocalMode、runInteractiveMode；内部处理包含 createSessionResolver、hasSession、eagerStream、variantsFor、resolveExitTitle、runInteractiveRuntime、runInteractiveLocalMode。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "function",
+      "name": "createSessionResolver",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        100,
+        117
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createSessionResolver，接收 fn 参数；调用 fn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "function",
+      "name": "resolveExitTitle",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        158,
+        173
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveExitTitle，接收 ctx、input、state 参数；调用 hasSession 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "function",
+      "name": "runInteractiveRuntime",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        181,
+        731
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveRuntime，接收 input、deps 参数；调用 performance.now、trace、resolveRunTuiConfig、input.boot、resolveModelInfo、resolveSessionInfo、Promise.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "function",
+      "name": "runInteractiveLocalMode",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        735,
+        784
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveLocalMode，接收 input 参数；调用 createOpencodeClient、runInteractiveRuntime、Promise.all、input.resolveAgent、input.session、input.share、createSessionResolver 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "function",
+      "name": "runInteractiveMode",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        787,
+        814
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveMode，接收 input、deps 参数；调用 runInteractiveRuntime、createSessionResolver 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:runTuiConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveModelInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveModelInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveSessionInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveSessionInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveRunTuiConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveRunTuiConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveDiffStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveDiffStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:shutdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:splashInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:footerLabels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:directoryLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:queueSplash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.stdin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/splash.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:defer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:runPromptQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:runPromptQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/prompt.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.queue.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.shared.ts:reusePendingTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.shared.ts:reusePendingTask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:footerLabels",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.stdin.ts:resolveInteractiveStdin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:splashInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/splash.ts:splashMeta",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:footerLabels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:queueSplash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/splash.ts:entrySplash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:createRuntimeLifecycle",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts:directoryLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:runPromptQueue",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.queue.ts:defer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveRunTuiConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveModelInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveSessionInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveSavedVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:cycleVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:saveVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

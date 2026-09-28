@@ -1,0 +1,499 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/schema/src/llm.ts",
+      "type": "file",
+      "name": "llm.ts",
+      "filePath": "packages/schema/src/llm.ts",
+      "summary": "定义 ProviderMetadata、ToolTextContent、ToolFileContent、ToolContent 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/location.ts",
+      "type": "file",
+      "name": "location.ts",
+      "filePath": "packages/schema/src/location.ts",
+      "summary": "定义 Ref、Info、response 等共享数据契约，并通过 response 提供转换操作，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/schema/src/location.ts:response",
+      "type": "function",
+      "name": "response",
+      "filePath": "packages/schema/src/location.ts",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "在跨包共享的数据与事件契约中执行 response，接收 data 参数；调用 Schema.Struct 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/schema/src/location.ts:Info",
+      "type": "class",
+      "name": "Info",
+      "filePath": "packages/schema/src/location.ts",
+      "lineRange": [
+        14,
+        21
+      ],
+      "summary": "在跨包共享的数据与事件契约中定义 Info 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/lsp-event.ts",
+      "type": "file",
+      "name": "lsp-event.ts",
+      "filePath": "packages/schema/src/lsp-event.ts",
+      "summary": "定义 Updated、Definitions 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/mcp-event.ts",
+      "type": "file",
+      "name": "mcp-event.ts",
+      "filePath": "packages/schema/src/mcp-event.ts",
+      "summary": "定义 ToolsChanged、BrowserOpenFailed、Definitions 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/schema/src/model.ts",
+      "summary": "定义 ID、VariantID、Ref、Family、Capabilities、Cost、Api 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/schema/src/models-dev.ts",
+      "type": "file",
+      "name": "models-dev.ts",
+      "filePath": "packages/schema/src/models-dev.ts",
+      "summary": "定义 Event 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/permission-saved.ts",
+      "type": "file",
+      "name": "permission-saved.ts",
+      "filePath": "packages/schema/src/permission-saved.ts",
+      "summary": "定义 ID、Info 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/permission-v1.ts",
+      "type": "file",
+      "name": "permission-v1.ts",
+      "filePath": "packages/schema/src/permission-v1.ts",
+      "summary": "定义 permission-v1 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/permission.ts",
+      "type": "file",
+      "name": "permission.ts",
+      "filePath": "packages/schema/src/permission.ts",
+      "summary": "定义 ID、Source、Request、Reply、Event、Effect、Rule 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/schema/src/plugin.ts",
+      "type": "file",
+      "name": "plugin.ts",
+      "filePath": "packages/schema/src/plugin.ts",
+      "summary": "定义 ID、Event 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/project-copy.ts",
+      "type": "file",
+      "name": "project-copy.ts",
+      "filePath": "packages/schema/src/project-copy.ts",
+      "summary": "定义 StrategyID、CreateInput、RemoveInput、Copy 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/project-directories.ts",
+      "type": "file",
+      "name": "project-directories.ts",
+      "filePath": "packages/schema/src/project-directories.ts",
+      "summary": "定义 Event 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/project-id.ts",
+      "type": "file",
+      "name": "project-id.ts",
+      "filePath": "packages/schema/src/project-id.ts",
+      "summary": "定义 ProjectID 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/project.ts",
+      "type": "file",
+      "name": "project.ts",
+      "filePath": "packages/schema/src/project.ts",
+      "summary": "定义 ID、Vcs、Icon、Commands、Time、Info、Event 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/prompt-input.ts",
+      "type": "file",
+      "name": "prompt-input.ts",
+      "filePath": "packages/schema/src/prompt-input.ts",
+      "summary": "定义 FileAttachment、Prompt 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/schema/src/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "packages/schema/src/prompt.ts",
+      "summary": "定义 Source、FileAttachment、AgentAttachment、Prompt 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/schema/src/provider.ts",
+      "type": "file",
+      "name": "provider.ts",
+      "filePath": "packages/schema/src/provider.ts",
+      "summary": "定义 ID、AISDK、Native、Api、Request、Info 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/schema/src/llm.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "function:packages/schema/src/location.ts:response",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "function:packages/schema/src/location.ts:response",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "class:packages/schema/src/location.ts:Info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "class:packages/schema/src/location.ts:Info",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "file:packages/schema/src/project-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/location.ts",
+      "target": "file:packages/schema/src/workspace-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/lsp-event.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/mcp-event.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/model.ts",
+      "target": "file:packages/schema/src/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/model.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/models-dev.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission-saved.ts",
+      "target": "file:packages/schema/src/identifier.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission-saved.ts",
+      "target": "file:packages/schema/src/project-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission-saved.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission.ts",
+      "target": "file:packages/schema/src/identifier.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/permission.ts",
+      "target": "file:packages/schema/src/session-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/plugin.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project-copy.ts",
+      "target": "file:packages/schema/src/project-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project-copy.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project-directories.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project-directories.ts",
+      "target": "file:packages/schema/src/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project-id.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project.ts",
+      "target": "file:packages/schema/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project.ts",
+      "target": "file:packages/schema/src/project-id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/project.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/prompt-input.ts",
+      "target": "file:packages/schema/src/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/prompt-input.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/prompt.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/provider.ts",
+      "target": "file:packages/schema/src/integration.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/schema/src/provider.ts",
+      "target": "file:packages/schema/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

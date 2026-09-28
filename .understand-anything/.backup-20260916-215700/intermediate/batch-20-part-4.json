@@ -1,0 +1,980 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/src/session/runner/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "在V2 会话执行与持久化层中提供 ModelNotSelectedError、ModelUnavailableError、VariantUnavailableError、UnsupportedApiError、Service、layerWith、fromCatalogModel；内部处理包含 layerWith、apiKey、withDefaults、withVariant、apiName、fromCatalogModel、resolve。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:layerWith",
+      "type": "function",
+      "name": "layerWith",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        81,
+        81
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 layerWith，接收 resolve 参数；调用 Layer.succeed、Service.of 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:withDefaults",
+      "type": "function",
+      "name": "withDefaults",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        90,
+        102
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 withDefaults，接收 model、route 参数；调用 Object.hasOwn、Object.fromEntries、Object.entries、route.with 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:withVariant",
+      "type": "function",
+      "name": "withVariant",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        104,
+        126
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 withVariant，接收 model、variantID 参数；调用 model.variants.find、Effect.fail、Effect.succeed、produce、Object.assign 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:fromCatalogModel",
+      "type": "function",
+      "name": "fromCatalogModel",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        131,
+        170
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 fromCatalogModel，接收 model、credential 参数；调用 produce、Object.assign、apiKey、Effect.succeed、withDefaults、Auth.bearer、Auth.header 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        172,
+        173
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 resolve，接收 session、model、credential 参数；调用 withVariant、Effect.flatMap、fromCatalogModel 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/model.ts:supported",
+      "type": "function",
+      "name": "supported",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        175,
+        179
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 supported，接收 model 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/model.ts:ModelNotSelectedError",
+      "type": "class",
+      "name": "ModelNotSelectedError",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        18,
+        27
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 ModelNotSelectedError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/model.ts:ModelUnavailableError",
+      "type": "class",
+      "name": "ModelUnavailableError",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 ModelUnavailableError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/model.ts:VariantUnavailableError",
+      "type": "class",
+      "name": "VariantUnavailableError",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        41,
+        52
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 VariantUnavailableError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/model.ts:UnsupportedApiError",
+      "type": "class",
+      "name": "UnsupportedApiError",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        54,
+        65
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 UnsupportedApiError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/model.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "lineRange": [
+        78,
+        78
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "type": "file",
+      "name": "publish-llm-event.ts",
+      "filePath": "packages/core/src/session/runner/publish-llm-event.ts",
+      "summary": "在V2 会话执行与持久化层中提供 createLLMEventPublisher；内部处理包含 safe、tokens、record、message、settledOutput、createLLMEventPublisher。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/publish-llm-event.ts:tokens",
+      "type": "function",
+      "name": "tokens",
+      "filePath": "packages/core/src/session/runner/publish-llm-event.ts",
+      "lineRange": [
+        18,
+        28
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 tokens，接收 usage 参数；调用 safe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/publish-llm-event.ts:createLLMEventPublisher",
+      "type": "function",
+      "name": "createLLMEventPublisher",
+      "filePath": "packages/core/src/session/runner/publish-llm-event.ts",
+      "lineRange": [
+        54,
+        423
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 createLLMEventPublisher，接收 events、input 参数；调用 Effect.fnUntraced、SessionMessage.ID.create、events.publish、fragments、Effect.gen、currentAssistantMessageID、tools.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "type": "file",
+      "name": "to-llm-message.ts",
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "summary": "在V2 会话执行与持久化层中提供 toLLMMessages；内部处理包含 media、toolInput、toolCall、toolResult、assistant、toLLMMessage、toLLMMessages。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/to-llm-message.ts:toolResult",
+      "type": "function",
+      "name": "toolResult",
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "lineRange": [
+        39,
+        68
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 toolResult，接收 tool、providerMetadata 参数；调用 ToolOutput.toResultValue、ToolResultPart.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/to-llm-message.ts:assistant",
+      "type": "function",
+      "name": "assistant",
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "lineRange": [
+        70,
+        113
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 assistant，接收 message、model 参数；调用 String、message.content.flatMap、toolCall、toolResult、content.filter、Object.keys、Message.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessage",
+      "type": "function",
+      "name": "toLLMMessage",
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "lineRange": [
+        115,
+        167
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 toLLMMessage，接收 message、model 参数；调用 Message.make、Message.system、assistant 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessages",
+      "type": "function",
+      "name": "toLLMMessages",
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "lineRange": [
+        170,
+        171
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 toLLMMessages，接收 messages、model 参数；调用 messages.flatMap、toLLMMessage 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/core/src/session/schema.ts",
+      "summary": "在V2 会话执行与持久化层中提供 ID、Info 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/sql.ts",
+      "type": "file",
+      "name": "sql.ts",
+      "filePath": "packages/core/src/session/sql.ts",
+      "summary": "在V2 会话执行与持久化层中提供 SessionTable、MessageTable、PartTable、TodoTable、SessionMessageTable、SessionInputTable、SessionContextEpochTable 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/src/session/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "packages/core/src/session/store.ts",
+      "summary": "在V2 会话执行与持久化层中提供 Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/core/src/session/store.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/session/store.ts",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/todo.ts",
+      "type": "file",
+      "name": "todo.ts",
+      "filePath": "packages/core/src/session/todo.ts",
+      "summary": "在V2 会话执行与持久化层中提供 Info、Event、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/core/src/session/todo.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/session/todo.ts",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:layerWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:layerWith",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:withDefaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:withVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:fromCatalogModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:fromCatalogModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:supported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "function:packages/core/src/session/runner/model.ts:supported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:ModelNotSelectedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:ModelNotSelectedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:ModelUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:ModelUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:VariantUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:VariantUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:UnsupportedApiError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:UnsupportedApiError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "class:packages/core/src/session/runner/model.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/credential.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/integration.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/model.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "function:packages/core/src/session/runner/publish-llm-event.ts:tokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "function:packages/core/src/session/runner/publish-llm-event.ts:createLLMEventPublisher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "function:packages/core/src/session/runner/publish-llm-event.ts:createLLMEventPublisher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toolResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:assistant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "target": "file:packages/core/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/database/path.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/database/schema.sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/project/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/system-context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/v1/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/v1/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/sql.ts",
+      "target": "file:packages/core/src/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "class:packages/core/src/session/store.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "class:packages/core/src/session/store.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/info.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "class:packages/core/src/session/todo.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "class:packages/core/src/session/todo.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/todo.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/src/session/runner/model.ts:fromCatalogModel",
+      "target": "function:packages/core/src/session/runner/model.ts:withDefaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/model.ts:resolve",
+      "target": "function:packages/core/src/session/runner/model.ts:withVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/model.ts:resolve",
+      "target": "function:packages/core/src/session/runner/model.ts:fromCatalogModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/publish-llm-event.ts:createLLMEventPublisher",
+      "target": "function:packages/core/src/session/runner/publish-llm-event.ts:tokens",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/to-llm-message.ts:assistant",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toolResult",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessage",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:assistant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessages",
+      "target": "function:packages/core/src/session/runner/to-llm-message.ts:toLLMMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

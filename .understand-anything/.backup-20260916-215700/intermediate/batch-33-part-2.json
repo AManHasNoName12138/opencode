@@ -1,0 +1,1148 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "type": "file",
+      "name": "migrate-global.test.ts",
+      "filePath": "packages/opencode/test/project/migrate-global.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「migrateFromGlobal、migrates global sessions on first project creation、migrates global sessions even when project row already exists、does not claim sessions with empty directory、does not steal sessions from unrelated directories」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/project/migrate-global.test.ts:seed",
+      "type": "function",
+      "name": "seed",
+      "filePath": "packages/opencode/test/project/migrate-global.test.ts",
+      "lineRange": [
+        24,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 seed，接收 opts 参数；调用 Date.now、Database.Service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/project/migrate-global.test.ts:ensureGlobal",
+      "type": "function",
+      "name": "ensureGlobal",
+      "filePath": "packages/opencode/test/project/migrate-global.test.ts",
+      "lineRange": [
+        44,
+        59
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 ensureGlobal；调用 Database.Service.use、AbsolutePath.make、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/project/project-directory.test.ts",
+      "type": "file",
+      "name": "project-directory.test.ts",
+      "filePath": "packages/opencode/test/project/project-directory.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Project directory persistence、stores the first opened checkout directory、stores a repeatedly opened checkout directory only once、stores an opened linked worktree directory、stores only the linked copy when first opened from an external linked worktree、stores a separately opened clone as a secondary directory、stores only the materialized worktree for a bare repository」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/project/project-directory.test.ts:directories",
+      "type": "function",
+      "name": "directories",
+      "filePath": "packages/opencode/test/project/project-directory.test.ts",
+      "lineRange": [
+        19,
+        35
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 directories，接收 projectID 参数；调用 Database.Service.use、eq、Effect.map、a.directory.localeCompare 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/project/project.test.ts",
+      "type": "file",
+      "name": "project.test.ts",
+      "filePath": "packages/opencode/test/project/project.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Project.fromDirectory、should handle git repository with no commits、should handle git repository with commits、returns global for non-git directory、derives stable project ID from root commit、prefers normalized origin remote over root commit、normalizes equivalent origin URL forms to the same project ID」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/project/project.test.ts:mockGitFailure",
+      "type": "function",
+      "name": "mockGitFailure",
+      "filePath": "packages/opencode/test/project/project.test.ts",
+      "lineRange": [
+        38,
+        66
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mockGitFailure，接收 failArg 参数；调用 Layer.effect、Effect.gen、ChildProcessSpawner.make、Effect.fnUntraced、ChildProcess.isStandardCommand、std.args.some、ChildProcessSpawner.makeHandle 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/project/project.test.ts:projectV2FailureLayer",
+      "type": "function",
+      "name": "projectV2FailureLayer",
+      "filePath": "packages/opencode/test/project/project.test.ts",
+      "lineRange": [
+        75,
+        89
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 projectV2FailureLayer；调用 Layer.succeed、ProjectV2.Service.of、Effect.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/project/project.test.ts:waitForProjectIcon",
+      "type": "function",
+      "name": "waitForProjectIcon",
+      "filePath": "packages/opencode/test/project/project.test.ts",
+      "lineRange": [
+        98,
+        107
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitForProjectIcon，接收 id、attempts 参数；调用 Effect.gen、project.get、Effect.sleep、waitForProjectIcon 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/project/vcs.test.ts",
+      "type": "file",
+      "name": "vcs.test.ts",
+      "filePath": "packages/opencode/test/project/vcs.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Vcs、branch() returns current branch name、branch() returns undefined for non-git directories、publishes BranchUpdated when .git/HEAD changes、branch() reflects the new branch after HEAD change、Vcs diff、defaultBranch() falls back to main」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "type": "file",
+      "name": "worktree-remove.test.ts",
+      "filePath": "packages/opencode/test/project/worktree-remove.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Worktree.remove、continues when git remove exits non-zero after detaching」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/project/worktree.test.ts",
+      "type": "file",
+      "name": "worktree.test.ts",
+      "filePath": "packages/opencode/test/project/worktree.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Worktree、makeWorktreeInfo、returns info with name, branch, and directory、uses provided name as base、slugifies the provided name、omits branch for detached info、fails with NotGitError for non-git directories」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/project/worktree.test.ts:withCreatedWorktree",
+      "type": "function",
+      "name": "withCreatedWorktree",
+      "filePath": "packages/opencode/test/project/worktree.test.ts",
+      "lineRange": [
+        50,
+        64
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withCreatedWorktree，接收 input、use 参数；调用 Effect.acquireUseRelease、Effect.gen、waitReady、svc.create、Fiber.join、removeCreatedWorktree 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "type": "file",
+      "name": "amazon-bedrock.test.ts",
+      "filePath": "packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Bedrock: config region takes precedence over AWS_REGION env var、Bedrock: falls back to AWS_REGION env var when no config region、Bedrock: loads when bearer token from auth.json is present、Bedrock Mantle: GPT-5.5 uses Responses API and OpenAI base path、Bedrock Mantle: GPT OSS safeguard uses Chat Completions and Mantle base path、Bedrock: config profile takes precedence over AWS_PROFILE env var、Bedroc」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/amazon-bedrock.test.ts:withAuthJson",
+      "type": "function",
+      "name": "withAuthJson",
+      "filePath": "packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "lineRange": [
+        47,
+        68
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withAuthJson，接收 contents 参数；调用 Effect.acquireRelease、Effect.promise、path.join、Filesystem.readText、Filesystem.write、unlink 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "type": "file",
+      "name": "cf-ai-gateway-e2e.test.ts",
+      "filePath": "packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「cf-ai-gateway routing、openai/* rides the native OpenAI passthrough on the Responses API、anthropic/* rides the native Anthropic passthrough on the Messages API、anthropic/* with a dotted models.dev id reaches Anthropic as a dashed native slug、workers-ai models stay on the unified /compat route、cf-ai-gateway end-to-end (regression: #24432)、ProviderTransform.providerOptions output puts reasoning effor」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts:upstreamResponseBody",
+      "type": "function",
+      "name": "upstreamResponseBody",
+      "filePath": "packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "lineRange": [
+        35,
+        81
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 upstreamResponseBody，接收 provider 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts:cfModel",
+      "type": "function",
+      "name": "cfModel",
+      "filePath": "packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "lineRange": [
+        123,
+        143
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 cfModel，接收 apiId、releaseDate 参数；调用 ModelV2.ID.make、ProviderV2.ID.make、cfNpm 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "type": "file",
+      "name": "digitalocean.test.ts",
+      "filePath": "packages/opencode/test/provider/digitalocean.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「digitalocean provider autoloads from DIGITALOCEAN_ACCESS_TOKEN、digitalocean provider.models surfaces cached routers from auth metadata、digitalocean provider.models skips refresh when oauth bearer is expired、digitalocean provider.models passes through base models when no auth metadata」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/digitalocean.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/opencode/test/provider/digitalocean.test.ts",
+      "lineRange": [
+        12,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withEnv，接收 values、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.assign、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/digitalocean.test.ts:withAuth",
+      "type": "function",
+      "name": "withAuth",
+      "filePath": "packages/opencode/test/provider/digitalocean.test.ts",
+      "lineRange": [
+        29,
+        41
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withAuth，接收 metadata、effect 参数；调用 withEnv、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/error.test.ts",
+      "type": "file",
+      "name": "error.test.ts",
+      "filePath": "packages/opencode/test/provider/error.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「provider stream errors、retries provider stream errors without a code」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "type": "file",
+      "name": "header-timeout.test.ts",
+      "filePath": "packages/opencode/test/provider/header-timeout.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「headerTimeout does not abort delayed SSE body after headers arrive、default ${timeout} is applied at fetch without changing provider options、configured chunkTimeout raises a retryable response stream error when SSE body stalls、chunkTimeout can be disabled with false、headerTimeout aborts when response headers do not arrive、headerTimeout can be disabled with false for non-OpenAI providers、OpenAI Code」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/header-timeout.test.ts:providerConfig",
+      "type": "function",
+      "name": "providerConfig",
+      "filePath": "packages/opencode/test/provider/header-timeout.test.ts",
+      "lineRange": [
+        247,
+        258
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 providerConfig，接收 url、options 参数；调用 testProviderConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/header-timeout.test.ts:delayedHeaderServer",
+      "type": "function",
+      "name": "delayedHeaderServer",
+      "filePath": "packages/opencode/test/provider/header-timeout.test.ts",
+      "lineRange": [
+        260,
+        271
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 delayedHeaderServer，接收 delay 参数；调用 createServer、setTimeout、res.writeHead、res.end、server.listen、server.address 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/header-timeout.test.ts:delayedBodyServer",
+      "type": "function",
+      "name": "delayedBodyServer",
+      "filePath": "packages/opencode/test/provider/header-timeout.test.ts",
+      "lineRange": [
+        273,
+        285
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 delayedBodyServer，接收 delay 参数；调用 createServer、res.writeHead、res.flushHeaders、setTimeout、res.end、server.listen、server.address 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/provider/header-timeout.test.ts:withAuthContent",
+      "type": "function",
+      "name": "withAuthContent",
+      "filePath": "packages/opencode/test/provider/header-timeout.test.ts",
+      "lineRange": [
+        287,
+        301
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withAuthContent，接收 self、value 参数；调用 defaultAuthContent、Effect.acquireUseRelease、Effect.sync、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/provider/model-status.test.ts",
+      "type": "file",
+      "name": "model-status.test.ts",
+      "filePath": "packages/opencode/test/provider/model-status.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「provider model status schemas、keeps catalog status separate from normalized provider status、accepts active status across public provider schemas」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "function:packages/opencode/test/project/migrate-global.test.ts:seed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "function:packages/opencode/test/project/migrate-global.test.ts:ensureGlobal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/migrate-global.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project-directory.test.ts",
+      "target": "function:packages/opencode/test/project/project-directory.test.ts:directories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/project-directory.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project-directory.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/project-directory.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project-directory.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "function:packages/opencode/test/project/project.test.ts:mockGitFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "function:packages/opencode/test/project/project.test.ts:projectV2FailureLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "function:packages/opencode/test/project/project.test.ts:waitForProjectIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/project.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/vcs.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree-remove.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "function:packages/opencode/test/project/worktree.test.ts:withCreatedWorktree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/project/worktree.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "function:packages/opencode/test/provider/amazon-bedrock.test.ts:withAuthJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/amazon-bedrock.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "function:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts:upstreamResponseBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "function:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts:cfModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/cf-ai-gateway-e2e.test.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "target": "function:packages/opencode/test/provider/digitalocean.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "target": "function:packages/opencode/test/provider/digitalocean.test.ts:withAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/digitalocean.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/error.test.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/error.test.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "function:packages/opencode/test/provider/header-timeout.test.ts:providerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "function:packages/opencode/test/provider/header-timeout.test.ts:delayedHeaderServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "function:packages/opencode/test/provider/header-timeout.test.ts:delayedBodyServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "function:packages/opencode/test/provider/header-timeout.test.ts:withAuthContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/session/retry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/src/session/retry.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/header-timeout.test.ts",
+      "target": "file:packages/opencode/test/lib/test-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/model-status.test.ts",
+      "target": "file:packages/opencode/src/provider/model-status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/model-status.test.ts",
+      "target": "file:packages/opencode/src/provider/model-status.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/provider/model-status.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/provider/model-status.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/opencode/test/provider/digitalocean.test.ts:withAuth",
+      "target": "function:packages/opencode/test/provider/digitalocean.test.ts:withEnv",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/provider/header-timeout.test.ts:providerConfig",
+      "target": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

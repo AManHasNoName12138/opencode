@@ -1,0 +1,1245 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "type": "file",
+      "name": "sidebar-items.tsx",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "summary": "实现应用的侧栏条目界面及相关交互。 对外提供 ProjectIcon、SessionItem、NewSessionItem、SessionSkeleton。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "type": "function",
+      "name": "ProjectIcon",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "lineRange": [
+        21,
+        74
+      ],
+      "summary": "渲染项目图标组件，组织侧栏条目的界面内容和交互；使用 useServerSync、useNotification、usePermission、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionRow",
+      "type": "function",
+      "name": "SessionRow",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "lineRange": [
+        92,
+        144
+      ],
+      "summary": "渲染会话行组件，组织侧栏条目的界面内容和交互；使用 props.sidebarOpened、props.clearHoverProjectSoon、props.isWorking、props.hasPermissions 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "type": "function",
+      "name": "SessionItem",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "lineRange": [
+        146,
+        280
+      ],
+      "summary": "渲染会话条目组件，组织侧栏条目的界面内容和交互；使用 useParams、useLayout、useLanguage、useNotification 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-items.tsx:NewSessionItem",
+      "type": "function",
+      "name": "NewSessionItem",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "lineRange": [
+        282,
+        324
+      ],
+      "summary": "渲染新建会话条目组件，组织侧栏条目的界面内容和交互；使用 useLayout、useLanguage、language.t、layout.sidebar.opened 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionSkeleton",
+      "type": "function",
+      "name": "SessionSkeleton",
+      "filePath": "packages/app/src/pages/layout/sidebar-items.tsx",
+      "lineRange": [
+        326,
+        335
+      ],
+      "summary": "渲染会话Skeleton组件，组织侧栏条目的界面内容和交互。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "type": "file",
+      "name": "sidebar-project.tsx",
+      "filePath": "packages/app/src/pages/layout/sidebar-project.tsx",
+      "summary": "实现应用的侧栏项目界面及相关交互。 对外提供 ProjectDragOverlay、SortableProject。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectDragOverlay",
+      "type": "function",
+      "name": "ProjectDragOverlay",
+      "filePath": "packages/app/src/pages/layout/sidebar-project.tsx",
+      "lineRange": [
+        37,
+        51
+      ],
+      "summary": "渲染项目拖动Overlay组件，组织侧栏项目的界面内容和交互；使用 createMemo、props.projects、props.activeProject、project 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectTile",
+      "type": "function",
+      "name": "ProjectTile",
+      "filePath": "packages/app/src/pages/layout/sidebar-project.tsx",
+      "lineRange": [
+        53,
+        186
+      ],
+      "summary": "渲染项目Tile组件，组织侧栏项目的界面内容和交互；使用 useNotification、useLayout、createMemo、props.dirs 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectPreviewPanel",
+      "type": "function",
+      "name": "ProjectPreviewPanel",
+      "filePath": "packages/app/src/pages/layout/sidebar-project.tsx",
+      "lineRange": [
+        188,
+        269
+      ],
+      "summary": "渲染项目预览面板组件，组织侧栏项目的界面内容和交互；使用 displayName、props.language.t、props.workspaceEnabled、props.projectSessions 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-project.tsx:SortableProject",
+      "type": "function",
+      "name": "SortableProject",
+      "filePath": "packages/app/src/pages/layout/sidebar-project.tsx",
+      "lineRange": [
+        271,
+        377
+      ],
+      "summary": "渲染Sortable项目组件，组织侧栏项目的界面内容和交互；使用 useServerSync、useLanguage、createSortable、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "type": "file",
+      "name": "sidebar-shell.tsx",
+      "filePath": "packages/app/src/pages/layout/sidebar-shell.tsx",
+      "summary": "实现应用的侧栏shell界面及相关交互。 对外提供 SidebarContent。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-shell.tsx:SidebarContent",
+      "type": "function",
+      "name": "SidebarContent",
+      "filePath": "packages/app/src/pages/layout/sidebar-shell.tsx",
+      "lineRange": [
+        15,
+        125
+      ],
+      "summary": "渲染侧栏内容组件，组织侧栏shell的界面内容和交互；使用 createMemo、props.opened、createEffect、expanded 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "type": "file",
+      "name": "sidebar-workspace.tsx",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "summary": "实现应用的侧栏工作区界面及相关交互。 对外提供 WorkspaceDragOverlay、SortableWorkspace、LocalWorkspace。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceDragOverlay",
+      "type": "function",
+      "name": "WorkspaceDragOverlay",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        60,
+        85
+      ],
+      "summary": "渲染工作区拖动Overlay组件，组织侧栏工作区的界面内容和交互；使用 useServerSync、useLanguage、createMemo、props.sidebarProject 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceHeader",
+      "type": "function",
+      "name": "WorkspaceHeader",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        87,
+        138
+      ],
+      "summary": "渲染工作区页头组件，组织侧栏工作区的界面内容和交互；使用 props.busy、props.local、props.language.t、props.branch 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceActions",
+      "type": "function",
+      "name": "WorkspaceActions",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        140,
+        237
+      ],
+      "summary": "渲染工作区Actions组件，组织侧栏工作区的界面内容和交互；使用 props.menuOpen、props.sidebarHovering、props.setMenuOpen、props.language.t 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceSessionList",
+      "type": "function",
+      "name": "WorkspaceSessionList",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        239,
+        294
+      ],
+      "summary": "渲染工作区会话列表组件，组织侧栏工作区的界面内容和交互；使用 props.showNew、props.slug、props.loading、props.sessions 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "type": "function",
+      "name": "SortableWorkspace",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        296,
+        444
+      ],
+      "summary": "渲染Sortable工作区组件，组织侧栏工作区的界面内容和交互；使用 useNavigate、useParams、useServerSync、useQueryOptions 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "type": "function",
+      "name": "LocalWorkspace",
+      "filePath": "packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "lineRange": [
+        446,
+        488
+      ],
+      "summary": "渲染本地工作区组件，组织侧栏工作区的界面内容和交互；使用 useServerSync、useQueryOptions、useLanguage、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/new-session.tsx",
+      "type": "file",
+      "name": "new-session.tsx",
+      "filePath": "packages/app/src/pages/new-session.tsx",
+      "summary": "实现应用的新建会话界面及相关交互。 对外提供 NewSessionPage。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "type": "function",
+      "name": "NewSessionPage",
+      "filePath": "packages/app/src/pages/new-session.tsx",
+      "lineRange": [
+        11,
+        49
+      ],
+      "summary": "渲染新建会话Page组件，组织新建会话的界面内容和交互；使用 useSettings、useTitlebarRightMount、createNewSessionWorkspaceController、createNewSessionDraftController 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "type": "file",
+      "name": "new-session-draft-controller.ts",
+      "filePath": "packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "summary": "为 app 提供新建会话草稿控制器相关数据处理接口。 对外提供 createNewSessionDraftController。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "type": "function",
+      "name": "createNewSessionDraftController",
+      "filePath": "packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "lineRange": [
+        13,
+        62
+      ],
+      "summary": "创建新建会话草稿控制器，调用 usePrompt、useServerSync、useComments、useLocal 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "type": "file",
+      "name": "new-session-view.tsx",
+      "filePath": "packages/app/src/pages/new-session/new-session-view.tsx",
+      "summary": "实现应用的新建会话view界面及相关交互。 对外提供 NewSessionView、NewSessionStatus。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionView",
+      "type": "function",
+      "name": "NewSessionView",
+      "filePath": "packages/app/src/pages/new-session/new-session-view.tsx",
+      "lineRange": [
+        29,
+        75
+      ],
+      "summary": "渲染新建会话View组件，组织新建会话view的界面内容和交互；使用 props.project.empty、props.project.selected、props.workspace.bar.visible、props.workspace.bar.branch 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionStatus",
+      "type": "function",
+      "name": "NewSessionStatus",
+      "filePath": "packages/app/src/pages/new-session/new-session-view.tsx",
+      "lineRange": [
+        77,
+        93
+      ],
+      "summary": "渲染新建会话状态组件，组织新建会话view的界面内容和交互；使用 useLanguage、props.mount、props.visible、language.t 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-view.tsx:ProviderTip",
+      "type": "function",
+      "name": "ProviderTip",
+      "filePath": "packages/app/src/pages/new-session/new-session-view.tsx",
+      "lineRange": [
+        95,
+        162
+      ],
+      "summary": "渲染提供商Tip组件，组织新建会话view的界面内容和交互；使用 useLanguage、useDialog、useSDK、useServerSync 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:NewSessionItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:NewSessionItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionSkeleton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/pages/session/composer/session-request-tree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/utils/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "target": "file:packages/app/src/utils/session-title.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:hasProjectPermissions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:getProjectAvatarSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:ProjectIcon",
+      "target": "function:packages/app/src/context/layout.tsx:getAvatarColors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "target": "function:packages/app/src/pages/session/composer/session-request-tree.ts:sessionPermissionRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "target": "function:packages/app/src/utils/agent.ts:messageAgentColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:childSessionOnPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-items.tsx:SessionItem",
+      "target": "function:packages/app/src/utils/session-title.ts:sessionTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectDragOverlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectDragOverlay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectPreviewPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:SortableProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-project.tsx:SortableProject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "target": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectTile",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-project.tsx:ProjectPreviewPanel",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-project.tsx:SortableProject",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-shell.tsx:SidebarContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-shell.tsx:SidebarContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "target": "file:packages/app/src/utils/solid-dnd.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceDragOverlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceDragOverlay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceActions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:WorkspaceSessionList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/pages/layout/sidebar-items.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "target": "function:packages/app/src/context/server-sync.tsx:useQueryOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:SortableWorkspace",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "target": "function:packages/app/src/context/server-sync.tsx:useQueryOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/sidebar-workspace.tsx:LocalWorkspace",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/components/prompt-project-selector.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/components/titlebar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session.tsx",
+      "target": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "target": "function:packages/app/src/components/titlebar.tsx:useTitlebarRightMount",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "target": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "target": "function:packages/app/src/components/prompt-project-selector.tsx:createPromptProjectController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session.tsx:NewSessionPage",
+      "target": "function:packages/app/src/pages/new-session/use-new-session-commands.tsx:useNewSessionCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/components/prompt-input-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/context/comments.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/pages/session/composer/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "target": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "target": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "target": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-draft-controller.ts:createNewSessionDraftController",
+      "target": "function:packages/app/src/components/prompt-input-v2.tsx:usePromptInputV2Controller",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "function:packages/app/src/pages/new-session/new-session-view.tsx:NewSessionStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "function:packages/app/src/pages/new-session/new-session-view.tsx:ProviderTip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/components/prompt-input-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/components/prompt-project-selector.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/components/prompt-workspace-selector.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/components/status-popover.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/hooks/use-providers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/pages/new-session/new-session-draft-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/pages/session/new-session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-view.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-view.tsx:ProviderTip",
+      "target": "function:packages/app/src/hooks/use-providers.ts:useProviders",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-view.tsx:ProviderTip",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

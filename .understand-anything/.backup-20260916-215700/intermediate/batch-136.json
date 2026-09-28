@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/codemode/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/codemode/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「@opencode-ai/codemode、OpenAPI、Future Design Notes」。",
+      "tags": [
+        "文档",
+        "工具",
+        "开发规范"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/codemode/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/codemode/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「@opencode-ai/codemode、Install、Quick Start、API、`Tool.make`、`CodeMode.execute`、`CodeMode.make`」。",
+      "tags": [
+        "文档",
+        "工具",
+        "参考"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/codemode/codemode.md",
+      "type": "document",
+      "name": "codemode.md",
+      "filePath": "packages/codemode/codemode.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「CodeMode Design and Status、How CodeMode Works、Purpose、Runtime、Discovery and model workflow、Tool execution、Data, files, and failures」。",
+      "tags": [
+        "文档",
+        "工具",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/codemode/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/codemode/package.json",
+      "summary": "声明 @opencode-ai/codemode 的包信息与公共导出入口，脚本包括 typecheck、test；依赖包括 acorn、effect、typescript。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/codemode/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/codemode/tsconfig.json",
+      "summary": "配置 packages/codemode 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/codemode/AGENTS.md",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/README.md",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/codemode.md",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/codemode/package.json",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/codemode/tsconfig.json",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

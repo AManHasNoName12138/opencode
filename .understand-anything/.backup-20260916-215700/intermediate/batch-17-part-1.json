@@ -1,0 +1,953 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/src/database/path.ts",
+      "type": "file",
+      "name": "path.ts",
+      "filePath": "packages/core/src/database/path.ts",
+      "summary": "在数据库与持久化结构层中提供 absoluteColumn、directoryColumn、pathColumn、absoluteArrayColumn；内部处理包含 storagePath、isWindowsStoragePath、absolute、toPlatform。",
+      "tags": [
+        "typescript",
+        "数据库",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/src/database/schema.sql.ts",
+      "type": "file",
+      "name": "schema.sql.ts",
+      "filePath": "packages/core/src/database/schema.sql.ts",
+      "summary": "在数据库与持久化结构层中提供 Timestamps 等接口。",
+      "tags": [
+        "typescript",
+        "数据库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/app-node-builder.ts",
+      "type": "file",
+      "name": "app-node-builder.ts",
+      "filePath": "packages/core/src/effect/app-node-builder.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 build；内部处理包含 build、hasReplacement。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/app-node-builder.ts:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "packages/core/src/effect/app-node-builder.ts",
+      "lineRange": [
+        6,
+        17
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 build，接收 root、replacements 参数；调用 LayerNode.hasUnbound、hasReplacement、buildLocationServiceMap、makeGlobalNode、replacements.concat、LayerNode.compile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/app-node-platform.ts",
+      "type": "file",
+      "name": "app-node-platform.ts",
+      "filePath": "packages/core/src/effect/app-node-platform.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 filesystem、path、httpClient、requestExecutor、llmClient 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/app-node.ts",
+      "type": "file",
+      "name": "app-node.ts",
+      "filePath": "packages/core/src/effect/app-node.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 tags、makeGlobalNode、makeLocationNode 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/keyed-mutex.ts",
+      "type": "file",
+      "name": "keyed-mutex.ts",
+      "filePath": "packages/core/src/effect/keyed-mutex.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 makeUnsafe、make；内部处理包含 makeUnsafe。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/keyed-mutex.ts:makeUnsafe",
+      "type": "function",
+      "name": "makeUnsafe",
+      "filePath": "packages/core/src/effect/keyed-mutex.ts",
+      "lineRange": [
+        20,
+        42
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 makeUnsafe；调用 Effect.sync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/layer-node.ts",
+      "type": "file",
+      "name": "layer-node.ts",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 tags、make、unbound、group、hoist、compile、hasUnbound；内部处理包含 tags、make、unbound、group、replacementNode、nodeMakeIdentity、isNode。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:tags",
+      "type": "function",
+      "name": "tags",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        57,
+        67
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 tags，接收 config 参数；调用 Object.keys、Object.fromEntries、names.map、makeTag、make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        81,
+        96
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 make，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:unbound",
+      "type": "function",
+      "name": "unbound",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        98,
+        106
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 unbound，接收 service、tag 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:group",
+      "type": "function",
+      "name": "group",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        108,
+        112
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 group，接收 dependencies 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:replacementNode",
+      "type": "function",
+      "name": "replacementNode",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        135,
+        151
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 replacementNode，接收 source、replacement 参数；调用 isNode、make、nodeMakeIdentity 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:walk",
+      "type": "function",
+      "name": "walk",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        171,
+        209
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 walk，接收 root、visit、options 参数；调用 recur 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "type": "function",
+      "name": "hoist",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        211,
+        248
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 hoist，接收 root、tag、replacements 参数；调用 replacementMapFrom、walk、node.dependencies.map、hoisted.get、hoisted.set、rewriteReplacementDependencies、group 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:compile",
+      "type": "function",
+      "name": "compile",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        250,
+        272
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 compile，接收 root、replacements 参数；调用 replacementMapFrom、flatten、compileNode、layers.reduce、layer.pipe、Layer.provideMerge 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "type": "function",
+      "name": "replacementMapFrom",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        274,
+        284
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 replacementMapFrom，接收 replacements 参数；调用 rewriteReplacementDependencies、replacementNode、map.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:rewriteReplacementDependencies",
+      "type": "function",
+      "name": "rewriteReplacementDependencies",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        286,
+        319
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 rewriteReplacementDependencies，接收 root、replacements 参数；调用 recur 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/layer-node.ts:hasUnbound",
+      "type": "function",
+      "name": "hasUnbound",
+      "filePath": "packages/core/src/effect/layer-node.ts",
+      "lineRange": [
+        321,
+        327
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 hasUnbound，接收 root、source 参数；调用 walk、node.dependencies.some 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/memo-map.ts",
+      "type": "file",
+      "name": "memo-map.ts",
+      "filePath": "packages/core/src/effect/memo-map.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 memoMap 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/core/src/effect/runtime.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 makeRuntime 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/runtime.ts:makeRuntime",
+      "type": "function",
+      "name": "makeRuntime",
+      "filePath": "packages/core/src/effect/runtime.ts",
+      "lineRange": [
+        5,
+        21
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 makeRuntime，接收 service、layer 参数；调用 getRuntime、service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/effect/service-use.ts",
+      "type": "file",
+      "name": "service-use.ts",
+      "filePath": "packages/core/src/effect/service-use.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 serviceUse 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/effect/service-use.ts:serviceUse",
+      "type": "function",
+      "name": "serviceUse",
+      "filePath": "packages/core/src/effect/service-use.ts",
+      "lineRange": [
+        17,
+        43
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 serviceUse，接收 tag 参数；调用 cache.get、cache.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/core/src/event.ts",
+      "summary": "在Core 领域服务层中提供 ID、Data、Definition、Payload、latestSequence、InvalidDurableEventError、readAggregate；内部处理包含 decodeSerializedEvent、allBounded、layerWith。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/event.ts:decodeSerializedEvent",
+      "type": "function",
+      "name": "decodeSerializedEvent",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        50,
+        61
+      ],
+      "summary": "在Core 领域服务层中执行 decodeSerializedEvent，接收 event 参数；调用 Durable.get、Schema.decodeUnknownSync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/event.ts:allBounded",
+      "type": "function",
+      "name": "allBounded",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        152,
+        164
+      ],
+      "summary": "在Core 领域服务层中执行 allBounded，接收 events、capacity 参数；调用 Effect.gen、Queue.dropping、events.listen、Queue.offer、Effect.flatMap、Queue.fail、Effect.addFinalizer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/event.ts:layerWith",
+      "type": "function",
+      "name": "layerWith",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        170,
+        635
+      ],
+      "summary": "在Core 领域服务层中执行 layerWith，接收 options 参数；调用 Layer.effect、Effect.gen、PubSub.unbounded、Effect.addFinalizer、PubSub.shutdown、Effect.forEach、pubsub.durable.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/core/src/event.ts:InvalidDurableEventError",
+      "type": "class",
+      "name": "InvalidDurableEventError",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        42,
+        48
+      ],
+      "summary": "在Core 领域服务层中定义 InvalidDurableEventError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/event.ts:SubscriberOverflowError",
+      "type": "class",
+      "name": "SubscriberOverflowError",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        110,
+        113
+      ],
+      "summary": "在Core 领域服务层中定义 SubscriberOverflowError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/event.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/event.ts",
+      "lineRange": [
+        150,
+        150
+      ],
+      "summary": "在Core 领域服务层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/event/sql.ts",
+      "type": "file",
+      "name": "sql.ts",
+      "filePath": "packages/core/src/event/sql.ts",
+      "summary": "在Core 领域服务层中提供 EventSequenceTable、EventTable 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/database/path.ts",
+      "target": "file:packages/core/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "function:packages/core/src/effect/app-node-builder.ts:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "function:packages/core/src/effect/app-node-builder.ts:build",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "file:packages/core/src/effect/layer-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "file:packages/core/src/location-service-map.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-builder.ts",
+      "target": "file:packages/core/src/location-services.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node-platform.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/app-node.ts",
+      "target": "file:packages/core/src/effect/layer-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/keyed-mutex.ts",
+      "target": "function:packages/core/src/effect/keyed-mutex.ts:makeUnsafe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/keyed-mutex.ts",
+      "target": "function:packages/core/src/effect/keyed-mutex.ts:makeUnsafe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:tags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:tags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:unbound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:unbound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:group",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:group",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:replacementNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:walk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:compile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:compile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:rewriteReplacementDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:hasUnbound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/layer-node.ts",
+      "target": "function:packages/core/src/effect/layer-node.ts:hasUnbound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/runtime.ts",
+      "target": "function:packages/core/src/effect/runtime.ts:makeRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/runtime.ts",
+      "target": "function:packages/core/src/effect/runtime.ts:makeRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/effect/runtime.ts",
+      "target": "file:packages/core/src/effect/memo-map.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/runtime.ts",
+      "target": "file:packages/core/src/observability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/effect/service-use.ts",
+      "target": "function:packages/core/src/effect/service-use.ts:serviceUse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/effect/service-use.ts",
+      "target": "function:packages/core/src/effect/service-use.ts:serviceUse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "function:packages/core/src/event.ts:decodeSerializedEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "function:packages/core/src/event.ts:allBounded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "function:packages/core/src/event.ts:allBounded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "function:packages/core/src/event.ts:layerWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "function:packages/core/src/event.ts:layerWith",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:InvalidDurableEventError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:InvalidDurableEventError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:SubscriberOverflowError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:SubscriberOverflowError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "class:packages/core/src/event.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "file:packages/core/src/event/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/event.ts",
+      "target": "file:packages/core/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/event/sql.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/src/effect/app-node-builder.ts:build",
+      "target": "function:packages/core/src/location-services.ts:buildLocationServiceMap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:tags",
+      "target": "function:packages/core/src/effect/layer-node.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:replacementNode",
+      "target": "function:packages/core/src/effect/layer-node.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "target": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "target": "function:packages/core/src/effect/layer-node.ts:walk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "target": "function:packages/core/src/effect/layer-node.ts:rewriteReplacementDependencies",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:hoist",
+      "target": "function:packages/core/src/effect/layer-node.ts:group",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:compile",
+      "target": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "target": "function:packages/core/src/effect/layer-node.ts:rewriteReplacementDependencies",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:replacementMapFrom",
+      "target": "function:packages/core/src/effect/layer-node.ts:replacementNode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/effect/layer-node.ts:hasUnbound",
+      "target": "function:packages/core/src/effect/layer-node.ts:walk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

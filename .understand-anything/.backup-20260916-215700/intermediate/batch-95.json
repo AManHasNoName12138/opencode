@@ -1,0 +1,417 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/enterprise/script/scrap.ts",
+      "type": "file",
+      "name": "scrap.ts",
+      "filePath": "packages/enterprise/script/scrap.ts",
+      "summary": "企业分享的scrap脚本，调用 Storage.remove、Storage.list。",
+      "tags": [
+        "接口实现",
+        "企业分享",
+        "scrap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/enterprise/src/core/share.ts",
+      "type": "file",
+      "name": "share.ts",
+      "filePath": "packages/enterprise/src/core/share.ts",
+      "summary": "管理企业会话分享记录和鉴权 secret，将 Session、消息、分片、文件差异和模型信息合并为可存储与读取的分享快照。",
+      "tags": [
+        "接口实现",
+        "企业分享",
+        "会话分享"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/enterprise/src/core/storage.ts",
+      "type": "file",
+      "name": "storage.ts",
+      "filePath": "packages/enterprise/src/core/storage.ts",
+      "summary": "企业分享的对象存储领域 API Storage，提供 read、write、remove、list、update。",
+      "tags": [
+        "接口实现",
+        "企业分享",
+        "对象存储"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/enterprise/src/routes/[...404].tsx",
+      "type": "file",
+      "name": "[...404].tsx",
+      "filePath": "packages/enterprise/src/routes/[...404].tsx",
+      "summary": "企业分享的企业产品页面或页面片段（[...404].tsx），导出 NotFound。",
+      "tags": [
+        "界面组件",
+        "企业分享",
+        "企业产品"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/enterprise/src/routes/[...404].tsx:NotFound",
+      "type": "function",
+      "name": "NotFound",
+      "filePath": "packages/enterprise/src/routes/[...404].tsx",
+      "lineRange": [
+        3,
+        25
+      ],
+      "summary": "企业分享的企业产品处理函数 NotFound。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "type": "file",
+      "name": "[...path].ts",
+      "filePath": "packages/enterprise/src/routes/api/[...path].ts",
+      "summary": "企业分享的API 调用请求处理器（api/[...path].ts），响应 GET、POST、PUT、DELETE 请求；组合 app.fetch。",
+      "tags": [
+        "接口实现",
+        "企业分享",
+        "API 调用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/enterprise/src/routes/api/[...path].ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "packages/enterprise/src/routes/api/[...path].ts",
+      "lineRange": [
+        157,
+        159
+      ],
+      "summary": "企业分享的API 调用处理函数 GET，调用 app.fetch 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/enterprise/src/routes/api/[...path].ts:POST",
+      "type": "function",
+      "name": "POST",
+      "filePath": "packages/enterprise/src/routes/api/[...path].ts",
+      "lineRange": [
+        161,
+        163
+      ],
+      "summary": "企业分享的API 调用处理函数 POST，调用 app.fetch 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/enterprise/src/routes/api/[...path].ts:PUT",
+      "type": "function",
+      "name": "PUT",
+      "filePath": "packages/enterprise/src/routes/api/[...path].ts",
+      "lineRange": [
+        165,
+        167
+      ],
+      "summary": "企业分享的API 调用处理函数 PUT，调用 app.fetch 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/enterprise/src/routes/api/[...path].ts:DELETE",
+      "type": "function",
+      "name": "DELETE",
+      "filePath": "packages/enterprise/src/routes/api/[...path].ts",
+      "lineRange": [
+        169,
+        171
+      ],
+      "summary": "企业分享的API 调用处理函数 DELETE，调用 app.fetch 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/enterprise/src/routes/share/[shareID].tsx",
+      "type": "file",
+      "name": "[shareID].tsx",
+      "filePath": "packages/enterprise/src/routes/share/[shareID].tsx",
+      "summary": "企业分享的会话分享页面或页面片段（share/[shareID].tsx）；组合 super、NamedError.hasName、setStore。",
+      "tags": [
+        "界面组件",
+        "企业分享",
+        "会话分享"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/enterprise/src/routes/share/[shareID].tsx:SessionDataMissingError",
+      "type": "class",
+      "name": "SessionDataMissingError",
+      "filePath": "packages/enterprise/src/routes/share/[shareID].tsx",
+      "lineRange": [
+        35,
+        56
+      ],
+      "summary": "企业分享的会话分享类型 SessionDataMissingError，提供 constructor、isInstance、schema、toObject 方法。",
+      "tags": [
+        "类型定义",
+        "界面组件",
+        "企业分享"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/enterprise/test-debug.ts",
+      "type": "file",
+      "name": "test-debug.ts",
+      "filePath": "packages/enterprise/test-debug.ts",
+      "summary": "企业分享的test-debug实现模块，提供 test。",
+      "tags": [
+        "测试",
+        "企业分享",
+        "test-debug"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/enterprise/test-debug.ts:test",
+      "type": "function",
+      "name": "test",
+      "filePath": "packages/enterprise/test-debug.ts",
+      "lineRange": [
+        4,
+        38
+      ],
+      "summary": "企业分享的test-debug处理函数 test，调用 Share.create、Date.now、Share.sync、Storage.list、events.toReversed 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "企业分享"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/enterprise/test/core/share.test.ts",
+      "type": "file",
+      "name": "share.test.ts",
+      "filePath": "packages/enterprise/test/core/share.test.ts",
+      "summary": "验证企业分享的会话分享行为，覆盖 should create a share；should remove a share as admin；should sync data to a share；should sync multiple batches of data；should retrieve synced data。",
+      "tags": [
+        "测试",
+        "企业分享",
+        "会话分享"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/enterprise/test/core/storage.test.ts",
+      "type": "file",
+      "name": "storage.test.ts",
+      "filePath": "packages/enterprise/test/core/storage.test.ts",
+      "summary": "验证企业分享的对象存储行为，覆盖 core.storage；should list files with after and before range；should list files with after only；should list files with limit；should list all files without prefix。",
+      "tags": [
+        "测试",
+        "企业分享",
+        "对象存储"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/enterprise/script/scrap.ts",
+      "target": "file:packages/enterprise/src/core/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/core/share.ts",
+      "target": "file:packages/enterprise/src/core/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/[...404].tsx",
+      "target": "function:packages/enterprise/src/routes/[...404].tsx:NotFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/[...404].tsx",
+      "target": "function:packages/enterprise/src/routes/[...404].tsx:NotFound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:POST",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:POST",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:PUT",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:PUT",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:DELETE",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "function:packages/enterprise/src/routes/api/[...path].ts:DELETE",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/api/[...path].ts",
+      "target": "file:packages/enterprise/src/core/share.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/share/[shareID].tsx",
+      "target": "class:packages/enterprise/src/routes/share/[shareID].tsx:SessionDataMissingError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/share/[shareID].tsx",
+      "target": "file:packages/enterprise/src/core/share.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/routes/share/[shareID].tsx",
+      "target": "file:packages/enterprise/src/routes/[...404].tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/test-debug.ts",
+      "target": "function:packages/enterprise/test-debug.ts:test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/enterprise/test-debug.ts",
+      "target": "file:packages/enterprise/src/core/share.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/test-debug.ts",
+      "target": "file:packages/enterprise/src/core/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/test/core/share.test.ts",
+      "target": "file:packages/enterprise/src/core/share.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/test/core/share.test.ts",
+      "target": "file:packages/enterprise/src/core/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/core/share.ts",
+      "target": "file:packages/enterprise/test/core/share.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/enterprise/src/core/storage.ts",
+      "target": "file:packages/enterprise/test/core/share.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/enterprise/test/core/storage.test.ts",
+      "target": "file:packages/enterprise/src/core/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/enterprise/src/core/storage.ts",
+      "target": "file:packages/enterprise/test/core/storage.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/client-error.ts",
+      "type": "file",
+      "name": "client-error.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/client-error.ts",
+      "summary": "为 HttpApi 客户端生成层 测试提供 ClientError 等测试辅助接口。",
+      "tags": [
+        "test",
+        "代码生成",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/client.ts",
+      "summary": "为 HttpApi 客户端生成层 测试提供 make 等测试辅助接口。",
+      "tags": [
+        "test",
+        "代码生成",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/event.ts",
+      "summary": "为 HttpApi 客户端生成层 测试提供 Group1、adaptGroup1 等测试辅助接口。",
+      "tags": [
+        "test",
+        "代码生成",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/session.ts",
+      "summary": "为 HttpApi 客户端生成层 测试提供 Group0、adaptGroup0 等测试辅助接口。",
+      "tags": [
+        "test",
+        "代码生成",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/system.ts",
+      "type": "file",
+      "name": "system.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/system.ts",
+      "summary": "为 HttpApi 客户端生成层 测试提供 Group2、adaptGroup2 等测试辅助接口。",
+      "tags": [
+        "test",
+        "代码生成",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/client.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/client.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/client.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/system.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/event.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/client-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/session.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/client-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated/system.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/client-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

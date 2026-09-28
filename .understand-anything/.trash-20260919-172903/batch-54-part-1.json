@@ -1,0 +1,1793 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/test-browser/prompt-attachments.test.ts",
+      "type": "file",
+      "name": "prompt-attachments.test.ts",
+      "filePath": "packages/app/test-browser/prompt-attachments.test.ts",
+      "summary": "验证OpenCode的prompt-attachments行为，覆盖 prompt attachment session ownership；adds an asynchronously read image to the session where the read started；finishes the captured attachment after the active editor is removed；keeps every file in a batch on the session where the batch started；keeps a delayed native clipboard image on the session where paste started。",
+      "tags": [
+        "测试",
+        "OpenCode",
+        "prompt-attachments"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/apply-patch-file.test.ts",
+      "type": "file",
+      "name": "apply-patch-file.test.ts",
+      "filePath": "packages/session-ui/src/components/apply-patch-file.test.ts",
+      "summary": "验证会话界面的补丁文件解析行为，覆盖 apply patch file；parses patch metadata from the server；keeps legacy before and after payloads working。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "补丁文件解析"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "type": "file",
+      "name": "apply-patch-file.ts",
+      "filePath": "packages/session-ui/src/components/apply-patch-file.ts",
+      "summary": "为会话界面提供补丁文件解析，通过 patchFile、patchFiles 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "补丁文件解析"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFile",
+      "type": "function",
+      "name": "patchFile",
+      "filePath": "packages/session-ui/src/components/apply-patch-file.ts",
+      "lineRange": [
+        38,
+        73
+      ],
+      "summary": "解析工具补丁中的单个文件记录，用于会话界面的补丁文件解析流程；相关调用包括 kind、normalize、status。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFiles",
+      "type": "function",
+      "name": "patchFiles",
+      "filePath": "packages/session-ui/src/components/apply-patch-file.ts",
+      "lineRange": [
+        75,
+        78
+      ],
+      "summary": "从补丁工具结果提取相关文件列表，用于会话界面的补丁文件解析流程；相关调用包括 raw.map。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/basic-tool.stories.tsx",
+      "type": "file",
+      "name": "basic-tool.stories.tsx",
+      "filePath": "packages/session-ui/src/components/basic-tool.stories.tsx",
+      "summary": "会话界面的 工具执行卡片 Storybook 示例，提供 Basic、Pending、Locked、Deferred、ForceOpen、HideDetails、SubtitleAction展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "工具执行卡片"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "type": "file",
+      "name": "basic-tool.tsx",
+      "filePath": "packages/session-ui/src/components/basic-tool.tsx",
+      "summary": "为会话界面提供工具执行卡片，通过 BasicTool、GenericTool 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "工具执行卡片"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/basic-tool.tsx:flushDeferredMounts",
+      "type": "function",
+      "name": "flushDeferredMounts",
+      "filePath": "packages/session-ui/src/components/basic-tool.tsx",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "会话界面的工具执行卡片处理函数 flushDeferredMounts，调用 deferredMounts.pop、requestAnimationFrame、item.fn 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/basic-tool.tsx:BasicTool",
+      "type": "function",
+      "name": "BasicTool",
+      "filePath": "packages/session-ui/src/components/basic-tool.tsx",
+      "lineRange": [
+        86,
+        302
+      ],
+      "summary": "会话界面的工具执行卡片处理函数 BasicTool，调用 createStore、props.trigger、onCleanup、onMount、open 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/basic-tool.tsx:args",
+      "type": "function",
+      "name": "args",
+      "filePath": "packages/session-ui/src/components/basic-tool.tsx",
+      "lineRange": [
+        309,
+        321
+      ],
+      "summary": "会话界面的工具执行卡片处理函数 args，调用 skip.has 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/basic-tool.tsx:GenericTool",
+      "type": "function",
+      "name": "GenericTool",
+      "filePath": "packages/session-ui/src/components/basic-tool.tsx",
+      "lineRange": [
+        323,
+        343
+      ],
+      "summary": "会话界面的工具执行卡片处理函数 GenericTool，调用 useI18n、i18n.t、label、args 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/file-media.tsx",
+      "type": "file",
+      "name": "file-media.tsx",
+      "filePath": "packages/session-ui/src/components/file-media.tsx",
+      "summary": "为会话界面提供媒体文件预览，通过 FileMedia 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "媒体文件预览"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file-media.tsx:FileMedia",
+      "type": "function",
+      "name": "FileMedia",
+      "filePath": "packages/session-ui/src/components/file-media.tsx",
+      "lineRange": [
+        32,
+        291
+      ],
+      "summary": "会话界面的媒体文件预览处理函数 FileMedia，调用 useI18n、createStore、createMemo、cfg、mediaKindFromPath 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/file-search.tsx",
+      "type": "file",
+      "name": "file-search.tsx",
+      "filePath": "packages/session-ui/src/components/file-search.tsx",
+      "summary": "为会话界面提供文件搜索栏，通过 FileSearchBar 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "文件搜索栏"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file-search.tsx:FileSearchBar",
+      "type": "function",
+      "name": "FileSearchBar",
+      "filePath": "packages/session-ui/src/components/file-search.tsx",
+      "lineRange": [
+        5,
+        72
+      ],
+      "summary": "会话界面的文件搜索栏处理函数 FileSearchBar，调用 useI18n、props.pos、e.stopPropagation、i18n.t、props.query 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "type": "file",
+      "name": "file-ssr.tsx",
+      "filePath": "packages/session-ui/src/components/file-ssr.tsx",
+      "summary": "为会话界面提供文件服务端渲染，通过 FileSSR 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "文件服务端渲染"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file-ssr.tsx:DiffSSRViewer",
+      "type": "function",
+      "name": "DiffSSRViewer",
+      "filePath": "packages/session-ui/src/components/file-ssr.tsx",
+      "lineRange": [
+        25,
+        190
+      ],
+      "summary": "会话界面的文件服务端渲染处理函数 DiffSSRViewer，调用 createReadyWatcher、useWorkerPool、splitProps、onMount、onCleanup 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file-ssr.tsx:FileSSR",
+      "type": "function",
+      "name": "FileSSR",
+      "filePath": "packages/session-ui/src/components/file-ssr.tsx",
+      "lineRange": [
+        194,
+        197
+      ],
+      "summary": "会话界面的文件服务端渲染处理函数 FileSSR，调用 File、DiffSSRViewer 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/file.tsx",
+      "type": "file",
+      "name": "file.tsx",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "summary": "为会话界面提供file，通过 File 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "file"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:useFileViewer",
+      "type": "function",
+      "name": "useFileViewer",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        159,
+        397
+      ],
+      "summary": "会话界面的file处理函数 useFileViewer，调用 createReadyWatcher、createLineNumberSelectionBridge、createSignal、createFileFind、onMount 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:useSearchHandle",
+      "type": "function",
+      "name": "useSearchHandle",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        434,
+        449
+      ],
+      "summary": "会话界面的file处理函数 useSearchHandle，调用 createEffect、opts.search、opts.find.focus、search.register、onCleanup 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:createLineCallbacks",
+      "type": "function",
+      "name": "createLineCallbacks",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        451,
+        479
+      ],
+      "summary": "会话界面的file处理函数 createLineCallbacks，调用 select、opts.onLineSelected、opts.onLineSelectionEnd、opts.viewer.bridge.consume、requestAnimationFrame 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:useAnnotationRerender",
+      "type": "function",
+      "name": "useAnnotationRerender",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        481,
+        501
+      ],
+      "summary": "会话界面的file处理函数 useAnnotationRerender，调用 createEffect、opts.viewer.rendered、opts.current、opts.annotations、applied.has 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:notifyRendered",
+      "type": "function",
+      "name": "notifyRendered",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        503,
+        517
+      ],
+      "summary": "会话界面的file处理函数 notifyRendered，调用 notifyShadowReady 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:renderViewer",
+      "type": "function",
+      "name": "renderViewer",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        519,
+        545
+      ],
+      "summary": "会话界面的file处理函数 renderViewer，调用 clearReadyWatcher、opts.create、opts.assign、opts.update、opts.draw 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:preserve",
+      "type": "function",
+      "name": "preserve",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        547,
+        568
+      ],
+      "summary": "会话界面的file处理函数 preserve，调用 scrollParent、viewer.container.getBoundingClientRect、viewer.wrapper.getBoundingClientRect、root.getBoundingClientRect 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:createLocalVirtualStrategy",
+      "type": "function",
+      "name": "createLocalVirtualStrategy",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        579,
+        611
+      ],
+      "summary": "会话界面的file处理函数 createLocalVirtualStrategy，调用 enabled、release、host、scrollParent、virtualizer.setup 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:createSharedVirtualStrategy",
+      "type": "function",
+      "name": "createSharedVirtualStrategy",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        613,
+        639
+      ],
+      "summary": "会话界面的file处理函数 createSharedVirtualStrategy，调用 enabled、release、host、acquireVirtualizer 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:mouseHit",
+      "type": "function",
+      "name": "mouseHit",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        648,
+        673
+      ],
+      "summary": "会话界面的file处理函数 mouseHit，调用 event.composedPath、line、side 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:ViewerShell",
+      "type": "function",
+      "name": "ViewerShell",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        693,
+        733
+      ],
+      "summary": "会话界面的file处理函数 ViewerShell，调用 props.viewer.find.open、props.viewer.find.next 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "type": "function",
+      "name": "TextViewer",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        739,
+        950
+      ],
+      "summary": "会话界面的file处理函数 TextViewer，调用 splitProps、createMemo、value.reduce、bytes、createLocalVirtualStrategy 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "type": "function",
+      "name": "DiffViewer",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        956,
+        1218
+      ],
+      "summary": "会话界面的file处理函数 DiffViewer，调用 splitProps、createMediaQuery、viewer.getRoot、readShadowLineSelection、setSelectedLines 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/file.tsx:File",
+      "type": "function",
+      "name": "File",
+      "filePath": "packages/session-ui/src/components/file.tsx",
+      "lineRange": [
+        1224,
+        1230
+      ],
+      "summary": "会话界面的file处理函数 File，调用 TextViewer、DiffViewer 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "type": "file",
+      "name": "line-comment-annotations.tsx",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "summary": "为会话界面提供行评论注解，通过 createLineCommentAnnotationRenderer、createLineCommentState、createLineCommentController、createLineCommentAnnotations、createManagedLineCommentAnnotationRenderer、createLineCommentGutterRenderer 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "行评论注解"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotationRenderer",
+      "type": "function",
+      "name": "createLineCommentAnnotationRenderer",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        101,
+        170
+      ],
+      "summary": "会话界面的行评论注解处理函数 createLineCommentAnnotationRenderer，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:lineCommentElement",
+      "type": "function",
+      "name": "lineCommentElement",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        172,
+        204
+      ],
+      "summary": "会话界面的行评论注解处理函数 lineCommentElement，调用 view 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:lineCommentDraftElement",
+      "type": "function",
+      "name": "lineCommentDraftElement",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        206,
+        219
+      ],
+      "summary": "会话界面的行评论注解处理函数 lineCommentDraftElement，调用 view 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentState",
+      "type": "function",
+      "name": "createLineCommentState",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        221,
+        323
+      ],
+      "summary": "会话界面的行评论注解处理函数 createLineCommentState，调用 createStore、props.opened、editing 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "type": "function",
+      "name": "createLineCommentController",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        349,
+        479
+      ],
+      "summary": "会话界面的行评论注解处理函数 createLineCommentController，调用 useI18n、createLineCommentState、createLineCommentAnnotations、createManagedLineCommentAnnotationRenderer、formatSelectedLineLabel 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotations",
+      "type": "function",
+      "name": "createLineCommentAnnotations",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        487,
+        563
+      ],
+      "summary": "会话界面的行评论注解处理函数 createLineCommentAnnotations，调用 createMemo、props.comments、props.getCommentSelection、props.getSide、line 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:sameAnnotationLists",
+      "type": "function",
+      "name": "sameAnnotationLists",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        571,
+        584
+      ],
+      "summary": "会话界面的行评论注解处理函数 sameAnnotationLists，调用 previous.every 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createManagedLineCommentAnnotationRenderer",
+      "type": "function",
+      "name": "createManagedLineCommentAnnotationRenderer",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        586,
+        611
+      ],
+      "summary": "会话界面的行评论注解处理函数 createManagedLineCommentAnnotationRenderer，调用 createLineCommentAnnotationRenderer、createEffect、renderer.reconcile、props.annotations、onCleanup 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentGutterRenderer",
+      "type": "function",
+      "name": "createLineCommentGutterRenderer",
+      "filePath": "packages/session-ui/src/components/line-comment-annotations.tsx",
+      "lineRange": [
+        613,
+        637
+      ],
+      "summary": "会话界面的行评论注解处理函数 createLineCommentGutterRenderer，调用 createHoverCommentUtility、props.getSelectedRange、lineInSelectedRange、props.onOpenDraft、cloneSelectedLineRange 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/line-comment-styles.ts",
+      "type": "file",
+      "name": "line-comment-styles.ts",
+      "filePath": "packages/session-ui/src/components/line-comment-styles.ts",
+      "summary": "为会话界面提供行评论样式，通过 lineCommentStyles、installLineCommentStyles 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "行评论样式"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment-styles.ts:installLineCommentStyles",
+      "type": "function",
+      "name": "installLineCommentStyles",
+      "filePath": "packages/session-ui/src/components/line-comment-styles.ts",
+      "lineRange": [
+        277,
+        292
+      ],
+      "summary": "会话界面的行评论样式处理函数 installLineCommentStyles，调用 document.getElementById、document.createElement、document.head.appendChild 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/line-comment.stories.tsx",
+      "type": "file",
+      "name": "line-comment.stories.tsx",
+      "filePath": "packages/session-ui/src/components/line-comment.stories.tsx",
+      "summary": "会话界面的 行评论编辑 Storybook 示例，提供 Default、Editor、AnchorOnly展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "行评论编辑"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/line-comment.tsx",
+      "type": "file",
+      "name": "line-comment.tsx",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "summary": "为会话界面提供行评论编辑，通过 LineCommentAnchor、LineComment、LineCommentAdd、LineCommentEditor 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "行评论编辑"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment.tsx:InlineGlyph",
+      "type": "function",
+      "name": "InlineGlyph",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "lineRange": [
+        14,
+        31
+      ],
+      "summary": "会话界面的行评论编辑处理函数 InlineGlyph，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAnchor",
+      "type": "function",
+      "name": "LineCommentAnchor",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "lineRange": [
+        50,
+        128
+      ],
+      "summary": "会话界面的行评论编辑处理函数 LineCommentAnchor，调用 variant、hidden、inlineBody、e.stopPropagation、icon 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment.tsx:LineComment",
+      "type": "function",
+      "name": "LineComment",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "lineRange": [
+        136,
+        157
+      ],
+      "summary": "会话界面的行评论编辑处理函数 LineComment，调用 useI18n、splitProps、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAdd",
+      "type": "function",
+      "name": "LineCommentAdd",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "lineRange": [
+        163,
+        176
+      ],
+      "summary": "会话界面的行评论编辑处理函数 LineCommentAdd，调用 splitProps、useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentEditor",
+      "type": "function",
+      "name": "LineCommentEditor",
+      "filePath": "packages/session-ui/src/components/line-comment.tsx",
+      "lineRange": [
+        194,
+        439
+      ],
+      "summary": "会话界面的行评论编辑处理函数 LineCommentEditor，调用 useI18n、splitProps、createSignal、useFilteredList、query.trim 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "type": "file",
+      "name": "markdown-cache.tsx",
+      "filePath": "packages/session-ui/src/components/markdown-cache.tsx",
+      "summary": "为会话界面提供Markdown 缓存，通过 sanitizeMarkdown、getCachedMarkdown、touchCachedMarkdown、preloadMarkdown 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "Markdown 缓存"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-cache.tsx:sanitizeMarkdown",
+      "type": "function",
+      "name": "sanitizeMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-cache.tsx",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "净化渲染后的 Markdown 内容，用于会话界面的Markdown 缓存流程；相关调用包括 DOMPurify.sanitize。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-cache.tsx:getCachedMarkdown",
+      "type": "function",
+      "name": "getCachedMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-cache.tsx",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "读取已解析的 Markdown 缓存，用于会话界面的Markdown 缓存流程；相关调用包括 cache.get。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-cache.tsx:touchCachedMarkdown",
+      "type": "function",
+      "name": "touchCachedMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-cache.tsx",
+      "lineRange": [
+        44,
+        53
+      ],
+      "summary": "会话界面的Markdown 缓存处理函数 touchCachedMarkdown，调用 cache.delete、cache.set、cache.keys 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "type": "function",
+      "name": "preloadMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-cache.tsx",
+      "lineRange": [
+        55,
+        69
+      ],
+      "summary": "预先填充 Markdown 渲染缓存，用于会话界面的Markdown 缓存流程；相关调用包括 getCachedMarkdown、touchCachedMarkdown、checksum。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-code-state.test.ts",
+      "type": "file",
+      "name": "markdown-code-state.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-code-state.test.ts",
+      "summary": "验证会话界面的代码高亮状态行为，覆盖 resets tokens for a non-prefix replacement with the same generation and token count；retains tokens for an append-only streaming update。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "代码高亮状态"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/test-browser/prompt-attachments.test.ts",
+      "target": "file:packages/app/src/components/prompt-input/attachments.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/test-browser/prompt-attachments.test.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/test-browser/prompt-attachments.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/attachments.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/test-browser/prompt-attachments.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.test.ts",
+      "target": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.test.ts",
+      "target": "file:packages/session-ui/src/components/session-diff.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "file:packages/session-ui/src/components/apply-patch-file.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "function:packages/session-ui/src/components/apply-patch-file.ts:patchFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/apply-patch-file.ts",
+      "target": "file:packages/session-ui/src/components/session-diff.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.stories.tsx",
+      "target": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:flushDeferredMounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:BasicTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:BasicTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:GenericTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/basic-tool.tsx",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:GenericTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/basic-tool.tsx:GenericTool",
+      "target": "function:packages/session-ui/src/components/basic-tool.tsx:args",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-media.tsx",
+      "target": "function:packages/session-ui/src/components/file-media.tsx:FileMedia",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-media.tsx",
+      "target": "function:packages/session-ui/src/components/file-media.tsx:FileMedia",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-media.tsx",
+      "target": "file:packages/session-ui/src/pierre/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-search.tsx",
+      "target": "function:packages/session-ui/src/components/file-search.tsx:FileSearchBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-search.tsx",
+      "target": "function:packages/session-ui/src/components/file-search.tsx:FileSearchBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "function:packages/session-ui/src/components/file-ssr.tsx:DiffSSRViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "function:packages/session-ui/src/components/file-ssr.tsx:FileSSR",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "function:packages/session-ui/src/components/file-ssr.tsx:FileSSR",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file-ssr.tsx:FileSSR",
+      "target": "function:packages/session-ui/src/components/file-ssr.tsx:DiffSSRViewer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/components/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/pierre/commented-lines.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/pierre/diff-selection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/pierre/file-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/pierre/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file-ssr.tsx",
+      "target": "file:packages/session-ui/src/pierre/virtualizer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:useFileViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:useSearchHandle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:createLineCallbacks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:useAnnotationRerender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:notifyRendered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:renderViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:preserve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:createLocalVirtualStrategy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:createSharedVirtualStrategy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:mouseHit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:ViewerShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:File",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "function:packages/session-ui/src/components/file.tsx:File",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:createLocalVirtualStrategy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:createLineCallbacks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:useSearchHandle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:renderViewer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:useAnnotationRerender",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:createSharedVirtualStrategy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:createLineCallbacks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:useSearchHandle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:preserve",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:renderViewer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "target": "function:packages/session-ui/src/components/file.tsx:useAnnotationRerender",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:File",
+      "target": "function:packages/session-ui/src/components/file.tsx:TextViewer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/file.tsx:File",
+      "target": "function:packages/session-ui/src/components/file.tsx:DiffViewer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/components/file-media.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/components/file-search.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/commented-lines.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/diff-selection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/file-find.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/file-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/file-selection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/selection-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/virtualizer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/file.tsx",
+      "target": "file:packages/session-ui/src/pierre/worker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotationRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotationRenderer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:lineCommentElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:lineCommentDraftElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:sameAnnotationLists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createManagedLineCommentAnnotationRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createManagedLineCommentAnnotationRenderer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentGutterRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentGutterRenderer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createManagedLineCommentAnnotationRenderer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentController",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentGutterRenderer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createManagedLineCommentAnnotationRenderer",
+      "target": "function:packages/session-ui/src/components/line-comment-annotations.tsx:createLineCommentAnnotationRenderer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "file:packages/session-ui/src/components/line-comment.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "file:packages/session-ui/src/pierre/comment-hover.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-annotations.tsx",
+      "target": "file:packages/session-ui/src/pierre/selection-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-styles.ts",
+      "target": "function:packages/session-ui/src/components/line-comment-styles.ts:installLineCommentStyles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment-styles.ts",
+      "target": "function:packages/session-ui/src/components/line-comment-styles.ts:installLineCommentStyles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.stories.tsx",
+      "target": "file:packages/session-ui/src/components/line-comment.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:InlineGlyph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAnchor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAnchor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineComment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineComment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentAdd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentEditor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "function:packages/session-ui/src/components/line-comment.tsx:LineCommentEditor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/line-comment.tsx",
+      "target": "file:packages/session-ui/src/components/line-comment-styles.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:sanitizeMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:sanitizeMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:getCachedMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:getCachedMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:touchCachedMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:touchCachedMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:getCachedMarkdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:touchCachedMarkdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-cache.tsx:preloadMarkdown",
+      "target": "function:packages/session-ui/src/components/markdown-cache.tsx:sanitizeMarkdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-cache.tsx",
+      "target": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-code-state.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

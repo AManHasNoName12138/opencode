@@ -1,0 +1,1128 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/session/retry.ts",
+      "type": "file",
+      "name": "retry.ts",
+      "filePath": "packages/opencode/src/session/retry.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 GO_UPSELL_MESSAGE、GO_UPSELL_URL、RETRY_INITIAL_DELAY、RETRY_BACKOFF_FACTOR、RETRY_JITTER_FACTOR、RETRY_MAX_DELAY_NO_HEADERS、RETRY_MAX_DELAY；内部处理包含 cap、delay、exponential、retryable、matchesRetryableMessage、str、num。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/retry.ts:delay",
+      "type": "function",
+      "name": "delay",
+      "filePath": "packages/opencode/src/session/retry.ts",
+      "lineRange": [
+        47,
+        78
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 delay，接收 attempt、error、random 参数；调用 Math.random、Number.parseFloat、Number.isNaN、cap、Math.ceil、Date.parse、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/retry.ts:retryable",
+      "type": "function",
+      "name": "retryable",
+      "filePath": "packages/opencode/src/session/retry.ts",
+      "lineRange": [
+        85,
+        155
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 retryable，接收 error、provider 参数；调用 SessionV1.ContextOverflowError.isInstance、SessionV1.APIError.isInstance、matchesRetryableMessage、parseJSON、str、num、iife 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/retry.ts:parseJSON",
+      "type": "function",
+      "name": "parseJSON",
+      "filePath": "packages/opencode/src/session/retry.ts",
+      "lineRange": [
+        172,
+        181
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 parseJSON，接收 value 参数；调用 iife、JSON.parse 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/retry.ts:policy",
+      "type": "function",
+      "name": "policy",
+      "filePath": "packages/opencode/src/session/retry.ts",
+      "lineRange": [
+        183,
+        207
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 policy，接收 opts 参数；调用 Schedule.fromStepWithMetadata、Effect.succeed、opts.parse、retryable、Cause.done、Effect.gen、delay 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/revert.ts",
+      "type": "file",
+      "name": "revert.ts",
+      "filePath": "packages/opencode/src/session/revert.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 RevertInput、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/session/revert.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/revert.ts",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/run-state.ts",
+      "type": "file",
+      "name": "run-state.ts",
+      "filePath": "packages/opencode/src/session/run-state.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Service、node；内部处理包含 busyError。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/session/run-state.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/run-state.ts",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/src/session/schema.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 SessionID、MessageID、PartID 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 isDefaultTitle、fromRow、toRow、ArchivedTimestamp、Metadata、Info、ProjectInfo；内部处理包含 isDefaultTitle、fromRow、toRow、getForkedTitle、sessionPath、plan、getUsage。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:isDefaultTitle",
+      "type": "function",
+      "name": "isDefaultTitle",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        51,
+        55
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 isDefaultTitle，接收 title 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:fromRow",
+      "type": "function",
+      "name": "fromRow",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        59,
+        118
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 fromRow，接收 row 参数；调用 MessageID.make、PartID.make、ModelV2.ID.make、ProviderV2.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:toRow",
+      "type": "function",
+      "name": "toRow",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        120,
+        159
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 toRow，接收 info 参数；调用 SessionMessage.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:plan",
+      "type": "function",
+      "name": "plan",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        331,
+        336
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 plan，接收 input、instance 参数；调用 path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:getUsage",
+      "type": "function",
+      "name": "getUsage",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        338,
+        405
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 getUsage，接收 input 参数；调用 safe、Number、Number.isFinite、finite 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/session.ts:listByProject",
+      "type": "function",
+      "name": "listByProject",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        955,
+        1008
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 listByProject，接收 db、input 参数；调用 eq、conditions.push、like、sql.param、or、and、isNull 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/session/session.ts:BusyError",
+      "type": "class",
+      "name": "BusyError",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        407,
+        409
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 BusyError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/session/session.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/session.ts",
+      "lineRange": [
+        474,
+        474
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/status.ts",
+      "type": "file",
+      "name": "status.ts",
+      "filePath": "packages/opencode/src/session/status.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Info、Event、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/session/status.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/status.ts",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/summary.ts",
+      "type": "file",
+      "name": "summary.ts",
+      "filePath": "packages/opencode/src/session/summary.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Service、DiffInput、node；内部处理包含 unquoteGitPath。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/summary.ts:unquoteGitPath",
+      "type": "function",
+      "name": "unquoteGitPath",
+      "filePath": "packages/opencode/src/session/summary.ts",
+      "lineRange": [
+        10,
+        64
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 unquoteGitPath，接收 input 参数；调用 input.startsWith、input.endsWith、input.slice、bytes.push、char.charCodeAt、body.slice、chunk.match 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/session/summary.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/summary.ts",
+      "lineRange": [
+        72,
+        72
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/system.ts",
+      "type": "file",
+      "name": "system.ts",
+      "filePath": "packages/opencode/src/session/system.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 provider、Service、node；内部处理包含 provider。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/system.ts:provider",
+      "type": "function",
+      "name": "provider",
+      "filePath": "packages/opencode/src/session/system.ts",
+      "lineRange": [
+        27,
+        49
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 provider，接收 model 参数；调用 model.api.id.includes、PROMPT_META.replaceAll、model.api.id.toLowerCase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/session/system.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/system.ts",
+      "lineRange": [
+        57,
+        57
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/todo.ts",
+      "type": "file",
+      "name": "todo.ts",
+      "filePath": "packages/opencode/src/session/todo.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Info、Event、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/session/todo.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/todo.ts",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:delay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:delay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:retryable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:retryable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:parseJSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:policy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "function:packages/opencode/src/session/retry.ts:policy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "file:packages/opencode/src/util/iife.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/retry.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "class:packages/opencode/src/session/revert.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "class:packages/opencode/src/session/revert.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/session/run-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/session/summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/revert.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "class:packages/opencode/src/session/run-state.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "class:packages/opencode/src/session/run-state.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/effect/runner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/run-state.ts",
+      "target": "file:packages/opencode/src/session/status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/schema.ts",
+      "target": "file:packages/opencode/src/id/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:isDefaultTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:isDefaultTitle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:fromRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:fromRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:toRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:toRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:plan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:plan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:getUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:getUsage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "function:packages/opencode/src/session/session.ts:listByProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "class:packages/opencode/src/session/session.ts:BusyError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "class:packages/opencode/src/session/session.ts:BusyError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "class:packages/opencode/src/session/session.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "class:packages/opencode/src/session/session.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/session.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/status.ts",
+      "target": "class:packages/opencode/src/session/status.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/status.ts",
+      "target": "class:packages/opencode/src/session/status.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/status.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/status.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/status.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "function:packages/opencode/src/session/summary.ts:unquoteGitPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "class:packages/opencode/src/session/summary.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "class:packages/opencode/src/session/summary.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/summary.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "function:packages/opencode/src/session/system.ts:provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "function:packages/opencode/src/session/system.ts:provider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "class:packages/opencode/src/session/system.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "class:packages/opencode/src/session/system.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/anthropic.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/beast.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/codex.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/default.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/gemini.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/gpt.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/kimi.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/meta.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/session/prompt/trinity.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/todo.ts",
+      "target": "class:packages/opencode/src/session/todo.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/todo.ts",
+      "target": "class:packages/opencode/src/session/todo.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/todo.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/todo.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/session/retry.ts:retryable",
+      "target": "function:packages/opencode/src/session/retry.ts:parseJSON",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/retry.ts:retryable",
+      "target": "function:packages/opencode/src/util/iife.ts:iife",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/retry.ts:parseJSON",
+      "target": "function:packages/opencode/src/util/iife.ts:iife",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/retry.ts:policy",
+      "target": "function:packages/opencode/src/session/retry.ts:retryable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/retry.ts:policy",
+      "target": "function:packages/opencode/src/session/retry.ts:delay",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

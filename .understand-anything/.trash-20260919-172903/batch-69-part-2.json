@@ -1,0 +1,1418 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/renderer/i18n/vi.ts",
+      "type": "file",
+      "name": "vi.ts",
+      "filePath": "packages/desktop/src/renderer/i18n/vi.ts",
+      "summary": "提供 vi 语言的桌面原生菜单与对话框翻译词典，保留消息键和动态插值占位符。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/i18n/zh.ts",
+      "type": "file",
+      "name": "zh.ts",
+      "filePath": "packages/desktop/src/renderer/i18n/zh.ts",
+      "summary": "提供 zh 语言的桌面原生菜单与对话框翻译词典，保留消息键和动态插值占位符。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/i18n/zht.ts",
+      "type": "file",
+      "name": "zht.ts",
+      "filePath": "packages/desktop/src/renderer/i18n/zht.ts",
+      "summary": "提供 zht 语言的桌面原生菜单与对话框翻译词典，保留消息键和动态插值占位符。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/desktop/src/renderer/index.tsx",
+      "summary": "在 Electron 渲染进程挂载共享应用，把 window.api 桥接为桌面平台能力。",
+      "tags": [
+        "desktop",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/index.tsx:createPlatform",
+      "type": "function",
+      "name": "createPlatform",
+      "filePath": "packages/desktop/src/renderer/index.tsx",
+      "lineRange": [
+        113,
+        318
+      ],
+      "summary": "创建Platform，调用 ua.includes、cache.get、createStorage、cache.set 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/index.tsx:DesktopRoot",
+      "type": "function",
+      "name": "DesktopRoot",
+      "filePath": "packages/desktop/src/renderer/index.tsx",
+      "lineRange": [
+        334,
+        437
+      ],
+      "summary": "渲染桌面根组件，组织索引的界面内容和交互；使用 createPlatform、createResource、window.api.awaitInitialization、platform.getDefaultServer 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/initialization.test.ts",
+      "type": "file",
+      "name": "initialization.test.ts",
+      "filePath": "packages/desktop/src/renderer/initialization.test.ts",
+      "summary": "验证initialization相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“desktop renderer initialization”、“throws the original initialization error before rendering server providers”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/initialization.ts",
+      "type": "file",
+      "name": "initialization.ts",
+      "filePath": "packages/desktop/src/renderer/initialization.ts",
+      "summary": "为 desktop 提供initialization相关数据处理接口。 对外提供 initializationData、initializationReady。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/initialization.ts:initializationData",
+      "type": "function",
+      "name": "initializationData",
+      "filePath": "packages/desktop/src/renderer/initialization.ts",
+      "lineRange": [
+        1,
+        4
+      ],
+      "summary": "实现 initializationData 的initialization操作，调用 markLocalServerStartup、state 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/initialization.ts:markLocalServerStartup",
+      "type": "function",
+      "name": "markLocalServerStartup",
+      "filePath": "packages/desktop/src/renderer/initialization.ts",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "实现 markLocalServerStartup 的initialization操作，调用 String、failure.message.startsWith、failure.message.slice、failure.stack.replace 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/initialization.ts:initializationReady",
+      "type": "function",
+      "name": "initializationReady",
+      "filePath": "packages/desktop/src/renderer/initialization.ts",
+      "lineRange": [
+        18,
+        22
+      ],
+      "summary": "实现 initializationReady 的initialization操作，调用 initializationData 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/onboarding.tsx",
+      "type": "file",
+      "name": "onboarding.tsx",
+      "filePath": "packages/desktop/src/renderer/onboarding.tsx",
+      "summary": "实现桌面的初次使用界面及相关交互。 对外提供 DesktopFirstLaunchOnboarding。",
+      "tags": [
+        "desktop",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/onboarding.tsx:DesktopFirstLaunchOnboarding",
+      "type": "function",
+      "name": "DesktopFirstLaunchOnboarding",
+      "filePath": "packages/desktop/src/renderer/onboarding.tsx",
+      "lineRange": [
+        4,
+        54
+      ],
+      "summary": "渲染桌面首项Launch初次使用组件，组织初次使用的界面内容和交互；使用 useServer、useSettings、useTabs、onMount 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "type": "file",
+      "name": "webview-zoom.ts",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "summary": "为 desktop 提供网页视图缩放相关数据处理接口。 对外提供 webviewZoom、resetZoom、setPinchZoomEnabled、zoomIn、zoomOut。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "function",
+      "name": "applyZoom",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        34,
+        46
+      ],
+      "summary": "应用缩放，调用 setWebviewZoom、webviewZoom 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:setPinchZoomEnabled",
+      "type": "function",
+      "name": "setPinchZoomEnabled",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        62,
+        66
+      ],
+      "summary": "设置捏合缩放已启用，调用 resetWheelPinch、window.api.setPinchZoomEnabled 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:resetZoom",
+      "type": "function",
+      "name": "resetZoom",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        68,
+        68
+      ],
+      "summary": "重置缩放，调用 applyZoom 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomIn",
+      "type": "function",
+      "name": "zoomIn",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        69,
+        69
+      ],
+      "summary": "实现 zoomIn 的网页视图缩放操作，调用 applyZoom、clamp 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomOut",
+      "type": "function",
+      "name": "zoomOut",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        70,
+        70
+      ],
+      "summary": "实现 zoomOut 的网页视图缩放操作，调用 applyZoom、clamp 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/webview-zoom.ts:updateWheelPinch",
+      "type": "function",
+      "name": "updateWheelPinch",
+      "filePath": "packages/desktop/src/renderer/webview-zoom.ts",
+      "lineRange": [
+        83,
+        105
+      ],
+      "summary": "更新滚轮捏合，调用 clearTimeout、setTimeout、normalizeWheelDelta、applyZoom 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/window-fullscreen.ts",
+      "type": "file",
+      "name": "window-fullscreen.ts",
+      "filePath": "packages/desktop/src/renderer/window-fullscreen.ts",
+      "summary": "为 desktop 提供窗口全屏相关数据处理接口。 对外提供 windowFullscreen。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/wsl/connections.test.ts",
+      "type": "file",
+      "name": "connections.test.ts",
+      "filePath": "packages/desktop/src/renderer/wsl/connections.test.ts",
+      "summary": "验证connections相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“WSL desktop connections”、“publishes a WSL server only after it reports ready”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/wsl/connections.test.ts:state",
+      "type": "function",
+      "name": "state",
+      "filePath": "packages/desktop/src/renderer/wsl/connections.test.ts",
+      "lineRange": [
+        5,
+        19
+      ],
+      "summary": "实现 state 的connections操作，调用 runtime 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "type": "file",
+      "name": "connections.ts",
+      "filePath": "packages/desktop/src/renderer/wsl/connections.ts",
+      "summary": "为 desktop 提供connections相关数据处理接口。 对外提供 readyWslConnections、availableStartupServer。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/wsl/connections.ts:readyWslConnections",
+      "type": "function",
+      "name": "readyWslConnections",
+      "filePath": "packages/desktop/src/renderer/wsl/connections.ts",
+      "lineRange": [
+        3,
+        21
+      ],
+      "summary": "实现 readyWslConnections 的connections操作，输入包括 state、label。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/renderer/wsl/connections.ts:availableStartupServer",
+      "type": "function",
+      "name": "availableStartupServer",
+      "filePath": "packages/desktop/src/renderer/wsl/connections.ts",
+      "lineRange": [
+        23,
+        28
+      ],
+      "summary": "实现 availableStartupServer 的connections操作，调用 key.startsWith、state?.servers.some 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:script/translate-app.test.ts",
+      "type": "file",
+      "name": "translate-app.test.ts",
+      "filePath": "script/translate-app.test.ts",
+      "summary": "验证translateapp相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“translate app”、“parses one locale with the public model defaults”。",
+      "tags": [
+        "仓库",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:script/translate-app.ts",
+      "type": "file",
+      "name": "translate-app.ts",
+      "filePath": "script/translate-app.ts",
+      "summary": "为 仓库 提供translateapp相关数据处理接口。 对外提供 parseTranslationArgs、targetFiles、glossaryFile、findDrift、sessionIDFromEvents、sessionModels。",
+      "tags": [
+        "仓库",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:script/translate-app.ts:parseTranslationArgs",
+      "type": "function",
+      "name": "parseTranslationArgs",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        86,
+        115
+      ],
+      "summary": "解析翻译Args，调用 parseArgs、Number、isLocale、Number.isInteger 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:targetFiles",
+      "type": "function",
+      "name": "targetFiles",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        117,
+        123
+      ],
+      "summary": "实现 targetFiles 的translateapp操作，调用 desktopLocales.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:glossaryFile",
+      "type": "function",
+      "name": "glossaryFile",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        125,
+        129
+      ],
+      "summary": "实现 glossaryFile 的translateapp操作，输入包括 locale。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:findDrift",
+      "type": "function",
+      "name": "findDrift",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        131,
+        159
+      ],
+      "summary": "查找Drift，调用 pluralFamilies、desktopNativePluralCategories、pluralVariants.keys、pluralVariants.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:sessionIDFromEvents",
+      "type": "function",
+      "name": "sessionIDFromEvents",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        161,
+        165
+      ],
+      "summary": "实现 sessionIDFromEvents 的translateapp操作，调用 output.match 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:sessionModels",
+      "type": "function",
+      "name": "sessionModels",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        167,
+        182
+      ],
+      "summary": "实现 sessionModels 的translateapp操作，调用 isRecord、value.messages.flatMap 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:modelVariants",
+      "type": "function",
+      "name": "modelVariants",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        184,
+        195
+      ],
+      "summary": "实现 modelVariants 的translateapp操作，调用 output.replaceAll、normalized.indexOf、model.split、normalized.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:translationConfig",
+      "type": "function",
+      "name": "translationConfig",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        197,
+        222
+      ],
+      "summary": "实现 translationConfig 的translateapp操作，调用 targets.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:unexpectedChanges",
+      "type": "function",
+      "name": "unexpectedChanges",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        224,
+        229
+      ],
+      "summary": "实现 unexpectedChanges 的translateapp操作，调用 targets.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:runPool",
+      "type": "function",
+      "name": "runPool",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        231,
+        245
+      ],
+      "summary": "运行Pool，调用 items.entries、Promise.all、results.entries 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        247,
+        318
+      ],
+      "summary": "实现 main 的translateapp操作，调用 parseTranslationArgs、Bun.argv.slice、Promise.all、selected.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:script/translate-app.ts:worktreeSnapshot",
+      "type": "function",
+      "name": "worktreeSnapshot",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        320,
+        337
+      ],
+      "summary": "实现 worktreeSnapshot 的translateapp操作，调用 Promise.all、gitPaths、groups.flat、files.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:gitPaths",
+      "type": "function",
+      "name": "gitPaths",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        339,
+        349
+      ],
+      "summary": "实现 gitPaths 的translateapp操作，调用 Bun.spawn、Promise.all、args.join 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:check",
+      "type": "function",
+      "name": "check",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        351,
+        360
+      ],
+      "summary": "检查translateapp，调用 Bun.spawn、Promise.all 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:inspect",
+      "type": "function",
+      "name": "inspect",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        362,
+        376
+      ],
+      "summary": "实现 inspect 的translateapp操作，调用 Promise.all、targetFiles、target.replace、dictionary 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:translate",
+      "type": "function",
+      "name": "translate",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        390,
+        489
+      ],
+      "summary": "实现 translate 的translateapp操作，调用 glossaryFile、Bun.file、path.join、template.replaceAll 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:script/translate-app.ts:pluralFamilies",
+      "type": "function",
+      "name": "pluralFamilies",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        514,
+        523
+      ],
+      "summary": "实现 pluralFamilies 的translateapp操作，调用 key.endsWith、key.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:resolveModelVariant",
+      "type": "function",
+      "name": "resolveModelVariant",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        529,
+        546
+      ],
+      "summary": "解析模型Variant，调用 model.split、model.includes、isolatedEnvironment、Bun.spawn 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:script/translate-app.ts:textFromEvents",
+      "type": "function",
+      "name": "textFromEvents",
+      "filePath": "script/translate-app.ts",
+      "lineRange": [
+        562,
+        576
+      ],
+      "summary": "实现 textFromEvents 的translateapp操作，调用 line.trim、line.startsWith、line.endsWith、isRecord 完成相关步骤。",
+      "tags": [
+        "函数",
+        "仓库",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "function:packages/desktop/src/renderer/index.tsx:createPlatform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "function:packages/desktop/src/renderer/index.tsx:DesktopRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/i18n/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/initialization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/onboarding.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/styles.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/window-fullscreen.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/index.tsx:DesktopRoot",
+      "target": "function:packages/desktop/src/renderer/index.tsx:createPlatform",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.test.ts",
+      "target": "file:packages/desktop/src/renderer/initialization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "file:packages/desktop/src/renderer/initialization.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:initializationData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:initializationData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:markLocalServerStartup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:initializationReady",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/initialization.ts",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:initializationReady",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/initialization.ts:initializationData",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:markLocalServerStartup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/initialization.ts:initializationReady",
+      "target": "function:packages/desktop/src/renderer/initialization.ts:initializationData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/onboarding.tsx",
+      "target": "function:packages/desktop/src/renderer/onboarding.tsx:DesktopFirstLaunchOnboarding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/onboarding.tsx",
+      "target": "function:packages/desktop/src/renderer/onboarding.tsx:DesktopFirstLaunchOnboarding",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:setPinchZoomEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:setPinchZoomEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:resetZoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:resetZoom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/webview-zoom.ts",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:updateWheelPinch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/webview-zoom.ts:resetZoom",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomIn",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/webview-zoom.ts:zoomOut",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/renderer/webview-zoom.ts:updateWheelPinch",
+      "target": "function:packages/desktop/src/renderer/webview-zoom.ts:applyZoom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.test.ts",
+      "target": "function:packages/desktop/src/renderer/wsl/connections.test.ts:state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.test.ts",
+      "target": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "target": "file:packages/desktop/src/renderer/wsl/connections.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "target": "function:packages/desktop/src/renderer/wsl/connections.ts:readyWslConnections",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "target": "function:packages/desktop/src/renderer/wsl/connections.ts:readyWslConnections",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "target": "function:packages/desktop/src/renderer/wsl/connections.ts:availableStartupServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/wsl/connections.ts",
+      "target": "function:packages/desktop/src/renderer/wsl/connections.ts:availableStartupServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.test.ts",
+      "target": "file:script/translate-app.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "file:script/translate-app.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:parseTranslationArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:parseTranslationArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:targetFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:targetFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:glossaryFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:glossaryFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:findDrift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:findDrift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:sessionIDFromEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:sessionIDFromEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:sessionModels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:sessionModels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:modelVariants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:modelVariants",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:translationConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:translationConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:unexpectedChanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:unexpectedChanges",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:runPool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:runPool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:worktreeSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:gitPaths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:check",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:inspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:translate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:pluralFamilies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:resolveModelVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:textFromEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "function:script/translate-app.ts:textFromEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:script/translate-app.ts",
+      "target": "file:packages/app/src/i18n/desktop-native.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:script/translate-app.ts:findDrift",
+      "target": "function:script/translate-app.ts:pluralFamilies",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:findDrift",
+      "target": "function:packages/app/src/i18n/desktop-native.ts:desktopNativePluralCategories",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:parseTranslationArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:inspect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:worktreeSnapshot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:resolveModelVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:runPool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:translate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:check",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:main",
+      "target": "function:script/translate-app.ts:unexpectedChanges",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:worktreeSnapshot",
+      "target": "function:script/translate-app.ts:gitPaths",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:inspect",
+      "target": "function:script/translate-app.ts:targetFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:inspect",
+      "target": "function:script/translate-app.ts:findDrift",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:translate",
+      "target": "function:script/translate-app.ts:glossaryFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:translate",
+      "target": "function:script/translate-app.ts:translationConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:translate",
+      "target": "function:script/translate-app.ts:sessionIDFromEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:translate",
+      "target": "function:script/translate-app.ts:textFromEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:translate",
+      "target": "function:script/translate-app.ts:sessionModels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:script/translate-app.ts:resolveModelVariant",
+      "target": "function:script/translate-app.ts:modelVariants",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

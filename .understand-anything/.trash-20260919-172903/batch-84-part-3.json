@@ -1,0 +1,1084 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "file",
+      "name": "model-catalog.ts",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "summary": "统计网站的model-catalog页面或页面片段（model-catalog.ts），导出 modelCatalogSourceUrl、modelCatalogPricingUrl、modelCatalogLabSourceUrl、loadModelCatalog；组合 Promise.all、fetchCatalogPayload、fetchLabCatalogPayload。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "model-catalog"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "function",
+      "name": "loadModelCatalog",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        60,
+        67
+      ],
+      "summary": "统计网站的model-catalog处理函数 loadModelCatalog，调用 Promise.all、fetchCatalogPayload、fetchLabCatalogPayload、buildModelCatalog 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "function",
+      "name": "findModelCatalogEntry",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        74,
+        85
+      ],
+      "summary": "统计网站的model-catalog处理函数 findModelCatalogEntry，调用 statModel、catalogLabSlug、catalogSlug、canonicalModel.trim、catalog.models.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "function",
+      "name": "findModelCatalogLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        87,
+        90
+      ],
+      "summary": "统计网站的model-catalog处理函数 findModelCatalogLab，调用 catalogLabSlug、catalog.labs.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "function",
+      "name": "formatCatalogLabName",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        92,
+        115
+      ],
+      "summary": "统计网站的model-catalog处理函数 formatCatalogLabName，调用 catalogSlug、lab.replace、letter.toUpperCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "function",
+      "name": "isProviderlessLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        117,
+        119
+      ],
+      "summary": "统计网站的model-catalog处理函数 isProviderlessLab，调用 catalogSlug 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "function",
+      "name": "isKnownCatalogLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        121,
+        125
+      ],
+      "summary": "统计网站的model-catalog处理函数 isKnownCatalogLab，调用 isProviderlessLab、catalogSlug、formatCatalogLabName、catalogLabs.some 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "function",
+      "name": "catalogSlug",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        127,
+        134
+      ],
+      "summary": "统计网站的model-catalog处理函数 catalogSlug，接收 value 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "function",
+      "name": "buildModelCatalog",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        136,
+        164
+      ],
+      "summary": "统计网站的model-catalog处理函数 buildModelCatalog，调用 readCatalogCosts、readCatalogLabDescriptions、readCatalogModels、costs.get、catalogIdKey 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "type": "function",
+      "name": "readModelCatalogEntry",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        166,
+        196
+      ],
+      "summary": "统计网站的model-catalog处理函数 readModelCatalogEntry，调用 isRecord、stringValue、catalogSlug、readCatalogLimit、readCatalogModalities 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "function",
+      "name": "readCatalogLabDescriptions",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        206,
+        242
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogLabDescriptions，调用 payloads.forEach、payload.forEach、add、isRecord、addCollection 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "function",
+      "name": "readCatalogCosts",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        265,
+        292
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogCosts，调用 payload.forEach、add、isRecord、stringValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "function",
+      "name": "readCatalogCost",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        294,
+        305
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogCost，调用 isRecord、numberValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "function",
+      "name": "readCatalogBenchmarks",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        333,
+        354
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogBenchmarks，调用 value.flatMap、isRecord、stringValue、numberValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "function",
+      "name": "catalogLabSlug",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        364,
+        373
+      ],
+      "summary": "统计网站的model-catalog处理函数 catalogLabSlug，调用 catalogSlug 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "type": "file",
+      "name": "section-heading.tsx",
+      "filePath": "packages/stats/app/src/routes/section-heading.tsx",
+      "summary": "统计网站的section-heading页面或页面片段（section-heading.tsx），导出 SectionHeading。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "section-heading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "function",
+      "name": "SectionHeading",
+      "filePath": "packages/stats/app/src/routes/section-heading.tsx",
+      "lineRange": [
+        1,
+        30
+      ],
+      "summary": "统计网站的section-heading处理函数 SectionHeading，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "type": "file",
+      "name": "sitemap.xml.ts",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "summary": "统计网站的sitemap.xml请求处理器（sitemap.xml.ts），响应 GET 请求；组合 Promise.all、loadModelCatalog、runtime.runPromise。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "sitemap.xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "lineRange": [
+        19,
+        66
+      ],
+      "summary": "统计网站的sitemap.xml处理函数 GET，调用 Promise.all、loadModelCatalog、runtime.runPromise、getStatsHomeData、sitemapDate 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "function",
+      "name": "sitemapXml",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "lineRange": [
+        77,
+        94
+      ],
+      "summary": "统计网站的sitemap.xml处理函数 sitemapXml，调用 escapeXml 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "file",
+      "name": "stats-cache.ts",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "summary": "统计网站的stats-cache页面或页面片段（stats-cache.ts），导出 setStatsPageCacheHeaders；组合 headers.set、appendVary、value.trim。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "stats-cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "function",
+      "name": "setStatsPageCacheHeaders",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "lineRange": [
+        5,
+        10
+      ],
+      "summary": "统计网站的stats-cache处理函数 setStatsPageCacheHeaders，调用 headers.set、appendVary 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "function",
+      "name": "appendVary",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "lineRange": [
+        12,
+        29
+      ],
+      "summary": "统计网站的stats-cache处理函数 appendVary，调用 value.trim、headers.set、result.some、item.toLowerCase、value.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "file",
+      "name": "stats-shell.tsx",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "summary": "统计网站的stats-shell页面或页面片段（stats-shell.tsx），导出 githubLink、themePreferences、themeStorageKey、getGitHubStars；组合 document.documentElement.style.removeProperty、document.documentElement.style.setProperty、useI18n。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "stats-shell"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "function",
+      "name": "isThemePreference",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "统计网站的stats-shell处理函数 isThemePreference，接收 value 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "function",
+      "name": "applyThemePreference",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        46,
+        54
+      ],
+      "summary": "统计网站的stats-shell处理函数 applyThemePreference，调用 document.documentElement.style.removeProperty、document.documentElement.style.setProperty 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        56,
+        182
+      ],
+      "summary": "统计网站的stats-shell处理函数 Header，调用 useI18n、useLanguage、createSignal、createMemo、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:DataWordmark",
+      "type": "function",
+      "name": "DataWordmark",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        184,
+        204
+      ],
+      "summary": "统计网站的stats-shell处理函数 DataWordmark。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "function",
+      "name": "Footer",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        216,
+        300
+      ],
+      "summary": "统计网站的stats-shell处理函数 Footer，调用 useI18n、useLanguage、createSignal、i18n.t、bridge 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterLanguageSwitcher",
+      "type": "function",
+      "name": "FooterLanguageSwitcher",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        302,
+        325
+      ],
+      "summary": "统计网站的stats-shell处理函数 FooterLanguageSwitcher，调用 useI18n、useLanguage、i18n.t、language.locale、route 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:SectionBridge",
+      "type": "function",
+      "name": "SectionBridge",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        327,
+        337
+      ],
+      "summary": "统计网站的stats-shell处理函数 SectionBridge，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:ThemePreferenceIcon",
+      "type": "function",
+      "name": "ThemePreferenceIcon",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        339,
+        403
+      ],
+      "summary": "统计网站的stats-shell处理函数 ThemePreferenceIcon，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:SubscribeModal",
+      "type": "function",
+      "name": "SubscribeModal",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        405,
+        499
+      ],
+      "summary": "统计网站的stats-shell处理函数 SubscribeModal，调用 useI18n、createSignal、onMount、window.setTimeout、document.addEventListener 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterColumn",
+      "type": "function",
+      "name": "FooterColumn",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        509,
+        532
+      ],
+      "summary": "统计网站的stats-shell处理函数 FooterColumn，调用 props.localHref、link.href.startsWith 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/stats-runtime.ts",
+      "type": "file",
+      "name": "stats-runtime.ts",
+      "filePath": "packages/stats/app/src/stats-runtime.ts",
+      "summary": "统计网站的stats-runtime实现模块，提供 runStatsEffect。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "stats-runtime"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "function",
+      "name": "runStatsEffect",
+      "filePath": "packages/stats/app/src/stats-runtime.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "统计网站的stats-runtime处理函数 runStatsEffect，调用 Effect.runPromise 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "target": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "target": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:DataWordmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterLanguageSwitcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:SectionBridge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:ThemePreferenceIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:SubscribeModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterColumn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/stats-runtime.ts",
+      "target": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/stats-runtime.ts",
+      "target": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

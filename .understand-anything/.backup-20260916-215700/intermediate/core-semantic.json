@@ -1,0 +1,683 @@
+{
+  "overrides": [
+    {
+      "filePath": "packages/core/src/session.ts",
+      "summary": "Session V2 的进程全局领域门面：创建时复用已有 Session 身份；prompt 先持久接纳输入，核对 Session、内容与 delivery 的精确重试一致性，再按 resume 决定是否唤醒执行；还提供历史、模型切换、中断与撤销。compact、wait、shell、skill 当前仍返回操作不可用。",
+      "tags": [
+        "会话领域",
+        "持久接纳",
+        "幂等重试"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/execution.ts",
+      "summary": "按 Session ID 定义进程全局执行入口：active 查询本进程活动集合，resume 启动或加入执行，wake 合并新工作通知，interrupt 停止本进程工作；另提供仅记录数据时使用的空实现。",
+      "tags": [
+        "执行入口",
+        "进程作用域",
+        "服务契约"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/execution/local.ts",
+      "summary": "本地 SessionExecution 实现，持有进程内协调器；每次 drain 启动时从 SessionStore 读取最新 placement，再通过 LocationServiceMap 获取对应 runner，尚未实现分布式执行所有权。",
+      "tags": [
+        "本地执行",
+        "位置路由",
+        "进程作用域"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/run-coordinator.ts",
+      "summary": "以 Session 键维护内存活动表和 Fiber：同键显式 run 共享完成结果，wake 合并后续 drain，不同键可并发；interrupt 取消当前 owner 并等待清理，空闲键为无操作。",
+      "tags": [
+        "并发协调",
+        "唤醒合并",
+        "中断"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/runner/index.ts",
+      "summary": "定义 Location runner 的 run({sessionID, force}) 接口及类型化错误集合；force 区分显式恢复尝试与只处理合格持久输入的提示性唤醒，实际模型循环在 llm.ts。",
+      "tags": [
+        "执行器契约",
+        "错误类型",
+        "位置作用域"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "Location 作用域的持久会话执行循环：校验 Session placement，提升 steer 或单个 queue，刷新上下文与模型，每个 provider turn 显式调用一次 llm.stream；工具调用先落事件再并发执行并等待结算，随后重读投影历史继续。支持自动压缩、一次溢出恢复和新输入重置代理步数。",
+      "tags": [
+        "模型循环",
+        "工具结算",
+        "持久续行",
+        "队列投递"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/input.ts",
+      "summary": "持久输入生命周期：PromptAdmitted 投影生成 session_input，Prompted 标记 promoted_seq 并允许历史投影补建已提升记录；按 admitted_seq 批量提升截止序号内的 steer 或只提升下一条 queue，校验生命周期和精确重试一致性。",
+      "tags": [
+        "持久收件箱",
+        "输入提升",
+        "投递语义"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/sql.ts",
+      "summary": "定义共享 Session 元数据及新旧消息存储表；session_input 使用接纳和提升序号表示输入生命周期，session_message 按聚合序号唯一排序，session_context_epoch 按 Session 保存系统基线、快照与基线序号。",
+      "tags": [
+        "持久模型",
+        "消息投影",
+        "上下文纪元"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/store.ts",
+      "summary": "进程全局的 Session 只读存储服务，从数据库恢复 Session placement 和消息归属，并把普通上下文、runner 上下文选择交给 SessionHistory。",
+      "tags": [
+        "会话存储",
+        "查询",
+        "进程作用域"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/history.ts",
+      "summary": "按最新 compaction 和 Context Epoch 基线序号选择投影消息，保留仍有效的系统更新，按序号返回消息或带序号条目，并把解码失败映射为会话消息错误。",
+      "tags": [
+        "历史选择",
+        "压缩边界",
+        "投影读取"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/context-epoch.ts",
+      "summary": "维护 Session 自有的系统上下文纪元：初始化基线与快照，逐轮协调源变化；增量变化通过 ContextUpdated 与快照推进原子提交，压缩后尝试替换基线，来源暂不可用时保留已接纳状态。",
+      "tags": [
+        "上下文纪元",
+        "快照持久化",
+        "系统更新"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/projector.ts",
+      "summary": "将持久会话事件投影为 Session、消息和输入表，维护 assistant 内容及 usage；新旧事件兼容投影集中于此，输入接纳与提升委托 SessionInput 保持生命周期约束。",
+      "tags": [
+        "事件投影",
+        "兼容持久化",
+        "会话状态"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "在当前 Location 的 Catalog 和 Integration 中选择 Session 指定或默认模型，解析凭据与 variant，映射到 OpenAI Responses、Anthropic Messages 或 OpenAI Compatible 路由，并明确报告模型和协议不支持错误。",
+      "tags": [
+        "模型解析",
+        "连接凭据",
+        "位置作用域"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/runner/publish-llm-event.ts",
+      "summary": "把标准 LLM 流事件转换为持久 Session 事件，管理 assistant、文本、推理与工具调用的开始、增量和结算状态，并为中断或缺失结果补记失败。",
+      "tags": [
+        "流事件转换",
+        "工具生命周期",
+        "增量持久化"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/runner/to-llm-message.ts",
+      "summary": "把 Session 投影消息翻译为标准 LLM 消息与内容部分，处理用户附件、assistant 推理和工具结果，使下一 provider turn 能从持久历史重新构造请求。",
+      "tags": [
+        "消息转换",
+        "模型输入",
+        "持久历史"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/session/compaction.ts",
+      "summary": "估算请求上下文容量，根据配置决定自动压缩和溢出恢复；序列化历史与工具输出，保留近期内容，调用模型生成可继续工作的摘要并发布压缩事件。",
+      "tags": [
+        "上下文压缩",
+        "容量估算",
+        "溢出恢复"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/system-context/index.ts",
+      "summary": "系统上下文代数：以类型化 Source 描述独立观察源，组合为不透明上下文，生成模型可见基线和结构化快照，再计算增量或替换；区分来源暂不可用与删除并拒绝重复源键。",
+      "tags": [
+        "系统上下文",
+        "类型化来源",
+        "快照比较"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/system-context/registry.ts",
+      "summary": "Location 系统上下文注册表，按作用域注册并释放来源条目，拒绝重复键，按稳定键顺序并发加载后组合为系统上下文。",
+      "tags": [
+        "上下文注册",
+        "作用域释放",
+        "位置作用域"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/system-context/builtins.ts",
+      "summary": "向系统上下文注册表提供当前工作目录、项目根、版本控制与平台信息及日期来源，分别定义初始基线和变化后的系统更新文本。",
+      "tags": [
+        "环境上下文",
+        "日期来源",
+        "内置来源"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/location.ts",
+      "summary": "把浏览器安全的 Location Ref 契约绑定为运行时服务，解析所属项目与版本控制信息，以目录和可选 workspaceID 标识位置服务边界。",
+      "tags": [
+        "运行位置",
+        "项目解析",
+        "服务绑定"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/location-service-map.ts",
+      "summary": "声明进程全局 LocationServiceMap，以 Location.Ref 获取相应 Location 服务层；查找键是位置而非 Session ID。",
+      "tags": [
+        "位置服务映射",
+        "进程作用域",
+        "层缓存"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/location-services.ts",
+      "summary": "组装位置内配置、权限、工具、模型、文件系统、系统上下文与 SessionRunner 服务；通过 LayerMap 按位置缓存，提升全局依赖，并设置闲置服务层 60 分钟存活期。",
+      "tags": [
+        "依赖组装",
+        "位置隔离",
+        "服务生命周期"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/event.ts",
+      "summary": "统一事件发布、订阅与持久聚合日志：在事务中提交事件、投影与可选本地 commit，提供重放和按序号追读；owner claim 约束事件重放归属，不等同于 Session 模型执行的分布式锁。",
+      "tags": [
+        "持久事件",
+        "原子投影",
+        "事件重放"
+      ]
+    },
+    {
+      "filePath": "packages/core/src/tool/registry.ts",
+      "summary": "Location 工具注册与结算边界：位置注册覆盖进程应用工具，按权限规则过滤可见定义，在结算时捕获有效工具并执行、验证和限制模型输出；执行授权由具体工具承担。",
+      "tags": [
+        "工具注册",
+        "输出限制",
+        "位置作用域"
+      ]
+    },
+    {
+      "filePath": "packages/protocol/src/api.ts",
+      "summary": "浏览器安全 HTTP 契约组装器，将领域端点组和授权、参数错误处理组合为 HttpApi；协议拥有中间件放置位置，由调用方注入位置中间件身份，避免依赖 Core 运行时。",
+      "tags": [
+        "公共协议",
+        "接口组合",
+        "依赖边界"
+      ]
+    },
+    {
+      "filePath": "packages/protocol/src/groups/session.ts",
+      "summary": "声明当前 /api/session 的创建、分页、输入接纳、上下文、事件重放与中断等端点；prompt 返回持久接纳记录，active 明确限于本进程，游标编码保留排序与筛选条件。",
+      "tags": [
+        "会话接口",
+        "分页游标",
+        "公开契约"
+      ]
+    },
+    {
+      "filePath": "packages/server/src/api.ts",
+      "summary": "用 Server 的 Location 与 SessionLocation 中间件身份实例化 Protocol 默认 HttpApi，保持公共接口定义与服务器运行时实现的分离。",
+      "tags": [
+        "服务端接口",
+        "中间件注入",
+        "协议实例化"
+      ]
+    },
+    {
+      "filePath": "packages/server/src/handlers/session.ts",
+      "summary": "实现 Session HTTP 处理器：调用 Core SessionV2，构造分页游标和 SSE，转换领域错误为协议错误；compact 与 wait 的尚未实现状态被映射为服务不可用响应。",
+      "tags": [
+        "会话处理器",
+        "错误转换",
+        "事件推送"
+      ]
+    },
+    {
+      "filePath": "packages/server/src/middleware/session-location.ts",
+      "summary": "校验路由 Session ID，从 SessionTable 读取持久目录和 workspaceID，再注入对应 Location 服务层；Session 缺失时返回协议级未找到错误。",
+      "tags": [
+        "位置中间件",
+        "会话归属",
+        "输入校验"
+      ]
+    },
+    {
+      "filePath": "packages/server/src/routes.ts",
+      "summary": "组装 HttpApi、处理器、授权和位置服务层，并把未绑定 SessionExecution 替换为本地实现；同时提供常规服务器及嵌入式路由，公开 OpenAPI 文档。",
+      "tags": [
+        "服务器组装",
+        "嵌入路由",
+        "本地执行绑定"
+      ]
+    },
+    {
+      "filePath": "packages/schema/src/session-input.ts",
+      "summary": "定义浏览器安全的输入接纳响应，包含 Session 和消息 ID、prompt、delivery、接纳序号、创建时间及可选提升序号；契约本身不执行调度。",
+      "tags": [
+        "输入契约",
+        "接纳记录",
+        "浏览器安全"
+      ]
+    },
+    {
+      "filePath": "packages/schema/src/session-message.ts",
+      "summary": "定义当前会话投影消息联合与工具状态契约，包含用户、assistant、系统更新、代理及模型切换等变体，以及可序列化内容和时间字段。",
+      "tags": [
+        "消息契约",
+        "工具状态",
+        "投影数据"
+      ]
+    },
+    {
+      "filePath": "packages/schema/src/event-manifest.ts",
+      "summary": "汇总 canonical 事件清单，并区分 Server 公开集合与包含兼容事件的完整集合；保留明确的新旧过渡事件组合，为运行时和生成客户端提供同源事件定义。",
+      "tags": [
+        "事件清单",
+        "兼容边界",
+        "公开事件"
+      ]
+    },
+    {
+      "filePath": "packages/schema/src/durable-event-manifest.ts",
+      "summary": "定义持久事件清单，SessionDurable 限定当前 Session 的持久公开历史，而 Durable 还组合保留的 V1 持久事件用于共享存储与兼容。",
+      "tags": [
+        "持久事件契约",
+        "历史边界",
+        "兼容清单"
+      ]
+    },
+    {
+      "filePath": "packages/client/src/contract.ts",
+      "summary": "以客户端专用中间件标识实例化 Protocol 契约，映射公开资源与方法名称，并排除文件读取及 PTY 原始连接等端点，作为两种客户端生成器的统一输入。",
+      "tags": [
+        "客户端契约",
+        "代码生成输入",
+        "协议依赖"
+      ]
+    },
+    {
+      "filePath": "packages/client/script/build.ts",
+      "summary": "编译 ClientApi，通过 httpapi-codegen 同时生成 Promise 客户端与直接导入契约的 Effect 客户端，分别写入 generated 和 generated-effect；公开契约变更后由此再生成。",
+      "tags": [
+        "客户端生成",
+        "双接口输出",
+        "契约编译"
+      ]
+    },
+    {
+      "filePath": "packages/client/src/effect.ts",
+      "summary": "导出生成的 Effect 客户端以及 Schema 标准领域契约和 Protocol 事件类型；该网络客户端边界保持对 Core 与 Server 运行时的独立。",
+      "tags": [
+        "客户端入口",
+        "契约导出",
+        "依赖边界"
+      ]
+    },
+    {
+      "filePath": "packages/sdk-next/src/opencode.ts",
+      "summary": "组合 Client、Core 与 Server 创建嵌入式 OpenCode：共享 Layer memoMap 和应用工具服务，以内存 Web handler 接入 Effect HTTP 客户端，并公开作用域化 tools.register。",
+      "tags": [
+        "嵌入式 SDK",
+        "运行时组合",
+        "应用工具"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/session.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session.ts",
+      "target": "file:packages/core/src/session/execution.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session.ts",
+      "target": "file:packages/core/src/session/store.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/execution/local.ts",
+      "target": "file:packages/core/src/session/run-coordinator.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/execution/local.ts",
+      "target": "file:packages/core/src/session/store.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/execution/local.ts",
+      "target": "file:packages/core/src/location-service-map.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/execution/local.ts",
+      "target": "file:packages/core/src/session/runner/index.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/index.ts",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/context-epoch.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/model.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/tool/registry.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/compaction.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/input.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "writes_to",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/input.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "writes_to",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/context-epoch.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "writes_to",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/context-epoch.ts",
+      "target": "file:packages/core/src/system-context/index.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/context-epoch.ts",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/history.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/core/src/session/store.ts",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/system-context/builtins.ts",
+      "target": "file:packages/core/src/system-context/registry.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/system-context/registry.ts",
+      "target": "file:packages/core/src/system-context/index.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/handlers/session.ts",
+      "target": "file:packages/core/src/session.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/server/src/handlers/session.ts",
+      "target": "file:packages/protocol/src/groups/session.ts",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/server/src/middleware/session-location.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/middleware/session-location.ts",
+      "target": "file:packages/core/src/location-service-map.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/api.ts",
+      "target": "file:packages/protocol/src/api.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/core/src/session/execution/local.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/client/src/contract.ts",
+      "target": "file:packages/protocol/src/api.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/client/script/build.ts",
+      "target": "file:packages/client/src/contract.ts",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/sdk-next/src/opencode.ts",
+      "target": "file:packages/server/src/routes.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:packages/sdk-next/src/opencode.ts",
+      "target": "file:packages/client/src/effect.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/session.ts",
+      "target": "file:packages/schema/src/session-input.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/session.ts",
+      "target": "file:packages/schema/src/session-message.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/input.ts",
+      "target": "file:packages/schema/src/session-input.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/src/effect.ts",
+      "target": "file:packages/schema/src/session-message.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/src/effect.ts",
+      "target": "file:packages/schema/src/session-input.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/sdk-next/src/opencode.ts",
+      "target": "file:packages/core/src/tool/application-tools.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/sdk-next/src/opencode.ts",
+      "target": "file:packages/core/src/permission/saved.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session.ts",
+      "target": "file:packages/schema/src/durable-event-manifest.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "notes": [
+    "实际模型执行循环在 runner/llm.ts；runner/index.ts 只有接口。每个常规模型 turn 显式调用一次 llm.stream，压缩器可另发摘要模型请求，因此不应写成整个 drain 只调用一次模型。",
+    "steer 在下一安全 provider 边界成批提升并重置一次步数；queue 在会话否则空闲时每次提升一条，并再次判断是否继续。提示性 wake 在没有待提升输入时不会自动重试历史 provider 工作。",
+    "SessionExecution、SessionStore 和协调器为进程全局；runner、模型目录解析、工具注册、权限和文件系统服务为 Location 作用域。没有实现持久多节点 Session 执行锁。",
+    "EventV2 的 ownerID/claim 是事件重放聚合归属机制，不代表模型执行协调器已具备分布式所有权。",
+    "源码已有自动压缩和上下文溢出恢复；runner 头部 TODO 清单部分尚未更新。公共 session.compact 和 session.wait 则仍返回 OperationUnavailableError。",
+    "Schema 提供序列化契约，Protocol 定义公共 HTTP 表面，Core 实现领域运行时，Server 组合协议与 Core。Client 的运行时代码依赖 Schema/Protocol；sdk-next 才组合 Client/Core/Server。",
+    "历史 Prompted 投影会在 projectPrompted 中补建已提升 session_input；当前 admit 若只有同 ID 的 session_message 而缺少输入行，则 projectAdmitted 会报 LifecycleConflict。源码未确认根 AGENTS 所述所有历史精确重试情形均会在 admit 路径懒补建，摘要按实际分支描述。",
+    "工具注册表过滤可见工具定义并执行通用输出限制，具体工具叶子负责权限授权；不能把 registry 描述为执行授权服务。",
+    "这里只读核对关键源码并输出语义补充，未运行模型、服务器或测试；边均对应已见源码调用、读写或服务实现关系。",
+    "补充跨包 depends_on 边来自源码显式依赖：bundled importMap 对部分 @opencode-ai workspace alias 无法解析，因此自动导入边不能代表完整包间依赖。"
+  ]
+}

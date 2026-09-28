@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/stats/server/src/ingest.ts",
+      "type": "file",
+      "name": "ingest.ts",
+      "filePath": "packages/stats/server/src/ingest.ts",
+      "summary": "将带数据湖路由标识的事件转换为 Firehose 记录，每批最多 500 条；校验目标路由，对部分写入失败进行限次退避重试，并汇总失败数量。",
+      "tags": [
+        "接口实现",
+        "统计摄取服务",
+        "数据接收"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/server/src/ingest.ts:countRoutedEvents",
+      "type": "function",
+      "name": "countRoutedEvents",
+      "filePath": "packages/stats/server/src/ingest.ts",
+      "lineRange": [
+        130,
+        139
+      ],
+      "summary": "统计摄取服务的数据接收处理函数 countRoutedEvents，调用 isRecord、routeEvent 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/server/src/ingest.ts:toFirehoseRecord",
+      "type": "function",
+      "name": "toFirehoseRecord",
+      "filePath": "packages/stats/server/src/ingest.ts",
+      "lineRange": [
+        155,
+        166
+      ],
+      "summary": "统计摄取服务的数据接收处理函数 toFirehoseRecord，调用 Buffer.from 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/stats/server/src/ingest.ts:IngestError",
+      "type": "class",
+      "name": "IngestError",
+      "filePath": "packages/stats/server/src/ingest.ts",
+      "lineRange": [
+        15,
+        24
+      ],
+      "summary": "统计摄取服务的数据接收类型 IngestError，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/stats/server/src/ingest.ts:Ingest",
+      "type": "class",
+      "name": "Ingest",
+      "filePath": "packages/stats/server/src/ingest.ts",
+      "lineRange": [
+        32,
+        86
+      ],
+      "summary": "统计摄取服务的数据接收类型 Ingest，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/server/src/router.ts",
+      "type": "file",
+      "name": "router.ts",
+      "filePath": "packages/stats/server/src/router.ts",
+      "summary": "提供健康、就绪和数据摄取路由；通过 Bearer 密钥、JSON 校验与并发信号量控制摄取请求，并把写入失败映射为 HTTP 响应。",
+      "tags": [
+        "接口实现",
+        "统计摄取服务",
+        "HTTP 路由"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/server/src/router.ts:ingest",
+      "type": "function",
+      "name": "ingest",
+      "filePath": "packages/stats/server/src/router.ts",
+      "lineRange": [
+        32,
+        54
+      ],
+      "summary": "统计摄取服务的HTTP 路由处理函数 ingest，调用 Effect.gen、isAuthorized、json、HttpServerRequest.schemaBodyJson、Effect.match 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/server/src/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "packages/stats/server/src/server.ts",
+      "summary": "统计摄取服务的服务器实现模块，配置 @effect/platform-node/NodeHttpServer、@effect/platform-node/NodeRuntime、effect 相关模块。",
+      "tags": [
+        "接口实现",
+        "统计摄取服务",
+        "服务器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/server/src/shutdown.ts",
+      "type": "file",
+      "name": "shutdown.ts",
+      "filePath": "packages/stats/server/src/shutdown.ts",
+      "summary": "统计摄取服务的服务停机实现模块，提供 isShuttingDown、registerShutdownSignalHandlers。",
+      "tags": [
+        "接口实现",
+        "统计摄取服务",
+        "服务停机"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/server/src/shutdown.ts:isShuttingDown",
+      "type": "function",
+      "name": "isShuttingDown",
+      "filePath": "packages/stats/server/src/shutdown.ts",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "统计摄取服务的服务停机处理函数 isShuttingDown。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/server/src/shutdown.ts:registerShutdownSignalHandlers",
+      "type": "function",
+      "name": "registerShutdownSignalHandlers",
+      "filePath": "packages/stats/server/src/shutdown.ts",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "统计摄取服务的服务停机处理函数 registerShutdownSignalHandlers，调用 process.once 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计摄取服务"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "function:packages/stats/server/src/ingest.ts:countRoutedEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "function:packages/stats/server/src/ingest.ts:toFirehoseRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "class:packages/stats/server/src/ingest.ts:IngestError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "class:packages/stats/server/src/ingest.ts:IngestError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "class:packages/stats/server/src/ingest.ts:Ingest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/ingest.ts",
+      "target": "class:packages/stats/server/src/ingest.ts:Ingest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/server/src/router.ts",
+      "target": "function:packages/stats/server/src/router.ts:ingest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/router.ts",
+      "target": "file:packages/stats/server/src/ingest.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/server/src/router.ts",
+      "target": "file:packages/stats/server/src/shutdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/server/src/server.ts",
+      "target": "file:packages/stats/server/src/ingest.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/server/src/server.ts",
+      "target": "file:packages/stats/server/src/router.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/server/src/server.ts",
+      "target": "file:packages/stats/server/src/shutdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/server/src/shutdown.ts",
+      "target": "function:packages/stats/server/src/shutdown.ts:isShuttingDown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/shutdown.ts",
+      "target": "function:packages/stats/server/src/shutdown.ts:isShuttingDown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/server/src/shutdown.ts",
+      "target": "function:packages/stats/server/src/shutdown.ts:registerShutdownSignalHandlers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/server/src/shutdown.ts",
+      "target": "function:packages/stats/server/src/shutdown.ts:registerShutdownSignalHandlers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

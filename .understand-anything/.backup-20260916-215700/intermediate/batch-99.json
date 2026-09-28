@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/scripts/copy-bundles.ts",
+      "type": "file",
+      "name": "copy-bundles.ts",
+      "filePath": "packages/desktop/scripts/copy-bundles.ts",
+      "summary": "配置或执行 desktop 的复制资源包开发流程。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/scripts/copy-icons.ts",
+      "type": "file",
+      "name": "copy-icons.ts",
+      "filePath": "packages/desktop/scripts/copy-icons.ts",
+      "summary": "配置或执行 desktop 的复制icons开发流程。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/scripts/copy-metainfo.ts",
+      "type": "file",
+      "name": "copy-metainfo.ts",
+      "filePath": "packages/desktop/scripts/copy-metainfo.ts",
+      "summary": "配置或执行 desktop 的复制metainfo开发流程。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/scripts/prebuild.ts",
+      "type": "file",
+      "name": "prebuild.ts",
+      "filePath": "packages/desktop/scripts/prebuild.ts",
+      "summary": "配置或执行 desktop 的prebuild开发流程。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/scripts/predev.ts",
+      "type": "file",
+      "name": "predev.ts",
+      "filePath": "packages/desktop/scripts/predev.ts",
+      "summary": "配置或执行 desktop 的predev开发流程。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/scripts/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "packages/desktop/scripts/utils.ts",
+      "summary": "配置或执行 desktop 的工具开发流程。 对外提供 resolveChannel、CLI_BINARIES、RUST_TARGET、getCurrentCli、downloadCliToResources、windowsify。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/scripts/utils.ts:resolveChannel",
+      "type": "function",
+      "name": "resolveChannel",
+      "filePath": "packages/desktop/scripts/utils.ts",
+      "lineRange": [
+        10,
+        14
+      ],
+      "summary": "解析Channel。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/scripts/utils.ts:getCurrentCli",
+      "type": "function",
+      "name": "getCurrentCli",
+      "filePath": "packages/desktop/scripts/utils.ts",
+      "lineRange": [
+        65,
+        70
+      ],
+      "summary": "读取当前CLI，调用 nativeTarget、CLI_BINARIES.find 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/scripts/utils.ts:downloadCliToResources",
+      "type": "function",
+      "name": "downloadCliToResources",
+      "filePath": "packages/desktop/scripts/utils.ts",
+      "lineRange": [
+        72,
+        92
+      ],
+      "summary": "下载当前平台的 CLI 二进制并放入桌面应用资源目录。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/scripts/utils.ts:windowsify",
+      "type": "function",
+      "name": "windowsify",
+      "filePath": "packages/desktop/scripts/utils.ts",
+      "lineRange": [
+        94,
+        97
+      ],
+      "summary": "为 Windows 可执行文件路径补齐平台扩展名。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/scripts/copy-bundles.ts",
+      "target": "file:packages/desktop/scripts/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/scripts/copy-icons.ts",
+      "target": "file:packages/desktop/scripts/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/scripts/copy-metainfo.ts",
+      "target": "file:packages/desktop/scripts/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/scripts/prebuild.ts",
+      "target": "file:packages/desktop/scripts/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/scripts/predev.ts",
+      "target": "file:packages/desktop/scripts/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:resolveChannel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:resolveChannel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:getCurrentCli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:getCurrentCli",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:downloadCliToResources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:downloadCliToResources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:windowsify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/scripts/utils.ts",
+      "target": "function:packages/desktop/scripts/utils.ts:windowsify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/scripts/utils.ts:downloadCliToResources",
+      "target": "function:packages/desktop/scripts/utils.ts:getCurrentCli",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/scripts/utils.ts:downloadCliToResources",
+      "target": "function:packages/desktop/scripts/utils.ts:windowsify",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

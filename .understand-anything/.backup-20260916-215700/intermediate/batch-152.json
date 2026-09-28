@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/httpapi-codegen/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/httpapi-codegen/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「@opencode-ai/httpapi-codegen、Settled rules、Boundary」。",
+      "tags": [
+        "文档",
+        "代码生成",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/httpapi-codegen/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/httpapi-codegen/package.json",
+      "summary": "声明 @opencode-ai/httpapi-codegen 的包信息与公共导出入口，脚本包括 test、typecheck；依赖包括 effect、prettier。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/httpapi-codegen/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/httpapi-codegen/tsconfig.json",
+      "summary": "配置 packages/httpapi-codegen 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/httpapi-codegen/README.md",
+      "target": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/httpapi-codegen/package.json",
+      "target": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/httpapi-codegen/tsconfig.json",
+      "target": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

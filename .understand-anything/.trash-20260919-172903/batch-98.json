@@ -1,0 +1,1138 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "summary": "编译 HttpApi 与 Effect Schema 为共享契约，分别生成 Effect、导入式 Effect 和零 Effect 依赖的 Promise 客户端；校验协议映射并按生成物清单安全格式化和写入文件。",
+      "tags": [
+        "接口实现",
+        "HTTP API 客户端生成器",
+        "index"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:compile",
+      "type": "function",
+      "name": "compile",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        76,
+        213
+      ],
+      "summary": "反射 HttpApi 并编译客户端生成所需的共享契约，用于HTTP API 客户端生成器的index流程；相关调用包括 HttpApi.reflect、Map.groupBy、endpoints.map。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:emitEffect",
+      "type": "function",
+      "name": "emitEffect",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        215,
+        223
+      ],
+      "summary": "生成保留 Effect Schema 语义的客户端源码，用于HTTP API 客户端生成器的index流程；相关调用包括 contract.groups.flatMap、operations、renderEffectFiles。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:emitEffectImported",
+      "type": "function",
+      "name": "emitEffectImported",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        225,
+        236
+      ],
+      "summary": "生成引用已有契约定义的 Effect 客户端源码，用于HTTP API 客户端生成器的index流程；相关调用包括 operations、renderImportedEffectFiles。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "type": "function",
+      "name": "emitPromise",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        238,
+        267
+      ],
+      "summary": "生成基于 fetch 的 Promise 客户端源码，用于HTTP API 客户端生成器的index流程；相关调用包括 assertPromiseEndpoint、operations、renderPromiseTypes。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:assertPromiseEndpoint",
+      "type": "function",
+      "name": "assertPromiseEndpoint",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        269,
+        302
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 assertPromiseEndpoint，调用 resolveHttpApiEncoding、HttpMethod.hasBody、isStreamSchema、SchemaAST.isNever、Schema.toType 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderEffectFiles",
+      "type": "function",
+      "name": "renderEffectFiles",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        308,
+        322
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderEffectFiles，调用 groups.map、renderGroup、renderClient 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderImportedEffectFiles",
+      "type": "function",
+      "name": "renderImportedEffectFiles",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        324,
+        391
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderImportedEffectFiles，调用 groups.map、group.endpoints.map、item.input.filter、fields.map、methods.join 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderImportedProjection",
+      "type": "function",
+      "name": "renderImportedProjection",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        400,
+        419
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderImportedProjection，调用 groups.flatMap、group.endpoints.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderPromiseTypes",
+      "type": "function",
+      "name": "renderPromiseTypes",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        421,
+        490
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderPromiseTypes，调用 groups.flatMap、group.endpoints.flatMap、endpoint.errors.flatMap、declaredErrorFields、errors.values 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderPromiseClient",
+      "type": "function",
+      "name": "renderPromiseClient",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        492,
+        538
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderPromiseClient，调用 groups.flatMap、group.endpoints.flatMap、promiseTypePrefix、groups.map、group.endpoints.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:structuralType",
+      "type": "function",
+      "name": "structuralType",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        556,
+        584
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 structuralType，调用 SchemaRepresentation.toCodeDocument、SchemaRepresentation.fromASTs、document.artifacts.some、document.references.nonRecursives.map、expand 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:promisePath",
+      "type": "function",
+      "name": "promisePath",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        586,
+        599
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 promisePath，调用 path.includes、input.filter、path.split、segment.startsWith、segment.replaceAll 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:normalizeTransport",
+      "type": "function",
+      "name": "normalizeTransport",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        609,
+        647
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 normalizeTransport，调用 isStreamSchema、metadataPortable、Schema.toType、isPathInput、HttpApiEndpoint.make 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:sameEncoding",
+      "type": "function",
+      "name": "sameEncoding",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        653,
+        691
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 sameEncoding，调用 sameEncoding、sameChecks、sameContext、SchemaAST.isSuspend、left.thunk 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:sameChecks",
+      "type": "function",
+      "name": "sameChecks",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        693,
+        704
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 sameChecks，调用 left.every、sameChecks 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        710,
+        765
+      ],
+      "summary": "校验目标路径并格式化生成源码，依据生成器清单更新文件且清理先前拥有的过期输出。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "type": "function",
+      "name": "generate",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        771,
+        779
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 generate，调用 Effect.try、emitEffect、compile、Effect.flatMap、write 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:inputFields",
+      "type": "function",
+      "name": "inputFields",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        781,
+        797
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 inputFields，调用 Schema.toType、SchemaAST.isObjects、ast.propertySignatures.map、SchemaAST.isOptional 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:responseSchemas",
+      "type": "function",
+      "name": "responseSchemas",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        799,
+        808
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 responseSchemas，调用 HttpApiSchema.isNoContent、isStreamSchema、streamDataSchema 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:assertPortable",
+      "type": "function",
+      "name": "assertPortable",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        810,
+        856
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 assertPortable，调用 taggedErrorFields、SchemaAST.isDeclaration、checksPortable、schema.ast.typeParameters.some、schema.ast.typeParameters.every 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:checksPortable",
+      "type": "function",
+      "name": "checksPortable",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        858,
+        869
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 checksPortable，调用 checks.every、checksPortable 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:metadataPortable",
+      "type": "function",
+      "name": "metadataPortable",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        871,
+        895
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 metadataPortable，调用 seen.has、seen.add、annotationsPortable、checksPortable、metadataPortable 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:generationPortable",
+      "type": "function",
+      "name": "generationPortable",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        897,
+        918
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 generationPortable，调用 value.runtime.startsWith 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:annotationsPortable",
+      "type": "function",
+      "name": "annotationsPortable",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        920,
+        931
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 annotationsPortable，调用 generationPortable、serializable 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:declaredErrorFields",
+      "type": "function",
+      "name": "declaredErrorFields",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        945,
+        965
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 declaredErrorFields，调用 SchemaAST.isDeclaration、SchemaAST.isObjects、fields.propertySignatures.find、SchemaAST.isLiteral、SchemaAST.resolveIdentifier 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:isDataEnvelope",
+      "type": "function",
+      "name": "isDataEnvelope",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        967,
+        976
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 isDataEnvelope，调用 isStreamSchema、HttpApiSchema.isNoContent、Schema.toType、SchemaAST.isObjects 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderGroup",
+      "type": "function",
+      "name": "renderGroup",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        1012,
+        1121
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderGroup，调用 group.endpoints.map、addSlot、endpointPayloads.map、renderSuccess、errors.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderSchemas",
+      "type": "function",
+      "name": "renderSchemas",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        1123,
+        1170
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderSchemas，调用 slots.flatMap、taggedErrorFields、slots.map、classes.has、classes.values 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/src/index.ts:renderClient",
+      "type": "function",
+      "name": "renderClient",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        1172,
+        1185
+      ],
+      "summary": "HTTP API 客户端生成器的index处理函数 renderClient，调用 groups.map、groups.flatMap、group.endpoints.map、fields.join 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/httpapi-codegen/src/index.ts:GenerationError",
+      "type": "class",
+      "name": "GenerationError",
+      "filePath": "packages/httpapi-codegen/src/index.ts",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "HTTP API 客户端生成器的index类型 GenerationError，提供 message 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/effect.ts",
+      "type": "file",
+      "name": "effect.ts",
+      "filePath": "packages/httpapi-codegen/test/effect.ts",
+      "summary": "验证HTTP API 客户端生成器的effect行为，对公开输入、输出与边界条件进行断言。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/httpapi-codegen/test/effect.ts:effect",
+      "type": "function",
+      "name": "effect",
+      "filePath": "packages/httpapi-codegen/test/effect.ts",
+      "lineRange": [
+        10,
+        26
+      ],
+      "summary": "HTTP API 客户端生成器的effect处理函数 effect，调用 test、Effect.gen、Effect.suspend、body、Effect.provide 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/fixture.ts",
+      "type": "file",
+      "name": "fixture.ts",
+      "filePath": "packages/httpapi-codegen/test/fixture.ts",
+      "summary": "验证HTTP API 客户端生成器的fixture行为，对公开输入、输出与边界条件进行断言。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "fixture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/httpapi-codegen/test/fixture.ts:Missing",
+      "type": "class",
+      "name": "Missing",
+      "filePath": "packages/httpapi-codegen/test/fixture.ts",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "HTTP API 客户端生成器的fixture类型 Missing，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "测试",
+        "HTTP API 客户端生成器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generate.test.ts",
+      "type": "file",
+      "name": "generate.test.ts",
+      "filePath": "packages/httpapi-codegen/test/generate.test.ts",
+      "summary": "验证HTTP API 客户端生成器的代码生成行为，覆盖 HttpApiCodegen.generate；compiles one contract for Promise and Effect emitters；allows Promise outputs to use an authoritative imported wire type；emits an Effect client against an imported authoritative API；projects imported endpoint constants into a generated API。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "代码生成"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated-consumer.ts",
+      "type": "file",
+      "name": "generated-consumer.ts",
+      "filePath": "packages/httpapi-codegen/test/generated-consumer.ts",
+      "summary": "验证HTTP API 客户端生成器的generated-consumer行为，对公开输入、输出与边界条件进行断言。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "generated-consumer"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/generated/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/httpapi-codegen/test/generated/index.ts",
+      "summary": "验证HTTP API 客户端生成器的index行为，对公开输入、输出与边界条件进行断言。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "index"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/httpapi-codegen/test/write.test.ts",
+      "type": "file",
+      "name": "write.test.ts",
+      "filePath": "packages/httpapi-codegen/test/write.test.ts",
+      "summary": "验证HTTP API 客户端生成器的write行为，覆盖 HttpApiCodegen.write。",
+      "tags": [
+        "测试",
+        "HTTP API 客户端生成器",
+        "write"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:compile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:compile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitEffectImported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitEffectImported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:assertPromiseEndpoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderEffectFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderImportedEffectFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderImportedProjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderPromiseTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderPromiseClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:structuralType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:promisePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:normalizeTransport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:sameEncoding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:sameChecks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:inputFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:responseSchemas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:assertPortable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:checksPortable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:metadataPortable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:generationPortable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:annotationsPortable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:declaredErrorFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:isDataEnvelope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderSchemas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "class:packages/httpapi-codegen/src/index.ts:GenerationError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "class:packages/httpapi-codegen/src/index.ts:GenerationError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:emitEffect",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderEffectFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:emitEffectImported",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderImportedEffectFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "target": "function:packages/httpapi-codegen/src/index.ts:assertPromiseEndpoint",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderPromiseTypes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:emitPromise",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderPromiseClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:assertPromiseEndpoint",
+      "target": "function:packages/httpapi-codegen/src/index.ts:declaredErrorFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderEffectFiles",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderEffectFiles",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderImportedEffectFiles",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderImportedProjection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderPromiseTypes",
+      "target": "function:packages/httpapi-codegen/src/index.ts:declaredErrorFields",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderPromiseClient",
+      "target": "function:packages/httpapi-codegen/src/index.ts:promisePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:normalizeTransport",
+      "target": "function:packages/httpapi-codegen/src/index.ts:metadataPortable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:normalizeTransport",
+      "target": "function:packages/httpapi-codegen/src/index.ts:sameEncoding",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:sameEncoding",
+      "target": "function:packages/httpapi-codegen/src/index.ts:sameChecks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "target": "function:packages/httpapi-codegen/src/index.ts:emitEffect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "target": "function:packages/httpapi-codegen/src/index.ts:compile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:generate",
+      "target": "function:packages/httpapi-codegen/src/index.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:assertPortable",
+      "target": "function:packages/httpapi-codegen/src/index.ts:checksPortable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:metadataPortable",
+      "target": "function:packages/httpapi-codegen/src/index.ts:annotationsPortable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:metadataPortable",
+      "target": "function:packages/httpapi-codegen/src/index.ts:checksPortable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:annotationsPortable",
+      "target": "function:packages/httpapi-codegen/src/index.ts:generationPortable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/httpapi-codegen/src/index.ts:renderGroup",
+      "target": "function:packages/httpapi-codegen/src/index.ts:renderSchemas",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/effect.ts",
+      "target": "function:packages/httpapi-codegen/test/effect.ts:effect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/fixture.ts",
+      "target": "class:packages/httpapi-codegen/test/fixture.ts:Missing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/fixture.ts",
+      "target": "class:packages/httpapi-codegen/test/fixture.ts:Missing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generate.test.ts",
+      "target": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generate.test.ts",
+      "target": "file:packages/httpapi-codegen/test/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generate.test.ts",
+      "target": "file:packages/httpapi-codegen/test/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "file:packages/httpapi-codegen/test/generate.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated-consumer.ts",
+      "target": "file:packages/httpapi-codegen/test/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/generated-consumer.ts",
+      "target": "file:packages/httpapi-codegen/test/generated/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/write.test.ts",
+      "target": "file:packages/httpapi-codegen/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/test/write.test.ts",
+      "target": "file:packages/httpapi-codegen/test/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/httpapi-codegen/src/index.ts",
+      "target": "file:packages/httpapi-codegen/test/write.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

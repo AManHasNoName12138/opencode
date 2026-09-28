@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/http-recorder/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/http-recorder/README.md",
+      "summary": "HTTP 录制器说明文档，介绍HTTP 录制、重放和打包使用。",
+      "tags": [
+        "文档",
+        "HTTP 录制器",
+        "README"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/http-recorder/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/http-recorder/package.json",
+      "summary": "@opencode-ai/http-recorder 的包清单，声明 test、typecheck、build、verify:package 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "HTTP 录制器",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/http-recorder/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/http-recorder/tsconfig.json",
+      "summary": "HTTP 录制器的 TypeScript 编译配置，定义 extends、compilerOptions、rootDir、outDir、module、moduleResolution、declaration、stripInternal 等选项。",
+      "tags": [
+        "配置",
+        "HTTP 录制器",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:packages/http-recorder/package.json",
+      "target": "file:packages/http-recorder/script/build.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/http-recorder/package.json",
+      "target": "file:packages/http-recorder/script/verify-package.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": "service:packages/containers/bun-node/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "packages/containers/bun-node/Dockerfile",
+      "summary": "Dockerfile 描述容器、服务或部署入口，支撑 opencode 的运行环境和交付流程。",
+      "tags": [
+        "deployment",
+        "dockerfile",
+        "opencode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/containers/bun-node/Dockerfile:base",
+      "type": "service",
+      "name": "base",
+      "filePath": "packages/containers/bun-node/Dockerfile",
+      "lineRange": [
+        2,
+        25
+      ],
+      "summary": "packages/containers/bun-node/Dockerfile 定义服务 base，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:packages/containers/bun-node/Dockerfile",
+      "target": "service:packages/containers/bun-node/Dockerfile:base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

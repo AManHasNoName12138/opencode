@@ -1,0 +1,857 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "type": "file",
+      "name": "bedrock-converse-cache.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Bedrock Converse cache recorded」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "type": "file",
+      "name": "bedrock-converse.test.ts",
+      "filePath": "packages/llm/test/provider/bedrock-converse.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Bedrock Converse route、prepares Converse target with system, inference config, and messages、passes topK through additionalModelRequestFields as top_k、omits additionalModelRequestFields when topK is unset、lowers chronological system updates to wrapped user text in order、prepares tool config with toolSpec and toolChoice、lowers assistant tool-call + tool-result message history」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/test/provider/bedrock-converse.test.ts:concat",
+      "type": "function",
+      "name": "concat",
+      "filePath": "packages/llm/test/provider/bedrock-converse.test.ts",
+      "lineRange": [
+        37,
+        46
+      ],
+      "summary": "在packages/llm中执行 concat，接收 frames 参数；调用 frames.reduce、out.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/provider/bedrock-converse.test.ts:recordedModel",
+      "type": "function",
+      "name": "recordedModel",
+      "filePath": "packages/llm/test/provider/bedrock-converse.test.ts",
+      "lineRange": [
+        667,
+        678
+      ],
+      "summary": "在packages/llm中执行 recordedModel；调用 AmazonBedrock.configure 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "type": "file",
+      "name": "cloudflare.test.ts",
+      "filePath": "packages/llm/test/provider/cloudflare.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Cloudflare、prepares AI Gateway models through the OpenAI-compatible Chat protocol、posts to the derived gateway endpoint with bearer auth、defaults AI Gateway id to default when omitted or blank、supports authenticated AI Gateway plus upstream provider auth、allows a fully configured baseURL override、prepares direct Workers AI models through the OpenAI-compatible Chat protocol」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "type": "file",
+      "name": "gemini-cache.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Gemini cache recorded」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/gemini.test.ts",
+      "type": "file",
+      "name": "gemini.test.ts",
+      "filePath": "packages/llm/test/provider/gemini.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Gemini route、prepares Gemini target、lowers chronological system updates to wrapped user text in order、prepares multimodal user input and tool history、continues image tool results as inline vision input without base64 text、strips matching data URLs to raw base64 inlineData、rejects ${name}」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "type": "file",
+      "name": "golden.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/golden.recorded.test.ts",
+      "summary": "为 packages/llm 测试提供 redactCloudflareURL 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "type": "file",
+      "name": "openai-chat.test.ts",
+      "filePath": "packages/llm/test/provider/openai-chat.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「OpenAI Chat route、prepares OpenAI Chat payload、lowers chronological system updates to escaped user wrappers in order、replays canonical reasoning as OpenAI-compatible reasoning_content、maps OpenAI provider options to Chat options、adds native query params to the Chat Completions URL、uses Azure api-key header for static OpenAI Chat keys」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "type": "file",
+      "name": "openai-compatible-chat.test.ts",
+      "filePath": "packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「OpenAI-compatible Chat route、prepares generic Chat target、provides model helpers for compatible provider families、matches AI SDK compatible basic request body fixture、matches AI SDK compatible tool request body fixture、posts to the configured compatible endpoint and parses text usage」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "type": "file",
+      "name": "openai-responses-cache.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「OpenAI Responses cache recorded」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "function:packages/llm/test/provider/bedrock-converse.test.ts:concat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "function:packages/llm/test/provider/bedrock-converse.test.ts:recordedModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/protocols/bedrock-converse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/protocols/bedrock-converse.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/providers/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/bedrock-converse.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/cloudflare.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/protocols/gemini.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/protocols/gemini.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/gemini.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/cloudflare.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/google.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openrouter.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openrouter.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/xai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/xai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/golden.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-golden.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/providers/azure.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/providers/azure.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-chat.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-compatible-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-compatible-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-compatible-chat.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/openai.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/openai-responses-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

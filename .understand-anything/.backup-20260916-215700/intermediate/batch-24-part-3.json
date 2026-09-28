@@ -1,0 +1,2366 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 toolPath、toolFrame、toolView、toolStructuredFinal、toolInlineInfo、toolScroll、toolPermissionInfo；内部处理包含 dict、props、permission、text、num、list、info。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:info",
+      "type": "function",
+      "name": "info",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        175,
+        189
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 info，接收 data、skip 参数；调用 Object.entries、skip.includes、list.map、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "function",
+      "name": "span",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        191,
+        200
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 span，接收 state 参数；调用 dict、num、Locale.duration 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolError",
+      "type": "function",
+      "name": "toolError",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        211,
+        222
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolError，接收 ctx 参数；调用 text、ctx.raw.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:fallbackFinal",
+      "type": "function",
+      "name": "fallbackFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        233,
+        248
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 fallbackFinal，接收 ctx 参数；调用 fail、ctx.raw.trim、span 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "function",
+      "name": "toolPath",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        250,
+        273
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolPath，接收 input、opts 参数；调用 process.cwd、os.homedir、path.isAbsolute、path.resolve、path.relative、rel.startsWith、rel.replaceAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGlob",
+      "type": "function",
+      "name": "runGlob",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        288,
+        299
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runGlob，接收 p 参数；调用 toolPath、count 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGrep",
+      "type": "function",
+      "name": "runGrep",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        301,
+        312
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runGrep，接收 p 参数；调用 toolPath、count 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:runTask",
+      "type": "function",
+      "name": "runTask",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        366,
+        375
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runTask，接收 p 参数；调用 Locale.titlecase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:runTodo",
+      "type": "function",
+      "name": "runTodo",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        377,
+        394
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runTodo，接收 p 参数；调用 list 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:runPatch",
+      "type": "function",
+      "name": "runPatch",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        403,
+        416
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runPatch，接收 p 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:lspTitle",
+      "type": "function",
+      "name": "lspTitle",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        445,
+        464
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 lspTitle，接收 input、opts 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchTitle",
+      "type": "function",
+      "name": "patchTitle",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        484,
+        498
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 patchTitle，接收 file 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapWrite",
+      "type": "function",
+      "name": "snapWrite",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        500,
+        513
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapWrite，接收 p 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapEdit",
+      "type": "function",
+      "name": "snapEdit",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        515,
+        532
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapEdit，接收 p 参数；调用 diff.trim、toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapPatch",
+      "type": "function",
+      "name": "snapPatch",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        534,
+        569
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapPatch，接收 p 参数；调用 list、files.flatMap、diff.trim、patchTitle 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapTask",
+      "type": "function",
+      "name": "snapTask",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        571,
+        583
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapTask，接收 p 参数；调用 Locale.titlecase、text、Boolean 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapTodo",
+      "type": "function",
+      "name": "snapTodo",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        585,
+        605
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapTodo，接收 p 参数；调用 list 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapQuestion",
+      "type": "function",
+      "name": "snapQuestion",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        607,
+        622
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapQuestion，接收 p 参数；调用 list、answer.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashStart",
+      "type": "function",
+      "name": "scrollBashStart",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        624,
+        638
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollBashStart，接收 p 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashProgress",
+      "type": "function",
+      "name": "scrollBashProgress",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        640,
+        671
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollBashProgress，接收 p 参数；调用 stripAnsi、out.replace、toolPath、out.split、fmt、lines.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashFinal",
+      "type": "function",
+      "name": "scrollBashFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        673,
+        685
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollBashFinal，接收 p 参数；调用 num、span 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchLine",
+      "type": "function",
+      "name": "patchLine",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        706,
+        724
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 patchLine，接收 file 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollPatchFinal",
+      "type": "function",
+      "name": "scrollPatchFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        726,
+        753
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollPatchFinal，接收 p 参数；调用 fail、list、span、files.some、files.filter、shown.slice、rows.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:taskResult",
+      "type": "function",
+      "name": "taskResult",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        759,
+        775
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 taskResult，接收 output 参数；调用 output.trim、output.match、line.startsWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollTaskFinal",
+      "type": "function",
+      "name": "scrollTaskFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        777,
+        789
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollTaskFinal，接收 p 参数；调用 fail、Locale.titlecase、text 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollTodoFinal",
+      "type": "function",
+      "name": "scrollTodoFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        795,
+        825
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollTodoFinal，接收 p 参数；调用 list、span、items.filter、tail.push、tail.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollQuestionFinal",
+      "type": "function",
+      "name": "scrollQuestionFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        831,
+        856
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollQuestionFinal，接收 p 参数；调用 span、q.slice、rows.push、reply.join、rows.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGlobStart",
+      "type": "function",
+      "name": "scrollGlobStart",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        866,
+        875
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollGlobStart，接收 p 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGrepStart",
+      "type": "function",
+      "name": "scrollGrepStart",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        881,
+        890
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 scrollGrepStart，接收 p 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:permEdit",
+      "type": "function",
+      "name": "permEdit",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        920,
+        930
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 permEdit，接收 p 参数；调用 toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:permLsp",
+      "type": "function",
+      "name": "permLsp",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1006,
+        1020
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 permLsp，接收 p 参数；调用 lspTitle、toolPath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:frame",
+      "type": "function",
+      "name": "frame",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1246,
+        1257
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 frame，接收 part 参数；调用 dict、text 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFrame",
+      "type": "function",
+      "name": "toolFrame",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1259,
+        1270
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolFrame，接收 commit、raw 参数；调用 dict、text 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "function",
+      "name": "toolView",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1281,
+        1288
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolView，接收 name 参数；调用 rule 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "type": "function",
+      "name": "toolStructuredFinal",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1290,
+        1298
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolStructuredFinal，接收 commit 参数；调用 Boolean、toolView 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolInlineInfo",
+      "type": "function",
+      "name": "toolInlineInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1300,
+        1312
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolInlineInfo，接收 part 参数；调用 frame、rule、draw、props、fallbackInline 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolScroll",
+      "type": "function",
+      "name": "toolScroll",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1314,
+        1339
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolScroll，接收 phase、ctx 参数；调用 rule、draw、props、fallbackStart、fallbackFinal 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPermissionInfo",
+      "type": "function",
+      "name": "toolPermissionInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1341,
+        1357
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolPermissionInfo，接收 name、input、meta、patterns 参数；调用 rule、draw、permission 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolSnapshot",
+      "type": "function",
+      "name": "toolSnapshot",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1359,
+        1371
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolSnapshot，接收 commit、raw 参数；调用 toolFrame、rule、draw、props 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:textBody",
+      "type": "function",
+      "name": "textBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1373,
+        1382
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 textBody，接收 content 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:markdownBody",
+      "type": "function",
+      "name": "markdownBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1384,
+        1393
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 markdownBody，接收 content 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:structuredBody",
+      "type": "function",
+      "name": "structuredBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1395,
+        1405
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 structuredBody，接收 commit、raw 参数；调用 toolSnapshot 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:shellOutput",
+      "type": "function",
+      "name": "shellOutput",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1407,
+        1418
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 shellOutput，接收 command、raw 参数；调用 stripAnsi 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "type": "function",
+      "name": "toolEntryBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1420,
+        1472
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolEntryBody，接收 commit、raw 参数；调用 textBody、shellOutput、toolFrame、toolView、taskResult、text、markdownBody 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFiletype",
+      "type": "function",
+      "name": "toolFiletype",
+      "filePath": "packages/opencode/src/cli/cmd/run/tool.ts",
+      "lineRange": [
+        1474,
+        1486
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolFiletype，接收 input 参数；调用 path.extname 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "type": "file",
+      "name": "stats.ts",
+      "filePath": "packages/opencode/src/cli/cmd/stats.ts",
+      "summary": "在命令行入口与命令执行层中提供 StatsCommand、displayStats；内部处理包含 displayStats、formatNumber。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/stats.ts:displayStats",
+      "type": "function",
+      "name": "displayStats",
+      "filePath": "packages/opencode/src/cli/cmd/stats.ts",
+      "lineRange": [
+        292,
+        384
+      ],
+      "summary": "在命令行入口与命令执行层中执行 displayStats，接收 stats、toolLimit、modelLimit 参数；调用 console.log、renderRow、stats.totalSessions.toLocaleString、stats.totalMessages.toLocaleString、stats.days.toString、isNaN、cost.toFixed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "type": "file",
+      "name": "validate-session.ts",
+      "filePath": "packages/opencode/src/cli/tui/validate-session.ts",
+      "summary": "在命令行入口与命令执行层中提供 validateSession 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/tui/validate-session.ts:validateSession",
+      "type": "function",
+      "name": "validateSession",
+      "filePath": "packages/opencode/src/cli/tui/validate-session.ts",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "在命令行入口与命令执行层中执行 validateSession，接收 input 参数；调用 decodeSessionID、createOpencodeClient 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/tui/worker.ts",
+      "type": "file",
+      "name": "worker.ts",
+      "filePath": "packages/opencode/src/cli/tui/worker.ts",
+      "summary": "在命令行入口与命令执行层中提供 rpc；内部处理包含 onUnhandledRejection、onUncaughtException。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/upgrade.ts",
+      "type": "file",
+      "name": "upgrade.ts",
+      "filePath": "packages/opencode/src/cli/upgrade.ts",
+      "summary": "在命令行入口与命令执行层中提供 upgrade 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/upgrade.ts:upgrade",
+      "type": "function",
+      "name": "upgrade",
+      "filePath": "packages/opencode/src/cli/upgrade.ts",
+      "lineRange": [
+        8,
+        53
+      ],
+      "summary": "在命令行入口与命令执行层中执行 upgrade；调用 AppRuntime.runPromise、Config.Service.use、cfg.getGlobal、Installation.method、Installation.latest、GlobalBus.emit、Installation.getReleaseType 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/command/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/command/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Event、Info、hints、Default、Service、node；内部处理包含 hints。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/command/index.ts:hints",
+      "type": "function",
+      "name": "hints",
+      "filePath": "packages/opencode/src/command/index.ts",
+      "lineRange": [
+        36,
+        44
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 hints，接收 template 参数；调用 template.match、result.push、template.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/command/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/command/index.ts",
+      "lineRange": [
+        56,
+        56
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/opencode/src/config/agent.ts",
+      "summary": "在配置解析与兼容层中提供 load、loadMode 等接口。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/config/agent.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/opencode/src/config/agent.ts",
+      "lineRange": [
+        11,
+        32
+      ],
+      "summary": "在配置解析与兼容层中执行 load，接收 dir 参数；调用 Glob.scan、ConfigMarkdown.parse、configEntryNameFromPath、path.relative、md.content.trim、ConfigParse.schema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/agent.ts:loadMode",
+      "type": "function",
+      "name": "loadMode",
+      "filePath": "packages/opencode/src/config/agent.ts",
+      "lineRange": [
+        34,
+        59
+      ],
+      "summary": "在配置解析与兼容层中执行 loadMode，接收 dir 参数；调用 Glob.scan、ConfigMarkdown.parse、configEntryNameFromPath、path.relative、md.content.trim、Schema.decodeUnknownExit、Exit.isSuccess 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/command.ts",
+      "type": "file",
+      "name": "command.ts",
+      "filePath": "packages/opencode/src/config/command.ts",
+      "summary": "在配置解析与兼容层中提供 load 等接口。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/command.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/opencode/src/config/command.ts",
+      "lineRange": [
+        13,
+        39
+      ],
+      "summary": "在配置解析与兼容层中执行 load，接收 dir 参数；调用 Glob.scan、ConfigMarkdown.parse、configEntryNameFromPath、path.relative、md.content.trim、decodeInfo、Exit.isSuccess 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "summary": "在配置解析与兼容层中提供 Service、use、node；内部处理包含 mergeConfig、mergeConfigConcatArrays、normalizeLoadedConfig、substituteWellKnownRemoteConfig、resolveLoadedPlugins、globalConfigFile、patchJsonc。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:normalizeLoadedConfig",
+      "type": "function",
+      "name": "normalizeLoadedConfig",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        54,
+        63
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeLoadedConfig，接收 data 参数；调用 isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:substituteWellKnownRemoteConfig",
+      "type": "function",
+      "name": "substituteWellKnownRemoteConfig",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        65,
+        100
+      ],
+      "summary": "在配置解析与兼容层中执行 substituteWellKnownRemoteConfig，接收 input 参数；调用 isRecord、ConfigVariable.substitute、Object.fromEntries、Promise.all、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:patchJsonc",
+      "type": "function",
+      "name": "patchJsonc",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        150,
+        162
+      ],
+      "summary": "在配置解析与兼容层中执行 patchJsonc，接收 input、patch、path 参数；调用 isRecord、modify、applyEdits、Object.entries、patchJsonc 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        136,
+        136
+      ],
+      "summary": "在配置解析与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "配置"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:fallbackFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGlob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGrep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:runTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:runTodo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:runPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:lspTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapEdit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapTodo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapQuestion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollPatchFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:taskResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollTaskFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollTodoFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollQuestionFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGlobStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGrepStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:permEdit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:permLsp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:frame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFrame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFrame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolInlineInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolInlineInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolScroll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolScroll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPermissionInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPermissionInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:textBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:markdownBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:structuredBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:shellOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFiletype",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFiletype",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/lsp/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/apply_patch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/edit.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/glob.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/grep.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/invalid.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/plan.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/read.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/shell.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/skill.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/task.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/webfetch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/websearch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/tool/write.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "function:packages/opencode/src/cli/cmd/stats.ts:displayStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "function:packages/opencode/src/cli/cmd/stats.ts:displayStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/stats.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "target": "function:packages/opencode/src/cli/tui/validate-session.ts:validateSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "target": "function:packages/opencode/src/cli/tui/validate-session.ts:validateSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/cli/heap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/cli/upgrade.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/project/instance-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/server/global-lifecycle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/worker.ts",
+      "target": "file:packages/opencode/src/util/rpc.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "function:packages/opencode/src/cli/upgrade.ts:upgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "function:packages/opencode/src/cli/upgrade.ts:upgrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/upgrade.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "function:packages/opencode/src/command/index.ts:hints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "function:packages/opencode/src/command/index.ts:hints",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "class:packages/opencode/src/command/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "class:packages/opencode/src/command/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/command/template/initialize.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/command/template/review.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "function:packages/opencode/src/config/agent.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "function:packages/opencode/src/config/agent.ts:load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "function:packages/opencode/src/config/agent.ts:loadMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "function:packages/opencode/src/config/agent.ts:loadMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/agent.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/command.ts",
+      "target": "function:packages/opencode/src/config/command.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/command.ts",
+      "target": "function:packages/opencode/src/config/command.ts:load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/command.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/command.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:normalizeLoadedConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:substituteWellKnownRemoteConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:patchJsonc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/command.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/managed.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/paths.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/variable.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/util/effect-http-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:fallbackFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGlob",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:runGrep",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:lspTitle",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchTitle",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapWrite",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapEdit",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:snapPatch",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashStart",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashProgress",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollBashFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchLine",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollPatchFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollPatchFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:patchLine",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollTodoFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollQuestionFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:span",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGlobStart",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:scrollGrepStart",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:permEdit",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:permLsp",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:lspTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:permLsp",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolInlineInfo",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:frame",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolScroll",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:fallbackFinal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolSnapshot",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFrame",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:structuredBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolSnapshot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:textBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:shellOutput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFrame",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:taskResult",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:markdownBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolScroll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolEntryBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:structuredBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/agent.ts:load",
+      "target": "function:packages/opencode/src/config/entry-name.ts:configEntryNameFromPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/agent.ts:loadMode",
+      "target": "function:packages/opencode/src/config/entry-name.ts:configEntryNameFromPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/command.ts:load",
+      "target": "function:packages/opencode/src/config/entry-name.ts:configEntryNameFromPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

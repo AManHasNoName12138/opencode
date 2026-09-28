@@ -1,0 +1,1014 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "type": "file",
+      "name": "markdown-code-state.ts",
+      "filePath": "packages/session-ui/src/components/markdown-code-state.ts",
+      "summary": "为会话界面提供代码高亮状态，通过 shouldResetCodeTokens 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "代码高亮状态"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-code-state.ts:shouldResetCodeTokens",
+      "type": "function",
+      "name": "shouldResetCodeTokens",
+      "filePath": "packages/session-ui/src/components/markdown-code-state.ts",
+      "lineRange": [
+        11,
+        22
+      ],
+      "summary": "判断代码内容变化是否需要清空流式高亮状态，用于会话界面的代码高亮状态流程；相关调用包括 next.raw.startsWith。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-inline-code-kind.test.ts",
+      "type": "file",
+      "name": "markdown-inline-code-kind.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-inline-code-kind.test.ts",
+      "summary": "验证会话界面的行内代码分类行为，覆盖 inlineCodeKind；leaves code expressions as normal inline code；detects file and directory paths；detects urls。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "行内代码分类"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "type": "file",
+      "name": "markdown-inline-code-kind.ts",
+      "filePath": "packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "summary": "为会话界面提供行内代码分类，通过 inlineCodeKind 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "行内代码分类"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-inline-code-kind.ts:inlineCodeKind",
+      "type": "function",
+      "name": "inlineCodeKind",
+      "filePath": "packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "lineRange": [
+        1891,
+        1899
+      ],
+      "summary": "区分行内代码的展示类型，用于会话界面的行内代码分类流程；相关调用包括 hasPathExtension、hasPathFileName。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "type": "file",
+      "name": "markdown-projection.ts",
+      "filePath": "packages/session-ui/src/components/markdown-projection.ts",
+      "summary": "建立完整文本的 Markdown 投影，并按分块模式与内容前缀判断流式代码块或活动块能否沿用待处理状态。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown 分块投影"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-projection.ts:completedProjection",
+      "type": "function",
+      "name": "completedProjection",
+      "filePath": "packages/session-ui/src/components/markdown-projection.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "会话界面的Markdown 分块投影处理函数 completedProjection，接收 text 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-projection.ts:canReusePendingBlock",
+      "type": "function",
+      "name": "canReusePendingBlock",
+      "filePath": "packages/session-ui/src/components/markdown-projection.ts",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "会话界面的Markdown 分块投影处理函数 canReusePendingBlock，调用 next.raw.startsWith 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-stream.test.ts",
+      "type": "file",
+      "name": "markdown-stream.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-stream.test.ts",
+      "summary": "验证会话界面的Markdown 流式投影行为，覆盖 markdown stream；heals incomplete emphasis while streaming；keeps incomplete links non-clickable until they finish；splits an unfinished trailing code fence from stable content；fully parses a code fence once it closes。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "Markdown 流式投影"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "type": "file",
+      "name": "markdown-stream.ts",
+      "filePath": "packages/session-ui/src/components/markdown-stream.ts",
+      "summary": "为会话界面提供Markdown 流式投影，通过 stream、project 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown 流式投影"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-stream.ts:open",
+      "type": "function",
+      "name": "open",
+      "filePath": "packages/session-ui/src/components/markdown-stream.ts",
+      "lineRange": [
+        32,
+        41
+      ],
+      "summary": "会话界面的Markdown 流式投影处理函数 open，调用 raw.match、raw.trimEnd 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-stream.ts:stream",
+      "type": "function",
+      "name": "stream",
+      "filePath": "packages/session-ui/src/components/markdown-stream.ts",
+      "lineRange": [
+        53,
+        86
+      ],
+      "summary": "会话界面的Markdown 流式投影处理函数 stream，调用 completedProjection、refs、heal、marked.lexer、tokens.findLastIndex 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-stream.ts:project",
+      "type": "function",
+      "name": "project",
+      "filePath": "packages/session-ui/src/components/markdown-stream.ts",
+      "lineRange": [
+        88,
+        122
+      ],
+      "summary": "会话界面的Markdown 流式投影处理函数 project，调用 text.startsWith、project、completedProjection、current.blocks.map、stream 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-protocol.test.ts",
+      "type": "file",
+      "name": "markdown-worker-protocol.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-protocol.test.ts",
+      "summary": "验证会话界面的Markdown Worker 协议行为，覆盖 accumulates stable worker tokens and replaces the unstable tail；increments generation only when the worker resets token identity；ignores stale worker responses and resets replacement streams；releases only the latest completed worker state；prefixes pending and dispatched block keys with the component owner。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "Markdown Worker 协议"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "type": "file",
+      "name": "markdown-worker-protocol.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "summary": "为会话界面提供Markdown Worker 协议，通过 shouldReleaseMarkdownWorkerState、markdownBlockKey、applyMarkdownWorkerResponse 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown Worker 协议"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:shouldReleaseMarkdownWorkerState",
+      "type": "function",
+      "name": "shouldReleaseMarkdownWorkerState",
+      "filePath": "packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "会话界面的Markdown Worker 协议处理函数 shouldReleaseMarkdownWorkerState，接收 complete、latestID、responseID 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:markdownBlockKey",
+      "type": "function",
+      "name": "markdownBlockKey",
+      "filePath": "packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "会话界面的Markdown Worker 协议处理函数 markdownBlockKey，接收 owner、cacheKey、index、mode 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:applyMarkdownWorkerResponse",
+      "type": "function",
+      "name": "applyMarkdownWorkerResponse",
+      "filePath": "packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "lineRange": [
+        42,
+        54
+      ],
+      "summary": "会话界面的Markdown Worker 协议处理函数 applyMarkdownWorkerResponse，接收 state、response 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-queue.test.ts",
+      "type": "file",
+      "name": "markdown-worker-queue.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-queue.test.ts",
+      "summary": "验证会话界面的Markdown 最新任务队列行为，覆盖 keeps only the latest queued request for each key；serializes disposal before a later request for the same key。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "Markdown 最新任务队列"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-queue.ts",
+      "type": "file",
+      "name": "markdown-worker-queue.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-queue.ts",
+      "summary": "为会话界面提供Markdown 最新任务队列，通过 createLatestWorkerQueue 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown 最新任务队列"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker-queue.ts:createLatestWorkerQueue",
+      "type": "function",
+      "name": "createLatestWorkerQueue",
+      "filePath": "packages/session-ui/src/components/markdown-worker-queue.ts",
+      "lineRange": [
+        1,
+        64
+      ],
+      "summary": "创建保留最新任务的 Worker 调度队列，用于会话界面的Markdown 最新任务队列流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-transport.test.ts",
+      "type": "file",
+      "name": "markdown-worker-transport.test.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-transport.test.ts",
+      "summary": "验证会话界面的Markdown Worker 通信行为，覆盖 posts one request and retains only the latest queued snapshot per key；ignores a disposed request response after the key is reused；drops queued snapshots when a key is disposed。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "Markdown Worker 通信"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "type": "file",
+      "name": "markdown-worker-transport.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker-transport.ts",
+      "summary": "为会话界面提供Markdown Worker 通信，通过 createWorkerTransport 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown Worker 通信"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker-transport.ts:createWorkerTransport",
+      "type": "function",
+      "name": "createWorkerTransport",
+      "filePath": "packages/session-ui/src/components/markdown-worker-transport.ts",
+      "lineRange": [
+        1,
+        41
+      ],
+      "summary": "建立带请求响应管理的 Worker 通信层，用于会话界面的Markdown Worker 通信流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "type": "file",
+      "name": "markdown-worker.ts",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "summary": "为会话界面提供Markdown 后台解析，通过 parseMarkdown、projectMarkdown、disposeMarkdownProjection、highlightStreamingCode、disposeStreamingCode、MarkdownWorkerDisposedError 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "Markdown 后台解析"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:parseMarkdown",
+      "type": "function",
+      "name": "parseMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        58,
+        65
+      ],
+      "summary": "向后台解析层提交 Markdown 内容，用于会话界面的Markdown 后台解析流程；相关调用包括 getWorker、parses.set、instance.postMessage。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:projectMarkdown",
+      "type": "function",
+      "name": "projectMarkdown",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        67,
+        74
+      ],
+      "summary": "更新流式 Markdown 的分块投影，用于会话界面的Markdown 后台解析流程；相关调用包括 getWorker、projects.set、projectTransport.send。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:disposeMarkdownProjection",
+      "type": "function",
+      "name": "disposeMarkdownProjection",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        76,
+        84
+      ],
+      "summary": "释放 Markdown 投影关联的后台状态，用于会话界面的Markdown 后台解析流程；相关调用包括 projectTransport.dispose、projects.forEach、projects.delete。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:highlightStreamingCode",
+      "type": "function",
+      "name": "highlightStreamingCode",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        86,
+        97
+      ],
+      "summary": "更新流式代码的语法高亮，用于会话界面的Markdown 后台解析流程；相关调用包括 getWorker、latest.set、keys.delete。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:disposeStreamingCode",
+      "type": "function",
+      "name": "disposeStreamingCode",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        99,
+        110
+      ],
+      "summary": "会话界面的Markdown 后台解析处理函数 disposeStreamingCode，调用 keys.delete、latest.delete、states.delete、transport.dispose、pending.forEach 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/markdown-worker.ts:getWorker",
+      "type": "function",
+      "name": "getWorker",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        116,
+        220
+      ],
+      "summary": "会话界面的Markdown 后台解析处理函数 getWorker，调用 parses.get、parses.delete、result.resolve、projects.get、projectTransport.complete 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerDisposedError",
+      "type": "class",
+      "name": "MarkdownWorkerDisposedError",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        112,
+        112
+      ],
+      "summary": "会话界面的Markdown 后台解析类型 MarkdownWorkerDisposedError，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerSupersededError",
+      "type": "class",
+      "name": "MarkdownWorkerSupersededError",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        113,
+        113
+      ],
+      "summary": "会话界面的Markdown 后台解析类型 MarkdownWorkerSupersededError，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerUnavailableError",
+      "type": "class",
+      "name": "MarkdownWorkerUnavailableError",
+      "filePath": "packages/session-ui/src/components/markdown-worker.ts",
+      "lineRange": [
+        114,
+        114
+      ],
+      "summary": "会话界面的Markdown 后台解析类型 MarkdownWorkerUnavailableError，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/markdown.stories.tsx",
+      "type": "file",
+      "name": "markdown.stories.tsx",
+      "filePath": "packages/session-ui/src/components/markdown.stories.tsx",
+      "summary": "会话界面的 Markdown 展示 Storybook 示例，提供 Basic展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "Markdown 展示"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "target": "file:packages/session-ui/src/components/markdown-code-state.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "target": "function:packages/session-ui/src/components/markdown-code-state.ts:shouldResetCodeTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "target": "function:packages/session-ui/src/components/markdown-code-state.ts:shouldResetCodeTokens",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-code-state.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-inline-code-kind.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "target": "file:packages/session-ui/src/components/markdown-inline-code-kind.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "target": "function:packages/session-ui/src/components/markdown-inline-code-kind.ts:inlineCodeKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-inline-code-kind.ts",
+      "target": "function:packages/session-ui/src/components/markdown-inline-code-kind.ts:inlineCodeKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "function:packages/session-ui/src/components/markdown-projection.ts:completedProjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "function:packages/session-ui/src/components/markdown-projection.ts:completedProjection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "function:packages/session-ui/src/components/markdown-projection.ts:canReusePendingBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "function:packages/session-ui/src/components/markdown-projection.ts:canReusePendingBlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:stream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:stream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:project",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:project",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-stream.ts:stream",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-stream.ts:project",
+      "target": "function:packages/session-ui/src/components/markdown-stream.ts:stream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "target": "file:packages/session-ui/src/components/markdown-projection.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-protocol.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:shouldReleaseMarkdownWorkerState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:shouldReleaseMarkdownWorkerState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:markdownBlockKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:markdownBlockKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:applyMarkdownWorkerResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-protocol.ts:applyMarkdownWorkerResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-queue.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-queue.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-queue.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-queue.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-queue.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-queue.ts:createLatestWorkerQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-queue.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-queue.ts:createLatestWorkerQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-transport.test.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-transport.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-transport.ts:createWorkerTransport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker-transport.ts:createWorkerTransport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:parseMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:parseMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:projectMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:projectMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:disposeMarkdownProjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:disposeMarkdownProjection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:highlightStreamingCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:highlightStreamingCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:disposeStreamingCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:disposeStreamingCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:getWorker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerDisposedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerDisposedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerSupersededError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerSupersededError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "class:packages/session-ui/src/components/markdown-worker.ts:MarkdownWorkerUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-worker.ts:parseMarkdown",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:getWorker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-worker.ts:projectMarkdown",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:getWorker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-worker.ts:highlightStreamingCode",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:getWorker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/components/markdown-worker.ts:highlightStreamingCode",
+      "target": "function:packages/session-ui/src/components/markdown-worker.ts:disposeStreamingCode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "file:packages/session-ui/src/components/markdown-stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown-worker.ts",
+      "target": "file:packages/session-ui/src/components/markdown-worker-transport.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/markdown.stories.tsx",
+      "target": "file:packages/session-ui/src/components/markdown.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

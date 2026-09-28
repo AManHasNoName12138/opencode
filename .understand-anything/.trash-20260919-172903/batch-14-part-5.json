@@ -1,0 +1,1177 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/control-plane/util.ts",
+      "type": "file",
+      "name": "util.ts",
+      "filePath": "packages/opencode/src/control-plane/util.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 waitEvent 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/util.ts:waitEvent",
+      "type": "function",
+      "name": "waitEvent",
+      "filePath": "packages/opencode/src/control-plane/util.ts",
+      "lineRange": [
+        4,
+        39
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitEvent，接收 input 参数；调用 Effect.fail、Effect.callback、setTimeout、cleanup、resume、GlobalBus.on、Effect.sync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "type": "file",
+      "name": "workspace-adapter-runtime.ts",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 target、configure、create、list、remove 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:target",
+      "type": "function",
+      "name": "target",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "lineRange": [
+        14,
+        19
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 target，接收 info 参数；调用 Effect.gen、getAdapter、EffectBridge.fromPromise、adapter.target 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 configure，接收 adapter、info 参数；调用 Effect.gen、EffectBridge.fromPromise、adapter.configure 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "lineRange": [
+        27,
+        36
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 create，接收 adapter、info、env、from 参数；调用 Effect.gen、EffectBridge.fromPromise、adapter.create 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:list",
+      "type": "function",
+      "name": "list",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "lineRange": [
+        38,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 list，接收 adapter 参数；调用 Effect.gen、EffectBridge.fromPromise、Promise.resolve、adapter.list 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:remove",
+      "type": "function",
+      "name": "remove",
+      "filePath": "packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "lineRange": [
+        44,
+        49
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 remove，接收 info 参数；调用 Effect.gen、getAdapter、EffectBridge.fromPromise、adapter.remove 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/workspace-context.ts",
+      "type": "file",
+      "name": "workspace-context.ts",
+      "filePath": "packages/opencode/src/control-plane/workspace-context.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 WorkspaceContext 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "file",
+      "name": "workspace.ts",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Info、ConnectionStatus、Event、CreateInput、SessionWarpInput、SyncHttpError、WorkspaceNotFoundError；内部处理包含 fromRow、waitUntilSynced、synced、route。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace.ts:fromRow",
+      "type": "function",
+      "name": "fromRow",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 fromRow，接收 row 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace.ts:waitUntilSynced",
+      "type": "function",
+      "name": "waitUntilSynced",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        900,
+        919
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitUntilSynced，接收 input 参数；调用 Effect.suspend、waitEvent、Effect.andThen、synced、Effect.flatMap、waitUntilSynced 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/workspace.ts:synced",
+      "type": "function",
+      "name": "synced",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        921,
+        940
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 synced，接收 db、state 参数；调用 Object.keys、Effect.succeed、inArray、Effect.map、Object.fromEntries、rows.map、ids.every 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:SyncHttpError",
+      "type": "class",
+      "name": "SyncHttpError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        78,
+        82
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SyncHttpError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:WorkspaceNotFoundError",
+      "type": "class",
+      "name": "WorkspaceNotFoundError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        84,
+        90
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 WorkspaceNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:SessionEventsNotFoundError",
+      "type": "class",
+      "name": "SessionEventsNotFoundError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        92,
+        98
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SessionEventsNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:SessionWarpHttpError",
+      "type": "class",
+      "name": "SessionWarpHttpError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        100,
+        109
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SessionWarpHttpError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:SyncTimeoutError",
+      "type": "class",
+      "name": "SyncTimeoutError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        111,
+        114
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SyncTimeoutError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:SyncAbortedError",
+      "type": "class",
+      "name": "SyncAbortedError",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        116,
+        119
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SyncAbortedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/control-plane/workspace.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/control-plane/workspace.ts",
+      "lineRange": [
+        149,
+        149
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "type": "file",
+      "name": "app-node-builder-v1.ts",
+      "filePath": "packages/opencode/src/effect/app-node-builder-v1.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 build 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/app-node-builder-v1.ts:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "packages/opencode/src/effect/app-node-builder-v1.ts",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 build，接收 root、replacements 参数；调用 AppNodeBuilder.build、replacements.concat 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "file",
+      "name": "app-runtime.ts",
+      "filePath": "packages/opencode/src/effect/app-runtime.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 AppLayer、AppRuntime；内部处理包含 wrap。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "type": "file",
+      "name": "bootstrap-runtime.ts",
+      "filePath": "packages/opencode/src/effect/bootstrap-runtime.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 BootstrapLayer、BootstrapRuntime 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/control-plane/util.ts",
+      "target": "function:packages/opencode/src/control-plane/util.ts:waitEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/util.ts",
+      "target": "function:packages/opencode/src/control-plane/util.ts:waitEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/util.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:target",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:target",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace-context.ts",
+      "target": "file:packages/opencode/src/util/local-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace.ts:fromRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace.ts:waitUntilSynced",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "function:packages/opencode/src/control-plane/workspace.ts:synced",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncHttpError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncHttpError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:WorkspaceNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:WorkspaceNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SessionEventsNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SessionEventsNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SessionWarpHttpError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SessionWarpHttpError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncTimeoutError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncTimeoutError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncAbortedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:SyncAbortedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "class:packages/opencode/src/control-plane/workspace.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/util.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/workspace.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "target": "function:packages/opencode/src/effect/app-node-builder-v1.ts:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "target": "function:packages/opencode/src/effect/app-node-builder-v1.ts:build",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/provider/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/compaction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/instruction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/processor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/revert.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/run-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/share/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/share/share-next.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/skill/discovery.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/tool/registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/app-runtime.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/share/share-next.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/bootstrap-runtime.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:target",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:getAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/control-plane/workspace-adapter-runtime.ts:remove",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:getAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/control-plane/workspace.ts:waitUntilSynced",
+      "target": "function:packages/opencode/src/control-plane/util.ts:waitEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/control-plane/workspace.ts:waitUntilSynced",
+      "target": "function:packages/opencode/src/control-plane/workspace.ts:synced",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

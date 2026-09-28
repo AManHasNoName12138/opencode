@@ -1,0 +1,943 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 116,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "lineRangesCorrected": 7,
+  "notes": [
+    "合并器已翻转 995 条 tested_by 边、删除 86 条端点不合要求的测试关系，并补充 4 条按路径惯例关联的测试边；其余节点 ID 与复杂度无需规范化。",
+    "合并日志中 116 条丢弃边均源于将非代码文件硬编码为 file: 前缀；现依据 filePath 定位实际 config: 或 document: 节点，恢复扫描 importMap 有据可查的 imports 边，未创建重复文件节点。",
+    "全部 4988 个扫描文件均有且仅有对应的顶层文件表示；所有 importMap 文件关系均已覆盖，未添加推测的跨文件函数调用。",
+    "保留原图谱所有 depends_on 包依赖边。图谱表达静态导入与批次语义分析结果，不等于完整运行时调用图。",
+    "直接读取 7 处 Dockerfile 源码，确认范围差一来自末尾换行的空字符串计数；已将结束行改为最后实际源码行。",
+    "语义抽检确认 SessionExecution 的进程全局与 Session ID 路由描述符合源码。发现两处输入收件箱迁移被笼统描述为导出边界，已读取 SQL 实现并改写摘要，明确建表、事件序号及旧数据清理行为。"
+  ],
+  "validation": {
+    "nodes": 10956,
+    "edges": 23973,
+    "scannedFiles": 4988,
+    "representedFiles": 4988,
+    "importRelationshipsChecked": 8834,
+    "dependsOnPreserved": 68,
+    "errors": {
+      "duplicateNodeIds": 0,
+      "duplicateEdges": 0,
+      "danglingEdges": [],
+      "unknownNodeTypes": [],
+      "unknownEdgeTypes": [],
+      "malformedIds": [],
+      "invalidComplexity": [],
+      "missingRequiredNodeFields": [],
+      "invalidEdgeFields": [],
+      "unresolvedImports": [],
+      "outOfInventoryRanges": []
+    },
+    "duplicateFileRepresentations": 0
+  },
+  "restoredEdges": [
+    {
+      "source": "file:packages/app/src/entry.tsx",
+      "target": "config:packages/app/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/script/build.ts",
+      "target": "config:packages/cli/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/script/publish.ts",
+      "target": "config:packages/cli/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/plugin/command.ts",
+      "target": "document:packages/core/src/plugin/command/initialize.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/plugin/command.ts",
+      "target": "document:packages/core/src/plugin/command/review.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/plugin/skill.ts",
+      "target": "document:packages/core/src/plugin/skill/customize-opencode.md",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "config:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/index.tsx",
+      "target": "config:packages/desktop/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/build.ts",
+      "target": "config:packages/opencode/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/publish.ts",
+      "target": "config:packages/opencode/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "document:packages/opencode/src/agent/generate.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "document:packages/opencode/src/agent/prompt/compaction.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "document:packages/opencode/src/agent/prompt/explore.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "document:packages/opencode/src/agent/prompt/summary.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "document:packages/opencode/src/agent/prompt/title.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "document:packages/opencode/src/command/template/initialize.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/command/index.ts",
+      "target": "document:packages/opencode/src/command/template/review.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "document:packages/opencode/src/session/prompt/build-switch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "document:packages/opencode/src/session/prompt/plan-mode.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "document:packages/opencode/src/session/prompt/plan.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/anthropic.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/beast.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/codex.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/default.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/gemini.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/gpt.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/kimi.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/meta.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/system.ts",
+      "target": "document:packages/opencode/src/session/prompt/trinity.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/apply_patch.ts",
+      "target": "document:packages/opencode/src/tool/apply_patch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/edit.ts",
+      "target": "document:packages/opencode/src/tool/edit.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/glob.ts",
+      "target": "document:packages/opencode/src/tool/glob.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/grep.ts",
+      "target": "document:packages/opencode/src/tool/grep.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/lsp.ts",
+      "target": "document:packages/opencode/src/tool/lsp.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/plan.ts",
+      "target": "document:packages/opencode/src/tool/plan-exit.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/question.ts",
+      "target": "document:packages/opencode/src/tool/question.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/read.ts",
+      "target": "document:packages/opencode/src/tool/read.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "document:packages/opencode/src/tool/shell/shell.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/skill.ts",
+      "target": "document:packages/opencode/src/tool/skill.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "document:packages/opencode/src/tool/task.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "document:packages/opencode/src/tool/todowrite.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "document:packages/opencode/src/tool/webfetch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "document:packages/opencode/src/tool/websearch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "document:packages/opencode/src/tool/write.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/aura.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/ayu.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/carbonfox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/catppuccin-frappe.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/catppuccin-macchiato.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/catppuccin.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/cobalt2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/cursor.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/dracula.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/everforest.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/flexoki.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/github.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/gruvbox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/kanagawa.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/lucent-orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/material.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/matrix.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/mercury.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/monokai.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/nightowl.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/nord.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/one-dark.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/opencode.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/osaka-jade.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/palenight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/rosepine.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/solarized.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/synthwave84.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/tokyonight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/vercel.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/vesper.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "target": "config:packages/tui/src/theme/assets/zenburn.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "config:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/amoled.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/aura.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/ayu.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/carbonfox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/catppuccin-frappe.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/catppuccin-macchiato.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/catppuccin.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/cobalt2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/cursor.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/dracula.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/everforest.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/flexoki.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/github.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/gruvbox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/kanagawa.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/lucent-orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/material.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/matrix.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/mercury.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/monokai.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/nightowl.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/nord.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/one-dark.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/onedarkpro.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/opencode.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/osaka-jade.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/palenight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/rosepine.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/shadesofpurple.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/solarized.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/synthwave84.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/tokyonight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/vercel.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/vesper.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "config:packages/ui/src/theme/themes/zenburn.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/web/src/content.config.ts",
+      "target": "config:packages/web/src/content/i18n/en.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "rangeCorrections": [
+    {
+      "id": "service:packages/containers/base/Dockerfile:ubuntu",
+      "before": [
+        1,
+        19
+      ],
+      "after": [
+        1,
+        18
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/containers/bun-node/Dockerfile:base",
+      "before": [
+        2,
+        25
+      ],
+      "after": [
+        2,
+        24
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/containers/publish/Dockerfile:bun-node",
+      "before": [
+        2,
+        11
+      ],
+      "after": [
+        2,
+        10
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/containers/rust/Dockerfile:bun-node",
+      "before": [
+        2,
+        14
+      ],
+      "after": [
+        2,
+        13
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/containers/tauri-linux/Dockerfile:rust",
+      "before": [
+        2,
+        13
+      ],
+      "after": [
+        2,
+        12
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/opencode/Dockerfile:build-${TARGETARCH}",
+      "before": [
+        16,
+        19
+      ],
+      "after": [
+        16,
+        18
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    },
+    {
+      "id": "service:packages/stats/server/Dockerfile:runner",
+      "before": [
+        23,
+        33
+      ],
+      "after": [
+        23,
+        32
+      ],
+      "evidence": "源码以换行结尾，解析器将末尾空字符串多计一行；已确认起始行为 FROM，结束行为文件末条指令。"
+    }
+  ],
+  "summariesCorrected": [
+    "file:packages/core/src/database/migration/20260603141458_session_input_inbox.ts",
+    "file:packages/core/src/database/migration/20260604172448_event_sourced_session_input.ts"
+  ]
+}

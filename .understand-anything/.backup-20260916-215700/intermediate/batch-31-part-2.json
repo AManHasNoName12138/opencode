@@ -1,0 +1,1597 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "type": "file",
+      "name": "effect-cmd-instance-als.test.ts",
+      "filePath": "packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「effect-cmd.ts does not restore legacy instance ALS、InstanceRef remains the handler context across Effect promise awaits」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/github-action.test.ts",
+      "type": "file",
+      "name": "github-action.test.ts",
+      "filePath": "packages/opencode/test/cli/github-action.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「extractResponseText、returns text from text part、returns last text part when multiple exist、returns text even when tool parts follow、returns null for reasoning-only response (signals summary needed)、returns null for tool-only response (signals summary needed)、returns null for multiple completed tools」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/github-action.test.ts:createReasoningPart",
+      "type": "function",
+      "name": "createReasoningPart",
+      "filePath": "packages/opencode/test/cli/github-action.test.ts",
+      "lineRange": [
+        18,
+        27
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createReasoningPart，接收 text 参数；调用 PartID.ascending、SessionID.make、MessageID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/github-action.test.ts:createToolPart",
+      "type": "function",
+      "name": "createToolPart",
+      "filePath": "packages/opencode/test/cli/github-action.test.ts",
+      "lineRange": [
+        29,
+        61
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createToolPart，接收 tool、title、status 参数；调用 PartID.ascending、SessionID.make、MessageID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/github-action.test.ts:createStepFinishPart",
+      "type": "function",
+      "name": "createStepFinishPart",
+      "filePath": "packages/opencode/test/cli/github-action.test.ts",
+      "lineRange": [
+        72,
+        82
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createStepFinishPart；调用 PartID.ascending、SessionID.make、MessageID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/import.test.ts",
+      "type": "file",
+      "name": "import.test.ts",
+      "filePath": "packages/opencode/test/cli/import.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「formats import file errors、parses valid share URLs、rejects invalid URLs、only attaches share auth headers for same-origin URLs、transforms share data to storage format、returns null for invalid share data」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/editor-context-zed.test.ts",
+      "type": "file",
+      "name": "editor-context-zed.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/editor-context-zed.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「offsetToPosition converts Zed offsets to 1-based editor positions、resolveZedDbPath skips candidates that cannot be stated、isZedTerminal only returns true for Zed terminal environments、resolveZedSelection returns active editor selection、resolveZedSelection returns all active editor selections sorted by offset、resolveZedSelection converts Zed UTF-8 byte offsets to string offsets、resolveZedSelection 」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/tui/editor-context-zed.test.ts:writeZedFixture",
+      "type": "function",
+      "name": "writeZedFixture",
+      "filePath": "packages/opencode/test/cli/tui/editor-context-zed.test.ts",
+      "lineRange": [
+        29,
+        60
+      ],
+      "summary": "在命令行入口与命令执行层中执行 writeZedFixture，接收 dir、options 参数；调用 path.join、Bun.write、db.run、JSON.stringify、db.close 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/agent-color.test.ts",
+      "type": "file",
+      "name": "agent-color.test.ts",
+      "filePath": "packages/opencode/test/config/agent-color.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「agent color parsed from project config、Agent.get includes color from config」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/config.test.ts",
+      "type": "file",
+      "name": "config.test.ts",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「loads config with defaults when no files exist、falls back to generic username when system user info is unavailable、creates global jsonc config with schema when no global configs exist、does not create global config when OPENCODE_CONFIG_DIR is set、loads JSON config file、loads shell config field、updates config and preserves empty shell sentinel」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:remoteConfigClient",
+      "type": "function",
+      "name": "remoteConfigClient",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        68,
+        94
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 remoteConfigClient，接收 input 参数；调用 HttpClient.make、request.url.includes、Effect.succeed、json、HttpClientResponse.fromWeb 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:configLayer",
+      "type": "function",
+      "name": "configLayer",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        96,
+        108
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 configLayer，接收 options 参数；调用 LayerNode.compile、LayerNode.group、Layer.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:withGlobalConfigDir",
+      "type": "function",
+      "name": "withGlobalConfigDir",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        169,
+        183
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withGlobalConfigDir，接收 dir、effect 参数；调用 Effect.acquireUseRelease、Effect.gen、clearEffect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:withConfigTree",
+      "type": "function",
+      "name": "withConfigTree",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        195,
+        212
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withConfigTree，接收 input、effect 参数；调用 Effect.gen、tmpdirScoped、path.join、Effect.all、writeConfigEffect、schemaConfig、withGlobalConfigDir 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:wellKnown",
+      "type": "function",
+      "name": "wellKnown",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        214,
+        236
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 wellKnown，接收 input 参数；调用 remoteConfigClient、configIt、wellKnownAuth 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:withProcessEnvs",
+      "type": "function",
+      "name": "withProcessEnvs",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        242,
+        262
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withProcessEnvs，接收 entries、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/config.test.ts:check",
+      "type": "function",
+      "name": "check",
+      "filePath": "packages/opencode/test/config/config.test.ts",
+      "lineRange": [
+        264,
+        290
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 check，接收 map 参数；调用 tmpdir、clear、writeConfig、withTestInstance、map、load、expect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/entry-name.test.ts",
+      "type": "file",
+      "name": "entry-name.test.ts",
+      "filePath": "packages/opencode/test/config/entry-name.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「configEntryNameFromPath、strips an、preserves nested subdirectories in the key、normalizes Windows-style backslashes、falls back to basename when no prefix matches、regression #25713: caller passes relative path; parent /agent/ segment is irrelevant、regression #25713: parent /agents/ segment is irrelevant」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/markdown.test.ts",
+      "type": "file",
+      "name": "markdown.test.ts",
+      "filePath": "packages/opencode/test/config/markdown.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「ConfigMarkdown: normal template、should extract exactly 12 file references、should extract valid/path/to/a/file、should extract another-valid/path/to/a/file、should extract paths ignoring comma after、should extract a path with a file extension and comma after、should extract a path with multiple dots and comma after」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/config/snapshot.ts",
+      "type": "file",
+      "name": "snapshot.ts",
+      "filePath": "packages/opencode/test/config/snapshot.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 snapshot 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/snapshot.ts:snapshot",
+      "type": "function",
+      "name": "snapshot",
+      "filePath": "packages/opencode/test/config/snapshot.ts",
+      "lineRange": [
+        4,
+        8
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 snapshot，接收 file、actual 参数；调用 ConfigParse.jsonc、Bun.write、expect、Bun.file 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "type": "file",
+      "name": "v2-compat.test.ts",
+      "filePath": "packages/opencode/test/config/v2-compat.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「V2 compatibility read fixtures、ConfigV2Compat.lower、returns structured invalid diagnostics while retaining supported siblings、reports unsupported settings and lossy conversions without their values、reports conflicting forms while retaining the V1 value、does not diagnose ordinary V1 configuration or reject invalid V1 roots early、keeps malformed MCP servers named servers and timeout for V1 validatio」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "type": "file",
+      "name": "adapters.test.ts",
+      "filePath": "packages/opencode/test/control-plane/adapters.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「control-plane/adapters、isolates custom adapters by project、latest install wins within a project」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/adapters.test.ts:info",
+      "type": "function",
+      "name": "info",
+      "filePath": "packages/opencode/test/control-plane/adapters.test.ts",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 info，接收 projectID、type 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/adapters.test.ts:adapter",
+      "type": "function",
+      "name": "adapter",
+      "filePath": "packages/opencode/test/control-plane/adapters.test.ts",
+      "lineRange": [
+        18,
+        34
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 adapter，接收 dir 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "type": "file",
+      "name": "workspace.test.ts",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「workspace schemas and exports、keeps the historical event type names、validates create input with workspace id, project id, branch, type, and extra、workspace CRUD、get returns undefined for a missing workspace、list maps database rows, filters by project, and sorts by id、list is disabled by the experimental workspace flag」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:workspaceLayer",
+      "type": "function",
+      "name": "workspaceLayer",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        44,
+        61
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 workspaceLayer，接收 experimentalWorkspaces 参数；调用 AppNodeBuilder.build、LayerNode.group、RuntimeFlags.layer、Layer.succeed、InstanceBootstrap.Service.of 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:initGitRepo",
+      "type": "function",
+      "name": "initGitRepo",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        120,
+        130
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 initGitRepo，接收 dir 参数；调用 fs.mkdir、$、fs.writeFile、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:captureGlobalEvents",
+      "type": "function",
+      "name": "captureGlobalEvents",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        140,
+        150
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 captureGlobalEvents；调用 GlobalBus.on 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:eventuallyEffect",
+      "type": "function",
+      "name": "eventuallyEffect",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        158,
+        170
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 eventuallyEffect，接收 effect、timeout 参数；调用 Effect.gen、Date.now、Effect.exit、Effect.sleep 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:recordedAdapter",
+      "type": "function",
+      "name": "recordedAdapter",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        172,
+        222
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 recordedAdapter，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:localAdapter",
+      "type": "function",
+      "name": "localAdapter",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        224,
+        238
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 localAdapter，接收 dir、input 参数；调用 recordedAdapter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:remoteAdapter",
+      "type": "function",
+      "name": "remoteAdapter",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        240,
+        249
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 remoteAdapter，接收 url、input 参数；调用 recordedAdapter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:eventStreamResponse",
+      "type": "function",
+      "name": "eventStreamResponse",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        251,
+        263
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 eventStreamResponse，接收 events、keepOpen 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:workspaceInfo",
+      "type": "function",
+      "name": "workspaceInfo",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        271,
+        282
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 workspaceInfo，接收 projectID、type、input 参数；调用 WorkspaceV2.ID.ascending、unique、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:insertWorkspace",
+      "type": "function",
+      "name": "insertWorkspace",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        284,
+        301
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 insertWorkspace，接收 info 参数；调用 Database.Service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:insertProject",
+      "type": "function",
+      "name": "insertProject",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        303,
+        319
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 insertProject，接收 id、worktree 参数；调用 Database.Service.use、AbsolutePath.make、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:attachSessionToWorkspace",
+      "type": "function",
+      "name": "attachSessionToWorkspace",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        321,
+        330
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 attachSessionToWorkspace，接收 sessionID、workspaceID 参数；调用 Database.Service.use、eq 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:sessionSequence",
+      "type": "function",
+      "name": "sessionSequence",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        332,
+        344
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 sessionSequence，接收 sessionID 参数；调用 Database.Service.use、eq、Effect.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/control-plane/workspace.test.ts:sessionSequenceOwner",
+      "type": "function",
+      "name": "sessionSequenceOwner",
+      "filePath": "packages/opencode/test/control-plane/workspace.test.ts",
+      "lineRange": [
+        346,
+        358
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 sessionSequenceOwner，接收 sessionID 参数；调用 Database.Service.use、eq、Effect.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/effect-cmd-instance-als.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "function:packages/opencode/test/cli/github-action.test.ts:createReasoningPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "function:packages/opencode/test/cli/github-action.test.ts:createToolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "function:packages/opencode/test/cli/github-action.test.ts:createStepFinishPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/github.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/github.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-action.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/import.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/import.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/import.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/import.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/editor-context-zed.test.ts",
+      "target": "function:packages/opencode/test/cli/tui/editor-context-zed.test.ts:writeZedFixture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/editor-context-zed.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/agent-color.test.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/agent-color.test.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/agent-color.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/agent-color.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/agent-color.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:remoteConfigClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:configLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:withGlobalConfigDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:withConfigTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:wellKnown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:withProcessEnvs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "function:packages/opencode/test/config/config.test.ts:check",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/managed.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/managed.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/project/instance-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/project/instance-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/config/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/fake/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/fake/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/fake/npm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/config.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/entry-name.test.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/entry-name.test.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/markdown.test.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/markdown.test.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/snapshot.ts",
+      "target": "function:packages/opencode/test/config/snapshot.ts:snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/snapshot.ts",
+      "target": "function:packages/opencode/test/config/snapshot.ts:snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/config/snapshot.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/snapshot.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/config/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/fake/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/fake/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/fake/npm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/v2-compat.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "function:packages/opencode/test/control-plane/adapters.test.ts:info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "function:packages/opencode/test/control-plane/adapters.test.ts:adapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/adapters.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:workspaceLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:initGitRepo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:captureGlobalEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:eventuallyEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:recordedAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:localAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:remoteAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:eventStreamResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:workspaceInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:insertWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:insertProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:attachSessionToWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:sessionSequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:sessionSequenceOwner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/control-plane/workspace.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/config/config.test.ts:withConfigTree",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:tmpdirScoped",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/config/config.test.ts:withConfigTree",
+      "target": "function:packages/opencode/test/config/config.test.ts:withGlobalConfigDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/config/config.test.ts:wellKnown",
+      "target": "function:packages/opencode/test/config/config.test.ts:remoteConfigClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/config/config.test.ts:check",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/config/config.test.ts:check",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:withTestInstance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/control-plane/workspace.test.ts:localAdapter",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:recordedAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/control-plane/workspace.test.ts:remoteAdapter",
+      "target": "function:packages/opencode/test/control-plane/workspace.test.ts:recordedAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/session/message-error.ts",
+      "type": "file",
+      "name": "message-error.ts",
+      "filePath": "packages/opencode/src/session/message-error.ts",
+      "summary": "message-error.ts 位于 packages/opencode/src/session，实现该模块的代码职责，包含 4 个导出。",
+      "tags": [
+        "code",
+        "session",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/message.ts",
+      "type": "file",
+      "name": "message.ts",
+      "filePath": "packages/opencode/src/session/message.ts",
+      "summary": "message.ts 位于 packages/opencode/src/session，实现该模块的代码职责，包含 14 个导出。",
+      "tags": [
+        "code",
+        "session",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/util/error.test.ts",
+      "type": "file",
+      "name": "error.test.ts",
+      "filePath": "packages/opencode/test/util/error.test.ts",
+      "summary": "error.test.ts 位于 packages/opencode/test/util，实现该模块的代码职责。",
+      "tags": [
+        "code",
+        "test",
+        "utility",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/session/message.ts",
+      "target": "file:packages/opencode/src/session/message-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/error.test.ts",
+      "target": "file:packages/opencode/src/session/message-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-error.ts",
+      "target": "file:packages/opencode/test/util/error.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

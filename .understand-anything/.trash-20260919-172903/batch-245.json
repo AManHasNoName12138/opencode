@@ -1,0 +1,427 @@
+{
+  "nodes": [
+    {
+      "id": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "summary": "控制台业务数据库迁移，创建 referral_code、referral_reward、referral，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral_code",
+      "type": "table",
+      "name": "referral_code",
+      "filePath": "packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "lineRange": [
+        1,
+        11
+      ],
+      "summary": "控制台业务的数据表 referral_code，包含 id、workspace_id、time_created、time_updated、time_deleted、code 字段。",
+      "tags": [
+        "结构定义",
+        "控制台业务",
+        "领域契约"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral_reward",
+      "type": "table",
+      "name": "referral_reward",
+      "filePath": "packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "lineRange": [
+        13,
+        26
+      ],
+      "summary": "控制台业务的数据表 referral_reward，包含 id、workspace_id、time_created、time_updated、time_deleted、referral_id、source、amount、applied_by_user_id、time_applied 字段。",
+      "tags": [
+        "结构定义",
+        "控制台业务",
+        "领域契约"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral",
+      "type": "table",
+      "name": "referral",
+      "filePath": "packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "lineRange": [
+        28,
+        43
+      ],
+      "summary": "控制台业务的数据表 referral，包含 id、workspace_id、time_created、time_updated、time_deleted、inviter_workspace_id、invitee_account_id、invitee_user_id、referral_code_id、stripe_customer_id、stripe_subscription_id 字段。",
+      "tags": [
+        "结构定义",
+        "控制台业务",
+        "领域契约"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260513173355_groovy_jane_foster/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260513173355_groovy_jane_foster/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260516082200_long_spirit/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260516082200_long_spirit/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 referral_reward、referral、workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260516082200_long_spirit/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260516082200_long_spirit/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260516110447_classy_wilson_fisk/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260516110447_classy_wilson_fisk/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 referral_reward，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260516110447_classy_wilson_fisk/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260516110447_classy_wilson_fisk/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260516112143_cynical_dexter_bennett/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260516112143_cynical_dexter_bennett/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 referral，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260516112143_cynical_dexter_bennett/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260516112143_cynical_dexter_bennett/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260516222132_referral_code_length/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260516222132_referral_code_length/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260516222132_referral_code_length/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260516222132_referral_code_length/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260517075207_famous_chat/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260517075207_famous_chat/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 coupon，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260517075207_famous_chat/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260517075207_famous_chat/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260518181630_secret_strong_guy/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260518181630_secret_strong_guy/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 ，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260518181630_secret_strong_guy/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260518181630_secret_strong_guy/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql",
+      "summary": "控制台业务数据库迁移，创建 referral_code，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql:referral_code",
+      "type": "table",
+      "name": "referral_code",
+      "filePath": "packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql",
+      "lineRange": [
+        1,
+        8
+      ],
+      "summary": "控制台业务的数据表 referral_code，包含 workspace_id、code、time_created、time_updated、time_deleted 字段。",
+      "tags": [
+        "结构定义",
+        "控制台业务",
+        "领域契约"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260520164350_quick_red_hulk/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260520164350_quick_red_hulk/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260626161712_oval_callisto/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260626161712_oval_callisto/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260626161712_oval_callisto/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260626161712_oval_callisto/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260721182121_wet_pestilence/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260721182121_wet_pestilence/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260721182121_wet_pestilence/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260721182121_wet_pestilence/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260803084635_married_misty_knight/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260803084635_married_misty_knight/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 ，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260803084635_married_misty_knight/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260803084635_married_misty_knight/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260819012908_flashy_arclight/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260819012908_flashy_arclight/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260819012908_flashy_arclight/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260819012908_flashy_arclight/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260819031011_oval_morlocks/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260819031011_oval_morlocks/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "target": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral_code",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "target": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral_reward",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql",
+      "target": "table:packages/console/core/migrations/20260513173355_groovy_jane_foster/migration.sql:referral",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql",
+      "target": "table:packages/console/core/migrations/20260520164350_quick_red_hulk/migration.sql:referral_code",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

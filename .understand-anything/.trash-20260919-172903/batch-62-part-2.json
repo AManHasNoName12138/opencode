@@ -1,0 +1,817 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "type": "file",
+      "name": "footer.prompt.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 TEXTAREA_MIN_ROWS、TEXTAREA_MAX_ROWS、PROMPT_MAX_ROWS、RunPromptBody、createPromptState；内部处理包含 clamp、clonePrompt、emptyPrompt、removeLineRange、extractLineRange、slashHead、slashQuery。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:extractLineRange",
+      "type": "function",
+      "name": "extractLineRange",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        124,
+        140
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 extractLineRange，接收 input 参数；调用 input.lastIndexOf、input.slice、line.match、Number 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:slashHead",
+      "type": "function",
+      "name": "slashHead",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        142,
+        157
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 slashHead，接收 text 参数；调用 text.startsWith、text.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:parseSlashCommand",
+      "type": "function",
+      "name": "parseSlashCommand",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        168,
+        183
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 parseSlashCommand，接收 text、commands 参数；调用 slashHead、commands.some 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:selectedCommand",
+      "type": "function",
+      "name": "selectedCommand",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        185,
+        199
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 selectedCommand，接收 text、command 参数；调用 slashHead 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:RunPromptBody",
+      "type": "function",
+      "name": "RunPromptBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        201,
+        280
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunPromptBody，接收 props 参数；调用 useRenderer、onMount、props.bind、onCleanup、clearTimeout、props.placeholder、props.theme 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "type": "function",
+      "name": "createPromptState",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "lineRange": [
+        282,
+        1306
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createPromptState，接收 input 参数；调用 createSignal、createMemo、shell、fg、input.theme、input.state、createPromptHistory 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "type": "file",
+      "name": "footer.question.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 RunQuestionBody 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "type": "function",
+      "name": "RunQuestionBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "lineRange": [
+        47,
+        573
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunQuestionBody，接收 props 参数；调用 useTerminalDimensions、createSignal、createQuestionBodyState、createMemo、questionSingle、questionConfirm、state 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "type": "file",
+      "name": "footer.subagent.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 SUBAGENT_INSPECTOR_ROWS、RunFooterSubagentBody；内部处理包含 statusColor、statusIcon、RunFooterSubagentBody。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusColor",
+      "type": "function",
+      "name": "statusColor",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "lineRange": [
+        15,
+        29
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 statusColor，接收 theme、status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusIcon",
+      "type": "function",
+      "name": "statusIcon",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "lineRange": [
+        31,
+        45
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 statusIcon，接收 status 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "type": "function",
+      "name": "RunFooterSubagentBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "lineRange": [
+        47,
+        175
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunFooterSubagentBody，接收 props 参数；调用 createMemo、props.theme、theme、props.tab、props.detail、footer、tab 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "type": "file",
+      "name": "footer.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 RunFooter；内部处理包含 createEmptySubagentState、eventPatch。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.ts:eventPatch",
+      "type": "function",
+      "name": "eventPatch",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.ts",
+      "lineRange": [
+        122,
+        165
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 eventPatch，接收 next 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/cli/cmd/run/footer.ts:RunFooter",
+      "type": "class",
+      "name": "RunFooter",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.ts",
+      "lineRange": [
+        167,
+        1129
+      ],
+      "summary": "在命令行会话交互与流式显示层中定义 RunFooter 类，提供 createScrollback、constructor、isClosed、isGone、onPrompt、onQueuedRemove、onClose 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "type": "file",
+      "name": "footer.view.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 TEXTAREA_MIN_ROWS、TEXTAREA_MAX_ROWS、RunFooterView；内部处理包含 RunFooterView。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "type": "function",
+      "name": "RunFooterView",
+      "filePath": "packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "lineRange": [
+        118,
+        945
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunFooterView，接收 props 参数；调用 useTerminalDimensions、createMemo、term、footerWidthPolicy、width、props.view、props.subagent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:extractLineRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:slashHead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:parseSlashCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:selectedCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:RunPromptBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:RunPromptBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/prompt.editor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/prompt.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.width.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/question.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.ts:eventPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "class:packages/opencode/src/cli/cmd/run/footer.ts:RunFooter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "class:packages/opencode/src/cli/cmd/run/footer.ts:RunFooter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.question.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.subagent.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.width.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/footer.view.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:parseSlashCommand",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:slashHead",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:selectedCommand",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:slashHead",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "target": "function:packages/opencode/src/cli/cmd/run/prompt.shared.ts:createPromptHistory",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:extractLineRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:createQuestionBodyState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionSingle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionConfirm",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionInput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionOther",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionPicked",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.width.ts:footerWidthPolicy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionSetEditing",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionTabs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionTotal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionCustom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.question.tsx:RunQuestionBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/question.shared.ts:questionStoreCustom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:RunFooterSubagentBody",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.subagent.tsx:statusIcon",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.width.ts:footerWidthPolicy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:modelInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/footer.view.tsx:RunFooterView",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.prompt.tsx:createPromptState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

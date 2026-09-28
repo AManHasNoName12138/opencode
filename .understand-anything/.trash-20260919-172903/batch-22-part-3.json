@@ -1,0 +1,712 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/permission-task.test.ts",
+      "type": "file",
+      "name": "permission-task.test.ts",
+      "filePath": "packages/opencode/test/permission-task.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Permission.evaluate for permission.task、returns ask when no match (default)、returns deny for explicit deny、returns allow for explicit allow、returns ask for explicit ask、matches wildcard patterns with deny、matches wildcard patterns with allow」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/permission/arity.test.ts",
+      "type": "file",
+      "name": "arity.test.ts",
+      "filePath": "packages/opencode/test/permission/arity.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「arity 1 - unknown commands default to first token、arity 2 - two token commands、arity 3 - three token commands、longest match wins - nested prefixes、exact length matches、edge cases」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/permission/next.test.ts",
+      "type": "file",
+      "name": "next.test.ts",
+      "filePath": "packages/opencode/test/permission/next.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「fromConfig - string value becomes wildcard rule、fromConfig - object value converts to rules array、fromConfig - mixed string and object values、fromConfig - empty object、fromConfig - expands tilde to home directory、fromConfig - expands $HOME to home directory、fromConfig - expands $HOME without trailing slash」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/permission/next.test.ts:rejectAll",
+      "type": "function",
+      "name": "rejectAll",
+      "filePath": "packages/opencode/test/permission/next.test.ts",
+      "lineRange": [
+        23,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 rejectAll，接收 message 参数；调用 Effect.gen、permission.list、permission.reply 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/permission/next.test.ts:waitForPending",
+      "type": "function",
+      "name": "waitForPending",
+      "filePath": "packages/opencode/test/permission/next.test.ts",
+      "lineRange": [
+        35,
+        50
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitForPending，接收 count 参数；调用 Effect.gen、permission.list、Effect.sleep、Effect.timeoutOrElse、Effect.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "type": "file",
+      "name": "auth-override.test.ts",
+      "filePath": "packages/opencode/test/plugin/auth-override.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「plugin.auth-override、user plugin overrides built-in github-copilot auth、plugin.config-hook-error-isolation、config hooks are individually error-isolated in the layer factory」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/auth-override.test.ts:providerAuthLayer",
+      "type": "function",
+      "name": "providerAuthLayer",
+      "filePath": "packages/opencode/test/plugin/auth-override.test.ts",
+      "lineRange": [
+        19,
+        38
+      ],
+      "summary": "在插件扩展与模型集成层中执行 providerAuthLayer，接收 directory、plugins 参数；调用 LayerNode.compile、TestConfig.layer、Effect.succeed、plugins.map、path.join、RuntimeFlags.layer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/azure.test.ts",
+      "type": "file",
+      "name": "azure.test.ts",
+      "filePath": "packages/opencode/test/plugin/azure.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「plugin.azure、initializes and runs Azure CLI under Node without Bun or a plugin shell、does not invoke Azure CLI during initialization、keeps the existing API-key method and adds Entra ID、hides Azure CLI authentication when the Azure CLI is not installed、checks Azure CLI and stores the resource name、supports Azure CLI versions that only provide expiresOn」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/azure.test.ts:azureShell",
+      "type": "function",
+      "name": "azureShell",
+      "filePath": "packages/opencode/test/plugin/azure.test.ts",
+      "lineRange": [
+        61,
+        70
+      ],
+      "summary": "在插件扩展与模型集成层中执行 azureShell，接收 scopes 参数；调用 args.indexOf、scopes.push、Math.floor、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/azure.test.ts:azureCli",
+      "type": "function",
+      "name": "azureCli",
+      "filePath": "packages/opencode/test/plugin/azure.test.ts",
+      "lineRange": [
+        72,
+        104
+      ],
+      "summary": "在插件扩展与模型集成层中执行 azureCli，接收 dir 参数；调用 path.join、Bun.write、JSON.stringify、chmod、Bun.file、JSON.parse 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/cerebras.test.ts",
+      "type": "file",
+      "name": "cerebras.test.ts",
+      "filePath": "packages/opencode/test/plugin/cerebras.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CerebrasPlugin、omits the generic output cap when max_completion_tokens is configured、preserves the generic output cap without max_completion_tokens、does not change other providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/cloudflare.test.ts",
+      "type": "file",
+      "name": "cloudflare.test.ts",
+      "filePath": "packages/opencode/test/plugin/cloudflare.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「registers the cloudflare-ai-gateway auth method、no longer drops maxOutputTokens; OpenAI models ride the Responses API passthrough」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/codex.test.ts",
+      "type": "file",
+      "name": "codex.test.ts",
+      "filePath": "packages/opencode/test/plugin/codex.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「plugin.codex、escapes provider errors in callback HTML、parseJwtClaims、parses valid JWT with claims、returns undefined for JWT with less than 3 parts、returns undefined for invalid base64、returns undefined for invalid JSON payload」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/codex.test.ts:createCodexWebSocketServer",
+      "type": "function",
+      "name": "createCodexWebSocketServer",
+      "filePath": "packages/opencode/test/plugin/codex.test.ts",
+      "lineRange": [
+        474,
+        498
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createCodexWebSocketServer；调用 createServer、sockets.on、socket.once、socket.send、JSON.stringify、server.once、server.listen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "type": "file",
+      "name": "github-copilot-models.test.ts",
+      "filePath": "packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「preserves temperature support from existing provider models、converts Copilot AIC token prices to USD per million tokens、detects PDF input support when vision and media type are advertised、uses zero cost when Copilot reports a zero billing batch size、records Copilot advertised responses endpoint for non-GPT model IDs、clears existing variants so refreshed models calculate provider-specific variants、」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/github-copilot.test.ts",
+      "type": "file",
+      "name": "github-copilot.test.ts",
+      "filePath": "packages/opencode/test/plugin/github-copilot.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「does not add interaction headers to other providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/github-copilot.test.ts:hook",
+      "type": "function",
+      "name": "hook",
+      "filePath": "packages/opencode/test/plugin/github-copilot.test.ts",
+      "lineRange": [
+        7,
+        23
+      ],
+      "summary": "在插件扩展与模型集成层中执行 hook；调用 CopilotAuthPlugin 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "type": "file",
+      "name": "install-concurrency.test.ts",
+      "filePath": "packages/opencode/test/plugin/install-concurrency.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「plugin.install.concurrent、serializes concurrent server config updates across processes、serializes concurrent server+tui config updates across processes、preserves updates when existing config uses .json」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/install-concurrency.test.ts:plugin",
+      "type": "function",
+      "name": "plugin",
+      "filePath": "packages/opencode/test/plugin/install-concurrency.test.ts",
+      "lineRange": [
+        26,
+        48
+      ],
+      "summary": "在插件扩展与模型集成层中执行 plugin，接收 dir、kinds 参数；调用 path.join、kinds.includes、fs.mkdir、Bun.write、JSON.stringify、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/permission-task.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission-task.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission-task.test.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission-task.test.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission-task.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/arity.test.ts",
+      "target": "file:packages/opencode/src/permission/arity.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/arity.test.ts",
+      "target": "file:packages/opencode/src/permission/arity.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "function:packages/opencode/test/permission/next.test.ts:rejectAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "function:packages/opencode/test/permission/next.test.ts:waitForPending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/permission/next.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "function:packages/opencode/test/plugin/auth-override.test.ts:providerAuthLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/provider/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/src/provider/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/test/fixture/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/auth-override.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "function:packages/opencode/test/plugin/azure.test.ts:azureShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "function:packages/opencode/test/plugin/azure.test.ts:azureCli",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/plugin/azure.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/plugin/azure.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/azure.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/cerebras.test.ts",
+      "target": "file:packages/opencode/src/plugin/cerebras.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/cerebras.test.ts",
+      "target": "file:packages/opencode/src/plugin/cerebras.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/cloudflare.test.ts",
+      "target": "file:packages/opencode/src/plugin/cloudflare.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/cloudflare.test.ts",
+      "target": "file:packages/opencode/src/plugin/cloudflare.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/codex.test.ts",
+      "target": "function:packages/opencode/test/plugin/codex.test.ts:createCodexWebSocketServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/codex.test.ts",
+      "target": "file:packages/opencode/src/plugin/openai/codex.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/codex.test.ts",
+      "target": "file:packages/opencode/src/plugin/openai/codex.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/copilot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/copilot.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/models.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/models.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot.test.ts",
+      "target": "function:packages/opencode/test/plugin/github-copilot.test.ts:hook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/copilot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/github-copilot.test.ts",
+      "target": "file:packages/opencode/src/plugin/github-copilot/copilot.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "function:packages/opencode/test/plugin/install-concurrency.test.ts:plugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install-concurrency.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/plugin/github-copilot.test.ts:hook",
+      "target": "function:packages/opencode/src/plugin/github-copilot/copilot.ts:CopilotAuthPlugin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

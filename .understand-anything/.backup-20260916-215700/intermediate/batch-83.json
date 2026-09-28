@@ -1,0 +1,4969 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/stats/app/src/i18n/uk.ts",
+      "type": "file",
+      "name": "uk.ts",
+      "filePath": "packages/stats/app/src/i18n/uk.ts",
+      "summary": "统计网站的乌克兰语翻译词典，为模型排行、数据对比和统计导航提供本地化文本。",
+      "tags": [
+        "本地化",
+        "翻译",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/stats/app/src/i18n/zh.ts",
+      "type": "file",
+      "name": "zh.ts",
+      "filePath": "packages/stats/app/src/i18n/zh.ts",
+      "summary": "统计网站的简体中文翻译词典，为模型排行、数据对比和统计导航提供本地化文本。",
+      "tags": [
+        "本地化",
+        "翻译",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/stats/app/src/i18n/zht.ts",
+      "type": "file",
+      "name": "zht.ts",
+      "filePath": "packages/stats/app/src/i18n/zht.ts",
+      "summary": "统计网站的繁体中文翻译词典，为模型排行、数据对比和统计导航提供本地化文本。",
+      "tags": [
+        "本地化",
+        "翻译",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "type": "file",
+      "name": "comparison-pages.ts",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "summary": "把模型解析为对比家族，构造规范模型对比 URL、家族对比 URL 和站点地图候选项，避免重复比较页面。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "模型对比路由"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:resolveComparisonFamily",
+      "type": "function",
+      "name": "resolveComparisonFamily",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        153,
+        159
+      ],
+      "summary": "统计网站的模型对比路由处理函数 resolveComparisonFamily，调用 findComparisonFamily、comparisonFamilyCandidates 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:findComparisonFamily",
+      "type": "function",
+      "name": "findComparisonFamily",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        161,
+        164
+      ],
+      "summary": "统计网站的模型对比路由处理函数 findComparisonFamily，调用 catalogSlug、comparisonFamilies.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "function",
+      "name": "comparisonFamilyCandidates",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        166,
+        173
+      ],
+      "summary": "统计网站的模型对比路由处理函数 comparisonFamilyCandidates，调用 findComparisonFamily、isFamilyModel、isGeneralComparisonModel、comparisonFamilyModelSort、matches.filter 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonSitemapModels",
+      "type": "function",
+      "name": "comparisonSitemapModels",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        175,
+        187
+      ],
+      "summary": "统计网站的模型对比路由处理函数 comparisonSitemapModels，调用 uniqueModels、comparisonFamilies.flatMap、comparisonFamilyCandidates、leaderboard.flatMap、findModelCatalogEntry 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalModelComparisonPath",
+      "type": "function",
+      "name": "canonicalModelComparisonPath",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        189,
+        192
+      ],
+      "summary": "统计网站的模型对比路由处理函数 canonicalModelComparisonPath，调用 a.id.localeCompare 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalFamilyComparisonPath",
+      "type": "function",
+      "name": "canonicalFamilyComparisonPath",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        194,
+        197
+      ],
+      "summary": "统计网站的模型对比路由处理函数 canonicalFamilyComparisonPath，调用 a.slug.localeCompare 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:latestFamilyComparisonPath",
+      "type": "function",
+      "name": "latestFamilyComparisonPath",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        199,
+        205
+      ],
+      "summary": "统计网站的模型对比路由处理函数 latestFamilyComparisonPath，调用 comparisonFamilyForModel、canonicalFamilyComparisonPath 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyForModel",
+      "type": "function",
+      "name": "comparisonFamilyForModel",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        207,
+        215
+      ],
+      "summary": "统计网站的模型对比路由处理函数 comparisonFamilyForModel，调用 comparisonFamilies.find、isFamilyModel、isGeneralComparisonModel、comparisonFamilyCandidates 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyModelSort",
+      "type": "function",
+      "name": "comparisonFamilyModelSort",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        233,
+        246
+      ],
+      "summary": "统计网站的模型对比路由处理函数 comparisonFamilyModelSort，调用 displayDateTime、preferredFamilyIndex、modelVariantPenalty、first.name.localeCompare 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:isDuplicateAliasModel",
+      "type": "function",
+      "name": "isDuplicateAliasModel",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        257,
+        266
+      ],
+      "summary": "统计网站的模型对比路由处理函数 isDuplicateAliasModel，调用 models.some 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/comparison-pages.ts:uniqueModels",
+      "type": "function",
+      "name": "uniqueModels",
+      "filePath": "packages/stats/app/src/lib/comparison-pages.ts",
+      "lineRange": [
+        268,
+        278
+      ],
+      "summary": "统计网站的模型对比路由处理函数 uniqueModels，调用 models.reduce、result.ids.has、result.ids.add、result.models.push 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/lib/language.ts",
+      "type": "file",
+      "name": "language.ts",
+      "filePath": "packages/stats/app/src/lib/language.ts",
+      "summary": "统计网站的语言选择实现模块，提供 LOCALES、LOCALE_COOKIE、LOCALE_HEADER、clearCookie、cookie、detectFromAcceptLanguage。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "语言选择"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/language.ts:normalizeDataPathname",
+      "type": "function",
+      "name": "normalizeDataPathname",
+      "filePath": "packages/stats/app/src/lib/language.ts",
+      "lineRange": [
+        26,
+        36
+      ],
+      "summary": "统计网站的语言选择处理函数 normalizeDataPathname，调用 localeStrip、next.startsWith、path.endsWith、path.split、segments.lastIndexOf 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/language.ts:strip",
+      "type": "function",
+      "name": "strip",
+      "filePath": "packages/stats/app/src/lib/language.ts",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "统计网站的语言选择处理函数 strip，调用 normalizeDataPathname 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/language.ts:route",
+      "type": "function",
+      "name": "route",
+      "filePath": "packages/stats/app/src/lib/language.ts",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "统计网站的语言选择处理函数 route，调用 localeRoute、normalizeDataPathname 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/lib/language.ts:localizedUrl",
+      "type": "function",
+      "name": "localizedUrl",
+      "filePath": "packages/stats/app/src/lib/language.ts",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "统计网站的语言选择处理函数 localizedUrl，调用 route 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "type": "file",
+      "name": "[model].tsx",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "summary": "统计网站的应用入口页面或页面片段（[lab]/[model].tsx），导出 StatsModel；组合 useI18n、useLanguage、getRequestEvent。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "应用入口"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:StatsModel",
+      "type": "function",
+      "name": "StatsModel",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        88,
+        221
+      ],
+      "summary": "统计网站的应用入口处理函数 StatsModel，调用 useI18n、useLanguage、getRequestEvent、setStatsPageCacheHeaders、useParams 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelLoading",
+      "type": "function",
+      "name": "ModelLoading",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        223,
+        248
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelLoading，调用 useI18n、useLanguage、language.route、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelNotFound",
+      "type": "function",
+      "name": "ModelNotFound",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        250,
+        275
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelNotFound，调用 useI18n、useLanguage、language.route、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHero",
+      "type": "function",
+      "name": "ModelHero",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        277,
+        386
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelHero，调用 useI18n、useLanguage、language.route、hasLab、labs 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHeroActionIcon",
+      "type": "function",
+      "name": "ModelHeroActionIcon",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        388,
+        405
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelHeroActionIcon，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHeroSparkline",
+      "type": "function",
+      "name": "ModelHeroSparkline",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        407,
+        417
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelHeroSparkline，调用 sparklineAreaPath、values、sparklineLinePath 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelOverview",
+      "type": "function",
+      "name": "ModelOverview",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        427,
+        468
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelOverview，调用 useI18n、useLanguage、createMemo、i18n.t、formatCatalogLimit 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelMomentumSection",
+      "type": "function",
+      "name": "ModelMomentumSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        470,
+        508
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelMomentumSection，调用 useI18n、useLanguage、i18n.t、data、language.tag 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:MomentumChart",
+      "type": "function",
+      "name": "MomentumChart",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        510,
+        555
+      ],
+      "summary": "统计网站的应用入口处理函数 MomentumChart，调用 createMemo、momentumChart、formatTokens、changeState、formatChange 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelUsageSection",
+      "type": "function",
+      "name": "ModelUsageSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        572,
+        590
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelUsageSection，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelUniqueUsersSection",
+      "type": "function",
+      "name": "ModelUniqueUsersSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        592,
+        613
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelUniqueUsersSection，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelTrendSection",
+      "type": "function",
+      "name": "ModelTrendSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        615,
+        868
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelTrendSection，调用 createUniqueId、createSignal、createMemo、usage、props.value 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelEfficiencySection",
+      "type": "function",
+      "name": "ModelEfficiencySection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        870,
+        919
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelEfficiencySection，调用 useI18n、i18n.t、formatMoney、data、formatCatalogUnitPrice 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelGeoBreakdownSection",
+      "type": "function",
+      "name": "ModelGeoBreakdownSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        921,
+        953
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelGeoBreakdownSection，调用 useI18n、createSignal、createMemo、data、setActiveCountry 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:GeoCountryList",
+      "type": "function",
+      "name": "GeoCountryList",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        955,
+        990
+      ],
+      "summary": "统计网站的应用入口处理函数 GeoCountryList，调用 useI18n、useLanguage、createMemo、scaleSqrt、opacityScale 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelPeersSection",
+      "type": "function",
+      "name": "ModelPeersSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        992,
+        1013
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelPeersSection，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:PeerRow",
+      "type": "function",
+      "name": "PeerRow",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1025,
+        1053
+      ],
+      "summary": "统计网站的应用入口处理函数 PeerRow，调用 useLanguage、language.route、providerSlug、hasProvider、getProviderIconId 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonPairs",
+      "type": "function",
+      "name": "modelComparisonPairs",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1068,
+        1099
+      ],
+      "summary": "统计网站的应用入口处理函数 modelComparisonPairs，调用 modelComparisonRef、isKnownCatalogLab、formatTokens、modelRefFromCatalog、uniqueComparisonPairs 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonRef",
+      "type": "function",
+      "name": "modelComparisonRef",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1101,
+        1114
+      ],
+      "summary": "统计网站的应用入口处理函数 modelComparisonRef，调用 modelRefFromCatalog 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumChart",
+      "type": "function",
+      "name": "momentumChart",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1142,
+        1170
+      ],
+      "summary": "统计网站的应用入口处理函数 momentumChart，调用 formatMomentumDateLabel、emptyUsagePoint、points.map、smoothLinePath、coordinates.slice 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:smoothLinePath",
+      "type": "function",
+      "name": "smoothLinePath",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1176,
+        1196
+      ],
+      "summary": "统计网站的应用入口处理函数 smoothLinePath，调用 formatSparklinePoint 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumMonthLabels",
+      "type": "function",
+      "name": "momentumMonthLabels",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1198,
+        1208
+      ],
+      "summary": "统计网站的应用入口处理函数 momentumMonthLabels，调用 parseMomentumDate、Date.UTC、start.getUTCFullYear、start.getUTCMonth、first.getUTCFullYear 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatMomentumDate",
+      "type": "function",
+      "name": "formatMomentumDate",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1210,
+        1219
+      ],
+      "summary": "统计网站的应用入口处理函数 formatMomentumDate，调用 parseMomentumDate 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "function",
+      "name": "parseMomentumDate",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1221,
+        1232
+      ],
+      "summary": "统计网站的应用入口处理函数 parseMomentumDate，调用 Date.UTC、date.trim、shortMonths.findIndex、item.toLowerCase、parseMomentumDate 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageLinePath",
+      "type": "function",
+      "name": "modelUsageLinePath",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1268,
+        1289
+      ],
+      "summary": "统计网站的应用入口处理函数 modelUsageLinePath，调用 formatUsagePathNumber、points.slice、clampUsagePercent 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageMonthTicks",
+      "type": "function",
+      "name": "modelUsageMonthTicks",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1307,
+        1322
+      ],
+      "summary": "统计网站的应用入口处理函数 modelUsageMonthTicks，调用 points.flatMap、parseMomentumDate、parsed.getUTCMonth、seen.has、seen.add 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatModelUsageTooltipDate",
+      "type": "function",
+      "name": "formatModelUsageTooltipDate",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1324,
+        1333
+      ],
+      "summary": "统计网站的应用入口处理函数 formatModelUsageTooltipDate，调用 parseMomentumDate、date.getUTCFullYear 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatCatalogMonth",
+      "type": "function",
+      "name": "formatCatalogMonth",
+      "filePath": "packages/stats/app/src/routes/[lab]/[model].tsx",
+      "lineRange": [
+        1404,
+        1413
+      ],
+      "summary": "统计网站的应用入口处理函数 formatCatalogMonth，调用 Date.UTC 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "summary": "统计网站的应用入口页面或页面片段（[lab]/index.tsx），导出 StatsLab；组合 useI18n、useLanguage、getRequestEvent。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "应用入口"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:StatsLab",
+      "type": "function",
+      "name": "StatsLab",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        81,
+        181
+      ],
+      "summary": "统计网站的应用入口处理函数 StatsLab，调用 useI18n、useLanguage、getRequestEvent、setStatsPageCacheHeaders、useParams 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabNotFound",
+      "type": "function",
+      "name": "LabNotFound",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        193,
+        203
+      ],
+      "summary": "统计网站的应用入口处理函数 LabNotFound，调用 useI18n、labName、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabHeroBreadcrumb",
+      "type": "function",
+      "name": "LabHeroBreadcrumb",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        214,
+        250
+      ],
+      "summary": "统计网站的应用入口处理函数 LabHeroBreadcrumb，调用 useLanguage、language.route、labs、current 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabHeroTitleRow",
+      "type": "function",
+      "name": "LabHeroTitleRow",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        252,
+        262
+      ],
+      "summary": "统计网站的应用入口处理函数 LabHeroTitleRow，调用 getProviderIconId、icon 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabOverview",
+      "type": "function",
+      "name": "LabOverview",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        264,
+        291
+      ],
+      "summary": "统计网站的应用入口处理函数 LabOverview，调用 useI18n、useLanguage、createMemo、props.lab.models.slice、getProviderIconId 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabUsageSection",
+      "type": "function",
+      "name": "LabUsageSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        302,
+        509
+      ],
+      "summary": "统计网站的应用入口处理函数 LabUsageSection，调用 useI18n、createUniqueId、createSignal、createMemo、usage 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelsSection",
+      "type": "function",
+      "name": "LabModelsSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        511,
+        563
+      ],
+      "summary": "统计网站的应用入口处理函数 LabModelsSection，调用 useI18n、createSignal、createMemo、props.usage.map、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelRow",
+      "type": "function",
+      "name": "LabModelRow",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        565,
+        634
+      ],
+      "summary": "统计网站的应用入口处理函数 LabModelRow，调用 useI18n、useLanguage、language.route、props.onTooltipChange、getProviderIconId 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelTooltip",
+      "type": "function",
+      "name": "LabModelTooltip",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        636,
+        679
+      ],
+      "summary": "统计网站的应用入口处理函数 LabModelTooltip，调用 useI18n、getProviderIconId、i18n.t、formatTokens、formatPercent 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabRelatedSection",
+      "type": "function",
+      "name": "LabRelatedSection",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        681,
+        691
+      ],
+      "summary": "统计网站的应用入口处理函数 LabRelatedSection，调用 createMemo、relatedLabs、related 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabRelatedCard",
+      "type": "function",
+      "name": "LabRelatedCard",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        693,
+        734
+      ],
+      "summary": "统计网站的应用入口处理函数 LabRelatedCard，调用 useLanguage、relatedTone、language.route、getProviderIconId、labRelatedDescription 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:labComparisonPairs",
+      "type": "function",
+      "name": "labComparisonPairs",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        745,
+        768
+      ],
+      "summary": "统计网站的应用入口处理函数 labComparisonPairs，调用 usage.slice、formatTokens、lab.models.slice、uniqueComparisonPairs 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:relatedLabStats",
+      "type": "function",
+      "name": "relatedLabStats",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        781,
+        805
+      ],
+      "summary": "统计网站的应用入口处理函数 relatedLabStats，调用 labs.forEach、labByKey.set、catalogSlug、formatCatalogLabName、market.reduce 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:formatCatalogDate",
+      "type": "function",
+      "name": "formatCatalogDate",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        821,
+        834
+      ],
+      "summary": "统计网站的应用入口处理函数 formatCatalogDate，调用 Date.UTC 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:monthName",
+      "type": "function",
+      "name": "monthName",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        870,
+        886
+      ],
+      "summary": "统计网站的应用入口处理函数 monthName，接收 value 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:usageLinePath",
+      "type": "function",
+      "name": "usageLinePath",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        920,
+        941
+      ],
+      "summary": "统计网站的应用入口处理函数 usageLinePath，调用 pathNumber、points.slice、clampUsagePercent 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/[lab]/index.tsx:labUsageMonthTicks",
+      "type": "function",
+      "name": "labUsageMonthTicks",
+      "filePath": "packages/stats/app/src/routes/[lab]/index.tsx",
+      "lineRange": [
+        951,
+        965
+      ],
+      "summary": "统计网站的应用入口处理函数 labUsageMonthTicks，调用 points.flatMap、point.date.split、seen.has、seen.add、usagePointX 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "type": "file",
+      "name": "breadcrumb-select.tsx",
+      "filePath": "packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "summary": "统计网站的breadcrumb-select页面或页面片段（breadcrumb-select.tsx），导出 BreadcrumbSelect；组合 createMemo、props.options.find、selected。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "breadcrumb-select"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/breadcrumb-select.tsx:BreadcrumbSelect",
+      "type": "function",
+      "name": "BreadcrumbSelect",
+      "filePath": "packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "lineRange": [
+        10,
+        71
+      ],
+      "summary": "统计网站的breadcrumb-select处理函数 BreadcrumbSelect，调用 createMemo、props.options.find、selected、window.location.assign、state.selectedOption 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "file",
+      "name": "compare-cards.tsx",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "summary": "统计网站的compare-cards页面或页面片段（compare-cards.tsx），导出 modelRefFromCatalog、comparisonHref、canonicalComparisonHref、uniqueComparisonPairs；组合 formatCatalogLabName、catalogSlug、modelKey。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "compare-cards"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:modelRefFromCatalog",
+      "type": "function",
+      "name": "modelRefFromCatalog",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        20,
+        27
+      ],
+      "summary": "统计网站的compare-cards处理函数 modelRefFromCatalog，调用 formatCatalogLabName 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:comparisonHref",
+      "type": "function",
+      "name": "comparisonHref",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "统计网站的compare-cards处理函数 comparisonHref，调用 catalogSlug 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "type": "function",
+      "name": "canonicalComparisonHref",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "统计网站的compare-cards处理函数 canonicalComparisonHref，调用 modelKey、comparisonHref 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:uniqueComparisonPairs",
+      "type": "function",
+      "name": "uniqueComparisonPairs",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        40,
+        51
+      ],
+      "summary": "统计网站的compare-cards处理函数 uniqueComparisonPairs，调用 pairs.reduce、modelKey、result.keys.has、result.keys.add、result.pairs.push 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonCardsSection",
+      "type": "function",
+      "name": "ComparisonCardsSection",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        53,
+        82
+      ],
+      "summary": "统计网站的compare-cards处理函数 ComparisonCardsSection，调用 featured、pairs 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:FeaturedComparisonCard",
+      "type": "function",
+      "name": "FeaturedComparisonCard",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        84,
+        106
+      ],
+      "summary": "统计网站的compare-cards处理函数 FeaturedComparisonCard，调用 canonicalComparisonHref 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonCardIcon",
+      "type": "function",
+      "name": "ComparisonCardIcon",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        108,
+        119
+      ],
+      "summary": "统计网站的compare-cards处理函数 ComparisonCardIcon。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonPanelCard",
+      "type": "function",
+      "name": "ComparisonPanelCard",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        121,
+        147
+      ],
+      "summary": "统计网站的compare-cards处理函数 ComparisonPanelCard，调用 canonicalComparisonHref、firstLabName、secondLabName、name 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonLabLogo",
+      "type": "function",
+      "name": "ComparisonLabLogo",
+      "filePath": "packages/stats/app/src/routes/compare-cards.tsx",
+      "lineRange": [
+        149,
+        159
+      ],
+      "summary": "统计网站的compare-cards处理函数 ComparisonLabLogo，调用 iconId 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "type": "file",
+      "name": "compare-radar.tsx",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "summary": "统计网站的compare-radar页面或页面片段（compare-radar.tsx），导出 ComparisonRadar；组合 createSignal、createMemo、buildRadarAxes。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "compare-radar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-radar.tsx:ComparisonRadar",
+      "type": "function",
+      "name": "ComparisonRadar",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "lineRange": [
+        32,
+        167
+      ],
+      "summary": "统计网站的compare-radar处理函数 ComparisonRadar，调用 createSignal、createMemo、buildRadarAxes、props.models.map、axes 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-radar.tsx:buildRadarAxes",
+      "type": "function",
+      "name": "buildRadarAxes",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "lineRange": [
+        169,
+        229
+      ],
+      "summary": "统计网站的compare-radar处理函数 buildRadarAxes，调用 benchmarkScoreGroups、catalogModels.flatMap、modelCost、catalogModels.map、benchmarkPercentile 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkScoreGroups",
+      "type": "function",
+      "name": "benchmarkScoreGroups",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "lineRange": [
+        231,
+        244
+      ],
+      "summary": "统计网站的compare-radar处理函数 benchmarkScoreGroups，调用 catalogModels.reduce、benchmarkKey、scores.set、scores.get、groups.set 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkPercentile",
+      "type": "function",
+      "name": "benchmarkPercentile",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "lineRange": [
+        255,
+        277
+      ],
+      "summary": "统计网站的compare-radar处理函数 benchmarkPercentile，调用 model.benchmarks.reduce、benchmarkKey、pattern.test、benchmarks.get、percentileScore 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-radar.tsx:radarAxisStyle",
+      "type": "function",
+      "name": "radarAxisStyle",
+      "filePath": "packages/stats/app/src/routes/compare-radar.tsx",
+      "lineRange": [
+        334,
+        343
+      ],
+      "summary": "统计网站的compare-radar处理函数 radarAxisStyle，调用 roundRadarCoordinate 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/compare-selector.tsx",
+      "type": "file",
+      "name": "compare-selector.tsx",
+      "filePath": "packages/stats/app/src/routes/compare-selector.tsx",
+      "summary": "统计网站的compare-selector页面或页面片段（compare-selector.tsx），导出 ComparisonSelector；组合 createSignal、differentModelId、firstId。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "compare-selector"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare-selector.tsx:ComparisonSelector",
+      "type": "function",
+      "name": "ComparisonSelector",
+      "filePath": "packages/stats/app/src/routes/compare-selector.tsx",
+      "lineRange": [
+        5,
+        78
+      ],
+      "summary": "统计网站的compare-selector处理函数 ComparisonSelector，调用 createSignal、differentModelId、firstId、createMemo、props.models.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "type": "file",
+      "name": "[secondFamily].tsx",
+      "filePath": "packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "summary": "统计网站的应用入口页面或页面片段（compare/[firstFamily]/[secondFamily].tsx），导出 ModelCompareFamily；组合 useParams、createAsync、getModelCatalog。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "应用入口"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx:ModelCompareFamily",
+      "type": "function",
+      "name": "ModelCompareFamily",
+      "filePath": "packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "lineRange": [
+        8,
+        47
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelCompareFamily，调用 useParams、createAsync、getModelCatalog、createMemo、catalog 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "summary": "统计网站的应用入口页面或页面片段（compare/index.tsx），导出 ModelCompareIndex；组合 useI18n、useLanguage、getRequestEvent。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "应用入口"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:ModelCompareIndex",
+      "type": "function",
+      "name": "ModelCompareIndex",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        67,
+        185
+      ],
+      "summary": "统计网站的应用入口处理函数 ModelCompareIndex，调用 useI18n、useLanguage、getRequestEvent、setStatsPageCacheHeaders、createAsync 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:CompareHomeSelector",
+      "type": "function",
+      "name": "CompareHomeSelector",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        187,
+        250
+      ],
+      "summary": "统计网站的应用入口处理函数 CompareHomeSelector，调用 createSignal、createMemo、props.models.map、modelById、firstId 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:CompareHomeSelect",
+      "type": "function",
+      "name": "CompareHomeSelect",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        252,
+        277
+      ],
+      "summary": "统计网站的应用入口处理函数 CompareHomeSelect，调用 model 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:CompareModelSelectModal",
+      "type": "function",
+      "name": "CompareModelSelectModal",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        279,
+        385
+      ],
+      "summary": "统计网站的应用入口处理函数 CompareModelSelectModal，调用 createSignal、createMemo、props.models.filter、search、availableModels 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:CompareModelDetail",
+      "type": "function",
+      "name": "CompareModelDetail",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        387,
+        421
+      ],
+      "summary": "统计网站的应用入口处理函数 CompareModelDetail，调用 formatCatalogLabName、formatCatalogDate、formatCatalogLimit、formatCatalogUnitPrice、modelHref 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:HeroModelStack",
+      "type": "function",
+      "name": "HeroModelStack",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        432,
+        444
+      ],
+      "summary": "统计网站的应用入口处理函数 HeroModelStack。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:buildComparisonCategories",
+      "type": "function",
+      "name": "buildComparisonCategories",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        460,
+        479
+      ],
+      "summary": "统计网站的应用入口处理函数 buildComparisonCategories，调用 categoryTemplates.reduce、categoryCandidates、categoryPair、result.keys.add、comparisonKey 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:categoryPair",
+      "type": "function",
+      "name": "categoryPair",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        481,
+        497
+      ],
+      "summary": "统计网站的应用入口处理函数 categoryPair，调用 uniqueModels、fallback.slice、pool.slice、comparisonKey、usedKeys.has 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:categoryCandidates",
+      "type": "function",
+      "name": "categoryCandidates",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        499,
+        512
+      ],
+      "summary": "统计网站的应用入口处理函数 categoryCandidates，调用 modelCost、displayDateTime、models.filter、model.modalities.output.some、modality.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:uniqueModels",
+      "type": "function",
+      "name": "uniqueModels",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        514,
+        524
+      ],
+      "summary": "统计网站的应用入口处理函数 uniqueModels，调用 models.reduce、result.keys.has、result.keys.add、result.models.push 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/compare/index.tsx:formatCatalogDate",
+      "type": "function",
+      "name": "formatCatalogDate",
+      "filePath": "packages/stats/app/src/routes/compare/index.tsx",
+      "lineRange": [
+        574,
+        584
+      ],
+      "summary": "统计网站的应用入口处理函数 formatCatalogDate，调用 Date.UTC 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "summary": "统计网站的应用入口页面或页面片段（index.tsx），导出 StatsHome；组合 useI18n、useLanguage、getRequestEvent。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "应用入口"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:StatsHome",
+      "type": "function",
+      "name": "StatsHome",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        100,
+        182
+      ],
+      "summary": "统计网站的应用入口处理函数 StatsHome，调用 useI18n、useLanguage、getRequestEvent、setStatsPageCacheHeaders、localizedUrl 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:Hero",
+      "type": "function",
+      "name": "Hero",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        184,
+        275
+      ],
+      "summary": "统计网站的应用入口处理函数 Hero，调用 useI18n、useLanguage、createSignal、createMemo、updatedAtParts 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:HeroMetaTickerPart",
+      "type": "function",
+      "name": "HeroMetaTickerPart",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        277,
+        286
+      ],
+      "summary": "统计网站的应用入口处理函数 HeroMetaTickerPart，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:StatsLoading",
+      "type": "function",
+      "name": "StatsLoading",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        288,
+        298
+      ],
+      "summary": "统计网站的应用入口处理函数 StatsLoading，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:ChartSection",
+      "type": "function",
+      "name": "ChartSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        300,
+        327
+      ],
+      "summary": "统计网站的应用入口处理函数 ChartSection，调用 id 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:SectionBridge",
+      "type": "function",
+      "name": "SectionBridge",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        333,
+        343
+      ],
+      "summary": "统计网站的应用入口处理函数 SectionBridge，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:formatUpdatedAtParts",
+      "type": "function",
+      "name": "formatUpdatedAtParts",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        354,
+        370
+      ],
+      "summary": "统计网站的应用入口处理函数 formatUpdatedAtParts，调用 date.getTime 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:TopModelsSection",
+      "type": "function",
+      "name": "TopModelsSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        377,
+        415
+      ],
+      "summary": "统计网站的应用入口处理函数 TopModelsSection，调用 useI18n、createSignal、i18n.t、props.data.some、usageTotal 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:TopModelsChart",
+      "type": "function",
+      "name": "TopModelsChart",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        417,
+        605
+      ],
+      "summary": "统计网站的应用入口处理函数 TopModelsChart，调用 useI18n、createSignal、createMemo、getTopModelsMaxTotal、getTopModelsSegmentOrder 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:UniqueUsersSection",
+      "type": "function",
+      "name": "UniqueUsersSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        607,
+        636
+      ],
+      "summary": "统计网站的应用入口处理函数 UniqueUsersSection，调用 useI18n、createSignal、i18n.t、props.data.some、usageTotal 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:RetentionSection",
+      "type": "function",
+      "name": "RetentionSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        638,
+        690
+      ],
+      "summary": "统计网站的应用入口处理函数 RetentionSection，调用 useLanguage、createSignal、activeIndex、index、language.route 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:RetentionMarker",
+      "type": "function",
+      "name": "RetentionMarker",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        692,
+        708
+      ],
+      "summary": "统计网站的应用入口处理函数 RetentionMarker，调用 createMemo、fill 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:getTopModelsSegmentColor",
+      "type": "function",
+      "name": "getTopModelsSegmentColor",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        756,
+        767
+      ],
+      "summary": "统计网站的应用入口处理函数 getTopModelsSegmentColor，调用 getRankColor 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:Leaderboard",
+      "type": "function",
+      "name": "Leaderboard",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        820,
+        873
+      ],
+      "summary": "统计网站的应用入口处理函数 Leaderboard，调用 createMemo、props.data.slice、featured、compact 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:LeaderboardCard",
+      "type": "function",
+      "name": "LeaderboardCard",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        875,
+        931
+      ],
+      "summary": "统计网站的应用入口处理函数 LeaderboardCard，调用 useI18n、useLanguage、language.route、modelSlug、props.onActiveModelChange 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:MarketShareSection",
+      "type": "function",
+      "name": "MarketShareSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        951,
+        1013
+      ],
+      "summary": "统计网站的应用入口处理函数 MarketShareSection，调用 useI18n、createSignal、createMemo、getMarketAuthorOrder、activeIndex 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:MarketShare",
+      "type": "function",
+      "name": "MarketShare",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1015,
+        1167
+      ],
+      "summary": "统计网站的应用入口处理函数 MarketShare，调用 useI18n、createEffect、scrollDenseChartToEnd、isDenseColumnRange、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:MarketShareList",
+      "type": "function",
+      "name": "MarketShareList",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1169,
+        1224
+      ],
+      "summary": "统计网站的应用入口处理函数 MarketShareList，调用 useLanguage、props.onActiveAuthorChange、href、content 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:GeoBreakdownSection",
+      "type": "function",
+      "name": "GeoBreakdownSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1226,
+        1258
+      ],
+      "summary": "统计网站的应用入口处理函数 GeoBreakdownSection，调用 useI18n、createSignal、createMemo、props.data.map、props.data.slice 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:GeoCountryList",
+      "type": "function",
+      "name": "GeoCountryList",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1260,
+        1296
+      ],
+      "summary": "统计网站的应用入口处理函数 GeoCountryList，调用 useI18n、useLanguage、createMemo、scaleSqrt、opacityScale 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:getRankOrder",
+      "type": "function",
+      "name": "getRankOrder",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1340,
+        1355
+      ],
+      "summary": "统计网站的应用入口处理函数 getRankOrder，调用 items.reduce、a.key.localeCompare 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:TokenCostSection",
+      "type": "function",
+      "name": "TokenCostSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1393,
+        1417
+      ],
+      "summary": "统计网站的应用入口处理函数 TokenCostSection，调用 useI18n、createSignal、createMemo、props.data.slice、activeIndex 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:TokenCostChart",
+      "type": "function",
+      "name": "TokenCostChart",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1419,
+        1465
+      ],
+      "summary": "统计网站的应用入口处理函数 TokenCostChart，调用 useI18n、createMemo、props.data.map、index、props.onActiveIndexChange 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:CacheRatioSection",
+      "type": "function",
+      "name": "CacheRatioSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1467,
+        1489
+      ],
+      "summary": "统计网站的应用入口处理函数 CacheRatioSection，调用 useI18n、createSignal、createMemo、props.data.slice、activeIndex 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:CacheRatioChart",
+      "type": "function",
+      "name": "CacheRatioChart",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1491,
+        1547
+      ],
+      "summary": "统计网站的应用入口处理函数 CacheRatioChart，调用 useI18n、createMemo、i18n.t、index、props.onActiveIndexChange 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:CacheRatioMarker",
+      "type": "function",
+      "name": "CacheRatioMarker",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1549,
+        1560
+      ],
+      "summary": "统计网站的应用入口处理函数 CacheRatioMarker，调用 createMemo、fill 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:MetricBar",
+      "type": "function",
+      "name": "MetricBar",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1570,
+        1582
+      ],
+      "summary": "统计网站的应用入口处理函数 MetricBar，调用 createMemo、fill 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:SessionCostSection",
+      "type": "function",
+      "name": "SessionCostSection",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1584,
+        1608
+      ],
+      "summary": "统计网站的应用入口处理函数 SessionCostSection，调用 useI18n、createSignal、createMemo、props.data.slice、activeIndex 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:SessionCostChart",
+      "type": "function",
+      "name": "SessionCostChart",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1610,
+        1665
+      ],
+      "summary": "统计网站的应用入口处理函数 SessionCostChart，调用 useI18n、createMemo、props.data.map、i18n.t、index 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:priceTokenCostFromCatalog",
+      "type": "function",
+      "name": "priceTokenCostFromCatalog",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1672,
+        1689
+      ],
+      "summary": "统计网站的应用入口处理函数 priceTokenCostFromCatalog，调用 catalogModelCost、a.model.localeCompare 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/index.tsx:homeComparisonPairs",
+      "type": "function",
+      "name": "homeComparisonPairs",
+      "filePath": "packages/stats/app/src/routes/index.tsx",
+      "lineRange": [
+        1699,
+        1709
+      ],
+      "summary": "统计网站的应用入口处理函数 homeComparisonPairs，调用 uniqueComparisonPairs、comparisonPairIndexes.flatMap、leaderboardRef 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "file",
+      "name": "model-catalog.ts",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "summary": "统计网站的model-catalog页面或页面片段（model-catalog.ts），导出 modelCatalogSourceUrl、modelCatalogPricingUrl、modelCatalogLabSourceUrl、loadModelCatalog；组合 Promise.all、fetchCatalogPayload、fetchLabCatalogPayload。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "model-catalog"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "function",
+      "name": "loadModelCatalog",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        60,
+        67
+      ],
+      "summary": "统计网站的model-catalog处理函数 loadModelCatalog，调用 Promise.all、fetchCatalogPayload、fetchLabCatalogPayload、buildModelCatalog 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "function",
+      "name": "findModelCatalogEntry",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        74,
+        85
+      ],
+      "summary": "统计网站的model-catalog处理函数 findModelCatalogEntry，调用 statModel、catalogLabSlug、catalogSlug、canonicalModel.trim、catalog.models.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "function",
+      "name": "findModelCatalogLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        87,
+        90
+      ],
+      "summary": "统计网站的model-catalog处理函数 findModelCatalogLab，调用 catalogLabSlug、catalog.labs.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "function",
+      "name": "formatCatalogLabName",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        92,
+        115
+      ],
+      "summary": "统计网站的model-catalog处理函数 formatCatalogLabName，调用 catalogSlug、lab.replace、letter.toUpperCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "function",
+      "name": "isProviderlessLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        117,
+        119
+      ],
+      "summary": "统计网站的model-catalog处理函数 isProviderlessLab，调用 catalogSlug 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "function",
+      "name": "isKnownCatalogLab",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        121,
+        125
+      ],
+      "summary": "统计网站的model-catalog处理函数 isKnownCatalogLab，调用 isProviderlessLab、catalogSlug、formatCatalogLabName、catalogLabs.some 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "function",
+      "name": "catalogSlug",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        127,
+        134
+      ],
+      "summary": "统计网站的model-catalog处理函数 catalogSlug，接收 value 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "function",
+      "name": "buildModelCatalog",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        136,
+        164
+      ],
+      "summary": "统计网站的model-catalog处理函数 buildModelCatalog，调用 readCatalogCosts、readCatalogLabDescriptions、readCatalogModels、costs.get、catalogIdKey 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "type": "function",
+      "name": "readModelCatalogEntry",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        166,
+        196
+      ],
+      "summary": "统计网站的model-catalog处理函数 readModelCatalogEntry，调用 isRecord、stringValue、catalogSlug、readCatalogLimit、readCatalogModalities 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "function",
+      "name": "readCatalogLabDescriptions",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        206,
+        242
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogLabDescriptions，调用 payloads.forEach、payload.forEach、add、isRecord、addCollection 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "function",
+      "name": "readCatalogCosts",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        265,
+        292
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogCosts，调用 payload.forEach、add、isRecord、stringValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "function",
+      "name": "readCatalogCost",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        294,
+        305
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogCost，调用 isRecord、numberValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "function",
+      "name": "readCatalogBenchmarks",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        333,
+        354
+      ],
+      "summary": "统计网站的model-catalog处理函数 readCatalogBenchmarks，调用 value.flatMap、isRecord、stringValue、numberValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "function",
+      "name": "catalogLabSlug",
+      "filePath": "packages/stats/app/src/routes/model-catalog.ts",
+      "lineRange": [
+        364,
+        373
+      ],
+      "summary": "统计网站的model-catalog处理函数 catalogLabSlug，调用 catalogSlug 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "type": "file",
+      "name": "section-heading.tsx",
+      "filePath": "packages/stats/app/src/routes/section-heading.tsx",
+      "summary": "统计网站的section-heading页面或页面片段（section-heading.tsx），导出 SectionHeading。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "section-heading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "function",
+      "name": "SectionHeading",
+      "filePath": "packages/stats/app/src/routes/section-heading.tsx",
+      "lineRange": [
+        1,
+        30
+      ],
+      "summary": "统计网站的section-heading处理函数 SectionHeading，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "type": "file",
+      "name": "sitemap.xml.ts",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "summary": "统计网站的sitemap.xml请求处理器（sitemap.xml.ts），响应 GET 请求；组合 Promise.all、loadModelCatalog、runtime.runPromise。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "sitemap.xml"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "lineRange": [
+        19,
+        66
+      ],
+      "summary": "统计网站的sitemap.xml处理函数 GET，调用 Promise.all、loadModelCatalog、runtime.runPromise、getStatsHomeData、sitemapDate 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "function",
+      "name": "sitemapXml",
+      "filePath": "packages/stats/app/src/routes/sitemap.xml.ts",
+      "lineRange": [
+        77,
+        94
+      ],
+      "summary": "统计网站的sitemap.xml处理函数 sitemapXml，调用 escapeXml 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "file",
+      "name": "stats-cache.ts",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "summary": "统计网站的stats-cache页面或页面片段（stats-cache.ts），导出 setStatsPageCacheHeaders；组合 headers.set、appendVary、value.trim。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "stats-cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "function",
+      "name": "setStatsPageCacheHeaders",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "lineRange": [
+        5,
+        10
+      ],
+      "summary": "统计网站的stats-cache处理函数 setStatsPageCacheHeaders，调用 headers.set、appendVary 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "function",
+      "name": "appendVary",
+      "filePath": "packages/stats/app/src/routes/stats-cache.ts",
+      "lineRange": [
+        12,
+        29
+      ],
+      "summary": "统计网站的stats-cache处理函数 appendVary，调用 value.trim、headers.set、result.some、item.toLowerCase、value.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "file",
+      "name": "stats-shell.tsx",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "summary": "统计网站的stats-shell页面或页面片段（stats-shell.tsx），导出 githubLink、themePreferences、themeStorageKey、getGitHubStars；组合 document.documentElement.style.removeProperty、document.documentElement.style.setProperty、useI18n。",
+      "tags": [
+        "界面组件",
+        "统计网站",
+        "stats-shell"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "function",
+      "name": "isThemePreference",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "统计网站的stats-shell处理函数 isThemePreference，接收 value 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "function",
+      "name": "applyThemePreference",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        46,
+        54
+      ],
+      "summary": "统计网站的stats-shell处理函数 applyThemePreference，调用 document.documentElement.style.removeProperty、document.documentElement.style.setProperty 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        56,
+        182
+      ],
+      "summary": "统计网站的stats-shell处理函数 Header，调用 useI18n、useLanguage、createSignal、createMemo、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:DataWordmark",
+      "type": "function",
+      "name": "DataWordmark",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        184,
+        204
+      ],
+      "summary": "统计网站的stats-shell处理函数 DataWordmark。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "function",
+      "name": "Footer",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        216,
+        300
+      ],
+      "summary": "统计网站的stats-shell处理函数 Footer，调用 useI18n、useLanguage、createSignal、i18n.t、bridge 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterLanguageSwitcher",
+      "type": "function",
+      "name": "FooterLanguageSwitcher",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        302,
+        325
+      ],
+      "summary": "统计网站的stats-shell处理函数 FooterLanguageSwitcher，调用 useI18n、useLanguage、i18n.t、language.locale、route 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:SectionBridge",
+      "type": "function",
+      "name": "SectionBridge",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        327,
+        337
+      ],
+      "summary": "统计网站的stats-shell处理函数 SectionBridge，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:ThemePreferenceIcon",
+      "type": "function",
+      "name": "ThemePreferenceIcon",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        339,
+        403
+      ],
+      "summary": "统计网站的stats-shell处理函数 ThemePreferenceIcon，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:SubscribeModal",
+      "type": "function",
+      "name": "SubscribeModal",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        405,
+        499
+      ],
+      "summary": "统计网站的stats-shell处理函数 SubscribeModal，调用 useI18n、createSignal、onMount、window.setTimeout、document.addEventListener 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterColumn",
+      "type": "function",
+      "name": "FooterColumn",
+      "filePath": "packages/stats/app/src/routes/stats-shell.tsx",
+      "lineRange": [
+        509,
+        532
+      ],
+      "summary": "统计网站的stats-shell处理函数 FooterColumn，调用 props.localHref、link.href.startsWith 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/app/src/stats-runtime.ts",
+      "type": "file",
+      "name": "stats-runtime.ts",
+      "filePath": "packages/stats/app/src/stats-runtime.ts",
+      "summary": "统计网站的stats-runtime实现模块，提供 runStatsEffect。",
+      "tags": [
+        "接口实现",
+        "统计网站",
+        "stats-runtime"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "function",
+      "name": "runStatsEffect",
+      "filePath": "packages/stats/app/src/stats-runtime.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "统计网站的stats-runtime处理函数 runStatsEffect，调用 Effect.runPromise 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计网站"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/stats/app/src/i18n/zh.ts",
+      "target": "file:packages/stats/app/src/i18n.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/i18n/zht.ts",
+      "target": "file:packages/stats/app/src/i18n.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:resolveComparisonFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:resolveComparisonFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:findComparisonFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:findComparisonFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonSitemapModels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonSitemapModels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalModelComparisonPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalModelComparisonPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalFamilyComparisonPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalFamilyComparisonPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:latestFamilyComparisonPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:latestFamilyComparisonPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyForModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyForModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyModelSort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:isDuplicateAliasModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:uniqueModels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:resolveComparisonFamily",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:findComparisonFamily",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:resolveComparisonFamily",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:findComparisonFamily",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyModelSort",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:isDuplicateAliasModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonSitemapModels",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:uniqueModels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonSitemapModels",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:latestFamilyComparisonPath",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyForModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:latestFamilyComparisonPath",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:canonicalFamilyComparisonPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyForModel",
+      "target": "function:packages/stats/app/src/lib/comparison-pages.ts:comparisonFamilyCandidates",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:normalizeDataPathname",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:strip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:strip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:route",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:route",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:localizedUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "function:packages/stats/app/src/lib/language.ts:localizedUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/language.ts:strip",
+      "target": "function:packages/stats/app/src/lib/language.ts:normalizeDataPathname",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/language.ts:route",
+      "target": "function:packages/stats/app/src/lib/language.ts:normalizeDataPathname",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/lib/language.ts:localizedUrl",
+      "target": "function:packages/stats/app/src/lib/language.ts:route",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/lib/language.ts",
+      "target": "file:packages/console/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:StatsModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:StatsModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelLoading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelNotFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHeroActionIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelHeroSparkline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelOverview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelMomentumSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:MomentumChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelUsageSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelUniqueUsersSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelTrendSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelEfficiencySection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelGeoBreakdownSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:GeoCountryList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelPeersSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:PeerRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonPairs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonRef",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:smoothLinePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumMonthLabels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatMomentumDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageLinePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageMonthTicks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatModelUsageTooltipDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatCatalogMonth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:StatsModel",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonPairs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelOverview",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatCatalogMonth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:MomentumChart",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumChart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:MomentumChart",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatMomentumDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:MomentumChart",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumMonthLabels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelTrendSection",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageLinePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelTrendSection",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageMonthTicks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:ModelTrendSection",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatModelUsageTooltipDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonPairs",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelComparisonRef",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumChart",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:smoothLinePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:momentumMonthLabels",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatMomentumDate",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:modelUsageMonthTicks",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/[model].tsx:formatModelUsageTooltipDate",
+      "target": "function:packages/stats/app/src/routes/[lab]/[model].tsx:parseMomentumDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/component/locale-links.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/[model].tsx",
+      "target": "file:packages/stats/app/src/stats-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:StatsLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:StatsLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabNotFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabHeroBreadcrumb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabHeroTitleRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabOverview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabUsageSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelTooltip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabRelatedSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabRelatedCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:labComparisonPairs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:relatedLabStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:formatCatalogDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:monthName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:usageLinePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:labUsageMonthTicks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/index.tsx:StatsLab",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:labComparisonPairs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabUsageSection",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:usageLinePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabUsageSection",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:labUsageMonthTicks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/[lab]/index.tsx:LabModelRow",
+      "target": "function:packages/stats/app/src/routes/[lab]/index.tsx:formatCatalogDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/component/locale-links.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/[lab]/index.tsx",
+      "target": "file:packages/stats/app/src/stats-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "target": "function:packages/stats/app/src/routes/breadcrumb-select.tsx:BreadcrumbSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/breadcrumb-select.tsx",
+      "target": "function:packages/stats/app/src/routes/breadcrumb-select.tsx:BreadcrumbSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:modelRefFromCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:modelRefFromCatalog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:comparisonHref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:comparisonHref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:uniqueComparisonPairs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:uniqueComparisonPairs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonCardsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonCardsSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:FeaturedComparisonCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonCardIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonPanelCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonLabLogo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:comparisonHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-cards.tsx:FeaturedComparisonCard",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-cards.tsx:ComparisonPanelCard",
+      "target": "function:packages/stats/app/src/routes/compare-cards.tsx:canonicalComparisonHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:ComparisonRadar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:ComparisonRadar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:buildRadarAxes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkScoreGroups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkPercentile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:radarAxisStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-radar.tsx:ComparisonRadar",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:buildRadarAxes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-radar.tsx:ComparisonRadar",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:radarAxisStyle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-radar.tsx:buildRadarAxes",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkScoreGroups",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare-radar.tsx:buildRadarAxes",
+      "target": "function:packages/stats/app/src/routes/compare-radar.tsx:benchmarkPercentile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-radar.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-selector.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-selector.tsx:ComparisonSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-selector.tsx",
+      "target": "function:packages/stats/app/src/routes/compare-selector.tsx:ComparisonSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-selector.tsx",
+      "target": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare-selector.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "target": "function:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx:ModelCompareFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "target": "function:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx:ModelCompareFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "target": "file:packages/stats/app/src/component/model-compare-detail.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "target": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/[firstFamily]/[secondFamily].tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:ModelCompareIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:ModelCompareIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:CompareHomeSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:CompareHomeSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:CompareModelSelectModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:CompareModelDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:HeroModelStack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:buildComparisonCategories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:categoryPair",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:categoryCandidates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:uniqueModels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:formatCatalogDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare/index.tsx:ModelCompareIndex",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:buildComparisonCategories",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare/index.tsx:CompareModelDetail",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:formatCatalogDate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare/index.tsx:buildComparisonCategories",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:categoryCandidates",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare/index.tsx:buildComparisonCategories",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:categoryPair",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/compare/index.tsx:categoryPair",
+      "target": "function:packages/stats/app/src/routes/compare/index.tsx:uniqueModels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/component/locale-links.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/compare/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:StatsHome",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:StatsHome",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:Hero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:HeroMetaTickerPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:StatsLoading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:ChartSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:SectionBridge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:formatUpdatedAtParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:TopModelsSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:TopModelsChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:UniqueUsersSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:RetentionSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:RetentionMarker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:getTopModelsSegmentColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:Leaderboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:LeaderboardCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:MarketShareSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:MarketShare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:MarketShareList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:GeoBreakdownSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:GeoCountryList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:getRankOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:TokenCostSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:TokenCostChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:CacheRatioSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:CacheRatioChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:CacheRatioMarker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:MetricBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:SessionCostSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:SessionCostChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:priceTokenCostFromCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "function:packages/stats/app/src/routes/index.tsx:homeComparisonPairs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/index.tsx:StatsHome",
+      "target": "function:packages/stats/app/src/routes/index.tsx:homeComparisonPairs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/index.tsx:Hero",
+      "target": "function:packages/stats/app/src/routes/index.tsx:formatUpdatedAtParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/index.tsx:TopModelsChart",
+      "target": "function:packages/stats/app/src/routes/index.tsx:getTopModelsSegmentColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/component/locale-links.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/routes/compare-cards.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/index.tsx",
+      "target": "file:packages/stats/app/src/stats-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:loadModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:findModelCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:isProviderlessLab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:isKnownCatalogLab",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCosts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogLabDescriptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:buildModelCatalog",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:formatCatalogLabName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogCost",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:readModelCatalogEntry",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:readCatalogBenchmarks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/model-catalog.ts:catalogLabSlug",
+      "target": "function:packages/stats/app/src/routes/model-catalog.ts:catalogSlug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "target": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/section-heading.tsx",
+      "target": "function:packages/stats/app/src/routes/section-heading.tsx:SectionHeading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/sitemap.xml.ts:GET",
+      "target": "function:packages/stats/app/src/routes/sitemap.xml.ts:sitemapXml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/lib/comparison-pages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/sitemap.xml.ts",
+      "target": "file:packages/stats/app/src/routes/model-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/app/src/routes/stats-cache.ts:setStatsPageCacheHeaders",
+      "target": "function:packages/stats/app/src/routes/stats-cache.ts:appendVary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-cache.ts",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:isThemePreference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:applyThemePreference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:DataWordmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:Footer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterLanguageSwitcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:SectionBridge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:ThemePreferenceIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:SubscribeModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "function:packages/stats/app/src/routes/stats-shell.tsx:FooterColumn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/context/i18n.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/routes/stats-shell.tsx",
+      "target": "file:packages/stats/app/src/lib/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/app/src/stats-runtime.ts",
+      "target": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/app/src/stats-runtime.ts",
+      "target": "function:packages/stats/app/src/stats-runtime.ts:runStatsEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

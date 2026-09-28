@@ -1,0 +1,1551 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/server/proxy-util.ts",
+      "type": "file",
+      "name": "proxy-util.ts",
+      "filePath": "packages/opencode/src/server/proxy-util.ts",
+      "summary": "清理代理请求头并合并额外头信息，提取 WebSocket 子协议列表，将目标 URL 转换为 WebSocket 协议地址。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/proxy-util.ts:headers",
+      "type": "function",
+      "name": "headers",
+      "filePath": "packages/opencode/src/server/proxy-util.ts",
+      "lineRange": [
+        21,
+        30
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 headers，接收 input、extra 参数；调用 Object.entries、sanitize、out.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/proxy-util.ts:websocketProtocols",
+      "type": "function",
+      "name": "websocketProtocols",
+      "filePath": "packages/opencode/src/server/proxy-util.ts",
+      "lineRange": [
+        32,
+        39
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 websocketProtocols，接收 input 参数；调用 input.headers.get、item.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/proxy-util.ts:websocketTargetURL",
+      "type": "function",
+      "name": "websocketTargetURL",
+      "filePath": "packages/opencode/src/server/proxy-util.ts",
+      "lineRange": [
+        41,
+        46
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 websocketTargetURL，接收 url 参数；调用 next.toString 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 ServerApi、RootHttpApi、InstanceHttpApi、OpenCodeHttpApi 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "type": "file",
+      "name": "errors.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 InvalidRequestError、UnauthorizedError、ForbiddenError、ConflictError、UpstreamError、ServiceUnavailableError、TimeoutError；内部处理包含 notFound。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/errors.ts:notFound",
+      "type": "function",
+      "name": "notFound",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        188,
+        193
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 notFound，接收 message 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidRequestError",
+      "type": "class",
+      "name": "InvalidRequestError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        3,
+        11
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 InvalidRequestError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnauthorizedError",
+      "type": "class",
+      "name": "UnauthorizedError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        13,
+        17
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 UnauthorizedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ForbiddenError",
+      "type": "class",
+      "name": "ForbiddenError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        19,
+        23
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ForbiddenError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ConflictError",
+      "type": "class",
+      "name": "ConflictError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ConflictError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UpstreamError",
+      "type": "class",
+      "name": "UpstreamError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        34,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 UpstreamError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ServiceUnavailableError",
+      "type": "class",
+      "name": "ServiceUnavailableError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        44,
+        51
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ServiceUnavailableError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:TimeoutError",
+      "type": "class",
+      "name": "TimeoutError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        53,
+        60
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 TimeoutError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnknownError",
+      "type": "class",
+      "name": "UnknownError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        62,
+        69
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 UnknownError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProviderNotFoundError",
+      "type": "class",
+      "name": "ProviderNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        71,
+        78
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ProviderNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ModelNotFoundError",
+      "type": "class",
+      "name": "ModelNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        80,
+        89
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ModelNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionNotFoundError",
+      "type": "class",
+      "name": "SessionNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        91,
+        98
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SessionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:MessageNotFoundError",
+      "type": "class",
+      "name": "MessageNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        100,
+        108
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 MessageNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidCursorError",
+      "type": "class",
+      "name": "InvalidCursorError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        110,
+        114
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 InvalidCursorError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionBusyError",
+      "type": "class",
+      "name": "SessionBusyError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        116,
+        123
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SessionBusyError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:QuestionNotFoundError",
+      "type": "class",
+      "name": "QuestionNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        125,
+        132
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 QuestionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PermissionNotFoundError",
+      "type": "class",
+      "name": "PermissionNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        134,
+        141
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PermissionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:McpServerNotFoundError",
+      "type": "class",
+      "name": "McpServerNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        143,
+        150
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 McpServerNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyNotFoundError",
+      "type": "class",
+      "name": "PtyNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        152,
+        159
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PtyNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyForbiddenError",
+      "type": "class",
+      "name": "PtyForbiddenError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        161,
+        167
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PtyForbiddenError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProjectNotFoundError",
+      "type": "class",
+      "name": "ProjectNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        169,
+        176
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ProjectNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ApiNotFoundError",
+      "type": "class",
+      "name": "ApiNotFoundError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "lineRange": [
+        178,
+        186
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ApiNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "summary": "声明 ConfigApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "type": "file",
+      "name": "control-plane.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "summary": "声明 MoveSessionPayload、ApiMoveSessionError、ControlPlaneApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts:ApiMoveSessionError",
+      "type": "class",
+      "name": "ApiMoveSessionError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "lineRange": [
+        9,
+        17
+      ],
+      "summary": "在HTTP 端点契约层中定义 ApiMoveSessionError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control.ts",
+      "type": "file",
+      "name": "control.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/control.ts",
+      "summary": "声明 LogInput、ControlPaths、ControlApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "summary": "声明 EventPaths、EventApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "type": "file",
+      "name": "experimental.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "summary": "声明 ConsoleSwitchPayload、ToolListQuery、WorktreeApiError、SessionListQuery、ExperimentalPaths、ExperimentalApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts:WorktreeApiError",
+      "type": "class",
+      "name": "WorktreeApiError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "lineRange": [
+        73,
+        79
+      ],
+      "summary": "在HTTP 端点契约层中定义 WorktreeApiError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "type": "file",
+      "name": "file.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "summary": "声明 FileQuery、FindTextQuery、FindFileQuery、FindSymbolQuery、LegacyMatch、LegacyEntry、LegacyContent HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "type": "file",
+      "name": "global.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "summary": "声明 GlobalUpgradeInput、GlobalPaths、GlobalApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "type": "file",
+      "name": "instance.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "summary": "声明 VcsDiffQuery、ApiVcsApplyError、InstancePaths、InstanceApi HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts:ApiVcsApplyError",
+      "type": "class",
+      "name": "ApiVcsApplyError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "lineRange": [
+        32,
+        41
+      ],
+      "summary": "在HTTP 端点契约层中定义 ApiVcsApplyError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "file",
+      "name": "mcp.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "summary": "声明 AddPayload、StatusMap、AuthStartResponse、AuthCallbackPayload、AuthRemoveResponse、UnsupportedOAuthError、McpPaths HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts:UnsupportedOAuthError",
+      "type": "class",
+      "name": "UnsupportedOAuthError",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "lineRange": [
+        27,
+        30
+      ],
+      "summary": "在HTTP 端点契约层中定义 UnsupportedOAuthError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:websocketProtocols",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:websocketProtocols",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:websocketTargetURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/proxy-util.ts",
+      "target": "function:packages/opencode/src/server/proxy-util.ts:websocketTargetURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/event-manifest.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/project-copy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/sync.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/errors.ts:notFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/errors.ts:notFound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidRequestError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidRequestError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnauthorizedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnauthorizedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ForbiddenError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ForbiddenError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ConflictError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ConflictError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UpstreamError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UpstreamError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ServiceUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ServiceUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:TimeoutError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:TimeoutError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnknownError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:UnknownError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProviderNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProviderNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ModelNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ModelNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:MessageNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:MessageNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidCursorError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:InvalidCursorError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionBusyError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:SessionBusyError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:QuestionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:QuestionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PermissionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PermissionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:McpServerNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:McpServerNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyForbiddenError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:PtyForbiddenError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProjectNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ProjectNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ApiNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/errors.ts:ApiNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/config.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts:ApiMoveSessionError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts:ApiMoveSessionError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control-plane.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/control.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts:WorktreeApiError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts:WorktreeApiError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/query.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/experimental.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/file.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "target": "file:packages/opencode/src/event-manifest.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "target": "file:packages/opencode/src/server/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/global.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts:ApiVcsApplyError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts:ApiVcsApplyError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts:UnsupportedOAuthError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts:UnsupportedOAuthError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/metadata.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/src/session/message-updater.ts",
+      "type": "file",
+      "name": "message-updater.ts",
+      "filePath": "packages/core/src/session/message-updater.ts",
+      "summary": "在V2 会话执行与持久化层中提供 memory、update 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/session/message-updater.ts:memory",
+      "type": "function",
+      "name": "memory",
+      "filePath": "packages/core/src/session/message-updater.ts",
+      "lineRange": [
+        19,
+        76
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 memory，接收 state 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/message-updater.ts:update",
+      "type": "function",
+      "name": "update",
+      "filePath": "packages/core/src/session/message-updater.ts",
+      "lineRange": [
+        78,
+        395
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 update，接收 adapter、event 参数；调用 Effect.gen、SessionEvent.All.match、adapter.appendMessage、SessionMessage.AgentSwitched.make、SessionMessage.ModelSwitched.make、SessionMessage.User.make、SessionMessage.System.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/src/session/message.ts",
+      "type": "file",
+      "name": "message.ts",
+      "filePath": "packages/core/src/session/message.ts",
+      "summary": "汇总V2 会话执行与持久化层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/projector.ts",
+      "type": "file",
+      "name": "projector.ts",
+      "filePath": "packages/core/src/session/projector.ts",
+      "summary": "在V2 会话执行与持久化层中提供 SessionAlreadyProjected、node；内部处理包含 usage、sessionRow、messageData、partData、applyUsage、run、insertMessage。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/session/projector.ts:sessionRow",
+      "type": "function",
+      "name": "sessionRow",
+      "filePath": "packages/core/src/session/projector.ts",
+      "lineRange": [
+        43,
+        75
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 sessionRow，接收 info 参数；调用 SessionMessage.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/projector.ts:applyUsage",
+      "type": "function",
+      "name": "applyUsage",
+      "filePath": "packages/core/src/session/projector.ts",
+      "lineRange": [
+        89,
+        109
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 applyUsage，接收 db、sessionID、value、sign 参数；调用 sql、eq 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/session/projector.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/core/src/session/projector.ts",
+      "lineRange": [
+        111,
+        190
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 run，接收 db、event 参数；调用 Effect.gen、SessionMessageUpdater.update 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/projector.ts:insertMessage",
+      "type": "function",
+      "name": "insertMessage",
+      "filePath": "packages/core/src/session/projector.ts",
+      "lineRange": [
+        192,
+        208
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 insertMessage，接收 db、event、message 参数；调用 Effect.die、encodeMessage、SessionMessage.ID.make、DateTime.toEpochMillis 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/projector.ts:SessionAlreadyProjected",
+      "type": "class",
+      "name": "SessionAlreadyProjected",
+      "filePath": "packages/core/src/session/projector.ts",
+      "lineRange": [
+        23,
+        23
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 SessionAlreadyProjected 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "packages/core/src/session/prompt.ts",
+      "summary": "在V2 会话执行与持久化层中提供 AgentAttachment、FileAttachment、Prompt、Source 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/revert.ts",
+      "type": "file",
+      "name": "revert.ts",
+      "filePath": "packages/core/src/session/revert.ts",
+      "summary": "在V2 会话执行与持久化层中提供 MessageNotFoundError、stage、clear、commit 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/core/src/session/revert.ts:MessageNotFoundError",
+      "type": "class",
+      "name": "MessageNotFoundError",
+      "filePath": "packages/core/src/session/revert.ts",
+      "lineRange": [
+        14,
+        20
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 MessageNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/run-coordinator.ts",
+      "type": "file",
+      "name": "run-coordinator.ts",
+      "filePath": "packages/core/src/session/run-coordinator.ts",
+      "summary": "在V2 会话执行与持久化层中提供 make 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/session/run-coordinator.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/core/src/session/run-coordinator.ts",
+      "lineRange": [
+        24,
+        104
+      ],
+      "summary": "在V2 会话执行与持久化层中执行 make，接收 options 参数；调用 Effect.gen、FiberSet.makeRuntime、Effect.sync、active.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/src/session/runner/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/core/src/session/runner/index.ts",
+      "summary": "在V2 会话执行与持久化层中提供 Service 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/session/runner/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/session/runner/index.ts",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "在V2 会话执行与持久化层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/session/runner/llm.ts",
+      "type": "file",
+      "name": "llm.ts",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "在V2 会话执行与持久化层中提供 node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/src/session/runner/max-steps.ts",
+      "type": "file",
+      "name": "max-steps.ts",
+      "filePath": "packages/core/src/session/runner/max-steps.ts",
+      "summary": "在V2 会话执行与持久化层中提供 MAX_STEPS_PROMPT 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "function:packages/core/src/session/message-updater.ts:memory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "function:packages/core/src/session/message-updater.ts:memory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "function:packages/core/src/session/message-updater.ts:update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "function:packages/core/src/session/message-updater.ts:update",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/message-updater.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "function:packages/core/src/session/projector.ts:sessionRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "function:packages/core/src/session/projector.ts:applyUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "function:packages/core/src/session/projector.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "function:packages/core/src/session/projector.ts:insertMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "class:packages/core/src/session/projector.ts:SessionAlreadyProjected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "class:packages/core/src/session/projector.ts:SessionAlreadyProjected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/control-plane/workspace.sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/message-updater.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/v1/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/projector.ts",
+      "target": "file:packages/core/src/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "class:packages/core/src/session/revert.ts:MessageNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "class:packages/core/src/session/revert.ts:MessageNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/revert.ts",
+      "target": "file:packages/core/src/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/run-coordinator.ts",
+      "target": "function:packages/core/src/session/run-coordinator.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/run-coordinator.ts",
+      "target": "function:packages/core/src/session/run-coordinator.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "class:packages/core/src/session/runner/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "class:packages/core/src/session/runner/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "file:packages/core/src/session/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "file:packages/core/src/session/runner/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "file:packages/core/src/system-context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/index.ts",
+      "target": "file:packages/core/src/tool-output-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/effect/app-node-platform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/reference/guidance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/compaction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/context-epoch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/max-steps.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/session/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/skill/guidance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/system-context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/system-context/registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/tool-output-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/session/runner/llm.ts",
+      "target": "file:packages/core/src/tool/registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

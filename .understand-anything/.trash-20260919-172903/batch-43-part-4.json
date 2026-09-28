@@ -1,0 +1,507 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/codemode/src/values.ts",
+      "type": "file",
+      "name": "values.ts",
+      "filePath": "packages/codemode/src/values.ts",
+      "summary": "定义解释器专用的 Promise、日期、正则、Map、Set 与 URL 值，供受限运行时识别和封装标准库对象。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "function",
+      "name": "isSandboxValue",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        41,
+        49
+      ],
+      "summary": "CodeMode 解释器的values处理函数 isSandboxValue，接收 value 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "class",
+      "name": "SandboxPromise",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        3,
+        9
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxPromise，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "class",
+      "name": "SandboxDate",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        11,
+        13
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxDate，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "class",
+      "name": "SandboxRegExp",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        15,
+        20
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxRegExp，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "class",
+      "name": "SandboxMap",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxMap，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "class",
+      "name": "SandboxSet",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxSet，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "class",
+      "name": "SandboxURLSearchParams",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxURLSearchParams，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "class",
+      "name": "SandboxURL",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "CodeMode 解释器的values类型 SandboxURL，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/codemode.test.ts",
+      "type": "file",
+      "name": "codemode.test.ts",
+      "filePath": "packages/codemode/test/codemode.test.ts",
+      "summary": "验证CodeMode 解释器的代码执行接口行为，覆盖 CodeMode host failure boundary；preserves explicit safe tool failures；sanitizes unknown host failures and defects；sanitizes invalid host output；sanitizes host output that throws while being copied。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "代码执行接口"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/enumeration.test.ts",
+      "type": "file",
+      "name": "enumeration.test.ts",
+      "filePath": "packages/codemode/test/enumeration.test.ts",
+      "summary": "验证CodeMode 解释器的enumeration行为，覆盖 Object.keys over tool references；enumerates top-level namespaces (the transcript program)；enumerates tool names at a nested namespace；a callable tool is a leaf and enumerates as []；the internal discovery namespace enumerates its callable surface。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "enumeration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/test/openapi.test.ts",
+      "type": "file",
+      "name": "openapi.test.ts",
+      "filePath": "packages/codemode/test/openapi.test.ts",
+      "summary": "验证CodeMode 解释器的openapi行为，覆盖 OpenAPI.fromSpec；covers a representative API from generation through execution；converts representative opencode operations into the expected tool shape；preserves operation path sanitization and collision handling；synthesizes flat operation IDs from methods and paths。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "openapi"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/test/openapi.test.ts:recordingClient",
+      "type": "function",
+      "name": "recordingClient",
+      "filePath": "packages/codemode/test/openapi.test.ts",
+      "lineRange": [
+        31,
+        50
+      ],
+      "summary": "CodeMode 解释器的openapi处理函数 recordingClient，调用 Layer.succeed、HttpClient.make、Effect.gen、Option.map、HttpClientRequest.toUrl 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/parity.test.ts",
+      "type": "file",
+      "name": "parity.test.ts",
+      "filePath": "packages/codemode/test/parity.test.ts",
+      "summary": "验证CodeMode 解释器的parity行为，覆盖 H2: string property access reads as undefined (not a throw)；unknown property on a string is undefined；optional chaining + fallback on a string does not throw；the real MCP pattern: result is a JSON string, defensive read falls through；unknown property on a number is undefined。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "parity"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/promise.test.ts",
+      "type": "file",
+      "name": "promise.test.ts",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "summary": "验证CodeMode 解释器的异步标准库行为，覆盖 first-class promise values；an un-awaited tool call starts eagerly, in call order, before any await；awaiting the same promise twice settles once and never re-runs the call；await of a non-promise value is a passthrough no-op；returning an un-awaited tool call resolves it (async-function return semantics)。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "异步标准库"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "function",
+      "name": "sleepyTool",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "lineRange": [
+        20,
+        42
+      ],
+      "summary": "CodeMode 解释器的异步标准库处理函数 sleepyTool，调用 Tool.make、Schema.Struct、Schema.optionalKey、Effect.gen、trace.starts.push 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/test/promise.test.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "CodeMode 解释器的异步标准库处理函数 run，调用 makeTrace、Effect.runPromise、CodeMode.execute、sleepyTool 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/signature.test.ts",
+      "type": "file",
+      "name": "signature.test.ts",
+      "filePath": "packages/codemode/test/signature.test.ts",
+      "summary": "验证CodeMode 解释器的signature行为，覆盖 pretty signature rendering；described fields get JSDoc comments; undescribed and untagged fields get none；compact mode output is unchanged by the pretty machinery；nested objects recurse with increasing indent and their own JSDoc；Effect Schema annotations become JSDoc on input and output fields。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "signature"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/stdlib.test.ts",
+      "type": "file",
+      "name": "stdlib.test.ts",
+      "filePath": "packages/codemode/test/stdlib.test.ts",
+      "summary": "验证CodeMode 解释器的stdlib行为，覆盖 Date；Date.now() returns a number；epoch construction and ISO rendering；string parsing round-trips；date arithmetic and comparison use the time value。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "stdlib"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/test/codemode.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/enumeration.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "function:packages/codemode/test/openapi.test.ts:recordingClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "function:packages/codemode/test/promise.test.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/codemode/test/promise.test.ts:run",
+      "target": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/stdlib.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

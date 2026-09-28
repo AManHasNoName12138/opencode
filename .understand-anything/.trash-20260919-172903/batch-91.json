@@ -1,0 +1,1125 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "type": "file",
+      "name": "acp-test-client.ts",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "summary": "为 命令行入口与命令执行层 测试提供 createAcpClient、expectOk、selectConfigOption、firstAlternateValue、flattenSelectOptions 等测试辅助接口。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/acp-test-client.ts:createAcpClient",
+      "type": "function",
+      "name": "createAcpClient",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "lineRange": [
+        36,
+        66
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createAcpClient，接收 acp 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/acp-test-client.ts:expectOk",
+      "type": "function",
+      "name": "expectOk",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "lineRange": [
+        68,
+        72
+      ],
+      "summary": "在命令行入口与命令执行层中执行 expectOk，接收 response 参数；调用 expect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/acp-test-client.ts:selectConfigOption",
+      "type": "function",
+      "name": "selectConfigOption",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "lineRange": [
+        74,
+        79
+      ],
+      "summary": "在命令行入口与命令执行层中执行 selectConfigOption，接收 options、id 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/acp-test-client.ts:firstAlternateValue",
+      "type": "function",
+      "name": "firstAlternateValue",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "lineRange": [
+        81,
+        83
+      ],
+      "summary": "在命令行入口与命令执行层中执行 firstAlternateValue，接收 option 参数；调用 flattenSelectOptions 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/acp-test-client.ts:flattenSelectOptions",
+      "type": "function",
+      "name": "flattenSelectOptions",
+      "filePath": "packages/opencode/test/cli/acp/acp-test-client.ts",
+      "lineRange": [
+        85,
+        87
+      ],
+      "summary": "在命令行入口与命令执行层中执行 flattenSelectOptions，接收 option 参数；调用 option.options.flatMap 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/config-options.test.ts",
+      "type": "file",
+      "name": "config-options.test.ts",
+      "filePath": "packages/opencode/test/cli/acp/config-options.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode acp config option subprocess」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "file",
+      "name": "helpers.ts",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "summary": "为 命令行入口与命令执行层 测试提供 createAcpClient、initialize、newSession、verifierConfig、expectErrorCode、expectSelectOption、expectAlternateValue 等测试辅助接口。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:createAcpClient",
+      "type": "function",
+      "name": "createAcpClient",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        14,
+        18
+      ],
+      "summary": "在命令行入口与命令执行层中执行 createAcpClient，接收 input、env 参数；调用 Effect.gen、createJsonRpcAcpClient、input.opencode.acp 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:initialize",
+      "type": "function",
+      "name": "initialize",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        20,
+        30
+      ],
+      "summary": "在命令行入口与命令执行层中执行 initialize，接收 acp 参数；调用 Effect.gen、expectOk、acp.request 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:newSession",
+      "type": "function",
+      "name": "newSession",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "在命令行入口与命令执行层中执行 newSession，接收 acp、cwd 参数；调用 Effect.gen、expectOk、acp.request 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:verifierConfig",
+      "type": "function",
+      "name": "verifierConfig",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        38,
+        68
+      ],
+      "summary": "在命令行入口与命令执行层中执行 verifierConfig，接收 llmUrl、skills 参数；调用 testProviderConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:expectErrorCode",
+      "type": "function",
+      "name": "expectErrorCode",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        70,
+        76
+      ],
+      "summary": "在命令行入口与命令执行层中执行 expectErrorCode，接收 error、code 参数；调用 expect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:expectSelectOption",
+      "type": "function",
+      "name": "expectSelectOption",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        78,
+        82
+      ],
+      "summary": "在命令行入口与命令执行层中执行 expectSelectOption，接收 options、id 参数；调用 selectConfigOption、expect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/helpers.ts:expectAlternateValue",
+      "type": "function",
+      "name": "expectAlternateValue",
+      "filePath": "packages/opencode/test/cli/acp/helpers.ts",
+      "lineRange": [
+        84,
+        88
+      ],
+      "summary": "在命令行入口与命令执行层中执行 expectAlternateValue，接收 option 参数；调用 flattenSelectOptions、expect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/initialize-auth.test.ts",
+      "type": "file",
+      "name": "initialize-auth.test.ts",
+      "filePath": "packages/opencode/test/cli/acp/initialize-auth.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode acp initialize/auth subprocess」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/lifecycle.test.ts",
+      "type": "file",
+      "name": "lifecycle.test.ts",
+      "filePath": "packages/opencode/test/cli/acp/lifecycle.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode acp lifecycle subprocess」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "type": "file",
+      "name": "prompt-content.test.ts",
+      "filePath": "packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode acp prompt content subprocess」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/acp/prompt-content.test.ts:promptContentConfig",
+      "type": "function",
+      "name": "promptContentConfig",
+      "filePath": "packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "lineRange": [
+        77,
+        97
+      ],
+      "summary": "在命令行入口与命令执行层中执行 promptContentConfig，接收 llmUrl 参数；调用 verifierConfig、Object.fromEntries、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/acp/skills.test.ts",
+      "type": "file",
+      "name": "skills.test.ts",
+      "filePath": "packages/opencode/test/cli/acp/skills.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode acp skills subprocess」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "type": "file",
+      "name": "help-snapshots.test.ts",
+      "filePath": "packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode CLI help-text snapshots」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/help/help-snapshots.test.ts:normalize",
+      "type": "function",
+      "name": "normalize",
+      "filePath": "packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "在命令行入口与命令执行层中执行 normalize，接收 text 参数；调用 normalizeForSnapshot 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/mcp-add.test.ts",
+      "type": "file",
+      "name": "mcp-add.test.ts",
+      "filePath": "packages/opencode/test/cli/mcp-add.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode mcp add (non-interactive subprocess)」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/run-process.test.ts",
+      "type": "file",
+      "name": "run-process.test.ts",
+      "filePath": "packages/opencode/test/cli/run/run-process.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode run (non-interactive subprocess)」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/serve/serve-process.test.ts",
+      "type": "file",
+      "name": "serve-process.test.ts",
+      "filePath": "packages/opencode/test/cli/serve/serve-process.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode serve (subprocess)」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/smokes/read-only.test.ts",
+      "type": "file",
+      "name": "read-only.test.ts",
+      "filePath": "packages/opencode/test/cli/smokes/read-only.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「opencode read-only commands (smoke)」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/thread.test.ts",
+      "type": "file",
+      "name": "thread.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/thread.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「tui thread、loads the TUI integration lazily、forwards the CLI environment to the TUI worker、uses the real cwd when PWD points at a symlink、uses the real cwd after resolving a relative project from PWD、resolves a relative mini project from PWD when cwd differs、parses supported --no-replay forms」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "file",
+      "name": "cli-process.ts",
+      "filePath": "packages/opencode/test/lib/cli-process.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 testModelID、withCliFixture、cliIt 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/cli-process.ts:isolatedEnv",
+      "type": "function",
+      "name": "isolatedEnv",
+      "filePath": "packages/opencode/test/lib/cli-process.ts",
+      "lineRange": [
+        62,
+        78
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isolatedEnv，接收 home、configJson 参数；调用 path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/cli-process.ts:withCliFixture",
+      "type": "function",
+      "name": "withCliFixture",
+      "filePath": "packages/opencode/test/lib/cli-process.ts",
+      "lineRange": [
+        189,
+        481
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withCliFixture，接收 fn 参数；调用 Effect.gen、fs.makeTempDirectory、Effect.addFinalizer、Effect.retry、Schedule.spaced、Schedule.both、Schedule.recurs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/cli-process.ts:expectExit",
+      "type": "function",
+      "name": "expectExit",
+      "filePath": "packages/opencode/test/lib/cli-process.ts",
+      "lineRange": [
+        497,
+        507
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 expectExit，接收 result、expected、label 参数；调用 console.error、tail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/snapshot.ts",
+      "type": "file",
+      "name": "snapshot.ts",
+      "filePath": "packages/opencode/test/lib/snapshot.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 stripCrlf、toPosixPath、withTmpdirStripped、PATH_SEP、normalizeForSnapshot 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/snapshot.ts:stripCrlf",
+      "type": "function",
+      "name": "stripCrlf",
+      "filePath": "packages/opencode/test/lib/snapshot.ts",
+      "lineRange": [
+        24,
+        26
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 stripCrlf，接收 text 参数；调用 text.replaceAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/snapshot.ts:toPosixPath",
+      "type": "function",
+      "name": "toPosixPath",
+      "filePath": "packages/opencode/test/lib/snapshot.ts",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 toPosixPath，接收 p 参数；调用 p.replaceAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/snapshot.ts:withTmpdirStripped",
+      "type": "function",
+      "name": "withTmpdirStripped",
+      "filePath": "packages/opencode/test/lib/snapshot.ts",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withTmpdirStripped，接收 text、marker 参数；调用 text.replaceAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "type": "function",
+      "name": "normalizeForSnapshot",
+      "filePath": "packages/opencode/test/lib/snapshot.ts",
+      "lineRange": [
+        60,
+        73
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeForSnapshot，接收 text、options 参数；调用 stripCrlf、withTmpdirStripped、out.replace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:createAcpClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:createAcpClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:expectOk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:expectOk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:selectConfigOption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:selectConfigOption",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:firstAlternateValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:firstAlternateValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:flattenSelectOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:flattenSelectOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/config-options.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/config-options.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/config-options.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:createAcpClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:createAcpClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:initialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:initialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:newSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:newSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:verifierConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:verifierConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectErrorCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectErrorCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectSelectOption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectSelectOption",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectAlternateValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:expectAlternateValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "target": "file:packages/opencode/test/lib/test-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/initialize-auth.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/initialize-auth.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "target": "function:packages/opencode/test/cli/acp/prompt-content.test.ts:promptContentConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/acp-test-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/prompt-content.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/skills.test.ts",
+      "target": "file:packages/opencode/test/cli/acp/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/acp/skills.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "target": "function:packages/opencode/test/cli/help/help-snapshots.test.ts:normalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/help/help-snapshots.test.ts",
+      "target": "file:packages/opencode/test/lib/snapshot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/mcp-add.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/run-process.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/run-process.test.ts",
+      "target": "file:packages/opencode/test/lib/llm-server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/serve/serve-process.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/smokes/read-only.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/thread.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/thread.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/thread.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/thread.test.ts",
+      "target": "file:packages/opencode/test/lib/cli-process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "function:packages/opencode/test/lib/cli-process.ts:isolatedEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "function:packages/opencode/test/lib/cli-process.ts:withCliFixture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "function:packages/opencode/test/lib/cli-process.ts:withCliFixture",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "function:packages/opencode/test/lib/cli-process.ts:expectExit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "file:packages/opencode/test/lib/llm-server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/cli-process.ts",
+      "target": "file:packages/opencode/test/lib/test-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:stripCrlf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:stripCrlf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:toPosixPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:toPosixPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:withTmpdirStripped",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:withTmpdirStripped",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/snapshot.ts",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/acp-test-client.ts:firstAlternateValue",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:flattenSelectOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/helpers.ts:initialize",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:expectOk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/helpers.ts:newSession",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:expectOk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/helpers.ts:verifierConfig",
+      "target": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/helpers.ts:expectSelectOption",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:selectConfigOption",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/helpers.ts:expectAlternateValue",
+      "target": "function:packages/opencode/test/cli/acp/acp-test-client.ts:flattenSelectOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/acp/prompt-content.test.ts:promptContentConfig",
+      "target": "function:packages/opencode/test/cli/acp/helpers.ts:verifierConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/help/help-snapshots.test.ts:normalize",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/cli-process.ts:withCliFixture",
+      "target": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/cli-process.ts:withCliFixture",
+      "target": "function:packages/opencode/test/lib/cli-process.ts:isolatedEnv",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:stripCrlf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/snapshot.ts:normalizeForSnapshot",
+      "target": "function:packages/opencode/test/lib/snapshot.ts:withTmpdirStripped",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

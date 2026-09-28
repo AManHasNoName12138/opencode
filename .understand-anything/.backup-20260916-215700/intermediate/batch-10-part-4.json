@@ -1,0 +1,1512 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/new-session/new-session-workspace-controller.test.ts",
+      "type": "file",
+      "name": "new-session-workspace-controller.test.ts",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.test.ts",
+      "summary": "验证新建会话工作区控制器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“new session workspace selection”、“uses main when the workspace bar is unavailable”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "type": "file",
+      "name": "new-session-workspace-controller.ts",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "summary": "为 app 提供新建会话工作区控制器相关数据处理接口。 对外提供 resolveNewSessionWorktree、normalizeNewSessionWorktree、resolveNewSessionBranch、createNewSessionWorkspaceController。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionWorktree",
+      "type": "function",
+      "name": "resolveNewSessionWorktree",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "lineRange": [
+        8,
+        18
+      ],
+      "summary": "解析新建会话工作树，输入包括 input。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:normalizeNewSessionWorktree",
+      "type": "function",
+      "name": "normalizeNewSessionWorktree",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "lineRange": [
+        20,
+        23
+      ],
+      "summary": "规范化新建会话工作树，输入包括 value、directory、projectWorktree。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionBranch",
+      "type": "function",
+      "name": "resolveNewSessionBranch",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "解析新建会话分支，调用 input.worktreeBranch 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "type": "function",
+      "name": "createNewSessionWorkspaceController",
+      "filePath": "packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "lineRange": [
+        34,
+        75
+      ],
+      "summary": "创建新建会话工作区控制器，调用 useSDK、useSync、useServerSync、createSignal 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "type": "file",
+      "name": "use-new-session-commands.tsx",
+      "filePath": "packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "summary": "实现应用的使用新建会话commands界面及相关交互。 对外提供 useNewSessionCommands。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/new-session/use-new-session-commands.tsx:useNewSessionCommands",
+      "type": "function",
+      "name": "useNewSessionCommands",
+      "filePath": "packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "lineRange": [
+        6,
+        44
+      ],
+      "summary": "连接新建会话Commands，调用 useCommand、useDialog、useLanguage、useSettingsCommand 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session.tsx",
+      "type": "file",
+      "name": "session.tsx",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "summary": "实现应用的会话界面及相关交互。 对外提供 SessionPage、TargetSessionRouteContent、SessionRouteErrorBoundary、Page。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:runPromptRollbackMutation",
+      "type": "function",
+      "name": "runPromptRollbackMutation",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        124,
+        145
+      ],
+      "summary": "运行提示词Rollback变更，调用 input.capturePrompt、prompt.current、batch、input.optimistic 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:SessionPage",
+      "type": "function",
+      "name": "SessionPage",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        147,
+        153
+      ],
+      "summary": "渲染会话Page组件，组织会话的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:TargetSessionRouteContent",
+      "type": "function",
+      "name": "TargetSessionRouteContent",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        159,
+        173
+      ],
+      "summary": "渲染Target会话路由内容组件，组织会话的界面内容和交互；使用 useParams、useServerSync、createMemo、serverSync 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:SessionRouteErrorBoundary",
+      "type": "function",
+      "name": "SessionRouteErrorBoundary",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        180,
+        201
+      ],
+      "summary": "渲染会话路由错误边界组件，组织会话的界面内容和交互；使用 useSettings、settings.general.newLayoutDesigns 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:SessionErrorFallback",
+      "type": "function",
+      "name": "SessionErrorFallback",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        203,
+        244
+      ],
+      "summary": "渲染会话错误回退组件，组织会话的界面内容和交互；使用 useLanguage、useServer、useTabs、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:ResolvedTargetSessionRoute",
+      "type": "function",
+      "name": "ResolvedTargetSessionRoute",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        246,
+        280
+      ],
+      "summary": "渲染ResolvedTarget会话路由组件，组织会话的界面内容和交互；使用 useParams、useTabs、useServerSync、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:TargetServerScopedProviders",
+      "type": "function",
+      "name": "TargetServerScopedProviders",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        295,
+        304
+      ],
+      "summary": "渲染Target服务器Scoped提供商组件，组织会话的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:MarkSessionNotificationsViewed",
+      "type": "function",
+      "name": "MarkSessionNotificationsViewed",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        306,
+        315
+      ],
+      "summary": "渲染Mark会话NotificationsViewed组件，组织会话的界面内容和交互；使用 useNotification、createEffect、props.sessionID、notification.ready 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:SessionProviders",
+      "type": "function",
+      "name": "SessionProviders",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        317,
+        327
+      ],
+      "summary": "渲染会话提供商组件，组织会话的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:SessionPanelFrame",
+      "type": "function",
+      "name": "SessionPanelFrame",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        337,
+        351
+      ],
+      "summary": "渲染会话面板Frame组件，组织会话的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session.tsx:Page",
+      "type": "function",
+      "name": "Page",
+      "filePath": "packages/app/src/pages/session.tsx",
+      "lineRange": [
+        353,
+        2391
+      ],
+      "summary": "渲染Page组件，组织会话的界面内容和交互；使用 useServerSync、useLayout、useLocal、useFile 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/composer/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/app/src/pages/session/composer/index.ts",
+      "summary": "为 app 提供索引相关数据处理接口。 对外提供 SessionComposerRegion、createPromptInputController、createPromptProjectControls、createSessionComposerController、createSessionComposerRegionController。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "type": "file",
+      "name": "prompt-model-selection.ts",
+      "filePath": "packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "summary": "为 app 提供提示词模型选择相关数据处理接口。 对外提供 createPromptModelSelection。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "type": "function",
+      "name": "createPromptModelSelection",
+      "filePath": "packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "lineRange": [
+        11,
+        132
+      ],
+      "summary": "创建提示词模型选择，调用 useSDK、useSync、useModels、usePrompt 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "type": "file",
+      "name": "session-composer-controls.ts",
+      "filePath": "packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "summary": "为 app 提供会话composercontrols相关数据处理接口。 对外提供 createPromptInputController、createPromptProjectControls。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "type": "function",
+      "name": "createPromptInputController",
+      "filePath": "packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "lineRange": [
+        20,
+        61
+      ],
+      "summary": "创建提示词输入控制器，调用 useLayout、useLocal、useSDK、useSync 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptProjectControls",
+      "type": "function",
+      "name": "createPromptProjectControls",
+      "filePath": "packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "lineRange": [
+        63,
+        133
+      ],
+      "summary": "创建提示词项目Controls，调用 useNavigate、useLayout、useServer、useServerSDK 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.test.ts",
+      "target": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "file:packages/app/src/pages/new-session/new-session-workspace-controller.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionWorktree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionWorktree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:normalizeNewSessionWorktree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:normalizeNewSessionWorktree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionBranch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/new-session-workspace-controller.ts",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionWorktree",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:resolveNewSessionBranch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:createNewSessionWorkspaceController",
+      "target": "function:packages/app/src/pages/new-session/new-session-workspace-controller.ts:normalizeNewSessionWorktree",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "target": "function:packages/app/src/pages/new-session/use-new-session-commands.tsx:useNewSessionCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "target": "function:packages/app/src/pages/new-session/use-new-session-commands.tsx:useNewSessionCommands",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "target": "file:packages/app/src/components/settings-dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/new-session/use-new-session-commands.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/new-session/use-new-session-commands.tsx:useNewSessionCommands",
+      "target": "function:packages/app/src/components/settings-dialog.tsx:useSettingsCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:runPromptRollbackMutation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:TargetSessionRouteContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:TargetSessionRouteContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionRouteErrorBoundary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionRouteErrorBoundary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionErrorFallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:ResolvedTargetSessionRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:TargetServerScopedProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:MarkSessionNotificationsViewed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:SessionPanelFrame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:Page",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "function:packages/app/src/pages/session.tsx:Page",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/prompt-input-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/prompt-input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/prompt-input/editor-dom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/prompt-input/history.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/prompt-input/submit.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/session/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/components/settings-dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/comments.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/models.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/context/terminal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/directory-layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/error.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/composer/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/review-tab.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-lineage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-model-helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-ownership.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-panel-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-panel-width.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/session-side-panel.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/terminal-panel-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/terminal-panel.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/timeline/message-timeline.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/timeline/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/diffs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/server-errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/session-route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session.tsx",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:TargetSessionRouteContent",
+      "target": "function:packages/app/src/utils/session-route.ts:requireServerKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:SessionErrorFallback",
+      "target": "function:packages/app/src/context/server.tsx:serverName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:ResolvedTargetSessionRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:requireServerKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:ResolvedTargetSessionRoute",
+      "target": "function:packages/app/src/pages/session/session-lineage.ts:createSessionLineage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-ownership.ts:createSessionOwnership",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/helpers.ts:createSizing",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/helpers.ts:shouldShowFileTree",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-panel-width.ts:sessionPanelWidthMax",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-panel-width.ts:clampSessionPanelWidth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-panel-layout.ts:sessionPanelLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/helpers.ts:createSessionTabs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-model-helpers.ts:syncSessionModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-model-helpers.ts:restorePromptModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/session-model-helpers.ts:syncPromptModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/helpers.ts:createOpenReviewFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2-state.ts:createReviewPanelV2State",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session.tsx:runPromptRollbackMutation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/use-session-hash-scroll.ts:useSessionHashScroll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session.tsx:Page",
+      "target": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/model-variant.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/models.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/hooks/provider-catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/prompt-model-selection.ts",
+      "target": "file:packages/app/src/hooks/use-providers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/prompt-model-selection.ts:createPromptModelSelection",
+      "target": "function:packages/app/src/hooks/use-providers.ts:useProviders",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptProjectControls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptProjectControls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/components/directory-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/components/prompt-input/contracts.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/components/prompt-project-selector.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/hooks/use-providers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/composer/session-composer-controls.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "target": "function:packages/app/src/hooks/use-providers.ts:useProviders",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptInputController",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptProjectControls",
+      "target": "function:packages/app/src/components/directory-picker.tsx:useDirectoryPicker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/composer/session-composer-controls.ts:createPromptProjectControls",
+      "target": "function:packages/app/src/context/server.tsx:serverName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

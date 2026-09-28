@@ -1,0 +1,1854 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/main/initialization.ts",
+      "type": "file",
+      "name": "initialization.ts",
+      "filePath": "packages/desktop/src/main/initialization.ts",
+      "summary": "为 desktop 提供initialization相关数据处理接口。 对外提供 forwardInitializationFailure。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/initialization.ts:forwardInitializationFailure",
+      "type": "function",
+      "name": "forwardInitializationFailure",
+      "filePath": "packages/desktop/src/main/initialization.ts",
+      "lineRange": [
+        3,
+        6
+      ],
+      "summary": "实现 forwardInitializationFailure 的initialization操作，调用 effect.pipe、Effect.tapCause、Deferred.failCause 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/install-state.test.ts",
+      "type": "file",
+      "name": "install-state.test.ts",
+      "filePath": "packages/desktop/src/main/install-state.test.ts",
+      "summary": "验证安装状态相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“hasExistingAppState”、“ignores files Electron may create on a fresh install”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/install-state.ts",
+      "type": "file",
+      "name": "install-state.ts",
+      "filePath": "packages/desktop/src/main/install-state.ts",
+      "summary": "为 desktop 提供安装状态相关数据处理接口。 对外提供 hasExistingAppState。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/install-state.ts:hasExistingAppState",
+      "type": "function",
+      "name": "hasExistingAppState",
+      "filePath": "packages/desktop/src/main/install-state.ts",
+      "lineRange": [
+        1,
+        8
+      ],
+      "summary": "检查是否存在ExistingApp状态，调用 entries.some、entry.name.endsWith、/^window-state-.+\\.json$/.test、entry.isDirectory 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/ipc.ts",
+      "type": "file",
+      "name": "ipc.ts",
+      "filePath": "packages/desktop/src/main/ipc.ts",
+      "summary": "注册渲染进程可调用的 Electron IPC，包括文件选择、草稿持久化、窗口设置、更新订阅与本地化菜单。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "type": "function",
+      "name": "registerIpcHandlers",
+      "filePath": "packages/desktop/src/main/ipc.ts",
+      "lineRange": [
+        57,
+        300
+      ],
+      "summary": "注册桌面主进程 IPC 处理器，并绑定草稿存储与更新订阅的退出清理。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/ipc.ts:sendMenuCommand",
+      "type": "function",
+      "name": "sendMenuCommand",
+      "filePath": "packages/desktop/src/main/ipc.ts",
+      "lineRange": [
+        302,
+        304
+      ],
+      "summary": "发送菜单命令，调用 win.webContents.send 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/ipc.ts:sendDeepLinks",
+      "type": "function",
+      "name": "sendDeepLinks",
+      "filePath": "packages/desktop/src/main/ipc.ts",
+      "lineRange": [
+        306,
+        308
+      ],
+      "summary": "发送DeepLinks，调用 win.webContents.send 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/logging.ts",
+      "type": "file",
+      "name": "logging.ts",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "summary": "为 desktop 提供日志相关数据处理接口。 对外提供 getLogger、initLogging、initCrashReporter、startNetLog、exportDebugLogs、write。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:getLogger",
+      "type": "function",
+      "name": "getLogger",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "读取Logger。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:initLogging",
+      "type": "function",
+      "name": "initLogging",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        22,
+        34
+      ],
+      "summary": "实现 initLogging 的日志操作，调用 initRunDirectory、join、safeLogName、log.initialize 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:initCrashReporter",
+      "type": "function",
+      "name": "initCrashReporter",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "实现 initCrashReporter 的日志操作，调用 join、app.getPath、mkdirSync、app.setPath 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:startNetLog",
+      "type": "function",
+      "name": "startNetLog",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        44,
+        49
+      ],
+      "summary": "启动NetLog，调用 join、netLog.startLogging、write 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "type": "function",
+      "name": "exportDebugLogs",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        51,
+        73
+      ],
+      "summary": "实现 exportDebugLogs 的日志操作，调用 netLog.stopLogging、write、join、app.getPath 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        75,
+        88
+      ],
+      "summary": "写入日志，调用 log.scope、safeLogName 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:tail",
+      "type": "function",
+      "name": "tail",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        90,
+        99
+      ],
+      "summary": "实现 tail 的日志操作，调用 log.transports.file.getFile、readFileSync、contents.split、lines.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:cleanup",
+      "type": "function",
+      "name": "cleanup",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        118,
+        131
+      ],
+      "summary": "实现 cleanup 的日志操作，调用 dirname、log.transports.file.getFile、Date.now、readdirSync 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:manifest",
+      "type": "function",
+      "name": "manifest",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        133,
+        150
+      ],
+      "summary": "实现 manifest 的日志操作，调用 app.getVersion、app.getName、process.uptime、app.getPath 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:collect",
+      "type": "function",
+      "name": "collect",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        159,
+        179
+      ],
+      "summary": "收集日志，调用 existsSync、Date.now、walk 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/logging.ts:initConsoleTransport",
+      "type": "function",
+      "name": "initConsoleTransport",
+      "filePath": "packages/desktop/src/main/logging.ts",
+      "lineRange": [
+        191,
+        206
+      ],
+      "summary": "实现 initConsoleTransport 的日志操作，调用 log.transports.console.writeFn.bind、write、isBrokenPipe 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/menu.ts",
+      "type": "file",
+      "name": "menu.ts",
+      "filePath": "packages/desktop/src/main/menu.ts",
+      "summary": "为 desktop 提供菜单相关数据处理接口。 对外提供 createMenu。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/menu.ts:createMenu",
+      "type": "function",
+      "name": "createMenu",
+      "filePath": "packages/desktop/src/main/menu.ts",
+      "lineRange": [
+        21,
+        35
+      ],
+      "summary": "创建菜单，调用 DESKTOP_MENU.filter、desktopMenuVisible、nativeRole、nativeT 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "type": "function",
+      "name": "nativeItem",
+      "filePath": "packages/desktop/src/main/menu.ts",
+      "lineRange": [
+        37,
+        65
+      ],
+      "summary": "实现 nativeItem 的菜单操作，调用 nativeRole、nativeT、deps.trigger、runDesktopMenuAction 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/migrate.ts",
+      "type": "file",
+      "name": "migrate.ts",
+      "filePath": "packages/desktop/src/main/migrate.ts",
+      "summary": "为 desktop 提供迁移相关数据处理接口。 对外提供 migrate。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/migrate.ts:tauriDir",
+      "type": "function",
+      "name": "tauriDir",
+      "filePath": "packages/desktop/src/main/migrate.ts",
+      "lineRange": [
+        13,
+        22
+      ],
+      "summary": "实现 tauriDir 的迁移操作，调用 join、homedir 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/migrate.ts:migrateFile",
+      "type": "function",
+      "name": "migrateFile",
+      "filePath": "packages/desktop/src/main/migrate.ts",
+      "lineRange": [
+        39,
+        67
+      ],
+      "summary": "迁移文件，调用 readFileSync、log.warn、getStore、target.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "type": "function",
+      "name": "migrate",
+      "filePath": "packages/desktop/src/main/migrate.ts",
+      "lineRange": [
+        69,
+        91
+      ],
+      "summary": "迁移迁移，调用 getStore、log.log、tauriDir、tauriAppId 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "file",
+      "name": "native-translations.ts",
+      "filePath": "packages/desktop/src/main/native-translations.ts",
+      "summary": "接收类型化的桌面原生翻译包，为 Electron 菜单和对话框解析文案。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/native-translations.ts:setNativeTranslations",
+      "type": "function",
+      "name": "setNativeTranslations",
+      "filePath": "packages/desktop/src/main/native-translations.ts",
+      "lineRange": [
+        11,
+        20
+      ],
+      "summary": "设置原生翻译，调用 DESKTOP_NATIVE_KEYS.every 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "function",
+      "name": "nativeT",
+      "filePath": "packages/desktop/src/main/native-translations.ts",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "实现 nativeT 的原生翻译操作，调用 formatDesktopNativeMessage 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/onboarding.ts",
+      "type": "file",
+      "name": "onboarding.ts",
+      "filePath": "packages/desktop/src/main/onboarding.ts",
+      "summary": "为 desktop 提供初次使用相关数据处理接口。 对外提供 initializeOldLayoutEligibility、isOldLayoutEligible、isFirstLaunchOnboardingPending、finishFirstLaunchOnboarding。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/onboarding.ts:initializeOldLayoutEligibility",
+      "type": "function",
+      "name": "initializeOldLayoutEligibility",
+      "filePath": "packages/desktop/src/main/onboarding.ts",
+      "lineRange": [
+        12,
+        21
+      ],
+      "summary": "实现 initializeOldLayoutEligibility 的初次使用操作，调用 existsSync、readdirSync、getStore、store.get 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/onboarding.ts:isOldLayoutEligible",
+      "type": "function",
+      "name": "isOldLayoutEligible",
+      "filePath": "packages/desktop/src/main/onboarding.ts",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "判断Old布局Eligible，调用 getStore 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/onboarding.ts:isFirstLaunchOnboardingPending",
+      "type": "function",
+      "name": "isFirstLaunchOnboardingPending",
+      "filePath": "packages/desktop/src/main/onboarding.ts",
+      "lineRange": [
+        27,
+        31
+      ],
+      "summary": "判断首项Launch初次使用待处理，调用 getStore、writeLog 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/onboarding.ts:finishFirstLaunchOnboarding",
+      "type": "function",
+      "name": "finishFirstLaunchOnboarding",
+      "filePath": "packages/desktop/src/main/onboarding.ts",
+      "lineRange": [
+        33,
+        45
+      ],
+      "summary": "实现 finishFirstLaunchOnboarding 的初次使用操作，调用 isFirstLaunchOnboardingPending、writeLog、join、app.getPath 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "summary": "启动本地 OpenCode 服务进程、合并运行环境并检测健康状态，持久化默认服务器地址。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/server.ts:getDefaultServerUrl",
+      "type": "function",
+      "name": "getDefaultServerUrl",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "lineRange": [
+        30,
+        33
+      ],
+      "summary": "读取默认服务器URL，调用 getStore 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/server.ts:setDefaultServerUrl",
+      "type": "function",
+      "name": "setDefaultServerUrl",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "lineRange": [
+        35,
+        42
+      ],
+      "summary": "设置默认服务器URL，调用 getStore 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "type": "function",
+      "name": "preferAppEnv",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "lineRange": [
+        44,
+        55
+      ],
+      "summary": "实现 preferAppEnv 的服务器操作，调用 getUserShell、loadShellEnv、getLogger 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/server.ts:spawnLocalServer",
+      "type": "function",
+      "name": "spawnLocalServer",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "lineRange": [
+        57,
+        184
+      ],
+      "summary": "实现 spawnLocalServer 的服务器操作，调用 join、dirname、fileURLToPath、utilityProcess.fork 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/server.ts:checkHealth",
+      "type": "function",
+      "name": "checkHealth",
+      "filePath": "packages/desktop/src/main/server.ts",
+      "lineRange": [
+        186,
+        211
+      ],
+      "summary": "检查健康，调用 Buffer.from、headers.set、fetch、AbortSignal.timeout 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/shell-env.test.ts",
+      "type": "file",
+      "name": "shell-env.test.ts",
+      "filePath": "packages/desktop/src/main/shell-env.test.ts",
+      "summary": "验证shellenv相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“shell env”、“parseShellEnv supports null-delimited pairs”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/shell-env.ts",
+      "type": "file",
+      "name": "shell-env.ts",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "summary": "识别用户 shell 并加载其环境变量，处理 Nushell 等差异后合并应用运行环境。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:resolveUserShell",
+      "type": "function",
+      "name": "resolveUserShell",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "解析用户shell，输入包括 envShell、loginShell。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:getUserShell",
+      "type": "function",
+      "name": "getUserShell",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        17,
+        23
+      ],
+      "summary": "读取用户shell，调用 resolveUserShell、userInfo 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:parseShellEnv",
+      "type": "function",
+      "name": "parseShellEnv",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "解析shellEnv，调用 out.toString、line.indexOf、line.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:probe",
+      "type": "function",
+      "name": "probe",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        36,
+        62
+      ],
+      "summary": "实现 probe 的shellenv操作，调用 spawnSync、parseShellEnv 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:isNushell",
+      "type": "function",
+      "name": "isNushell",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        64,
+        68
+      ],
+      "summary": "判断Nushell，调用 basename、shell.toLowerCase、raw.endsWith 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "type": "function",
+      "name": "loadShellEnv",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        70,
+        94
+      ],
+      "summary": "加载shellEnv，调用 isNushell、logger.log、probe 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/shell-env.ts:mergeShellEnv",
+      "type": "function",
+      "name": "mergeShellEnv",
+      "filePath": "packages/desktop/src/main/shell-env.ts",
+      "lineRange": [
+        96,
+        101
+      ],
+      "summary": "合并shellEnv，输入包括 shell、env。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/main/initialization.ts",
+      "target": "file:packages/desktop/src/main/index.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/initialization.ts",
+      "target": "function:packages/desktop/src/main/initialization.ts:forwardInitializationFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/initialization.ts",
+      "target": "function:packages/desktop/src/main/initialization.ts:forwardInitializationFailure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/install-state.test.ts",
+      "target": "file:packages/desktop/src/main/install-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/install-state.ts",
+      "target": "file:packages/desktop/src/main/install-state.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/install-state.ts",
+      "target": "function:packages/desktop/src/main/install-state.ts:hasExistingAppState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/install-state.ts",
+      "target": "function:packages/desktop/src/main/install-state.ts:hasExistingAppState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:sendMenuCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:sendMenuCommand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:sendDeepLinks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "function:packages/desktop/src/main/ipc.ts:sendDeepLinks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/attachment-picker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/debug.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/updater-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/main/windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/ipc.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/draft-store.ts:createDesktopDraftStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/updater-subscriptions.ts:createUpdaterSubscriptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/debug.ts:setForceFocus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/store.ts:removeStoreFileIfEmpty",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/attachment-picker.ts:assertAttachmentBudget",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:openLocalFileURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:getWindowID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:updateTitlebar",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:setPinchZoomEnabled",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/windows.ts:setTitlebar",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/ipc.ts:registerIpcHandlers",
+      "target": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:getLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:getLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:initLogging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:initLogging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:initCrashReporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:initCrashReporter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:startNetLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:startNetLog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:tail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:tail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:cleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:manifest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:collect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/logging.ts",
+      "target": "function:packages/desktop/src/main/logging.ts:initConsoleTransport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:initLogging",
+      "target": "function:packages/desktop/src/main/logging.ts:initConsoleTransport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:initLogging",
+      "target": "function:packages/desktop/src/main/logging.ts:cleanup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:initCrashReporter",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:startNetLog",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "target": "function:packages/desktop/src/main/logging.ts:manifest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "target": "function:packages/desktop/src/main/logging.ts:collect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:exportDebugLogs",
+      "target": "function:packages/desktop/src/main/logging.ts:startNetLog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/logging.ts:initConsoleTransport",
+      "target": "function:packages/desktop/src/main/logging.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "function:packages/desktop/src/main/menu.ts:createMenu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "function:packages/desktop/src/main/menu.ts:createMenu",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "file:packages/desktop/src/main/constants.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "file:packages/desktop/src/main/desktop-menu-actions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/menu.ts",
+      "target": "file:packages/desktop/src/main/windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/menu.ts:createMenu",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/menu.ts:createMenu",
+      "target": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "target": "function:packages/desktop/src/main/desktop-menu-actions.ts:runDesktopMenuAction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/menu.ts:nativeItem",
+      "target": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "function:packages/desktop/src/main/migrate.ts:tauriDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "function:packages/desktop/src/main/migrate.ts:migrateFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "file:packages/desktop/src/main/constants.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/migrate.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/migrate.ts:migrateFile",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "target": "function:packages/desktop/src/main/migrate.ts:tauriDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/migrate.ts:migrate",
+      "target": "function:packages/desktop/src/main/migrate.ts:migrateFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/native-translations.ts",
+      "target": "function:packages/desktop/src/main/native-translations.ts:setNativeTranslations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/native-translations.ts",
+      "target": "function:packages/desktop/src/main/native-translations.ts:setNativeTranslations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/native-translations.ts",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/native-translations.ts",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:initializeOldLayoutEligibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:initializeOldLayoutEligibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:isOldLayoutEligible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:isOldLayoutEligible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:isFirstLaunchOnboardingPending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:isFirstLaunchOnboardingPending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:finishFirstLaunchOnboarding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "function:packages/desktop/src/main/onboarding.ts:finishFirstLaunchOnboarding",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "file:packages/desktop/src/main/install-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/onboarding.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:initializeOldLayoutEligibility",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:initializeOldLayoutEligibility",
+      "target": "function:packages/desktop/src/main/install-state.ts:hasExistingAppState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:isOldLayoutEligible",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:isFirstLaunchOnboardingPending",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:finishFirstLaunchOnboarding",
+      "target": "function:packages/desktop/src/main/onboarding.ts:isFirstLaunchOnboardingPending",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/onboarding.ts:finishFirstLaunchOnboarding",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:getDefaultServerUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:getDefaultServerUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:setDefaultServerUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:setDefaultServerUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:spawnLocalServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:spawnLocalServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:checkHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "function:packages/desktop/src/main/server.ts:checkHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "file:packages/desktop/src/main/shell-env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/server.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/server.ts:getDefaultServerUrl",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/server.ts:setDefaultServerUrl",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "target": "function:packages/desktop/src/main/shell-env.ts:getUserShell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "target": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/server.ts:preferAppEnv",
+      "target": "function:packages/desktop/src/main/logging.ts:getLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.test.ts",
+      "target": "file:packages/desktop/src/main/shell-env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "file:packages/desktop/src/main/shell-env.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:resolveUserShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:resolveUserShell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:getUserShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:getUserShell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:parseShellEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:parseShellEnv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:probe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:isNushell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:isNushell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:mergeShellEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/shell-env.ts",
+      "target": "function:packages/desktop/src/main/shell-env.ts:mergeShellEnv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/shell-env.ts:getUserShell",
+      "target": "function:packages/desktop/src/main/shell-env.ts:resolveUserShell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/shell-env.ts:probe",
+      "target": "function:packages/desktop/src/main/shell-env.ts:parseShellEnv",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "target": "function:packages/desktop/src/main/shell-env.ts:isNushell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/shell-env.ts:loadShellEnv",
+      "target": "function:packages/desktop/src/main/shell-env.ts:probe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

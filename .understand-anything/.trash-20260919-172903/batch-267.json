@@ -1,0 +1,603 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/web/src/components/LanguageSelect.astro",
+      "type": "file",
+      "name": "LanguageSelect.astro",
+      "filePath": "packages/web/src/components/LanguageSelect.astro",
+      "summary": "文档与分享网站的LanguageSelect界面组件，配置 virtual:starlight/user-config、@astrojs/starlight/components/LanguageSelect.astro 相关模块。",
+      "tags": [
+        "界面组件",
+        "文档与分享网站",
+        "LanguageSelect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/src/components/share.module.css",
+      "type": "file",
+      "name": "share.module.css",
+      "filePath": "packages/web/src/components/share.module.css",
+      "summary": "文档与分享网站的share.module样式，定义 .root、.parts、.message-text、.message-error、.message-terminal 等选择器的布局、视觉状态与响应式显示。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "share.module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/web/src/components/SiteTitle.astro",
+      "type": "file",
+      "name": "SiteTitle.astro",
+      "filePath": "packages/web/src/components/SiteTitle.astro",
+      "summary": "文档与分享网站的SiteTitle界面组件，配置 virtual:starlight/user-images、virtual:starlight/user-config 相关模块。",
+      "tags": [
+        "界面组件",
+        "文档与分享网站",
+        "SiteTitle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/web/src/content.config.ts",
+      "type": "file",
+      "name": "content.config.ts",
+      "filePath": "packages/web/src/content.config.ts",
+      "summary": "文档与分享网站的content.config实现模块，提供 collections。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "content.config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/src/i18n/locales.ts",
+      "type": "file",
+      "name": "locales.ts",
+      "filePath": "packages/web/src/i18n/locales.ts",
+      "summary": "文档与分享网站的locales翻译词典，为产品页面、工作区、订阅、支付和错误提示提供本地化文本。",
+      "tags": [
+        "本地化",
+        "翻译",
+        "文档与分享网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/web/src/i18n/locales.ts:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/web/src/i18n/locales.ts",
+      "lineRange": [
+        75,
+        86
+      ],
+      "summary": "文档与分享网站的locales处理函数 parse，调用 decodeURIComponent、decoded.trim 完成该步骤。",
+      "tags": [
+        "函数",
+        "本地化",
+        "翻译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/i18n/locales.ts:exactLocale",
+      "type": "function",
+      "name": "exactLocale",
+      "filePath": "packages/web/src/i18n/locales.ts",
+      "lineRange": [
+        88,
+        96
+      ],
+      "summary": "文档与分享网站的locales处理函数 exactLocale，调用 parse 完成该步骤。",
+      "tags": [
+        "函数",
+        "本地化",
+        "翻译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/i18n/locales.ts:matchLocale",
+      "type": "function",
+      "name": "matchLocale",
+      "filePath": "packages/web/src/i18n/locales.ts",
+      "lineRange": [
+        98,
+        117
+      ],
+      "summary": "文档与分享网站的locales处理函数 matchLocale，调用 parse、value.startsWith、value.includes、starts.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "本地化",
+        "翻译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/src/middleware.ts",
+      "type": "file",
+      "name": "middleware.ts",
+      "filePath": "packages/web/src/middleware.ts",
+      "summary": "文档与分享网站的请求中间件实现模块，提供 onRequest。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "请求中间件"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/web/src/middleware.ts:docsAlias",
+      "type": "function",
+      "name": "docsAlias",
+      "filePath": "packages/web/src/middleware.ts",
+      "lineRange": [
+        4,
+        19
+      ],
+      "summary": "文档与分享网站的请求中间件处理函数 docsAlias，调用 exactLocale 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/middleware.ts:redirect",
+      "type": "function",
+      "name": "redirect",
+      "filePath": "packages/web/src/middleware.ts",
+      "lineRange": [
+        26,
+        37
+      ],
+      "summary": "文档与分享网站的请求中间件处理函数 redirect，调用 url.toString、next.toString、headers.set、cookie 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/middleware.ts:localeFromCookie",
+      "type": "function",
+      "name": "localeFromCookie",
+      "filePath": "packages/web/src/middleware.ts",
+      "lineRange": [
+        39,
+        48
+      ],
+      "summary": "文档与分享网站的请求中间件处理函数 localeFromCookie，调用 x.trim、x.startsWith、matchLocale 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/middleware.ts:localeFromAcceptLanguage",
+      "type": "function",
+      "name": "localeFromAcceptLanguage",
+      "filePath": "packages/web/src/middleware.ts",
+      "lineRange": [
+        50,
+        78
+      ],
+      "summary": "文档与分享网站的请求中间件处理函数 localeFromAcceptLanguage，调用 raw.trim、raw.split、x.trim、x.startsWith、matchLocale 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/web/src/pages/[...slug].md.ts",
+      "type": "file",
+      "name": "[...slug].md.ts",
+      "filePath": "packages/web/src/pages/[...slug].md.ts",
+      "summary": "文档与分享网站的[...slug].md实现模块，提供 GET。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "[...slug].md"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/pages/[...slug].md.ts:notFoundText",
+      "type": "function",
+      "name": "notFoundText",
+      "filePath": "packages/web/src/pages/[...slug].md.ts",
+      "lineRange": [
+        4,
+        17
+      ],
+      "summary": "文档与分享网站的[...slug].md处理函数 notFoundText，调用 t 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/web/src/pages/[...slug].md.ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "packages/web/src/pages/[...slug].md.ts",
+      "lineRange": [
+        19,
+        34
+      ],
+      "summary": "文档与分享网站的[...slug].md处理函数 GET，调用 getCollection、docs.find、notFoundText 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "文档与分享网站"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/src/pages/s/[id].astro",
+      "type": "file",
+      "name": "[id].astro",
+      "filePath": "packages/web/src/pages/s/[id].astro",
+      "summary": "文档与分享网站的[id]实现模块，配置 js-base64、@astrojs/starlight/components/StarlightPage.astro、opencode/session/index 相关模块。",
+      "tags": [
+        "界面组件",
+        "文档与分享网站",
+        "[id]"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/web/src/styles/custom.css",
+      "type": "file",
+      "name": "custom.css",
+      "filePath": "packages/web/src/styles/custom.css",
+      "summary": "文档与分享网站的custom样式，定义 .header、.sl-markdown-content、#starlight__on-this-page--mobile、.starlight-aside__title、.page-description 等选择器的布局、视觉状态与响应式显示。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "custom"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/web/src/types/lang-map.d.ts",
+      "type": "file",
+      "name": "lang-map.d.ts",
+      "filePath": "packages/web/src/types/lang-map.d.ts",
+      "summary": "文档与分享网站的环境类型声明，补充模块和资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "lang-map.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/src/types/starlight-virtual.d.ts",
+      "type": "file",
+      "name": "starlight-virtual.d.ts",
+      "filePath": "packages/web/src/types/starlight-virtual.d.ts",
+      "summary": "文档与分享网站的环境类型声明，补充模块和资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "starlight-virtual.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/web/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/web/sst-env.d.ts",
+      "summary": "文档与分享网站的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "文档与分享网站",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Famazon-bedrock@4.0.166.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Famazon-bedrock@4.0.166.patch",
+      "filePath": "patches/@ai-sdk%2Famazon-bedrock@4.0.166.patch",
+      "summary": "针对 @ai-sdk/amazon-bedrock@4.0.166 的依赖补丁，修改 dist/index.d.mts、dist/index.d.ts、dist/index.js、dist/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Famazon-bedrock@4.0.166"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fanthropic@3.0.111.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fanthropic@3.0.111.patch",
+      "filePath": "patches/@ai-sdk%2Fanthropic@3.0.111.patch",
+      "summary": "针对 @ai-sdk/anthropic@3.0.111 的依赖补丁，修改 dist/index.d.mts、dist/index.d.ts、dist/index.js、dist/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fanthropic@3.0.111"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fgoogle@3.0.73.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fgoogle@3.0.73.patch",
+      "filePath": "patches/@ai-sdk%2Fgoogle@3.0.73.patch",
+      "summary": "针对 @ai-sdk/google@3.0.73 的依赖补丁，修改 dist/index.js、dist/index.mjs、dist/internal/index.js、dist/internal/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fgoogle@3.0.73"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fgroq@3.0.31.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fgroq@3.0.31.patch",
+      "filePath": "patches/@ai-sdk%2Fgroq@3.0.31.patch",
+      "summary": "针对 @ai-sdk/groq@3.0.31 的依赖补丁，修改 dist/index.d.mts、dist/index.d.ts、dist/index.js、dist/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fgroq@3.0.31"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fmistral@3.0.51.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fmistral@3.0.51.patch",
+      "filePath": "patches/@ai-sdk%2Fmistral@3.0.51.patch",
+      "summary": "针对 @ai-sdk/mistral@3.0.51 的依赖补丁，修改 dist/index.d.mts、dist/index.d.ts、dist/index.js、dist/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fmistral@3.0.51"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fopenai-compatible@2.0.41.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fopenai-compatible@2.0.41.patch",
+      "filePath": "patches/@ai-sdk%2Fopenai-compatible@2.0.41.patch",
+      "summary": "针对 @ai-sdk/openai-compatible@2.0.41 的依赖补丁，修改 dist/index.js、dist/index.mjs、src/chat/openai-compatible-chat-language-model.ts，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fopenai-compatible@2.0.41"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:patches/@ai-sdk%2Fxai@3.0.102.patch",
+      "type": "file",
+      "name": "@ai-sdk%2Fxai@3.0.102.patch",
+      "filePath": "patches/@ai-sdk%2Fxai@3.0.102.patch",
+      "summary": "针对 @ai-sdk/xai@3.0.102 的依赖补丁，修改 dist/index.d.mts、dist/index.d.ts、dist/index.js、dist/index.mjs，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@ai-sdk%2Fxai@3.0.102"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:patches/@dnd-kit%2Fdom@0.5.0.patch",
+      "type": "file",
+      "name": "@dnd-kit%2Fdom@0.5.0.patch",
+      "filePath": "patches/@dnd-kit%2Fdom@0.5.0.patch",
+      "summary": "针对 @dnd-kit/dom@0.5.0 的依赖补丁，修改 补丁列出的包文件，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@dnd-kit%2Fdom@0.5.0"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:patches/@modelcontextprotocol%2Fsdk@1.29.0.patch",
+      "type": "file",
+      "name": "@modelcontextprotocol%2Fsdk@1.29.0.patch",
+      "filePath": "patches/@modelcontextprotocol%2Fsdk@1.29.0.patch",
+      "summary": "针对 @modelcontextprotocol/sdk@1.29.0 的依赖补丁，修改 dist/cjs/client/index.d.ts、dist/esm/client/index.d.ts、dist/cjs/client/index.js、dist/cjs/client/streamableHttp.js，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@modelcontextprotocol%2Fsdk@1.29.0"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:patches/@npmcli%2Fagent@4.0.2.patch",
+      "type": "file",
+      "name": "@npmcli%2Fagent@4.0.2.patch",
+      "filePath": "patches/@npmcli%2Fagent@4.0.2.patch",
+      "summary": "针对 @npmcli/agent@4.0.2 的依赖补丁，修改 lib/agents.js，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@npmcli%2Fagent@4.0.2"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:patches/@pierre%2Ftrees@1.0.0-beta.4.patch",
+      "type": "file",
+      "name": "@pierre%2Ftrees@1.0.0-beta.4.patch",
+      "filePath": "patches/@pierre%2Ftrees@1.0.0-beta.4.patch",
+      "summary": "针对 @pierre/trees@1.0.0-beta.4 的依赖补丁，修改 dist/model/FileTreeController.js、dist/model/internalTypes.d.ts、dist/model/publicTypes.d.ts、dist/render/FileTree.js，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@pierre%2Ftrees@1.0.0-beta.4"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:patches/@silvia-odwyer%2Fphoton-node@0.3.4.patch",
+      "type": "file",
+      "name": "@silvia-odwyer%2Fphoton-node@0.3.4.patch",
+      "filePath": "patches/@silvia-odwyer%2Fphoton-node@0.3.4.patch",
+      "summary": "针对 @silvia-odwyer/photon-node@0.3.4 的依赖补丁，修改 photon_rs.js，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@silvia-odwyer%2Fphoton-node@0.3.4"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:patches/@standard-community%2Fstandard-openapi@0.2.9.patch",
+      "type": "file",
+      "name": "@standard-community%2Fstandard-openapi@0.2.9.patch",
+      "filePath": "patches/@standard-community%2Fstandard-openapi@0.2.9.patch",
+      "summary": "针对 @standard-community/standard-openapi@0.2.9 的依赖补丁，修改 dist/vendors/convert.js，由包管理流程应用。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "@standard-community%2Fstandard-openapi@0.2.9"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/web/src/content.config.ts",
+      "target": "file:packages/web/src/content/i18n/en.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/web/src/i18n/locales.ts",
+      "target": "function:packages/web/src/i18n/locales.ts:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/i18n/locales.ts",
+      "target": "function:packages/web/src/i18n/locales.ts:exactLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/i18n/locales.ts",
+      "target": "function:packages/web/src/i18n/locales.ts:exactLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/web/src/i18n/locales.ts",
+      "target": "function:packages/web/src/i18n/locales.ts:matchLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/i18n/locales.ts",
+      "target": "function:packages/web/src/i18n/locales.ts:matchLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/web/src/i18n/locales.ts:exactLocale",
+      "target": "function:packages/web/src/i18n/locales.ts:parse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/web/src/i18n/locales.ts:matchLocale",
+      "target": "function:packages/web/src/i18n/locales.ts:parse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/web/src/middleware.ts",
+      "target": "function:packages/web/src/middleware.ts:docsAlias",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/middleware.ts",
+      "target": "function:packages/web/src/middleware.ts:redirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/middleware.ts",
+      "target": "function:packages/web/src/middleware.ts:localeFromCookie",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/middleware.ts",
+      "target": "function:packages/web/src/middleware.ts:localeFromAcceptLanguage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/middleware.ts",
+      "target": "file:packages/web/src/i18n/locales.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/web/src/pages/[...slug].md.ts",
+      "target": "function:packages/web/src/pages/[...slug].md.ts:notFoundText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/pages/[...slug].md.ts",
+      "target": "function:packages/web/src/pages/[...slug].md.ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/web/src/pages/[...slug].md.ts",
+      "target": "function:packages/web/src/pages/[...slug].md.ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/web/src/pages/[...slug].md.ts:GET",
+      "target": "function:packages/web/src/pages/[...slug].md.ts:notFoundText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

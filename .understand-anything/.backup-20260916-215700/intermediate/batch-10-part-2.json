@@ -1,0 +1,1469 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "packages/app/src/pages/layout.tsx",
+      "summary": "实现应用的布局界面及相关交互。 对外提供 LegacyLayout。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "type": "function",
+      "name": "LegacyLayout",
+      "filePath": "packages/app/src/pages/layout.tsx",
+      "lineRange": [
+        86,
+        2410
+      ],
+      "summary": "渲染旧版布局组件，组织布局的界面内容和交互；使用 useServerSDK、persisted、Persist.serverGlobal、serverSDK 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout.tsx:UpdateAvailableToast",
+      "type": "function",
+      "name": "UpdateAvailableToast",
+      "filePath": "packages/app/src/pages/layout.tsx",
+      "lineRange": [
+        2412,
+        2444
+      ],
+      "summary": "渲染更新Available通知组件，组织布局的界面内容和交互；使用 onMount、showToast、props.language.t、onCleanup 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/deep-links.ts",
+      "type": "file",
+      "name": "deep-links.ts",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "summary": "为 app 提供deeplinks相关数据处理接口。 对外提供 deepLinkEvent、parseDeepLink、parseNewSessionDeepLink、collectOpenProjectDeepLinks、collectNewSessionDeepLinks、drainPendingDeepLinks。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/deep-links.ts:parseDeepLink",
+      "type": "function",
+      "name": "parseDeepLink",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "lineRange": [
+        13,
+        20
+      ],
+      "summary": "解析Deep链接，调用 parseUrl、url.searchParams.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/deep-links.ts:parseNewSessionDeepLink",
+      "type": "function",
+      "name": "parseNewSessionDeepLink",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "lineRange": [
+        22,
+        31
+      ],
+      "summary": "解析新建会话Deep链接，调用 parseUrl、url.searchParams.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/deep-links.ts:collectOpenProjectDeepLinks",
+      "type": "function",
+      "name": "collectOpenProjectDeepLinks",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "lineRange": [
+        33,
+        34
+      ],
+      "summary": "收集打开项目DeepLinks，调用 urls.map 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/deep-links.ts:collectNewSessionDeepLinks",
+      "type": "function",
+      "name": "collectNewSessionDeepLinks",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "lineRange": [
+        36,
+        37
+      ],
+      "summary": "收集新建会话DeepLinks，调用 urls.map 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/deep-links.ts:drainPendingDeepLinks",
+      "type": "function",
+      "name": "drainPendingDeepLinks",
+      "filePath": "packages/app/src/pages/layout/deep-links.ts",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "实现 drainPendingDeepLinks 的deeplinks操作，输入包括 target。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "type": "file",
+      "name": "helpers.test.ts",
+      "filePath": "packages/app/src/pages/layout/helpers.test.ts",
+      "summary": "验证辅助函数相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“layout deep links”、“parses open-project deep links”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.test.ts:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "packages/app/src/pages/layout/helpers.test.ts",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "构造会话测试数据，由 input 指定场景参数，用于辅助函数测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "file",
+      "name": "helpers.ts",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "summary": "为 app 提供辅助函数相关数据处理接口。 对外提供 compareSessionTime、roots、sortedRootSessions、latestRootSession、hasProjectPermissions、childSessionOnPath。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:compareSessionTime",
+      "type": "function",
+      "name": "compareSessionTime",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        12,
+        16
+      ],
+      "summary": "比较会话时间，输入包括 a、b。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:roots",
+      "type": "function",
+      "name": "roots",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        21,
+        22
+      ],
+      "summary": "实现 roots 的辅助函数操作，调用 isRootVisibleSession 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "function",
+      "name": "sortedRootSessions",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "实现 sortedRootSessions 的辅助函数操作，调用 roots 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:latestRootSession",
+      "type": "function",
+      "name": "latestRootSession",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        26,
+        27
+      ],
+      "summary": "实现 latestRootSession 的辅助函数操作，调用 stores.flatMap 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:hasProjectPermissions",
+      "type": "function",
+      "name": "hasProjectPermissions",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "检查是否存在项目权限，调用 list?.some 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:childSessionOnPath",
+      "type": "function",
+      "name": "childSessionOnPath",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        36,
+        47
+      ],
+      "summary": "实现 childSessionOnPath 的辅助函数操作，调用 map.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "function",
+      "name": "displayName",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        49,
+        50
+      ],
+      "summary": "实现 displayName 的辅助函数操作，调用 getFilename 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:toggleHomeProjectSelection",
+      "type": "function",
+      "name": "toggleHomeProjectSelection",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        52,
+        59
+      ],
+      "summary": "切换首页项目选择，输入包括 current、server、directory。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:closeHomeProject",
+      "type": "function",
+      "name": "closeHomeProject",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        61,
+        70
+      ],
+      "summary": "关闭首页项目，调用 projects.close 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:homeProjectNavigation",
+      "type": "function",
+      "name": "homeProjectNavigation",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        72,
+        75
+      ],
+      "summary": "实现 homeProjectNavigation 的辅助函数操作，输入包括 active、server、href。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:homeProjectDirectories",
+      "type": "function",
+      "name": "homeProjectDirectories",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        77,
+        80
+      ],
+      "summary": "实现 homeProjectDirectories 的辅助函数操作，输入包括 result。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:homeSessionServerStatus",
+      "type": "function",
+      "name": "homeSessionServerStatus",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        82,
+        85
+      ],
+      "summary": "实现 homeSessionServerStatus 的辅助函数操作，调用 status 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:getProjectAvatarSource",
+      "type": "function",
+      "name": "getProjectAvatarSource",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        89,
+        94
+      ],
+      "summary": "读取项目头像源内容，输入包括 id、icon。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:projectForSession",
+      "type": "function",
+      "name": "projectForSession",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        96,
+        108
+      ],
+      "summary": "实现 projectForSession 的辅助函数操作，调用 projects.flatMap、byID.get、pathKey、projects.find 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:errorMessage",
+      "type": "function",
+      "name": "errorMessage",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        110,
+        117
+      ],
+      "summary": "实现 errorMessage 的辅助函数操作，输入包括 err、fallback。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/helpers.ts:effectiveWorkspaceOrder",
+      "type": "function",
+      "name": "effectiveWorkspaceOrder",
+      "filePath": "packages/app/src/pages/layout/helpers.ts",
+      "lineRange": [
+        119,
+        142
+      ],
+      "summary": "实现 effectiveWorkspaceOrder 的辅助函数操作，调用 pathKey、live.has、live.set、live.values 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/inline-editor.tsx",
+      "type": "file",
+      "name": "inline-editor.tsx",
+      "filePath": "packages/app/src/pages/layout/inline-editor.tsx",
+      "summary": "实现应用的行内editor界面及相关交互。 对外提供 createInlineEditorController。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/inline-editor.tsx:createInlineEditorController",
+      "type": "function",
+      "name": "createInlineEditorController",
+      "filePath": "packages/app/src/pages/layout/inline-editor.tsx",
+      "lineRange": [
+        5,
+        126
+      ],
+      "summary": "创建行内Editor控制器，调用 createStore 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "type": "file",
+      "name": "project-avatar-state.ts",
+      "filePath": "packages/app/src/pages/layout/project-avatar-state.ts",
+      "summary": "为 app 提供项目头像状态相关数据处理接口。 对外提供 useSessionTabAvatarState。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "type": "function",
+      "name": "useSessionTabAvatarState",
+      "filePath": "packages/app/src/pages/layout/project-avatar-state.ts",
+      "lineRange": [
+        8,
+        49
+      ],
+      "summary": "连接会话标签页头像状态，调用 useGlobal、useNotification、usePermission、createMemo 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "type": "file",
+      "name": "session-tab-avatar.tsx",
+      "filePath": "packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "summary": "实现应用的会话标签页头像界面及相关交互。 对外提供 SessionTabAvatar、SessionTabAvatarView。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatar",
+      "type": "function",
+      "name": "SessionTabAvatar",
+      "filePath": "packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "lineRange": [
+        10,
+        31
+      ],
+      "summary": "渲染会话标签页头像组件，组织会话标签页头像的界面内容和交互；使用 useSessionTabAvatarState、state.unread、state.loading 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatarView",
+      "type": "function",
+      "name": "SessionTabAvatarView",
+      "filePath": "packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "lineRange": [
+        33,
+        60
+      ],
+      "summary": "渲染会话标签页头像View组件，组织会话标签页头像的界面内容和交互；使用 projectAvatar 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "function:packages/app/src/pages/layout.tsx:UpdateAvailableToast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/components/debug-bar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/components/directory-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/components/help-button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/components/titlebar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/context/terminal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/hooks/use-providers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/deep-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/inline-editor.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/sidebar-project.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/sidebar-shell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/layout/sidebar-workspace.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/pages/session/handoff.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/aim.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/base64.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/solid-dnd.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/sound.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout.tsx",
+      "target": "file:packages/app/src/utils/worktree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/components/directory-picker.tsx:useDirectoryPicker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/hooks/use-providers.ts:useProviders",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/toast.tsx:setV2Toast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/pages/layout/inline-editor.tsx:createInlineEditorController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/aim.ts:createAim",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:LegacyLayout",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:drainPendingDeepLinks",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:UpdateAvailableToast",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout.tsx:UpdateAvailableToast",
+      "target": "function:packages/app/src/utils/toast.tsx:dismissToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:parseDeepLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:parseDeepLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:parseNewSessionDeepLink",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:parseNewSessionDeepLink",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:collectOpenProjectDeepLinks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:collectOpenProjectDeepLinks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:collectNewSessionDeepLinks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:collectNewSessionDeepLinks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:drainPendingDeepLinks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "function:packages/app/src/pages/layout/deep-links.ts:drainPendingDeepLinks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.test.ts:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "target": "file:packages/app/src/pages/layout/deep-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/deep-links.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/path-key.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:compareSessionTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:compareSessionTime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:roots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:roots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:latestRootSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:latestRootSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:hasProjectPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:hasProjectPermissions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:childSessionOnPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:childSessionOnPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:toggleHomeProjectSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:toggleHomeProjectSelection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:closeHomeProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:closeHomeProject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeProjectNavigation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeProjectNavigation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeProjectDirectories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeProjectDirectories",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeSessionServerStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeSessionServerStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:getProjectAvatarSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:getProjectAvatarSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:projectForSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:projectForSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:errorMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:errorMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:effectiveWorkspaceOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:effectiveWorkspaceOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/helpers.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/helpers.ts:sortedRootSessions",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:roots",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/helpers.ts:projectForSession",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/helpers.ts:effectiveWorkspaceOrder",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/inline-editor.tsx",
+      "target": "function:packages/app/src/pages/layout/inline-editor.tsx:createInlineEditorController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/inline-editor.tsx",
+      "target": "function:packages/app/src/pages/layout/inline-editor.tsx:createInlineEditorController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "target": "file:packages/app/src/pages/session/composer/session-request-tree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "target": "function:packages/app/src/pages/session/composer/session-request-tree.ts:sessionPermissionRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "target": "function:packages/app/src/pages/session/composer/session-request-tree.ts:sessionQuestionRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatarView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatarView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "target": "file:packages/app/src/pages/layout/project-avatar-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/layout/session-tab-avatar.tsx:SessionTabAvatar",
+      "target": "function:packages/app/src/pages/layout/project-avatar-state.ts:useSessionTabAvatarState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

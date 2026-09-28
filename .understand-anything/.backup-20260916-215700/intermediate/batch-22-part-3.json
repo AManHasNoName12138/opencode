@@ -1,0 +1,1629 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "type": "file",
+      "name": "lifecycle.ts",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "summary": "集中生成 provider turn 的开始、文本/推理增量及结束事件，关闭仍然打开的内容块，保证各协议的事件生命周期一致。",
+      "tags": [
+        "typescript",
+        "序列化",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:initial",
+      "type": "function",
+      "name": "initial",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 initial。",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "function",
+      "name": "stepStart",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        11,
+        15
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 stepStart，接收 state、events 参数；调用 events.push、LLMEvent.stepStart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:textDelta",
+      "type": "function",
+      "name": "textDelta",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        17,
+        25
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 textDelta，接收 state、events、id、text 参数；调用 stepStart、stepped.text.has、events.push、LLMEvent.textDelta、LLMEvent.textStart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningStart",
+      "type": "function",
+      "name": "reasoningStart",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        27,
+        37
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 reasoningStart，接收 state、events、id、providerMetadata 参数；调用 state.reasoning.has、stepStart、events.push、LLMEvent.reasoningStart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningDelta",
+      "type": "function",
+      "name": "reasoningDelta",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        39,
+        49
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 reasoningDelta，接收 state、events、id、text、providerMetadata 参数；调用 reasoningStart、events.push、LLMEvent.reasoningDelta 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningEnd",
+      "type": "function",
+      "name": "reasoningEnd",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 reasoningEnd，接收 state、events、id、providerMetadata 参数；调用 state.reasoning.has、stepStart、events.push、LLMEvent.reasoningEnd、reasoning.delete 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:textEnd",
+      "type": "function",
+      "name": "textEnd",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        65,
+        72
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 textEnd，接收 state、events、id、providerMetadata 参数；调用 state.text.has、stepStart、events.push、LLMEvent.textEnd、text.delete 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/lifecycle.ts:finish",
+      "type": "function",
+      "name": "finish",
+      "filePath": "packages/llm/src/protocols/utils/lifecycle.ts",
+      "lineRange": [
+        80,
+        100
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 finish，接收 state、events、input 参数；调用 closeOpenBlocks、stepStart、events.push、LLMEvent.stepFinish、LLMEvent.finish 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "type": "file",
+      "name": "openai-options.ts",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "summary": "在LLM 协议转换辅助层中提供 OpenAIReasoningEfforts、OpenAIResponseIncludables、OpenAIServiceTiers、OpenAIReasoningEffort、OpenAITextVerbosity、OpenAIResponseIncludable、OpenAIServiceTier；内部处理包含 isAnyReasoningEffort、isReasoningEffort、isTextVerbosity、options、store、reasoningEffort、reasoningSummary。",
+      "tags": [
+        "typescript",
+        "序列化",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:isReasoningEffort",
+      "type": "function",
+      "name": "isReasoningEffort",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        40,
+        41
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 isReasoningEffort，接收 effort 参数；调用 OPENAI_REASONING_EFFORTS.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:store",
+      "type": "function",
+      "name": "store",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        48,
+        51
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 store，接收 request 参数；调用 options 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningEffort",
+      "type": "function",
+      "name": "reasoningEffort",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        53,
+        56
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 reasoningEffort，接收 request 参数；调用 options、isAnyReasoningEffort 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningSummary",
+      "type": "function",
+      "name": "reasoningSummary",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        58,
+        59
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 reasoningSummary，接收 request 参数；调用 options 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:include",
+      "type": "function",
+      "name": "include",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        66,
+        71
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 include，接收 request 参数；调用 options、Array.isArray、value.filter、INCLUDABLES.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:promptCacheKey",
+      "type": "function",
+      "name": "promptCacheKey",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        73,
+        76
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 promptCacheKey，接收 request 参数；调用 options 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:textVerbosity",
+      "type": "function",
+      "name": "textVerbosity",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        78,
+        81
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 textVerbosity，接收 request 参数；调用 options、isTextVerbosity 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:serviceTier",
+      "type": "function",
+      "name": "serviceTier",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        83,
+        86
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 serviceTier，接收 request 参数；调用 options、SERVICE_TIERS.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/openai-options.ts:instructions",
+      "type": "function",
+      "name": "instructions",
+      "filePath": "packages/llm/src/protocols/utils/openai-options.ts",
+      "lineRange": [
+        88,
+        91
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 instructions，接收 request 参数；调用 options 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "type": "file",
+      "name": "tool-schema.ts",
+      "filePath": "packages/llm/src/protocols/utils/tool-schema.ts",
+      "summary": "按模型兼容性投影工具输入 Schema，处理 null、元组和 Moonshot/OpenAI/Gemini 特有约束，统一对外提供 ToolSchemaProjection。",
+      "tags": [
+        "typescript",
+        "序列化",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-schema.ts:removeNullSchemas",
+      "type": "function",
+      "name": "removeNullSchemas",
+      "filePath": "packages/llm/src/protocols/utils/tool-schema.ts",
+      "lineRange": [
+        5,
+        17
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 removeNullSchemas，接收 value 参数；调用 Array.isArray、value.map、isRecord、Object.fromEntries、Object.entries、removeNullSchemas、value.anyOf.filter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-schema.ts:moonshotNode",
+      "type": "function",
+      "name": "moonshotNode",
+      "filePath": "packages/llm/src/protocols/utils/tool-schema.ts",
+      "lineRange": [
+        26,
+        41
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 moonshotNode，接收 schema 参数；调用 Array.isArray、schema.map、isRecord、Object.fromEntries、Object.entries、tupleItemsSchema、moonshotNode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-schema.ts:openAI",
+      "type": "function",
+      "name": "openAI",
+      "filePath": "packages/llm/src/protocols/utils/tool-schema.ts",
+      "lineRange": [
+        48,
+        64
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 openAI，接收 schema 参数；调用 Array.isArray、schema.anyOf.filter、Object.fromEntries、Object.entries、variants.reduce、isRecord、removeNullSchemas 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-schema.ts:modelCompatibility",
+      "type": "function",
+      "name": "modelCompatibility",
+      "filePath": "packages/llm/src/protocols/utils/tool-schema.ts",
+      "lineRange": [
+        68,
+        79
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 modelCompatibility，接收 schema、compatibility 参数；调用 gemini、moonshot 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "type": "file",
+      "name": "tool-stream.ts",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "summary": "维护工具输入的流式状态，支持开始、追加参数片段、补齐输入与结束全部工具调用，并输出对应统一工具事件。",
+      "tags": [
+        "typescript",
+        "序列化",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:empty",
+      "type": "function",
+      "name": "empty",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        40,
+        40
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 empty。",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "type": "function",
+      "name": "toolCall",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        66,
+        78
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 toolCall，接收 route、tool、inputOverride 参数；调用 parseToolInput、Effect.map、LLMEvent.toolCall 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendTool",
+      "type": "function",
+      "name": "appendTool",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        81,
+        95
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 appendTool，接收 tools、key、tool、text 参数；调用 events.push、inputStart、inputDelta、withTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:isError",
+      "type": "function",
+      "name": "isError",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        97,
+        98
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 isError，接收 result 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:start",
+      "type": "function",
+      "name": "start",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        105,
+        109
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 start，接收 tools、key、tool 参数；调用 withTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendOrStart",
+      "type": "function",
+      "name": "appendOrStart",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        117,
+        139
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 appendOrStart，接收 route、tools、key、delta、missingToolMessage 参数；调用 eventError、appendTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendExisting",
+      "type": "function",
+      "name": "appendExisting",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        146,
+        157
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 appendExisting，接收 route、tools、key、text、missingToolMessage 参数；调用 eventError、appendTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:finish",
+      "type": "function",
+      "name": "finish",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        164,
+        175
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 finish，接收 route、tools、key 参数；调用 Effect.gen、withoutTool、LLMEvent.toolInputEnd、toolCall 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishWithInput",
+      "type": "function",
+      "name": "finishWithInput",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        182,
+        193
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 finishWithInput，接收 route、tools、key、input 参数；调用 Effect.gen、withoutTool、LLMEvent.toolInputEnd、toolCall 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishAll",
+      "type": "function",
+      "name": "finishAll",
+      "filePath": "packages/llm/src/protocols/utils/tool-stream.ts",
+      "lineRange": [
+        200,
+        216
+      ],
+      "summary": "在LLM 协议转换辅助层中执行 finishAll，接收 route、tools 参数；调用 Effect.gen、Object.values、empty、Effect.forEach、toolCall、Effect.map、LLMEvent.toolInputEnd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "序列化"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/provider-error.ts",
+      "type": "file",
+      "name": "provider-error.ts",
+      "filePath": "packages/llm/src/provider-error.ts",
+      "summary": "在packages/llm中提供 isContextOverflow、isContextOverflowFailure 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/provider-error.ts:isContextOverflow",
+      "type": "function",
+      "name": "isContextOverflow",
+      "filePath": "packages/llm/src/provider-error.ts",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "在packages/llm中执行 isContextOverflow，接收 message 参数；调用 exclusions.some、pattern.test、patterns.some 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/provider-error.ts:isContextOverflowFailure",
+      "type": "function",
+      "name": "isContextOverflowFailure",
+      "filePath": "packages/llm/src/provider-error.ts",
+      "lineRange": [
+        40,
+        43
+      ],
+      "summary": "在packages/llm中执行 isContextOverflowFailure，接收 failure 参数；调用 Schema.is 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/provider.ts",
+      "type": "file",
+      "name": "provider.ts",
+      "filePath": "packages/llm/src/provider.ts",
+      "summary": "在packages/llm中提供 make 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/provider.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/llm/src/provider.ts",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "在packages/llm中执行 make，接收 definition 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "type": "file",
+      "name": "amazon-bedrock.ts",
+      "filePath": "packages/llm/src/providers/amazon-bedrock.ts",
+      "summary": "配置 id、routes、configure、provider、model 提供方接口，通过 bedrockBaseURL、configuredRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/amazon-bedrock.ts:configuredRoute",
+      "type": "function",
+      "name": "configuredRoute",
+      "filePath": "packages/llm/src/providers/amazon-bedrock.ts",
+      "lineRange": [
+        22,
+        31
+      ],
+      "summary": "在模型提供方与路由配置中执行 configuredRoute，接收 input 参数；调用 BedrockConverse.route.with、bedrockBaseURL、BedrockConverse.sigV4Auth、Auth.bearer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/amazon-bedrock.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/amazon-bedrock.ts",
+      "lineRange": [
+        33,
+        40
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredRoute、route.model 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "file",
+      "name": "anthropic.ts",
+      "filePath": "packages/llm/src/providers/anthropic.ts",
+      "summary": "配置 id、routes、configure、provider、model 提供方接口，通过 auth、configuredRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/anthropic.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/anthropic.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredRoute、route.model 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/providers/azure.ts",
+      "type": "file",
+      "name": "azure.ts",
+      "filePath": "packages/llm/src/providers/azure.ts",
+      "summary": "配置 id、routes、configure、provider 提供方接口，通过 resourceBaseURL、defaults、auth、configuredRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/providers/azure.ts:defaults",
+      "type": "function",
+      "name": "defaults",
+      "filePath": "packages/llm/src/providers/azure.ts",
+      "lineRange": [
+        48,
+        63
+      ],
+      "summary": "在模型提供方与路由配置中执行 defaults，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/azure.ts:configuredRoute",
+      "type": "function",
+      "name": "configuredRoute",
+      "filePath": "packages/llm/src/providers/azure.ts",
+      "lineRange": [
+        74,
+        85
+      ],
+      "summary": "在模型提供方与路由配置中执行 configuredRoute，接收 route、input 参数；调用 route.with、auth、resourceBaseURL 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/azure.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/azure.ts",
+      "lineRange": [
+        87,
+        105
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredRoute、defaults、chat、responses 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:initial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:initial",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:textDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:textDelta",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningDelta",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningEnd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:textEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:textEnd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:finish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:finish",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/lifecycle.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:isReasoningEffort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:isReasoningEffort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:store",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningEffort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningEffort",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:reasoningSummary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:include",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:include",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:promptCacheKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:promptCacheKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:textVerbosity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:textVerbosity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:serviceTier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:serviceTier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:instructions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "function:packages/llm/src/protocols/utils/openai-options.ts:instructions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/openai-options.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-schema.ts:removeNullSchemas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-schema.ts:moonshotNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-schema.ts:openAI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-schema.ts:modelCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "file:packages/llm/src/protocols/utils/gemini-tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "target": "file:packages/llm/src/utils/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:empty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:empty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:isError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:isError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendOrStart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendOrStart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendExisting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendExisting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finish",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishWithInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishWithInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishAll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/provider-error.ts",
+      "target": "function:packages/llm/src/provider-error.ts:isContextOverflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/provider-error.ts",
+      "target": "function:packages/llm/src/provider-error.ts:isContextOverflow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/provider-error.ts",
+      "target": "function:packages/llm/src/provider-error.ts:isContextOverflowFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/provider-error.ts",
+      "target": "function:packages/llm/src/provider-error.ts:isContextOverflowFailure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/provider-error.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/provider.ts",
+      "target": "function:packages/llm/src/provider.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/provider.ts",
+      "target": "function:packages/llm/src/provider.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/provider.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "function:packages/llm/src/providers/amazon-bedrock.ts:configuredRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "function:packages/llm/src/providers/amazon-bedrock.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "function:packages/llm/src/providers/amazon-bedrock.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "file:packages/llm/src/protocols/bedrock-converse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "function:packages/llm/src/providers/anthropic.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "function:packages/llm/src/providers/anthropic.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "function:packages/llm/src/providers/azure.ts:defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "function:packages/llm/src/providers/azure.ts:configuredRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "function:packages/llm/src/providers/azure.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "function:packages/llm/src/providers/azure.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/providers/openai-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:textDelta",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningStart",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningDelta",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:reasoningEnd",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:textEnd",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/lifecycle.ts:finish",
+      "target": "function:packages/llm/src/protocols/utils/lifecycle.ts:stepStart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-schema.ts:removeNullSchemas",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-schema.ts:moonshotNode",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-schema.ts:openAI",
+      "target": "function:packages/llm/src/utils/record.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-schema.ts:openAI",
+      "target": "function:packages/llm/src/protocols/utils/tool-schema.ts:removeNullSchemas",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "target": "function:packages/llm/src/protocols/shared.ts:parseToolInput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendOrStart",
+      "target": "function:packages/llm/src/protocols/shared.ts:eventError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendOrStart",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendExisting",
+      "target": "function:packages/llm/src/protocols/shared.ts:eventError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendExisting",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:appendTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:finish",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishWithInput",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishAll",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:empty",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/protocols/utils/tool-stream.ts:finishAll",
+      "target": "function:packages/llm/src/protocols/utils/tool-stream.ts:toolCall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/providers/amazon-bedrock.ts:configure",
+      "target": "function:packages/llm/src/providers/amazon-bedrock.ts:configuredRoute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/providers/azure.ts:configure",
+      "target": "function:packages/llm/src/providers/azure.ts:configuredRoute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/providers/azure.ts:configure",
+      "target": "function:packages/llm/src/providers/azure.ts:defaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

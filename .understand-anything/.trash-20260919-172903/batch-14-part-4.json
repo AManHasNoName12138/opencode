@@ -1,0 +1,1168 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/config/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "summary": "在配置解析与兼容层中提供 Service、use、node；内部处理包含 mergeConfig、mergeConfigConcatArrays、normalizeLoadedConfig、substituteWellKnownRemoteConfig、resolveLoadedPlugins、globalConfigFile、patchJsonc。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:normalizeLoadedConfig",
+      "type": "function",
+      "name": "normalizeLoadedConfig",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        54,
+        63
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeLoadedConfig，接收 data 参数；调用 isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:substituteWellKnownRemoteConfig",
+      "type": "function",
+      "name": "substituteWellKnownRemoteConfig",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        65,
+        100
+      ],
+      "summary": "在配置解析与兼容层中执行 substituteWellKnownRemoteConfig，接收 input 参数；调用 isRecord、ConfigVariable.substitute、Object.fromEntries、Promise.all、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/config.ts:patchJsonc",
+      "type": "function",
+      "name": "patchJsonc",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        150,
+        162
+      ],
+      "summary": "在配置解析与兼容层中执行 patchJsonc，接收 input、patch、path 参数；调用 isRecord、modify、applyEdits、Object.entries、patchJsonc 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/config/config.ts",
+      "lineRange": [
+        136,
+        136
+      ],
+      "summary": "在配置解析与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/managed.ts",
+      "type": "file",
+      "name": "managed.ts",
+      "filePath": "packages/opencode/src/config/managed.ts",
+      "summary": "在配置解析与兼容层中提供 managedConfigDir、parseManagedPlist、readManagedPreferences；内部处理包含 systemManagedConfigDir、managedConfigDir、parseManagedPlist、readManagedPreferences。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/config/managed.ts:systemManagedConfigDir",
+      "type": "function",
+      "name": "systemManagedConfigDir",
+      "filePath": "packages/opencode/src/config/managed.ts",
+      "lineRange": [
+        20,
+        29
+      ],
+      "summary": "在配置解析与兼容层中执行 systemManagedConfigDir；调用 path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/managed.ts:managedConfigDir",
+      "type": "function",
+      "name": "managedConfigDir",
+      "filePath": "packages/opencode/src/config/managed.ts",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "在配置解析与兼容层中执行 managedConfigDir；调用 systemManagedConfigDir 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/managed.ts:parseManagedPlist",
+      "type": "function",
+      "name": "parseManagedPlist",
+      "filePath": "packages/opencode/src/config/managed.ts",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "在配置解析与兼容层中执行 parseManagedPlist，接收 json 参数；调用 JSON.parse、Object.keys、PLIST_META.has、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/managed.ts:readManagedPreferences",
+      "type": "function",
+      "name": "readManagedPreferences",
+      "filePath": "packages/opencode/src/config/managed.ts",
+      "lineRange": [
+        43,
+        69
+      ],
+      "summary": "在配置解析与兼容层中执行 readManagedPreferences；调用 os.userInfo、path.join、existsSync、Process.run、parseManagedPlist、result.stdout.toString 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/parse.ts",
+      "type": "file",
+      "name": "parse.ts",
+      "filePath": "packages/opencode/src/config/parse.ts",
+      "summary": "在配置解析与兼容层中提供 jsonc、schema 等接口。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/config/parse.ts:jsonc",
+      "type": "function",
+      "name": "jsonc",
+      "filePath": "packages/opencode/src/config/parse.ts",
+      "lineRange": [
+        8,
+        33
+      ],
+      "summary": "在配置解析与兼容层中执行 jsonc，接收 text、filepath 参数；调用 parseJsoncImpl、text.split、text.substring、printParseErrorCode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/parse.ts:schema",
+      "type": "function",
+      "name": "schema",
+      "filePath": "packages/opencode/src/config/parse.ts",
+      "lineRange": [
+        35,
+        61
+      ],
+      "summary": "在配置解析与兼容层中执行 schema，接收 schema、data、source 参数；调用 EffectSchema.decodeUnknownExit、Exit.isSuccess、Cause.squash、EffectSchema.isSchemaError、SchemaIssue.makeFormatterStandardSchemaV1、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "file",
+      "name": "v2-compat.ts",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "summary": "在配置解析与兼容层中提供 lower；内部处理包含 lower、normalizeSettings、normalizeModel、normalizeSkills、normalizeCompaction、normalizeExperimental、normalizeAgents。",
+      "tags": [
+        "typescript",
+        "配置",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "type": "function",
+      "name": "lower",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        91,
+        132
+      ],
+      "summary": "在配置解析与兼容层中执行 lower，接收 input、source 参数；调用 decodeRecord、Option.isNone、Object.hasOwn、Object.entries、Option.isSome、permissions.map、unsupported 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeSettings",
+      "type": "function",
+      "name": "normalizeSettings",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        134,
+        143
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeSettings，接收 input、result、diagnostics 参数；调用 Object.hasOwn、decodeValue、preferLegacy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeCompaction",
+      "type": "function",
+      "name": "normalizeCompaction",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        164,
+        185
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeCompaction，接收 input、result、diagnostics 参数；调用 decodeRecord、Option.isNone、Object.hasOwn、decodeValue、preferLegacy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeExperimental",
+      "type": "function",
+      "name": "normalizeExperimental",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        187,
+        205
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeExperimental，接收 input、result、diagnostics 参数；调用 decodeRecord、Option.isNone、Object.hasOwn、unsupported、decodeValue、preferLegacy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeAgents",
+      "type": "function",
+      "name": "normalizeAgents",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        207,
+        226
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeAgents，接收 input、result、diagnostics 参数；调用 Object.hasOwn、decodeValue、decodeRecord、Option.isSome、Object.entries、isDeepStrictEqual、conflict 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeCommands",
+      "type": "function",
+      "name": "normalizeCommands",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        228,
+        242
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeCommands，接收 input、result、diagnostics 参数；调用 Object.hasOwn、decodeValue、decodeRecord、Option.isNone、Option.isSome、Object.entries、preferLegacy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeMcp",
+      "type": "function",
+      "name": "normalizeMcp",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        244,
+        311
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeMcp，接收 input、result、diagnostics 参数；调用 decodeRecord、Option.isNone、Option.isSome、isDirectServer、Schema.decodeUnknownOption、Object.keys、Object.hasOwn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeServer",
+      "type": "function",
+      "name": "normalizeServer",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        321,
+        332
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeServer，接收 input、path、diagnostics 参数；调用 decodeValue、unsupported、lowerTimeout、Object.keys、decodeRecord、Option.isNone、Object.hasOwn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:normalizeLsp",
+      "type": "function",
+      "name": "normalizeLsp",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        334,
+        348
+      ],
+      "summary": "在配置解析与兼容层中执行 normalizeLsp，接收 input、result、diagnostics 参数；调用 decodeRecord、Option.isNone、Object.fromEntries、Object.entries、builtinServers.has、decodeLspEntry、unsupported 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:lowerSelection",
+      "type": "function",
+      "name": "lowerSelection",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        350,
+        360
+      ],
+      "summary": "在配置解析与兼容层中执行 lowerSelection，接收 input 参数；调用 input.indexOf、input.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:lowerServer",
+      "type": "function",
+      "name": "lowerServer",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        369,
+        394
+      ],
+      "summary": "在配置解析与兼容层中执行 lowerServer，接收 input 参数；调用 lowerTimeout 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:lowerAgent",
+      "type": "function",
+      "name": "lowerAgent",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        396,
+        407
+      ],
+      "summary": "在配置解析与兼容层中执行 lowerAgent，接收 input 参数；调用 Object.assign、lowerSelection 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "function",
+      "name": "decodeValue",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        413,
+        423
+      ],
+      "summary": "在配置解析与兼容层中执行 decodeValue，接收 schema、value、path、diagnostics 参数；调用 Schema.decodeUnknownOption、Option.isSome、diagnostics.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "function",
+      "name": "preferLegacy",
+      "filePath": "packages/opencode/src/config/v2-compat.ts",
+      "lineRange": [
+        425,
+        437
+      ],
+      "summary": "在配置解析与兼容层中执行 preferLegacy，接收 target、key、value、path、diagnostics 参数；调用 Object.hasOwn、isDeepStrictEqual、conflict、setOwn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/control-plane/adapters/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 getAdapter、listAdapters、registeredAdapters、registerAdapter 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/adapters/index.ts:getAdapter",
+      "type": "function",
+      "name": "getAdapter",
+      "filePath": "packages/opencode/src/control-plane/adapters/index.ts",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 getAdapter，接收 projectID、type 参数；调用 state.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/adapters/index.ts:listAdapters",
+      "type": "function",
+      "name": "listAdapters",
+      "filePath": "packages/opencode/src/control-plane/adapters/index.ts",
+      "lineRange": [
+        21,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listAdapters，接收 projectID 参数；调用 registeredAdapters 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/adapters/index.ts:registeredAdapters",
+      "type": "function",
+      "name": "registeredAdapters",
+      "filePath": "packages/opencode/src/control-plane/adapters/index.ts",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 registeredAdapters，接收 projectID 参数；调用 Object.entries、state.get、adapters.set、adapters.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "function",
+      "name": "registerAdapter",
+      "filePath": "packages/opencode/src/control-plane/adapters/index.ts",
+      "lineRange": [
+        37,
+        41
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 registerAdapter，接收 projectID、type、adapter 参数；调用 state.get、adapters.set、state.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/adapters/worktree.ts",
+      "type": "file",
+      "name": "worktree.ts",
+      "filePath": "packages/opencode/src/control-plane/adapters/worktree.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 WorktreeAdapter；内部处理包含 loadWorktree、requireInstance、provideContext。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/opencode/src/control-plane/types.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 WorkspaceInfo、WorkspaceListedInfo、WorkspaceAdapterEntry 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:normalizeLoadedConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:substituteWellKnownRemoteConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "function:packages/opencode/src/config/config.ts:patchJsonc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "class:packages/opencode/src/config/config.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/command.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/managed.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/paths.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/v2-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/config/variable.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/util/effect-http-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/config.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:systemManagedConfigDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:managedConfigDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:managedConfigDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:parseManagedPlist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:parseManagedPlist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:readManagedPreferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "function:packages/opencode/src/config/managed.ts:readManagedPreferences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/managed.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/config/parse.ts",
+      "target": "function:packages/opencode/src/config/parse.ts:jsonc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/parse.ts",
+      "target": "function:packages/opencode/src/config/parse.ts:jsonc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/parse.ts",
+      "target": "function:packages/opencode/src/config/parse.ts:schema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/parse.ts",
+      "target": "function:packages/opencode/src/config/parse.ts:schema",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeCompaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeExperimental",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeAgents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeMcp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeLsp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerAgent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/config/v2-compat.ts",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:getAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:getAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:listAdapters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:listAdapters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registeredAdapters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registeredAdapters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/worktree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/worktree.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/adapters/worktree.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/types.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/config/managed.ts:managedConfigDir",
+      "target": "function:packages/opencode/src/config/managed.ts:systemManagedConfigDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/managed.ts:readManagedPreferences",
+      "target": "function:packages/opencode/src/config/managed.ts:parseManagedPlist",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeSettings",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeCompaction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeExperimental",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeAgents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeMcp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lower",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeLsp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeSettings",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeSettings",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeCompaction",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeCompaction",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeExperimental",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeExperimental",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeAgents",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeAgents",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerAgent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeCommands",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeCommands",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeMcp",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:normalizeServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeMcp",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:preferLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeServer",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:decodeValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:normalizeServer",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/config/v2-compat.ts:lowerAgent",
+      "target": "function:packages/opencode/src/config/v2-compat.ts:lowerSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/control-plane/adapters/index.ts:listAdapters",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registeredAdapters",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

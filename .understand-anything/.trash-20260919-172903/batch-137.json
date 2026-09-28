@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/console/app/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/console/app/README.md",
+      "summary": "控制台网站说明文档，介绍项目用途、安装运行和开发入口。",
+      "tags": [
+        "文档",
+        "控制台网站",
+        "README"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/app/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/app/package.json",
+      "summary": "@opencode-ai/console-app 的包清单，声明 typecheck、dev、dev:remote、build、start 构建或运行命令及依赖。",
+      "tags": [
+        "配置",
+        "控制台网站",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/app/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/console/app/tsconfig.json",
+      "summary": "控制台网站的 TypeScript 编译配置，定义 compilerOptions、target、module、skipLibCheck、moduleResolution、allowSyntheticDefaultImports、esModuleInterop、jsx 等选项。",
+      "tags": [
+        "配置",
+        "控制台网站",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:packages/console/app/package.json",
+      "target": "file:packages/console/app/script/generate-sitemap.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

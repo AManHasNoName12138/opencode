@@ -1,0 +1,1291 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/utils/persist.test.ts",
+      "type": "file",
+      "name": "persist.test.ts",
+      "filePath": "packages/app/src/utils/persist.test.ts",
+      "summary": "验证持久化相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“persist localStorage resilience”、“does not cache values as persisted when quota write and eviction fail”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/app/src/utils/persist.test.ts:MemoryStorage",
+      "type": "class",
+      "name": "MemoryStorage",
+      "filePath": "packages/app/src/utils/persist.test.ts",
+      "lineRange": [
+        8,
+        46
+      ],
+      "summary": "封装 MemoryStorage 的持久化状态和方法，包含 clear、length、key、getItem、setItem、removeItem。",
+      "tags": [
+        "class",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/persist.ts",
+      "type": "file",
+      "name": "persist.ts",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "summary": "为 app 提供持久化相关数据处理接口。 对外提供 draftPersistedKeys、PersistTesting、Persist、removePersisted、persisted。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "function",
+      "name": "cacheSet",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        56,
+        69
+      ],
+      "summary": "实现 cacheSet 的持久化操作，调用 cacheDelete、cache.get、cache.delete、cache.set 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:quota",
+      "type": "function",
+      "name": "quota",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        87,
+        108
+      ],
+      "summary": "实现 quota 的持久化操作，调用 /quota/i.test 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:evict",
+      "type": "function",
+      "name": "evict",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        112,
+        142
+      ],
+      "summary": "实现 evict 的持久化操作，调用 storage.key、name.startsWith、storage.getItem、items.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        144,
+        165
+      ],
+      "summary": "写入持久化，调用 storage.setItem、cacheSet、quota、storage.removeItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:merge",
+      "type": "function",
+      "name": "merge",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        175,
+        199
+      ],
+      "summary": "合并持久化，调用 isRecord、merge 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:readCurrent",
+      "type": "function",
+      "name": "readCurrent",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        217,
+        232
+      ],
+      "summary": "读取当前，调用 input.storage.getItem、normalize、input.storage.removeItem、input.storage.setItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:migrateLegacy",
+      "type": "function",
+      "name": "migrateLegacy",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        234,
+        274
+      ],
+      "summary": "迁移旧版，调用 store.getItem、normalize、store.removeItem、input.current.setItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:readCurrentAsync",
+      "type": "function",
+      "name": "readCurrentAsync",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        276,
+        291
+      ],
+      "summary": "读取当前Async，调用 input.storage.getItem、normalize、input.storage.removeItem、input.storage.setItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:migrateLegacyAsync",
+      "type": "function",
+      "name": "migrateLegacyAsync",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        307,
+        347
+      ],
+      "summary": "迁移旧版Async，调用 store.getItem、normalize、removeAsync、input.current.setItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:legacyWorkspaceStorage",
+      "type": "function",
+      "name": "legacyWorkspaceStorage",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        366,
+        381
+      ],
+      "summary": "实现 legacyWorkspaceStorage 的持久化操作，调用 workspaceStorage、pathKey、result.add、key.replaceAll 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "type": "function",
+      "name": "localStorageWithPrefix",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        388,
+        432
+      ],
+      "summary": "实现 localStorageWithPrefix 的持久化操作，调用 item、cacheGet、fallbackDisabled、localStorage.getItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "type": "function",
+      "name": "localStorageDirect",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        434,
+        473
+      ],
+      "summary": "实现 localStorageDirect 的持久化操作，调用 cacheGet、fallbackDisabled、localStorage.getItem、fallbackSet 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:draftPersistedKeys",
+      "type": "function",
+      "name": "draftPersistedKeys",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        477,
+        479
+      ],
+      "summary": "实现 draftPersistedKeys 的持久化操作。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:removePersisted",
+      "type": "function",
+      "name": "removePersisted",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        540,
+        566
+      ],
+      "summary": "移除持久化，调用 platform.draftStore.removeItem、platform.storage、localStorageDirect、localStorageWithPrefix 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "function",
+      "name": "persisted",
+      "filePath": "packages/app/src/utils/persist.ts",
+      "lineRange": [
+        568,
+        704
+      ],
+      "summary": "实现 persisted 的持久化操作，调用 usePlatform、resolveTarget、snapshot、draft.getItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/prompt.test.ts",
+      "type": "file",
+      "name": "prompt.test.ts",
+      "filePath": "packages/app/src/utils/prompt.test.ts",
+      "summary": "验证提示词相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“extractPromptFromParts”、“restores multiple uploaded attachments”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "packages/app/src/utils/prompt.ts",
+      "summary": "为 app 提供提示词相关数据处理接口。 对外提供 extractPromptFromParts。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/prompt.ts:selectionFromFileUrl",
+      "type": "function",
+      "name": "selectionFromFileUrl",
+      "filePath": "packages/app/src/utils/prompt.ts",
+      "lineRange": [
+        27,
+        40
+      ],
+      "summary": "实现 selectionFromFileUrl 的提示词操作，调用 url.indexOf、url.slice、Number、params.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/prompt.ts:textPartValue",
+      "type": "function",
+      "name": "textPartValue",
+      "filePath": "packages/app/src/utils/prompt.ts",
+      "lineRange": [
+        42,
+        51
+      ],
+      "summary": "实现 textPartValue 的提示词操作，调用 candidates.reduce 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "type": "function",
+      "name": "extractPromptFromParts",
+      "filePath": "packages/app/src/utils/prompt.ts",
+      "lineRange": [
+        57,
+        204
+      ],
+      "summary": "从消息片段中提取可作为提示词使用的内容。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/refcount.test.ts",
+      "type": "file",
+      "name": "refcount.test.ts",
+      "filePath": "packages/app/src/utils/refcount.test.ts",
+      "summary": "验证refcount相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createRefCountMap”、“removes an item after its last owner is disposed”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/refcount.ts",
+      "type": "file",
+      "name": "refcount.ts",
+      "filePath": "packages/app/src/utils/refcount.ts",
+      "summary": "为 app 提供refcount相关数据处理接口。 对外提供 createRefCountMap。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/refcount.ts:createRefCountMap",
+      "type": "function",
+      "name": "createRefCountMap",
+      "filePath": "packages/app/src/utils/refcount.ts",
+      "lineRange": [
+        3,
+        32
+      ],
+      "summary": "创建引用计数映射，以共享资源的使用数量决定释放时机。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/runtime-adapters.test.ts",
+      "type": "file",
+      "name": "runtime-adapters.test.ts",
+      "filePath": "packages/app/src/utils/runtime-adapters.test.ts",
+      "summary": "验证运行时适配器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“runtime adapters”、“detects and disposes disposable values”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/runtime-adapters.ts",
+      "type": "file",
+      "name": "runtime-adapters.ts",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "summary": "为 app 提供运行时适配器相关数据处理接口。 对外提供 isDisposable、disposeIfDisposable、hasSetOption、setOptionIfSupported、getHoveredLinkText、getSpeechRecognitionCtor。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:isDisposable",
+      "type": "function",
+      "name": "isDisposable",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        7,
+        9
+      ],
+      "summary": "判断Disposable，调用 isRecord 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:disposeIfDisposable",
+      "type": "function",
+      "name": "disposeIfDisposable",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        11,
+        14
+      ],
+      "summary": "释放IfDisposable，调用 isDisposable、value.dispose 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:hasSetOption",
+      "type": "function",
+      "name": "hasSetOption",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "检查是否存在设置选项，调用 isRecord 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:setOptionIfSupported",
+      "type": "function",
+      "name": "setOptionIfSupported",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        20,
+        23
+      ],
+      "summary": "设置选项If支持，调用 hasSetOption、value.setOption 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:getHoveredLinkText",
+      "type": "function",
+      "name": "getHoveredLinkText",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        25,
+        31
+      ],
+      "summary": "读取Hovered链接文本，调用 isRecord 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/runtime-adapters.ts:getSpeechRecognitionCtor",
+      "type": "function",
+      "name": "getSpeechRecognitionCtor",
+      "filePath": "packages/app/src/utils/runtime-adapters.ts",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "读取SpeechRecognitionCtor，调用 isRecord 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/same.ts",
+      "type": "file",
+      "name": "same.ts",
+      "filePath": "packages/app/src/utils/same.ts",
+      "summary": "为 app 提供相同相关数据处理接口。 对外提供 same。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/same.ts:same",
+      "type": "function",
+      "name": "same",
+      "filePath": "packages/app/src/utils/same.ts",
+      "lineRange": [
+        1,
+        6
+      ],
+      "summary": "实现 same 的相同操作，调用 a.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/scoped-cache.test.ts",
+      "type": "file",
+      "name": "scoped-cache.test.ts",
+      "filePath": "packages/app/src/utils/scoped-cache.test.ts",
+      "summary": "验证scoped缓存相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createScopedCache”、“evicts least-recently-used entry when max is reached”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/scoped-cache.ts",
+      "type": "file",
+      "name": "scoped-cache.ts",
+      "filePath": "packages/app/src/utils/scoped-cache.ts",
+      "summary": "为 app 提供scoped缓存相关数据处理接口。 对外提供 createScopedCache。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/scoped-cache.ts:createScopedCache",
+      "type": "function",
+      "name": "createScopedCache",
+      "filePath": "packages/app/src/utils/scoped-cache.ts",
+      "lineRange": [
+        13,
+        104
+      ],
+      "summary": "创建按作用域隔离的缓存，管理条目复用与清理。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/search-keydown.ts",
+      "type": "file",
+      "name": "search-keydown.ts",
+      "filePath": "packages/app/src/utils/search-keydown.ts",
+      "summary": "为 app 提供搜索按键按下相关数据处理接口。 对外提供 handleDocumentSearchKeydown。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/search-keydown.ts:handleDocumentSearchKeydown",
+      "type": "function",
+      "name": "handleDocumentSearchKeydown",
+      "filePath": "packages/app/src/utils/search-keydown.ts",
+      "lineRange": [
+        3,
+        64
+      ],
+      "summary": "处理Document搜索按键按下，调用 event.target.closest、searchKeyAction、event.preventDefault、event.stopPropagation 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/search-keydown.ts:searchKeyAction",
+      "type": "function",
+      "name": "searchKeyAction",
+      "filePath": "packages/app/src/utils/search-keydown.ts",
+      "lineRange": [
+        66,
+        79
+      ],
+      "summary": "实现 searchKeyAction 的搜索按键按下操作，调用 event.key.toLowerCase 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/search-keydown.ts:moveSelection",
+      "type": "function",
+      "name": "moveSelection",
+      "filePath": "packages/app/src/utils/search-keydown.ts",
+      "lineRange": [
+        81,
+        101
+      ],
+      "summary": "实现 moveSelection 的搜索按键按下操作，调用 input.setSelectionRange 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/utils/persist.test.ts",
+      "target": "class:packages/app/src/utils/persist.test.ts:MemoryStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.test.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:quota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:evict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:merge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:readCurrent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:migrateLegacy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:readCurrentAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:migrateLegacyAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:legacyWorkspaceStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:draftPersistedKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:draftPersistedKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:removePersisted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:removePersisted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/persist.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:evict",
+      "target": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:evict",
+      "target": "function:packages/app/src/utils/persist.ts:quota",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:write",
+      "target": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:write",
+      "target": "function:packages/app/src/utils/persist.ts:quota",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:write",
+      "target": "function:packages/app/src/utils/persist.ts:evict",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:legacyWorkspaceStorage",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "target": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "target": "function:packages/app/src/utils/persist.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "target": "function:packages/app/src/utils/persist.ts:cacheSet",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "target": "function:packages/app/src/utils/persist.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:removePersisted",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:removePersisted",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageDirect",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:localStorageWithPrefix",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:readCurrent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:migrateLegacy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:readCurrentAsync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/persist.ts:persisted",
+      "target": "function:packages/app/src/utils/persist.ts:migrateLegacyAsync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.test.ts",
+      "target": "file:packages/app/src/utils/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "file:packages/app/src/utils/prompt.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "function:packages/app/src/utils/prompt.ts:selectionFromFileUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "function:packages/app/src/utils/prompt.ts:textPartValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/prompt.ts",
+      "target": "file:packages/app/src/utils/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "target": "function:packages/app/src/utils/prompt.ts:textPartValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "target": "function:packages/app/src/utils/prompt.ts:selectionFromFileUrl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/prompt.ts:extractPromptFromParts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createLegacyBlobReference",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/refcount.test.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/path-key.ts",
+      "target": "file:packages/app/src/utils/refcount.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/refcount.test.ts",
+      "target": "file:packages/app/src/utils/refcount.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/refcount.ts",
+      "target": "file:packages/app/src/utils/refcount.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/refcount.ts",
+      "target": "function:packages/app/src/utils/refcount.ts:createRefCountMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/refcount.ts",
+      "target": "function:packages/app/src/utils/refcount.ts:createRefCountMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.test.ts",
+      "target": "file:packages/app/src/utils/runtime-adapters.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "file:packages/app/src/utils/runtime-adapters.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:isDisposable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:isDisposable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:disposeIfDisposable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:disposeIfDisposable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:hasSetOption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:hasSetOption",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:setOptionIfSupported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:setOptionIfSupported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:getHoveredLinkText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:getHoveredLinkText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:getSpeechRecognitionCtor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/runtime-adapters.ts",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:getSpeechRecognitionCtor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/runtime-adapters.ts:disposeIfDisposable",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:isDisposable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/runtime-adapters.ts:setOptionIfSupported",
+      "target": "function:packages/app/src/utils/runtime-adapters.ts:hasSetOption",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/same.ts",
+      "target": "function:packages/app/src/utils/same.ts:same",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/same.ts",
+      "target": "function:packages/app/src/utils/same.ts:same",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/scoped-cache.test.ts",
+      "target": "file:packages/app/src/utils/scoped-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/scoped-cache.ts",
+      "target": "file:packages/app/src/utils/scoped-cache.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/scoped-cache.ts",
+      "target": "function:packages/app/src/utils/scoped-cache.ts:createScopedCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/scoped-cache.ts",
+      "target": "function:packages/app/src/utils/scoped-cache.ts:createScopedCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/search-keydown.ts",
+      "target": "function:packages/app/src/utils/search-keydown.ts:handleDocumentSearchKeydown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/search-keydown.ts",
+      "target": "function:packages/app/src/utils/search-keydown.ts:handleDocumentSearchKeydown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/search-keydown.ts",
+      "target": "function:packages/app/src/utils/search-keydown.ts:searchKeyAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/search-keydown.ts",
+      "target": "function:packages/app/src/utils/search-keydown.ts:moveSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/app/src/utils/search-keydown.ts:handleDocumentSearchKeydown",
+      "target": "function:packages/app/src/utils/search-keydown.ts:searchKeyAction",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/search-keydown.ts:handleDocumentSearchKeydown",
+      "target": "function:packages/app/src/utils/search-keydown.ts:moveSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

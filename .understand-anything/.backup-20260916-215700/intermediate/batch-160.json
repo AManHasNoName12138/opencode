@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/opencode/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/opencode/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「opencode database guide、Database、Development server、Module shape、When the file is an `index.ts`、Multi-sibling directories、opencode Effect rules」。",
+      "tags": [
+        "文档",
+        "应用",
+        "开发规范"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:packages/opencode/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/opencode/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「js」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/opencode/bunfig.toml",
+      "type": "config",
+      "name": "bunfig.toml",
+      "filePath": "packages/opencode/bunfig.toml",
+      "summary": "配置 OpenCode 应用与兼容层，结构项包括 test。",
+      "tags": [
+        "配置",
+        "toml",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/opencode/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/opencode/package.json",
+      "summary": "声明 opencode 的包信息与公共导出入口，脚本包括 typecheck、test、test:httpapi、bench:test、profile:test、build、dev；依赖包括 @actions/core、@actions/github、@agentclientprotocol/sdk、@ai-sdk/alibaba、@ai-sdk/amazon-bedrock、@ai-sdk/anthropic、@ai-sdk/azure。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/opencode/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/opencode/tsconfig.json",
+      "summary": "配置 packages/opencode 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/opencode/AGENTS.md",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/opencode/README.md",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/opencode/bunfig.toml",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/opencode/package.json",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/opencode/tsconfig.json",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

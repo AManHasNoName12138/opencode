@@ -1,0 +1,1237 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/context/comments.tsx",
+      "type": "file",
+      "name": "comments.tsx",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "summary": "管理评论的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 createCommentSessionForTest、{ use: useComments, provider: CommentsProvider }。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/comments.tsx:cloneSelection",
+      "type": "function",
+      "name": "cloneSelection",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "lineRange": [
+        51,
+        60
+      ],
+      "summary": "复制选择，输入包括 selection。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/comments.tsx:group",
+      "type": "function",
+      "name": "group",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "lineRange": [
+        69,
+        80
+      ],
+      "summary": "实现 group 的评论操作，调用 comments.reduce、cloneComment、list.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/comments.tsx:createCommentSessionState",
+      "type": "function",
+      "name": "createCommentSessionState",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "lineRange": [
+        82,
+        174
+      ],
+      "summary": "创建评论会话状态，调用 createStore、setRef 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/comments.tsx:createCommentSessionForTest",
+      "type": "function",
+      "name": "createCommentSessionForTest",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "lineRange": [
+        176,
+        179
+      ],
+      "summary": "创建评论会话用于测试，调用 createStore、createCommentSessionState 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/comments.tsx:createCommentSession",
+      "type": "function",
+      "name": "createCommentSession",
+      "filePath": "packages/app/src/context/comments.tsx",
+      "lineRange": [
+        181,
+        208
+      ],
+      "summary": "创建评论会话，调用 persisted、Persist.serverScoped、createStore、createCommentSessionState 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/directory-sync.ts",
+      "type": "file",
+      "name": "directory-sync.ts",
+      "filePath": "packages/app/src/context/directory-sync.ts",
+      "summary": "管理目录同步的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 createDirSyncContext。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/directory-sync.ts:createDirSyncContext",
+      "type": "function",
+      "name": "createDirSyncContext",
+      "filePath": "packages/app/src/context/directory-sync.ts",
+      "lineRange": [
+        24,
+        156
+      ],
+      "summary": "创建Dir同步上下文，调用 serverSDK.createClient、createMemo、serverSync.child、sessionFields.has 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/file-content-eviction-accounting.test.ts",
+      "type": "file",
+      "name": "file-content-eviction-accounting.test.ts",
+      "filePath": "packages/app/src/context/file-content-eviction-accounting.test.ts",
+      "summary": "验证文件内容淘汰计量相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“file content eviction accounting”、“updates byte totals incrementally for set, overwrite, remove, and reset”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/file.tsx",
+      "type": "file",
+      "name": "file.tsx",
+      "filePath": "packages/app/src/context/file.tsx",
+      "summary": "提供文件树、内容、行选择和视图状态上下文，协调文件内容 LRU 缓存及内存计数。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/file/content-cache.ts",
+      "type": "file",
+      "name": "content-cache.ts",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "summary": "按近似字节数跟踪文件内容缓存，维护最近访问顺序并淘汰超出预算的条目。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:approxBytes",
+      "type": "function",
+      "name": "approxBytes",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "估算缓存内容占用的字节数。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:evictContentLru",
+      "type": "function",
+      "name": "evictContentLru",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        44,
+        60
+      ],
+      "summary": "根据最近访问顺序及缓存预算淘汰文件内容。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:resetFileContentLru",
+      "type": "function",
+      "name": "resetFileContentLru",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        62,
+        64
+      ],
+      "summary": "重置文件内容最近访问淘汰，调用 reset 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:setFileContentBytes",
+      "type": "function",
+      "name": "setFileContentBytes",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "设置文件内容字节，调用 setBytes 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:removeFileContentBytes",
+      "type": "function",
+      "name": "removeFileContentBytes",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        70,
+        72
+      ],
+      "summary": "移除文件内容字节，调用 remove 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:touchFileContent",
+      "type": "function",
+      "name": "touchFileContent",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        74,
+        76
+      ],
+      "summary": "实现 touchFileContent 的内容缓存操作，调用 touch 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:getFileContentBytesTotal",
+      "type": "function",
+      "name": "getFileContentBytesTotal",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "读取文件内容字节Total。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:getFileContentEntryCount",
+      "type": "function",
+      "name": "getFileContentEntryCount",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        82,
+        84
+      ],
+      "summary": "读取文件内容Entry计数。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/content-cache.ts:hasFileContent",
+      "type": "function",
+      "name": "hasFileContent",
+      "filePath": "packages/app/src/context/file/content-cache.ts",
+      "lineRange": [
+        86,
+        88
+      ],
+      "summary": "检查是否存在文件内容，调用 lru.has 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/file/path.test.ts",
+      "type": "file",
+      "name": "path.test.ts",
+      "filePath": "packages/app/src/context/file/path.test.ts",
+      "summary": "验证路径相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“file path helpers”、“normalizes file inputs against workspace root”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/file/path.ts",
+      "type": "file",
+      "name": "path.ts",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "summary": "管理路径的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 stripFileProtocol、stripQueryAndHash、unquoteGitPath、decodeFilePath、encodeFilePath、createPathHelpers。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:stripFileProtocol",
+      "type": "function",
+      "name": "stripFileProtocol",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        1,
+        4
+      ],
+      "summary": "实现 stripFileProtocol 的路径操作，调用 input.startsWith、input.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:stripQueryAndHash",
+      "type": "function",
+      "name": "stripQueryAndHash",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        6,
+        17
+      ],
+      "summary": "实现 stripQueryAndHash 的路径操作，调用 input.indexOf、input.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:unquoteGitPath",
+      "type": "function",
+      "name": "unquoteGitPath",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        19,
+        73
+      ],
+      "summary": "实现 unquoteGitPath 的路径操作，调用 input.startsWith、input.endsWith、input.slice、bytes.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:decodeFilePath",
+      "type": "function",
+      "name": "decodeFilePath",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        75,
+        81
+      ],
+      "summary": "解码文件路径，调用 decodeURIComponent 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:encodeFilePath",
+      "type": "function",
+      "name": "encodeFilePath",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        83,
+        102
+      ],
+      "summary": "编码文件路径，调用 filepath.replace、encodeURIComponent 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/path.ts:createPathHelpers",
+      "type": "function",
+      "name": "createPathHelpers",
+      "filePath": "packages/app/src/context/file/path.ts",
+      "lineRange": [
+        104,
+        156
+      ],
+      "summary": "创建路径辅助函数，输入包括 scope。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/file/tree-store.ts",
+      "type": "file",
+      "name": "tree-store.ts",
+      "filePath": "packages/app/src/context/file/tree-store.ts",
+      "summary": "维护可展开目录树的加载结果和响应式状态，供文件浏览器读取和刷新。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/tree-store.ts:createFileTreeStore",
+      "type": "function",
+      "name": "createFileTreeStore",
+      "filePath": "packages/app/src/context/file/tree-store.ts",
+      "lineRange": [
+        19,
+        174
+      ],
+      "summary": "创建文件树存储，调用 createStore、Boolean 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/file/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/app/src/context/file/types.ts",
+      "summary": "管理类型的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 selectionFromLines。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/types.ts:selectionFromLines",
+      "type": "function",
+      "name": "selectionFromLines",
+      "filePath": "packages/app/src/context/file/types.ts",
+      "lineRange": [
+        32,
+        41
+      ],
+      "summary": "把行号选择转换为文件选择范围。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/file/view-cache.ts",
+      "type": "file",
+      "name": "view-cache.ts",
+      "filePath": "packages/app/src/context/file/view-cache.ts",
+      "summary": "缓存文件视图状态，支持切换文件后恢复滚动与选择等界面位置。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/view-cache.ts:normalizeSelectedLines",
+      "type": "function",
+      "name": "normalizeSelectedLines",
+      "filePath": "packages/app/src/context/file/view-cache.ts",
+      "lineRange": [
+        12,
+        25
+      ],
+      "summary": "规范化已选Lines，输入包括 range。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/view-cache.ts:createViewSession",
+      "type": "function",
+      "name": "createViewSession",
+      "filePath": "packages/app/src/context/file/view-cache.ts",
+      "lineRange": [
+        37,
+        121
+      ],
+      "summary": "创建View会话，调用 persisted、Persist.serverScoped、createStore、createEffect 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/file/view-cache.ts:createFileViewCache",
+      "type": "function",
+      "name": "createFileViewCache",
+      "filePath": "packages/app/src/context/file/view-cache.ts",
+      "lineRange": [
+        123,
+        147
+      ],
+      "summary": "创建文件View缓存，调用 createScopedCache、key.lastIndexOf、key.slice、createRoot 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/file/watcher.test.ts",
+      "type": "file",
+      "name": "watcher.test.ts",
+      "filePath": "packages/app/src/context/file/watcher.test.ts",
+      "summary": "验证watcher相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“file watcher invalidation”、“reloads open files and refreshes loaded parent on add”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/file/watcher.ts",
+      "type": "file",
+      "name": "watcher.ts",
+      "filePath": "packages/app/src/context/file/watcher.ts",
+      "summary": "把文件监视器变更映射为相关文件内容和目录树的失效通知。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/file/watcher.ts:invalidateFromWatcher",
+      "type": "function",
+      "name": "invalidateFromWatcher",
+      "filePath": "packages/app/src/context/file/watcher.ts",
+      "lineRange": [
+        18,
+        53
+      ],
+      "summary": "实现 invalidateFromWatcher 的watcher操作，调用 ops.normalize、path.startsWith、ops.hasFile、ops.isOpen 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:cloneSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:group",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSessionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSessionForTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSessionForTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/utils/scoped-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/comments.tsx",
+      "target": "file:packages/app/src/utils/uuid.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/comments.tsx:createCommentSessionForTest",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSessionState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/comments.tsx:createCommentSession",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/comments.tsx:createCommentSession",
+      "target": "function:packages/app/src/context/comments.tsx:createCommentSessionState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "function:packages/app/src/context/directory-sync.ts:createDirSyncContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "function:packages/app/src/context/directory-sync.ts:createDirSyncContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/directory-sync.ts",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file-content-eviction-accounting.test.ts",
+      "target": "file:packages/app/src/context/file/content-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "file:packages/app/src/context/file-content-eviction-accounting.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/content-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/path.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/tree-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/view-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/file/watcher.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file.tsx",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:approxBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:approxBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:evictContentLru",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:evictContentLru",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:resetFileContentLru",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:resetFileContentLru",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:setFileContentBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:setFileContentBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:removeFileContentBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:removeFileContentBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:touchFileContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:touchFileContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:getFileContentBytesTotal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:getFileContentBytesTotal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:getFileContentEntryCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:getFileContentEntryCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:hasFileContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/content-cache.ts",
+      "target": "function:packages/app/src/context/file/content-cache.ts:hasFileContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.test.ts",
+      "target": "file:packages/app/src/context/file/path.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "file:packages/app/src/context/file/path.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:stripFileProtocol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:stripFileProtocol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:stripQueryAndHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:stripQueryAndHash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:unquoteGitPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:unquoteGitPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:decodeFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:decodeFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:encodeFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:encodeFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:createPathHelpers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/path.ts",
+      "target": "function:packages/app/src/context/file/path.ts:createPathHelpers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/tree-store.ts",
+      "target": "function:packages/app/src/context/file/tree-store.ts:createFileTreeStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/tree-store.ts",
+      "target": "function:packages/app/src/context/file/tree-store.ts:createFileTreeStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/types.ts",
+      "target": "function:packages/app/src/context/file/types.ts:selectionFromLines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/types.ts",
+      "target": "function:packages/app/src/context/file/types.ts:selectionFromLines",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "function:packages/app/src/context/file/view-cache.ts:normalizeSelectedLines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "function:packages/app/src/context/file/view-cache.ts:createViewSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "function:packages/app/src/context/file/view-cache.ts:createFileViewCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "function:packages/app/src/context/file/view-cache.ts:createFileViewCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "file:packages/app/src/context/file/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "file:packages/app/src/utils/scoped-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/view-cache.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/file/view-cache.ts:createViewSession",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/file/view-cache.ts:createFileViewCache",
+      "target": "function:packages/app/src/utils/scoped-cache.ts:createScopedCache",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/file/view-cache.ts:createFileViewCache",
+      "target": "function:packages/app/src/context/file/view-cache.ts:createViewSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/file/watcher.test.ts",
+      "target": "file:packages/app/src/context/file/watcher.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/file/watcher.ts",
+      "target": "file:packages/app/src/context/file/watcher.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/file/watcher.ts",
+      "target": "function:packages/app/src/context/file/watcher.ts:invalidateFromWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/file/watcher.ts",
+      "target": "function:packages/app/src/context/file/watcher.ts:invalidateFromWatcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

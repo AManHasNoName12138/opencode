@@ -1,0 +1,722 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/test/lib/sse.ts",
+      "type": "file",
+      "name": "sse.ts",
+      "filePath": "packages/llm/test/lib/sse.ts",
+      "summary": "为 packages/llm 测试提供 sseEvents、sseRaw 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/sse.ts:sseEvents",
+      "type": "function",
+      "name": "sseEvents",
+      "filePath": "packages/llm/test/lib/sse.ts",
+      "lineRange": [
+        8,
+        9
+      ],
+      "summary": "在packages/llm中执行 sseEvents，接收 ...chunks 参数；调用 chunks.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/sse.ts:sseRaw",
+      "type": "function",
+      "name": "sseRaw",
+      "filePath": "packages/llm/test/lib/sse.ts",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "在packages/llm中执行 sseRaw，接收 ...lines 参数；调用 lines.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/lib/tool-runtime.ts",
+      "type": "file",
+      "name": "tool-runtime.ts",
+      "filePath": "packages/llm/test/lib/tool-runtime.ts",
+      "summary": "为 packages/llm 测试提供 runTools 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "type": "function",
+      "name": "runTools",
+      "filePath": "packages/llm/test/lib/tool-runtime.ts",
+      "lineRange": [
+        24,
+        70
+      ],
+      "summary": "在packages/llm中执行 runTools，接收 options 参数；调用 Stream.unwrap、Effect.gen、Object.keys、LLMRequest.update、options.request.tools.filter、names.has、toDefinitions 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/tool-runtime.ts:stepState",
+      "type": "function",
+      "name": "stepState",
+      "filePath": "packages/llm/test/lib/tool-runtime.ts",
+      "lineRange": [
+        78,
+        110
+      ],
+      "summary": "在packages/llm中执行 stepState，接收 events 参数；调用 appendText、assistantContent.push、toolCalls.push、ToolResultPart.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/tool-runtime.ts:appendText",
+      "type": "function",
+      "name": "appendText",
+      "filePath": "packages/llm/test/lib/tool-runtime.ts",
+      "lineRange": [
+        112,
+        128
+      ],
+      "summary": "在packages/llm中执行 appendText，接收 content、type、text、providerMetadata 参数；调用 content.at、content.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/tool-runtime.ts:addUsage",
+      "type": "function",
+      "name": "addUsage",
+      "filePath": "packages/llm/test/lib/tool-runtime.ts",
+      "lineRange": [
+        130,
+        146
+      ],
+      "summary": "在packages/llm中执行 addUsage，接收 left、right 参数；调用 sum 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/llm.test.ts",
+      "type": "file",
+      "name": "llm.test.ts",
+      "filePath": "packages/llm/test/llm.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「llm constructors、builds canonical schema classes from ergonomic input、updates requests without spreading schema class instances、keeps request options separate from route defaults、updates canonical requests from the request datatype、updates canonical models from the model datatype、carries model defaults and compatibility through route model selection」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/prepare.test.ts",
+      "type": "file",
+      "name": "prepare.test.ts",
+      "filePath": "packages/llm/test/prepare.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「request option precedence、deep-merges provider option records and replaces arrays, primitives, and null、prepares bodies with route defaults, model defaults, and call options in order、applies model HTTP defaults before request HTTP overlays、rejects raw body overlays for protocol-owned roots、uses model output limits after route limits and before call maxTokens」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/provider-error.test.ts",
+      "type": "file",
+      "name": "provider-error.test.ts",
+      "filePath": "packages/llm/test/provider-error.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「provider error classification、classifies provider token limit messages as context overflow、does not classify rate limits as context overflow」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider.types.ts",
+      "type": "file",
+      "name": "provider.types.ts",
+      "filePath": "packages/llm/test/provider.types.ts",
+      "summary": "为 packages/llm 测试提供样本与环境，用于运行相关验证。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "type": "file",
+      "name": "anthropic-messages-cache.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Anthropic Messages cache recorded」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "type": "file",
+      "name": "anthropic-messages.recorded.test.ts",
+      "filePath": "packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Anthropic Messages sad-path recorded」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "type": "file",
+      "name": "anthropic-messages.test.ts",
+      "filePath": "packages/llm/test/provider/anthropic-messages.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Anthropic Messages route、prepares Anthropic Messages target、lowers chronological system updates natively for Claude Opus 4.8 with cache hints、lowers chronological system updates to wrapped user text for unsupported Anthropic models、rejects non-text chronological system update content before send、falls back for unsupported native chronological system update placement、rejects a system update between」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/test/lib/sse.ts",
+      "target": "function:packages/llm/test/lib/sse.ts:sseEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/sse.ts",
+      "target": "function:packages/llm/test/lib/sse.ts:sseEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/sse.ts",
+      "target": "function:packages/llm/test/lib/sse.ts:sseRaw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/sse.ts",
+      "target": "function:packages/llm/test/lib/sse.ts:sseRaw",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:stepState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:appendText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:addUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/llm.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/protocols/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/protocols/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/prepare.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider-error.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider-error.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider.types.ts",
+      "target": "file:packages/llm/src/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider.types.ts",
+      "target": "file:packages/llm/src/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider.types.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider.types.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages-cache.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/providers/anthropic.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.recorded.test.ts",
+      "target": "file:packages/llm/test/recorded-test.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/test/continuation-scenarios.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/provider/anthropic-messages.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "target": "function:packages/llm/src/tool.ts:toDefinitions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:stepState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/tool-runtime.ts:runTools",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:addUsage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/tool-runtime.ts:stepState",
+      "target": "function:packages/llm/test/lib/tool-runtime.ts:appendText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

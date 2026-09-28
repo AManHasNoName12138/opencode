@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/client/script/build.ts",
+      "type": "file",
+      "name": "build.ts",
+      "filePath": "packages/client/script/build.ts",
+      "summary": "编译 ClientApi 契约，并行生成 Promise 与 Effect 客户端到 src/generated 和 src/generated-effect；事件订阅复用公共协议的 OpenCodeEventEncoded 类型。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/contract.ts",
+      "type": "file",
+      "name": "contract.ts",
+      "filePath": "packages/client/src/contract.ts",
+      "summary": "从 Protocol 构建 ClientApi，指定服务分组和端点在生成客户端中的名称，并省略文件读取及 PTY 连接端点。占位中间件保留公共错误契约，避免客户端引用 Core 服务身份。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/generated-effect/client-error.ts",
+      "type": "file",
+      "name": "client-error.ts",
+      "filePath": "packages/client/src/generated-effect/client-error.ts",
+      "summary": "保存自动生成的客户端或数据库接口，公开 ClientError。",
+      "tags": [
+        "代码生成",
+        "客户端",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/generated-effect/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "packages/client/src/generated-effect/client.ts",
+      "summary": "由 HttpApi 契约生成 Effect 客户端，按服务分组适配端点调用并统一转换 ClientError，make 提供生成客户端入口。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "代码生成"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/client/test/contract-identity.test.ts",
+      "type": "file",
+      "name": "contract-identity.test.ts",
+      "filePath": "packages/client/test/contract-identity.test.ts",
+      "summary": "验证 公共 API 客户端层 的行为，实际用例包括「Core and Server reuse the authoritative Schema and Protocol values、client and Server contracts generate identically、shared DTO schemas construct and decode plain objects」。",
+      "tags": [
+        "test",
+        "客户端",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/client/script/build.ts",
+      "target": "file:packages/client/src/contract.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/src/generated-effect/client.ts",
+      "target": "file:packages/client/src/contract.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/src/generated-effect/client.ts",
+      "target": "file:packages/client/src/generated-effect/client-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/test/contract-identity.test.ts",
+      "target": "file:packages/client/src/contract.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/test/contract-identity.test.ts",
+      "target": "file:packages/client/src/contract.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

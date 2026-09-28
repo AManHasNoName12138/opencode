@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/console/function/src/auth-redirect.test.ts",
+      "type": "file",
+      "name": "auth-redirect.test.ts",
+      "filePath": "packages/console/function/src/auth-redirect.test.ts",
+      "summary": "验证控制台云函数的授权回跳校验行为，覆盖 authorization redirect validation；allows registered OpenCode callbacks；rejects unregistered clients and external redirects。",
+      "tags": [
+        "测试",
+        "控制台云函数",
+        "授权回跳校验"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/function/src/auth-redirect.ts",
+      "type": "file",
+      "name": "auth-redirect.ts",
+      "filePath": "packages/console/function/src/auth-redirect.ts",
+      "summary": "控制台云函数的授权回跳校验实现模块，提供 isAllowedAuthorizationRedirect。",
+      "tags": [
+        "接口实现",
+        "控制台云函数",
+        "授权回跳校验"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/console/function/src/auth-redirect.ts:isAllowedAuthorizationRedirect",
+      "type": "function",
+      "name": "isAllowedAuthorizationRedirect",
+      "filePath": "packages/console/function/src/auth-redirect.ts",
+      "lineRange": [
+        1,
+        18
+      ],
+      "summary": "控制台云函数的授权回跳校验处理函数 isAllowedAuthorizationRedirect，调用 redirect.hostname.endsWith 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "控制台云函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/function/src/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "packages/console/function/src/auth.ts",
+      "summary": "控制台云函数的身份认证实现模块，提供 subjects。",
+      "tags": [
+        "接口实现",
+        "控制台云函数",
+        "身份认证"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/console/function/src/auth-redirect.test.ts",
+      "target": "file:packages/console/function/src/auth-redirect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/console/function/src/auth-redirect.ts",
+      "target": "file:packages/console/function/src/auth-redirect.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/console/function/src/auth-redirect.ts",
+      "target": "function:packages/console/function/src/auth-redirect.ts:isAllowedAuthorizationRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/function/src/auth-redirect.ts",
+      "target": "function:packages/console/function/src/auth-redirect.ts:isAllowedAuthorizationRedirect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/console/function/src/auth.ts",
+      "target": "file:packages/console/function/src/auth-redirect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

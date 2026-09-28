@@ -1,0 +1,935 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "type": "file",
+      "name": "plugin-loader-pure.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「skips external tui plugins in pure mode」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "type": "file",
+      "name": "plugin-loader.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「does not retry permanent file plugin load errors、does not retry file plugin load errors caused by missing modules、does not retry top-level plugin errors that look like resolver messages、continues loading when a plugin is missing config metadata、does not wait on permanent tui plugin startup failures、initializes external tui plugins in config order、does not bootstrap server plugins while initializin」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/tui/plugin-loader.test.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "lineRange": [
+        142,
+        581
+      ],
+      "summary": "在命令行入口与命令执行层中执行 load；调用 Date.now、path.join、Bun.file、tmpdir、pathToFileURL、localThemeFile.replace、invalidThemeFile.replace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "type": "file",
+      "name": "plugin-toggle.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「toggles plugin runtime state by exported id、deactivating plugin pops pushed mode、kv plugin_enabled overrides tui config on startup、loads disabled-by-default internal plugin inactive and activates on demand」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/config/entry-name.test.ts",
+      "type": "file",
+      "name": "entry-name.test.ts",
+      "filePath": "packages/opencode/test/config/entry-name.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「configEntryNameFromPath、strips an、preserves nested subdirectories in the key、normalizes Windows-style backslashes、falls back to basename when no prefix matches、regression #25713: caller passes relative path; parent /agent/ segment is irrelevant、regression #25713: parent /agents/ segment is irrelevant」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/markdown.test.ts",
+      "type": "file",
+      "name": "markdown.test.ts",
+      "filePath": "packages/opencode/test/config/markdown.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「ConfigMarkdown: normal template、should extract exactly 12 file references、should extract valid/path/to/a/file、should extract another-valid/path/to/a/file、should extract paths ignoring comma after、should extract a path with a file extension and comma after、should extract a path with multiple dots and comma after」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/config/tui.test.ts",
+      "type": "file",
+      "name": "tui.test.ts",
+      "filePath": "packages/opencode/test/config/tui.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「keeps server and tui plugin merge semantics aligned、loads tui config with the same precedence order as server config paths、resolves attention config defaults and overrides、migrates tui-specific keys from opencode.json when tui.json does not exist、migrates project legacy tui keys even when global tui.json already exists、drops unknown legacy tui keys during migration、skips migration when opencode.js」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/config/tui.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/opencode/test/config/tui.test.ts",
+      "lineRange": [
+        39,
+        53
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withEnv，接收 name、value、self 参数；调用 Effect.acquireUseRelease、Effect.sync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/config/tui.test.ts:withPlatform",
+      "type": "function",
+      "name": "withPlatform",
+      "filePath": "packages/opencode/test/config/tui.test.ts",
+      "lineRange": [
+        55,
+        70
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withPlatform，接收 platform、self 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.getOwnPropertyDescriptor、Object.defineProperty 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "type": "file",
+      "name": "plug-worker.ts",
+      "filePath": "packages/opencode/test/fixture/plug-worker.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 sleep、input、deps、ctx、main 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/plug-worker.ts:input",
+      "type": "function",
+      "name": "input",
+      "filePath": "packages/opencode/test/fixture/plug-worker.ts",
+      "lineRange": [
+        25,
+        37
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 input；调用 JSON.parse 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/plug-worker.ts:deps",
+      "type": "function",
+      "name": "deps",
+      "filePath": "packages/opencode/test/fixture/plug-worker.ts",
+      "lineRange": [
+        39,
+        62
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 deps，接收 msg 参数；调用 Filesystem.readText、sleep、Filesystem.write、Filesystem.exists、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/plug-worker.ts:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "packages/opencode/test/fixture/plug-worker.ts",
+      "lineRange": [
+        72,
+        87
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 main；调用 input、createPlugTask、deps、run、ctx 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "file",
+      "name": "tui-plugin.ts",
+      "filePath": "packages/opencode/test/fixture/tui-plugin.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 createTuiPluginApi 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/tui-plugin.ts:themeCurrent",
+      "type": "function",
+      "name": "themeCurrent",
+      "filePath": "packages/opencode/test/fixture/tui-plugin.ts",
+      "lineRange": [
+        19,
+        85
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 themeCurrent；调用 RGBA.fromInts 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/tui-plugin.ts:createTuiPluginApi",
+      "type": "function",
+      "name": "createTuiPluginApi",
+      "filePath": "packages/opencode/test/fixture/tui-plugin.ts",
+      "lineRange": [
+        126,
+        355
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createTuiPluginApi，接收 opts 参数；调用 createOpencodeClient、has、Object.create、tuiConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "file",
+      "name": "tui-runtime.ts",
+      "filePath": "packages/opencode/test/fixture/tui-runtime.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 createTuiResolvedKeybinds、createTuiResolvedConfig、mockTuiRuntime 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedKeybinds",
+      "type": "function",
+      "name": "createTuiResolvedKeybinds",
+      "filePath": "packages/opencode/test/fixture/tui-runtime.ts",
+      "lineRange": [
+        21,
+        23
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createTuiResolvedKeybinds，接收 input 参数；调用 resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "function",
+      "name": "createTuiResolvedConfig",
+      "filePath": "packages/opencode/test/fixture/tui-runtime.ts",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createTuiResolvedConfig，接收 input 参数；调用 resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/fixture/tui-runtime.ts:mockTuiRuntime",
+      "type": "function",
+      "name": "mockTuiRuntime",
+      "filePath": "packages/opencode/test/fixture/tui-runtime.ts",
+      "lineRange": [
+        32,
+        56
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mockTuiRuntime，接收 dir、plugin、opts 参数；调用 path.join、plugin.map、spyOn、createTuiResolvedConfig、cwd.mockRestore、wait.mockRestore 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/install.test.ts",
+      "type": "file",
+      "name": "install.test.ts",
+      "filePath": "packages/opencode/test/plugin/install.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「plugin.install.task、writes both server and tui config entries、writes default options from exports config metadata、preserves JSONC comments when adding plugins to server and tui config、preserves JSONC comments when force replacing plugin version、supports resolver target pointing to a file、does not change configured package version without force」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/install.test.ts:deps",
+      "type": "function",
+      "name": "deps",
+      "filePath": "packages/opencode/test/plugin/install.test.ts",
+      "lineRange": [
+        9,
+        32
+      ],
+      "summary": "在插件扩展与模型集成层中执行 deps，接收 global、target 参数；调用 Filesystem.readText、Filesystem.write、Filesystem.exists、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/install.test.ts:plugin",
+      "type": "function",
+      "name": "plugin",
+      "filePath": "packages/opencode/test/plugin/install.test.ts",
+      "lineRange": [
+        58,
+        103
+      ],
+      "summary": "在插件扩展与模型集成层中执行 plugin，接收 dir、kinds、opts、themes 参数；调用 path.join、fs.mkdir、Bun.write、JSON.stringify、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/shared.test.ts",
+      "type": "file",
+      "name": "shared.test.ts",
+      "filePath": "packages/opencode/test/plugin/shared.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「parsePluginSpecifier、parses standard npm package without version、parses standard npm package with version、parses scoped npm package without version、parses scoped npm package with version、parses package with git+https url、parses scoped package with git+https url」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/util/filesystem.test.ts",
+      "type": "file",
+      "name": "filesystem.test.ts",
+      "filePath": "packages/opencode/test/util/filesystem.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「filesystem、exists()、returns true for existing file、returns false for non-existent file、returns true for existing directory、isDir()、returns true for directory」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/util/module.test.ts",
+      "type": "file",
+      "name": "module.test.ts",
+      "filePath": "packages/opencode/test/util/module.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「util.module、resolves package subpaths from the provided dir、resolves packages through ancestor node_modules、resolves relative to the provided dir、returns undefined when resolution fails」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-pure.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "function:packages/opencode/test/cli/tui/plugin-loader.test.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/plugin/loader.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/plugin/loader.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-toggle.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/entry-name.test.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/entry-name.test.ts",
+      "target": "file:packages/opencode/src/config/entry-name.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/markdown.test.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/markdown.test.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "function:packages/opencode/test/config/tui.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "function:packages/opencode/test/config/tui.test.ts:withPlatform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/tui-cwd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/tui-cwd.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/config/tui.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "function:packages/opencode/test/fixture/plug-worker.ts:input",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "function:packages/opencode/test/fixture/plug-worker.ts:deps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "function:packages/opencode/test/fixture/plug-worker.ts:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "target": "function:packages/opencode/test/fixture/tui-plugin.ts:themeCurrent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "target": "function:packages/opencode/test/fixture/tui-plugin.ts:createTuiPluginApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "target": "function:packages/opencode/test/fixture/tui-plugin.ts:createTuiPluginApi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedKeybinds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedKeybinds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:mockTuiRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:mockTuiRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "function:packages/opencode/test/plugin/install.test.ts:deps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "function:packages/opencode/test/plugin/install.test.ts:plugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/install.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/shared.test.ts",
+      "target": "file:packages/opencode/src/plugin/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/shared.test.ts",
+      "target": "file:packages/opencode/src/plugin/shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/filesystem.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/filesystem.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/filesystem.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/module.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/module.test.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/module.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/cli/tui/plugin-loader.test.ts:load",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/tui/plugin-loader.test.ts:load",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/tui/plugin-loader.test.ts:load",
+      "target": "function:packages/opencode/test/fixture/tui-plugin.ts:createTuiPluginApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/fixture/plug-worker.ts:main",
+      "target": "function:packages/opencode/test/fixture/plug-worker.ts:input",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/fixture/plug-worker.ts:main",
+      "target": "function:packages/opencode/src/cli/cmd/plug.ts:createPlugTask",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/fixture/plug-worker.ts:main",
+      "target": "function:packages/opencode/test/fixture/plug-worker.ts:deps",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/fixture/tui-runtime.ts:mockTuiRuntime",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

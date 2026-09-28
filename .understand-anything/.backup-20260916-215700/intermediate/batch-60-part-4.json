@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/util/lazy.test.ts",
+      "type": "file",
+      "name": "lazy.test.ts",
+      "filePath": "packages/opencode/test/util/lazy.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「util.lazy、should call function only once、should preserve the same reference、should work with different return types」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/util/repository.test.ts",
+      "type": "file",
+      "name": "repository.test.ts",
+      "filePath": "packages/opencode/test/util/repository.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「util.repository、parses github shorthand and preserves cache path、parses host path and scp remote references、keeps local file repositories distinct from remote repositories、rejects invalid remote repository references with typed errors、compares cache identity independent of input spelling、validates repository branch names」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/util/timeout.test.ts",
+      "type": "file",
+      "name": "timeout.test.ts",
+      "filePath": "packages/opencode/test/util/timeout.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「util.timeout、should resolve when promise completes before timeout、should reject when promise exceeds timeout」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/util/wildcard.test.ts",
+      "type": "file",
+      "name": "wildcard.test.ts",
+      "filePath": "packages/opencode/test/util/wildcard.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「match handles glob tokens、match with trailing space+wildcard matches command with or without args、all picks the most specific pattern、allStructured matches command sequences、allStructured prioritizes flag-specific patterns、allStructured handles sed flags、match normalizes slashes for cross-platform globbing」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/v2/session-message-updater.test.ts",
+      "type": "file",
+      "name": "session-message-updater.test.ts",
+      "filePath": "packages/opencode/test/v2/session-message-updater.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「step snapshots carry over to assistant messages、text ended populates assistant text content、tool completion stores completed timestamp、compaction events reduce to compaction message only when completed」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/util/lazy.test.ts",
+      "target": "file:packages/opencode/src/util/lazy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/lazy.test.ts",
+      "target": "file:packages/opencode/src/util/lazy.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/repository.test.ts",
+      "target": "file:packages/opencode/src/util/repository.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/repository.test.ts",
+      "target": "file:packages/opencode/src/util/repository.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/timeout.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/timeout.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/util/wildcard.test.ts",
+      "target": "file:packages/opencode/src/util/wildcard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/util/wildcard.test.ts",
+      "target": "file:packages/opencode/src/util/wildcard.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/v2/session-message-updater.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/v2/session-message-updater.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

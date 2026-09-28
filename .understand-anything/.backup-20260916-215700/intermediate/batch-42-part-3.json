@@ -1,0 +1,1445 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/tui/src/keymap.tsx",
+      "type": "file",
+      "name": "keymap.tsx",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "summary": "注册终端命令与按键模式栈，处理 Leader 键、快捷键显示及命令斜杠入口。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:createOpencodeModeStack",
+      "type": "function",
+      "name": "createOpencodeModeStack",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        53,
+        100
+      ],
+      "summary": "创建OpencodeModeStack，调用 keymap.setData、keymap.registerLayerFields、modeStacks.set 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:useOpencodeModeStack",
+      "type": "function",
+      "name": "useOpencodeModeStack",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        102,
+        104
+      ],
+      "summary": "连接OpencodeModeStack，调用 getOpencodeModeStack、useOpencodeKeymap 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:getOpencodeModeStack",
+      "type": "function",
+      "name": "getOpencodeModeStack",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        106,
+        110
+      ],
+      "summary": "读取OpencodeModeStack，调用 modeStacks.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:formatOptions",
+      "type": "function",
+      "name": "formatOptions",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        190,
+        204
+      ],
+      "summary": "格式化选项，调用 leaderDisplay 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:formatKeySequence",
+      "type": "function",
+      "name": "formatKeySequence",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        206,
+        208
+      ],
+      "summary": "格式化键Sequence，调用 formatKeySequenceExtra、formatOptions 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:formatKeyBindings",
+      "type": "function",
+      "name": "formatKeyBindings",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        210,
+        212
+      ],
+      "summary": "格式化键Bindings，调用 formatCommandBindingsExtra、formatOptions 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:registerOpencodeKeymap",
+      "type": "function",
+      "name": "registerOpencodeKeymap",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        214,
+        244
+      ],
+      "summary": "注册Opencode按键映射，调用 createOpencodeModeStack、registerCommaBindings、registerKeyAliases、registerBaseLayoutFallback 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:useLeaderActive",
+      "type": "function",
+      "name": "useLeaderActive",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        246,
+        248
+      ],
+      "summary": "连接Leader活动，调用 useKeymapSelector、keymap.getPendingSequence 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "type": "function",
+      "name": "useCommandShortcut",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        250,
+        258
+      ],
+      "summary": "连接命令快捷键，调用 useTuiConfig、useKeymapSelector、formatKeySequence、keymap.getCommandBindings 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/keymap.tsx:useCommandSlashes",
+      "type": "function",
+      "name": "useCommandSlashes",
+      "filePath": "packages/tui/src/keymap.tsx",
+      "lineRange": [
+        260,
+        290
+      ],
+      "summary": "连接命令Slashes，调用 useOpencodeKeymap、useKeymapSelector、keymap.getCommandEntries、createMemo 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/logo.ts",
+      "type": "file",
+      "name": "logo.ts",
+      "filePath": "packages/tui/src/logo.ts",
+      "summary": "为 tui 提供标识相关数据处理接口。 对外提供 logo、go、marks。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/parsers-config.ts",
+      "type": "file",
+      "name": "parsers-config.ts",
+      "filePath": "packages/tui/src/parsers-config.ts",
+      "summary": "配置或执行 tui 的parsers配置开发流程。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/tui/src/plugin/adapters.tsx",
+      "type": "file",
+      "name": "adapters.tsx",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "summary": "把终端路由、命令和界面能力适配为插件 API，创建插件路由映射。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/adapters.tsx:routeNavigate",
+      "type": "function",
+      "name": "routeNavigate",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "lineRange": [
+        41,
+        55
+      ],
+      "summary": "实现 routeNavigate 的适配器操作，调用 route.navigate 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/adapters.tsx:routeCurrent",
+      "type": "function",
+      "name": "routeCurrent",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "lineRange": [
+        57,
+        73
+      ],
+      "summary": "实现 routeCurrent 的适配器操作，输入包括 route。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/adapters.tsx:pickOption",
+      "type": "function",
+      "name": "pickOption",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "lineRange": [
+        82,
+        91
+      ],
+      "summary": "选取选项，输入包括 item。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/adapters.tsx:stateApi",
+      "type": "function",
+      "name": "stateApi",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "lineRange": [
+        98,
+        163
+      ],
+      "summary": "实现 stateApi 的适配器操作，输入包括 sync。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/adapters.tsx:createTuiApiAdapters",
+      "type": "function",
+      "name": "createTuiApiAdapters",
+      "filePath": "packages/tui/src/plugin/adapters.tsx",
+      "lineRange": [
+        173,
+        355
+      ],
+      "summary": "创建TuiApi适配器，调用 appApi、createCommandShim、stateApi 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/plugin/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/tui/src/plugin/api.ts",
+      "summary": "为 tui 提供api相关数据处理接口。 对外提供 createPluginRoutes、createTuiApi。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/api.ts:createPluginRoutes",
+      "type": "function",
+      "name": "createPluginRoutes",
+      "filePath": "packages/tui/src/plugin/api.ts",
+      "lineRange": [
+        11,
+        38
+      ],
+      "summary": "创建插件路由，调用 createSignal 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/api.ts:createTuiApi",
+      "type": "function",
+      "name": "createTuiApi",
+      "filePath": "packages/tui/src/plugin/api.ts",
+      "lineRange": [
+        42,
+        52
+      ],
+      "summary": "创建TuiApi，输入包括 input。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/plugin/command-shim.ts",
+      "type": "file",
+      "name": "command-shim.ts",
+      "filePath": "packages/tui/src/plugin/command-shim.ts",
+      "summary": "为 tui 提供命令shim相关数据处理接口。 对外提供 createCommandShim。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/command-shim.ts:createCommandShimDialog",
+      "type": "function",
+      "name": "createCommandShimDialog",
+      "filePath": "packages/tui/src/plugin/command-shim.ts",
+      "lineRange": [
+        19,
+        41
+      ],
+      "summary": "创建命令Shim对话框，输入包括 dialog。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/command-shim.ts:toCommand",
+      "type": "function",
+      "name": "toCommand",
+      "filePath": "packages/tui/src/plugin/command-shim.ts",
+      "lineRange": [
+        49,
+        65
+      ],
+      "summary": "实现 toCommand 的命令shim操作，输入包括 item、dialog。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/command-shim.ts:toBindings",
+      "type": "function",
+      "name": "toBindings",
+      "filePath": "packages/tui/src/plugin/command-shim.ts",
+      "lineRange": [
+        67,
+        83
+      ],
+      "summary": "实现 toBindings 的命令shim操作，调用 commands.flatMap、keybinds.has 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/command-shim.ts:createCommandShim",
+      "type": "function",
+      "name": "createCommandShim",
+      "filePath": "packages/tui/src/plugin/command-shim.ts",
+      "lineRange": [
+        85,
+        109
+      ],
+      "summary": "创建命令Shim，调用 createCommandShimDialog 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/plugin/runtime.tsx",
+      "type": "file",
+      "name": "runtime.tsx",
+      "filePath": "packages/tui/src/plugin/runtime.tsx",
+      "summary": "创建并提供 TUI 插件运行时，连接插件加载结果与 Solid 界面上下文。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/runtime.tsx:createPluginRuntime",
+      "type": "function",
+      "name": "createPluginRuntime",
+      "filePath": "packages/tui/src/plugin/runtime.tsx",
+      "lineRange": [
+        12,
+        35
+      ],
+      "summary": "创建插件运行时，调用 createSignal、createSlots、createPluginRoutes 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/runtime.tsx:PluginRuntimeProvider",
+      "type": "function",
+      "name": "PluginRuntimeProvider",
+      "filePath": "packages/tui/src/plugin/runtime.tsx",
+      "lineRange": [
+        73,
+        75
+      ],
+      "summary": "渲染插件运行时提供商组件，组织运行时的界面内容和交互。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/runtime.tsx:usePluginRuntime",
+      "type": "function",
+      "name": "usePluginRuntime",
+      "filePath": "packages/tui/src/plugin/runtime.tsx",
+      "lineRange": [
+        77,
+        81
+      ],
+      "summary": "连接插件运行时，调用 useContext 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/plugin/slots.tsx",
+      "type": "file",
+      "name": "slots.tsx",
+      "filePath": "packages/tui/src/plugin/slots.tsx",
+      "summary": "创建终端插件的界面插槽，允许插件按注册位置扩展内置界面。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/plugin/slots.tsx:createSlots",
+      "type": "function",
+      "name": "createSlots",
+      "filePath": "packages/tui/src/plugin/slots.tsx",
+      "lineRange": [
+        25,
+        65
+      ],
+      "summary": "创建插槽，调用 createSignal 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/prompt/display.ts",
+      "type": "file",
+      "name": "display.ts",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "summary": "为 tui 提供display相关数据处理接口。 对外提供 promptOffsetWidth、displaySlice、displayCharAt、mentionTriggerIndex。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "function",
+      "name": "promptOffsetWidth",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "lineRange": [
+        3,
+        10
+      ],
+      "summary": "实现 promptOffsetWidth 的display操作，调用 graphemes.segment、Bun.stringWidth 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/display.ts:displayOffsetIndex",
+      "type": "function",
+      "name": "displayOffsetIndex",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "lineRange": [
+        12,
+        23
+      ],
+      "summary": "实现 displayOffsetIndex 的display操作，调用 graphemes.segment、promptOffsetWidth 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "type": "function",
+      "name": "displaySlice",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "lineRange": [
+        25,
+        27
+      ],
+      "summary": "实现 displaySlice 的display操作，调用 promptOffsetWidth、value.slice、displayOffsetIndex 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/display.ts:displayCharAt",
+      "type": "function",
+      "name": "displayCharAt",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "lineRange": [
+        29,
+        36
+      ],
+      "summary": "实现 displayCharAt 的display操作，调用 graphemes.segment、promptOffsetWidth 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/display.ts:mentionTriggerIndex",
+      "type": "function",
+      "name": "mentionTriggerIndex",
+      "filePath": "packages/tui/src/prompt/display.ts",
+      "lineRange": [
+        38,
+        48
+      ],
+      "summary": "实现 mentionTriggerIndex 的display操作，调用 promptOffsetWidth、displaySlice、text.lastIndexOf、text.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/prompt/frecency.tsx",
+      "type": "file",
+      "name": "frecency.tsx",
+      "filePath": "packages/tui/src/prompt/frecency.tsx",
+      "summary": "实现终端的频率与时效界面及相关交互。 对外提供 MAX_FRECENCY_ENTRIES、parseFrecency、{ use: useFrecency, provider: FrecencyProvider }。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/frecency.tsx:parseFrecency",
+      "type": "function",
+      "name": "parseFrecency",
+      "filePath": "packages/tui/src/prompt/frecency.tsx",
+      "lineRange": [
+        12,
+        31
+      ],
+      "summary": "解析频率与时效，输入包括 text。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/prompt/history.tsx",
+      "type": "file",
+      "name": "history.tsx",
+      "filePath": "packages/tui/src/prompt/history.tsx",
+      "summary": "实现终端的历史界面及相关交互。 对外提供 MAX_HISTORY_ENTRIES、parsePromptHistory、isDuplicateEntry、{ use: usePromptHistory, provider: PromptHistoryProvider }。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/history.tsx:parsePromptHistory",
+      "type": "function",
+      "name": "parsePromptHistory",
+      "filePath": "packages/tui/src/prompt/history.tsx",
+      "lineRange": [
+        29,
+        42
+      ],
+      "summary": "解析提示词历史，输入包括 text。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/history.tsx:isDuplicateEntry",
+      "type": "function",
+      "name": "isDuplicateEntry",
+      "filePath": "packages/tui/src/prompt/history.tsx",
+      "lineRange": [
+        44,
+        47
+      ],
+      "summary": "判断DuplicateEntry，输入包括 previous、next。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:createOpencodeModeStack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:createOpencodeModeStack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useOpencodeModeStack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useOpencodeModeStack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:getOpencodeModeStack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:getOpencodeModeStack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:formatOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:formatKeySequence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:formatKeySequence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:formatKeyBindings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:formatKeyBindings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:registerOpencodeKeymap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:registerOpencodeKeymap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useLeaderActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useLeaderActive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandSlashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandSlashes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/keymap.tsx",
+      "target": "file:packages/tui/src/config/keybind.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:useOpencodeModeStack",
+      "target": "function:packages/tui/src/keymap.tsx:getOpencodeModeStack",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:formatKeySequence",
+      "target": "function:packages/tui/src/keymap.tsx:formatOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:formatKeyBindings",
+      "target": "function:packages/tui/src/keymap.tsx:formatOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:registerOpencodeKeymap",
+      "target": "function:packages/tui/src/keymap.tsx:createOpencodeModeStack",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "target": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "target": "function:packages/tui/src/keymap.tsx:formatKeySequence",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:routeNavigate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:routeCurrent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:pickOption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:stateApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:createTuiApiAdapters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:createTuiApiAdapters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/component/prompt/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/route.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/keymap.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/plugin/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/plugin/command-shim.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/dialog-alert.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/dialog-confirm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/dialog-prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/dialog-select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/adapters.tsx",
+      "target": "file:packages/tui/src/ui/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/plugin/adapters.tsx:createTuiApiAdapters",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:createCommandShim",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/plugin/adapters.tsx:createTuiApiAdapters",
+      "target": "function:packages/tui/src/plugin/adapters.tsx:stateApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/api.ts",
+      "target": "function:packages/tui/src/plugin/api.ts:createPluginRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/api.ts",
+      "target": "function:packages/tui/src/plugin/api.ts:createPluginRoutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/api.ts",
+      "target": "function:packages/tui/src/plugin/api.ts:createTuiApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/api.ts",
+      "target": "function:packages/tui/src/plugin/api.ts:createTuiApi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:createCommandShimDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:toCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:toBindings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:createCommandShim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:createCommandShim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "file:packages/tui/src/config/keybind.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/command-shim.ts",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/plugin/command-shim.ts:createCommandShim",
+      "target": "function:packages/tui/src/plugin/command-shim.ts:createCommandShimDialog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:createPluginRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:createPluginRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:PluginRuntimeProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:PluginRuntimeProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:usePluginRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:usePluginRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "file:packages/tui/src/plugin/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/plugin/runtime.tsx",
+      "target": "file:packages/tui/src/plugin/slots.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/plugin/runtime.tsx:createPluginRuntime",
+      "target": "function:packages/tui/src/plugin/slots.tsx:createSlots",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/plugin/runtime.tsx:createPluginRuntime",
+      "target": "function:packages/tui/src/plugin/api.ts:createPluginRoutes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/slots.tsx",
+      "target": "function:packages/tui/src/plugin/slots.tsx:createSlots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/plugin/slots.tsx",
+      "target": "function:packages/tui/src/plugin/slots.tsx:createSlots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/plugin/slots.tsx",
+      "target": "file:packages/tui/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:displayOffsetIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:displayCharAt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:displayCharAt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:mentionTriggerIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/display.ts",
+      "target": "function:packages/tui/src/prompt/display.ts:mentionTriggerIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:displayOffsetIndex",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "target": "function:packages/tui/src/prompt/display.ts:displayOffsetIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:displayCharAt",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:mentionTriggerIndex",
+      "target": "function:packages/tui/src/prompt/display.ts:promptOffsetWidth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/prompt/display.ts:mentionTriggerIndex",
+      "target": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/frecency.tsx",
+      "target": "function:packages/tui/src/prompt/frecency.tsx:parseFrecency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/frecency.tsx",
+      "target": "function:packages/tui/src/prompt/frecency.tsx:parseFrecency",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/frecency.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/frecency.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/frecency.tsx",
+      "target": "file:packages/tui/src/util/persistence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "function:packages/tui/src/prompt/history.tsx:parsePromptHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "function:packages/tui/src/prompt/history.tsx:parsePromptHistory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "function:packages/tui/src/prompt/history.tsx:isDuplicateEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "function:packages/tui/src/prompt/history.tsx:isDuplicateEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/history.tsx",
+      "target": "file:packages/tui/src/util/persistence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

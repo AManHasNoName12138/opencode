@@ -1,0 +1,1348 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/git/git.test.ts",
+      "type": "file",
+      "name": "git.test.ts",
+      "filePath": "packages/opencode/test/git/git.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Git、branch() returns current branch name、branch() returns undefined for non-git directories、branch() returns undefined for detached HEAD、defaultBranch() uses init.defaultBranch when available、status() handles special filenames、diff(), stats(), and mergeBase() parse tracked changes」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/image/image.test.ts",
+      "type": "file",
+      "name": "image.test.ts",
+      "filePath": "packages/opencode/test/image/image.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Image、normalizes generated png and jpeg attachments、accepts webp attachments that are already within limits、resizes images that fit the byte limit but exceed dimension limits、resizes the 5MB base64 picture fixture」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/image/image.test.ts:part",
+      "type": "function",
+      "name": "part",
+      "filePath": "packages/opencode/test/image/image.test.ts",
+      "lineRange": [
+        18,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 part，接收 mime、data 参数；调用 PartID.ascending、MessageID.ascending、SessionID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/installation/installation.test.ts",
+      "type": "file",
+      "name": "installation.test.ts",
+      "filePath": "packages/opencode/test/installation/installation.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「installation、latest、upgrade」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/installation/installation.test.ts:mockSpawner",
+      "type": "function",
+      "name": "mockSpawner",
+      "filePath": "packages/opencode/test/installation/installation.test.ts",
+      "lineRange": [
+        20,
+        45
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mockSpawner，接收 handler 参数；调用 ChildProcessSpawner.make、ChildProcess.isStandardCommand、handler、Effect.succeed、ChildProcessSpawner.makeHandle、ChildProcessSpawner.ProcessId、ChildProcessSpawner.ExitCode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/installation/installation.test.ts:testLayer",
+      "type": "function",
+      "name": "testLayer",
+      "filePath": "packages/opencode/test/installation/installation.test.ts",
+      "lineRange": [
+        54,
+        67
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 testLayer，接收 httpHandler、spawnHandler 参数；调用 makeGlobalNode、mockSpawner、LayerNode.compile、mockHttpClient 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/effect.ts",
+      "type": "file",
+      "name": "effect.ts",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 it、testEffect、testEffectShared、awaitWithTimeout、pollWithTimeout 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:isolatedRun",
+      "type": "function",
+      "name": "isolatedRun",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        38,
+        47
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isolatedRun，接收 value、layer 参数；调用 Effect.gen、body、Effect.provide、Exit.isFailure、Cause.prettyErrors、Effect.logError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:sharedRun",
+      "type": "function",
+      "name": "sharedRun",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        53,
+        65
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 sharedRun，接收 value、layer 参数；调用 Effect.gen、Scope.make、Layer.buildWithMemoMap、body、Effect.provide、Scope.close、Exit.isFailure 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        67,
+        129
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 make，接收 testLayer、liveLayer、run 参数；调用 test.only、run、test.skip、instanceArgs、body、withTmpdirInstance 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:testEffect",
+      "type": "function",
+      "name": "testEffect",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        139,
+        140
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 testEffect，接收 layer 参数；调用 make、Layer.provideMerge 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:testEffectShared",
+      "type": "function",
+      "name": "testEffectShared",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        146,
+        147
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 testEffectShared，接收 layer 参数；调用 make、Layer.provideMerge 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:awaitWithTimeout",
+      "type": "function",
+      "name": "awaitWithTimeout",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        149,
+        159
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 awaitWithTimeout，接收 self、message、duration 参数；调用 self.pipe、Effect.timeoutOrElse、Effect.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/effect.ts:pollWithTimeout",
+      "type": "function",
+      "name": "pollWithTimeout",
+      "filePath": "packages/opencode/test/lib/effect.ts",
+      "lineRange": [
+        161,
+        177
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 pollWithTimeout，接收 self、message、duration 参数；调用 Effect.gen、Effect.sleep、Effect.timeoutOrElse、Effect.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/filesystem.ts",
+      "type": "file",
+      "name": "filesystem.ts",
+      "filePath": "packages/opencode/test/lib/filesystem.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 writeFileStringScoped 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/llm-server.ts",
+      "type": "file",
+      "name": "llm-server.ts",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 Reply、reply、httpError、raw、TestLLMServer 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:chunk",
+      "type": "function",
+      "name": "chunk",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        69,
+        81
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 chunk，接收 input 参数；调用 tokens 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:toolStartLine",
+      "type": "function",
+      "name": "toolStartLine",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        99,
+        115
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 toolStartLine，接收 id、name 参数；调用 chunk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:toolArgsLine",
+      "type": "function",
+      "name": "toolArgsLine",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        117,
+        130
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 toolArgsLine，接收 value 参数；调用 chunk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:responseCreated",
+      "type": "function",
+      "name": "responseCreated",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        136,
+        147
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 responseCreated，接收 model 参数；调用 Math.floor、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:responseCompleted",
+      "type": "function",
+      "name": "responseCompleted",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        149,
+        164
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 responseCompleted，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:responseTool",
+      "type": "function",
+      "name": "responseTool",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        231,
+        245
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 responseTool，接收 id、item、name、seq 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:responseToolDone",
+      "type": "function",
+      "name": "responseToolDone",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        267,
+        281
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 responseToolDone，接收 tool、seq 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:flow",
+      "type": "function",
+      "name": "flow",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        291,
+        330
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 flow，接收 item 参数；调用 choices、out.push、Array.isArray 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "type": "function",
+      "name": "responses",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        332,
+        410
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 responses，接收 item、model 参数；调用 responseCreated、flow、lines.push、responseMessage、responseText、responseReason、responseReasonPart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        418,
+        431
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 send，接收 item 参数；调用 bytes、Stream.fromIterable、Stream.concat、Stream.fromEffect、Effect.promise、Stream.flatMap、Stream.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:reply",
+      "type": "function",
+      "name": "reply",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        564,
+        566
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 reply。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:httpError",
+      "type": "function",
+      "name": "httpError",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        568,
+        574
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 httpError，接收 status、body 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/llm-server.ts:raw",
+      "type": "function",
+      "name": "raw",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        576,
+        594
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 raw，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/test/lib/llm-server.ts:Reply",
+      "type": "class",
+      "name": "Reply",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        452,
+        562
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Reply 类，提供 text、reason、usage、wait、stop、contentFilter、toolCalls 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/test/lib/llm-server.ts:TestLLMServer",
+      "type": "class",
+      "name": "TestLLMServer",
+      "filePath": "packages/opencode/test/lib/llm-server.ts",
+      "lineRange": [
+        637,
+        779
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 TestLLMServer 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/lib/test-provider.ts",
+      "type": "file",
+      "name": "test-provider.ts",
+      "filePath": "packages/opencode/test/lib/test-provider.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 testProviderConfig 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "function",
+      "name": "testProviderConfig",
+      "filePath": "packages/opencode/test/lib/test-provider.ts",
+      "lineRange": [
+        9,
+        37
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 testProviderConfig，接收 llmUrl 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lsp/index.test.ts",
+      "type": "file",
+      "name": "index.test.ts",
+      "filePath": "packages/opencode/test/lsp/index.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「lsp.spawn、does not spawn builtin LSP for files outside instance、does not spawn builtin LSP for files inside instance when LSP is unset、would spawn builtin LSP for files inside instance when lsp is true、publishes lsp.updated after custom LSP initialization、would spawn builtin LSP for files inside instance when config object is provided、uses pyright instead of ty by default」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "type": "file",
+      "name": "lifecycle.test.ts",
+      "filePath": "packages/opencode/test/lsp/lifecycle.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「LSP service lifecycle、init() completes without error、status() returns empty array initially、diagnostics() returns empty object initially、hasClients() returns false for .ts files in instance when LSP is unset、hasClients() returns true for .ts files in instance when lsp is true、hasClients() keeps built-in LSPs when config object is provided」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "type": "file",
+      "name": "catalog.test.ts",
+      "filePath": "packages/opencode/test/mcp/catalog.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「McpCatalog.convertTool、preserves content when structuredContent is also present、falls back to structuredContent only when content is absent、preserves output schema validation across paginated tool discovery」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/catalog.test.ts:mcpTool",
+      "type": "function",
+      "name": "mcpTool",
+      "filePath": "packages/opencode/test/mcp/catalog.test.ts",
+      "lineRange": [
+        17,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mcpTool。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/headers.test.ts",
+      "type": "file",
+      "name": "headers.test.ts",
+      "filePath": "packages/opencode/test/mcp/headers.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「mcp.headers、headers are passed to transports when oauth is enabled (default)、headers are passed to transports when oauth is explicitly disabled、no requestInit when headers are not provided」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "type": "file",
+      "name": "lifecycle.test.ts",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「advertises and lists the instance directory as its root、local mcp cwd resolves relative paths against instance directory、tools() reuses cached definitions until a protocol notification、instructions() returns non-empty connected server instructions with tool names、follows cursors when listing tools, prompts, resources, and templates、accepts empty cursors and rejects repeated cursors、disconnect remo」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/lifecycle.test.ts:lifecycleServer",
+      "type": "function",
+      "name": "lifecycleServer",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "lineRange": [
+        45,
+        142
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 lifecycleServer，接收 input 参数；调用 Effect.acquireRelease、Effect.promise、makeProtocol、Bun.serve、http.url.toString、current.protocol.sendToolListChanged、current.protocol.close 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/lifecycle.test.ts:hangingLifecycleServer",
+      "type": "function",
+      "name": "hangingLifecycleServer",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "lineRange": [
+        144,
+        176
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 hangingLifecycleServer；调用 Effect.acquireRelease、Effect.promise、protocol.setRequestHandler、Promise.resolve、crypto.randomUUID、protocol.connect、Bun.serve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/git/git.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/git/git.test.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/git/git.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/git/git.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "function:packages/opencode/test/image/image.test.ts:part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/image/image.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/image/image.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/test/fixture/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/image/image.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/installation/installation.test.ts",
+      "target": "function:packages/opencode/test/installation/installation.test.ts:mockSpawner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/installation/installation.test.ts",
+      "target": "function:packages/opencode/test/installation/installation.test.ts:testLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/installation/installation.test.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/installation/installation.test.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/installation/installation.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:isolatedRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:sharedRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:testEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:testEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:testEffectShared",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:testEffectShared",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:awaitWithTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:awaitWithTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:pollWithTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "function:packages/opencode/test/lib/effect.ts:pollWithTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:chunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:toolStartLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:toolArgsLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseCreated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseCompleted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseToolDone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:flow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:reply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:reply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:httpError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:httpError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:raw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:raw",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "class:packages/opencode/test/lib/llm-server.ts:Reply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "class:packages/opencode/test/lib/llm-server.ts:Reply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "class:packages/opencode/test/lib/llm-server.ts:TestLLMServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/llm-server.ts",
+      "target": "class:packages/opencode/test/lib/llm-server.ts:TestLLMServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lib/test-provider.ts",
+      "target": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/lib/test-provider.ts",
+      "target": "function:packages/opencode/test/lib/test-provider.ts:testProviderConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/index.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "function:packages/opencode/test/mcp/catalog.test.ts:mcpTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "file:packages/opencode/src/mcp/catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "file:packages/opencode/src/mcp/catalog.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "function:packages/opencode/test/mcp/lifecycle.test.ts:lifecycleServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "function:packages/opencode/test/mcp/lifecycle.test.ts:hangingLifecycleServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/installation/installation.test.ts:testLayer",
+      "target": "function:packages/opencode/test/installation/installation.test.ts:mockSpawner",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/effect.ts:make",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:withTmpdirInstance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/effect.ts:testEffect",
+      "target": "function:packages/opencode/test/lib/effect.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/effect.ts:testEffectShared",
+      "target": "function:packages/opencode/test/lib/effect.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:toolStartLine",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:chunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:toolArgsLine",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:chunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseCreated",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:flow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseToolDone",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/lib/llm-server.ts:responses",
+      "target": "function:packages/opencode/test/lib/llm-server.ts:responseCompleted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

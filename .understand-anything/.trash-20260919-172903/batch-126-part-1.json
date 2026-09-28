@@ -1,0 +1,566 @@
+{
+  "nodes": [
+    {
+      "id": "config:.dockerignore",
+      "type": "config",
+      "name": ".dockerignore",
+      "filePath": ".dockerignore",
+      "summary": "OpenCode的  配置，记录该工具使用的过滤规则或环境约定。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        ""
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.oxlintrc.json",
+      "type": "config",
+      "name": ".oxlintrc.json",
+      "filePath": ".oxlintrc.json",
+      "summary": "OpenCode的 .oxlintrc 配置，定义 $schema、options、categories、rules、ignorePatterns 等配置项。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        ".oxlintrc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "OpenCode的协作规范，主题为 AGENTS；包含 Branch Names、Commits and PR Titles、Style Guide、Testing 等章节。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "AGENTS"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CONTEXT.md",
+      "type": "document",
+      "name": "CONTEXT.md",
+      "filePath": "CONTEXT.md",
+      "summary": "OpenCode的专题文档，主题为 OpenCode Session Runtime；包含 OpenCode Session Runtime、Language、Relationships、Client contract architecture 等章节。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "CONTEXT"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "OpenCode的专题文档，主题为 Contributing to OpenCode；包含 Contributing to OpenCode、Adding New Providers、Developing OpenCode、Pull Request Expectations 等章节。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "CONTRIBUTING"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "type": "document",
+      "name": "DEVELOPMENT_GUIDE.zh-CN.md",
+      "filePath": "DEVELOPMENT_GUIDE.zh-CN.md",
+      "summary": "面向 Java/Go 开发者介绍 OpenCode 二次开发，串联包结构、TypeScript/Effect、legacy 与 V2 会话执行、工具和事件投影，并提供调试、练习、验证及贡献路线。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "DEVELOPMENT_GUIDE.zh-CN"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:GITHUB_PR_GUIDE.zh-CN.md",
+      "type": "document",
+      "name": "GITHUB_PR_GUIDE.zh-CN.md",
+      "filePath": "GITHUB_PR_GUIDE.zh-CN.md",
+      "summary": "解释 GitHub fork、远端、分支、PR 与评审流程，结合仓库贡献约定说明如何验证并提交改动，以及如何排除本地知识图谱生成物。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "GITHUB_PR_GUIDE.zh-CN"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:packages/sdk/js/script/build.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CONTEXT.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CONTRIBUTING.md",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CONTRIBUTING.md",
+      "target": "file:script/generate.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CONTRIBUTING.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/cmd/run.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/cmd/serve.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/cmd/debug/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/session.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/server/src/handlers/session.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/input.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/execution/local.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/run-coordinator.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/runner/llm.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/tool.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/registry.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/application-tools.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/read.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/write.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/edit.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/bash.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/grep.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/tool/glob.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/llm/src/llm.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/provider.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/model.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/models-dev.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/tui/worker.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/tui/src/app.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/entry.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/app.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/pages/session.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "document:packages/opencode/test/AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/sdk/js/script/build.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/server/src/handlers/health.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/test/session-runner.test.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/runner/to-llm-message.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/runner/publish-llm-event.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/history.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/projector.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/session/processor.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/session/llm.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/opencode/src/session/run-state.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/config.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/event.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/sql.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:DEVELOPMENT_GUIDE.zh-CN.md",
+      "target": "file:packages/core/src/session/context-epoch.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:GITHUB_PR_GUIDE.zh-CN.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:GITHUB_PR_GUIDE.zh-CN.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:GITHUB_PR_GUIDE.zh-CN.md",
+      "target": "file:packages/sdk/js/script/build.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

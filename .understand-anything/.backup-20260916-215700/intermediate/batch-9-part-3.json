@@ -1,0 +1,1262 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/error-description.ts",
+      "type": "file",
+      "name": "error-description.ts",
+      "filePath": "packages/app/src/pages/error-description.ts",
+      "summary": "为 app 提供错误description相关数据处理接口。 对外提供 errorDescriptionKey。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/error-description.ts:errorDescriptionKey",
+      "type": "function",
+      "name": "errorDescriptionKey",
+      "filePath": "packages/app/src/pages/error-description.ts",
+      "lineRange": [
+        1,
+        11
+      ],
+      "summary": "实现 errorDescriptionKey 的错误description操作，输入包括 error。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/error.tsx",
+      "type": "file",
+      "name": "error.tsx",
+      "filePath": "packages/app/src/pages/error.tsx",
+      "summary": "实现应用的错误界面及相关交互。 对外提供 ErrorPage。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/error.tsx:safeJson",
+      "type": "function",
+      "name": "safeJson",
+      "filePath": "packages/app/src/pages/error.tsx",
+      "lineRange": [
+        40,
+        55
+      ],
+      "summary": "实现 safeJson 的错误操作，调用 val.toString、seen.has、seen.add、String 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/error.tsx:formatInitError",
+      "type": "function",
+      "name": "formatInitError",
+      "filePath": "packages/app/src/pages/error.tsx",
+      "lineRange": [
+        57,
+        146
+      ],
+      "summary": "格式化初始化错误，调用 t、json、lines.push、lines.join 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/error.tsx:formatErrorChain",
+      "type": "function",
+      "name": "formatErrorChain",
+      "filePath": "packages/app/src/pages/error.tsx",
+      "lineRange": [
+        148,
+        212
+      ],
+      "summary": "格式化错误Chain，调用 t、isInitError、formatInitError、error.stack?.trim 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/error.tsx:ErrorPage",
+      "type": "function",
+      "name": "ErrorPage",
+      "filePath": "packages/app/src/pages/error.tsx",
+      "lineRange": [
+        222,
+        372
+      ],
+      "summary": "渲染错误Page组件，组织错误的界面内容和交互；使用 usePlatform、useLanguage、createStore、onMount 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "type": "file",
+      "name": "home-session-archive.test.ts",
+      "filePath": "packages/app/src/pages/home-session-archive.test.ts",
+      "summary": "验证首页会话归档相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“archiving a Home session removes its open titlebar tab”、“reports archive failures without removing the session”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home-session-archive.ts",
+      "type": "file",
+      "name": "home-session-archive.ts",
+      "filePath": "packages/app/src/pages/home-session-archive.ts",
+      "summary": "为 app 提供首页会话归档相关数据处理接口。 对外提供 archiveHomeSession。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home-session-archive.ts:archiveHomeSession",
+      "type": "function",
+      "name": "archiveHomeSession",
+      "filePath": "packages/app/src/pages/home-session-archive.ts",
+      "lineRange": [
+        9,
+        27
+      ],
+      "summary": "实现 archiveHomeSession 的首页会话归档操作，调用 input.remove、notifySessionTabsRemoved、input.onError 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home-session-open.test.ts",
+      "type": "file",
+      "name": "home-session-open.test.ts",
+      "filePath": "packages/app/src/pages/home-session-open.test.ts",
+      "summary": "验证首页会话打开相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“shouldOpenSessionInBackground”、“opens middle clicks in the background”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home-session-open.ts",
+      "type": "file",
+      "name": "home-session-open.ts",
+      "filePath": "packages/app/src/pages/home-session-open.ts",
+      "summary": "为 app 提供首页会话打开相关数据处理接口。 对外提供 shouldOpenSessionInBackground。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home-session-open.ts:shouldOpenSessionInBackground",
+      "type": "function",
+      "name": "shouldOpenSessionInBackground",
+      "filePath": "packages/app/src/pages/home-session-open.ts",
+      "lineRange": [
+        1,
+        14
+      ],
+      "summary": "判断是否应当打开会话内部Background，输入包括 input。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home.tsx",
+      "type": "file",
+      "name": "home.tsx",
+      "filePath": "packages/app/src/pages/home.tsx",
+      "summary": "实现应用的首页界面及相关交互。 对外提供 NewHome。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home.tsx:NewHome",
+      "type": "function",
+      "name": "NewHome",
+      "filePath": "packages/app/src/pages/home.tsx",
+      "lineRange": [
+        11,
+        50
+      ],
+      "summary": "渲染新建首页组件，组织首页的界面内容和交互；使用 createHomeController、createHomeProjectsController、createHomeSessionsController、createHomeSessionSearchController 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home/home-controller.ts",
+      "type": "file",
+      "name": "home-controller.ts",
+      "filePath": "packages/app/src/pages/home/home-controller.ts",
+      "summary": "为 app 提供首页控制器相关数据处理接口。 对外提供 createHomeController。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-controller.ts:createHomeController",
+      "type": "function",
+      "name": "createHomeController",
+      "filePath": "packages/app/src/pages/home/home-controller.ts",
+      "lineRange": [
+        9,
+        119
+      ],
+      "summary": "创建首页控制器，调用 useServerSync、useLayout、useServer、useGlobal 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "type": "file",
+      "name": "home-projects-controller.tsx",
+      "filePath": "packages/app/src/pages/home/home-projects-controller.tsx",
+      "summary": "实现应用的首页项目控制器界面及相关交互。 对外提供 createHomeProjectsController。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "type": "function",
+      "name": "createHomeProjectsController",
+      "filePath": "packages/app/src/pages/home/home-projects-controller.tsx",
+      "lineRange": [
+        18,
+        126
+      ],
+      "summary": "创建首页项目控制器，调用 usePlatform、useDirectoryPicker、useDialog、useLanguage 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "type": "file",
+      "name": "home-projects-view.tsx",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "summary": "实现应用的首页项目view界面及相关交互。 对外提供 HomeProjectsView、HomeUtilityNav。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectsView",
+      "type": "function",
+      "name": "HomeProjectsView",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        63,
+        155
+      ],
+      "summary": "渲染首页项目View组件，组织首页项目view的界面内容和交互；使用 createStore、setContextMenu、props.language.t、props.onWheel 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeUtilityNav",
+      "type": "function",
+      "name": "HomeUtilityNav",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        157,
+        183
+      ],
+      "summary": "渲染首页UtilityNav组件，组织首页项目view的界面内容和交互；使用 props.language.t 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeServerRow",
+      "type": "function",
+      "name": "HomeServerRow",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        185,
+        301
+      ],
+      "summary": "渲染首页服务器行组件，组织首页项目view的界面内容和交互；使用 onCleanup、contextMenuID、props.contextMenuOpen、props.onSetContextMenuOpen 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectList",
+      "type": "function",
+      "name": "HomeProjectList",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        314,
+        355
+      ],
+      "summary": "渲染首页项目列表组件，组织首页项目view的界面内容和交互；使用 defaults.filter、PointerSensor.configure、event.target.closest、RestrictToElement.configure 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectSlot",
+      "type": "function",
+      "name": "HomeProjectSlot",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        357,
+        384
+      ],
+      "summary": "渲染首页项目插槽组件，组织首页项目view的界面内容和交互；使用 props.items.find、createMemo、project、props.selection 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectEmpty",
+      "type": "function",
+      "name": "HomeProjectEmpty",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        386,
+        415
+      ],
+      "summary": "渲染首页项目空组件，组织首页项目view的界面内容和交互；使用 unreachable、props.onChooseProject、props.language.t 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeRecentlyClosedRow",
+      "type": "function",
+      "name": "HomeRecentlyClosedRow",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        417,
+        444
+      ],
+      "summary": "渲染首页RecentlyClosed行组件，组织首页项目view的界面内容和交互；使用 path、unreachable、props.onAddProjects、displayName 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectRow",
+      "type": "function",
+      "name": "HomeProjectRow",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        446,
+        586
+      ],
+      "summary": "渲染首页项目行组件，组织首页项目view的界面内容和交互；使用 usePlatform、useSortable、onCleanup、contextMenuID 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectNavButton",
+      "type": "function",
+      "name": "HomeProjectNavButton",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        588,
+        608
+      ],
+      "summary": "渲染首页项目Nav按钮组件，组织首页项目view的界面内容和交互；使用 splitProps 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectAvatar",
+      "type": "function",
+      "name": "HomeProjectAvatar",
+      "filePath": "packages/app/src/pages/home/home-projects-view.tsx",
+      "lineRange": [
+        610,
+        619
+      ],
+      "summary": "渲染首页项目头像组件，组织首页项目view的界面内容和交互；使用 createMemo、displayName、name、getProjectAvatarSource 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/home/home-projects.tsx",
+      "type": "file",
+      "name": "home-projects.tsx",
+      "filePath": "packages/app/src/pages/home/home-projects.tsx",
+      "summary": "实现应用的首页项目界面及相关交互。 对外提供 HomeProjects。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/home/home-projects.tsx:HomeProjects",
+      "type": "function",
+      "name": "HomeProjects",
+      "filePath": "packages/app/src/pages/home/home-projects.tsx",
+      "lineRange": [
+        5,
+        40
+      ],
+      "summary": "渲染首页项目组件，组织首页项目的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/error-description.ts",
+      "target": "file:packages/app/src/pages/error-description.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/error-description.ts",
+      "target": "function:packages/app/src/pages/error-description.ts:errorDescriptionKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/error-description.ts",
+      "target": "function:packages/app/src/pages/error-description.ts:errorDescriptionKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "function:packages/app/src/pages/error.tsx:safeJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "function:packages/app/src/pages/error.tsx:formatInitError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "function:packages/app/src/pages/error.tsx:formatErrorChain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "function:packages/app/src/pages/error.tsx:ErrorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "function:packages/app/src/pages/error.tsx:ErrorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/error.tsx",
+      "target": "file:packages/app/src/pages/error-description.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/error.tsx:formatErrorChain",
+      "target": "function:packages/app/src/pages/error.tsx:formatInitError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/error.tsx:ErrorPage",
+      "target": "function:packages/app/src/pages/error-description.ts:errorDescriptionKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "target": "file:packages/app/src/components/titlebar-session-events.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/titlebar-session-events.ts",
+      "target": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server.tsx",
+      "target": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "target": "file:packages/app/src/pages/home-session-archive.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.ts",
+      "target": "file:packages/app/src/pages/home-session-archive.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.ts",
+      "target": "function:packages/app/src/pages/home-session-archive.ts:archiveHomeSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.ts",
+      "target": "function:packages/app/src/pages/home-session-archive.ts:archiveHomeSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.ts",
+      "target": "file:packages/app/src/components/titlebar-session-events.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-archive.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/home-session-archive.ts:archiveHomeSession",
+      "target": "function:packages/app/src/components/titlebar-session-events.ts:notifySessionTabsRemoved",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-open.test.ts",
+      "target": "file:packages/app/src/pages/home-session-open.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-open.ts",
+      "target": "file:packages/app/src/pages/home-session-open.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-open.ts",
+      "target": "function:packages/app/src/pages/home-session-open.ts:shouldOpenSessionInBackground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home-session-open.ts",
+      "target": "function:packages/app/src/pages/home-session-open.ts:shouldOpenSessionInBackground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "function:packages/app/src/pages/home.tsx:NewHome",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "function:packages/app/src/pages/home.tsx:NewHome",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-projects.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-scroll-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-session-search-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-sessions-controller.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home.tsx",
+      "target": "file:packages/app/src/pages/home/home-sessions.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/home.tsx:NewHome",
+      "target": "function:packages/app/src/pages/home/home-controller.ts:createHomeController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home.tsx:NewHome",
+      "target": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home.tsx:NewHome",
+      "target": "function:packages/app/src/pages/home/home-sessions-controller.tsx:createHomeSessionsController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home.tsx:NewHome",
+      "target": "function:packages/app/src/pages/home/home-session-search-controller.ts:createHomeSessionSearchController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home.tsx:NewHome",
+      "target": "function:packages/app/src/pages/home/home-scroll-controller.ts:createHomeScrollController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "function:packages/app/src/pages/home/home-controller.ts:createHomeController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "function:packages/app/src/pages/home/home-controller.ts:createHomeController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-controller.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-controller.ts:createHomeController",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:toggleHomeProjectSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/components/dialog-select-server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/components/directory-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/components/settings-dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/components/settings-v2/dialog-server-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/pages/home/home-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/components/directory-picker.tsx:useDirectoryPicker",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/components/settings-dialog.tsx:useSettingsCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/components/dialog-select-server.tsx:useServerManagementController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:homeProjectDirectories",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:closeHomeProject",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-controller.tsx:createHomeProjectsController",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:errorMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectsView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectsView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeUtilityNav",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeUtilityNav",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeServerRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectSlot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeRecentlyClosedRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectNavButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectAvatar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/components/server/server-row-menu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/components/server/server-row.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/utils/file-manager.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "target": "file:packages/app/src/utils/server-health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeServerRow",
+      "target": "function:packages/app/src/components/server/server-row-menu.tsx:serverMenuLabels",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeRecentlyClosedRow",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectRow",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectRow",
+      "target": "function:packages/app/src/utils/file-manager.ts:fileManagerApp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectAvatar",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectAvatar",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:getProjectAvatarSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/home/home-projects-view.tsx:HomeProjectAvatar",
+      "target": "function:packages/app/src/context/layout.tsx:getProjectAvatarVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects.tsx:HomeProjects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects.tsx",
+      "target": "function:packages/app/src/pages/home/home-projects.tsx:HomeProjects",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects.tsx",
+      "target": "file:packages/app/src/pages/home/home-projects-controller.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects.tsx",
+      "target": "file:packages/app/src/pages/home/home-projects-view.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/home/home-projects.tsx",
+      "target": "file:packages/app/src/pages/home/home-scroll-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

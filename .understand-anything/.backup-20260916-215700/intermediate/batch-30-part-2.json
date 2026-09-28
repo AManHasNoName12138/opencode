@@ -1,0 +1,861 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/tool/todo.ts",
+      "type": "file",
+      "name": "todo.ts",
+      "filePath": "packages/opencode/src/tool/todo.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、TodoWriteTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "summary": "在旧版工具调用层中提供 InvalidArgumentsError、define、init；内部处理包含 wrap、define、init。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "function",
+      "name": "wrap",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        99,
+        149
+      ],
+      "summary": "在旧版工具调用层中执行 wrap，接收 id、init、truncate、agents 参数；调用 Effect.gen、init、Schema.decodeUnknownEffect、decode、Effect.mapError、toolInfo.formatValidationError、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "function",
+      "name": "define",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        151,
+        169
+      ],
+      "summary": "在旧版工具调用层中执行 define，接收 id、init 参数；调用 Object.assign、Effect.gen、wrap 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        171,
+        181
+      ],
+      "summary": "在旧版工具调用层中执行 init，接收 info 参数；调用 Effect.gen、info.init 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "class",
+      "name": "InvalidArgumentsError",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        24,
+        34
+      ],
+      "summary": "在旧版工具调用层中定义 InvalidArgumentsError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "file",
+      "name": "truncate.ts",
+      "filePath": "packages/opencode/src/tool/truncate.ts",
+      "summary": "在旧版工具调用层中提供 MAX_LINES、MAX_BYTES、DIR、GLOB、Service、node；内部处理包含 hasTaskTool。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/tool/truncate.ts",
+      "lineRange": [
+        46,
+        46
+      ],
+      "summary": "在旧版工具调用层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/truncation-dir.ts",
+      "type": "file",
+      "name": "truncation-dir.ts",
+      "filePath": "packages/opencode/src/tool/truncation-dir.ts",
+      "summary": "在旧版工具调用层中提供 TRUNCATION_DIR 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/webfetch.ts",
+      "type": "file",
+      "name": "webfetch.ts",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、WebFetchTool；内部处理包含 extractTextFromHTML、convertHTMLToMarkdown。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/webfetch.ts:extractTextFromHTML",
+      "type": "function",
+      "name": "extractTextFromHTML",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "lineRange": [
+        158,
+        180
+      ],
+      "summary": "在旧版工具调用层中执行 extractTextFromHTML，接收 html 参数；调用 parser.write、parser.end、text.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/webfetch.ts:convertHTMLToMarkdown",
+      "type": "function",
+      "name": "convertHTMLToMarkdown",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "lineRange": [
+        182,
+        192
+      ],
+      "summary": "在旧版工具调用层中执行 convertHTMLToMarkdown，接收 html 参数；调用 turndownService.remove、turndownService.turndown 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/websearch.ts",
+      "type": "file",
+      "name": "websearch.ts",
+      "filePath": "packages/opencode/src/tool/websearch.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、selectWebSearchProvider、webSearchProviderLabel、webSearchModelName、WebSearchTool；内部处理包含 selectWebSearchProvider、webSearchProviderLabel、webSearchModelName、parallelAuthHeaders、callProvider。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/websearch.ts:selectWebSearchProvider",
+      "type": "function",
+      "name": "selectWebSearchProvider",
+      "filePath": "packages/opencode/src/tool/websearch.ts",
+      "lineRange": [
+        30,
+        37
+      ],
+      "summary": "在旧版工具调用层中执行 selectWebSearchProvider，接收 sessionID、flags 参数；调用 Number.parseInt、checksum 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/websearch.ts:webSearchProviderLabel",
+      "type": "function",
+      "name": "webSearchProviderLabel",
+      "filePath": "packages/opencode/src/tool/websearch.ts",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "在旧版工具调用层中执行 webSearchProviderLabel，接收 provider 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/websearch.ts:webSearchModelName",
+      "type": "function",
+      "name": "webSearchModelName",
+      "filePath": "packages/opencode/src/tool/websearch.ts",
+      "lineRange": [
+        45,
+        52
+      ],
+      "summary": "在旧版工具调用层中执行 webSearchModelName，接收 extra 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/websearch.ts:callProvider",
+      "type": "function",
+      "name": "callProvider",
+      "filePath": "packages/opencode/src/tool/websearch.ts",
+      "lineRange": [
+        60,
+        97
+      ],
+      "summary": "在旧版工具调用层中执行 callProvider，接收 http、provider、params、ctx 参数；调用 McpWebSearch.call、webSearchModelName、parallelAuthHeaders 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/write.ts",
+      "type": "file",
+      "name": "write.ts",
+      "filePath": "packages/opencode/src/tool/write.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、WriteTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/util/bom.ts",
+      "type": "file",
+      "name": "bom.ts",
+      "filePath": "packages/opencode/src/util/bom.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 split、join、readFile、syncFile；内部处理包含 split、join。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/bom.ts:split",
+      "type": "function",
+      "name": "split",
+      "filePath": "packages/opencode/src/util/bom.ts",
+      "lineRange": [
+        7,
+        10
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 split，接收 text 参数；调用 text.charCodeAt、text.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/bom.ts:join",
+      "type": "function",
+      "name": "join",
+      "filePath": "packages/opencode/src/util/bom.ts",
+      "lineRange": [
+        12,
+        16
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 join，接收 text、bom 参数；调用 split 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/data-url.ts",
+      "type": "file",
+      "name": "data-url.ts",
+      "filePath": "packages/opencode/src/util/data-url.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 decodeDataUrl 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/data-url.ts:decodeDataUrl",
+      "type": "function",
+      "name": "decodeDataUrl",
+      "filePath": "packages/opencode/src/util/data-url.ts",
+      "lineRange": [
+        1,
+        9
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 decodeDataUrl，接收 url 参数；调用 url.indexOf、url.slice、head.includes、Buffer.from、decodeURIComponent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/effect-http-client.ts",
+      "type": "file",
+      "name": "effect-http-client.ts",
+      "filePath": "packages/opencode/src/util/effect-http-client.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 withTransientReadRetry 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/effect-http-client.ts:withTransientReadRetry",
+      "type": "function",
+      "name": "withTransientReadRetry",
+      "filePath": "packages/opencode/src/util/effect-http-client.ts",
+      "lineRange": [
+        4,
+        11
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 withTransientReadRetry，接收 client 参数；调用 client.pipe、HttpClient.retryTransient、Schedule.exponential 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/error.ts",
+      "type": "file",
+      "name": "error.ts",
+      "filePath": "packages/opencode/src/util/error.ts",
+      "summary": "汇总OpenCode 应用与兼容层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/html.ts",
+      "type": "file",
+      "name": "html.ts",
+      "filePath": "packages/opencode/src/util/html.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 escapeHtml 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/html.ts:escapeHtml",
+      "type": "function",
+      "name": "escapeHtml",
+      "filePath": "packages/opencode/src/util/html.ts",
+      "lineRange": [
+        1,
+        8
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 escapeHtml，接收 value 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/tool/todowrite.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/permission/evaluate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/tool/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/tool/truncation-dir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "function:packages/opencode/src/tool/webfetch.ts:extractTextFromHTML",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "function:packages/opencode/src/tool/webfetch.ts:convertHTMLToMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/tool/webfetch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/util/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:selectWebSearchProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:selectWebSearchProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:webSearchProviderLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:webSearchProviderLabel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:webSearchModelName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:webSearchModelName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "function:packages/opencode/src/tool/websearch.ts:callProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "file:packages/opencode/src/tool/mcp-websearch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/websearch.ts",
+      "target": "file:packages/opencode/src/tool/websearch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/tool/edit.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/tool/external-directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/tool/write.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/write.ts",
+      "target": "file:packages/opencode/src/util/bom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/util/bom.ts",
+      "target": "function:packages/opencode/src/util/bom.ts:split",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/bom.ts",
+      "target": "function:packages/opencode/src/util/bom.ts:split",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/bom.ts",
+      "target": "function:packages/opencode/src/util/bom.ts:join",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/bom.ts",
+      "target": "function:packages/opencode/src/util/bom.ts:join",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/data-url.ts",
+      "target": "function:packages/opencode/src/util/data-url.ts:decodeDataUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/data-url.ts",
+      "target": "function:packages/opencode/src/util/data-url.ts:decodeDataUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/effect-http-client.ts",
+      "target": "function:packages/opencode/src/util/effect-http-client.ts:withTransientReadRetry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/effect-http-client.ts",
+      "target": "function:packages/opencode/src/util/effect-http-client.ts:withTransientReadRetry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/html.ts",
+      "target": "function:packages/opencode/src/util/html.ts:escapeHtml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/html.ts",
+      "target": "function:packages/opencode/src/util/html.ts:escapeHtml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/tool.ts:define",
+      "target": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/websearch.ts:callProvider",
+      "target": "function:packages/opencode/src/tool/websearch.ts:webSearchModelName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/bom.ts:join",
+      "target": "function:packages/opencode/src/util/bom.ts:split",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

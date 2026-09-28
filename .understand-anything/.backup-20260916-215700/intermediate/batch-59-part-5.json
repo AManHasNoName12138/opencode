@@ -1,0 +1,1906 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 pickVariant、resolveVariant、runPromptQueue、runInteractiveLocalMode、runInteractiveMode；内部处理包含 createSessionResolver、hasSession、eagerStream、variantsFor、resolveExitTitle、runInteractiveRuntime、runInteractiveLocalMode。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "function",
+      "name": "createSessionResolver",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        100,
+        117
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createSessionResolver，接收 fn 参数；调用 fn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "function",
+      "name": "resolveExitTitle",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        158,
+        173
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveExitTitle，接收 ctx、input、state 参数；调用 hasSession 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "function",
+      "name": "runInteractiveRuntime",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        181,
+        731
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveRuntime，接收 input、deps 参数；调用 performance.now、trace、resolveRunTuiConfig、input.boot、resolveModelInfo、resolveSessionInfo、Promise.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "function",
+      "name": "runInteractiveLocalMode",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        735,
+        784
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveLocalMode，接收 input 参数；调用 createOpencodeClient、runInteractiveRuntime、Promise.all、input.resolveAgent、input.session、input.share、createSessionResolver 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "function",
+      "name": "runInteractiveMode",
+      "filePath": "packages/opencode/src/cli/cmd/run/runtime.ts",
+      "lineRange": [
+        787,
+        814
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 runInteractiveMode，接收 input、deps 参数；调用 runInteractiveRuntime、createSessionResolver 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "type": "file",
+      "name": "scrollback.shared.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 entrySyntax、entryFailed、entryLook、entryColor；内部处理包含 syntax、entrySyntax、entryFailed、entryLook、entryColor。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entrySyntax",
+      "type": "function",
+      "name": "entrySyntax",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "lineRange": [
+        9,
+        15
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entrySyntax，接收 commit、theme 参数；调用 syntax 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryFailed",
+      "type": "function",
+      "name": "entryFailed",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "lineRange": [
+        17,
+        19
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryFailed，接收 commit 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "type": "function",
+      "name": "entryLook",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "lineRange": [
+        21,
+        72
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryLook，接收 commit、theme 参数；调用 entryFailed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "type": "function",
+      "name": "entryColor",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "lineRange": [
+        74,
+        92
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryColor，接收 commit、theme 参数；调用 entryFailed、entryLook 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "type": "file",
+      "name": "scrollback.surface.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 RunScrollbackStream；内部处理包含 commitMarkdownBlocks、staticBody。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:commitMarkdownBlocks",
+      "type": "function",
+      "name": "commitMarkdownBlocks",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "lineRange": [
+        37,
+        64
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 commitMarkdownBlocks，接收 input 参数；调用 input.beforeCommit、input.surface.commitRows 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:staticBody",
+      "type": "function",
+      "name": "staticBody",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "lineRange": [
+        66,
+        83
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 staticBody，接收 commit、body、spaced 参数；调用 body.content.startsWith、body.content.replace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:RunScrollbackStream",
+      "type": "class",
+      "name": "RunScrollbackStream",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "lineRange": [
+        85,
+        431
+      ],
+      "summary": "在命令行会话交互与流式显示层中定义 RunScrollbackStream 类，提供 constructor、releasePendingThemes、setTheme、createEntry、markRendered、writeSpacer、flushPendingSpacer 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "type": "file",
+      "name": "scrollback.writer.tsx",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "summary": "在命令行会话交互与流式显示层中提供 entryGroupKey、sameEntryGroup、entryLayout、separatorRows、RunEntryContent、entryWriter、spacerWriter；内部处理包含 todoText、todoColor、entryGroupKey、sameEntryGroup、entryLayout、separatorRows、RunEntryContent。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:todoText",
+      "type": "function",
+      "name": "todoText",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        10,
+        24
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 todoText，接收 item 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryGroupKey",
+      "type": "function",
+      "name": "entryGroupKey",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        30,
+        40
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryGroupKey，接收 commit 参数；调用 toolStructuredFinal 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:sameEntryGroup",
+      "type": "function",
+      "name": "sameEntryGroup",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        42,
+        50
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 sameEntryGroup，接收 left、right 参数；调用 entryGroupKey、Boolean 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryLayout",
+      "type": "function",
+      "name": "entryLayout",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        52,
+        79
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryLayout，接收 commit、body 参数；调用 entryBody、body.content.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "type": "function",
+      "name": "separatorRows",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        81,
+        95
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 separatorRows，接收 prev、next、body 参数；调用 entryBody、sameEntryGroup、entryLayout 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "type": "function",
+      "name": "RunEntryContent",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        97,
+        300
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 RunEntryContent，接收 props 参数；调用 createMemo、entryBody、entryLook、theme、entrySyntax、entryColor、body 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryWriter",
+      "type": "function",
+      "name": "entryWriter",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        302,
+        320
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 entryWriter，接收 input 参数；调用 createScrollbackWriter、entryFlags 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:spacerWriter",
+      "type": "function",
+      "name": "spacerWriter",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        322,
+        334
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 spacerWriter；调用 Math.max、Math.trunc 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:turnSummaryWriter",
+      "type": "function",
+      "name": "turnSummaryWriter",
+      "filePath": "packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "lineRange": [
+        336,
+        352
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 turnSummaryWriter，接收 input 参数；调用 createScrollbackWriter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "type": "file",
+      "name": "session-data.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 createSessionData、formatError、pickBlockerView、blockerStatus、bootstrapSessionData、flushInterrupted、reduceSessionData；内部处理包含 createSessionData、modelKey、formatUsage、formatError、isAbort、msgErr、patch。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:createSessionData",
+      "type": "function",
+      "name": "createSessionData",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        105,
+        128
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createSessionData，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatUsage",
+      "type": "function",
+      "name": "formatUsage",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        134,
+        161
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 formatUsage，接收 tokens、limit、cost 参数；调用 money.format、Locale.number、Math.round 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatError",
+      "type": "function",
+      "name": "formatError",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        163,
+        183
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 formatError，接收 error 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:patch",
+      "type": "function",
+      "name": "patch",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        193,
+        202
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 patch，接收 patch、view 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:out",
+      "type": "function",
+      "name": "out",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        204,
+        217
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 out，接收 data、commits、footer 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:pickBlockerView",
+      "type": "function",
+      "name": "pickBlockerView",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        219,
+        229
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 pickBlockerView，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:blockerStatus",
+      "type": "function",
+      "name": "blockerStatus",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        231,
+        241
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 blockerStatus，接收 view 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "type": "function",
+      "name": "bootstrapSessionData",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        283,
+        308
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bootstrapSessionData，接收 input 参数；调用 input.data.call.set、key、input.permissions.slice、a.id.localeCompare、upsert、enrichPermission、input.questions.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:enrichPermission",
+      "type": "function",
+      "name": "enrichPermission",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        314,
+        336
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 enrichPermission，接收 data、request 参数；调用 data.call.get、key 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncPermission",
+      "type": "function",
+      "name": "syncPermission",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        342,
+        372
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 syncPermission，接收 data、part 参数；调用 data.call.set、key、data.permissions.map、enrichPermission、pickSessionView 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncQuestion",
+      "type": "function",
+      "name": "syncQuestion",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        377,
+        395
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 syncQuestion，接收 data、part 参数；调用 data.questions.filter、queueFooter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:toolStatus",
+      "type": "function",
+      "name": "toolStatus",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        397,
+        419
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolStatus，接收 part 参数；调用 desc.trim、type.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:ready",
+      "type": "function",
+      "name": "ready",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        427,
+        443
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 ready，接收 data、partID 参数；调用 data.msg.get、data.role.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncText",
+      "type": "function",
+      "name": "syncText",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        445,
+        457
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 syncText，接收 data、partID、next 参数；调用 data.text.get、data.text.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stashEcho",
+      "type": "function",
+      "name": "stashEcho",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        462,
+        488
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 stashEcho，接收 data、part 参数；调用 output.replace、text.trim、data.echo.get、set.add、text.replace、data.echo.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stripEcho",
+      "type": "function",
+      "name": "stripEcho",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        490,
+        511
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 stripEcho，接收 data、msg、chunk 参数；调用 data.echo.get、data.echo.delete、chunk.startsWith、chunk.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "type": "function",
+      "name": "flushPart",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        513,
+        568
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 flushPart，接收 data、commits、partID、interrupted 参数；调用 data.part.get、data.text.get、data.sent.get、text.slice、data.msg.get、chunk.replace、chunk.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:replay",
+      "type": "function",
+      "name": "replay",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        582,
+        620
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 replay，接收 data、commits、messageID、role、thinking 参数；调用 data.msg.entries、data.ids.has、data.ids.add、drop、data.part.get、data.part.set、data.end.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:toolCommit",
+      "type": "function",
+      "name": "toolCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        622,
+        635
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 toolCommit，接收 part、next 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:claimShell",
+      "type": "function",
+      "name": "claimShell",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        641,
+        657
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 claimShell，接收 data、callID、source、command 参数；调用 data.shell.get、data.shell.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bashCommand",
+      "type": "function",
+      "name": "bashCommand",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        659,
+        671
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bashCommand，接收 part 参数；调用 Array.isArray、Reflect.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:shellCommit",
+      "type": "function",
+      "name": "shellCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        673,
+        688
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 shellCommit，接收 input、next 参数；调用 shellPartID 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:startShell",
+      "type": "function",
+      "name": "startShell",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        690,
+        702
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 startShell，接收 callID、command 参数；调用 shellCommit 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:doneShell",
+      "type": "function",
+      "name": "doneShell",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        704,
+        716
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 doneShell，接收 callID、command、output 参数；调用 shellCommit 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushInterrupted",
+      "type": "function",
+      "name": "flushInterrupted",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        744,
+        761
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 flushInterrupted，接收 data、commits 参数；调用 data.part.keys、data.ids.has、data.msg.get、data.role.get、data.ids.add、drop、flushPart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "function",
+      "name": "reduceSessionData",
+      "filePath": "packages/opencode/src/cli/cmd/run/session-data.ts",
+      "lineRange": [
+        773,
+        1113
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 reduceSessionData，接收 input 参数；调用 out、claimShell、shellPartID、data.ids.has、data.tools.has、patch、data.tools.add 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/demo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.lifecycle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/runtime.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entrySyntax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entrySyntax",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryFailed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryFailed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:commitMarkdownBlocks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:staticBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "class:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:RunScrollbackStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "class:packages/opencode/src/cli/cmd/run/scrollback.surface.ts:RunScrollbackStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.surface.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:todoText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryGroupKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryGroupKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:sameEntryGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:sameEntryGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryWriter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:spacerWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:spacerWriter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:turnSummaryWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:turnSummaryWriter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/scrollback.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:createSessionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:createSessionData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:patch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:out",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:pickBlockerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:pickBlockerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:blockerStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:blockerStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:enrichPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncQuestion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:toolStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stashEcho",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stripEcho",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:replay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:toolCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:claimShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bashCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:shellCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:startShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:doneShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushInterrupted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushInterrupted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveRunTuiConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveModelInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.boot.ts:resolveSessionInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveSavedVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:cycleVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:saveVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/demo.ts:createRunDemo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:resolveExitTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveLocalMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/runtime.ts:runInteractiveMode",
+      "target": "function:packages/opencode/src/cli/cmd/run/runtime.ts:createSessionResolver",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryFailed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryFailed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryGroupKey",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolStructuredFinal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:sameEntryGroup",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryGroupKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryLayout",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:sameEntryGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:separatorRows",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryLook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entrySyntax",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.shared.ts:entryColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolFiletype",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:RunEntryContent",
+      "target": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:todoText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/scrollback.writer.tsx:entryWriter",
+      "target": "function:packages/opencode/src/cli/cmd/run/entry.body.ts:entryFlags",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:enrichPermission",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncPermission",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:enrichPermission",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stripEcho",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:replay",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:startShell",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:shellCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:doneShell",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:shellCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushInterrupted",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:out",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:claimShell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:patch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:startShell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:doneShell",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:replay",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatUsage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:ready",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:flushPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncPermission",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncQuestion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bashCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:toolStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/tool.ts:toolView",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:stashEcho",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:syncText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:enrichPermission",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

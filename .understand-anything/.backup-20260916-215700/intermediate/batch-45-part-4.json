@@ -1,0 +1,577 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/codemode/src/values.ts",
+      "type": "file",
+      "name": "values.ts",
+      "filePath": "packages/codemode/src/values.ts",
+      "summary": "在显式工具授权下的受限代码执行层中提供 SandboxPromise、SandboxDate、SandboxRegExp、SandboxMap、SandboxSet、SandboxURLSearchParams、SandboxURL；内部处理包含 isSandboxValue。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "function",
+      "name": "isSandboxValue",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        41,
+        49
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中执行 isSandboxValue，接收 value 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "class",
+      "name": "SandboxPromise",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        3,
+        9
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxPromise 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "class",
+      "name": "SandboxDate",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        11,
+        13
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxDate 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "class",
+      "name": "SandboxRegExp",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        15,
+        20
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxRegExp 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "class",
+      "name": "SandboxMap",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxMap 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "class",
+      "name": "SandboxSet",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxSet 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "class",
+      "name": "SandboxURLSearchParams",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxURLSearchParams 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "class",
+      "name": "SandboxURL",
+      "filePath": "packages/codemode/src/values.ts",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中定义 SandboxURL 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/codemode.test.ts",
+      "type": "file",
+      "name": "codemode.test.ts",
+      "filePath": "packages/codemode/test/codemode.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「CodeMode host failure boundary、preserves explicit safe tool failures、sanitizes unknown host failures and defects、sanitizes invalid host output、sanitizes host output that throws while being copied、caught tool failures are Error values in-program、propagates host interruption instead of returning a diagnostic」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/enumeration.test.ts",
+      "type": "file",
+      "name": "enumeration.test.ts",
+      "filePath": "packages/codemode/test/enumeration.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「Object.keys over tool references、enumerates top-level namespaces (the transcript program)、enumerates tool names at a nested namespace、a callable tool is a leaf and enumerates as []、the internal discovery namespace enumerates its callable surface、an unknown namespace is an UnknownTool error pointing at the discovery idioms、Object.values/entries on a tool reference explain the working idioms」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/test/openapi.test.ts",
+      "type": "file",
+      "name": "openapi.test.ts",
+      "filePath": "packages/codemode/test/openapi.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「OpenAPI.fromSpec、covers a representative API from generation through execution、converts representative opencode operations into the expected tool shape、preserves operation path sanitization and collision handling、synthesizes flat operation IDs from methods and paths、lets operation parameters override matching path parameters、normalizes OpenAPI 3.0 schemas with Effect」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/test/openapi.test.ts:recordingClient",
+      "type": "function",
+      "name": "recordingClient",
+      "filePath": "packages/codemode/test/openapi.test.ts",
+      "lineRange": [
+        31,
+        50
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中执行 recordingClient，接收 respond 参数；调用 Layer.succeed、HttpClient.make、Effect.gen、JSON.parse、Option.map、HttpClientRequest.toUrl、resolved.toString 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/parity.test.ts",
+      "type": "file",
+      "name": "parity.test.ts",
+      "filePath": "packages/codemode/test/parity.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「H2: string property access reads as undefined (not a throw)、unknown property on a string is undefined、optional chaining + fallback on a string does not throw、the real MCP pattern: result is a JSON string, defensive read falls through、unknown property on a number is undefined、supported string methods still work、H3: array property access reads as undefined (not a throw)」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/promise.test.ts",
+      "type": "file",
+      "name": "promise.test.ts",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「first-class promise values、an un-awaited tool call starts eagerly, in call order, before any await、awaiting the same promise twice settles once and never re-runs the call、await of a non-promise value is a passthrough no-op、returning an un-awaited tool call resolves it (async-function return semantics)、typeof a promise is、an awaited failure is catchable exactly like a synchronous throw」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "function",
+      "name": "sleepyTool",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "lineRange": [
+        20,
+        42
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中执行 sleepyTool，接收 trace 参数；调用 Tool.make、Schema.Struct、Schema.optionalKey、Effect.gen、trace.starts.push、Math.max、Effect.sleep 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/test/promise.test.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/codemode/test/promise.test.ts",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "在显式工具授权下的受限代码执行层中执行 run，接收 code、options 参数；调用 makeTrace、Effect.runPromise、CodeMode.execute、sleepyTool 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/test/signature.test.ts",
+      "type": "file",
+      "name": "signature.test.ts",
+      "filePath": "packages/codemode/test/signature.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「pretty signature rendering、described fields get JSDoc comments; undescribed and untagged fields get none、compact mode output is unchanged by the pretty machinery、nested objects recurse with increasing indent and their own JSDoc、Effect Schema annotations become JSDoc on input and output fields、constraints TypeScript cannot express surface as JSDoc tags、skips an unserializable default rather than em」。",
+      "tags": [
+        "test",
+        "工具",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/test/stdlib.test.ts",
+      "type": "file",
+      "name": "stdlib.test.ts",
+      "filePath": "packages/codemode/test/stdlib.test.ts",
+      "summary": "验证 显式工具授权下的受限代码执行层 的行为，实际用例包括「Date、Date.now() returns a number、epoch construction and ISO rendering、string parsing round-trips、date arithmetic and comparison use the time value、UTC getters read calendar components、invalid dates yield NaN times, guardable in-sandbox」。",
+      "tags": [
+        "test",
+        "工具",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "function:packages/codemode/src/values.ts:isSandboxValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxPromise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxRegExp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURLSearchParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/values.ts",
+      "target": "class:packages/codemode/src/values.ts:SandboxURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/test/codemode.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/codemode.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/enumeration.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/enumeration.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "function:packages/codemode/test/openapi.test.ts:recordingClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/openapi.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/parity.test.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "function:packages/codemode/test/promise.test.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/promise.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/signature.test.ts",
+      "target": "file:packages/codemode/src/tool-schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/test/stdlib.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/test/stdlib.test.ts",
+      "target": "file:packages/codemode/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/codemode/test/promise.test.ts:run",
+      "target": "function:packages/codemode/test/promise.test.ts:sleepyTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

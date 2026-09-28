@@ -1,0 +1,421 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/cli/script/publish.ts",
+      "type": "file",
+      "name": "publish.ts",
+      "filePath": "packages/cli/script/publish.ts",
+      "summary": "在命令行入口与命令执行层中实现 published、publish 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/tui.ts",
+      "type": "file",
+      "name": "tui.ts",
+      "filePath": "packages/cli/src/tui.ts",
+      "summary": "在命令行入口与命令执行层中提供 runTui 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/tui.ts:runTui",
+      "type": "function",
+      "name": "runTui",
+      "filePath": "packages/cli/src/tui.ts",
+      "lineRange": [
+        7,
+        19
+      ],
+      "summary": "在命令行入口与命令执行层中执行 runTui，接收 transport 参数；调用 TuiConfig.resolve、run、Effect.provide、AppNodeBuilder.build 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/cli/sst-env.d.ts",
+      "summary": "声明 SST 基础设施资源绑定，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/effect.ts",
+      "type": "file",
+      "name": "effect.ts",
+      "filePath": "packages/client/src/effect.ts",
+      "summary": "在公共 API 客户端层中提供 Agent、Command、Credential、FileSystem、Integration、Location、Model 等接口。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/client/src/generated-effect/.httpapi-codegen.json",
+      "type": "config",
+      "name": ".httpapi-codegen.json",
+      "filePath": "packages/client/src/generated-effect/.httpapi-codegen.json",
+      "summary": "配置 公共 API 客户端层，结构项包括 生成客户端的文件清单。",
+      "tags": [
+        "配置",
+        "json",
+        "客户端"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/generated-effect/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/client/src/generated-effect/index.ts",
+      "summary": "保存自动生成的客户端或数据库接口，公开 ClientError。",
+      "tags": [
+        "代码生成",
+        "客户端",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/client/src/generated/.httpapi-codegen.json",
+      "type": "config",
+      "name": ".httpapi-codegen.json",
+      "filePath": "packages/client/src/generated/.httpapi-codegen.json",
+      "summary": "配置 公共 API 客户端层，结构项包括 生成客户端的文件清单。",
+      "tags": [
+        "配置",
+        "json",
+        "客户端"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/generated/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/client/src/generated/index.ts",
+      "summary": "保存自动生成的客户端或数据库接口，公开 ClientError、ClientErrorReason。",
+      "tags": [
+        "代码生成",
+        "客户端",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/client/src/index.ts",
+      "summary": "在公共 API 客户端层中提供 OpenCodeEvent 等接口。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/client/sst-env.d.ts",
+      "summary": "声明 SST 基础设施资源绑定，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/test/effect.test.ts",
+      "type": "file",
+      "name": "effect.test.ts",
+      "filePath": "packages/client/test/effect.test.ts",
+      "summary": "验证 公共 API 客户端层 的行为，实际用例包括「sessions.get returns the decoded Effect projection、events.subscribe exposes and decodes the native Effect event stream、events.subscribe terminates on Effect protocol decode failures、session methods retain decoded Effect inputs and outputs、sessions.history retains the typed SessionNotFoundError」。",
+      "tags": [
+        "test",
+        "客户端",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/client/test/import-boundaries.test.ts",
+      "type": "file",
+      "name": "import-boundaries.test.ts",
+      "filePath": "packages/client/test/import-boundaries.test.ts",
+      "summary": "验证 公共 API 客户端层 的行为，实际用例包括「public import boundaries、isolates each public entrypoint」。",
+      "tags": [
+        "test",
+        "客户端",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/client/test/import-boundaries.test.ts:bundleInputs",
+      "type": "function",
+      "name": "bundleInputs",
+      "filePath": "packages/client/test/import-boundaries.test.ts",
+      "lineRange": [
+        33,
+        63
+      ],
+      "summary": "在公共 API 客户端层中执行 bundleInputs，接收 specifier、target 参数；调用 mkdtemp、join、Bun.write、JSON.stringify、Bun.spawn、Promise.all、Bun.file 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "客户端"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/test/promise.test.ts",
+      "type": "file",
+      "name": "promise.test.ts",
+      "filePath": "packages/client/test/promise.test.ts",
+      "summary": "验证 公共 API 客户端层 的行为，实际用例包括「exposes every standard HTTP API group、sessions.get returns the wire projection、events.subscribe exposes the Promise event stream wire projection、events.subscribe terminates on malformed Promise SSE data、session methods use the public HTTP contract、middleware errors remain declared client errors、sessions.history decodes SessionNotFoundError」。",
+      "tags": [
+        "test",
+        "客户端",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/codemode/src/openapi/TODO.md",
+      "type": "document",
+      "name": "TODO.md",
+      "filePath": "packages/codemode/src/openapi/TODO.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「OpenAPI Follow-ups」。",
+      "tags": [
+        "文档",
+        "工具",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/codemode/sst-env.d.ts",
+      "summary": "声明 SST 基础设施资源绑定，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/codemode/test/fixtures/openapi-happy-path.json",
+      "type": "config",
+      "name": "openapi-happy-path.json",
+      "filePath": "packages/codemode/test/fixtures/openapi-happy-path.json",
+      "summary": "为兼容或协议测试提供 openapi-happy-path.json 样本，包含 openapi、info、servers、security、paths、components，用于输入、输出或补丁的对照检查。",
+      "tags": [
+        "测试数据",
+        "配置",
+        "验证"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:packages/codemode/test/fixtures/opencode-v2-openapi.json",
+      "type": "config",
+      "name": "opencode-v2-openapi.json",
+      "filePath": "packages/codemode/test/fixtures/opencode-v2-openapi.json",
+      "summary": "为兼容或协议测试提供 opencode-v2-openapi.json 样本，包含 openapi、info、paths、components、security、tags，用于输入、输出或补丁的对照检查。",
+      "tags": [
+        "测试数据",
+        "配置",
+        "验证"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/console/app/.opencode/agent/css.md",
+      "type": "document",
+      "name": "css.md",
+      "filePath": "packages/console/app/.opencode/agent/css.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「Example of correct implementation、Reusable Components、Key Clarifications」。",
+      "tags": [
+        "文档",
+        "控制台",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/console/app/public/email",
+      "type": "file",
+      "name": "email",
+      "filePath": "packages/console/app/public/email",
+      "summary": "保存指向邮件模板静态资源目录的链接目标，供控制台访问邮件图片等资源。",
+      "tags": [
+        "unknown",
+        "控制台",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/console/app/public/robots.txt",
+      "type": "document",
+      "name": "robots.txt",
+      "filePath": "packages/console/app/public/robots.txt",
+      "summary": "说明该模块的使用或设计，内容涵盖「User-agent: *、Allow: /」。",
+      "tags": [
+        "文档",
+        "控制台",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/app/public/site.webmanifest",
+      "type": "file",
+      "name": "site.webmanifest",
+      "filePath": "packages/console/app/public/site.webmanifest",
+      "summary": "保存指向共享 UI 包 favicon Web manifest 的链接目标，复用应用图标与安装元数据。",
+      "tags": [
+        "webmanifest",
+        "控制台",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/app/public/theme.json",
+      "type": "config",
+      "name": "theme.json",
+      "filePath": "packages/console/app/public/theme.json",
+      "summary": "配置 控制台应用层，结构项包括 $schema、type、properties、required、additionalProperties、definitions。",
+      "tags": [
+        "配置",
+        "json",
+        "控制台"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/console/app/src/app.css",
+      "type": "file",
+      "name": "app.css",
+      "filePath": "packages/console/app/src/app.css",
+      "summary": "定义 控制台 的全局样式与主题规则，供相应前端入口加载。",
+      "tags": [
+        "界面",
+        "css",
+        "样式"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/app/src/context/auth.session.ts",
+      "type": "file",
+      "name": "auth.session.ts",
+      "filePath": "packages/console/app/src/context/auth.session.ts",
+      "summary": "汇总控制台应用层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "控制台"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/app/src/entry-client.tsx",
+      "type": "file",
+      "name": "entry-client.tsx",
+      "filePath": "packages/console/app/src/entry-client.tsx",
+      "summary": "把 SolidStart 的 StartClient 挂载到页面 app 元素，启动控制台浏览器端应用。",
+      "tags": [
+        "typescript",
+        "控制台",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/cli/script/publish.ts",
+      "target": "file:packages/cli/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/tui.ts",
+      "target": "function:packages/cli/src/tui.ts:runTui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/tui.ts",
+      "target": "function:packages/cli/src/tui.ts:runTui",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/client/test/effect.test.ts",
+      "target": "file:packages/client/src/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/test/effect.test.ts",
+      "target": "file:packages/client/src/effect.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/client/test/import-boundaries.test.ts",
+      "target": "function:packages/client/test/import-boundaries.test.ts:bundleInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/client/test/promise.test.ts",
+      "target": "file:packages/client/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/test/promise.test.ts",
+      "target": "file:packages/client/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

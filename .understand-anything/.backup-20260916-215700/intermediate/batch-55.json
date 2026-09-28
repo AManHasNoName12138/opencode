@@ -1,0 +1,1213 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/test/plugin/provider-llmgateway.test.ts",
+      "type": "file",
+      "name": "provider-llmgateway.test.ts",
+      "filePath": "packages/core/test/plugin/provider-llmgateway.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「LLMGatewayPlugin、is registered so legacy referer headers can be applied、applies legacy referer headers only to enabled llmgateway、does not apply legacy headers to a disabled llmgateway provider」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-mistral.test.ts",
+      "type": "file",
+      "name": "provider-mistral.test.ts",
+      "filePath": "packages/core/test/plugin/provider-mistral.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「MistralPlugin、creates a Mistral SDK for @ai-sdk/mistral、ignores non-Mistral SDK packages、matches the old bundled Mistral SDK provider name for the bundled provider ID、matches the old bundled Mistral SDK provider name for custom provider IDs、leaves Mistral language selection on the default sdk.languageModel(api.id) path」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-nvidia.test.ts",
+      "type": "file",
+      "name": "provider-nvidia.test.ts",
+      "filePath": "packages/core/test/plugin/provider-nvidia.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「NvidiaPlugin、is registered so legacy referer headers can be applied、applies NVIDIA tracking headers only to nvidia、adds billing origin for custom NVIDIA endpoints、preserves an explicit NVIDIA billing origin header」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-openai-compatible.test.ts",
+      "type": "file",
+      "name": "provider-openai-compatible.test.ts",
+      "filePath": "packages/core/test/plugin/provider-openai-compatible.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「OpenAICompatiblePlugin、preserves explicit includeUsage false and defaults it to true、defaults includeUsage for OpenAI-compatible package matches、uses the provider ID as the OpenAI-compatible provider name、does not overwrite an SDK created by an earlier provider-specific plugin」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-openai.test.ts",
+      "type": "file",
+      "name": "provider-openai.test.ts",
+      "filePath": "packages/core/test/plugin/provider-openai.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「OpenAIPlugin、registers browser and headless ChatGPT OAuth methods、creates an OpenAI SDK for @ai-sdk/openai using the provider ID as SDK name、ignores non-OpenAI SDK packages、uses the Responses API for language models、ignores non-OpenAI providers、disables gpt-5-chat-latest during catalog transforms」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-openai.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-openai.test.ts",
+      "lineRange": [
+        30,
+        41
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-opencode.test.ts",
+      "type": "file",
+      "name": "provider-opencode.test.ts",
+      "filePath": "packages/core/test/plugin/provider-opencode.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「OpencodePlugin、registers account and service account methods、resolves origin-rooted device verification URLs、rejects malformed device verification URLs、loads providers and models from the connected OpenCode server、uses a public key and disables paid models without credentials、keeps free models without credentials」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-opencode.test.ts:eventually",
+      "type": "function",
+      "name": "eventually",
+      "filePath": "packages/core/test/plugin/provider-opencode.test.ts",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "在插件扩展与模型集成层中执行 eventually，接收 effect、predicate、remaining 参数；调用 Effect.gen、predicate、Effect.fail、Effect.promise、Bun.sleep、eventually 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-opencode.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-opencode.test.ts",
+      "lineRange": [
+        50,
+        69
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-openrouter.test.ts",
+      "type": "file",
+      "name": "provider-openrouter.test.ts",
+      "filePath": "packages/core/test/plugin/provider-openrouter.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「OpenRouterPlugin、is registered so legacy OpenRouter behavior can be applied、applies legacy referer headers only to openrouter、creates an SDK only for the OpenRouter package、filters OpenRouter、does not disable gpt-5-chat-latest for non-OpenRouter providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-perplexity.test.ts",
+      "type": "file",
+      "name": "provider-perplexity.test.ts",
+      "filePath": "packages/core/test/plugin/provider-perplexity.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「PerplexityPlugin、creates a Perplexity SDK for the exact @ai-sdk/perplexity package、ignores packages that are not the bundled Perplexity package、uses the Perplexity provider ID as the SDK name for the bundled provider、creates bundled Perplexity SDKs for custom provider IDs、leaves Perplexity language selection to the default languageModel fallback」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-perplexity.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-perplexity.test.ts",
+      "lineRange": [
+        22,
+        33
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "type": "file",
+      "name": "provider-sap-ai-core.test.ts",
+      "filePath": "packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「SapAICorePlugin、copies serviceKey option into AICORE_SERVICE_KEY but keeps SDK options to deployment metadata、preserves existing AICORE_SERVICE_KEY over serviceKey option、omits deployment and resourceGroup SDK options when no service key is available、uses the callable SDK for language selection、ignores non-SAP AI Core providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-sap-ai-core.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "lineRange": [
+        28,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "type": "file",
+      "name": "provider-snowflake-cortex.test.ts",
+      "filePath": "packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「SnowflakeCortexPlugin、is registered in ProviderPlugins before OpenAICompatiblePlugin、ignores non-snowflake-cortex providers、creates SDK for snowflake-cortex using SNOWFLAKE_CORTEX_PAT env var、falls back to options.apiKey when SNOWFLAKE_CORTEX_PAT env var is absent、uses SNOWFLAKE_CORTEX_TOKEN env var、falls back to options.token when no Snowflake env token is set」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-snowflake-cortex.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "lineRange": [
+        22,
+        41
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-togetherai.test.ts",
+      "type": "file",
+      "name": "provider-togetherai.test.ts",
+      "filePath": "packages/core/test/plugin/provider-togetherai.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「TogetherAIPlugin、creates a TogetherAI SDK for @ai-sdk/togetherai、matches the old bundled provider package exactly、creates bundled TogetherAI SDKs for custom provider IDs、defaults language selection to sdk.languageModel with the model API ID」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-togetherai.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-togetherai.test.ts",
+      "lineRange": [
+        22,
+        33
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-venice.test.ts",
+      "type": "file",
+      "name": "provider-venice.test.ts",
+      "filePath": "packages/core/test/plugin/provider-venice.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「VenicePlugin、creates a Venice SDK for venice-ai-sdk-provider、uses the model provider ID as the bundled Venice SDK name、only handles the bundled venice-ai-sdk-provider package、leaves Venice language selection to the default languageModel fallback」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-venice.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-venice.test.ts",
+      "lineRange": [
+        22,
+        33
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-vercel.test.ts",
+      "type": "file",
+      "name": "provider-vercel.test.ts",
+      "filePath": "packages/core/test/plugin/provider-vercel.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「VercelPlugin、applies legacy lower-case referer headers、does not add legacy upper-case referer headers、creates @ai-sdk/vercel SDKs for custom provider IDs、ignores non-Vercel providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-xai.test.ts",
+      "type": "file",
+      "name": "provider-xai.test.ts",
+      "filePath": "packages/core/test/plugin/provider-xai.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「XAIPlugin、creates an xAI SDK only for @ai-sdk/xai、creates xAI SDKs for custom provider IDs、uses responses with the model api.id for xAI language models、ignores non-xAI providers」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-xai.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-xai.test.ts",
+      "lineRange": [
+        22,
+        33
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-zenmux.test.ts",
+      "type": "file",
+      "name": "provider-zenmux.test.ts",
+      "filePath": "packages/core/test/plugin/provider-zenmux.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「ZenmuxPlugin、is registered so legacy referer headers can be applied、applies the exact legacy Zenmux headers、merges legacy Zenmux headers with existing headers、lets configured Zenmux legacy headers override defaults、guards legacy Zenmux headers to the exact zenmux provider id」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/skill.test.ts",
+      "type": "file",
+      "name": "skill.test.ts",
+      "filePath": "packages/core/test/plugin/skill.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「SkillPlugin.Plugin、registers the built-in customize-opencode skill」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/variant.test.ts",
+      "type": "file",
+      "name": "variant.test.ts",
+      "filePath": "packages/core/test/plugin/variant.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「VariantPlugin、adds GLM 5.2 variants after catalog sources、keeps explicit variants over generated defaults」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/policy.test.ts",
+      "type": "file",
+      "name": "policy.test.ts",
+      "filePath": "packages/core/test/policy.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Policy、returns the caller、evaluates wildcard provider rules in written order、matches action and resource independently、uses the last matching loaded statement」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/process/process.test.ts",
+      "type": "file",
+      "name": "process.test.ts",
+      "filePath": "packages/core/test/process/process.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「AppProcess、run、captures stdout and exit code zero、captures stdout and stderr in emission order、non-zero exit returns RunResult; caller can require success、requireSuccess fails on non-zero exit、requireSuccess succeeds on exit 0」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/process/process.test.ts:waitForFile",
+      "type": "function",
+      "name": "waitForFile",
+      "filePath": "packages/core/test/process/process.test.ts",
+      "lineRange": [
+        17,
+        27
+      ],
+      "summary": "在Core 领域服务层中执行 waitForFile，接收 file 参数；调用 Effect.promise、fs.readFile、setTimeout 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/project-copy.test.ts",
+      "type": "file",
+      "name": "project-copy.test.ts",
+      "filePath": "packages/core/test/project-copy.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ProjectCopy、accepts arbitrary non-empty strategy ids、rejects duplicate strategies and reports unavailable ids、creates and removes a git worktree directory、requires force to remove a dirty git worktree、preserves copies whose stored strategy is unavailable、adds a numeric suffix when a copy directory already exists」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/project-copy.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/core/test/project-copy.test.ts",
+      "lineRange": [
+        39,
+        61
+      ],
+      "summary": "在Core 领域服务层中执行 setup；调用 Effect.gen、Effect.acquireRelease、Effect.promise、tmpdir、initRepo、abs、fs.realpath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/project-copy.test.ts:stored",
+      "type": "function",
+      "name": "stored",
+      "filePath": "packages/core/test/project-copy.test.ts",
+      "lineRange": [
+        63,
+        75
+      ],
+      "summary": "在Core 领域服务层中执行 stored，接收 projectID 参数；调用 Database.Service.use、eq、Effect.map、rows.toSorted、a.directory.localeCompare 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/project-directories.test.ts",
+      "type": "file",
+      "name": "project-directories.test.ts",
+      "filePath": "packages/core/test/project-directories.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ProjectDirectories、decodes directory schemas、creates once and ignores conflicts、replaces the strategy when requested」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/project-directories.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/core/test/project-directories.test.ts",
+      "lineRange": [
+        17,
+        26
+      ],
+      "summary": "在Core 领域服务层中执行 setup；调用 Database.Service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/project.test.ts",
+      "type": "file",
+      "name": "project.test.ts",
+      "filePath": "packages/core/test/project.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ProjectV2.resolve、returns global for non-git directory、returns git global for repo with no commits and no remote、falls back to root commit when origin is missing、prefers normalized origin over root commit、normalizes ssh and https remotes to the same id、ignores file remotes and falls back to root commit」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/pty/pty-session.test.ts",
+      "type": "file",
+      "name": "pty-session.test.ts",
+      "filePath": "packages/core/test/pty/pty-session.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「pty、returns typed not found errors for missing sessions、pty create defaults」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/pty/pty-session.test.ts:waitForEvents",
+      "type": "function",
+      "name": "waitForEvents",
+      "filePath": "packages/core/test/pty/pty-session.test.ts",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "在Core 领域服务层中执行 waitForEvents，接收 events、id、count 参数；调用 Effect.gen、Queue.take、picked.push、Effect.timeoutOrElse、Effect.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/pty/pty-session.test.ts:waitForOutput",
+      "type": "function",
+      "name": "waitForOutput",
+      "filePath": "packages/core/test/pty/pty-session.test.ts",
+      "lineRange": [
+        81,
+        91
+      ],
+      "summary": "在Core 领域服务层中执行 waitForOutput，接收 output、text 参数；调用 Effect.gen、received.includes、Queue.take、Effect.timeoutOrElse、Effect.fail、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/pty/ticket.test.ts",
+      "type": "file",
+      "name": "ticket.test.ts",
+      "filePath": "packages/core/test/pty/ticket.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「PTY websocket tickets、consumes tickets once、rejects tickets scoped to a different request、rejects tickets scoped to a different workspace」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/question.test.ts",
+      "type": "file",
+      "name": "question.test.ts",
+      "filePath": "packages/core/test/question.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「QuestionV2、publishes lifecycle events and settles a pending reply、publishes rejection, fails the ask, and rejects unknown IDs、isolates pending requests by location-layer instance and rejects them on finalization」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/reference-guidance.test.ts",
+      "type": "file",
+      "name": "reference-guidance.test.ts",
+      "filePath": "packages/core/test/reference-guidance.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ReferenceGuidance、lists available references in the system context、omits guidance when no references are available、omits references without descriptions」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/reference.test.ts",
+      "type": "file",
+      "name": "reference.test.ts",
+      "filePath": "packages/core/test/reference.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Reference、registers normalized sources for the owning scope、derives Git paths without exposing cache operations、preserves configured Git descriptions」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/repository-cache.test.ts",
+      "type": "file",
+      "name": "repository-cache.test.ts",
+      "filePath": "packages/core/test/repository-cache.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「RepositoryCache、replaces a stale cache directory before cloning、serializes concurrent materialization for the same checkout、replaces an existing checkout whose origin does not match、keeps branch checkouts isolated from branchless refreshes、does not mistake an enclosing repository for the cache checkout、returns typed validation and clone failures」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/repository-cache.test.ts:withRemote",
+      "type": "function",
+      "name": "withRemote",
+      "filePath": "packages/core/test/repository-cache.test.ts",
+      "lineRange": [
+        131,
+        140
+      ],
+      "summary": "在Core 领域服务层中执行 withRemote，接收 body 参数；调用 Effect.acquireUseRelease、Effect.promise、tmpdir、gitRemote、body 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/ripgrep.test.ts",
+      "type": "file",
+      "name": "ripgrep.test.ts",
+      "filePath": "packages/core/test/ripgrep.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Ripgrep、keeps ignored files out of catch-all find results、never includes git metadata、does not split surrogate pairs in oversized line previews」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/session-create.test.ts",
+      "type": "file",
+      "name": "session-create.test.ts",
+      "filePath": "packages/core/test/session-create.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionV2.create、creates a fresh projected session when the ID is omitted、returns the original session when the ID is retried、stores supplied immutable create attributes、returns the existing Session when one ID is reused with different create arguments、returns one recorded session to concurrent exact retries、returns the current Session projection after updates」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/session-history.test.ts",
+      "type": "file",
+      "name": "session-history.test.ts",
+      "filePath": "packages/core/test/session-history.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionV2.history、returns an exhausted page for a migrated Session with no event sequence、treats after as an exclusive aggregate sequence、paginates public events in aggregate order across filtered gaps without duplicates、includes events committed between pages、reports exhaustion for exact-limit and limit-plus-one pages、fails with NotFoundError for a missing Session」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/test/plugin/provider-llmgateway.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-llmgateway.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-mistral.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-mistral.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-nvidia.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-nvidia.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openai-compatible.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openai-compatible.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openai.test.ts",
+      "target": "function:packages/core/test/plugin/provider-openai.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openai.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openai.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-opencode.test.ts",
+      "target": "function:packages/core/test/plugin/provider-opencode.test.ts:eventually",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-opencode.test.ts",
+      "target": "function:packages/core/test/plugin/provider-opencode.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-opencode.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-opencode.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openrouter.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-openrouter.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-perplexity.test.ts",
+      "target": "function:packages/core/test/plugin/provider-perplexity.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-perplexity.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-perplexity.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "target": "function:packages/core/test/plugin/provider-sap-ai-core.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-sap-ai-core.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "target": "function:packages/core/test/plugin/provider-snowflake-cortex.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-snowflake-cortex.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-togetherai.test.ts",
+      "target": "function:packages/core/test/plugin/provider-togetherai.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-togetherai.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-togetherai.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-venice.test.ts",
+      "target": "function:packages/core/test/plugin/provider-venice.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-venice.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-venice.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-vercel.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-vercel.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-xai.test.ts",
+      "target": "function:packages/core/test/plugin/provider-xai.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-xai.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-xai.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-zenmux.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-zenmux.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/skill.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/skill.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/variant.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/variant.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/variant.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/policy.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/policy.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/process/process.test.ts",
+      "target": "function:packages/core/test/process/process.test.ts:waitForFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/process/process.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/project-copy.test.ts",
+      "target": "function:packages/core/test/project-copy.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/project-copy.test.ts",
+      "target": "function:packages/core/test/project-copy.test.ts:stored",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/project-copy.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/project-copy.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/project-directories.test.ts",
+      "target": "function:packages/core/test/project-directories.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/project-directories.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/project.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/project.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/pty/pty-session.test.ts",
+      "target": "function:packages/core/test/pty/pty-session.test.ts:waitForEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/pty/pty-session.test.ts",
+      "target": "function:packages/core/test/pty/pty-session.test.ts:waitForOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/pty/pty-session.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/pty/pty-session.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/pty/ticket.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/question.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/reference-guidance.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/reference.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/repository-cache.test.ts",
+      "target": "function:packages/core/test/repository-cache.test.ts:withRemote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/repository-cache.test.ts",
+      "target": "file:packages/core/test/fixture/git.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/repository-cache.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/repository-cache.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/ripgrep.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/ripgrep.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-create.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-create.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-history.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/test/project-copy.test.ts:setup",
+      "target": "function:packages/core/test/fixture/tmpdir.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/repository-cache.test.ts:withRemote",
+      "target": "function:packages/core/test/fixture/tmpdir.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/repository-cache.test.ts:withRemote",
+      "target": "function:packages/core/test/fixture/git.ts:gitRemote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/sdk-next/test/import-boundaries.test.ts",
+      "type": "file",
+      "name": "import-boundaries.test.ts",
+      "filePath": "packages/sdk-next/test/import-boundaries.test.ts",
+      "summary": "验证嵌入式 SDK的import-boundaries行为，覆盖 bundles the client and in-memory host。",
+      "tags": [
+        "测试",
+        "嵌入式 SDK",
+        "import-boundaries"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/sdk-next/test/import-boundaries.test.ts:bundleInputs",
+      "type": "function",
+      "name": "bundleInputs",
+      "filePath": "packages/sdk-next/test/import-boundaries.test.ts",
+      "lineRange": [
+        18,
+        48
+      ],
+      "summary": "嵌入式 SDK的import-boundaries处理函数 bundleInputs，调用 mkdtemp、join、Bun.write、Bun.spawn、Promise.all 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "嵌入式 SDK"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/example/example.ts",
+      "type": "file",
+      "name": "example.ts",
+      "filePath": "packages/sdk/js/example/example.ts",
+      "summary": "旧 JavaScript SDK的example实现模块，配置 @opencode-ai/sdk、bun 相关模块。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "example"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/sdk/js/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/sdk/js/package.json",
+      "summary": "@opencode-ai/sdk 的包清单，声明 test、typecheck、build 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "旧 JavaScript SDK",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/sdk/js/script/build.ts",
+      "type": "file",
+      "name": "build.ts",
+      "filePath": "packages/sdk/js/script/build.ts",
+      "summary": "旧 JavaScript SDK的build脚本，调用 Bun.file、Bun.write。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "build"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/script/publish.ts",
+      "type": "file",
+      "name": "publish.ts",
+      "filePath": "packages/sdk/js/script/publish.ts",
+      "summary": "旧 JavaScript SDK的包发布脚本，调用 Bun.file、Bun.write。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "包发布"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/sdk/js/script/publish.ts:transformExports",
+      "type": "function",
+      "name": "transformExports",
+      "filePath": "packages/sdk/js/script/publish.ts",
+      "lineRange": [
+        20,
+        33
+      ],
+      "summary": "旧 JavaScript SDK的包发布处理函数 transformExports，调用 value.replace、transformExports 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "旧 JavaScript SDK"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/sdk/js/src/gen/core/params.gen.ts",
+      "type": "file",
+      "name": "params.gen.ts",
+      "filePath": "packages/sdk/js/src/gen/core/params.gen.ts",
+      "summary": "旧 JavaScript SDK自动生成的 params.gen 资源方法集合代码，公开 buildClientParams。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "params.gen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/src/gen/core/queryKeySerializer.gen.ts",
+      "type": "file",
+      "name": "queryKeySerializer.gen.ts",
+      "filePath": "packages/sdk/js/src/gen/core/queryKeySerializer.gen.ts",
+      "summary": "旧 JavaScript SDK自动生成的 queryKeySerializer.gen 资源方法集合代码，公开 queryKeyJsonReplacer、stringifyToJsonValue、serializeQueryKeyValue。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "queryKeySerializer.gen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/src/v2/gen/core/params.gen.ts",
+      "type": "file",
+      "name": "params.gen.ts",
+      "filePath": "packages/sdk/js/src/v2/gen/core/params.gen.ts",
+      "summary": "旧 JavaScript SDK自动生成的 params.gen 资源方法集合代码，公开 buildClientParams。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "params.gen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/src/v2/gen/core/queryKeySerializer.gen.ts",
+      "type": "file",
+      "name": "queryKeySerializer.gen.ts",
+      "filePath": "packages/sdk/js/src/v2/gen/core/queryKeySerializer.gen.ts",
+      "summary": "旧 JavaScript SDK自动生成的 queryKeySerializer.gen 资源方法集合代码，公开 queryKeyJsonReplacer、stringifyToJsonValue、serializeQueryKeyValue。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "queryKeySerializer.gen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/sdk/js/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/sdk/js/sst-env.d.ts",
+      "summary": "旧 JavaScript SDK的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "旧 JavaScript SDK",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/sdk/js/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/sdk/js/tsconfig.json",
+      "summary": "旧 JavaScript SDK的 TypeScript 编译配置，定义 extends、compilerOptions、outDir、module、declaration、moduleResolution、lib、composite 等选项。",
+      "tags": [
+        "配置",
+        "旧 JavaScript SDK",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/sdk/openapi.json",
+      "type": "config",
+      "name": "openapi.json",
+      "filePath": "packages/sdk/openapi.json",
+      "summary": "OpenCode的 openapi 配置，定义 openapi、info、paths、components、security、tags 等配置项。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "openapi"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:packages/server/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/server/package.json",
+      "summary": "@opencode-ai/server 的包清单，声明 typecheck 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/server/sst-env.d.ts",
+      "summary": "OpenCode的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/server/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/server/tsconfig.json",
+      "summary": "OpenCode的 TypeScript 编译配置，定义 extends、compilerOptions、lib、noUncheckedIndexedAccess 等选项。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/dock-prompt.stories.tsx",
+      "type": "file",
+      "name": "dock-prompt.stories.tsx",
+      "filePath": "packages/session-ui/src/components/dock-prompt.stories.tsx",
+      "summary": "会话界面的 停靠输入框 Storybook 示例，提供 Basic、Permission展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "停靠输入框"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/dock-prompt.tsx",
+      "type": "file",
+      "name": "dock-prompt.tsx",
+      "filePath": "packages/session-ui/src/components/dock-prompt.tsx",
+      "summary": "会话界面的停靠输入框界面组件，提供 DockPrompt。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "停靠输入框"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/dock-prompt.tsx:DockPrompt",
+      "type": "function",
+      "name": "DockPrompt",
+      "filePath": "packages/session-ui/src/components/dock-prompt.tsx",
+      "lineRange": [
+        4,
+        23
+      ],
+      "summary": "会话界面的停靠输入框处理函数 DockPrompt，调用 slot 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/message-nav.stories.tsx",
+      "type": "file",
+      "name": "message-nav.stories.tsx",
+      "filePath": "packages/session-ui/src/components/message-nav.stories.tsx",
+      "summary": "会话界面的 消息导航 Storybook 示例，提供 Basic展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "消息导航"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/components/message-nav.tsx",
+      "type": "file",
+      "name": "message-nav.tsx",
+      "filePath": "packages/session-ui/src/components/message-nav.tsx",
+      "summary": "会话界面的消息导航界面组件，提供 MessageNav。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "消息导航"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/components/message-nav.tsx:MessageNav",
+      "type": "function",
+      "name": "MessageNav",
+      "filePath": "packages/session-ui/src/components/message-nav.tsx",
+      "lineRange": [
+        7,
+        102
+      ],
+      "summary": "会话界面的消息导航处理函数 MessageNav，调用 useI18n、splitProps、createSignal、hovercardOpen、content 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/styles/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "packages/session-ui/src/styles/index.css",
+      "summary": "会话界面的index样式，定义布局、视觉状态与响应式显示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "index"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/basic-tool-v2.stories.tsx",
+      "type": "file",
+      "name": "basic-tool-v2.stories.tsx",
+      "filePath": "packages/session-ui/src/v2/components/basic-tool-v2.stories.tsx",
+      "summary": "会话界面的 工具详情容器 Storybook 示例，提供 Default、Expanded、Pending、NoChildren、CustomTrigger、Controlled展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "工具详情容器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "type": "file",
+      "name": "basic-tool-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "summary": "会话界面的工具详情容器界面组件，提供 BasicToolV2。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "工具详情容器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/basic-tool-v2.tsx:ChevronIcon",
+      "type": "function",
+      "name": "ChevronIcon",
+      "filePath": "packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "lineRange": [
+        7,
+        24
+      ],
+      "summary": "会话界面的工具详情容器处理函数 ChevronIcon。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/basic-tool-v2.tsx:BasicToolV2",
+      "type": "function",
+      "name": "BasicToolV2",
+      "filePath": "packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "lineRange": [
+        47,
+        139
+      ],
+      "summary": "会话界面的工具详情容器处理函数 BasicToolV2，调用 splitProps、createMemo、hasChildren、pending、canExpand 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/attachments.css",
+      "type": "file",
+      "name": "attachments.css",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/attachments.css",
+      "summary": "会话界面的attachments样式，定义布局、视觉状态与响应式显示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "attachments"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "type": "file",
+      "name": "session-review-empty-changes-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "summary": "会话界面的无文件变化提示界面组件，提供 SessionReviewEmptyChangesV2。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "无文件变化提示"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx:SessionReviewEmptyChangesV2",
+      "type": "function",
+      "name": "SessionReviewEmptyChangesV2",
+      "filePath": "packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "lineRange": [
+        5,
+        17
+      ],
+      "summary": "会话界面的无文件变化提示处理函数 SessionReviewEmptyChangesV2，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "type": "file",
+      "name": "session-review-empty-no-git-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "summary": "会话界面的无 Git 仓库提示界面组件，提供 SessionReviewEmptyNoGitV2。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "无 Git 仓库提示"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx:SessionReviewEmptyNoGitV2",
+      "type": "function",
+      "name": "SessionReviewEmptyNoGitV2",
+      "filePath": "packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "lineRange": [
+        11,
+        28
+      ],
+      "summary": "会话界面的无 Git 仓库提示处理函数 SessionReviewEmptyNoGitV2，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/sdk-next/test/import-boundaries.test.ts",
+      "target": "function:packages/sdk-next/test/import-boundaries.test.ts:bundleInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "config:packages/sdk/js/package.json",
+      "target": "file:packages/sdk/js/script/build.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:packages/sdk/js/script/publish.ts",
+      "target": "function:packages/sdk/js/script/publish.ts:transformExports",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/dock-prompt.stories.tsx",
+      "target": "file:packages/session-ui/src/components/dock-prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/dock-prompt.tsx",
+      "target": "function:packages/session-ui/src/components/dock-prompt.tsx:DockPrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/dock-prompt.tsx",
+      "target": "function:packages/session-ui/src/components/dock-prompt.tsx:DockPrompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/components/message-nav.stories.tsx",
+      "target": "file:packages/session-ui/src/components/message-nav.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/components/message-nav.tsx",
+      "target": "function:packages/session-ui/src/components/message-nav.tsx:MessageNav",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/components/message-nav.tsx",
+      "target": "function:packages/session-ui/src/components/message-nav.tsx:MessageNav",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/basic-tool-v2.stories.tsx",
+      "target": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/basic-tool-v2.tsx:ChevronIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/basic-tool-v2.tsx:BasicToolV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/basic-tool-v2.tsx:BasicToolV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/basic-tool-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/basic-tool-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx:SessionReviewEmptyChangesV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx:SessionReviewEmptyChangesV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-changes-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx:SessionReviewEmptyNoGitV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx:SessionReviewEmptyNoGitV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-empty-no-git-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

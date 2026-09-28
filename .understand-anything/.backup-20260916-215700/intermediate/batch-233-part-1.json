@@ -1,0 +1,1074 @@
+{
+  "nodes": [
+    {
+      "id": "file:flake.nix",
+      "type": "file",
+      "name": "flake.nix",
+      "filePath": "flake.nix",
+      "summary": "定义 仓库 的flake模块。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "nix"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:github/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "github/index.ts",
+      "summary": "定义 仓库 的索引模块，组织 createOpencode、assertPayloadKeyword、getReviewCommentContext、assertOpencodeConnected 等函数。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:github/index.ts:createOpencode",
+      "type": "function",
+      "name": "createOpencode",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        231,
+        242
+      ],
+      "summary": "创建Opencode，调用 spawn、createOpencodeClient、proc.kill 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:getReviewCommentContext",
+      "type": "function",
+      "name": "getReviewCommentContext",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        252,
+        268
+      ],
+      "summary": "读取审阅评论上下文，调用 useContext 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:assertOpencodeConnected",
+      "type": "function",
+      "name": "assertOpencodeConnected",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        270,
+        291
+      ],
+      "summary": "校验Opencode已连接，调用 sleep 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:useEnvModel",
+      "type": "function",
+      "name": "useEnvModel",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        301,
+        311
+      ],
+      "summary": "连接Env模型，调用 value.split、rest.join 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:getAccessToken",
+      "type": "function",
+      "name": "getAccessToken",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        369,
+        401
+      ],
+      "summary": "读取Access令牌，调用 useContext、useEnvGithubToken、isMock、fetch 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:createComment",
+      "type": "function",
+      "name": "createComment",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        403,
+        412
+      ],
+      "summary": "创建评论，调用 useContext、octoRest.rest.issues.createComment、useIssueId、useEnvRunUrl 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:getUserPrompt",
+      "type": "function",
+      "name": "getUserPrompt",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        414,
+        492
+      ],
+      "summary": "读取用户提示词，调用 useContext、getReviewCommentContext、payload.comment.body.trim、body.includes 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:github/index.ts:subscribeSessionEvents",
+      "type": "function",
+      "name": "subscribeSessionEvents",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        494,
+        574
+      ],
+      "summary": "读取会话事件 HTTP 响应流，解码事件并交给订阅方。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:github/index.ts:summarize",
+      "type": "function",
+      "name": "summarize",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        576,
+        586
+      ],
+      "summary": "汇总索引，调用 chat、isScheduleEvent、useContext 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:resolveAgent",
+      "type": "function",
+      "name": "resolveAgent",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        588,
+        607
+      ],
+      "summary": "解析代理，调用 useEnvAgent、agents.data?.find 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:chat",
+      "type": "function",
+      "name": "chat",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        609,
+        651
+      ],
+      "summary": "实现 chat 的索引操作，调用 useEnvModel、resolveAgent、files.flatMap、chat.data.parts.findLast 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:configureGit",
+      "type": "function",
+      "name": "configureGit",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        653,
+        666
+      ],
+      "summary": "为 GitHub 自动化运行配置 Git 身份和凭据。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:checkoutForkBranch",
+      "type": "function",
+      "name": "checkoutForkBranch",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        701,
+        711
+      ],
+      "summary": "准备来自 fork 的工作分支并切换检出。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:pushToNewBranch",
+      "type": "function",
+      "name": "pushToNewBranch",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        723,
+        733
+      ],
+      "summary": "实现 pushToNewBranch 的索引操作，调用 useContext、assertGitIdentityConfigured、$ 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:pushToLocalBranch",
+      "type": "function",
+      "name": "pushToLocalBranch",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        735,
+        745
+      ],
+      "summary": "实现 pushToLocalBranch 的索引操作，调用 useContext、assertGitIdentityConfigured、$ 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:pushToForkBranch",
+      "type": "function",
+      "name": "pushToForkBranch",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        747,
+        759
+      ],
+      "summary": "实现 pushToForkBranch 的索引操作，调用 useContext、assertGitIdentityConfigured、$ 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:assertPermissions",
+      "type": "function",
+      "name": "assertPermissions",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        767,
+        793
+      ],
+      "summary": "校验权限，调用 useContext、useEnvGithubToken、octoRest.repos.getCollaboratorPermissionLevel 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:updateComment",
+      "type": "function",
+      "name": "updateComment",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        795,
+        807
+      ],
+      "summary": "更新评论，调用 useContext、octoRest.rest.issues.updateComment 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:createPR",
+      "type": "function",
+      "name": "createPR",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        809,
+        822
+      ],
+      "summary": "创建PR，调用 useContext、title.slice、octoRest.rest.pulls.create 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:footer",
+      "type": "function",
+      "name": "footer",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        824,
+        838
+      ],
+      "summary": "实现 footer 的索引操作，调用 useEnvModel、encodeURIComponent、session.title.substring、Buffer.from 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:fetchIssue",
+      "type": "function",
+      "name": "fetchIssue",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        845,
+        885
+      ],
+      "summary": "从 GitHub 获取当前 issue 的信息。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:buildPromptDataForIssue",
+      "type": "function",
+      "name": "buildPromptDataForIssue",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        887,
+        913
+      ],
+      "summary": "构造提示词数据用于Issue，调用 useContext、parseInt 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:fetchPR",
+      "type": "function",
+      "name": "fetchPR",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        915,
+        1012
+      ],
+      "summary": "从 GitHub 获取当前 pull request 的信息。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:github/index.ts:buildPromptDataForPR",
+      "type": "function",
+      "name": "buildPromptDataForPR",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        1014,
+        1058
+      ],
+      "summary": "构造提示词数据用于PR，调用 useContext、parseInt 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:github/index.ts:revokeAppToken",
+      "type": "function",
+      "name": "revokeAppToken",
+      "filePath": "github/index.ts",
+      "lineRange": [
+        1060,
+        1072
+      ],
+      "summary": "调用 GitHub 接口撤销本次运行使用的应用令牌。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:github/script/publish",
+      "type": "file",
+      "name": "publish",
+      "filePath": "github/script/publish",
+      "summary": "选择最新 github-v 版本标签，并把远程 latest 标签移动到该版本。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "unknown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:github/script/release",
+      "type": "file",
+      "name": "release",
+      "filePath": "github/script/release",
+      "summary": "根据当前 github-v 标签递增补丁或次版本，创建并推送 GitHub 集成发布标签。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "unknown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:github/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "github/sst-env.d.ts",
+      "summary": "声明 仓库 的sstenvd类型与环境契约，供 TypeScript 在编译期校验。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:install",
+      "type": "file",
+      "name": "install",
+      "filePath": "install",
+      "summary": "检测系统与架构并安装 OpenCode 二进制，支持指定版本、本地文件安装和可选 shell PATH 配置。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "unknown"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:install:usage",
+      "type": "function",
+      "name": "usage",
+      "filePath": "install",
+      "lineRange": [
+        10,
+        27
+      ],
+      "summary": "输出安装脚本参数、指定版本和本地二进制安装的用法。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:print_message",
+      "type": "function",
+      "name": "print_message",
+      "filePath": "install",
+      "lineRange": [
+        207,
+        219
+      ],
+      "summary": "按消息级别和颜色设置输出安装提示。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:check_version",
+      "type": "function",
+      "name": "check_version",
+      "filePath": "install",
+      "lineRange": [
+        221,
+        235
+      ],
+      "summary": "检查当前安装的 OpenCode 版本是否满足请求。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:unbuffered_sed",
+      "type": "function",
+      "name": "unbuffered_sed",
+      "filePath": "install",
+      "lineRange": [
+        237,
+        246
+      ],
+      "summary": "选择当前平台支持的无缓冲 sed 调用方式。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:print_progress",
+      "type": "function",
+      "name": "print_progress",
+      "filePath": "install",
+      "lineRange": [
+        248,
+        265
+      ],
+      "summary": "绘制下载进度的终端显示。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:download_with_progress",
+      "type": "function",
+      "name": "download_with_progress",
+      "filePath": "install",
+      "lineRange": [
+        267,
+        325
+      ],
+      "summary": "下载二进制发布文件并实时显示传输进度。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:install:download_and_install",
+      "type": "function",
+      "name": "download_and_install",
+      "filePath": "install",
+      "lineRange": [
+        327,
+        346
+      ],
+      "summary": "下载目标平台发布包并解包安装 OpenCode。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install:add_to_path",
+      "type": "function",
+      "name": "add_to_path",
+      "filePath": "install",
+      "lineRange": [
+        362,
+        376
+      ],
+      "summary": "向适用的 shell 配置追加 OpenCode 安装目录的 PATH 设置。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:nix/desktop.nix",
+      "type": "file",
+      "name": "desktop.nix",
+      "filePath": "nix/desktop.nix",
+      "summary": "定义 仓库 的桌面模块。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "nix"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:nix/hashes.json",
+      "type": "config",
+      "name": "hashes.json",
+      "filePath": "nix/hashes.json",
+      "summary": "配置 仓库 的hashes，包含 nodeModules 等顶层配置项。",
+      "tags": [
+        "仓库",
+        "configuration",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:nix/node_modules.nix",
+      "type": "file",
+      "name": "node_modules.nix",
+      "filePath": "nix/node_modules.nix",
+      "summary": "定义 仓库 的节点modules模块。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "nix"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:nix/opencode.nix",
+      "type": "file",
+      "name": "opencode.nix",
+      "filePath": "nix/opencode.nix",
+      "summary": "定义 仓库 的opencode模块。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "nix"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:nix/scripts/canonicalize-node-modules.ts",
+      "type": "file",
+      "name": "canonicalize-node-modules.ts",
+      "filePath": "nix/scripts/canonicalize-node-modules.ts",
+      "summary": "配置或执行 仓库 的canonicalize节点modules开发流程。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:nix/scripts/canonicalize-node-modules.ts:parseEntry",
+      "type": "function",
+      "name": "parseEntry",
+      "filePath": "nix/scripts/canonicalize-node-modules.ts",
+      "lineRange": [
+        90,
+        101
+      ],
+      "summary": "解析Entry，调用 label.startsWith、label.indexOf、label.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:nix/scripts/normalize-bun-binaries.ts",
+      "type": "file",
+      "name": "normalize-bun-binaries.ts",
+      "filePath": "nix/scripts/normalize-bun-binaries.ts",
+      "summary": "配置或执行 仓库 的规范化bun二进制开发流程。",
+      "tags": [
+        "仓库",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:nix/scripts/normalize-bun-binaries.ts:collectPackages",
+      "type": "function",
+      "name": "collectPackages",
+      "filePath": "nix/scripts/normalize-bun-binaries.ts",
+      "lineRange": [
+        50,
+        74
+      ],
+      "summary": "收集Packages，调用 readdir、join、isDirectory、name.startsWith 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:nix/scripts/normalize-bun-binaries.ts:linkBinary",
+      "type": "function",
+      "name": "linkBinary",
+      "filePath": "nix/scripts/normalize-bun-binaries.ts",
+      "lineRange": [
+        85,
+        104
+      ],
+      "summary": "实现 linkBinary 的规范化bun二进制操作，调用 normalizeBinName、seen.has、join、Bun.file 完成相关步骤。",
+      "tags": [
+        "function",
+        "仓库",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/app/e2e/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/app/e2e/AGENTS.md",
+      "summary": "规定 app 范围的开发约束，包含RequiredReading、测试Hygiene。",
+      "tags": [
+        "app",
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:createOpencode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:getReviewCommentContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:assertOpencodeConnected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:useEnvModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:getAccessToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:createComment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:getUserPrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:subscribeSessionEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:summarize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:resolveAgent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:chat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:configureGit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:checkoutForkBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:pushToNewBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:pushToLocalBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:pushToForkBranch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:assertPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:updateComment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:createPR",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:fetchIssue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:buildPromptDataForIssue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:fetchPR",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:buildPromptDataForPR",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:github/index.ts",
+      "target": "function:github/index.ts:revokeAppToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:github/index.ts:getUserPrompt",
+      "target": "function:github/index.ts:getReviewCommentContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:github/index.ts:summarize",
+      "target": "function:github/index.ts:chat",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:github/index.ts:chat",
+      "target": "function:github/index.ts:useEnvModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:github/index.ts:chat",
+      "target": "function:github/index.ts:resolveAgent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:github/index.ts:footer",
+      "target": "function:github/index.ts:useEnvModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:print_message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:check_version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:unbuffered_sed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:print_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:download_with_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:download_and_install",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install",
+      "target": "function:install:add_to_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:nix/scripts/canonicalize-node-modules.ts",
+      "target": "function:nix/scripts/canonicalize-node-modules.ts:parseEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:nix/scripts/normalize-bun-binaries.ts",
+      "target": "function:nix/scripts/normalize-bun-binaries.ts:collectPackages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:nix/scripts/normalize-bun-binaries.ts",
+      "target": "function:nix/scripts/normalize-bun-binaries.ts:linkBinary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

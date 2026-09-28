@@ -1,0 +1,1748 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/src/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/core/src/model.ts",
+      "summary": "在Core 领域服务层中提供 ID、VariantID、Family、Capabilities、Cost、Ref、Api；内部处理包含 parse。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/model.ts:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/core/src/model.ts",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "在Core 领域服务层中执行 parse，接收 input 参数；调用 input.split、ProviderV2.ID.make、ID.make、modelID.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/models-dev.ts",
+      "type": "file",
+      "name": "models-dev.ts",
+      "filePath": "packages/core/src/models-dev.ts",
+      "summary": "在Core 领域服务层中提供 CatalogModelStatus、Model、Provider、Event、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/core/src/models-dev.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/models-dev.ts",
+      "lineRange": [
+        143,
+        143
+      ],
+      "summary": "在Core 领域服务层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/npm-config.ts",
+      "type": "file",
+      "name": "npm-config.ts",
+      "filePath": "packages/core/src/npm-config.ts",
+      "summary": "在Core 领域服务层中提供 load、registry 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm-config.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/core/src/npm-config.ts",
+      "lineRange": [
+        12,
+        32
+      ],
+      "summary": "在Core 领域服务层中执行 load，接收 dir 参数；调用 Effect.tryPromise、config.load、Effect.orElseSucceed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm-config.ts:registry",
+      "type": "function",
+      "name": "registry",
+      "filePath": "packages/core/src/npm-config.ts",
+      "lineRange": [
+        34,
+        40
+      ],
+      "summary": "在Core 领域服务层中执行 registry，接收 dir 参数；调用 load、Effect.map、registry.endsWith、registry.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/npm.ts",
+      "type": "file",
+      "name": "npm.ts",
+      "filePath": "packages/core/src/npm.ts",
+      "summary": "在Core 领域服务层中提供 InstallFailedError、Service、sanitize、node、install、add、which；内部处理包含 sanitize、resolveEntryPoint、install、add、which。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/npm.ts:sanitize",
+      "type": "function",
+      "name": "sanitize",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        45,
+        48
+      ],
+      "summary": "在Core 领域服务层中执行 sanitize，接收 pkg 参数；调用 Array.from、illegal.has、char.charCodeAt 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm.ts:resolveEntryPoint",
+      "type": "function",
+      "name": "resolveEntryPoint",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        50,
+        61
+      ],
+      "summary": "在Core 领域服务层中执行 resolveEntryPoint，接收 name、dir 参数；调用 import.meta.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm.ts:install",
+      "type": "function",
+      "name": "install",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        259,
+        261
+      ],
+      "summary": "在Core 领域服务层中执行 install，接收 ...args 参数；调用 runPromise、svc.install 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm.ts:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        263,
+        265
+      ],
+      "summary": "在Core 领域服务层中执行 add，接收 ...args 参数；调用 runPromise、svc.add 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/npm.ts:which",
+      "type": "function",
+      "name": "which",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        267,
+        269
+      ],
+      "summary": "在Core 领域服务层中执行 which，接收 ...args 参数；调用 runPromise、svc.which 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/npm.ts:InstallFailedError",
+      "type": "class",
+      "name": "InstallFailedError",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        16,
+        20
+      ],
+      "summary": "在Core 领域服务层中定义 InstallFailedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/npm.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/npm.ts",
+      "lineRange": [
+        41,
+        41
+      ],
+      "summary": "在Core 领域服务层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/oauth/page.ts",
+      "type": "file",
+      "name": "page.ts",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "summary": "在Core 领域服务层中提供 success、error、bootstrap；内部处理包含 success、error、bootstrap、renderCard、renderDocument、bootstrapScript、scriptString。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:success",
+      "type": "function",
+      "name": "success",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        21,
+        33
+      ],
+      "summary": "在Core 领域服务层中执行 success，接收 options 参数；调用 renderDocument、renderCard、escapeHtml 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:error",
+      "type": "function",
+      "name": "error",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        35,
+        49
+      ],
+      "summary": "在Core 领域服务层中执行 error，接收 detail、options 参数；调用 renderDocument、renderCard、escapeHtml 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "type": "function",
+      "name": "bootstrap",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        61,
+        74
+      ],
+      "summary": "在Core 领域服务层中执行 bootstrap，接收 options 参数；调用 renderDocument、renderCard、escapeHtml、bootstrapScript 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:renderCard",
+      "type": "function",
+      "name": "renderCard",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        80,
+        94
+      ],
+      "summary": "在Core 领域服务层中执行 renderCard，接收 input 参数；调用 escapeHtml 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:renderDocument",
+      "type": "function",
+      "name": "renderDocument",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        96,
+        110
+      ],
+      "summary": "在Core 领域服务层中执行 renderDocument，接收 input 参数；调用 escapeHtml 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/oauth/page.ts:bootstrapScript",
+      "type": "function",
+      "name": "bootstrapScript",
+      "filePath": "packages/core/src/oauth/page.ts",
+      "lineRange": [
+        114,
+        134
+      ],
+      "summary": "在Core 领域服务层中执行 bootstrapScript，接收 options 参数；调用 scriptString 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/observability.ts",
+      "type": "file",
+      "name": "observability.ts",
+      "filePath": "packages/core/src/observability.ts",
+      "summary": "在Core 领域服务层中提供 layer、node 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/observability/logging.ts",
+      "type": "file",
+      "name": "logging.ts",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "summary": "在Core 领域服务层中提供 fileLogger、minimumLogLevel、loggers；内部处理包含 formatter、flatten、plain、format、fileLogger、minimumLogLevel、loggers。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/observability/logging.ts:formatter",
+      "type": "function",
+      "name": "formatter",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "lineRange": [
+        6,
+        21
+      ],
+      "summary": "在Core 领域服务层中执行 formatter，接收 id 参数；调用 Logger.map、Array.isArray、messages.flatMap、plain、flatten、format 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/logging.ts:flatten",
+      "type": "function",
+      "name": "flatten",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "lineRange": [
+        23,
+        36
+      ],
+      "summary": "在Core 领域服务层中执行 flatten，接收 input、prefix、seen 参数；调用 seen.has、seen.add、Object.entries、entries.flatMap、plain、flatten 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/logging.ts:fileLogger",
+      "type": "function",
+      "name": "fileLogger",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "lineRange": [
+        49,
+        52
+      ],
+      "summary": "在Core 领域服务层中执行 fileLogger，接收 file、id 参数；调用 path.join、Logger.toFile、formatter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/logging.ts:minimumLogLevel",
+      "type": "function",
+      "name": "minimumLogLevel",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "lineRange": [
+        56,
+        65
+      ],
+      "summary": "在Core 领域服务层中执行 minimumLogLevel。",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/logging.ts:loggers",
+      "type": "function",
+      "name": "loggers",
+      "filePath": "packages/core/src/observability/logging.ts",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "在Core 领域服务层中执行 loggers；调用 fileLogger 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/observability/otlp.ts",
+      "type": "file",
+      "name": "otlp.ts",
+      "filePath": "packages/core/src/observability/otlp.ts",
+      "summary": "在Core 领域服务层中提供 resource、loggers、tracingLayer；内部处理包含 resourceAttributes、resource、loggers、tracingLayer。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/observability/otlp.ts:resourceAttributes",
+      "type": "function",
+      "name": "resourceAttributes",
+      "filePath": "packages/core/src/observability/otlp.ts",
+      "lineRange": [
+        20,
+        34
+      ],
+      "summary": "在Core 领域服务层中执行 resourceAttributes；调用 Object.fromEntries、value.split、entry.indexOf、decodeURIComponent、entry.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/otlp.ts:resource",
+      "type": "function",
+      "name": "resource",
+      "filePath": "packages/core/src/observability/otlp.ts",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "在Core 领域服务层中执行 resource；调用 resourceAttributes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/otlp.ts:loggers",
+      "type": "function",
+      "name": "loggers",
+      "filePath": "packages/core/src/observability/otlp.ts",
+      "lineRange": [
+        50,
+        53
+      ],
+      "summary": "在Core 领域服务层中执行 loggers；调用 OtlpLogger.make、resource 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/observability/otlp.ts:tracingLayer",
+      "type": "function",
+      "name": "tracingLayer",
+      "filePath": "packages/core/src/observability/otlp.ts",
+      "lineRange": [
+        55,
+        77
+      ],
+      "summary": "在Core 领域服务层中执行 tracingLayer；调用 import、manager.enable、context.setGlobalContextManager、NodeSdk.layer、resource 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/observability/shared.ts",
+      "type": "file",
+      "name": "shared.ts",
+      "filePath": "packages/core/src/observability/shared.ts",
+      "summary": "在Core 领域服务层中提供 runID 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/patch.ts",
+      "type": "file",
+      "name": "patch.ts",
+      "filePath": "packages/core/src/patch.ts",
+      "summary": "在Core 领域服务层中提供 parse、derive、joinBom；内部处理包含 parse、derive、joinBom、parseAdd、parseUpdate、computeReplacements、seek。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        25,
+        69
+      ],
+      "summary": "在Core 领域服务层中执行 parse，接收 patchText 参数；调用 stripHeredoc、patchText.trim、lines.findIndex、line.trim、line.startsWith、line.slice、parseAdd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        71,
+        81
+      ],
+      "summary": "在Core 领域服务层中执行 derive，接收 path、chunks、original 参数；调用 splitBom、source.text.split、lines.at、lines.pop、computeReplacements、replacements.toReversed、updated.splice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:joinBom",
+      "type": "function",
+      "name": "joinBom",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        83,
+        86
+      ],
+      "summary": "在Core 领域服务层中执行 joinBom，接收 text、bom 参数；调用 splitBom 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:parseAdd",
+      "type": "function",
+      "name": "parseAdd",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        88,
+        97
+      ],
+      "summary": "在Core 领域服务层中执行 parseAdd，接收 lines、start 参数；调用 content.push、content.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:parseUpdate",
+      "type": "function",
+      "name": "parseUpdate",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        99,
+        130
+      ],
+      "summary": "在Core 领域服务层中执行 parseUpdate，接收 lines、start 参数；调用 line.startsWith、oldLines.push、line.slice、newLines.push、chunks.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:computeReplacements",
+      "type": "function",
+      "name": "computeReplacements",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        132,
+        158
+      ],
+      "summary": "在Core 领域服务层中执行 computeReplacements，接收 lines、path、chunks 参数；调用 seek、replacements.push、oldLines.at、oldLines.slice、newLines.at、newLines.slice、chunk.oldLines.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/patch.ts:seek",
+      "type": "function",
+      "name": "seek",
+      "filePath": "packages/core/src/patch.ts",
+      "lineRange": [
+        160,
+        172
+      ],
+      "summary": "在Core 领域服务层中执行 seek，接收 lines、pattern、start、eof 参数；调用 matches 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/permission.ts",
+      "type": "file",
+      "name": "permission.ts",
+      "filePath": "packages/core/src/permission.ts",
+      "summary": "在Core 领域服务层中提供 Effect、Rule、Ruleset、ID、Source、Request、Reply；内部处理包含 evaluate、merge。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/src/permission.ts:evaluate",
+      "type": "function",
+      "name": "evaluate",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        76,
+        86
+      ],
+      "summary": "在Core 领域服务层中执行 evaluate，接收 action、resource、...rulesets 参数；调用 Wildcard.match 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/permission.ts:merge",
+      "type": "function",
+      "name": "merge",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        88,
+        90
+      ],
+      "summary": "在Core 领域服务层中执行 merge，接收 ...rulesets 参数；调用 rulesets.flat 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/permission.ts:DeclinedError",
+      "type": "class",
+      "name": "DeclinedError",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        60,
+        60
+      ],
+      "summary": "在Core 领域服务层中定义 DeclinedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/permission.ts:CorrectedError",
+      "type": "class",
+      "name": "CorrectedError",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        62,
+        64
+      ],
+      "summary": "在Core 领域服务层中定义 CorrectedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/permission.ts:BlockedError",
+      "type": "class",
+      "name": "BlockedError",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "在Core 领域服务层中定义 BlockedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/permission.ts:NotFoundError",
+      "type": "class",
+      "name": "NotFoundError",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        70,
+        72
+      ],
+      "summary": "在Core 领域服务层中定义 NotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/core/src/permission.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/permission.ts",
+      "lineRange": [
+        101,
+        101
+      ],
+      "summary": "在Core 领域服务层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/permission/saved.ts",
+      "type": "file",
+      "name": "saved.ts",
+      "filePath": "packages/core/src/permission/saved.ts",
+      "summary": "在Core 领域服务层中提供 ID、Info、ListInput、AddInput、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/core/src/permission/saved.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/core/src/permission/saved.ts",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "在Core 领域服务层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/model.ts",
+      "target": "function:packages/core/src/model.ts:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/model.ts",
+      "target": "function:packages/core/src/model.ts:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/model.ts",
+      "target": "file:packages/core/src/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "class:packages/core/src/models-dev.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "class:packages/core/src/models-dev.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/effect/app-node-platform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/flag/flag.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/fs-util.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/installation/version.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/util/flock.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/models-dev.ts",
+      "target": "file:packages/core/src/util/hash.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm-config.ts",
+      "target": "function:packages/core/src/npm-config.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm-config.ts",
+      "target": "function:packages/core/src/npm-config.ts:load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm-config.ts",
+      "target": "function:packages/core/src/npm-config.ts:registry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm-config.ts",
+      "target": "function:packages/core/src/npm-config.ts:registry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:sanitize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:sanitize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:resolveEntryPoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:install",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:install",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:which",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "function:packages/core/src/npm.ts:which",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "class:packages/core/src/npm.ts:InstallFailedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "class:packages/core/src/npm.ts:InstallFailedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "class:packages/core/src/npm.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "class:packages/core/src/npm.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/effect/app-node-platform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/effect/layer-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/effect/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/fs-util.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/npm-config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/npm.ts",
+      "target": "file:packages/core/src/util/effect-flock.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:success",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:success",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:renderCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:renderDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/oauth/page.ts",
+      "target": "function:packages/core/src/oauth/page.ts:bootstrapScript",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability.ts",
+      "target": "file:packages/core/src/effect/layer-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability.ts",
+      "target": "file:packages/core/src/observability/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability.ts",
+      "target": "file:packages/core/src/observability/otlp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:formatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:flatten",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:fileLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:fileLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:minimumLogLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:minimumLogLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:loggers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "function:packages/core/src/observability/logging.ts:loggers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "file:packages/core/src/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability/logging.ts",
+      "target": "file:packages/core/src/observability/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:resourceAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:resource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:resource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:loggers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:loggers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:tracingLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "function:packages/core/src/observability/otlp.ts:tracingLayer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "file:packages/core/src/flag/flag.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "file:packages/core/src/installation/version.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/observability/otlp.ts",
+      "target": "file:packages/core/src/observability/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:joinBom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:joinBom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:parseAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:parseUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:computeReplacements",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/patch.ts",
+      "target": "function:packages/core/src/patch.ts:seek",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "function:packages/core/src/permission.ts:evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "function:packages/core/src/permission.ts:evaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "function:packages/core/src/permission.ts:merge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "function:packages/core/src/permission.ts:merge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:DeclinedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:DeclinedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:CorrectedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:CorrectedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:BlockedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:BlockedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:NotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:NotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "class:packages/core/src/permission.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/permission/saved.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/session/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission.ts",
+      "target": "file:packages/core/src/util/wildcard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "class:packages/core/src/permission/saved.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "class:packages/core/src/permission/saved.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "file:packages/core/src/database/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "file:packages/core/src/effect/app-node.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "file:packages/core/src/permission/sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/permission/saved.ts",
+      "target": "file:packages/core/src/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/src/npm-config.ts:registry",
+      "target": "function:packages/core/src/npm-config.ts:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:success",
+      "target": "function:packages/core/src/oauth/page.ts:renderDocument",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:success",
+      "target": "function:packages/core/src/oauth/page.ts:renderCard",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:error",
+      "target": "function:packages/core/src/oauth/page.ts:renderDocument",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:error",
+      "target": "function:packages/core/src/oauth/page.ts:renderCard",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "target": "function:packages/core/src/oauth/page.ts:renderDocument",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "target": "function:packages/core/src/oauth/page.ts:renderCard",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/oauth/page.ts:bootstrap",
+      "target": "function:packages/core/src/oauth/page.ts:bootstrapScript",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/logging.ts:formatter",
+      "target": "function:packages/core/src/observability/logging.ts:flatten",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/logging.ts:fileLogger",
+      "target": "function:packages/core/src/observability/logging.ts:formatter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/logging.ts:loggers",
+      "target": "function:packages/core/src/observability/logging.ts:fileLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/otlp.ts:resource",
+      "target": "function:packages/core/src/observability/otlp.ts:resourceAttributes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/otlp.ts:loggers",
+      "target": "function:packages/core/src/observability/otlp.ts:resource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/observability/otlp.ts:tracingLayer",
+      "target": "function:packages/core/src/observability/otlp.ts:resource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/patch.ts:parse",
+      "target": "function:packages/core/src/patch.ts:parseAdd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/patch.ts:parse",
+      "target": "function:packages/core/src/patch.ts:parseUpdate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/patch.ts:derive",
+      "target": "function:packages/core/src/patch.ts:computeReplacements",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/src/patch.ts:computeReplacements",
+      "target": "function:packages/core/src/patch.ts:seek",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

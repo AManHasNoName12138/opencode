@@ -1,0 +1,1865 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "type": "file",
+      "name": "session-tab-switch-metrics.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "summary": "提供会话标签页开关指标性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 classifySessionSwitch、isCorrectDestination、isStableSessionSwitch、isStableDestination。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:classifySessionSwitch",
+      "type": "function",
+      "name": "classifySessionSwitch",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "lineRange": [
+        18,
+        39
+      ],
+      "summary": "分析会话切换采样，区分目标正确性与显示稳定性。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isCorrectDestination",
+      "type": "function",
+      "name": "isCorrectDestination",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "lineRange": [
+        41,
+        49
+      ],
+      "summary": "判断正确目标，输入包括 sample。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableSessionSwitch",
+      "type": "function",
+      "name": "isStableSessionSwitch",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "判断稳定会话开关，调用 samples.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableDestination",
+      "type": "function",
+      "name": "isStableDestination",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "判断稳定目标，调用 samples.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "type": "file",
+      "name": "session-tab-switch-probe.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "summary": "提供会话标签页开关探针性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 measureSessionSwitch、waitForStableTimeline。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:installSessionSwitchProbe",
+      "type": "function",
+      "name": "installSessionSwitchProbe",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "lineRange": [
+        9,
+        130
+      ],
+      "summary": "安装会话开关探针，调用 page.evaluate、document.addEventListener、event.target.closest、link?.getAttribute 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableSessionSwitch",
+      "type": "function",
+      "name": "waitForStableSessionSwitch",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "lineRange": [
+        132,
+        151
+      ],
+      "summary": "等待用于稳定会话开关，调用 page.waitForFunction、samples.some、samples.slice、stable.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:measureSessionSwitch",
+      "type": "function",
+      "name": "measureSessionSwitch",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "lineRange": [
+        162,
+        185
+      ],
+      "summary": "测量会话开关，调用 installSessionSwitchProbe、run、waitForStableSessionSwitch、collectSessionSwitchResult 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableTimeline",
+      "type": "function",
+      "name": "waitForStableTimeline",
+      "filePath": "packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "lineRange": [
+        187,
+        226
+      ],
+      "summary": "等待用于稳定时间线，调用 samples.push、page.evaluate、requestAnimationFrame、setTimeout 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "type": "file",
+      "name": "session-timeline-benchmark.fixture.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "summary": "提供会话时间线基准测试测试数据性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 textPartID、setupTimelineBenchmark、buildInitialStreamEvent、buildStreamDeltaEvents、streamChunk。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "type": "function",
+      "name": "setupTimelineBenchmark",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        96,
+        188
+      ],
+      "summary": "创建时间线性能场景所需的项目、模型和会话模拟数据。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildInitialStreamEvent",
+      "type": "function",
+      "name": "buildInitialStreamEvent",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        190,
+        203
+      ],
+      "summary": "构造性能测试中流式输出的首个事件。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildStreamDeltaEvents",
+      "type": "function",
+      "name": "buildStreamDeltaEvents",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        205,
+        218
+      ],
+      "summary": "构造性能测试中连续到达的文本增量事件。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "type": "function",
+      "name": "performanceTurn",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        220,
+        365
+      ],
+      "summary": "实现 performanceTurn 的会话时间线基准测试测试数据操作，调用 String、historicalSource、historicalMarkdown、realisticPatch 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalMarkdown",
+      "type": "function",
+      "name": "historicalMarkdown",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        367,
+        397
+      ],
+      "summary": "实现 historicalMarkdown 的会话时间线基准测试测试数据操作，输入包括 index。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalSource",
+      "type": "function",
+      "name": "historicalSource",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        399,
+        422
+      ],
+      "summary": "实现 historicalSource 的会话时间线基准测试测试数据操作，输入包括 index、updated。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:realisticPatch",
+      "type": "function",
+      "name": "realisticPatch",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        424,
+        438
+      ],
+      "summary": "实现 realisticPatch 的会话时间线基准测试测试数据操作，输入包括 index。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:streamChunk",
+      "type": "function",
+      "name": "streamChunk",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        440,
+        467
+      ],
+      "summary": "实现 streamChunk 的会话时间线基准测试测试数据操作，输入包括 index、count。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:project",
+      "type": "function",
+      "name": "project",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        469,
+        478
+      ],
+      "summary": "构造项目测试数据，用于会话时间线基准测试测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        480,
+        490
+      ],
+      "summary": "构造会话测试数据，用于会话时间线基准测试测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:provider",
+      "type": "function",
+      "name": "provider",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "lineRange": [
+        492,
+        504
+      ],
+      "summary": "构造提供商测试数据，用于会话时间线基准测试测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "file",
+      "name": "session-timeline-benchmark.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "summary": "验证会话时间线基准测试相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“performance: session timeline streaming”、“performance: review pane”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "type": "function",
+      "name": "runTimelineStreamBenchmark",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "lineRange": [
+        102,
+        184
+      ],
+      "summary": "运行时间线流基准测试，调用 Number、createReviewDiffs、setupTimelineBenchmark、fixture.transport.enqueue 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:installReviewPaneProbe",
+      "type": "function",
+      "name": "installReviewPaneProbe",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "lineRange": [
+        203,
+        265
+      ],
+      "summary": "安装审阅Pane探针，调用 page.evaluate、input.file.split、performance.now、performance.mark 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:collectReviewPaneProbe",
+      "type": "function",
+      "name": "collectReviewPaneProbe",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "lineRange": [
+        273,
+        289
+      ],
+      "summary": "收集审阅Pane探针，调用 page.waitForFunction、samples.some、samples.slice、stable.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:summarizeReviewPaneSamples",
+      "type": "function",
+      "name": "summarizeReviewPaneSamples",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "lineRange": [
+        291,
+        306
+      ],
+      "summary": "汇总审阅Pane采样，调用 samples.find、samples.findIndex、samples.slice、stable.every 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "type": "file",
+      "name": "session-timeline-profile.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "summary": "提供会话时间线profile性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 startTimelineProfile。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-profile.ts:startTimelineProfile",
+      "type": "function",
+      "name": "startTimelineProfile",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "lineRange": [
+        3,
+        40
+      ],
+      "summary": "启动时间线Profile，调用 page.context、cdp.send 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "type": "file",
+      "name": "session-timeline-stream-probe.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "summary": "提供会话时间线流探针性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 installTimelineStreamProbe、startTimelineStreamProbe、layoutShiftValue、removeVisibleRow、streamProgress、collectTimelineStreamMetrics。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:installTimelineStreamProbe",
+      "type": "function",
+      "name": "installTimelineStreamProbe",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        65,
+        389
+      ],
+      "summary": "安装时间线流探针，调用 page.evaluate、document.querySelector、part?.closest、part?.querySelector 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:startTimelineStreamProbe",
+      "type": "function",
+      "name": "startTimelineStreamProbe",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        391,
+        397
+      ],
+      "summary": "启动时间线流探针，调用 page.evaluate、state.start 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:layoutShiftValue",
+      "type": "function",
+      "name": "layoutShiftValue",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        401,
+        407
+      ],
+      "summary": "提取指定开始时间后的布局偏移数值。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:removeVisibleRow",
+      "type": "function",
+      "name": "removeVisibleRow",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        409,
+        411
+      ],
+      "summary": "移除可见行，调用 visible.delete 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:streamProgress",
+      "type": "function",
+      "name": "streamProgress",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        413,
+        425
+      ],
+      "summary": "从流式输出的可见内容推算当前进度。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:collectTimelineStreamMetrics",
+      "type": "function",
+      "name": "collectTimelineStreamMetrics",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "lineRange": [
+        427,
+        547
+      ],
+      "summary": "收集时间线流指标，调用 page.evaluate、performance.now、state.cleanup、document.querySelector 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "type": "file",
+      "name": "session-timeline-stress.fixture.ts",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "summary": "提供会话时间线压力测试数据性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 fixture、pageMessages。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:lorem",
+      "type": "function",
+      "name": "lorem",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        35,
+        45
+      ],
+      "summary": "实现 lorem 的会话时间线压力测试数据操作，调用 out.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:userMessage",
+      "type": "function",
+      "name": "userMessage",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        51,
+        73
+      ],
+      "summary": "构造用户消息测试数据，由 sessionID、index、textLength、diffs 指定场景参数，用于会话时间线压力测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:assistantMessage",
+      "type": "function",
+      "name": "assistantMessage",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        75,
+        100
+      ],
+      "summary": "构造助手消息测试数据，由 sessionID、index、parentID、parts 指定场景参数，用于会话时间线压力测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:textPart",
+      "type": "function",
+      "name": "textPart",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        102,
+        113
+      ],
+      "summary": "构造文本片段测试数据，由 index、partIndex、length 指定场景参数，用于会话时间线压力测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "type": "function",
+      "name": "toolPart",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        124,
+        159
+      ],
+      "summary": "构造工具片段测试数据，由 index、partIndex、tool、input 指定场景参数，用于会话时间线压力测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:patchFile",
+      "type": "function",
+      "name": "patchFile",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        161,
+        172
+      ],
+      "summary": "实现 patchFile 的会话时间线压力测试数据操作，调用 patch、code 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:fileDiff",
+      "type": "function",
+      "name": "fileDiff",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        174,
+        190
+      ],
+      "summary": "实现 fileDiff 的会话时间线压力测试数据操作，调用 code、before.replace 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "type": "function",
+      "name": "turn",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        203,
+        245
+      ],
+      "summary": "实现 turn 的会话时间线压力测试数据操作，调用 fileDiff、userMessage、reasoningPart、toolPart 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:pageMessages",
+      "type": "function",
+      "name": "pageMessages",
+      "filePath": "packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "lineRange": [
+        356,
+        369
+      ],
+      "summary": "实现 pageMessages 的会话时间线压力测试数据操作，调用 messages.findIndex、messages.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "type": "file",
+      "name": "timeline-test-helpers.ts",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "summary": "提供时间线测试辅助函数性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 installTimelineSettings、mockStressTimeline、installStressSessionTabs、stressSessionHref、stressDraftHref、createReviewDiffs。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installTimelineSettings",
+      "type": "function",
+      "name": "installTimelineSettings",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        6,
+        20
+      ],
+      "summary": "安装时间线设置，调用 page.addInitScript、localStorage.setItem 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:mockStressTimeline",
+      "type": "function",
+      "name": "mockStressTimeline",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        22,
+        38
+      ],
+      "summary": "实现 mockStressTimeline 的时间线测试辅助函数操作，调用 mockOpenCodeServer 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installStressSessionTabs",
+      "type": "function",
+      "name": "installStressSessionTabs",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        40,
+        72
+      ],
+      "summary": "安装压力会话标签页，调用 stressServer、page.addInitScript、localStorage.setItem、sessionIDs.map 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressSessionHref",
+      "type": "function",
+      "name": "stressSessionHref",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        74,
+        76
+      ],
+      "summary": "实现 stressSessionHref 的时间线测试辅助函数操作，调用 base64Encode、stressServer 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressDraftHref",
+      "type": "function",
+      "name": "stressDraftHref",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "实现 stressDraftHref 的时间线测试辅助函数操作，调用 encodeURIComponent 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:createReviewDiffs",
+      "type": "function",
+      "name": "createReviewDiffs",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        86,
+        106
+      ],
+      "summary": "创建审阅Diffs，调用 Number、String、reviewSource、reviewPatch 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:reviewPatch",
+      "type": "function",
+      "name": "reviewPatch",
+      "filePath": "packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "lineRange": [
+        115,
+        129
+      ],
+      "summary": "实现 reviewPatch 的时间线测试辅助函数操作，调用 before.split、after.split、beforeLines.flatMap 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/first-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/first-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/first-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/home-tab-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/home-tab-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/home-tab-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/review-pane-scaling-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-parent-hydration-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-parent-hydration-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-parent-hydration-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-flash.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-flash.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-flash.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-switch-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-switch-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-switch-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:classifySessionSwitch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:classifySessionSwitch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isCorrectDestination",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isCorrectDestination",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableSessionSwitch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableSessionSwitch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableDestination",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableDestination",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:classifySessionSwitch",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableSessionSwitch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:installSessionSwitchProbe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableSessionSwitch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:measureSessionSwitch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:measureSessionSwitch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:measureSessionSwitch",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:installSessionSwitchProbe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:measureSessionSwitch",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableSessionSwitch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-tab-switch-probe.ts:waitForStableTimeline",
+      "target": "function:packages/app/e2e/performance/timeline/session-tab-switch-metrics.ts:isStableDestination",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildInitialStreamEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildInitialStreamEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildStreamDeltaEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildStreamDeltaEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:realisticPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:streamChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:streamChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:project",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "file:packages/app/e2e/performance/benchmark.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "file:packages/app/e2e/utils/mock-server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "file:packages/app/e2e/utils/waits.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/utils/mock-server.ts:mockOpenCodeServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:project",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:provider",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/utils/waits.ts:expectSessionTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "target": "function:packages/app/e2e/utils/waits.ts:expectAppVisible",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildInitialStreamEvent",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:streamChunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildStreamDeltaEvents",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:streamChunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:historicalMarkdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:performanceTurn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:realisticPatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:installReviewPaneProbe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:collectReviewPaneProbe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:summarizeReviewPaneSamples",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "file:packages/app/e2e/performance/benchmark.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:createReviewDiffs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:setupTimelineBenchmark",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildInitialStreamEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-profile.ts:startTimelineProfile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:installTimelineStreamProbe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.fixture.ts:buildStreamDeltaEvents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:startTimelineStreamProbe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:collectTimelineStreamMetrics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:runTimelineStreamBenchmark",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:benchmarkDiagnostics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:collectReviewPaneProbe",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts:summarizeReviewPaneSamples",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-profile.ts:startTimelineProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-profile.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-profile.ts:startTimelineProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:installTimelineStreamProbe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:installTimelineStreamProbe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:startTimelineStreamProbe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:startTimelineStreamProbe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:layoutShiftValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:layoutShiftValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:removeVisibleRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:removeVisibleRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:streamProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:streamProgress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:collectTimelineStreamMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stream-probe.ts:collectTimelineStreamMetrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:lorem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:userMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:assistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:textPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:patchFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:fileDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:pageMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:pageMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:userMessage",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:lorem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:textPart",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:lorem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:patchFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:fileDiff",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:lorem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:fileDiff",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:userMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:toolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:textPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:turn",
+      "target": "function:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts:assistantMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installTimelineSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installTimelineSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:mockStressTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:mockStressTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installStressSessionTabs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:installStressSessionTabs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressSessionHref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressSessionHref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressDraftHref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:stressDraftHref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:createReviewDiffs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:createReviewDiffs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:reviewPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-stress.fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline/timeline-test-helpers.ts",
+      "target": "file:packages/app/e2e/utils/mock-server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:mockStressTimeline",
+      "target": "function:packages/app/e2e/utils/mock-server.ts:mockOpenCodeServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:createReviewDiffs",
+      "target": "function:packages/app/e2e/performance/timeline/timeline-test-helpers.ts:reviewPatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "file",
+      "name": "httpapi-layer.ts",
+      "filePath": "packages/opencode/test/server/httpapi-layer.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 httpApiLayer、request、requestInDirectory 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "packages/opencode/test/server/httpapi-layer.ts",
+      "lineRange": [
+        21,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 request，接收 path、init 参数；调用 HttpClientRequest.fromWeb、HttpClientRequest.setUrl 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-layer.ts:requestInDirectory",
+      "type": "function",
+      "name": "requestInDirectory",
+      "filePath": "packages/opencode/test/server/httpapi-layer.ts",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 requestInDirectory，接收 path、directory、init 参数；调用 headers.set、request 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "type": "file",
+      "name": "httpapi-listen.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「HttpApi Server.listen、stop() gracefully closes an idle listener and is repeat-safe、default in-process handler does not emit Effect HTTP response logs、plugin client requests reuse the listening server instance、port 0 prefers 4096 when free、port 0 falls back when 4096 is taken」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-listen.test.ts:requestTicket",
+      "type": "function",
+      "name": "requestTicket",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "lineRange": [
+        61,
+        78
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 requestTicket，接收 listener、id、dir、options 参数；调用 fetch、PtyPaths.connectToken.replace、authorization 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-listen.test.ts:createCat",
+      "type": "function",
+      "name": "createCat",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "lineRange": [
+        86,
+        98
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createCat，接收 listener、dir 参数；调用 fetch、authorization、JSON.stringify、expect、response.json 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-listen.test.ts:openSocket",
+      "type": "function",
+      "name": "openSocket",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "lineRange": [
+        100,
+        112
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 openSocket，接收 url 参数；调用 withTimeout、ws.addEventListener、resolve、reject 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-listen.test.ts:expectSocketRejected",
+      "type": "function",
+      "name": "expectSocketRejected",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "lineRange": [
+        114,
+        134
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 expectSocketRejected，接收 url、init 参数；调用 withTimeout、ws.addEventListener、ws.close、reject、resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-listen.test.ts:waitForMessage",
+      "type": "function",
+      "name": "waitForMessage",
+      "filePath": "packages/opencode/test/server/httpapi-listen.test.ts",
+      "lineRange": [
+        140,
+        157
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitForMessage，接收 ws、predicate 参数；调用 withTimeout、decoder.decode、predicate、resolve、ws.addEventListener、ws.removeEventListener 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "type": "file",
+      "name": "httpapi-mcp-oauth.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「mcp HttpApi OAuth、preserves oauth state when starting OAuth」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "type": "file",
+      "name": "httpapi-mcp.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-mcp.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「mcp HttpApi、serves status endpoint、serves add, connect, and disconnect endpoints、serves deterministic OAuth endpoints、returns unsupported OAuth error responses、returns typed not found errors for missing MCP servers」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-mdns.test.ts",
+      "type": "file",
+      "name": "httpapi-mdns.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-mdns.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「HttpApi Server.listen mDNS、skips publish for loopback hostnames、publishes for non-loopback hostnames and unpublishes on stop、scope finalizer unpublishes even if stop() is not called for force-close」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "type": "file",
+      "name": "httpapi-promptasync-context.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「HttpApi handler context inheritance、Effect.forkIn preserves InstanceRef/WorkspaceRef across the fork、Stream.fromEffect body needs explicit provides — inheritance does not carry through」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:localAdapter",
+      "type": "function",
+      "name": "localAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "lineRange": [
+        59,
+        68
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 localAdapter，接收 directory 参数；调用 mkdir 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:setupWorkspace",
+      "type": "function",
+      "name": "setupWorkspace",
+      "filePath": "packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "lineRange": [
+        70,
+        80
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 setupWorkspace，接收 kind 参数；调用 Effect.gen、tmpdirScoped、Project.use.fromDirectory、Project.Service.use、svc.fromDirectory、Effect.map、registerAdapter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:serveProbes",
+      "type": "function",
+      "name": "serveProbes",
+      "filePath": "packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "lineRange": [
+        107,
+        128
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 serveProbes，接收 input 参数；调用 HttpApiBuilder.layer、Layer.provide、HttpApiBuilder.group、Effect.succeed、HttpServerResponse.empty、Layer.mock 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "type": "file",
+      "name": "httpapi-provider.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「provider HttpApi、returns public v2 provider not found errors、serves OAuth authorize response shapes、returns declared provider auth validation errors、returns declared provider auth callback errors、serves provider lists when auth loaders add runtime fetch options、keeps provider.models hook input mutations out of provider state」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:hasNonZeroModelCost",
+      "type": "function",
+      "name": "hasNonZeroModelCost",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        55,
+        64
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 hasNonZeroModelCost，接收 input、key、id 参数；调用 providerByID、isRecord、Object.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestAuthorize",
+      "type": "function",
+      "name": "requestAuthorize",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        73,
+        90
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 requestAuthorize，接收 input 参数；调用 Effect.gen、request、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestCallback",
+      "type": "function",
+      "name": "requestCallback",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        92,
+        104
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 requestCallback，接收 input 参数；调用 Effect.gen、request、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthPlugin",
+      "type": "function",
+      "name": "writeProviderAuthPlugin",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        106,
+        139
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeProviderAuthPlugin，接收 dir 参数；调用 Effect.gen、Effect.promise、markPluginDependenciesReady、path.join、fs.writeWithDirs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthValidationPlugin",
+      "type": "function",
+      "name": "writeProviderAuthValidationPlugin",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        141,
+        181
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeProviderAuthValidationPlugin，接收 dir 参数；调用 Effect.gen、Effect.promise、markPluginDependenciesReady、path.join、fs.writeWithDirs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeFunctionOptionsPlugin",
+      "type": "function",
+      "name": "writeFunctionOptionsPlugin",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        183,
+        213
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeFunctionOptionsPlugin，接收 dir 参数；调用 Effect.gen、Effect.promise、markPluginDependenciesReady、path.join、fs.writeWithDirs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderModelsMutationPlugin",
+      "type": "function",
+      "name": "writeProviderModelsMutationPlugin",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        215,
+        246
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeProviderModelsMutationPlugin，接收 dir 参数；调用 Effect.gen、Effect.promise、markPluginDependenciesReady、path.join、fs.writeWithDirs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-provider.test.ts:setEnvScoped",
+      "type": "function",
+      "name": "setEnvScoped",
+      "filePath": "packages/opencode/test/server/httpapi-provider.test.ts",
+      "lineRange": [
+        248,
+        261
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 setEnvScoped，接收 key、value 参数；调用 Effect.acquireRelease、Effect.sync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:requestInDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:requestInDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-listen.test.ts:requestTicket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-listen.test.ts:createCat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-listen.test.ts:openSocket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-listen.test.ts:expectSocketRejected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-listen.test.ts:waitForMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/pty.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-listen.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp-oauth.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/mcp.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mcp.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mdns.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mdns.test.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mdns.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-mdns.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:localAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:setupWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:serveProbes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/test/fixture/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-promptasync-context.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:hasNonZeroModelCost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestAuthorize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestCallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthValidationPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeFunctionOptionsPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderModelsMutationPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-provider.test.ts:setEnvScoped",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "file:packages/opencode/test/fixture/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-provider.test.ts",
+      "target": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-layer.ts:requestInDirectory",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-listen.test.ts:openSocket",
+      "target": "function:packages/opencode/src/util/timeout.ts:withTimeout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-listen.test.ts:expectSocketRejected",
+      "target": "function:packages/opencode/src/util/timeout.ts:withTimeout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-listen.test.ts:waitForMessage",
+      "target": "function:packages/opencode/src/util/timeout.ts:withTimeout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:setupWorkspace",
+      "target": "function:packages/opencode/test/fixture/fixture.ts:tmpdirScoped",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:setupWorkspace",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:setupWorkspace",
+      "target": "function:packages/opencode/test/server/httpapi-promptasync-context.test.ts:localAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestAuthorize",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:requestCallback",
+      "target": "function:packages/opencode/test/server/httpapi-layer.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthPlugin",
+      "target": "function:packages/opencode/test/fixture/plugin.ts:markPluginDependenciesReady",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderAuthValidationPlugin",
+      "target": "function:packages/opencode/test/fixture/plugin.ts:markPluginDependenciesReady",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeFunctionOptionsPlugin",
+      "target": "function:packages/opencode/test/fixture/plugin.ts:markPluginDependenciesReady",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-provider.test.ts:writeProviderModelsMutationPlugin",
+      "target": "function:packages/opencode/test/fixture/plugin.ts:markPluginDependenciesReady",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/main/store-cleanup.test.ts",
+      "type": "file",
+      "name": "store-cleanup.test.ts",
+      "filePath": "packages/desktop/src/main/store-cleanup.test.ts",
+      "summary": "验证存储清理相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“store cleanup”、“removes empty scoped stores and leaves global stores alone”。",
+      "tags": [
+        "desktop",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/store-cleanup.ts",
+      "type": "file",
+      "name": "store-cleanup.ts",
+      "filePath": "packages/desktop/src/main/store-cleanup.ts",
+      "summary": "为 desktop 提供存储清理相关数据处理接口。 对外提供 cleanupStoreFiles、deleteStoreFileIfEmpty。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store-cleanup.ts:cleanupStoreFiles",
+      "type": "function",
+      "name": "cleanupStoreFiles",
+      "filePath": "packages/desktop/src/main/store-cleanup.ts",
+      "lineRange": [
+        17,
+        62
+      ],
+      "summary": "实现 cleanupStoreFiles 的存储清理操作，调用 Date.now、readdir、Promise.all、entry.isFile 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store-cleanup.ts:deleteStoreFileIfEmpty",
+      "type": "function",
+      "name": "deleteStoreFileIfEmpty",
+      "filePath": "packages/desktop/src/main/store-cleanup.ts",
+      "lineRange": [
+        64,
+        74
+      ],
+      "summary": "删除存储文件If空，调用 storeKind、join、stat、stats?.isFile 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store-cleanup.ts:isEmptyStore",
+      "type": "function",
+      "name": "isEmptyStore",
+      "filePath": "packages/desktop/src/main/store-cleanup.ts",
+      "lineRange": [
+        81,
+        94
+      ],
+      "summary": "判断空存储，调用 readFile、raw.trim 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "file",
+      "name": "store-keys.ts",
+      "filePath": "packages/desktop/src/main/store-keys.ts",
+      "summary": "为 desktop 提供存储键相关数据处理接口。 对外提供 SETTINGS_STORE、DEFAULT_SERVER_URL_KEY、FIRST_LAUNCH_ONBOARDING_COMPLETE_KEY、OLD_LAYOUT_ELIGIBLE_KEY、WSL_SERVERS_KEY、PINCH_ZOOM_ENABLED_KEY。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "packages/desktop/src/main/store.ts",
+      "summary": "为 desktop 提供存储相关数据处理接口。 对外提供 getStore、removeStoreFileIfEmpty、removeStoreFile。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "function",
+      "name": "getStore",
+      "filePath": "packages/desktop/src/main/store.ts",
+      "lineRange": [
+        15,
+        26
+      ],
+      "summary": "读取存储，调用 cache.get、electron.app.getPath、cache.set 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store.ts:removeStoreFileIfEmpty",
+      "type": "function",
+      "name": "removeStoreFileIfEmpty",
+      "filePath": "packages/desktop/src/main/store.ts",
+      "lineRange": [
+        28,
+        30
+      ],
+      "summary": "移除存储文件If空，调用 deleteStoreFileIfEmpty、electron.app.getPath、cache.delete 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/store.ts:removeStoreFile",
+      "type": "function",
+      "name": "removeStoreFile",
+      "filePath": "packages/desktop/src/main/store.ts",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "移除存储文件，调用 rmSync、join、electron.app.getPath、cache.delete 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/unresponsive.ts",
+      "type": "file",
+      "name": "unresponsive.ts",
+      "filePath": "packages/desktop/src/main/unresponsive.ts",
+      "summary": "为 desktop 提供无响应相关数据处理接口。 对外提供 createUnresponsiveSampler。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/unresponsive.ts:createUnresponsiveSampler",
+      "type": "function",
+      "name": "createUnresponsiveSampler",
+      "filePath": "packages/desktop/src/main/unresponsive.ts",
+      "lineRange": [
+        8,
+        70
+      ],
+      "summary": "创建无响应Sampler，调用 win.on 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/updater-controller.test.ts",
+      "type": "file",
+      "name": "updater-controller.test.ts",
+      "filePath": "packages/desktop/src/main/updater-controller.test.ts",
+      "summary": "验证更新器控制器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“updater controller”、“checks, downloads, persists, and publishes one authoritative ready state”。",
+      "tags": [
+        "desktop",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/updater-controller.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/desktop/src/main/updater-controller.test.ts",
+      "lineRange": [
+        4,
+        37
+      ],
+      "summary": "实现 setup 的更新器控制器操作，调用 createUpdaterController、calls.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/updater-controller.ts",
+      "type": "file",
+      "name": "updater-controller.ts",
+      "filePath": "packages/desktop/src/main/updater-controller.ts",
+      "summary": "管理桌面更新检查、下载和安装的可观察状态及订阅接口。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/updater-controller.ts:createUpdaterController",
+      "type": "function",
+      "name": "createUpdaterController",
+      "filePath": "packages/desktop/src/main/updater-controller.ts",
+      "lineRange": [
+        19,
+        95
+      ],
+      "summary": "创建可订阅的桌面更新状态控制器。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/main/updater-subscriptions.test.ts",
+      "type": "file",
+      "name": "updater-subscriptions.test.ts",
+      "filePath": "packages/desktop/src/main/updater-subscriptions.test.ts",
+      "summary": "验证更新器订阅相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“updater subscriptions”、“replaces the previous renderer subscription on reload”。",
+      "tags": [
+        "desktop",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.test.ts",
+      "target": "file:packages/desktop/src/main/store-cleanup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "file:packages/desktop/src/main/store-cleanup.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:cleanupStoreFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:cleanupStoreFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:deleteStoreFileIfEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:deleteStoreFileIfEmpty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store-cleanup.ts",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:isEmptyStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/desktop/src/main/store-cleanup.ts:cleanupStoreFiles",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:isEmptyStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/store-cleanup.ts:deleteStoreFileIfEmpty",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:isEmptyStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:removeStoreFileIfEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:removeStoreFileIfEmpty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:removeStoreFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "function:packages/desktop/src/main/store.ts:removeStoreFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "file:packages/desktop/src/main/store-cleanup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/store.ts",
+      "target": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/store.ts:removeStoreFileIfEmpty",
+      "target": "function:packages/desktop/src/main/store-cleanup.ts:deleteStoreFileIfEmpty",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/unresponsive.ts",
+      "target": "function:packages/desktop/src/main/unresponsive.ts:createUnresponsiveSampler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/unresponsive.ts",
+      "target": "function:packages/desktop/src/main/unresponsive.ts:createUnresponsiveSampler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/unresponsive.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/unresponsive.ts",
+      "target": "file:packages/desktop/src/main/window-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-controller.test.ts",
+      "target": "function:packages/desktop/src/main/updater-controller.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-controller.test.ts",
+      "target": "file:packages/desktop/src/main/updater-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-controller.ts",
+      "target": "file:packages/desktop/src/main/updater-controller.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater-controller.test.ts:setup",
+      "target": "function:packages/desktop/src/main/updater-controller.ts:createUpdaterController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-controller.ts",
+      "target": "function:packages/desktop/src/main/updater-controller.ts:createUpdaterController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-controller.ts",
+      "target": "function:packages/desktop/src/main/updater-controller.ts:createUpdaterController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-subscriptions.test.ts",
+      "target": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

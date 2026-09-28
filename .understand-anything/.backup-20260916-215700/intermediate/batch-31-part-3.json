@@ -1,0 +1,388 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "type": "file",
+      "name": "app-runtime-logger.test.ts",
+      "filePath": "packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「makeRuntime installs the observability logger、AppLayer also installs the observability logger、attach preserves InstanceRef from the current fiber context、EffectBridge preserves logger and instance context across async boundaries」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/effect/config-service.test.ts",
+      "type": "file",
+      "name": "config-service.test.ts",
+      "filePath": "packages/opencode/test/effect/config-service.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「ConfigService、layer parses values from the active ConfigProvider、layer applies Effect Config defaults、layer provides an already parsed service value」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/effect/instance-state.test.ts",
+      "type": "file",
+      "name": "instance-state.test.ts",
+      "filePath": "packages/opencode/test/effect/instance-state.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「InstanceState caches values per directory、InstanceState isolates directories、InstanceState invalidates on reload、InstanceState invalidates on disposeAll、InstanceState.get reads the current directory lazily、InstanceState preserves directory across async boundaries、InstanceState survives high-contention concurrent access」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/effect/run-service.test.ts",
+      "type": "file",
+      "name": "run-service.test.ts",
+      "filePath": "packages/opencode/test/effect/run-service.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「makeRuntime shares dependent layers through the shared memo map、makeRuntime inherits InstanceRef from the current fiber」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/effect/runner.test.ts",
+      "type": "file",
+      "name": "runner.test.ts",
+      "filePath": "packages/opencode/test/effect/runner.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Runner、ensureRunning starts work and returns result、ensureRunning propagates work failures、concurrent callers share the same run、concurrent callers all receive same error、ensureRunning can be called again after previous run completes、second ensureRunning ignores new work if already running」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/effect/runtime-flags.test.ts",
+      "type": "file",
+      "name": "runtime-flags.test.ts",
+      "filePath": "packages/opencode/test/effect/runtime-flags.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「RuntimeFlags、layer defaults autoShare to false、layer parses plugin flags from the active ConfigProvider、layer parses OPENCODE_EXPERIMENTAL_LSP_TY、enables native LLM via dedicated flag only、enables WebSockets via dedicated flag only、layer accepts partial test overrides and fills defaults from Config definitions」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/event-manifest.test.ts",
+      "type": "file",
+      "name": "event-manifest.test.ts",
+      "filePath": "packages/opencode/test/event-manifest.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「public event manifest、contains every latest public wire type once、contains only the current step settlement versions」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/fake/account.ts",
+      "type": "file",
+      "name": "account.ts",
+      "filePath": "packages/opencode/test/fake/account.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 empty 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/fake/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "packages/opencode/test/fake/auth.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 empty 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/fake/npm.ts",
+      "type": "file",
+      "name": "npm.ts",
+      "filePath": "packages/opencode/test/fake/npm.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 noop 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/app-runtime-logger.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/config-service.test.ts",
+      "target": "file:packages/opencode/src/effect/config-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/config-service.test.ts",
+      "target": "file:packages/opencode/src/effect/config-service.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/config-service.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/instance-state.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/instance-state.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/instance-state.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/instance-state.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/run-service.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/run-service.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/run-service.test.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/run-service.test.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/run-service.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runner.test.ts",
+      "target": "file:packages/opencode/src/effect/runner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runner.test.ts",
+      "target": "file:packages/opencode/src/effect/runner.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runner.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runtime-flags.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runtime-flags.test.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/effect/runtime-flags.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/event-manifest.test.ts",
+      "target": "file:packages/opencode/src/event-manifest.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/event-manifest.test.ts",
+      "target": "file:packages/opencode/src/event-manifest.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/event-manifest.test.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/event-manifest.test.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/fake/account.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fake/account.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/fake/auth.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/fake/auth.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

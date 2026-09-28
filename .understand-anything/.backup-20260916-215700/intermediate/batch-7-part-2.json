@@ -1,0 +1,1861 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "type": "file",
+      "name": "bootstrap.test.ts",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.test.ts",
+      "summary": "验证初始化相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“bootstrapDirectory”、“uses legacy MCP endpoints while refreshing a v1 directory”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.test.ts:directoryState",
+      "type": "function",
+      "name": "directoryState",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.test.ts",
+      "lineRange": [
+        41,
+        76
+      ],
+      "summary": "实现 directoryState 的初始化操作，调用 createStore 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "type": "file",
+      "name": "bootstrap.ts",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "summary": "加载全局配置、项目、模型提供商以及目录范围的代理和命令，完成应用同步数据初始化。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:waitForPaint",
+      "type": "function",
+      "name": "waitForPaint",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        59,
+        76
+      ],
+      "summary": "等待用于Paint，调用 setTimeout、requestAnimationFrame、clearTimeout、finish 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:clearProviderRev",
+      "type": "function",
+      "name": "clearProviderRev",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "清理提供商Rev，调用 providerRev.delete、ScopedKey.from 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:showErrors",
+      "type": "function",
+      "name": "showErrors",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        92,
+        106
+      ],
+      "summary": "实现 showErrors 的初始化操作，调用 formatServerError、input.formatMoreCount、showToast 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadGlobalConfigQuery",
+      "type": "function",
+      "name": "loadGlobalConfigQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        108,
+        115
+      ],
+      "summary": "加载全局配置Query，调用 queryOptions、retry、sdk.global.config.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProjectsQuery",
+      "type": "function",
+      "name": "loadProjectsQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        127,
+        141
+      ],
+      "summary": "加载项目Query，调用 queryOptions、retry、api.list、p.worktree.includes 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "type": "function",
+      "name": "bootstrapGlobal",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        143,
+        173
+      ],
+      "summary": "实现 bootstrapGlobal 的初始化操作，调用 input.queryClient.fetchQuery、loadGlobalConfigQuery、loadProvidersQuery、loadPathQuery 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:mergeSession",
+      "type": "function",
+      "name": "mergeSession",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        189,
+        201
+      ],
+      "summary": "合并会话，调用 setStore、list.slice、next.findIndex、next.splice 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:warmSessions",
+      "type": "function",
+      "name": "warmSessions",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        203,
+        219
+      ],
+      "summary": "实现 warmSessions 的初始化操作，调用 input.store.session.map、known.has、Promise.resolve、Promise.all 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "type": "function",
+      "name": "loadProvidersQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        221,
+        244
+      ],
+      "summary": "加载提供商Query，调用 queryOptions、retry、legacy.provider.list、normalizeProviderList 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadAgentsQuery",
+      "type": "function",
+      "name": "loadAgentsQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        258,
+        272
+      ],
+      "summary": "加载代理Query，调用 queryOptions、retry、normalizeAgentList、legacy.app.agents 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadCommands",
+      "type": "function",
+      "name": "loadCommands",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        274,
+        296
+      ],
+      "summary": "加载Commands，调用 retry、legacy.command.list、command.model?.split、api.list 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadPathQuery",
+      "type": "function",
+      "name": "loadPathQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        298,
+        311
+      ],
+      "summary": "加载路径Query，调用 queryOptions、retry、sdk.path.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:loadReferencesQuery",
+      "type": "function",
+      "name": "loadReferencesQuery",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        313,
+        328
+      ],
+      "summary": "加载ReferencesQuery，调用 queryOptions、retry、legacy.v2.reference.list、api.list 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "type": "function",
+      "name": "bootstrapDirectory",
+      "filePath": "packages/app/src/context/global-sync/bootstrap.ts",
+      "lineRange": [
+        330,
+        554
+      ],
+      "summary": "实现 bootstrapDirectory 的初始化操作，调用 projectID、input.setStore、reconcile、ScopedKey.from 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "type": "file",
+      "name": "child-store.test.ts",
+      "filePath": "packages/app/src/context/global-sync/child-store.test.ts",
+      "summary": "验证子级存储相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createChildStoreManager”、“does not evict the active directory during mark”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/child-store.ts",
+      "type": "file",
+      "name": "child-store.ts",
+      "filePath": "packages/app/src/context/global-sync/child-store.ts",
+      "summary": "管理目录子存储的创建、共享和释放，限制后台同步状态的生命周期。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/child-store.ts:createChildStoreManager",
+      "type": "function",
+      "name": "createChildStoreManager",
+      "filePath": "packages/app/src/context/global-sync/child-store.ts",
+      "lineRange": [
+        23,
+        396
+      ],
+      "summary": "创建子级存储Manager，调用 mcpDirectories.has、directoryKey、activeDirectories.has 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "type": "file",
+      "name": "event-reducer.test.ts",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.test.ts",
+      "summary": "验证事件归并器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“applyGlobalEvent”、“upserts project.updated in sorted position”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.test.ts:rootSession",
+      "type": "function",
+      "name": "rootSession",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.test.ts",
+      "lineRange": [
+        7,
+        16
+      ],
+      "summary": "实现 rootSession 的事件归并器操作，输入包括 input。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.test.ts:questionRequest",
+      "type": "function",
+      "name": "questionRequest",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.test.ts",
+      "lineRange": [
+        47,
+        58
+      ],
+      "summary": "实现 questionRequest 的事件归并器操作，输入包括 id、sessionID、title。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.test.ts:baseState",
+      "type": "function",
+      "name": "baseState",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.test.ts",
+      "lineRange": [
+        60,
+        87
+      ],
+      "summary": "实现 baseState 的事件归并器操作，输入包括 input。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "type": "file",
+      "name": "event-reducer.ts",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.ts",
+      "summary": "把全局与目录事件归并到前端同步存储，清理被移除会话关联的缓存。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.ts:applyGlobalEvent",
+      "type": "function",
+      "name": "applyGlobalEvent",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.ts",
+      "lineRange": [
+        37,
+        64
+      ],
+      "summary": "应用全局事件，调用 input.refresh、Binary.search、input.setGlobalProject、produce 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupSessionCaches",
+      "type": "function",
+      "name": "cleanupSessionCaches",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.ts",
+      "lineRange": [
+        66,
+        78
+      ],
+      "summary": "实现 cleanupSessionCaches 的事件归并器操作，调用 setSessionTodo、setStore、produce、dropSessionCaches 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupDroppedSessionCaches",
+      "type": "function",
+      "name": "cleanupDroppedSessionCaches",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.ts",
+      "lineRange": [
+        80,
+        107
+      ],
+      "summary": "实现 cleanupDroppedSessionCaches 的事件归并器操作，调用 next.map、parts?.find、keep.has、list.indexOf 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "type": "function",
+      "name": "applyDirectoryEvent",
+      "filePath": "packages/app/src/context/global-sync/event-reducer.ts",
+      "lineRange": [
+        109,
+        479
+      ],
+      "summary": "应用目录事件，调用 SESSION_CONTENT_EVENTS.has、input.push、Binary.search、input.setStore 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/eviction.ts",
+      "type": "file",
+      "name": "eviction.ts",
+      "filePath": "packages/app/src/context/global-sync/eviction.ts",
+      "summary": "管理淘汰的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 pickDirectoriesToEvict、canDisposeDirectory。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/eviction.ts:pickDirectoriesToEvict",
+      "type": "function",
+      "name": "pickDirectoriesToEvict",
+      "filePath": "packages/app/src/context/global-sync/eviction.ts",
+      "lineRange": [
+        3,
+        19
+      ],
+      "summary": "选取Directories目标淘汰，调用 input.pins.has、input.state.get、output.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/eviction.ts:canDisposeDirectory",
+      "type": "function",
+      "name": "canDisposeDirectory",
+      "filePath": "packages/app/src/context/global-sync/eviction.ts",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "判断能否释放目录，输入包括 input。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/home-session-index.test.ts",
+      "type": "file",
+      "name": "home-session-index.test.ts",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.test.ts",
+      "summary": "验证首页会话索引相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“Home V2 session index”、“loads the Home index with one global V2 request”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.test.ts:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.test.ts",
+      "lineRange": [
+        16,
+        31
+      ],
+      "summary": "构造会话测试数据，由 input 指定场景参数，用于首页会话索引测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "type": "file",
+      "name": "home-session-index.ts",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "summary": "缓存首页会话索引和增量事件，控制保留窗口并在刷新后重放会话变更。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexKey",
+      "type": "function",
+      "name": "homeSessionIndexKey",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "实现 homeSessionIndexKey 的首页会话索引操作，输入包括 server。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionEventsKey",
+      "type": "function",
+      "name": "homeSessionEventsKey",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "实现 homeSessionEventsKey 的首页会话索引操作，输入包括 server。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:loadHomeSessionIndex",
+      "type": "function",
+      "name": "loadHomeSessionIndex",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        26,
+        52
+      ],
+      "summary": "加载首页会话索引，调用 list、data.push、parseHomeSessionIndex 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:appendHomeSessionEvent",
+      "type": "function",
+      "name": "appendHomeSessionEvent",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        54,
+        60
+      ],
+      "summary": "实现 appendHomeSessionEvent 的首页会话索引操作，输入包括 current、event。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:trimHomeSessionEvents",
+      "type": "function",
+      "name": "trimHomeSessionEvents",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        62,
+        67
+      ],
+      "summary": "实现 trimHomeSessionEvents 的首页会话索引操作，输入包括 current、sequence。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexSessions",
+      "type": "function",
+      "name": "homeSessionIndexSessions",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        69,
+        74
+      ],
+      "summary": "实现 homeSessionIndexSessions 的首页会话索引操作，调用 applyHomeSessionEvent 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexRefresh",
+      "type": "function",
+      "name": "homeSessionIndexRefresh",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "实现 homeSessionIndexRefresh 的首页会话索引操作，输入包括 event、connected。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:createHomeSessionIndexCache",
+      "type": "function",
+      "name": "createHomeSessionIndexCache",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        84,
+        138
+      ],
+      "summary": "创建首页会话索引缓存，调用 homeSessionIndexKey、homeSessionEventsKey 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:parseHomeSessionIndex",
+      "type": "function",
+      "name": "parseHomeSessionIndex",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        145,
+        150
+      ],
+      "summary": "解析首页会话索引，调用 sessions.flatMap、toLegacySummary 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:retainHomeSessions",
+      "type": "function",
+      "name": "retainHomeSessions",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        152,
+        155
+      ],
+      "summary": "实现 retainHomeSessions 的首页会话索引操作，调用 Map.groupBy、pathKey、grouped.values、trimSessions 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:applyHomeSessionEvent",
+      "type": "function",
+      "name": "applyHomeSessionEvent",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        157,
+        167
+      ],
+      "summary": "应用首页会话事件，调用 sessions.findIndex、sessions.toSpliced、sessions.with 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/home-session-index.ts:toLegacySummary",
+      "type": "function",
+      "name": "toLegacySummary",
+      "filePath": "packages/app/src/context/global-sync/home-session-index.ts",
+      "lineRange": [
+        169,
+        186
+      ],
+      "summary": "实现 toLegacySummary 的首页会话索引操作，输入包括 session。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/mcp.test.ts",
+      "type": "file",
+      "name": "mcp.test.ts",
+      "filePath": "packages/app/src/context/global-sync/mcp.test.ts",
+      "summary": "验证mcp相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“toggleMcp”、“runs the status action before refreshing the owning query”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/mcp.ts",
+      "type": "file",
+      "name": "mcp.ts",
+      "filePath": "packages/app/src/context/global-sync/mcp.ts",
+      "summary": "管理mcp的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 toggleMcp。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/mcp.ts:toggleMcp",
+      "type": "function",
+      "name": "toggleMcp",
+      "filePath": "packages/app/src/context/global-sync/mcp.ts",
+      "lineRange": [
+        3,
+        19
+      ],
+      "summary": "切换Mcp，调用 input.refresh 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/queue.test.ts",
+      "type": "file",
+      "name": "queue.test.ts",
+      "filePath": "packages/app/src/context/global-sync/queue.test.ts",
+      "summary": "验证队列相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createRefreshQueue”、“clears queued directories by normalized key”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.test.ts:directoryState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "target": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:waitForPaint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:clearProviderRev",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:clearProviderRev",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:showErrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadGlobalConfigQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadGlobalConfigQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProjectsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProjectsQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:mergeSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:warmSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadAgentsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadAgentsQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadCommands",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadPathQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadPathQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadReferencesQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadReferencesQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/context/server-session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/server-errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/server-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/bootstrap.ts",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:showErrors",
+      "target": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:showErrors",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProjectsQuery",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadGlobalConfigQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadPathQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapGlobal",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProjectsQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:warmSessions",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:mergeSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:warmSessions",
+      "target": "function:packages/app/src/utils/session.ts:normalizeSessionInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeProviderList",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:loadAgentsQuery",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeAgentList",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadAgentsQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadPathQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadReferencesQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:warmSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/server-sync.tsx:loadMcpQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/server-sync.tsx:loadMcpResourcesQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:loadProvidersQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/utils/toast.tsx:showToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/bootstrap.ts:bootstrapDirectory",
+      "target": "function:packages/app/src/context/global-sync/bootstrap.ts:waitForPaint",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server-sync.tsx",
+      "target": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "function:packages/app/src/context/global-sync/child-store.ts:createChildStoreManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "function:packages/app/src/context/global-sync/child-store.ts:createChildStoreManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/context/global-sync/eviction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/child-store.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.test.ts:rootSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.test.ts:questionRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.test.ts:baseState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "target": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:applyGlobalEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:applyGlobalEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupSessionCaches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupDroppedSessionCaches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupDroppedSessionCaches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/utils/diffs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/event-reducer.ts",
+      "target": "file:packages/app/src/utils/session-message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupSessionCaches",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:dropSessionCaches",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupDroppedSessionCaches",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:dropSessionCaches",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupDroppedSessionCaches",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "target": "function:packages/app/src/context/global-sync/event-reducer.ts:cleanupSessionCaches",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/event-reducer.ts:applyDirectoryEvent",
+      "target": "function:packages/app/src/utils/session-message.ts:messageKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/eviction.ts",
+      "target": "function:packages/app/src/context/global-sync/eviction.ts:pickDirectoriesToEvict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/eviction.ts",
+      "target": "function:packages/app/src/context/global-sync/eviction.ts:pickDirectoriesToEvict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/eviction.ts",
+      "target": "function:packages/app/src/context/global-sync/eviction.ts:canDisposeDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/eviction.ts",
+      "target": "function:packages/app/src/context/global-sync/eviction.ts:canDisposeDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/eviction.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.test.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.test.ts:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.test.ts",
+      "target": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "file:packages/app/src/context/global-sync/home-session-index.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionEventsKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionEventsKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:loadHomeSessionIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:loadHomeSessionIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:appendHomeSessionEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:appendHomeSessionEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:trimHomeSessionEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:trimHomeSessionEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:createHomeSessionIndexCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:createHomeSessionIndexCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:parseHomeSessionIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:parseHomeSessionIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:retainHomeSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:retainHomeSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:applyHomeSessionEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:applyHomeSessionEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:toLegacySummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/home-session-index.ts",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:loadHomeSessionIndex",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:parseHomeSessionIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexSessions",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:applyHomeSessionEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:createHomeSessionIndexCache",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionIndexKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:createHomeSessionIndexCache",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:homeSessionEventsKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:parseHomeSessionIndex",
+      "target": "function:packages/app/src/context/global-sync/home-session-index.ts:toLegacySummary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:retainHomeSessions",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/home-session-index.ts:retainHomeSessions",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/mcp.test.ts",
+      "target": "file:packages/app/src/context/global-sync/mcp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/mcp.ts",
+      "target": "file:packages/app/src/context/global-sync/mcp.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/mcp.ts",
+      "target": "function:packages/app/src/context/global-sync/mcp.ts:toggleMcp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/mcp.ts",
+      "target": "function:packages/app/src/context/global-sync/mcp.ts:toggleMcp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/queue.test.ts",
+      "target": "file:packages/app/src/context/global-sync/queue.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/queue.test.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

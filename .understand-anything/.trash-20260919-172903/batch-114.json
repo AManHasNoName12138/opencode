@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "type": "file",
+      "name": "modal.ts",
+      "filePath": "packages/opencode/src/plugin/modal/modal.ts",
+      "summary": "通过 ModalPlugin 注册 Modal 模型提供方，连接模型目录读取与 OpenCode 插件生命周期。",
+      "tags": [
+        "typescript",
+        "plugin",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/modal/modal.ts:ModalPlugin",
+      "type": "function",
+      "name": "ModalPlugin",
+      "filePath": "packages/opencode/src/plugin/modal/modal.ts",
+      "lineRange": [
+        4,
+        17
+      ],
+      "summary": "在插件扩展与模型集成层中执行 ModalPlugin。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/plugin/modal/models.ts",
+      "type": "file",
+      "name": "models.ts",
+      "filePath": "packages/opencode/src/plugin/modal/models.ts",
+      "summary": "读取 Modal 模型目录并转换模型价格信息，通过 get 向 Modal 插件提供模型定义。",
+      "tags": [
+        "typescript",
+        "plugin",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/modal/models.ts:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "packages/opencode/src/plugin/modal/models.ts",
+      "lineRange": [
+        50,
+        131
+      ],
+      "summary": "在插件扩展与模型集成层中执行 get，接收 baseURL、apiKey、existing 参数；调用 fetch、baseURL.replace、AbortSignal.timeout、decode、res.json、Object.fromEntries、data.data.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/plugin/modal-models.test.ts",
+      "type": "file",
+      "name": "modal-models.test.ts",
+      "filePath": "packages/opencode/test/plugin/modal-models.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「discovers Modal workspace models、hides Modal models when discovery fails」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/plugin/modal-models.test.ts:makeProvider",
+      "type": "function",
+      "name": "makeProvider",
+      "filePath": "packages/opencode/test/plugin/modal-models.test.ts",
+      "lineRange": [
+        9,
+        76
+      ],
+      "summary": "在插件扩展与模型集成层中执行 makeProvider，接收 baseURL 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "target": "function:packages/opencode/src/plugin/modal/modal.ts:ModalPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "target": "function:packages/opencode/src/plugin/modal/modal.ts:ModalPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "target": "file:packages/opencode/src/plugin/modal/models.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/modal/models.ts",
+      "target": "function:packages/opencode/src/plugin/modal/models.ts:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/modal/models.ts",
+      "target": "function:packages/opencode/src/plugin/modal/models.ts:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/modal-models.test.ts",
+      "target": "function:packages/opencode/test/plugin/modal-models.test.ts:makeProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/modal-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/plugin/modal-models.test.ts",
+      "target": "file:packages/opencode/src/plugin/modal/modal.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

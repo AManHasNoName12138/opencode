@@ -1,0 +1,199 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/plugin/src/example.ts",
+      "type": "file",
+      "name": "example.ts",
+      "filePath": "packages/plugin/src/example.ts",
+      "summary": "插件 API的example实现模块，提供 ExamplePlugin。",
+      "tags": [
+        "接口实现",
+        "插件 API",
+        "example"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/plugin/src/example.ts:ExamplePlugin",
+      "type": "function",
+      "name": "ExamplePlugin",
+      "filePath": "packages/plugin/src/example.ts",
+      "lineRange": [
+        4,
+        18
+      ],
+      "summary": "插件 API的example处理函数 ExamplePlugin，调用 tool、tool.schema.string 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "插件 API"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/plugin/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/plugin/src/index.ts",
+      "summary": "插件 API的插件公开入口，配置 @opencode-ai/sdk/v2、./shell.js、./tool.js 相关模块。",
+      "tags": [
+        "接口实现",
+        "插件 API",
+        "插件"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/plugin/src/shell.ts",
+      "type": "file",
+      "name": "shell.ts",
+      "filePath": "packages/plugin/src/shell.ts",
+      "summary": "插件 API的Shell 插件接口实现模块，配置  相关模块。",
+      "tags": [
+        "接口实现",
+        "插件 API",
+        "Shell 插件接口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/plugin/src/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/plugin/src/tool.ts",
+      "summary": "插件 API的插件工具定义实现模块，提供 tool。",
+      "tags": [
+        "接口实现",
+        "插件 API",
+        "插件工具定义"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/plugin/src/tool.ts:tool",
+      "type": "function",
+      "name": "tool",
+      "filePath": "packages/plugin/src/tool.ts",
+      "lineRange": [
+        45,
+        51
+      ],
+      "summary": "插件 API的插件工具定义处理函数 tool，接收 input 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "插件 API"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/plugin/src/tui.ts",
+      "type": "file",
+      "name": "tui.ts",
+      "filePath": "packages/plugin/src/tui.ts",
+      "summary": "插件 API的终端插件界面实现模块，提供 CliRenderer、KeyEvent、Renderable、SlotMode、stringifyKeySequence、stringifyKeyStroke。",
+      "tags": [
+        "接口实现",
+        "插件 API",
+        "终端插件界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/plugin/src/tui.ts:createBindingLookup",
+      "type": "function",
+      "name": "createBindingLookup",
+      "filePath": "packages/plugin/src/tui.ts",
+      "lineRange": [
+        46,
+        51
+      ],
+      "summary": "插件 API的终端插件界面处理函数 createBindingLookup，调用 createKeymapBindingLookup 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "插件 API"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/plugin/src/example.ts",
+      "target": "function:packages/plugin/src/example.ts:ExamplePlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/plugin/src/example.ts",
+      "target": "function:packages/plugin/src/example.ts:ExamplePlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/plugin/src/example.ts",
+      "target": "file:packages/plugin/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/plugin/src/example.ts",
+      "target": "file:packages/plugin/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/plugin/src/index.ts",
+      "target": "file:packages/plugin/src/shell.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/plugin/src/index.ts",
+      "target": "file:packages/plugin/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/plugin/src/tool.ts",
+      "target": "function:packages/plugin/src/tool.ts:tool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/plugin/src/tool.ts",
+      "target": "function:packages/plugin/src/tool.ts:tool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/plugin/src/tui.ts",
+      "target": "function:packages/plugin/src/tui.ts:createBindingLookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/plugin/src/tui.ts",
+      "target": "function:packages/plugin/src/tui.ts:createBindingLookup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/plugin/src/tui.ts",
+      "target": "file:packages/plugin/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

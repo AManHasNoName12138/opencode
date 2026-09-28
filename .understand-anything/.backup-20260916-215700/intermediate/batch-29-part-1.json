@@ -1,0 +1,1663 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "type": "file",
+      "name": "ai-sdk.ts",
+      "filePath": "packages/opencode/src/session/llm/ai-sdk.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 adapterState、toLLMEvents；内部处理包含 adapterState、finishReason、providerMetadata、copilotTotalNanoAiu、usage、currentTextID、currentReasoningID。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/ai-sdk.ts:adapterState",
+      "type": "function",
+      "name": "adapterState",
+      "filePath": "packages/opencode/src/session/llm/ai-sdk.ts",
+      "lineRange": [
+        10,
+        20
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 adapterState。",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/ai-sdk.ts:copilotTotalNanoAiu",
+      "type": "function",
+      "name": "copilotTotalNanoAiu",
+      "filePath": "packages/opencode/src/session/llm/ai-sdk.ts",
+      "lineRange": [
+        33,
+        43
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 copilotTotalNanoAiu，接收 value 参数；调用 Number.isFinite 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/ai-sdk.ts:usage",
+      "type": "function",
+      "name": "usage",
+      "filePath": "packages/opencode/src/session/llm/ai-sdk.ts",
+      "lineRange": [
+        45,
+        65
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 usage，接收 value 参数；调用 Object.entries、Object.fromEntries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "type": "function",
+      "name": "toLLMEvents",
+      "filePath": "packages/opencode/src/session/llm/ai-sdk.ts",
+      "lineRange": [
+        77,
+        289
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 toLLMEvents，接收 state、event 参数；调用 Effect.succeed、LLMEvent.stepStart、Effect.fail、Effect.sync、providerMetadata、LLMEvent.stepFinish、finishReason 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/session/llm/native-request.ts",
+      "type": "file",
+      "name": "native-request.ts",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 model、request；内部处理包含 providerMetadata、partProviderMetadata、textPart、mediaPart、toolResult、contentPart、content。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:mediaPart",
+      "type": "function",
+      "name": "mediaPart",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        56,
+        65
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 mediaPart，接收 part 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:toolResult",
+      "type": "function",
+      "name": "toolResult",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        67,
+        78
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 toolResult，接收 part 参数；调用 isRecord、ToolResultPart.make、partProviderMetadata 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:contentPart",
+      "type": "function",
+      "name": "contentPart",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        80,
+        100
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 contentPart，接收 part 参数；调用 isRecord、textPart、mediaPart、partProviderMetadata、ToolCallPart.make、toolResult、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:messages",
+      "type": "function",
+      "name": "messages",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        105,
+        118
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 messages，接收 input 参数；调用 input.flatMap、SystemPart.make、Message.make、content、isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:model",
+      "type": "function",
+      "name": "model",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        153,
+        179
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 model，接收 input、headers 参数；调用 baseURL、Object.keys、OpenAI.configure、Azure.configure、requireBaseURL、Anthropic.configure、Google.configure 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-request.ts:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "packages/opencode/src/session/llm/native-request.ts",
+      "lineRange": [
+        181,
+        194
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 request，接收 input 参数；调用 messages、LLM.request、model、tools、generation 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "type": "file",
+      "name": "native-runtime.ts",
+      "filePath": "packages/opencode/src/session/llm/native-runtime.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 status、stream、nativeTools；内部处理包含 status、statusWithFetch、stream、providerFetch、providerHeaders、nativeSchema、nativeTools。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-runtime.ts:status",
+      "type": "function",
+      "name": "status",
+      "filePath": "packages/opencode/src/session/llm/native-runtime.ts",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 status，接收 input 参数；调用 statusWithFetch、providerFetch 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-runtime.ts:statusWithFetch",
+      "type": "function",
+      "name": "statusWithFetch",
+      "filePath": "packages/opencode/src/session/llm/native-runtime.ts",
+      "lineRange": [
+        50,
+        72
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 statusWithFetch，接收 input、fetch 参数；调用 providerID.startsWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-runtime.ts:stream",
+      "type": "function",
+      "name": "stream",
+      "filePath": "packages/opencode/src/session/llm/native-runtime.ts",
+      "lineRange": [
+        74,
+        146
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 stream，接收 input 参数；调用 providerFetch、statusWithFetch、nativeTools、LLMNative.request、ProviderTransform.message、ProviderTransform.providerOptions、providerHeaders 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/native-runtime.ts:nativeTools",
+      "type": "function",
+      "name": "nativeTools",
+      "filePath": "packages/opencode/src/session/llm/native-runtime.ts",
+      "lineRange": [
+        169,
+        193
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 nativeTools，接收 tools、input 参数；调用 Object.fromEntries、Object.entries、NativeTool.make、nativeSchema、Effect.tryPromise、item.execute、errorMessage 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/llm/request.ts",
+      "type": "file",
+      "name": "request.ts",
+      "filePath": "packages/opencode/src/session/llm/request.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 prepare、hasToolCalls；内部处理包含 mergeOptions、resolveTools、hasToolCalls。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/session/llm/request.ts:hasToolCalls",
+      "type": "function",
+      "name": "hasToolCalls",
+      "filePath": "packages/opencode/src/session/llm/request.ts",
+      "lineRange": [
+        216,
+        224
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 hasToolCalls，接收 messages 参数；调用 Array.isArray 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "file",
+      "name": "message-v2.ts",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 SYNTHETIC_ATTACHMENT_PROMPT、isMedia、Event、cursor、toModelMessagesEffect、toModelMessages、page；内部处理包含 truncateToolOutput、info、part、older、hydrate、providerMeta、toModelMessages。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:hydrate",
+      "type": "function",
+      "name": "hydrate",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        98,
+        123
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 hydrate，接收 db、rows 参数；调用 rows.map、Effect.gen、inArray、part、partByMessage.get、list.push、partByMessage.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:toModelMessages",
+      "type": "function",
+      "name": "toModelMessages",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        417,
+        423
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 toModelMessages，接收 input、model、options 参数；调用 Effect.runPromise、toModelMessagesEffect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:stream",
+      "type": "function",
+      "name": "stream",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        469,
+        490
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 stream，接收 sessionID 参数；调用 Effect.gen、page、Effect.catchIf、Effect.succeed、result.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:parts",
+      "type": "function",
+      "name": "parts",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        492,
+        504
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 parts，接收 messageID 参数；调用 Effect.gen、eq、rows.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:filterCompacted",
+      "type": "function",
+      "name": "filterCompacted",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        521,
+        572
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 filterCompacted，接收 msgs 参数；调用 result.push、completed.has、msg.parts.find、msg.parts.some、completed.add、result.reverse、result.findLastIndex 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:latest",
+      "type": "function",
+      "name": "latest",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        582,
+        598
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 latest，接收 msgs 参数；调用 isAfter、msgs.flatMap、m.parts.filter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/message-v2.ts:fromError",
+      "type": "function",
+      "name": "fromError",
+      "filePath": "packages/opencode/src/session/message-v2.ts",
+      "lineRange": [
+        606,
+        734
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 fromError，接收 e、ctx 参数；调用 OutputLengthError.isInstance、LoadAPIKeyError.isInstance、String、APICallError.isInstance、ProviderError.parseAPICallError、errorMessage、ProviderError.parseStreamError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/session/overflow.ts",
+      "type": "file",
+      "name": "overflow.ts",
+      "filePath": "packages/opencode/src/session/overflow.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 usable、isOverflow 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/overflow.ts:usable",
+      "type": "function",
+      "name": "usable",
+      "filePath": "packages/opencode/src/session/overflow.ts",
+      "lineRange": [
+        10,
+        20
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 usable，接收 input 参数；调用 Math.min、ProviderTransform.maxOutputTokens、Math.max 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/session/overflow.ts:isOverflow",
+      "type": "function",
+      "name": "isOverflow",
+      "filePath": "packages/opencode/src/session/overflow.ts",
+      "lineRange": [
+        22,
+        34
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 isOverflow，接收 input 参数；调用 usable 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/processor.ts",
+      "type": "file",
+      "name": "processor.ts",
+      "filePath": "packages/opencode/src/session/processor.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/session/processor.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/processor.ts",
+      "lineRange": [
+        79,
+        79
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 Service、PromptInput、LoopInput、ShellInput、CommandInput、createStructuredOutputTool、node；内部处理包含 mcpResourceBase64Size、formatMcpResourceBytes、isOrphanedInterruptedTool、createStructuredOutputTool。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/session/prompt.ts:createStructuredOutputTool",
+      "type": "function",
+      "name": "createStructuredOutputTool",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "lineRange": [
+        1565,
+        1591
+      ],
+      "summary": "在旧版会话与模型执行兼容层中执行 createStructuredOutputTool，接收 input 参数；调用 tool、jsonSchema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/session/prompt.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "lineRange": [
+        111,
+        111
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/session/prompt.ts:LoopInput",
+      "type": "class",
+      "name": "LoopInput",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "lineRange": [
+        1523,
+        1525
+      ],
+      "summary": "在旧版会话与模型执行兼容层中定义 LoopInput 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "会话"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/session/reminders.ts",
+      "type": "file",
+      "name": "reminders.ts",
+      "filePath": "packages/opencode/src/session/reminders.ts",
+      "summary": "在旧版会话与模型执行兼容层中提供 apply 等接口。",
+      "tags": [
+        "typescript",
+        "会话",
+        "实现"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:adapterState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:adapterState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:copilotTotalNanoAiu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/ai-sdk.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:mediaPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:toolResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:contentPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:messages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:request",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-request.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:statusWithFetch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:stream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:stream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:nativeTools",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:nativeTools",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/session/llm/native-request.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/native-runtime.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "function:packages/opencode/src/session/llm/request.ts:hasToolCalls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "function:packages/opencode/src/session/llm/request.ts:hasToolCalls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/llm/request.ts",
+      "target": "file:packages/opencode/src/session/system.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:hydrate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:toModelMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:toModelMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:stream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:stream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:parts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:parts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:filterCompacted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:filterCompacted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:latest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:latest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:fromError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "function:packages/opencode/src/session/message-v2.ts:fromError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/provider/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/util/iife.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/message-v2.ts",
+      "target": "file:packages/opencode/src/util/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "function:packages/opencode/src/session/overflow.ts:usable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "function:packages/opencode/src/session/overflow.ts:usable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "function:packages/opencode/src/session/overflow.ts:isOverflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "function:packages/opencode/src/session/overflow.ts:isOverflow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/overflow.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "class:packages/opencode/src/session/processor.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "class:packages/opencode/src/session/processor.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/image/image.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/overflow.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/retry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/session/summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/processor.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "function:packages/opencode/src/session/prompt.ts:createStructuredOutputTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "function:packages/opencode/src/session/prompt.ts:createStructuredOutputTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "class:packages/opencode/src/session/prompt.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "class:packages/opencode/src/session/prompt.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "class:packages/opencode/src/session/prompt.ts:LoopInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "class:packages/opencode/src/session/prompt.ts:LoopInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/config/markdown.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/image/image.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/compaction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/instruction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/processor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/reminders.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/revert.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/run-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/system.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/session/tools.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/tool/registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/tool/shell/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/tool/task.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/util/data-url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/prompt.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/prompt/build-switch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/prompt/plan-mode.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/prompt/plan.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/session/reminders.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:usage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:adapterState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/ai-sdk.ts:toLLMEvents",
+      "target": "function:packages/opencode/src/session/llm/ai-sdk.ts:copilotTotalNanoAiu",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-request.ts:contentPart",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:mediaPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-request.ts:contentPart",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:toolResult",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-request.ts:request",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:messages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-request.ts:request",
+      "target": "function:packages/opencode/src/session/llm/native-request.ts:model",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-runtime.ts:status",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:statusWithFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-runtime.ts:stream",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:statusWithFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/llm/native-runtime.ts:stream",
+      "target": "function:packages/opencode/src/session/llm/native-runtime.ts:nativeTools",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/session/overflow.ts:isOverflow",
+      "target": "function:packages/opencode/src/session/overflow.ts:usable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

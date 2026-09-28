@@ -1,0 +1,1453 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/script/bench-search.ts",
+      "type": "file",
+      "name": "bench-search.ts",
+      "filePath": "packages/opencode/script/bench-search.ts",
+      "summary": "在OpenCode 应用与兼容层中实现 run 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/script/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/script/schema.ts",
+      "summary": "在OpenCode 应用与兼容层中实现 generateEffect、normalize、restoreModelRefs、isRecord 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/script/schema.ts:generateEffect",
+      "type": "function",
+      "name": "generateEffect",
+      "filePath": "packages/opencode/script/schema.ts",
+      "lineRange": [
+        11,
+        24
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 generateEffect，接收 schema 参数；调用 Schema.toJsonSchemaDocument、normalize、isRecord、restoreModelRefs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/schema.ts:normalize",
+      "type": "function",
+      "name": "normalize",
+      "filePath": "packages/opencode/script/schema.ts",
+      "lineRange": [
+        26,
+        51
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalize，接收 value 参数；调用 Array.isArray、value.map、isRecord、Object.fromEntries、Object.entries、normalize、schema.anyOf.filter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/schema.ts:restoreModelRefs",
+      "type": "function",
+      "name": "restoreModelRefs",
+      "filePath": "packages/opencode/script/schema.ts",
+      "lineRange": [
+        53,
+        62
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 restoreModelRefs，接收 value、key 参数；调用 Array.isArray、value.map、restoreModelRefs、isRecord、Object.fromEntries、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/account/account.ts",
+      "type": "file",
+      "name": "account.ts",
+      "filePath": "packages/opencode/src/account/account.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 AccountID、AccountError、AccountRepoError、AccountServiceError、AccountTransportError、AccessToken、RefreshToken；内部处理包含 isTokenFresh、mapAccountServiceError、accountErrorFromCause。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/account/account.ts:accountErrorFromCause",
+      "type": "function",
+      "name": "accountErrorFromCause",
+      "filePath": "packages/opencode/src/account/account.ts",
+      "lineRange": [
+        149,
+        166
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 accountErrorFromCause，接收 cause、message 参数；调用 HttpClientError.isHttpClientError、AccountTransportError.fromHttpClientError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/account.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/account/account.ts",
+      "lineRange": [
+        185,
+        185
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/account/repo.ts",
+      "type": "file",
+      "name": "repo.ts",
+      "filePath": "packages/opencode/src/account/repo.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Service、use、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/account/repo.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/account/repo.ts",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/account/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 AccountID、OrgID、AccessToken、RefreshToken、DeviceCode、UserCode、Info 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:Info",
+      "type": "class",
+      "name": "Info",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Info 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:Org",
+      "type": "class",
+      "name": "Org",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Org 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:AccountRepoError",
+      "type": "class",
+      "name": "AccountRepoError",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        34,
+        37
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 AccountRepoError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:AccountServiceError",
+      "type": "class",
+      "name": "AccountServiceError",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 AccountServiceError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:AccountTransportError",
+      "type": "class",
+      "name": "AccountTransportError",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        44,
+        69
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 AccountTransportError 类，提供 fromHttpClientError、message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:Login",
+      "type": "class",
+      "name": "Login",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        73,
+        80
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Login 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollSuccess",
+      "type": "class",
+      "name": "PollSuccess",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        82,
+        84
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollSuccess 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollPending",
+      "type": "class",
+      "name": "PollPending",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        86,
+        86
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollPending 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollSlow",
+      "type": "class",
+      "name": "PollSlow",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        88,
+        88
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollSlow 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollExpired",
+      "type": "class",
+      "name": "PollExpired",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        90,
+        90
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollExpired 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollDenied",
+      "type": "class",
+      "name": "PollDenied",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollDenied 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/account/schema.ts:PollError",
+      "type": "class",
+      "name": "PollError",
+      "filePath": "packages/opencode/src/account/schema.ts",
+      "lineRange": [
+        94,
+        96
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 PollError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/account/url.ts",
+      "type": "file",
+      "name": "url.ts",
+      "filePath": "packages/opencode/src/account/url.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 normalizeServerUrl 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/account/url.ts:normalizeServerUrl",
+      "type": "function",
+      "name": "normalizeServerUrl",
+      "filePath": "packages/opencode/src/account/url.ts",
+      "lineRange": [
+        1,
+        8
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeServerUrl，接收 input 参数；调用 url.pathname.replace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/directory.ts",
+      "type": "file",
+      "name": "directory.ts",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "summary": "在Agent Client Protocol 适配层中提供 Loader、Service、modelKey、variants、build、loaderLayer、loaderNode；内部处理包含 modelKey、variants、build。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/directory.ts:modelKey",
+      "type": "function",
+      "name": "modelKey",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "lineRange": [
+        58,
+        58
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 modelKey，接收 model 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/directory.ts:variants",
+      "type": "function",
+      "name": "variants",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "lineRange": [
+        60,
+        60
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 variants，接收 snapshot、model 参数；调用 modelKey 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/directory.ts:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "lineRange": [
+        62,
+        105
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 build，接收 input 参数；调用 Provider.sort、Object.values、Object.fromEntries、modelKey、input.modes.some 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/directory.ts:Loader",
+      "type": "class",
+      "name": "Loader",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "lineRange": [
+        54,
+        54
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Loader 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/directory.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/acp/directory.ts",
+      "lineRange": [
+        56,
+        56
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/usage.ts",
+      "type": "file",
+      "name": "usage.ts",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "summary": "在Agent Client Protocol 适配层中提供 MessageLoader、ContextLimitLoader、Service、messageLoaderFromSDK、messageLoaderLayer、contextTokens、buildUsage；内部处理包含 messageLoaderFromSDK、messageLoaderLayer、contextTokens、buildUsage、latestAssistantMessage、totalSessionCost、findContextLimit。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:messageLoaderFromSDK",
+      "type": "function",
+      "name": "messageLoaderFromSDK",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        73,
+        82
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 messageLoaderFromSDK，接收 sdk 参数；调用 MessageLoader.of、Effect.promise 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:messageLoaderLayer",
+      "type": "function",
+      "name": "messageLoaderLayer",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        84,
+        84
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 messageLoaderLayer，接收 sdk 参数；调用 Layer.succeed、messageLoaderFromSDK 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:contextTokens",
+      "type": "function",
+      "name": "contextTokens",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        86,
+        88
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 contextTokens，接收 message 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:buildUsage",
+      "type": "function",
+      "name": "buildUsage",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        90,
+        103
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 buildUsage，接收 message 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:latestAssistantMessage",
+      "type": "function",
+      "name": "latestAssistantMessage",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        105,
+        109
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 latestAssistantMessage，接收 messages 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:totalSessionCost",
+      "type": "function",
+      "name": "totalSessionCost",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        111,
+        115
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 totalSessionCost，接收 messages 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/usage.ts:findContextLimit",
+      "type": "function",
+      "name": "findContextLimit",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        117,
+        123
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 findContextLimit，接收 providers、providerID、modelID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/usage.ts:MessageLoader",
+      "type": "class",
+      "name": "MessageLoader",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        63,
+        65
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 MessageLoader 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/usage.ts:ContextLimitLoader",
+      "type": "class",
+      "name": "ContextLimitLoader",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 ContextLimitLoader 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/usage.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/acp/usage.ts",
+      "lineRange": [
+        71,
+        71
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/agent/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/opencode/src/agent/agent.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Info、Service、use、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/agent/agent.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/agent/agent.ts",
+      "lineRange": [
+        84,
+        84
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/script/bench-search.ts",
+      "target": "file:packages/opencode/src/effect/app-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/bench-search.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/schema.ts",
+      "target": "function:packages/opencode/script/schema.ts:generateEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/schema.ts",
+      "target": "function:packages/opencode/script/schema.ts:normalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/schema.ts",
+      "target": "function:packages/opencode/script/schema.ts:restoreModelRefs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/schema.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "function:packages/opencode/src/account/account.ts:accountErrorFromCause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "class:packages/opencode/src/account/account.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "class:packages/opencode/src/account/account.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "file:packages/opencode/src/account/repo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "file:packages/opencode/src/account/url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/account.ts",
+      "target": "file:packages/opencode/src/util/effect-http-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/repo.ts",
+      "target": "class:packages/opencode/src/account/repo.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/repo.ts",
+      "target": "class:packages/opencode/src/account/repo.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/repo.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/repo.ts",
+      "target": "file:packages/opencode/src/account/url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Info",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Org",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Org",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountRepoError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountRepoError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountServiceError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountServiceError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountTransportError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:AccountTransportError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:Login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollPending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollPending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollSlow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollSlow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollExpired",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollDenied",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollDenied",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/schema.ts",
+      "target": "class:packages/opencode/src/account/schema.ts:PollError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/account/url.ts",
+      "target": "function:packages/opencode/src/account/url.ts:normalizeServerUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/account/url.ts",
+      "target": "function:packages/opencode/src/account/url.ts:normalizeServerUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:modelKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:modelKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:variants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:variants",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "function:packages/opencode/src/acp/directory.ts:build",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "class:packages/opencode/src/acp/directory.ts:Loader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "class:packages/opencode/src/acp/directory.ts:Loader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "class:packages/opencode/src/acp/directory.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "class:packages/opencode/src/acp/directory.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/directory.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:messageLoaderFromSDK",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:messageLoaderFromSDK",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:messageLoaderLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:messageLoaderLayer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:contextTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:contextTokens",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:buildUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:buildUsage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:latestAssistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:latestAssistantMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:totalSessionCost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:totalSessionCost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:findContextLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "function:packages/opencode/src/acp/usage.ts:findContextLimit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:MessageLoader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:MessageLoader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:ContextLimitLoader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:ContextLimitLoader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "class:packages/opencode/src/acp/usage.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/usage.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "class:packages/opencode/src/agent/agent.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "class:packages/opencode/src/agent/agent.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/agent/generate.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/agent/prompt/compaction.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/agent/prompt/explore.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/agent/prompt/summary.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/agent/prompt/title.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/provider/transform.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/agent/agent.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/script/schema.ts:generateEffect",
+      "target": "function:packages/opencode/script/schema.ts:normalize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/schema.ts:generateEffect",
+      "target": "function:packages/opencode/script/schema.ts:restoreModelRefs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/directory.ts:variants",
+      "target": "function:packages/opencode/src/acp/directory.ts:modelKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/directory.ts:build",
+      "target": "function:packages/opencode/src/acp/directory.ts:modelKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/usage.ts:messageLoaderLayer",
+      "target": "function:packages/opencode/src/acp/usage.ts:messageLoaderFromSDK",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

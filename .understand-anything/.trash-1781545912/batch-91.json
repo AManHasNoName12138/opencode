@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/effect-drizzle-sqlite/examples/basic.ts",
+      "type": "file",
+      "name": "basic.ts",
+      "filePath": "packages/effect-drizzle-sqlite/examples/basic.ts",
+      "summary": "basic.ts 位于 packages/effect-drizzle-sqlite/examples，实现该模块的代码职责，包含 1 个函数、3 个类。",
+      "tags": [
+        "code",
+        "typescript",
+        "opencode"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/effect-drizzle-sqlite/examples/basic.ts:UserStore",
+      "type": "class",
+      "name": "UserStore",
+      "filePath": "packages/effect-drizzle-sqlite/examples/basic.ts",
+      "lineRange": [
+        40,
+        78
+      ],
+      "summary": "UserStore 是 packages/effect-drizzle-sqlite/examples/basic.ts 中的类，封装相关状态、行为或类型结构。",
+      "tags": [
+        "class",
+        "implementation",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/effect-drizzle-sqlite/src/index.ts",
+      "summary": "index.ts 位于 packages/effect-drizzle-sqlite/src，实现该模块的代码职责，包含 2 个导出。",
+      "tags": [
+        "code",
+        "entry-point",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/effect-drizzle-sqlite/test/sqlite.test.ts",
+      "type": "file",
+      "name": "sqlite.test.ts",
+      "filePath": "packages/effect-drizzle-sqlite/test/sqlite.test.ts",
+      "summary": "sqlite.test.ts 位于 packages/effect-drizzle-sqlite/test，实现该模块的代码职责，包含 2 个函数。",
+      "tags": [
+        "code",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/effect-drizzle-sqlite/examples/basic.ts",
+      "target": "class:packages/effect-drizzle-sqlite/examples/basic.ts:UserStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/effect-drizzle-sqlite/examples/basic.ts",
+      "target": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/effect-drizzle-sqlite/test/sqlite.test.ts",
+      "target": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/effect-drizzle-sqlite/src/index.ts",
+      "target": "file:packages/effect-drizzle-sqlite/test/sqlite.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

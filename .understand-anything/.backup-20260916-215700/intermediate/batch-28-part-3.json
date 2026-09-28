@@ -1,0 +1,2118 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "type": "file",
+      "name": "schema-error.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "summary": "在请求上下文与中间件层中提供 SchemaErrorMiddleware、schemaErrorLayer；内部处理包含 truncateReason。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "class",
+      "name": "SchemaErrorMiddleware",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "lineRange": [
+        18,
+        23
+      ],
+      "summary": "在请求上下文与中间件层中定义 SchemaErrorMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "file",
+      "name": "workspace-routing.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "summary": "从请求 URL、查询参数与配置中选择 workspace，并判断请求留在控制平面还是路由到工作区；缺失工作区时生成相应响应。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:selectedV2WorkspaceID",
+      "type": "function",
+      "name": "selectedV2WorkspaceID",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        74,
+        84
+      ],
+      "summary": "在请求上下文与中间件层中执行 selectedV2WorkspaceID，接收 url、sessionWorkspaceID 参数；调用 url.searchParams.get、Schema.decodeUnknownOption、Option.isNone 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:proxyRemote",
+      "type": "function",
+      "name": "proxyRemote",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        113,
+        146
+      ],
+      "summary": "在请求上下文与中间件层中执行 proxyRemote，接收 client、request、workspace、target、url 参数；调用 Effect.gen、Workspace.Service.use、svc.isSyncing、HttpServerResponse.text、workspaceProxyURL、HttpApiProxy.websocket、HttpApiProxy.http 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planWorkspaceRequest",
+      "type": "function",
+      "name": "planWorkspaceRequest",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        148,
+        158
+      ],
+      "summary": "在请求上下文与中间件层中执行 planWorkspaceRequest，接收 request、url、workspace 参数；调用 Effect.gen、resolveTarget、RequestPlan.Remote、RequestPlan.Local 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planRequest",
+      "type": "function",
+      "name": "planRequest",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        160,
+        186
+      ],
+      "summary": "在请求上下文与中间件层中执行 planRequest，接收 request、session 参数；调用 Effect.gen、requestURL、configuredWorkspaceID、url.pathname.startsWith、selectedV2WorkspaceID、selectedWorkspaceID、RequestPlan.InvalidWorkspace 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeWorkspace",
+      "type": "function",
+      "name": "routeWorkspace",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        188,
+        210
+      ],
+      "summary": "在请求上下文与中间件层中执行 routeWorkspace，接收 client、effect、plan 参数；调用 RequestPlan.$match、Effect.succeed、HttpServerResponse.jsonUnsafe、missingWorkspaceResponse、proxyRemote、effect.pipe、Effect.provideService 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeHttpApiWorkspace",
+      "type": "function",
+      "name": "routeHttpApiWorkspace",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        212,
+        235
+      ],
+      "summary": "在请求上下文与中间件层中执行 routeHttpApiWorkspace，接收 client、effect 参数；调用 Effect.gen、getWorkspaceRouteSessionID、requestURL、Session.Service.use、svc.get、Effect.catchIf、NotFoundError.isInstance 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRouteContext",
+      "type": "class",
+      "name": "WorkspaceRouteContext",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        45,
+        51
+      ],
+      "summary": "在请求上下文与中间件层中定义 WorkspaceRouteContext 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRoutingMiddleware",
+      "type": "class",
+      "name": "WorkspaceRoutingMiddleware",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "lineRange": [
+        53,
+        59
+      ],
+      "summary": "在请求上下文与中间件层中定义 WorkspaceRoutingMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "type": "file",
+      "name": "public.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "summary": "生成兼容的公开 API 描述，识别旧版 OpenAPI 与 V2 路径，整理重复组件、组件名称、错误 Schema 及描述覆盖。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "type": "function",
+      "name": "matchLegacyOpenApi",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        82,
+        178
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 matchLegacyOpenApi，接收 input 参数；调用 fixSelfReferencingComponents、Object.entries、stripOptionalNull、structuredClone、normalizeComponentNames、collapseDuplicateComponents、applyLegacySchemaOverrides 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:addLegacyErrorSchemas",
+      "type": "function",
+      "name": "addLegacyErrorSchemas",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        184,
+        218
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 addLegacyErrorSchemas，接收 spec 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:collapseDuplicateComponents",
+      "type": "function",
+      "name": "collapseDuplicateComponents",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        220,
+        230
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 collapseDuplicateComponents，接收 spec 参数；调用 Object.keys、name.replace、stableSchema、rewriteRefs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentNames",
+      "type": "function",
+      "name": "normalizeComponentNames",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        232,
+        249
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeComponentNames，接收 spec 参数；调用 Object.keys、componentTypeName、stableSchema、rewriteRefs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:applyLegacySchemaOverrides",
+      "type": "function",
+      "name": "applyLegacySchemaOverrides",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        260,
+        279
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 applyLegacySchemaOverrides，接收 spec 参数；调用 nullable、makePropertiesNullable 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentDescriptions",
+      "type": "function",
+      "name": "normalizeComponentDescriptions",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        281,
+        290
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeComponentDescriptions，接收 spec 参数；调用 Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:makePropertiesNullable",
+      "type": "function",
+      "name": "makePropertiesNullable",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        292,
+        304
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 makePropertiesNullable，接收 properties 参数；调用 Object.entries、nullable、makePropertiesNullable 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:canonicalizeSchema",
+      "type": "function",
+      "name": "canonicalizeSchema",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        315,
+        326
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 canonicalizeSchema，接收 input、schemas 参数；调用 Array.isArray、input.map、canonicalizeSchema、canonicalRef、Object.fromEntries、Object.entries、a.localeCompare 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:rewriteRefs",
+      "type": "function",
+      "name": "rewriteRefs",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        335,
+        344
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 rewriteRefs，接收 input、from、to 参数；调用 Array.isArray、rewriteRefs、Object.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:deleteUnusedLegacyErrorComponents",
+      "type": "function",
+      "name": "deleteUnusedLegacyErrorComponents",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        355,
+        366
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 deleteUnusedLegacyErrorComponents，接收 spec 参数；调用 referencesComponent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeLegacyOperation",
+      "type": "function",
+      "name": "normalizeLegacyOperation",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        375,
+        391
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeLegacyOperation，接收 operation、path、method 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:legacyErrorResponse",
+      "type": "function",
+      "name": "legacyErrorResponse",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        405,
+        414
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 legacyErrorResponse，接收 description、name 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:fixSelfReferencingComponents",
+      "type": "function",
+      "name": "fixSelfReferencingComponents",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        424,
+        458
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 fixSelfReferencingComponents，接收 spec 参数；调用 Object.entries、selfRefs.add、selfRefs.has、OpenApi.fromApi 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:stripOptionalNull",
+      "type": "function",
+      "name": "stripOptionalNull",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        461,
+        495
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 stripOptionalNull，接收 schema 参数；调用 stripOptionalNull、isEmptyObjectUnion、flattenOptions、options.filter、withoutNull.map、schema.allOf.map、Object.assign 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeParameter",
+      "type": "function",
+      "name": "normalizeParameter",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "lineRange": [
+        514,
+        528
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizeParameter，接收 param、route 参数；调用 stripOptionalNull 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "summary": "组装旧版实例 HttpApi 的路由和上下文，配置 CORS 并导出 routes/webHandler，为兼容 API 提供 Web 请求入口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/server.ts:createRoutes",
+      "type": "function",
+      "name": "createRoutes",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "lineRange": [
+        271,
+        313
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createRoutes，接收 corsOptions 参数；调用 buildLocationServiceMap、Layer.mergeAll、Layer.provide、cors、AppNodeBuilderV1.build、Layer.succeed、Layer.provideMerge 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "type": "file",
+      "name": "websocket-tracker.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 SERVER_CLOSING_EVENT、Service、node、register；内部处理包含 SERVER_CLOSING_EVENT、register。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:SERVER_CLOSING_EVENT",
+      "type": "function",
+      "name": "SERVER_CLOSING_EVENT",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "lineRange": [
+        5,
+        5
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 SERVER_CLOSING_EVENT。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:register",
+      "type": "function",
+      "name": "register",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "lineRange": [
+        50,
+        58
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 register，接收 close 参数；调用 Effect.gen、Effect.serviceOption、Option.isNone、tracker.value.add、Effect.addFinalizer、tracker.value.remove 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "summary": "提供 OpenCode 服务监听与 OpenAPI 入口，构建监听层、处理端口回退并发布 mDNS 信息，同时维护服务 URL。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:openapi",
+      "type": "function",
+      "name": "openapi",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 openapi；调用 OpenApi.fromApi 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:listen",
+      "type": "function",
+      "name": "listen",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        73,
+        81
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listen，接收 opts 参数；调用 Effect.runPromise、listenEffect、Effect.runPromiseExit、listener.stop 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:listenerLayer",
+      "type": "function",
+      "name": "listenerLayer",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        100,
+        115
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listenerLayer，接收 opts、port 参数；调用 HttpRouter.serve、HttpApiApp.createRoutes、Layer.provideMerge、AppNodeBuilder.build、serverLayer、Layer.provide、ConfigProvider.layer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:startListener",
+      "type": "function",
+      "name": "startListener",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        124,
+        138
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 startListener，接收 opts、port 参数；调用 Scope.makeUnsafe、Layer.buildWithMemoMap、listenerLayer、Layer.makeMemoMapUnsafe、Effect.provide、Effect.onError、Scope.close 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:setupMdns",
+      "type": "function",
+      "name": "setupMdns",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        155,
+        170
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 setupMdns，接收 opts、port、scope 参数；调用 Effect.gen、Effect.cached、Effect.sync、MDNS.unpublish、MDNS.publish、Scope.addFinalizer、Effect.logWarning 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:makeStop",
+      "type": "function",
+      "name": "makeStop",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        172,
+        193
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 makeStop，接收 state、unpublishMdns、listenerUrl 参数；调用 Effect.gen、Effect.cached、forceClose、Scope.close、Effect.ensuring、Effect.sync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/server.ts:serverLayer",
+      "type": "function",
+      "name": "serverLayer",
+      "filePath": "packages/opencode/src/server/server.ts",
+      "lineRange": [
+        199,
+        224
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 serverLayer，接收 opts 参数；调用 createServer、server.close.bind、close、server.closeAllConnections、Layer.mergeAll、NodeHttpServer.layer、Layer.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/shared/fence.ts",
+      "type": "file",
+      "name": "fence.ts",
+      "filePath": "packages/opencode/src/server/shared/fence.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 HEADER、load、diff、parse、wait；内部处理包含 load、diff、parse、wait。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/fence.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/opencode/src/server/shared/fence.ts",
+      "lineRange": [
+        11,
+        21
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 load，接收 db、ids 参数；调用 Effect.gen、db.select、inArray、Object.fromEntries、rows.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/fence.ts:diff",
+      "type": "function",
+      "name": "diff",
+      "filePath": "packages/opencode/src/server/shared/fence.ts",
+      "lineRange": [
+        23,
+        32
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 diff，接收 prev、next 参数；调用 Object.keys、Object.fromEntries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/fence.ts:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/opencode/src/server/shared/fence.ts",
+      "lineRange": [
+        34,
+        52
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 parse，接收 headers 参数；调用 headers.get、JSON.parse、Object.fromEntries、Object.entries、Number.isInteger 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/fence.ts:wait",
+      "type": "function",
+      "name": "wait",
+      "filePath": "packages/opencode/src/server/shared/fence.ts",
+      "lineRange": [
+        54,
+        60
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 wait，接收 workspaceID、state、signal 参数；调用 Effect.gen、Effect.logInfo、Workspace.Service.use、workspace.waitForSync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "type": "file",
+      "name": "pty-ticket.ts",
+      "filePath": "packages/opencode/src/server/shared/pty-ticket.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 PTY_CONNECT_TICKET_QUERY、PTY_CONNECT_TOKEN_HEADER、PTY_CONNECT_TOKEN_HEADER_VALUE、isPtyConnectPath、hasPtyConnectTicketURL；内部处理包含 isPtyConnectPath、hasPtyConnectTicketURL。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/pty-ticket.ts:isPtyConnectPath",
+      "type": "function",
+      "name": "isPtyConnectPath",
+      "filePath": "packages/opencode/src/server/shared/pty-ticket.ts",
+      "lineRange": [
+        9,
+        11
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isPtyConnectPath，接收 pathname 参数；调用 PTY_CONNECT_PATH.test 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/pty-ticket.ts:hasPtyConnectTicketURL",
+      "type": "function",
+      "name": "hasPtyConnectTicketURL",
+      "filePath": "packages/opencode/src/server/shared/pty-ticket.ts",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 hasPtyConnectTicketURL，接收 url 参数；调用 isPtyConnectPath、url.searchParams.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/shared/public-ui.ts",
+      "type": "file",
+      "name": "public-ui.ts",
+      "filePath": "packages/opencode/src/server/shared/public-ui.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 PUBLIC_UI_PATHS、isPublicUIPath；内部处理包含 isPublicUIPath。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/shared/public-ui.ts:isPublicUIPath",
+      "type": "function",
+      "name": "isPublicUIPath",
+      "filePath": "packages/opencode/src/server/shared/public-ui.ts",
+      "lineRange": [
+        10,
+        12
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isPublicUIPath，接收 method、pathname 参数；调用 PUBLIC_UI_PATHS.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:selectedV2WorkspaceID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:proxyRemote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planWorkspaceRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeHttpApiWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRouteContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRouteContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRoutingMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:WorkspaceRoutingMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace-adapter-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/server/shared/fence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/server/shared/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:addLegacyErrorSchemas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:collapseDuplicateComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:applyLegacySchemaOverrides",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentDescriptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:makePropertiesNullable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:canonicalizeSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:rewriteRefs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:deleteUnusedLegacyErrorComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeLegacyOperation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:legacyErrorResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:fixSelfReferencingComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:stripOptionalNull",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeParameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/query.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/server.ts:createRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/server.ts:createRoutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/effect/app-node-builder-v1.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/env/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/git/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/installation/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/plugin/pty-environment.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/provider/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/control-plane.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/control.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/experimental.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/file.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/instance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/mcp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/project-copy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/sync.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/compression.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/cors-vary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/fence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/schema-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/server/shared/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/compaction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/instruction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/processor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/revert.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/run-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/status.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/summary.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/share/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/share/share-next.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/skill/discovery.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/storage/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/tool/registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/util/lazy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:SERVER_CLOSING_EVENT",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:SERVER_CLOSING_EVENT",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:register",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:openapi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:openapi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:listen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:listen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:listenerLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:startListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:setupMdns",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:makeStop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "function:packages/opencode/src/server/server.ts:serverLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/init-projectors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/mdns.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/public.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/server.ts",
+      "target": "file:packages/opencode/src/util/lazy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:diff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:diff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:wait",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "function:packages/opencode/src/server/shared/fence.ts:wait",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/fence.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "target": "function:packages/opencode/src/server/shared/pty-ticket.ts:isPtyConnectPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "target": "function:packages/opencode/src/server/shared/pty-ticket.ts:isPtyConnectPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "target": "function:packages/opencode/src/server/shared/pty-ticket.ts:hasPtyConnectTicketURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "target": "function:packages/opencode/src/server/shared/pty-ticket.ts:hasPtyConnectTicketURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/public-ui.ts",
+      "target": "function:packages/opencode/src/server/shared/public-ui.ts:isPublicUIPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/shared/public-ui.ts",
+      "target": "function:packages/opencode/src/server/shared/public-ui.ts:isPublicUIPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:proxyRemote",
+      "target": "function:packages/opencode/src/server/shared/workspace-routing.ts:workspaceProxyURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planRequest",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:selectedV2WorkspaceID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planRequest",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planWorkspaceRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeWorkspace",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:proxyRemote",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeHttpApiWorkspace",
+      "target": "function:packages/opencode/src/server/shared/workspace-routing.ts:getWorkspaceRouteSessionID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeHttpApiWorkspace",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:planRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeHttpApiWorkspace",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts:routeWorkspace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:fixSelfReferencingComponents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:stripOptionalNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentNames",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:collapseDuplicateComponents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:applyLegacySchemaOverrides",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentDescriptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:addLegacyErrorSchemas",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeLegacyOperation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeParameter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:matchLegacyOpenApi",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:deleteUnusedLegacyErrorComponents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:collapseDuplicateComponents",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:rewriteRefs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeComponentNames",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:rewriteRefs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:applyLegacySchemaOverrides",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:makePropertiesNullable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:normalizeParameter",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/public.ts:stripOptionalNull",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/server.ts:listenerLayer",
+      "target": "function:packages/opencode/src/server/server.ts:serverLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/server.ts:startListener",
+      "target": "function:packages/opencode/src/server/server.ts:listenerLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/shared/pty-ticket.ts:hasPtyConnectTicketURL",
+      "target": "function:packages/opencode/src/server/shared/pty-ticket.ts:isPtyConnectPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

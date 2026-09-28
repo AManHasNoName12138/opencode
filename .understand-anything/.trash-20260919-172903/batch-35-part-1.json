@@ -1,0 +1,1832 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/src/providers/openai.ts",
+      "type": "file",
+      "name": "openai.ts",
+      "filePath": "packages/llm/src/providers/openai.ts",
+      "summary": "配置 OpenAIOptionsInput、OpenAIResponseIncludable、id、routes、configure、provider、model 提供方接口，通过 auth、defaults、configuredRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/providers/openai.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/openai.ts",
+      "lineRange": [
+        37,
+        56
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredRoute、defaults 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/providers/openrouter.ts",
+      "type": "file",
+      "name": "openrouter.ts",
+      "filePath": "packages/llm/src/providers/openrouter.ts",
+      "summary": "配置 profile、id、protocol、route、routes、configure、provider 提供方接口，通过 bodyOptions、configuredRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/providers/openrouter.ts:bodyOptions",
+      "type": "function",
+      "name": "bodyOptions",
+      "filePath": "packages/llm/src/providers/openrouter.ts",
+      "lineRange": [
+        56,
+        67
+      ],
+      "summary": "在模型提供方与路由配置中执行 bodyOptions，接收 input 参数；调用 isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/openrouter.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/openrouter.ts",
+      "lineRange": [
+        88,
+        95
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredRoute、route.model 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/providers/xai.ts",
+      "type": "file",
+      "name": "xai.ts",
+      "filePath": "packages/llm/src/providers/xai.ts",
+      "summary": "配置 id、routes、configure、provider、model、responses、chat 提供方接口，通过 auth、configuredResponsesRoute、configuredChatRoute、configure 组装认证、模型默认值或路由，复用统一 LLM 协议与传输。",
+      "tags": [
+        "provider",
+        "模型",
+        "配置"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/providers/xai.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "packages/llm/src/providers/xai.ts",
+      "lineRange": [
+        39,
+        51
+      ],
+      "summary": "在模型提供方与路由配置中执行 configure，接收 input 参数；调用 configuredResponsesRoute、configuredChatRoute 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/auth-options.ts",
+      "type": "file",
+      "name": "auth-options.ts",
+      "filePath": "packages/llm/src/route/auth-options.ts",
+      "summary": "在LLM 请求路由与传输层中提供 bearer 等接口。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth-options.ts:bearer",
+      "type": "function",
+      "name": "bearer",
+      "filePath": "packages/llm/src/route/auth-options.ts",
+      "lineRange": [
+        47,
+        55
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 bearer，接收 options、envVar 参数；调用 Array.isArray、auth.orElse、Auth.config、Auth.optional 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "summary": "把固定值、配置值、Effect 结果及自定义认证转换为统一 Auth 描述，支持 bearer、header、passthrough 等认证方式，并显式报告缺失凭据。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:isAuth",
+      "type": "function",
+      "name": "isAuth",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        40,
+        41
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 isAuth，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:credential",
+      "type": "function",
+      "name": "credential",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        43,
+        52
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 credential，接收 load 参数；调用 credential、load.pipe、Effect.catch、fromCredential、f 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:auth",
+      "type": "function",
+      "name": "auth",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        54,
+        63
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 auth，接收 apply 参数；调用 auth、apply、Effect.flatMap、that.apply、Effect.catch、f 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:value",
+      "type": "function",
+      "name": "value",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        85,
+        85
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 value，接收 secret、source 参数；调用 credentialFromSecret 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:optional",
+      "type": "function",
+      "name": "optional",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        87,
+        90
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 optional，接收 secret、source 参数；调用 credential、Effect.fail、credentialFromSecret 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:config",
+      "type": "function",
+      "name": "config",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 config，接收 name 参数；调用 credentialFromSecret、Config.redacted 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:effect",
+      "type": "function",
+      "name": "effect",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        94,
+        94
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 effect，接收 load 参数；调用 credential 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:headers",
+      "type": "function",
+      "name": "headers",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        98,
+        99
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 headers，接收 input 参数；调用 auth、Effect.succeed、Headers.setAll 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:remove",
+      "type": "function",
+      "name": "remove",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        101,
+        101
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 remove，接收 name 参数；调用 auth、Effect.succeed、Headers.remove 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:custom",
+      "type": "function",
+      "name": "custom",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        103,
+        103
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 custom，接收 apply 参数；调用 auth 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:bearer",
+      "type": "function",
+      "name": "bearer",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        113,
+        115
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 bearer，接收 source 参数；调用 credentialInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:header",
+      "type": "function",
+      "name": "header",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        121,
+        126
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 header，接收 name、source 参数；调用 credentialInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:bearerHeader",
+      "type": "function",
+      "name": "bearerHeader",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        130,
+        135
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 bearerHeader，接收 name、source 参数；调用 render 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:toLLMError",
+      "type": "function",
+      "name": "toLLMError",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        137,
+        149
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 toLLMError，接收 error 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/auth.ts:toEffect",
+      "type": "function",
+      "name": "toEffect",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        151,
+        154
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 toEffect，接收 input 参数；调用 input.apply、Effect.mapError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/route/auth.ts:MissingCredentialError",
+      "type": "class",
+      "name": "MissingCredentialError",
+      "filePath": "packages/llm/src/route/auth.ts",
+      "lineRange": [
+        5,
+        11
+      ],
+      "summary": "在LLM 请求路由与传输层中定义 MissingCredentialError 类，提供 constructor 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "packages/llm/src/route/client.ts",
+      "summary": "组合 Route 的模型默认值、Endpoint、Auth、Protocol 与 Transport，准备规范化请求并输出统一 LLMEvent 流；同时提供流式和聚合响应的 LLMClient 服务。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:makeRouteModel",
+      "type": "function",
+      "name": "makeRouteModel",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        93,
+        103
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 makeRouteModel，接收 route、mapped 参数；调用 endpointBaseURL、Model.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:mergeRouteDefaults",
+      "type": "function",
+      "name": "mergeRouteDefaults",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        105,
+        120
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 mergeRouteDefaults，接收 base、patch 参数；调用 mergeHeaders、ModelLimits.make、mergeGenerationOptions、generationOptions、mergeProviderOptions、mergeHttpOptions、httpOptions 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:generationOptions",
+      "type": "function",
+      "name": "generationOptions",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        133,
+        134
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 generationOptions，接收 input 参数；调用 GenerationOptions.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:httpOptions",
+      "type": "function",
+      "name": "httpOptions",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        136,
+        139
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 httpOptions，接收 input 参数；调用 HttpOptions.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:resolveRequestOptions",
+      "type": "function",
+      "name": "resolveRequestOptions",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        167,
+        180
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 resolveRequestOptions，接收 request 参数；调用 mergeGenerationOptions、LLMRequest.update、mergeProviderOptions、mergeHttpOptions 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:makeFromTransport",
+      "type": "function",
+      "name": "makeFromTransport",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        226,
+        301
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 makeFromTransport，接收 input 参数；调用 Schema.encodeSync、Schema.fromJsonString、Schema.decodeUnknownEffect、build、mergeRouteDefaults 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        324,
+        339
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 make，接收 input 参数；调用 makeFromTransport、HttpTransport.httpJson 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:generateWith",
+      "type": "function",
+      "name": "generateWith",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        382,
+        391
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 generateWith，接收 stream 参数；调用 Effect.fn、stream、Stream.runFold、LLMResponse.complete、ProviderShared.eventError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:prepare",
+      "type": "function",
+      "name": "prepare",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        393,
+        394
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 prepare，接收 request 参数；调用 prepareWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:stream",
+      "type": "function",
+      "name": "stream",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        396,
+        402
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 stream，接收 request 参数；调用 Stream.unwrap、Effect.gen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:generate",
+      "type": "function",
+      "name": "generate",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        404,
+        408
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 generate，接收 request 参数；调用 Effect.gen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/client.ts:streamRequest",
+      "type": "function",
+      "name": "streamRequest",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        410,
+        415
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 streamRequest，接收 request 参数；调用 Stream.unwrap、Effect.gen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/route/client.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/llm/src/route/client.ts",
+      "lineRange": [
+        165,
+        165
+      ],
+      "summary": "在LLM 请求路由与传输层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/endpoint.ts",
+      "type": "file",
+      "name": "endpoint.ts",
+      "filePath": "packages/llm/src/route/endpoint.ts",
+      "summary": "提供 Endpoint 路径片段、合并和渲染操作，将端点模板及参数组合为传输层使用的目标地址。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/endpoint.ts:path",
+      "type": "function",
+      "name": "path",
+      "filePath": "packages/llm/src/route/endpoint.ts",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 path，接收 value、options 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/endpoint.ts:merge",
+      "type": "function",
+      "name": "merge",
+      "filePath": "packages/llm/src/route/endpoint.ts",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 merge，接收 base、patch 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/endpoint.ts:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "packages/llm/src/route/endpoint.ts",
+      "lineRange": [
+        47,
+        51
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 render，接收 endpoint、input 参数；调用 ProviderShared.trimBaseUrl、renderPart、Object.entries、url.searchParams.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/executor.ts",
+      "type": "file",
+      "name": "executor.ts",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "summary": "提供 RequestExecutor 的 HTTP 执行层，归一化请求头并遮蔽敏感头与查询参数；结合可重试状态和 Retry-After 处理失败请求与诊断上下文。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:requestId",
+      "type": "function",
+      "name": "requestId",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        80,
+        89
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 requestId，接收 headers 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:retryAfterMs",
+      "type": "function",
+      "name": "retryAfterMs",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        93,
+        106
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 retryAfterMs，接收 headers 参数；调用 Number、Number.isFinite、Math.max、Date.parse、Number.isNaN、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:rateLimitDetails",
+      "type": "function",
+      "name": "rateLimitDetails",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        112,
+        148
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 rateLimitDetails，接收 headers、retryAfter 参数；调用 Object.entries、addRateLimitValue、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:secretValues",
+      "type": "function",
+      "name": "secretValues",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        166,
+        186
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 secretValues，接收 request 参数；调用 Object.entries、isSensitiveHeaderName、add、URL.canParse、isSensitiveQueryName 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:responseHttp",
+      "type": "function",
+      "name": "responseHttp",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        209,
+        223
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 responseHttp，接收 input 参数；调用 requestDetails、responseDetails 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:statusReason",
+      "type": "function",
+      "name": "statusReason",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        225,
+        275
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 statusReason，接收 input 参数；调用 isContextOverflow、retryableStatus 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:statusError",
+      "type": "function",
+      "name": "statusError",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        277,
+        305
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 statusError，接收 request、redactedNames 参数；调用 Effect.gen、response.text.pipe、Effect.catch、normalizedHeaders、retryAfterMs、rateLimitDetails、responseBody 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:toHttpError",
+      "type": "function",
+      "name": "toHttpError",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        307,
+        343
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 toHttpError，接收 redactedNames 参数；调用 Cause.isTimeoutError、transportError、HttpClientError.isHttpClientError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/executor.ts:retryStatusFailures",
+      "type": "function",
+      "name": "retryStatusFailures",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        353,
+        364
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 retryStatusFailures，接收 effect、retries、attempt 参数；调用 Effect.catchTag、Effect.fail、retryDelay、Effect.flatMap、Effect.sleep、retryStatusFailures 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/route/executor.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/llm/src/route/executor.ts",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "在LLM 请求路由与传输层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/framing.ts",
+      "type": "file",
+      "name": "framing.ts",
+      "filePath": "packages/llm/src/route/framing.ts",
+      "summary": "在LLM 请求路由与传输层中提供 sse 等接口。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "function:packages/llm/src/providers/openai.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "function:packages/llm/src/providers/openai.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/providers/openai-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "function:packages/llm/src/providers/openrouter.ts:bodyOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "function:packages/llm/src/providers/openrouter.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "function:packages/llm/src/providers/openrouter.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible-profile.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/route/endpoint.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/route/framing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/route/protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "function:packages/llm/src/providers/xai.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "function:packages/llm/src/providers/xai.ts:configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/protocols/openai-compatible-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/providers/openai-compatible-profile.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/route/auth-options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/auth-options.ts",
+      "target": "function:packages/llm/src/route/auth-options.ts:bearer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth-options.ts",
+      "target": "function:packages/llm/src/route/auth-options.ts:bearer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth-options.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:isAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:isAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:credential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:auth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:optional",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:optional",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:effect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:effect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:custom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:custom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:bearer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:bearer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:bearerHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:bearerHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:toLLMError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:toEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "function:packages/llm/src/route/auth.ts:toEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "class:packages/llm/src/route/auth.ts:MissingCredentialError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "class:packages/llm/src/route/auth.ts:MissingCredentialError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:makeRouteModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:mergeRouteDefaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:generationOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:generationOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:httpOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:httpOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:resolveRequestOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:makeFromTransport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:generateWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:prepare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:prepare",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:stream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:stream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:generate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:streamRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "function:packages/llm/src/route/client.ts:streamRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "class:packages/llm/src/route/client.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "class:packages/llm/src/route/client.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/cache-policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/endpoint.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/framing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/route/transport/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/client.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:merge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:merge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "function:packages/llm/src/route/endpoint.ts:render",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/endpoint.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:requestId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:retryAfterMs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:rateLimitDetails",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:secretValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:responseHttp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:statusReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:statusError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:toHttpError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "function:packages/llm/src/route/executor.ts:retryStatusFailures",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "class:packages/llm/src/route/executor.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "class:packages/llm/src/route/executor.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "file:packages/llm/src/provider-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/executor.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/framing.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/framing.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/llm/src/route/auth.ts:optional",
+      "target": "function:packages/llm/src/route/auth.ts:credential",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/auth.ts:effect",
+      "target": "function:packages/llm/src/route/auth.ts:credential",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/auth.ts:headers",
+      "target": "function:packages/llm/src/route/auth.ts:auth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/auth.ts:remove",
+      "target": "function:packages/llm/src/route/auth.ts:auth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/auth.ts:custom",
+      "target": "function:packages/llm/src/route/auth.ts:auth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/client.ts:mergeRouteDefaults",
+      "target": "function:packages/llm/src/route/client.ts:generationOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/client.ts:mergeRouteDefaults",
+      "target": "function:packages/llm/src/route/client.ts:httpOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/client.ts:makeFromTransport",
+      "target": "function:packages/llm/src/route/client.ts:mergeRouteDefaults",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/client.ts:make",
+      "target": "function:packages/llm/src/route/client.ts:makeFromTransport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/client.ts:generateWith",
+      "target": "function:packages/llm/src/route/client.ts:stream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusReason",
+      "target": "function:packages/llm/src/provider-error.ts:isContextOverflow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusError",
+      "target": "function:packages/llm/src/route/executor.ts:retryAfterMs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusError",
+      "target": "function:packages/llm/src/route/executor.ts:rateLimitDetails",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusError",
+      "target": "function:packages/llm/src/route/executor.ts:statusReason",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusError",
+      "target": "function:packages/llm/src/route/executor.ts:responseHttp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/executor.ts:statusError",
+      "target": "function:packages/llm/src/route/executor.ts:requestId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,871 @@
+{
+  "nodes": [
+    {
+      "id": "config:packages/llm/test/fixtures/recordings/cloudflare-ai-gateway/cloudflare-ai-gateway-workers-ai-llama-3-1-8b-text.json",
+      "type": "config",
+      "name": "cloudflare-ai-gateway-workers-ai-llama-3-1-8b-text.json",
+      "filePath": "packages/llm/test/fixtures/recordings/cloudflare-ai-gateway/cloudflare-ai-gateway-workers-ai-llama-3-1-8b-text.json",
+      "summary": "保存模型协议回放数据，顶层包含 version、metadata、interactions，用于重现 cloudflare-ai-gateway-workers-ai-llama-3-1-8b-text 场景。",
+      "tags": [
+        "测试数据",
+        "协议",
+        "回放"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/llm/test/fixtures/recordings/cloudflare-workers-ai/cloudflare-workers-ai-gpt-oss-20b-tools-tool-call.json",
+      "type": "config",
+      "name": "cloudflare-workers-ai-gpt-oss-20b-tools-tool-call.json",
+      "filePath": "packages/llm/test/fixtures/recordings/cloudflare-workers-ai/cloudflare-workers-ai-gpt-oss-20b-tools-tool-call.json",
+      "summary": "保存模型协议回放数据，顶层包含 version、metadata、interactions，用于重现 cloudflare-workers-ai-gpt-oss-20b-tools-tool-call 场景。",
+      "tags": [
+        "测试数据",
+        "协议",
+        "回放"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/llm/test/fixtures/recordings/cloudflare-workers-ai/cloudflare-workers-ai-llama-3-1-8b-text.json",
+      "type": "config",
+      "name": "cloudflare-workers-ai-llama-3-1-8b-text.json",
+      "filePath": "packages/llm/test/fixtures/recordings/cloudflare-workers-ai/cloudflare-workers-ai-llama-3-1-8b-text.json",
+      "summary": "保存模型协议回放数据，顶层包含 version、metadata、interactions，用于重现 cloudflare-workers-ai-llama-3-1-8b-text 场景。",
+      "tags": [
+        "测试数据",
+        "协议",
+        "回放"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/llm/test/fixtures/recordings/gemini-cache/reports-cachedcontenttokencount-on-identical-second-call.json",
+      "type": "config",
+      "name": "reports-cachedcontenttokencount-on-identical-second-call.json",
+      "filePath": "packages/llm/test/fixtures/recordings/gemini-cache/reports-cachedcontenttokencount-on-identical-second-call.json",
+      "summary": "保存模型协议回放数据，顶层包含 version、metadata、interactions，用于重现 reports-cachedcontenttokencount-on-identical-second-call 场景。",
+      "tags": [
+        "测试数据",
+        "协议",
+        "回放"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/llm/test/fixtures/recordings/openai-responses-cache/reports-cached-tokens-on-identical-second-call.json",
+      "type": "config",
+      "name": "reports-cached-tokens-on-identical-second-call.json",
+      "filePath": "packages/llm/test/fixtures/recordings/openai-responses-cache/reports-cached-tokens-on-identical-second-call.json",
+      "summary": "保存模型协议回放数据，顶层包含 version、metadata、interactions，用于重现 reports-cached-tokens-on-identical-second-call 场景。",
+      "tags": [
+        "测试数据",
+        "协议",
+        "回放"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/bin/opencode",
+      "type": "file",
+      "name": "opencode",
+      "filePath": "packages/opencode/bin/opencode",
+      "summary": "Node 启动器按操作系统、架构、AVX2 和 musl 能力选择已安装的 OpenCode 可执行包，支持环境变量覆盖及本地缓存；启动子进程并转发信号和退出状态。",
+      "tags": [
+        "unknown",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/bin/opencode:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/opencode/bin/opencode",
+      "lineRange": [
+        10,
+        44
+      ],
+      "summary": "启动选中的可执行文件并继承标准输入输出，转发 SIGINT/SIGTERM/SIGHUP，子进程退出时移除监听并传播退出原因。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/bin/opencode:supportsAvx2",
+      "type": "function",
+      "name": "supportsAvx2",
+      "filePath": "packages/opencode/bin/opencode",
+      "lineRange": [
+        76,
+        124
+      ],
+      "summary": "针对 Linux、macOS 和 Windows 分别探测 AVX2 支持，任何探测失败都会保守返回 false。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/bin/opencode:findBinary",
+      "type": "function",
+      "name": "findBinary",
+      "filePath": "packages/opencode/bin/opencode",
+      "lineRange": [
+        171,
+        187
+      ],
+      "summary": "从启动器目录逐级向上搜索 node_modules，按平台候选包顺序返回首个存在的可执行文件。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/git",
+      "type": "file",
+      "name": "git",
+      "filePath": "packages/opencode/git",
+      "summary": "空文件；扫描时未包含代码、配置或说明文本。",
+      "tags": [
+        "unknown",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:packages/opencode/migration/20260511173437_session-metadata/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/opencode/migration/20260511173437_session-metadata/migration.sql",
+      "summary": "保存 SQL 数据库迁移，定义或修改 session。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "sql"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/opencode/migration/20260511173437_session-metadata/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/opencode/migration/20260511173437_session-metadata/snapshot.json",
+      "summary": "配置 OpenCode 应用与兼容层，结构项包括 version、dialect、id、prevIds、ddl、renames。",
+      "tags": [
+        "配置",
+        "json",
+        "应用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/parsers-config.ts",
+      "type": "file",
+      "name": "parsers-config.ts",
+      "filePath": "packages/opencode/parsers-config.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 default 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/bench-test-suite.ts",
+      "type": "file",
+      "name": "bench-test-suite.ts",
+      "filePath": "packages/opencode/script/bench-test-suite.ts",
+      "summary": "按 BENCH_WARMUPS 与 BENCH_RUNS 运行完整 Bun 测试套件，记录每次耗时并在测试失败时传播退出码。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/build-node.ts",
+      "type": "file",
+      "name": "build-node.ts",
+      "filePath": "packages/opencode/script/build-node.ts",
+      "summary": "先加载生成资源，再用 Bun.build 将 src/node.ts 打包为 Node ESM 产物，保留指定外部依赖并注入模型、版本和渠道常量。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/build.ts",
+      "type": "file",
+      "name": "build.ts",
+      "filePath": "packages/opencode/script/build.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 binaries；内部处理包含 createEmbeddedWebUIBundle。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/script/build.ts:createEmbeddedWebUIBundle",
+      "type": "function",
+      "name": "createEmbeddedWebUIBundle",
+      "filePath": "packages/opencode/script/build.ts",
+      "lineRange": [
+        26,
+        48
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createEmbeddedWebUIBundle；调用 console.log、path.join、$、Array.fromAsync、file.replaceAll、file.endsWith、files.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/generate.ts",
+      "type": "file",
+      "name": "generate.ts",
+      "filePath": "packages/opencode/script/generate.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 modelsData 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/httpapi-exercise.ts",
+      "type": "file",
+      "name": "httpapi-exercise.ts",
+      "filePath": "packages/opencode/script/httpapi-exercise.ts",
+      "summary": "通过动态导入启动 HTTP API 端点演练测试入口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/postinstall.mjs",
+      "type": "file",
+      "name": "postinstall.mjs",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "summary": "在OpenCode 应用与兼容层中实现 supportsAvx2、isMusl、packageNames、resolveBinary、installPackage、copyBinary、verifyBinary 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "javascript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:supportsAvx2",
+      "type": "function",
+      "name": "supportsAvx2",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        31,
+        77
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 supportsAvx2；调用 fs.readFileSync、childProcess.spawnSync 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:isMusl",
+      "type": "function",
+      "name": "isMusl",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        79,
+        94
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isMusl；调用 fs.existsSync、childProcess.spawnSync 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:packageNames",
+      "type": "function",
+      "name": "packageNames",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        96,
+        117
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 packageNames；调用 supportsAvx2、isMusl 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:installPackage",
+      "type": "function",
+      "name": "installPackage",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        126,
+        144
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 installPackage，接收 name 参数；调用 fs.mkdtempSync、path.join、os.tmpdir、childProcess.spawnSync、copyBinary、fs.rmSync 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:copyBinary",
+      "type": "function",
+      "name": "copyBinary",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        146,
+        156
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 copyBinary，接收 source、target 参数；调用 fs.existsSync、fs.mkdirSync、path.dirname、fs.unlinkSync、fs.linkSync、fs.copyFileSync、fs.chmodSync 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/postinstall.mjs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "packages/opencode/script/postinstall.mjs",
+      "lineRange": [
+        167,
+        182
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 main；调用 packageNames、copyBinary、resolveBinary、verifyBinary、installPackage、JSON.stringify 完成处理",
+      "tags": [
+        "javascript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/profile-test-files.ts",
+      "type": "file",
+      "name": "profile-test-files.ts",
+      "filePath": "packages/opencode/script/profile-test-files.ts",
+      "summary": "按 TEST_PROFILE_GLOB 逐文件运行 Bun 测试，记录耗时、输出和退出码，再按耗时列出最慢文件，支持数量与超时限制。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/publish.ts",
+      "type": "file",
+      "name": "publish.ts",
+      "filePath": "packages/opencode/script/publish.ts",
+      "summary": "在OpenCode 应用与兼容层中实现 published、publish 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/script/publish.ts:publish",
+      "type": "function",
+      "name": "publish",
+      "filePath": "packages/opencode/script/publish.ts",
+      "lineRange": [
+        14,
+        24
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 publish，接收 dir、name、version 参数；调用 $、published、console.log 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/run-workspace-server",
+      "type": "file",
+      "name": "run-workspace-server",
+      "filePath": "packages/opencode/script/run-workspace-server",
+      "summary": "读取本地调试工作区快照并启动独立 OpenCode 服务，轮询快照修改时间以触发重启，用于本机模拟远程工作区。",
+      "tags": [
+        "unknown",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/script/run-workspace-server:readDataMtime",
+      "type": "function",
+      "name": "readDataMtime",
+      "filePath": "packages/opencode/script/run-workspace-server",
+      "lineRange": [
+        24,
+        34
+      ],
+      "summary": "读取调试快照修改时间；文件不存在时返回 undefined，其他错误继续传播。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/run-workspace-server:readSnapshot",
+      "type": "function",
+      "name": "readSnapshot",
+      "filePath": "packages/opencode/script/run-workspace-server",
+      "lineRange": [
+        36,
+        60
+      ],
+      "summary": "等待快照文件出现，并在读取前后核对修改时间，直到取得未被并发改写的一致快照。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/run-workspace-server:startDevServer",
+      "type": "function",
+      "name": "startDevServer",
+      "filePath": "packages/opencode/script/run-workspace-server",
+      "lineRange": [
+        62,
+        75
+      ],
+      "summary": "合并快照中的环境变量并启动 bun run dev serve，使用快照端口和独立数据目录。",
+      "tags": [
+        "unknown",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/time.ts",
+      "type": "file",
+      "name": "time.ts",
+      "filePath": "packages/opencode/script/time.ts",
+      "summary": "动态导入命令行指定的模块并输出 performance.now()，用于观测模块加载与启动耗时。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/script/trace-imports.ts",
+      "type": "file",
+      "name": "trace-imports.ts",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "summary": "在OpenCode 应用与兼容层中实现 resolveImport、isInternalImport、tryExtensions、extractImports、traceFile、main 等操作，供当前模块组织运行流程与数据转换。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/script/trace-imports.ts:resolveImport",
+      "type": "function",
+      "name": "resolveImport",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "lineRange": [
+        12,
+        23
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 resolveImport，接收 importPath、fromFile 参数；调用 importPath.startsWith、path.join、importPath.slice、path.dirname、path.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/trace-imports.ts:tryExtensions",
+      "type": "function",
+      "name": "tryExtensions",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "lineRange": [
+        29,
+        56
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 tryExtensions，接收 filePath 参数；调用 Bun.file、file.stat、path.join、indexFile.exists、extFile.exists 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/trace-imports.ts:extractImports",
+      "type": "function",
+      "name": "extractImports",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "lineRange": [
+        58,
+        93
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 extractImports，接收 sourceFile 参数；调用 visit 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "type": "function",
+      "name": "traceFile",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "lineRange": [
+        95,
+        137
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 traceFile，接收 filePath、depth 参数；调用 path.relative、visited.has、filePath.match、visited.add、console.log、Bun.file、ts.createSourceFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/script/trace-imports.ts:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "packages/opencode/script/trace-imports.ts",
+      "lineRange": [
+        139,
+        151
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 main；调用 path.join、Bun.file、file.exists、console.error、process.exit、traceFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/specs/openapi-translation-cleanup.md",
+      "type": "document",
+      "name": "openapi-translation-cleanup.md",
+      "filePath": "packages/opencode/specs/openapi-translation-cleanup.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「OpenAPI Translation Cleanup Plan、Goal、Current Culprit、Non-Negotiables、PR Checklist、PR 1: Add OpenAPI/Runtime Query Drift Tests、PR 2: Delete Spec-Only Workspace Query Injection」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:packages/opencode/specs/tui-plugins.md",
+      "type": "document",
+      "name": "tui-plugins.md",
+      "filePath": "packages/opencode/specs/tui-plugins.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「TUI plugins、Overview、TUI config、Author package shape、Package manifest and install、Version compatibility、TUI plugin API」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/specs/v2/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/opencode/specs/v2/api.ts",
+      "summary": "记录 V2 API 的示例设计，演示 OpenCode.make、工具注册、凭据和代理配置；文件使用 ts-nocheck，属于设计样例。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:packages/opencode/src/agent/generate.txt",
+      "type": "document",
+      "name": "generate.txt",
+      "filePath": "packages/opencode/src/agent/generate.txt",
+      "summary": "说明该模块的使用或设计，内容涵盖「You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize e」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/bin/opencode",
+      "target": "function:packages/opencode/bin/opencode:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/bin/opencode",
+      "target": "function:packages/opencode/bin/opencode:supportsAvx2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/bin/opencode",
+      "target": "function:packages/opencode/bin/opencode:findBinary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/build.ts",
+      "target": "function:packages/opencode/script/build.ts:createEmbeddedWebUIBundle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/build.ts",
+      "target": "file:packages/opencode/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:supportsAvx2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:isMusl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:packageNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:installPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:copyBinary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/postinstall.mjs",
+      "target": "function:packages/opencode/script/postinstall.mjs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/publish.ts",
+      "target": "function:packages/opencode/script/publish.ts:publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/publish.ts",
+      "target": "file:packages/opencode/package.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/script/run-workspace-server",
+      "target": "function:packages/opencode/script/run-workspace-server:readDataMtime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/run-workspace-server",
+      "target": "function:packages/opencode/script/run-workspace-server:readSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/run-workspace-server",
+      "target": "function:packages/opencode/script/run-workspace-server:startDevServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/trace-imports.ts",
+      "target": "function:packages/opencode/script/trace-imports.ts:resolveImport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/trace-imports.ts",
+      "target": "function:packages/opencode/script/trace-imports.ts:tryExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/trace-imports.ts",
+      "target": "function:packages/opencode/script/trace-imports.ts:extractImports",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/trace-imports.ts",
+      "target": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/script/trace-imports.ts",
+      "target": "function:packages/opencode/script/trace-imports.ts:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:packageNames",
+      "target": "function:packages/opencode/script/postinstall.mjs:supportsAvx2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:packageNames",
+      "target": "function:packages/opencode/script/postinstall.mjs:isMusl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:installPackage",
+      "target": "function:packages/opencode/script/postinstall.mjs:copyBinary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:main",
+      "target": "function:packages/opencode/script/postinstall.mjs:packageNames",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:main",
+      "target": "function:packages/opencode/script/postinstall.mjs:copyBinary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/postinstall.mjs:main",
+      "target": "function:packages/opencode/script/postinstall.mjs:installPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "target": "function:packages/opencode/script/trace-imports.ts:extractImports",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "target": "function:packages/opencode/script/trace-imports.ts:resolveImport",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "target": "function:packages/opencode/script/trace-imports.ts:tryExtensions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/script/trace-imports.ts:main",
+      "target": "function:packages/opencode/script/trace-imports.ts:traceFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

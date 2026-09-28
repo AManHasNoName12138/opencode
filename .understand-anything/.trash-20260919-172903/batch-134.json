@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": "config:packages/cli/bunfig.toml",
+      "type": "config",
+      "name": "bunfig.toml",
+      "filePath": "packages/cli/bunfig.toml",
+      "summary": "预览命令行的 bunfig 配置，记录该工具使用的过滤规则或环境约定。",
+      "tags": [
+        "配置",
+        "预览命令行",
+        "bunfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/cli/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/cli/package.json",
+      "summary": "@opencode-ai/cli 的包清单，声明 build、dev、typecheck 构建或运行命令及依赖。",
+      "tags": [
+        "配置",
+        "预览命令行",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/cli/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/cli/tsconfig.json",
+      "summary": "预览命令行的 TypeScript 编译配置，定义 extends、compilerOptions、jsx、jsxImportSource、lib、noUncheckedIndexedAccess 等选项。",
+      "tags": [
+        "配置",
+        "预览命令行",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:packages/cli/package.json",
+      "target": "file:packages/cli/script/build.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/cli/package.json",
+      "target": "file:packages/cli/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

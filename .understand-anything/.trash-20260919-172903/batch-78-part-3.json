@@ -1,0 +1,1604 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "summary": "调用 wsl.exe 探测运行时和发行版，安装或查询 OpenCode 并提供 WSL 终端启动能力。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "function",
+      "name": "wslArgs",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "实现 wslArgs 的运行时操作，输入包括 args、distro、user。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "function",
+      "name": "runWsl",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "运行WSL，调用 runCommand 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:runCommand",
+      "type": "function",
+      "name": "runCommand",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        53,
+        114
+      ],
+      "summary": "运行命令，调用 spawn、setTimeout、child.kill、reject 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:runInteractiveCommand",
+      "type": "function",
+      "name": "runInteractiveCommand",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        116,
+        178
+      ],
+      "summary": "运行Interactive命令，调用 pty.spawn、process.cwd、setTimeout、child.kill 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:createOutputDecoder",
+      "type": "function",
+      "name": "createOutputDecoder",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        180,
+        191
+      ],
+      "summary": "创建输出Decoder。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "type": "function",
+      "name": "runWslInDistro",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        202,
+        204
+      ],
+      "summary": "运行WSL内部发行版，调用 runWsl、wslArgs 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "function",
+      "name": "runWslSh",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        206,
+        208
+      ],
+      "summary": "运行WSLSh，调用 runWslInDistro 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "type": "function",
+      "name": "probeWslRuntime",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        210,
+        231
+      ],
+      "summary": "调用 WSL 检查命令并汇总运行时可用状态。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "type": "function",
+      "name": "listInstalledWslDistros",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        233,
+        239
+      ],
+      "summary": "调用 WSL 命令读取已安装发行版并解析列表。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "type": "function",
+      "name": "listOnlineWslDistros",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        241,
+        247
+      ],
+      "summary": "获取 WSL 可在线安装的发行版列表。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:installWslRuntimeElevated",
+      "type": "function",
+      "name": "installWslRuntimeElevated",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        249,
+        256
+      ],
+      "summary": "安装WSL运行时Elevated，调用 runPowerShell、withTimeout 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:installWslDistro",
+      "type": "function",
+      "name": "installWslDistro",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        258,
+        265
+      ],
+      "summary": "安装WSL发行版，调用 runInteractiveCommand、resolveSystem32Command、withTimeout 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "type": "function",
+      "name": "installWslOpencode",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        267,
+        277
+      ],
+      "summary": "安装WSLOpencode，调用 runInteractiveCommand、resolveSystem32Command、wslArgs、shellEscape 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "type": "function",
+      "name": "probeWslDistro",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        279,
+        308
+      ],
+      "summary": "在指定发行版中探测 shell 与 OpenCode 的安装可用状态。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:resolveWslOpencode",
+      "type": "function",
+      "name": "resolveWslOpencode",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        310,
+        320
+      ],
+      "summary": "解析WSLOpencode，调用 firstLine、runWslSh 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:readWslCommandVersion",
+      "type": "function",
+      "name": "readWslCommandVersion",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        322,
+        325
+      ],
+      "summary": "读取WSL命令版本，调用 runWslSh、shellEscape、firstLine 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:openWslTerminal",
+      "type": "function",
+      "name": "openWslTerminal",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        327,
+        340
+      ],
+      "summary": "打开WSL终端，调用 spawn、wslTerminalArgs、child.once、child.unref 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:parseInstalledDistros",
+      "type": "function",
+      "name": "parseInstalledDistros",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        342,
+        358
+      ],
+      "summary": "解析Installed发行版，调用 output.split、line.trim、line.match、/^name$/i.test 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:parseOnlineDistros",
+      "type": "function",
+      "name": "parseOnlineDistros",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        360,
+        370
+      ],
+      "summary": "解析Online发行版，调用 output.split、line.trim、trimmed.match、/^name$/i.test 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "function",
+      "name": "summarize",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        381,
+        387
+      ],
+      "summary": "汇总运行时，调用 line.trim 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "function",
+      "name": "shellEscape",
+      "filePath": "packages/desktop/src/main/wsl/runtime.ts",
+      "lineRange": [
+        389,
+        391
+      ],
+      "summary": "把文本转义为可安全传递给 shell 的参数。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "type": "file",
+      "name": "servers.test.ts",
+      "filePath": "packages/desktop/src/main/wsl/servers.test.ts",
+      "summary": "验证服务器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“starts every configured WSL server on initialization”、“rejects an update that did not install the desktop version”。",
+      "tags": [
+        "desktop",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.test.ts:testControllerOptions",
+      "type": "function",
+      "name": "testControllerOptions",
+      "filePath": "packages/desktop/src/main/wsl/servers.test.ts",
+      "lineRange": [
+        217,
+        231
+      ],
+      "summary": "实现 testControllerOptions 的服务器操作。",
+      "tags": [
+        "函数",
+        "desktop",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/servers.ts",
+      "type": "file",
+      "name": "servers.ts",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "summary": "维护各 WSL 发行版的服务器配置和运行状态，协调探测、启动与状态事件。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:wslServerIdForDistro",
+      "type": "function",
+      "name": "wslServerIdForDistro",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "根据发行版名称构造稳定的 WSL 服务器标识。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:createWslServersController",
+      "type": "function",
+      "name": "createWslServersController",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        62,
+        423
+      ],
+      "summary": "创建WSL服务器控制器，调用 initialState 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:initialState",
+      "type": "function",
+      "name": "initialState",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        425,
+        436
+      ],
+      "summary": "实现 initialState 的服务器操作。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:readPersistedServers",
+      "type": "function",
+      "name": "readPersistedServers",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        438,
+        447
+      ],
+      "summary": "读取持久化服务器，调用 getStore、store.get、list.flatMap 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:normalizePersistedServer",
+      "type": "function",
+      "name": "normalizePersistedServer",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        453,
+        465
+      ],
+      "summary": "规范化持久化服务器，调用 wslServerIdForDistro 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/servers.ts:opencodeCheck",
+      "type": "function",
+      "name": "opencodeCheck",
+      "filePath": "packages/desktop/src/main/wsl/servers.ts",
+      "lineRange": [
+        467,
+        501
+      ],
+      "summary": "实现 opencodeCheck 的服务器操作，调用 nativeT 完成相关步骤。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "type": "file",
+      "name": "sidecar.ts",
+      "filePath": "packages/desktop/src/main/wsl/sidecar.ts",
+      "summary": "在指定 WSL 发行版中启动 OpenCode sidecar，连接桌面应用与 Linux 服务进程。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "type": "function",
+      "name": "spawnWslSidecar",
+      "filePath": "packages/desktop/src/main/wsl/sidecar.ts",
+      "lineRange": [
+        17,
+        91
+      ],
+      "summary": "解析发行版中的 OpenCode 路径，分配连接端口并启动 WSL 服务进程。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/sidecar.ts:allocatePort",
+      "type": "function",
+      "name": "allocatePort",
+      "filePath": "packages/desktop/src/main/wsl/sidecar.ts",
+      "lineRange": [
+        93,
+        107
+      ],
+      "summary": "临时监听本地端口以选择可供服务使用的空闲端口。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/sidecar.ts:forwardLines",
+      "type": "function",
+      "name": "forwardLines",
+      "filePath": "packages/desktop/src/main/wsl/sidecar.ts",
+      "lineRange": [
+        109,
+        125
+      ],
+      "summary": "把子进程输出缓冲切分为完整文本行并转发。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/startup.ts",
+      "type": "file",
+      "name": "startup.ts",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "summary": "选择初始化时启动的 WSL 服务器，核对 OpenCode 版本并轮询服务健康状态。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/startup.ts:wslServerIdsToStartOnInitialize",
+      "type": "function",
+      "name": "wslServerIdsToStartOnInitialize",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "选择桌面初始化期间需要启动的 WSL 服务器。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/startup.ts:expectOpencodeVersion",
+      "type": "function",
+      "name": "expectOpencodeVersion",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "lineRange": [
+        7,
+        16
+      ],
+      "summary": "核对 WSL 中安装的 OpenCode 版本是否符合预期。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/startup.ts:pendingRestartAfterWslInstall",
+      "type": "function",
+      "name": "pendingRestartAfterWslInstall",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "lineRange": [
+        18,
+        18
+      ],
+      "summary": "实现 pendingRestartAfterWslInstall 的启动操作，输入包括 runtime。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/startup.ts:pollWslHealth",
+      "type": "function",
+      "name": "pollWslHealth",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "反复检查 WSL 服务器健康状态，直到服务可用或操作中止。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/startup.ts:abortableDelay",
+      "type": "function",
+      "name": "abortableDelay",
+      "filePath": "packages/desktop/src/main/wsl/startup.ts",
+      "lineRange": [
+        27,
+        37
+      ],
+      "summary": "创建能够被 AbortSignal 中止的延时等待。",
+      "tags": [
+        "函数",
+        "desktop",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/preload/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/desktop/src/preload/index.ts",
+      "summary": "通过 Electron 预加载桥把受控 IPC 能力暴露为 window.api，连接渲染器与主进程。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/preload/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/desktop/src/preload/types.ts",
+      "summary": "声明桌面预加载 API 的数据契约，包含服务器初始化、窗口主题及 WSL 服务状态。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/desktop/src/renderer/env.d.ts",
+      "type": "file",
+      "name": "env.d.ts",
+      "filePath": "packages/desktop/src/renderer/env.d.ts",
+      "summary": "声明 desktop 的envd类型与环境契约，供 TypeScript 在编译期校验。",
+      "tags": [
+        "desktop",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runInteractiveCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:createOutputDecoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslRuntimeElevated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslRuntimeElevated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslDistro",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslDistro",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:resolveWslOpencode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:resolveWslOpencode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:readWslCommandVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:readWslCommandVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:openWslTerminal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:openWslTerminal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:parseInstalledDistros",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:parseOnlineDistros",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "file:packages/desktop/src/main/wsl/policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runCommand",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runCommand",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:createOutputDecoder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runInteractiveCommand",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslRuntime",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listInstalledWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:parseInstalledDistros",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWsl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:listOnlineWslDistros",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:parseOnlineDistros",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:installWslDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runInteractiveCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runInteractiveCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:installWslOpencode",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslInDistro",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:probeWslDistro",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:resolveWslOpencode",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:readWslCommandVersion",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:runWslSh",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:readWslCommandVersion",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/runtime.ts:openWslTerminal",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:wslTerminalArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.test.ts:testControllerOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "target": "file:packages/desktop/src/main/wsl/policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "target": "file:packages/desktop/src/main/wsl/startup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:wslServerIdForDistro",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:wslServerIdForDistro",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:createWslServersController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:createWslServersController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:initialState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:readPersistedServers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:normalizePersistedServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:opencodeCheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/wsl/policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/main/wsl/startup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/servers.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/servers.ts:createWslServersController",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:initialState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/servers.ts:readPersistedServers",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/servers.ts:normalizePersistedServer",
+      "target": "function:packages/desktop/src/main/wsl/servers.ts:wslServerIdForDistro",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/servers.ts:opencodeCheck",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:allocatePort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:forwardLines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "file:packages/desktop/src/main/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "file:packages/desktop/src/main/wsl/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/sidecar.ts",
+      "target": "file:packages/desktop/src/main/wsl/startup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:resolveWslOpencode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:allocatePort",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:shellEscape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/runtime.ts:wslArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/sidecar.ts:forwardLines",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:pollWslHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:spawnWslSidecar",
+      "target": "function:packages/desktop/src/main/server.ts:checkHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/sidecar.ts:allocatePort",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:wslServerIdsToStartOnInitialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:wslServerIdsToStartOnInitialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:expectOpencodeVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:expectOpencodeVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:pendingRestartAfterWslInstall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:pendingRestartAfterWslInstall",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:pollWslHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:pollWslHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:abortableDelay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/startup.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/startup.ts:expectOpencodeVersion",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/startup.ts:pollWslHealth",
+      "target": "function:packages/desktop/src/main/wsl/startup.ts:abortableDelay",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/preload/index.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/renderer/env.d.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

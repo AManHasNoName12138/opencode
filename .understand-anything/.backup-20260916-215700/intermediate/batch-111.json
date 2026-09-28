@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/src/pty/pty.bun.ts",
+      "type": "file",
+      "name": "pty.bun.ts",
+      "filePath": "packages/core/src/pty/pty.bun.ts",
+      "summary": "封装 Bun 环境的 PTY spawn，暴露统一的进程、退出事件、选项和释放接口，使上层终端服务可切换运行时。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/pty/pty.bun.ts:spawn",
+      "type": "function",
+      "name": "spawn",
+      "filePath": "packages/core/src/pty/pty.bun.ts",
+      "lineRange": [
+        6,
+        26
+      ],
+      "summary": "在Core 领域服务层中执行 spawn，接收 file、args、opts 参数；调用 create 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/pty/pty.node.ts",
+      "type": "file",
+      "name": "pty.node.ts",
+      "filePath": "packages/core/src/pty/pty.node.ts",
+      "summary": "封装 Node 环境的 PTY spawn，暴露统一的进程、退出事件、选项和释放接口，使上层终端服务可切换运行时。",
+      "tags": [
+        "typescript",
+        "领域服务",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/src/pty/pty.node.ts:spawn",
+      "type": "function",
+      "name": "spawn",
+      "filePath": "packages/core/src/pty/pty.node.ts",
+      "lineRange": [
+        6,
+        29
+      ],
+      "summary": "在Core 领域服务层中执行 spawn，接收 file、args、opts 参数；调用 pty.spawn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/src/pty/pty.ts",
+      "type": "file",
+      "name": "pty.ts",
+      "filePath": "packages/core/src/pty/pty.ts",
+      "summary": "汇总Core 领域服务层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/src/pty/pty.bun.ts",
+      "target": "function:packages/core/src/pty/pty.bun.ts:spawn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/pty/pty.bun.ts",
+      "target": "function:packages/core/src/pty/pty.bun.ts:spawn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/pty/pty.bun.ts",
+      "target": "file:packages/core/src/pty/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/src/pty/pty.node.ts",
+      "target": "function:packages/core/src/pty/pty.node.ts:spawn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/src/pty/pty.node.ts",
+      "target": "function:packages/core/src/pty/pty.node.ts:spawn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/src/pty/pty.node.ts",
+      "target": "file:packages/core/src/pty/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

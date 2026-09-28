@@ -1,0 +1,2590 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "type": "file",
+      "name": "stream.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 traceSubagentState、traceFooterOutput、writeSessionOutput；内部处理包含 patch、summarize、traceCommit、traceSubagentState、traceFooterOutput、writeSessionOutput。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:patch",
+      "type": "function",
+      "name": "patch",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 patch，接收 next 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:summarize",
+      "type": "function",
+      "name": "summarize",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        36,
+        64
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 summarize，接收 value 参数；调用 value.slice、Array.isArray、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceCommit",
+      "type": "function",
+      "name": "traceCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        66,
+        89
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 traceCommit，接收 commit 参数；调用 summarize 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "type": "function",
+      "name": "traceSubagentState",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        91,
+        127
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 traceSubagentState，接收 state 参数；调用 Object.fromEntries、Object.entries、detail.commits.map、state.permissions.map、Object.keys、summarize、state.questions.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceFooterOutput",
+      "type": "function",
+      "name": "traceFooterOutput",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        129,
+        138
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 traceFooterOutput，接收 footer 参数；调用 traceSubagentState 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "type": "function",
+      "name": "writeSessionOutput",
+      "filePath": "packages/opencode/src/cli/cmd/run/stream.ts",
+      "lineRange": [
+        141,
+        175
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 writeSessionOutput，接收 input、out 参数；调用 input.footer.append、patch、input.footer.event、traceSubagentState 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "type": "file",
+      "name": "subagent-data.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 SUBAGENT_BOOTSTRAP_LIMIT、SUBAGENT_CALL_BOOTSTRAP_LIMIT、sameSubagentTab、listSubagentPermissions、listSubagentQuestions、createSubagentData、listSubagentTabs；内部处理包含 createDetail、ensureDetail、sameSubagentTab、sameQueue、queueSnapshot、queueChanged、sameCommit。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "function",
+      "name": "ensureDetail",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        63,
+        72
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 ensureDetail，接收 data、sessionID 参数；调用 data.details.get、createDetail、data.details.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "function",
+      "name": "sameSubagentTab",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        74,
+        91
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 sameSubagentTab，接收 a、b 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameCommit",
+      "type": "function",
+      "name": "sameCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        110,
+        123
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 sameCommit，接收 left、right 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:inputLabel",
+      "type": "function",
+      "name": "inputLabel",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        142,
+        184
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 inputLabel，接收 input 参数；调用 text 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolState",
+      "type": "function",
+      "name": "compactToolState",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        198,
+        235
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 compactToolState，接收 part 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:copyMap",
+      "type": "function",
+      "name": "copyMap",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        242,
+        252
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 copyMap，接收 source、keep 参数；调用 keep.has、out.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolPart",
+      "type": "function",
+      "name": "compactToolPart",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        254,
+        265
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 compactToolPart，接收 part 参数；调用 compactToolState 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCommit",
+      "type": "function",
+      "name": "compactCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        267,
+        276
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 compactCommit，接收 commit 参数；调用 compactToolPart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:stateUpdatedAt",
+      "type": "function",
+      "name": "stateUpdatedAt",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        278,
+        289
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 stateUpdatedAt，接收 part 参数；调用 Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskStatus",
+      "type": "function",
+      "name": "taskStatus",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        295,
+        309
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 taskStatus，接收 part 参数；调用 metadata、text 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "type": "function",
+      "name": "taskTab",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        311,
+        327
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 taskTab，接收 part、sessionID 参数；调用 Locale.titlecase、text、stateTitle、inputLabel、taskStatus、metadata、num 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "type": "function",
+      "name": "syncTaskTab",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        333,
+        356
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 syncTaskTab，接收 data、part、children 参数；调用 taskSessionID、children.has、taskTab、sameSubagentTab、data.tabs.get、ensureDetail、data.tabs.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:frameKey",
+      "type": "function",
+      "name": "frameKey",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        358,
+        368
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 frameKey，接收 commit 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:mergeLiveCommit",
+      "type": "function",
+      "name": "mergeLiveCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        378,
+        398
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 mergeLiveCommit，接收 current、next 参数；调用 sameCommit 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "type": "function",
+      "name": "appendCommits",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        400,
+        432
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 appendCommits，接收 detail、commits 参数；调用 commits.map、frameKey、detail.frames.findIndex、detail.frames.push、mergeLiveCommit、sameCommit、limitFrames 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureBlockerTab",
+      "type": "function",
+      "name": "ensureBlockerTab",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        434,
+        473
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 ensureBlockerTab，接收 data、sessionID、title、kind 参数；调用 data.tabs.get、ensureDetail、Date.now、sameSubagentTab、data.tabs.set、text、Locale.titlecase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:cancelSubagentTab",
+      "type": "function",
+      "name": "cancelSubagentTab",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        479,
+        496
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 cancelSubagentTab，接收 data、sessionID 参数；调用 data.tabs.get、Date.now、sameSubagentTab、data.tabs.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCallMap",
+      "type": "function",
+      "name": "compactCallMap",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        498,
+        516
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 compactCallMap，接收 detail 参数；调用 recent、detail.data.call.keys、callKey、keep.add、copyMap 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "type": "function",
+      "name": "compactDetail",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        527,
+        555
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 compactDetail，接收 detail 参数；调用 createSessionData、detail.data.part.keys、detail.frames.flatMap、detail.data.msg.get、recent、detail.data.role.keys、compactIDs 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "type": "function",
+      "name": "applyChildEvent",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        557,
+        575
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 applyChildEvent，接收 input 参数；调用 queueSnapshot、reduceSessionData、appendCommits、compactDetail、queueChanged 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildEvent",
+      "type": "function",
+      "name": "bootstrapChildEvent",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        577,
+        592
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bootstrapChildEvent，接收 input 参数；调用 reduceSessionData、appendCommits 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildMessages",
+      "type": "function",
+      "name": "bootstrapChildMessages",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        594,
+        639
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bootstrapChildMessages，接收 input 参数；调用 bootstrapChildEvent、compactDetail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentPermissions",
+      "type": "function",
+      "name": "listSubagentPermissions",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        645,
+        647
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 listSubagentPermissions，接收 data 参数；调用 data.details.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentQuestions",
+      "type": "function",
+      "name": "listSubagentQuestions",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        649,
+        651
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 listSubagentQuestions，接收 data 参数；调用 data.details.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:createSubagentData",
+      "type": "function",
+      "name": "createSubagentData",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        653,
+        658
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createSubagentData。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentTabs",
+      "type": "function",
+      "name": "listSubagentTabs",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        667,
+        676
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 listSubagentTabs，接收 data 参数；调用 data.tabs.values、Number 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSubagentData",
+      "type": "function",
+      "name": "snapshotSubagentData",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        693,
+        698
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapshotSubagentData，接收 data 参数；调用 snapshotState、Object.fromEntries、data.details.entries、snapshotDetail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSelectedSubagentData",
+      "type": "function",
+      "name": "snapshotSelectedSubagentData",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        700,
+        707
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 snapshotSelectedSubagentData，接收 data、selectedSessionID 参数；调用 data.details.get、snapshotState、snapshotDetail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "type": "function",
+      "name": "bootstrapSubagentData",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        709,
+        760
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bootstrapSubagentData，接收 input 参数；调用 input.children.map、child.keys、syncTaskTab、children.has、ensureBlockerTab、child.get、input.data.tabs.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "type": "function",
+      "name": "bootstrapSubagentCalls",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        762,
+        790
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 bootstrapSubagentCalls，接收 input 参数；调用 knownSession、ensureDetail、queueSnapshot、bootstrapSessionData、bootstrapChildMessages、queueChanged 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "type": "function",
+      "name": "reduceSubagentData",
+      "filePath": "packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "lineRange": [
+        792,
+        876
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 reduceSubagentData，接收 input 参数；调用 syncTaskTab、knownSession、ensureDetail、isAbortedAssistantMessage、cancelSubagentTab、appendCommits、formatError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "type": "file",
+      "name": "theme.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 transparent、resolveTheme、generateSystem、RUN_THEME_FALLBACK、resolveRunTheme；内部处理包含 alpha、rgba、mode、luminance、fade、ansiToRgba、tint。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:fade",
+      "type": "function",
+      "name": "fade",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        111,
+        125
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 fade，接收 color、base、fallback、scale、limit 参数；调用 RGBA.fromValues、Math.max、Math.min 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:ansiToRgba",
+      "type": "function",
+      "name": "ansiToRgba",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        127,
+        165
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 ansiToRgba，接收 code 参数；调用 RGBA.fromHex、Math.floor、RGBA.fromInts、value 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:blend",
+      "type": "function",
+      "name": "blend",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        175,
+        186
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 blend，接收 color、bg 参数；调用 RGBA.fromValues 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:opaqueSyntaxStyle",
+      "type": "function",
+      "name": "opaqueSyntaxStyle",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        192,
+        209
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 opaqueSyntaxStyle，接收 style、bg 参数；调用 SyntaxStyle.fromStyles、Object.fromEntries、style.getAllStyles、blend 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:oklab",
+      "type": "function",
+      "name": "oklab",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        226,
+        240
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 oklab，接收 color 参数；调用 srgbToLinear、Math.cbrt 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:nearestIndexed",
+      "type": "function",
+      "name": "nearestIndexed",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        242,
+        264
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 nearestIndexed，接收 indexed、rgba 参数；调用 oklab、indexed.reduce、RGBA.clone 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveTheme",
+      "type": "function",
+      "name": "resolveTheme",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        276,
+        326
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveTheme，接收 theme、pick 参数；调用 Object.fromEntries、Object.entries、resolveColor 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateGrayScale",
+      "type": "function",
+      "name": "generateGrayScale",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        328,
+        367
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 generateGrayScale，接收 bg、isDark、map 参数；调用 chroma、Object.fromEntries、Array.from、gray 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateMutedTextColor",
+      "type": "function",
+      "name": "generateMutedTextColor",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        369,
+        380
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 generateMutedTextColor，接收 bg、isDark、map 参数；调用 Math.min、Math.floor、Math.max、map、RGBA.fromInts 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "type": "function",
+      "name": "generateSystem",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        382,
+        466
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 generateSystem，接收 colors、pick 参数；调用 RGBA.fromHex、RGBA.defaultBackground、RGBA.defaultForeground、generateGrayScale、generateMutedTextColor、color、alpha 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:quantizeTheme",
+      "type": "function",
+      "name": "quantizeTheme",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        476,
+        487
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 quantizeTheme，接收 theme、indexed 参数；调用 Object.fromEntries、Object.entries、quantizeColor 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:splashTheme",
+      "type": "function",
+      "name": "splashTheme",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        489,
+        498
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 splashTheme，接收 theme、indexed 参数；调用 nearestIndexed、splashShadow 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "type": "function",
+      "name": "map",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        500,
+        582
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 map，接收 footerTheme、scrollbackTheme、splash、syntax、subtleSyntax 参数；调用 opaqueSyntaxStyle、alpha、mode、fade、tint、rgba、luminance 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "type": "function",
+      "name": "resolveRunTheme",
+      "filePath": "packages/opencode/src/cli/cmd/run/theme.ts",
+      "lineRange": [
+        656,
+        690
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveRunTheme，接收 renderer 参数；调用 renderer.getPalette、mode、RGBA.fromHex、resolveTheme、generateSystem、indexedPalette、quantizeTheme 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "type": "file",
+      "name": "trace.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/trace.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 trace；内部处理包含 stamp、file、latest、text、trace。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/trace.ts:text",
+      "type": "function",
+      "name": "text",
+      "filePath": "packages/opencode/src/cli/cmd/run/trace.ts",
+      "lineRange": [
+        39,
+        51
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 text，接收 data 参数；调用 JSON.stringify、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "type": "function",
+      "name": "trace",
+      "filePath": "packages/opencode/src/cli/cmd/run/trace.ts",
+      "lineRange": [
+        53,
+        94
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 trace；调用 file、fs.mkdirSync、path.dirname、fs.writeFileSync、latest、text、process.cwd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "type": "file",
+      "name": "turn-summary.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 turnSummaryCommit、messageTurnSummaryCommit 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:turnSummaryCommit",
+      "type": "function",
+      "name": "turnSummaryCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "lineRange": [
+        5,
+        23
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 turnSummaryCommit，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:messageTurnSummaryCommit",
+      "type": "function",
+      "name": "messageTurnSummaryCommit",
+      "filePath": "packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "lineRange": [
+        25,
+        47
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 messageTurnSummaryCommit，接收 message、providers 参数；调用 turnSummaryCommit、Locale.titlecase、Locale.duration 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/types.ts",
+      "summary": "汇总命令行会话交互与流式显示层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "cli"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "type": "file",
+      "name": "variant.shared.ts",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "summary": "在命令行会话交互与流式显示层中提供 modelInfo、formatModelLabel、cycleVariant、pickVariant、resolveVariant、createVariantRuntime、resolveSavedVariant；内部处理包含 modelKey、variantKey、modelInfo、formatModelLabel、cycleVariant、pickVariant、fitVariant。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:modelInfo",
+      "type": "function",
+      "name": "modelInfo",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        43,
+        49
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 modelInfo，接收 providers、model 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "function",
+      "name": "formatModelLabel",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        51,
+        59
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 formatModelLabel，接收 model、variant、providers 参数；调用 modelInfo 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:cycleVariant",
+      "type": "function",
+      "name": "cycleVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        61,
+        76
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 cycleVariant，接收 current、variants 参数；调用 variants.indexOf 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:pickVariant",
+      "type": "function",
+      "name": "pickVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 pickVariant，接收 model、input 参数；调用 sessionVariant、Array.isArray、createSession 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:fitVariant",
+      "type": "function",
+      "name": "fitVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        82,
+        92
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 fitVariant，接收 value、variants 参数；调用 variants.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "type": "function",
+      "name": "resolveVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        97,
+        114
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveVariant，接收 input、session、saved、variants 参数；调用 fitVariant 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:state",
+      "type": "function",
+      "name": "state",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        116,
+        137
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 state，接收 value 参数；调用 isRecord、Object.fromEntries、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createLayer",
+      "type": "function",
+      "name": "createLayer",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        139,
+        197
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createLayer，接收 fs 参数；调用 AppNodeBuilder.build、Layer.fresh、Layer.effect、Effect.gen、Effect.fn、file.readJson、Effect.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createVariantRuntime",
+      "type": "function",
+      "name": "createVariantRuntime",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        200,
+        206
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 createVariantRuntime，接收 fs 参数；调用 AppNodeBuilder.build、makeRuntime、createLayer、runtime.runPromise、svc.resolveSavedVariant、svc.saveVariant 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveSavedVariant",
+      "type": "function",
+      "name": "resolveSavedVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        210,
+        212
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 resolveSavedVariant，接收 model 参数；调用 runtime.resolveSavedVariant 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:saveVariant",
+      "type": "function",
+      "name": "saveVariant",
+      "filePath": "packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "lineRange": [
+        214,
+        216
+      ],
+      "summary": "在命令行会话交互与流式显示层中执行 saveVariant，接收 model、variant 参数；调用 runtime.saveVariant 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/locale.ts",
+      "type": "file",
+      "name": "locale.ts",
+      "filePath": "packages/opencode/src/util/locale.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Locale 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "type": "file",
+      "name": "entry.body.test.ts",
+      "filePath": "packages/opencode/test/cli/run/entry.body.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run entry body、renders assistant, reasoning, and user entries in their display formats、keeps running task tool state out of scrollback、promotes task results to markdown and falls back to structured task summaries、streams tool progress text and treats completed progress as done、formats completed bash output with a blank line after the command and no trailing blank row、renders command-only bash star」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolPart",
+      "type": "function",
+      "name": "toolPart",
+      "filePath": "packages/opencode/test/cli/run/entry.body.test.ts",
+      "lineRange": [
+        10,
+        20
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolPart，接收 tool、state、id、messageID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolCommit",
+      "type": "function",
+      "name": "toolCommit",
+      "filePath": "packages/opencode/test/cli/run/entry.body.test.ts",
+      "lineRange": [
+        22,
+        40
+      ],
+      "summary": "在命令行入口与命令执行层中执行 toolCommit，接收 input 参数；调用 commit、toolPart 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/footer.menu.test.ts",
+      "type": "file",
+      "name": "footer.menu.test.ts",
+      "filePath": "packages/opencode/test/cli/run/footer.menu.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「footer menu scrolls before the selected row hits the bottom edge、footer menu scrolls before the selected row hits the top edge」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/footer.menu.test.ts:mount",
+      "type": "function",
+      "name": "mount",
+      "filePath": "packages/opencode/test/cli/run/footer.menu.test.ts",
+      "lineRange": [
+        5,
+        16
+      ],
+      "summary": "在命令行入口与命令执行层中执行 mount，接收 count、limit 参数；调用 createRoot、createFooterMenuState 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:patch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:summarize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceFooterOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceFooterOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/stream.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:inputLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:copyMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:stateUpdatedAt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:frameKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:mergeLiveCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureBlockerTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:cancelSubagentTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCallMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentPermissions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentQuestions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentQuestions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:createSubagentData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:createSubagentData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentTabs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:listSubagentTabs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSubagentData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSubagentData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSelectedSubagentData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:snapshotSelectedSubagentData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session-data.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/subagent-data.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:fade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:ansiToRgba",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:blend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:opaqueSyntaxStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:oklab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:nearestIndexed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateGrayScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateMutedTextColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:quantizeTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:splashTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/theme.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/trace.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:turnSummaryCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:turnSummaryCommit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:messageTurnSummaryCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:messageTurnSummaryCommit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/turn-summary.ts",
+      "target": "file:packages/opencode/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:modelInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:modelInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:cycleVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:cycleVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:pickVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:pickVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:fitVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createVariantRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createVariantRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveSavedVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveSavedVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:saveVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:saveVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/session.shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/run/variant.shared.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/entry.body.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/entry.body.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/footer.menu.test.ts",
+      "target": "function:packages/opencode/test/cli/run/footer.menu.test.ts:mount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/footer.menu.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/footer.menu.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/footer.menu.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceCommit",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:summarize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceFooterOutput",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:patch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/stream.ts:writeSessionOutput",
+      "target": "function:packages/opencode/src/cli/cmd/run/stream.ts:traceSubagentState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolPart",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCommit",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactToolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:inputLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:stateUpdatedAt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:taskTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:mergeLiveCommit",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:frameKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:mergeLiveCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureBlockerTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureBlockerTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:cancelSubagentTab",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:sameSubagentTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCallMap",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:copyMap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:createSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactCallMap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:copyMap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildEvent",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:reduceSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildEvent",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildMessages",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildMessages",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureBlockerTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:compactDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:bootstrapSessionData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapSubagentCalls",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:bootstrapChildMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:syncTaskTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:ensureDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:cancelSubagentTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:appendCommits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/session-data.ts:formatError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:reduceSubagentData",
+      "target": "function:packages/opencode/src/cli/cmd/run/subagent-data.ts:applyChildEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:opaqueSyntaxStyle",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:blend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:nearestIndexed",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:oklab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateMutedTextColor",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateGrayScale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateMutedTextColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:splashTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:nearestIndexed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:opaqueSyntaxStyle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:fade",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:generateSystem",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:quantizeTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:map",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/theme.ts:resolveRunTheme",
+      "target": "function:packages/opencode/src/cli/cmd/run/theme.ts:splashTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/trace.ts:trace",
+      "target": "function:packages/opencode/src/cli/cmd/run/trace.ts:text",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:messageTurnSummaryCommit",
+      "target": "function:packages/opencode/src/cli/cmd/run/turn-summary.ts:turnSummaryCommit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:formatModelLabel",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:modelInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:pickVariant",
+      "target": "function:packages/opencode/src/cli/cmd/run/session.shared.ts:sessionVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:pickVariant",
+      "target": "function:packages/opencode/src/cli/cmd/run/session.shared.ts:createSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:resolveVariant",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:fitVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createLayer",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:state",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createVariantRuntime",
+      "target": "function:packages/opencode/src/effect/run-service.ts:makeRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createVariantRuntime",
+      "target": "function:packages/opencode/src/cli/cmd/run/variant.shared.ts:createLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolCommit",
+      "target": "function:packages/opencode/test/cli/run/entry.body.test.ts:toolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/footer.menu.test.ts:mount",
+      "target": "function:packages/opencode/src/cli/cmd/run/footer.menu.tsx:createFooterMenuState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

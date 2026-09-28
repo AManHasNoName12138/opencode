@@ -1,0 +1,784 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/context/language.tsx",
+      "type": "file",
+      "name": "language.tsx",
+      "filePath": "packages/app/src/context/language.tsx",
+      "summary": "按语言标识加载词典、解析初始语言并提供带插值和复数规则的应用翻译上下文。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/language.tsx:loadDict",
+      "type": "function",
+      "name": "loadDict",
+      "filePath": "packages/app/src/context/language.tsx",
+      "lineRange": [
+        116,
+        125
+      ],
+      "summary": "加载词典，调用 dicts.get、Promise.resolve、load、dicts.set 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/language.tsx:loadLocaleDict",
+      "type": "function",
+      "name": "loadLocaleDict",
+      "filePath": "packages/app/src/context/language.tsx",
+      "lineRange": [
+        127,
+        129
+      ],
+      "summary": "加载语言词典，调用 loadDict 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/language.tsx:normalizeLocale",
+      "type": "function",
+      "name": "normalizeLocale",
+      "filePath": "packages/app/src/context/language.tsx",
+      "lineRange": [
+        136,
+        138
+      ],
+      "summary": "规范化语言，调用 LOCALES.includes 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/language.tsx:readStoredLocale",
+      "type": "function",
+      "name": "readStoredLocale",
+      "filePath": "packages/app/src/context/language.tsx",
+      "lineRange": [
+        140,
+        151
+      ],
+      "summary": "读取Stored语言，调用 localStorage.getItem、normalizeLocale 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/language.tsx:loadInitialLocale",
+      "type": "function",
+      "name": "loadInitialLocale",
+      "filePath": "packages/app/src/context/language.tsx",
+      "lineRange": [
+        162,
+        164
+      ],
+      "summary": "加载初始语言。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/layout-helpers.ts",
+      "type": "file",
+      "name": "layout-helpers.ts",
+      "filePath": "packages/app/src/context/layout-helpers.ts",
+      "summary": "管理布局辅助函数的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 ensureSessionKey、createSessionKeyReader、pruneSessionKeys。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-helpers.ts:ensureSessionKey",
+      "type": "function",
+      "name": "ensureSessionKey",
+      "filePath": "packages/app/src/context/layout-helpers.ts",
+      "lineRange": [
+        3,
+        7
+      ],
+      "summary": "确保会话键，调用 touch、seed 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-helpers.ts:createSessionKeyReader",
+      "type": "function",
+      "name": "createSessionKeyReader",
+      "filePath": "packages/app/src/context/layout-helpers.ts",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "创建会话键Reader，调用 key、ensure 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-helpers.ts:pruneSessionKeys",
+      "type": "function",
+      "name": "pruneSessionKeys",
+      "filePath": "packages/app/src/context/layout-helpers.ts",
+      "lineRange": [
+        18,
+        38
+      ],
+      "summary": "实现 pruneSessionKeys 的布局辅助函数操作，调用 score 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/layout-scroll.test.ts",
+      "type": "file",
+      "name": "layout-scroll.test.ts",
+      "filePath": "packages/app/src/context/layout-scroll.test.ts",
+      "summary": "验证布局滚动相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createScrollPersistence”、“debounces persisted scroll writes”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/layout-scroll.ts",
+      "type": "file",
+      "name": "layout-scroll.ts",
+      "filePath": "packages/app/src/context/layout-scroll.ts",
+      "summary": "管理布局滚动的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 createScrollPersistence。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-scroll.ts:createScrollPersistence",
+      "type": "function",
+      "name": "createScrollPersistence",
+      "filePath": "packages/app/src/context/layout-scroll.ts",
+      "lineRange": [
+        16,
+        126
+      ],
+      "summary": "创建滚动持久化，调用 createStore 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/layout-tabs.test.ts",
+      "type": "file",
+      "name": "layout-tabs.test.ts",
+      "filePath": "packages/app/src/context/layout-tabs.test.ts",
+      "summary": "验证布局标签页相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“previewSessionTab”、“appends the Open File placeholder”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/layout-tabs.ts",
+      "type": "file",
+      "name": "layout-tabs.ts",
+      "filePath": "packages/app/src/context/layout-tabs.ts",
+      "summary": "管理布局标签页的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 SESSION_OPEN_FILE_TAB、previewSessionTab、openSessionTab、closeSessionTab。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-tabs.ts:previewSessionTab",
+      "type": "function",
+      "name": "previewSessionTab",
+      "filePath": "packages/app/src/context/layout-tabs.ts",
+      "lineRange": [
+        16,
+        41
+      ],
+      "summary": "实现 previewSessionTab 的布局标签页操作，调用 sessionTabPreview、current.tabs.all.indexOf、current.tabs.all.filter、current.tabs.all.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-tabs.ts:openSessionTab",
+      "type": "function",
+      "name": "openSessionTab",
+      "filePath": "packages/app/src/context/layout-tabs.ts",
+      "lineRange": [
+        43,
+        80
+      ],
+      "summary": "打开会话标签页，调用 sessionTabPreview、current.tabs.all.filter、current.tabs.all.indexOf、current.tabs.all.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout-tabs.ts:closeSessionTab",
+      "type": "function",
+      "name": "closeSessionTab",
+      "filePath": "packages/app/src/context/layout-tabs.ts",
+      "lineRange": [
+        82,
+        103
+      ],
+      "summary": "关闭会话标签页，调用 current.tabs.all.filter、current.tabs.all.indexOf 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/layout.test.ts",
+      "type": "file",
+      "name": "layout.test.ts",
+      "filePath": "packages/app/src/context/layout.test.ts",
+      "summary": "验证布局相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“layout session-key helpers”、“couples touch and scroll seed in order”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "packages/app/src/context/layout.tsx",
+      "summary": "管理布局的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 createSessionKeyReader、ensureSessionKey、pruneSessionKeys、ProjectAvatarVariant、getAvatarColors、getProjectAvatarVariant。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/context/layout.tsx:getAvatarColors",
+      "type": "function",
+      "name": "getAvatarColors",
+      "filePath": "packages/app/src/context/layout.tsx",
+      "lineRange": [
+        37,
+        48
+      ],
+      "summary": "读取头像Colors，调用 AVATAR_COLOR_KEYS.includes 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout.tsx:getProjectAvatarVariant",
+      "type": "function",
+      "name": "getProjectAvatarVariant",
+      "filePath": "packages/app/src/context/layout.tsx",
+      "lineRange": [
+        50,
+        66
+      ],
+      "summary": "读取项目头像Variant，输入包括 key。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/layout.tsx:currentRoute",
+      "type": "function",
+      "name": "currentRoute",
+      "filePath": "packages/app/src/context/layout.tsx",
+      "lineRange": [
+        130,
+        157
+      ],
+      "summary": "实现 currentRoute 的布局操作，调用 pathname.split、requireServerKey、decode64 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/local-agent.test.ts",
+      "type": "file",
+      "name": "local-agent.test.ts",
+      "filePath": "packages/app/src/context/local-agent.test.ts",
+      "summary": "验证本地代理相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“hasCustomAgent”、“detects explicitly custom agents”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:loadDict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:loadLocaleDict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:loadLocaleDict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:normalizeLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:normalizeLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:readStoredLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:loadInitialLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "function:packages/app/src/context/language.tsx:loadInitialLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "file:packages/app/src/i18n/desktop-native.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "file:packages/app/src/i18n/en.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/language.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/language.tsx:loadLocaleDict",
+      "target": "function:packages/app/src/context/language.tsx:loadDict",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/language.tsx:readStoredLocale",
+      "target": "function:packages/app/src/context/language.tsx:normalizeLocale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:ensureSessionKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:ensureSessionKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:createSessionKeyReader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:createSessionKeyReader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:pruneSessionKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "function:packages/app/src/context/layout-helpers.ts:pruneSessionKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-scroll.test.ts",
+      "target": "file:packages/app/src/context/layout-scroll.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout-scroll.ts",
+      "target": "file:packages/app/src/context/layout-scroll.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/layout-scroll.ts",
+      "target": "function:packages/app/src/context/layout-scroll.ts:createScrollPersistence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-scroll.ts",
+      "target": "function:packages/app/src/context/layout-scroll.ts:createScrollPersistence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.test.ts",
+      "target": "file:packages/app/src/context/layout-tabs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "file:packages/app/src/context/layout-tabs.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:previewSessionTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:previewSessionTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:openSessionTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:openSessionTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:closeSessionTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout-tabs.ts",
+      "target": "function:packages/app/src/context/layout-tabs.ts:closeSessionTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout.test.ts",
+      "target": "file:packages/app/src/context/layout-helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout-helpers.ts",
+      "target": "file:packages/app/src/context/layout.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:getAvatarColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:getAvatarColors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:getProjectAvatarVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:getProjectAvatarVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:currentRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "function:packages/app/src/context/layout.tsx:currentRoute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/file/path.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/layout-helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/layout-scroll.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/layout-tabs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/base64.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/same.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/layout.tsx",
+      "target": "file:packages/app/src/utils/session-route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/layout.tsx:currentRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:requireServerKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/layout.tsx:currentRoute",
+      "target": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/local-agent.test.ts",
+      "target": "file:packages/app/src/context/local-agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

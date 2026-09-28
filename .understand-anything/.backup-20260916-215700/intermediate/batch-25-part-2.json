@@ -1,0 +1,1088 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "file",
+      "name": "instance-state.ts",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 context、workspaceID、directory、make、get、use、useEffect；内部处理包含 make、get、use、useEffect、has、invalidate。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        26,
+        45
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 make，接收 init 参数；调用 Effect.gen、ScopedCache.make、init、registerDisposer、Effect.runPromise、ScopedCache.invalidate、Effect.addFinalizer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        47,
+        50
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 get，接收 self 参数；调用 Effect.gen、ScopedCache.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:use",
+      "type": "function",
+      "name": "use",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        52,
+        52
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 use，接收 self、select 参数；调用 Effect.map、get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:useEffect",
+      "type": "function",
+      "name": "useEffect",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        54,
+        57
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 useEffect，接收 self、select 参数；调用 Effect.flatMap、get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:has",
+      "type": "function",
+      "name": "has",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        59,
+        62
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 has，接收 self 参数；调用 Effect.gen、ScopedCache.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/instance-state.ts:invalidate",
+      "type": "function",
+      "name": "invalidate",
+      "filePath": "packages/opencode/src/effect/instance-state.ts",
+      "lineRange": [
+        64,
+        67
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 invalidate，接收 self 参数；调用 Effect.gen、ScopedCache.invalidate 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/promise.ts",
+      "type": "file",
+      "name": "promise.ts",
+      "filePath": "packages/opencode/src/effect/promise.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 refineRejection 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/promise.ts:refineRejection",
+      "type": "function",
+      "name": "refineRejection",
+      "filePath": "packages/opencode/src/effect/promise.ts",
+      "lineRange": [
+        3,
+        15
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 refineRejection，接收 evaluate、refine 参数；调用 Effect.tryPromise、Effect.catch、Cause.isUnknownError、refine、Effect.fail、Effect.die 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/run-service.ts",
+      "type": "file",
+      "name": "run-service.ts",
+      "filePath": "packages/opencode/src/effect/run-service.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 attachWith、attach、makeRuntime 等接口。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/run-service.ts:attachWith",
+      "type": "function",
+      "name": "attachWith",
+      "filePath": "packages/opencode/src/effect/run-service.ts",
+      "lineRange": [
+        14,
+        22
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 attachWith，接收 effect、refs 参数；调用 effect.pipe、Effect.provideService 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/run-service.ts:attach",
+      "type": "function",
+      "name": "attach",
+      "filePath": "packages/opencode/src/effect/run-service.ts",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 attach，接收 effect 参数；调用 Fiber.getCurrent、attachWith、Context.getReferenceUnsafe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/run-service.ts:makeRuntime",
+      "type": "function",
+      "name": "makeRuntime",
+      "filePath": "packages/opencode/src/effect/run-service.ts",
+      "lineRange": [
+        33,
+        47
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 makeRuntime，接收 service、layer 参数；调用 getRuntime、attach、service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/runner.ts",
+      "type": "file",
+      "name": "runner.ts",
+      "filePath": "packages/opencode/src/effect/runner.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 Cancelled、Busy、make；内部处理包含 make。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/runner.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/opencode/src/effect/runner.ts",
+      "lineRange": [
+        39,
+        215
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 make，接收 scope、opts 参数；调用 SynchronizedRef.makeUnsafe、SynchronizedRef.modify、Effect.gen、Fiber.interrupt、Deferred.fail、idleIfCurrent、stopShell 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/effect/runner.ts:Cancelled",
+      "type": "class",
+      "name": "Cancelled",
+      "filePath": "packages/opencode/src/effect/runner.ts",
+      "lineRange": [
+        11,
+        11
+      ],
+      "summary": "在Effect 服务与运行时装配层中定义 Cancelled 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/effect/runner.ts:Busy",
+      "type": "class",
+      "name": "Busy",
+      "filePath": "packages/opencode/src/effect/runner.ts",
+      "lineRange": [
+        12,
+        12
+      ],
+      "summary": "在Effect 服务与运行时装配层中定义 Busy 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "file",
+      "name": "runtime-flags.ts",
+      "filePath": "packages/opencode/src/effect/runtime-flags.ts",
+      "summary": "在Effect 服务与运行时装配层中提供 Service、layer、node；内部处理包含 bool、positiveInteger、enabledByExperimental、layer。",
+      "tags": [
+        "typescript",
+        "effect",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/effect/runtime-flags.ts:layer",
+      "type": "function",
+      "name": "layer",
+      "filePath": "packages/opencode/src/effect/runtime-flags.ts",
+      "lineRange": [
+        66,
+        73
+      ],
+      "summary": "在Effect 服务与运行时装配层中执行 layer，接收 overrides 参数；调用 Layer.effect、Effect.gen、Service.of、Layer.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/effect/runtime-flags.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/effect/runtime-flags.ts",
+      "lineRange": [
+        16,
+        57
+      ],
+      "summary": "在Effect 服务与运行时装配层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/env/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/env/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Service、use、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/env/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/env/index.ts",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/event-manifest.ts",
+      "type": "file",
+      "name": "event-manifest.ts",
+      "filePath": "packages/opencode/src/event-manifest.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Definitions、Durable、Latest 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "file",
+      "name": "event-v2-bridge.ts",
+      "filePath": "packages/opencode/src/event-v2-bridge.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/event-v2-bridge.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/event-v2-bridge.ts",
+      "lineRange": [
+        12,
+        12
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/format/formatter.ts",
+      "type": "file",
+      "name": "formatter.ts",
+      "filePath": "packages/opencode/src/format/formatter.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 gofmt、mix、prettier、oxfmt、biome、zig、clang 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/format/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/format/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Status、Service、use、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/format/index.ts",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/git/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/git/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Service、node；内部处理包含 out、nuls、fail、kind。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/git/index.ts",
+      "lineRange": [
+        101,
+        101
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/id/id.ts",
+      "type": "file",
+      "name": "id.ts",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 ascending、descending、create、timestamp；内部处理包含 ascending、descending、generateID、randomBase62、create、timestamp。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "function",
+      "name": "ascending",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 ascending，接收 prefix、given 参数；调用 generateID 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "function",
+      "name": "descending",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 descending，接收 prefix、given 参数；调用 generateID 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "function",
+      "name": "generateID",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 generateID，接收 prefix、direction、given 参数；调用 create、given.startsWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        51,
+        70
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 create，接收 prefix、direction、timestamp 参数；调用 Date.now、BigInt、Buffer.alloc、Number、timeBytes.toString、randomBase62 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "function",
+      "name": "timestamp",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        73,
+        78
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 timestamp，接收 id 参数；调用 id.split、id.slice、BigInt、Number 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:use",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:use",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:useEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:useEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:has",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:has",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:invalidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:invalidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "file:packages/opencode/src/effect/instance-registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/instance-state.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/promise.ts",
+      "target": "function:packages/opencode/src/effect/promise.ts:refineRejection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/promise.ts",
+      "target": "function:packages/opencode/src/effect/promise.ts:refineRejection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attachWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attachWith",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attach",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attach",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:makeRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "function:packages/opencode/src/effect/run-service.ts:makeRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/run-service.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "function:packages/opencode/src/effect/runner.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "function:packages/opencode/src/effect/runner.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "class:packages/opencode/src/effect/runner.ts:Cancelled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "class:packages/opencode/src/effect/runner.ts:Cancelled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "class:packages/opencode/src/effect/runner.ts:Busy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runner.ts",
+      "target": "class:packages/opencode/src/effect/runner.ts:Busy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "target": "function:packages/opencode/src/effect/runtime-flags.ts:layer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "target": "function:packages/opencode/src/effect/runtime-flags.ts:layer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "target": "class:packages/opencode/src/effect/runtime-flags.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "target": "class:packages/opencode/src/effect/runtime-flags.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "target": "file:packages/opencode/src/effect/config-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/env/index.ts",
+      "target": "class:packages/opencode/src/env/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/env/index.ts",
+      "target": "class:packages/opencode/src/env/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/env/index.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/event-v2-bridge.ts",
+      "target": "class:packages/opencode/src/event-v2-bridge.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/event-v2-bridge.ts",
+      "target": "class:packages/opencode/src/event-v2-bridge.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/event-v2-bridge.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/event-v2-bridge.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/format/formatter.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/git/index.ts",
+      "target": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/git/index.ts",
+      "target": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/effect/instance-state.ts:make",
+      "target": "function:packages/opencode/src/effect/instance-registry.ts:registerDisposer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/effect/instance-state.ts:use",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/effect/instance-state.ts:useEffect",
+      "target": "function:packages/opencode/src/effect/instance-state.ts:get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/effect/run-service.ts:attach",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attachWith",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/effect/run-service.ts:makeRuntime",
+      "target": "function:packages/opencode/src/effect/run-service.ts:attach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:ascending",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:descending",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:generateID",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,790 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/cli/src/commands/commands.ts",
+      "type": "file",
+      "name": "commands.ts",
+      "filePath": "packages/cli/src/commands/commands.ts",
+      "summary": "预览命令行的命令定义实现模块，提供 Commands。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "命令定义"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/api.test.ts",
+      "type": "file",
+      "name": "api.test.ts",
+      "filePath": "packages/cli/src/commands/handlers/api.test.ts",
+      "summary": "验证预览命令行的API 调用行为，覆盖 api request resolution；resolves an operation ID with path and query parameters；rejects a missing path parameter；resolves curl-like method and path input。",
+      "tags": [
+        "测试",
+        "预览命令行",
+        "API 调用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/cli/src/commands/handlers/api.ts",
+      "summary": "预览命令行的API 调用实现模块，提供 resolveOperation、rawRequest。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "API 调用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/cli/src/commands/handlers/api.ts:resolveOperation",
+      "type": "function",
+      "name": "resolveOperation",
+      "filePath": "packages/cli/src/commands/handlers/api.ts",
+      "lineRange": [
+        45,
+        53
+      ],
+      "summary": "预览命令行的API 调用处理函数 resolveOperation，调用 methods.has、method.toUpperCase、interpolate 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/commands/handlers/api.ts:rawRequest",
+      "type": "function",
+      "name": "rawRequest",
+      "filePath": "packages/cli/src/commands/handlers/api.ts",
+      "lineRange": [
+        55,
+        58
+      ],
+      "summary": "预览命令行的API 调用处理函数 rawRequest，调用 methods.has 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/commands/handlers/api.ts:resolveRequest",
+      "type": "function",
+      "name": "resolveRequest",
+      "filePath": "packages/cli/src/commands/handlers/api.ts",
+      "lineRange": [
+        60,
+        73
+      ],
+      "summary": "预览命令行的API 调用处理函数 resolveRequest，调用 rawRequest、Effect.succeed、Effect.fail、Effect.tryPromise、fetch 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/commands/handlers/api.ts:interpolate",
+      "type": "function",
+      "name": "interpolate",
+      "filePath": "packages/cli/src/commands/handlers/api.ts",
+      "lineRange": [
+        75,
+        85
+      ],
+      "summary": "预览命令行的API 调用处理函数 interpolate，调用 path.replaceAll、used.add、encodeURIComponent、used.has 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/debug/agents.ts",
+      "type": "file",
+      "name": "agents.ts",
+      "filePath": "packages/cli/src/commands/handlers/debug/agents.ts",
+      "summary": "预览命令行的agents实现模块，配置 os、effect/Effect、../../commands 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "agents"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/default.ts",
+      "type": "file",
+      "name": "default.ts",
+      "filePath": "packages/cli/src/commands/handlers/default.ts",
+      "summary": "预览命令行的默认命令实现模块，配置 ../commands、../../framework/runtime、effect 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "默认命令"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/migrate.ts",
+      "type": "file",
+      "name": "migrate.ts",
+      "filePath": "packages/cli/src/commands/handlers/migrate.ts",
+      "summary": "预览命令行的数据迁移实现模块，配置 effect/Effect、../commands、../../framework/runtime 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "数据迁移"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/serve.ts",
+      "type": "file",
+      "name": "serve.ts",
+      "filePath": "packages/cli/src/commands/handlers/serve.ts",
+      "summary": "预览命令行的启动 HTTP 服务实现模块，提供 listen、bind。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "启动 HTTP 服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/service/password.ts",
+      "type": "file",
+      "name": "password.ts",
+      "filePath": "packages/cli/src/commands/handlers/service/password.ts",
+      "summary": "预览命令行的服务密码实现模块，配置 os、effect、effect/Effect 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "服务密码"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/service/restart.ts",
+      "type": "file",
+      "name": "restart.ts",
+      "filePath": "packages/cli/src/commands/handlers/service/restart.ts",
+      "summary": "预览命令行的重启服务实现模块，配置 os、effect/Effect、../../commands 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "重启服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/service/start.ts",
+      "type": "file",
+      "name": "start.ts",
+      "filePath": "packages/cli/src/commands/handlers/service/start.ts",
+      "summary": "预览命令行的启动服务实现模块，配置 os、effect/Effect、../../commands 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "启动服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/service/status.ts",
+      "type": "file",
+      "name": "status.ts",
+      "filePath": "packages/cli/src/commands/handlers/service/status.ts",
+      "summary": "预览命令行的服务状态实现模块，配置 os、effect/Effect、../../commands 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "服务状态"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/commands/handlers/service/stop.ts",
+      "type": "file",
+      "name": "stop.ts",
+      "filePath": "packages/cli/src/commands/handlers/service/stop.ts",
+      "summary": "预览命令行的停止服务实现模块，配置 effect/Effect、../../commands、../../../framework/runtime 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "停止服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/framework/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/cli/src/framework/runtime.ts",
+      "summary": "预览命令行的运行时实现模块，提供 handler、handlers、run。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "运行时"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/cli/src/framework/runtime.ts:handler",
+      "type": "function",
+      "name": "handler",
+      "filePath": "packages/cli/src/framework/runtime.ts",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "预览命令行的运行时处理函数 handler，接收 _node、run 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/framework/runtime.ts:handlers",
+      "type": "function",
+      "name": "handlers",
+      "filePath": "packages/cli/src/framework/runtime.ts",
+      "lineRange": [
+        42,
+        56
+      ],
+      "summary": "预览命令行的运行时处理函数 handlers，调用 add 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/framework/runtime.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/cli/src/framework/runtime.ts",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "预览命令行的运行时处理函数 run，调用 Command.run、provide 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/framework/runtime.ts:provide",
+      "type": "function",
+      "name": "provide",
+      "filePath": "packages/cli/src/framework/runtime.ts",
+      "lineRange": [
+        62,
+        77
+      ],
+      "summary": "预览命令行的运行时处理函数 provide，调用 handlers.find、node.spec.pipe、Command.withHandler、Effect.gen、Effect.flatMap 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/framework/spec.ts",
+      "type": "file",
+      "name": "spec.ts",
+      "filePath": "packages/cli/src/framework/spec.ts",
+      "summary": "预览命令行的命令规范实现模块，提供 make。",
+      "tags": [
+        "测试",
+        "预览命令行",
+        "命令规范"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/cli/src/framework/spec.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/cli/src/framework/spec.ts",
+      "lineRange": [
+        22,
+        36
+      ],
+      "summary": "预览命令行的命令规范处理函数 make，调用 Command.make、command.pipe、Command.withDescription 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/cli/src/index.ts",
+      "summary": "预览命令行的index公开入口，配置 @effect/platform-node/NodeRuntime、@effect/platform-node/NodeServices、effect/Effect 相关模块。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "index"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/cli/src/services/daemon.ts",
+      "type": "file",
+      "name": "daemon.ts",
+      "filePath": "packages/cli/src/services/daemon.ts",
+      "summary": "预览命令行的后台服务管理实现模块，提供 Service、layer。",
+      "tags": [
+        "接口实现",
+        "预览命令行",
+        "后台服务管理"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/cli/src/services/daemon.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/cli/src/services/daemon.ts",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "预览命令行的后台服务管理类型 Service，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "预览命令行"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/cli/src/commands/commands.ts",
+      "target": "file:packages/cli/src/framework/spec.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.test.ts",
+      "target": "file:packages/cli/src/commands/handlers/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "file:packages/cli/src/commands/handlers/api.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:resolveOperation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:resolveOperation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:rawRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:rawRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:resolveRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:interpolate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/cli/src/commands/handlers/api.ts:resolveOperation",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:interpolate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/cli/src/commands/handlers/api.ts:resolveRequest",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:rawRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/cli/src/commands/handlers/api.ts:resolveRequest",
+      "target": "function:packages/cli/src/commands/handlers/api.ts:resolveOperation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/api.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/debug/agents.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/debug/agents.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/debug/agents.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/default.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/default.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/default.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/migrate.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/migrate.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/serve.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/serve.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/serve.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/password.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/password.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/password.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/restart.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/restart.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/restart.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/start.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/start.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/start.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/status.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/status.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/status.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/stop.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/stop.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/commands/handlers/service/stop.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:handler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:handler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:handlers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:handlers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "function:packages/cli/src/framework/runtime.ts:provide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/cli/src/framework/runtime.ts:run",
+      "target": "function:packages/cli/src/framework/runtime.ts:provide",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "file:packages/cli/src/framework/spec.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/framework/runtime.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/framework/spec.ts",
+      "target": "function:packages/cli/src/framework/spec.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/framework/spec.ts",
+      "target": "function:packages/cli/src/framework/spec.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/cli/src/index.ts",
+      "target": "file:packages/cli/src/commands/commands.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/index.ts",
+      "target": "file:packages/cli/src/framework/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/index.ts",
+      "target": "file:packages/cli/src/services/daemon.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/cli/src/services/daemon.ts",
+      "target": "class:packages/cli/src/services/daemon.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/cli/src/services/daemon.ts",
+      "target": "class:packages/cli/src/services/daemon.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

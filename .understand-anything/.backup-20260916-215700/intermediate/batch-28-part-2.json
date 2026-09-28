@@ -1,0 +1,607 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "type": "file",
+      "name": "workspace.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "summary": "实现 adapters、list、create、syncList、status、remove、warp 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 workspaceHandlers。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "type": "file",
+      "name": "lifecycle.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 markInstanceForDisposal、markInstanceForReload、disposeMiddleware；内部处理包含 mark、markInstanceForDisposal、markInstanceForReload、disposeMiddleware。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForDisposal",
+      "type": "function",
+      "name": "markInstanceForDisposal",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "lineRange": [
+        23,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 markInstanceForDisposal，接收 ctx 参数；调用 Effect.gen、mark、HttpEffect.appendPreResponseHandler、Effect.sync、disposeAfterResponse.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForReload",
+      "type": "function",
+      "name": "markInstanceForReload",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 markInstanceForReload，接收 ctx、next 参数；调用 Effect.gen、mark、HttpEffect.appendPreResponseHandler、Effect.as、Effect.uninterruptible、marked.bridge.run、marked.store.reload 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:disposeMiddleware",
+      "type": "function",
+      "name": "disposeMiddleware",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "lineRange": [
+        43,
+        54
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 disposeMiddleware，接收 effect 参数；调用 Effect.gen、disposeAfterResponse.get、disposeAfterResponse.delete、Effect.uninterruptible、marked.bridge.run、marked.store.dispose、Effect.catchCause 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "type": "file",
+      "name": "authorization.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "summary": "在请求上下文与中间件层中提供 ServerAuthorization、serverAuthorizationLayer、Authorization、PtyConnectAuthorization、authorizationRouterMiddleware、authorizationLayer、ptyConnectAuthorizationLayer；内部处理包含 emptyCredential、validateCredential、decodeCredential、credentialFromRequest、credentialFromURL、validateRawCredential。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:validateCredential",
+      "type": "function",
+      "name": "validateCredential",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "lineRange": [
+        40,
+        55
+      ],
+      "summary": "在请求上下文与中间件层中执行 validateCredential，接收 effect、credential、config 参数；调用 Effect.gen、ServerAuth.required、ServerAuth.authorized、HttpEffect.appendPreResponseHandler、Effect.succeed、HttpServerResponse.setHeader 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:decodeCredential",
+      "type": "function",
+      "name": "decodeCredential",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "lineRange": [
+        57,
+        71
+      ],
+      "summary": "在请求上下文与中间件层中执行 decodeCredential，接收 input 参数；调用 Effect.fromResult、Encoding.decodeBase64String、Effect.match、header.indexOf、emptyCredential、header.slice、Redacted.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:validateRawCredential",
+      "type": "function",
+      "name": "validateRawCredential",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "lineRange": [
+        85,
+        99
+      ],
+      "summary": "在请求上下文与中间件层中执行 validateRawCredential，接收 effect、credential、config 参数；调用 ServerAuth.required、ServerAuth.authorized、Effect.succeed、HttpServerResponse.empty 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:Authorization",
+      "type": "class",
+      "name": "Authorization",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "lineRange": [
+        19,
+        24
+      ],
+      "summary": "在请求上下文与中间件层中定义 Authorization 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:PtyConnectAuthorization",
+      "type": "class",
+      "name": "PtyConnectAuthorization",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "在请求上下文与中间件层中定义 PtyConnectAuthorization 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/compression.ts",
+      "type": "file",
+      "name": "compression.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/compression.ts",
+      "summary": "在请求上下文与中间件层中提供 compressionLayer；内部处理包含 pickEncoding、pathOf。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/cors-vary.ts",
+      "type": "file",
+      "name": "cors-vary.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/cors-vary.ts",
+      "summary": "在请求上下文与中间件层中提供 corsVaryFix 等接口。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/error.ts",
+      "type": "file",
+      "name": "error.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/error.ts",
+      "summary": "在请求上下文与中间件层中提供 errorLayer 等接口。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/fence.ts",
+      "type": "file",
+      "name": "fence.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/fence.ts",
+      "summary": "在请求上下文与中间件层中提供 fenceLayer 等接口。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "type": "file",
+      "name": "instance-context.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "summary": "在请求上下文与中间件层中提供 InstanceContextMiddleware、instanceContextLayer；内部处理包含 decode、provideInstanceContext。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts:provideInstanceContext",
+      "type": "function",
+      "name": "provideInstanceContext",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "lineRange": [
+        23,
+        35
+      ],
+      "summary": "在请求上下文与中间件层中执行 provideInstanceContext，接收 effect、store 参数；调用 Effect.gen、store.load、decode、effect.pipe、Effect.provideService 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts:InstanceContextMiddleware",
+      "type": "class",
+      "name": "InstanceContextMiddleware",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "在请求上下文与中间件层中定义 InstanceContextMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "type": "file",
+      "name": "proxy.ts",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "summary": "在请求上下文与中间件层中提供 websocket、http；内部处理包含 requestBody、websocket、statusText、http。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:websocket",
+      "type": "function",
+      "name": "websocket",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "lineRange": [
+        14,
+        77
+      ],
+      "summary": "在请求上下文与中间件层中执行 websocket，接收 request、target 参数；调用 Effect.scoped、Effect.gen、Effect.orDie、Socket.makeWebSocket、ProxyUtil.websocketTargetURL、ProxyUtil.websocketProtocols、Effect.all 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:http",
+      "type": "function",
+      "name": "http",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "lineRange": [
+        83,
+        129
+      ],
+      "summary": "在请求上下文与中间件层中执行 http，接收 client、url、extra、request 参数；调用 Effect.gen、client.execute、HttpClientRequest.make、ProxyUtil.headers、requestBody、headers.delete、response.text.pipe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/handlers/workspace.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForDisposal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForDisposal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForReload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:markInstanceForReload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:disposeMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts:disposeMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/lifecycle.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:validateCredential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:decodeCredential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:validateRawCredential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:Authorization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:Authorization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:PtyConnectAuthorization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts:PtyConnectAuthorization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "file:packages/opencode/src/server/shared/pty-ticket.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/authorization.ts",
+      "target": "file:packages/opencode/src/server/shared/public-ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/fence.ts",
+      "target": "file:packages/opencode/src/server/shared/fence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts:provideInstanceContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts:InstanceContextMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "class:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts:InstanceContextMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/instance-context.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:websocket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:websocket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:http",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "function:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts:http",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "file:packages/opencode/src/server/proxy-util.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/proxy.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/websocket-tracker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "nodes": [
+    {
+      "id": "file:specs/v2/api.html",
+      "type": "file",
+      "name": "api.html",
+      "filePath": "specs/v2/api.html",
+      "summary": "OpenCode的API 调用实现模块，配置  相关模块。",
+      "tags": [
+        "测试",
+        "OpenCode",
+        "API 调用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/catalog-config-plugin-lifecycle.md",
+      "type": "document",
+      "name": "catalog-config-plugin-lifecycle.md",
+      "filePath": "specs/v2/catalog-config-plugin-lifecycle.md",
+      "summary": "V2 架构文档，说明Catalog 转换、配置处理和插件重载顺序及设计场景。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "catalog-config-plugin-lifecycle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/config.md",
+      "type": "document",
+      "name": "config.md",
+      "filePath": "specs/v2/config.md",
+      "summary": "V2 架构文档，说明V2 配置迁移审查，按进程、资源、插件、工具、模型、权限和会话生命周期分组记录现状。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "配置"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/instructions.md",
+      "type": "document",
+      "name": "instructions.md",
+      "filePath": "specs/v2/instructions.md",
+      "summary": "V2 架构文档，说明Core 服务形态、插件 hook、依赖边界、Schema、状态和事件的实现约定。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "instructions"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:specs/v2/provider-model.md",
+      "type": "document",
+      "name": "provider-model.md",
+      "filePath": "specs/v2/provider-model.md",
+      "summary": "V2 架构文档，说明提供商与模型 Schema、Catalog 接口、runner 适配和插件顺序。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "provider-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/provider-policy.md",
+      "type": "document",
+      "name": "provider-policy.md",
+      "filePath": "specs/v2/provider-policy.md",
+      "summary": "V2 架构文档，说明提供商策略语句、匹配与排序、组织规则和旧配置迁移。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "provider-policy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/schema-changelog.md",
+      "type": "document",
+      "name": "schema-changelog.md",
+      "filePath": "specs/v2/schema-changelog.md",
+      "summary": "V2 架构文档，说明当前协议与持久化 Schema 的变更历史，包括输入提升、压缩、上下文纪元和进程中断。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "schema-changelog"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:specs/v2/session.md",
+      "type": "document",
+      "name": "session.md",
+      "filePath": "specs/v2/session.md",
+      "summary": "V2 架构文档，说明持久 Session API、Context Epoch、自动压缩、工具注册及 V1 上下文对齐的实现状态。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:specs/v2/todo.md",
+      "type": "document",
+      "name": "todo.md",
+      "filePath": "specs/v2/todo.md",
+      "summary": "V2 架构文档，说明V2 迁移中的后续工作和待定设计。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "todo"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:specs/v2/tools.md",
+      "type": "document",
+      "name": "tools.md",
+      "filePath": "specs/v2/tools.md",
+      "summary": "V2 架构文档，说明规范工具表示、调用上下文、注册、执行、输出限制和错误语义。",
+      "tags": [
+        "文档",
+        "OpenCode",
+        "tools"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:specs/v2/config.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/config.md",
+      "target": "document:specs/v2/provider-policy.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/schema-changelog.md",
+      "target": "file:packages/core/src/session/event.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/schema-changelog.md",
+      "target": "file:packages/core/src/session/message.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/schema-changelog.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/schema-changelog.md",
+      "target": "document:specs/v2/session.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/session.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/session.md",
+      "target": "document:CONTEXT.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

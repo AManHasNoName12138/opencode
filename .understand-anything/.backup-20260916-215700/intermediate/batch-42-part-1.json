@@ -1,0 +1,1393 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/tui/src/context/sync.tsx",
+      "type": "file",
+      "name": "sync.tsx",
+      "filePath": "packages/tui/src/context/sync.tsx",
+      "summary": "管理同步的共享状态与读取接口，为 tui 下游组件提供上下文。 对外提供 { context: SyncContext, use: useSync, provider: SyncProvider, }。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/context/sync.tsx:search",
+      "type": "function",
+      "name": "search",
+      "filePath": "packages/tui/src/context/sync.tsx",
+      "lineRange": [
+        41,
+        52
+      ],
+      "summary": "实现 search 的同步操作，调用 key 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/context/theme.tsx",
+      "type": "file",
+      "name": "theme.tsx",
+      "filePath": "packages/tui/src/context/theme.tsx",
+      "summary": "管理主题的共享状态与读取接口，为 tui 下游组件提供上下文。 对外提供 discoverThemes、DEFAULT_THEMES、addTheme、allThemes、generateSubtleSyntax、generateSyntax。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/context/theme.tsx:discoverThemes",
+      "type": "function",
+      "name": "discoverThemes",
+      "filePath": "packages/tui/src/context/theme.tsx",
+      "lineRange": [
+        52,
+        61
+      ],
+      "summary": "实现 discoverThemes 的主题操作，调用 Glob.scan、path.basename、readFile 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/theme.tsx:createSyntaxStyleMemo",
+      "type": "function",
+      "name": "createSyntaxStyleMemo",
+      "filePath": "packages/tui/src/context/theme.tsx",
+      "lineRange": [
+        306,
+        332
+      ],
+      "summary": "创建SyntaxStyleMemo，调用 useRenderer、onCleanup、release、createMemo 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/context/thinking.ts",
+      "type": "file",
+      "name": "thinking.ts",
+      "filePath": "packages/tui/src/context/thinking.ts",
+      "summary": "管理思考的共享状态与读取接口，为 tui 下游组件提供上下文。 对外提供 reasoningSummary、isThinkingMode、nextThinkingMode、useThinkingMode。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/context/thinking.ts:reasoningSummary",
+      "type": "function",
+      "name": "reasoningSummary",
+      "filePath": "packages/tui/src/context/thinking.ts",
+      "lineRange": [
+        12,
+        17
+      ],
+      "summary": "实现 reasoningSummary 的思考操作，调用 text.trim、content.match、content.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/thinking.ts:isThinkingMode",
+      "type": "function",
+      "name": "isThinkingMode",
+      "filePath": "packages/tui/src/context/thinking.ts",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "判断思考Mode，输入包括 value。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/thinking.ts:nextThinkingMode",
+      "type": "function",
+      "name": "nextThinkingMode",
+      "filePath": "packages/tui/src/context/thinking.ts",
+      "lineRange": [
+        24,
+        27
+      ],
+      "summary": "实现 nextThinkingMode 的思考操作，调用 MODES.indexOf 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/thinking.ts:useThinkingMode",
+      "type": "function",
+      "name": "useThinkingMode",
+      "filePath": "packages/tui/src/context/thinking.ts",
+      "lineRange": [
+        29,
+        67
+      ],
+      "summary": "连接思考Mode，调用 useKV、kv.get、kv.signal、set 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/editor-zed.ts",
+      "type": "file",
+      "name": "editor-zed.ts",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "summary": "识别 Zed 终端环境并读取编辑器数据库，将选区偏移转换为行列位置。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "type": "function",
+      "name": "resolveZedSelection",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        41,
+        87
+      ],
+      "summary": "解析Zed选择，调用 process.cwd、queryZedActiveEditor、queryZedEditorSelections、queryZedEditorContents 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:queryZedActiveEditor",
+      "type": "function",
+      "name": "queryZedActiveEditor",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        89,
+        131
+      ],
+      "summary": "实现 queryZedActiveEditor 的editorzed操作，调用 raw.flatMap、decodeZedEditorRow、Option.isSome、scoreZedWorkspace 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:queryZedEditorSelections",
+      "type": "function",
+      "name": "queryZedEditorSelections",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        133,
+        159
+      ],
+      "summary": "实现 queryZedEditorSelections 的editorzed操作，调用 raw.flatMap、decodeZedSelectionRow、Option.isSome、db?.close 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:queryZedEditorContents",
+      "type": "function",
+      "name": "queryZedEditorContents",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        161,
+        181
+      ],
+      "summary": "实现 queryZedEditorContents 的editorzed操作，调用 decodeZedEditorContents、Option.isNone、db?.close 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:resolveZedDbPath",
+      "type": "function",
+      "name": "resolveZedDbPath",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        187,
+        195
+      ],
+      "summary": "解析ZedDb路径，调用 path.join、os.homedir、Boolean、candidates.find 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:isZedTerminal",
+      "type": "function",
+      "name": "isZedTerminal",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        197,
+        199
+      ],
+      "summary": "判断Zed终端，调用 process.env.TERM_PROGRAM?.toLowerCase 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:offsetToPosition",
+      "type": "function",
+      "name": "offsetToPosition",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        223,
+        226
+      ],
+      "summary": "实现 offsetToPosition 的editorzed操作，调用 utf8ByteOffsetToStringIndex、offsetsToSelection 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:utf8ByteOffsetToStringIndex",
+      "type": "function",
+      "name": "utf8ByteOffsetToStringIndex",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        228,
+        243
+      ],
+      "summary": "实现 utf8ByteOffsetToStringIndex 的editorzed操作，调用 text.codePointAt、utf8.encode、text.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor-zed.ts:offsetsToSelection",
+      "type": "function",
+      "name": "offsetsToSelection",
+      "filePath": "packages/tui/src/editor-zed.ts",
+      "lineRange": [
+        245,
+        266
+      ],
+      "summary": "实现 offsetsToSelection 的editorzed操作，调用 position 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/editor.ts",
+      "type": "file",
+      "name": "editor.ts",
+      "filePath": "packages/tui/src/editor.ts",
+      "summary": "发现编辑器集成并打开外部编辑器，规范化编辑后的提示词内容。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/editor.ts:normalizePromptContent",
+      "type": "function",
+      "name": "normalizePromptContent",
+      "filePath": "packages/tui/src/editor.ts",
+      "lineRange": [
+        12,
+        24
+      ],
+      "summary": "规范化提示词内容，调用 content.endsWith、content.slice、body.includes 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor.ts:openEditor",
+      "type": "function",
+      "name": "openEditor",
+      "filePath": "packages/tui/src/editor.ts",
+      "lineRange": [
+        26,
+        54
+      ],
+      "summary": "打开Editor，调用 path.join、os.tmpdir、Date.now、writeFile 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/editor.ts:discoverEditorConnection",
+      "type": "function",
+      "name": "discoverEditorConnection",
+      "filePath": "packages/tui/src/editor.ts",
+      "lineRange": [
+        56,
+        96
+      ],
+      "summary": "实现 discoverEditorConnection 的editor操作，调用 path.join、os.homedir、readdirSync、entry.endsWith 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "type": "file",
+      "name": "builtins.ts",
+      "filePath": "packages/tui/src/feature-plugins/builtins.ts",
+      "summary": "为 tui 提供builtins相关数据处理接口。 对外提供 createBuiltinPlugins。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/builtins.ts:createBuiltinPlugins",
+      "type": "function",
+      "name": "createBuiltinPlugins",
+      "filePath": "packages/tui/src/feature-plugins/builtins.ts",
+      "lineRange": [
+        21,
+        36
+      ],
+      "summary": "创建Builtin插件，输入包括 options。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "type": "file",
+      "name": "footer.tsx",
+      "filePath": "packages/tui/src/feature-plugins/home/footer.tsx",
+      "summary": "实现终端的页脚界面及相关交互。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/footer.tsx:Directory",
+      "type": "function",
+      "name": "Directory",
+      "filePath": "packages/tui/src/feature-plugins/home/footer.tsx",
+      "lineRange": [
+        10,
+        25
+      ],
+      "summary": "渲染目录组件，组织页脚的界面内容和交互；使用 useHomeSessionDestination、useTuiPaths、createMemo、destination?.destination 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/footer.tsx:Mcp",
+      "type": "function",
+      "name": "Mcp",
+      "filePath": "packages/tui/src/feature-plugins/home/footer.tsx",
+      "lineRange": [
+        27,
+        52
+      ],
+      "summary": "渲染Mcp组件，组织页脚的界面内容和交互；使用 createMemo、props.api.state.mcp、list、has 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/footer.tsx:View",
+      "type": "function",
+      "name": "View",
+      "filePath": "packages/tui/src/feature-plugins/home/footer.tsx",
+      "lineRange": [
+        64,
+        82
+      ],
+      "summary": "渲染View组件，组织页脚的界面内容和交互。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/footer.tsx:tui",
+      "type": "function",
+      "name": "tui",
+      "filePath": "packages/tui/src/feature-plugins/home/footer.tsx",
+      "lineRange": [
+        84,
+        93
+      ],
+      "summary": "实现 tui 的页脚操作，调用 api.slots.register 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "type": "file",
+      "name": "tips-view.tsx",
+      "filePath": "packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "summary": "实现终端的tipsview界面及相关交互。 对外提供 Tips。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "lineRange": [
+        47,
+        69
+      ],
+      "summary": "解析tipsview，调用 tip.matchAll、found.reduce、acc.parts.push、tip.slice 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:Tips",
+      "type": "function",
+      "name": "Tips",
+      "filePath": "packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "lineRange": [
+        97,
+        162
+      ],
+      "summary": "渲染Tips组件，组织tipsview的界面内容和交互；使用 useTheme、useCommandShortcut、configShortcut、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "type": "file",
+      "name": "tips.tsx",
+      "filePath": "packages/tui/src/feature-plugins/home/tips.tsx",
+      "summary": "实现终端的tips界面及相关交互。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/tips.tsx:View",
+      "type": "function",
+      "name": "View",
+      "filePath": "packages/tui/src/feature-plugins/home/tips.tsx",
+      "lineRange": [
+        9,
+        33
+      ],
+      "summary": "渲染View组件，组织tips的界面内容和交互；使用 useBindings、props.api.tuiConfig.keybinds.get 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/home/tips.tsx:tui",
+      "type": "function",
+      "name": "tui",
+      "filePath": "packages/tui/src/feature-plugins/home/tips.tsx",
+      "lineRange": [
+        35,
+        52
+      ],
+      "summary": "实现 tui 的tips操作，调用 api.slots.register 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "type": "file",
+      "name": "context.tsx",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "summary": "实现终端的上下文界面及相关交互。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/sidebar/context.tsx:View",
+      "type": "function",
+      "name": "View",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "lineRange": [
+        13,
+        47
+      ],
+      "summary": "渲染View组件，组织上下文的界面内容和交互；使用 createMemo、props.api.state.session.messages、props.api.state.session.get、session 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/sidebar/context.tsx:tui",
+      "type": "function",
+      "name": "tui",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "实现 tui 的上下文操作，调用 api.slots.register 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "type": "file",
+      "name": "files.tsx",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "summary": "实现终端的文件界面及相关交互。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/sidebar/files.tsx:View",
+      "type": "function",
+      "name": "View",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "lineRange": [
+        14,
+        52
+      ],
+      "summary": "渲染View组件，组织文件的界面内容和交互；使用 createSignal、createMemo、props.api.state.session.diff、list 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/feature-plugins/sidebar/files.tsx:tui",
+      "type": "function",
+      "name": "tui",
+      "filePath": "packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "lineRange": [
+        54,
+        63
+      ],
+      "summary": "实现 tui 的文件操作，调用 api.slots.register 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "function:packages/tui/src/context/sync.tsx:search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/args.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/exit.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/project.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "function:packages/tui/src/context/theme.tsx:discoverThemes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "function:packages/tui/src/context/theme.tsx:discoverThemes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "function:packages/tui/src/context/theme.tsx:createSyntaxStyleMemo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "function:packages/tui/src/context/theme.tsx:createSyntaxStyleMemo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/theme.tsx",
+      "target": "file:packages/tui/src/theme/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:reasoningSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:reasoningSummary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:isThinkingMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:isThinkingMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:nextThinkingMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:nextThinkingMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:useThinkingMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "function:packages/tui/src/context/thinking.ts:useThinkingMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/thinking.ts",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/context/thinking.ts:useThinkingMode",
+      "target": "function:packages/tui/src/context/thinking.ts:isThinkingMode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedActiveEditor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedEditorSelections",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedEditorContents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:resolveZedDbPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:resolveZedDbPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:isZedTerminal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:isZedTerminal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:offsetToPosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:offsetToPosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:utf8ByteOffsetToStringIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "function:packages/tui/src/editor-zed.ts:offsetsToSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor-zed.ts",
+      "target": "file:packages/tui/src/context/editor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedActiveEditor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedEditorSelections",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "target": "function:packages/tui/src/editor-zed.ts:queryZedEditorContents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "target": "function:packages/tui/src/editor-zed.ts:utf8ByteOffsetToStringIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:resolveZedSelection",
+      "target": "function:packages/tui/src/editor-zed.ts:offsetsToSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:offsetToPosition",
+      "target": "function:packages/tui/src/editor-zed.ts:utf8ByteOffsetToStringIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/editor-zed.ts:offsetToPosition",
+      "target": "function:packages/tui/src/editor-zed.ts:offsetsToSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:normalizePromptContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:normalizePromptContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:openEditor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:openEditor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:discoverEditorConnection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "function:packages/tui/src/editor.ts:discoverEditorConnection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/editor.ts",
+      "target": "file:packages/tui/src/editor-zed.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "function:packages/tui/src/feature-plugins/builtins.ts:createBuiltinPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "function:packages/tui/src/feature-plugins/builtins.ts:createBuiltinPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/footer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/lsp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/mcp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/sidebar/todo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/system/diff-viewer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/system/notifications.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/system/plugins.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "target": "file:packages/tui/src/feature-plugins/system/which-key.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/footer.tsx:Directory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/footer.tsx:Mcp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/footer.tsx:View",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/footer.tsx:tui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/footer.tsx",
+      "target": "file:packages/tui/src/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/feature-plugins/home/footer.tsx:Directory",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:useHomeSessionDestination",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/feature-plugins/home/footer.tsx:Directory",
+      "target": "function:packages/tui/src/context/runtime.tsx:useTuiPaths",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/feature-plugins/home/footer.tsx:Directory",
+      "target": "function:packages/tui/src/runtime.tsx:abbreviateHome",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:Tips",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:Tips",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "target": "file:packages/tui/src/keymap.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:Tips",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:Tips",
+      "target": "function:packages/tui/src/feature-plugins/home/tips-view.tsx:parse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/tips.tsx:View",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "target": "function:packages/tui/src/feature-plugins/home/tips.tsx:tui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "target": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "target": "file:packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/home/tips.tsx",
+      "target": "file:packages/tui/src/keymap.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "target": "function:packages/tui/src/feature-plugins/sidebar/context.tsx:View",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "target": "function:packages/tui/src/feature-plugins/sidebar/context.tsx:tui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/context.tsx",
+      "target": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "target": "function:packages/tui/src/feature-plugins/sidebar/files.tsx:View",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "target": "function:packages/tui/src/feature-plugins/sidebar/files.tsx:tui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "target": "file:packages/tui/src/feature-plugins/builtins.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/feature-plugins/sidebar/files.tsx",
+      "target": "file:packages/tui/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

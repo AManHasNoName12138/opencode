@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/client/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/client/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「@opencode-ai/client、Entrypoints」。",
+      "tags": [
+        "文档",
+        "客户端",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/client/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/client/package.json",
+      "summary": "声明 @opencode-ai/client 的包信息与公共导出入口，脚本包括 generate、check:generated、test、typecheck；依赖包括 @opencode-ai/schema、@opencode-ai/protocol。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/client/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/client/tsconfig.json",
+      "summary": "配置 packages/client 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions、include。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/client/README.md",
+      "target": "file:packages/client/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/client/package.json",
+      "target": "file:packages/client/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/client/tsconfig.json",
+      "target": "file:packages/client/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

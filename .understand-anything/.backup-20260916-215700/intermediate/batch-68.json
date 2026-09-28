@@ -1,0 +1,1410 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/server/src/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/server/src/api.ts",
+      "summary": "在packages/server中提供 Api 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "packages/server/src/auth.ts",
+      "summary": "在packages/server中提供 Config、required、authorized、header、headers；内部处理包含 required、authorized、header、headers。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/auth.ts:required",
+      "type": "function",
+      "name": "required",
+      "filePath": "packages/server/src/auth.ts",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "在packages/server中执行 required，接收 config 参数；调用 Option.isSome 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/auth.ts:authorized",
+      "type": "function",
+      "name": "authorized",
+      "filePath": "packages/server/src/auth.ts",
+      "lineRange": [
+        44,
+        50
+      ],
+      "summary": "在packages/server中执行 authorized，接收 credentials、config 参数；调用 Option.isSome、Redacted.value 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/auth.ts:header",
+      "type": "function",
+      "name": "header",
+      "filePath": "packages/server/src/auth.ts",
+      "lineRange": [
+        52,
+        57
+      ],
+      "summary": "在packages/server中执行 header，接收 credentials 参数；调用 Buffer.from 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/auth.ts:headers",
+      "type": "function",
+      "name": "headers",
+      "filePath": "packages/server/src/auth.ts",
+      "lineRange": [
+        59,
+        63
+      ],
+      "summary": "在packages/server中执行 headers，接收 credentials 参数；调用 header 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/server/src/auth.ts:Config",
+      "type": "class",
+      "name": "Config",
+      "filePath": "packages/server/src/auth.ts",
+      "lineRange": [
+        20,
+        38
+      ],
+      "summary": "在packages/server中定义 Config 类，提供 configLayer、layer 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/cors.ts",
+      "type": "file",
+      "name": "cors.ts",
+      "filePath": "packages/server/src/cors.ts",
+      "summary": "在packages/server中提供 CorsConfig、isAllowedCorsOrigin、isAllowedRequestOrigin；内部处理包含 isAllowedCorsOrigin、isAllowedRequestOrigin、sameHost。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/cors.ts:isAllowedCorsOrigin",
+      "type": "function",
+      "name": "isAllowedCorsOrigin",
+      "filePath": "packages/server/src/cors.ts",
+      "lineRange": [
+        11,
+        20
+      ],
+      "summary": "在packages/server中执行 isAllowedCorsOrigin，接收 input、opts 参数；调用 input.startsWith、opencodeOrigin.test 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/cors.ts:isAllowedRequestOrigin",
+      "type": "function",
+      "name": "isAllowedRequestOrigin",
+      "filePath": "packages/server/src/cors.ts",
+      "lineRange": [
+        22,
+        26
+      ],
+      "summary": "在packages/server中执行 isAllowedRequestOrigin，接收 input、host、opts 参数；调用 sameHost、isAllowedCorsOrigin 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers.ts",
+      "type": "file",
+      "name": "handlers.ts",
+      "filePath": "packages/server/src/handlers.ts",
+      "summary": "在packages/server中提供 handlers 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/server/src/handlers/agent.ts",
+      "summary": "实现 agent.list 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 AgentHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/command.ts",
+      "type": "file",
+      "name": "command.ts",
+      "filePath": "packages/server/src/handlers/command.ts",
+      "summary": "实现 command.list 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 CommandHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/credential.ts",
+      "type": "file",
+      "name": "credential.ts",
+      "filePath": "packages/server/src/handlers/credential.ts",
+      "summary": "实现 credential.update、credential.remove 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 CredentialHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/server/src/handlers/event.ts",
+      "summary": "在HTTP 端点处理层中提供 EventHandler；内部处理包含 eventData。",
+      "tags": [
+        "typescript",
+        "api-handler",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/fs.ts",
+      "type": "file",
+      "name": "fs.ts",
+      "filePath": "packages/server/src/handlers/fs.ts",
+      "summary": "实现 fs.list、fs.find 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 FileSystemHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/health.ts",
+      "type": "file",
+      "name": "health.ts",
+      "filePath": "packages/server/src/handlers/health.ts",
+      "summary": "实现 health.get 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 HealthHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/integration.ts",
+      "type": "file",
+      "name": "integration.ts",
+      "filePath": "packages/server/src/handlers/integration.ts",
+      "summary": "实现 integration.list、integration.get、integration.connect.key、integration.connect.oauth、integration.attempt.status、integration.attempt.complete、integration.attempt.cancel 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 IntegrationHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/handlers/integration.ts:authorize",
+      "type": "function",
+      "name": "authorize",
+      "filePath": "packages/server/src/handlers/integration.ts",
+      "lineRange": [
+        8,
+        17
+      ],
+      "summary": "在HTTP 端点处理层中执行 authorize，接收 effect 参数；调用 effect.pipe、Effect.mapError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/location.ts",
+      "type": "file",
+      "name": "location.ts",
+      "filePath": "packages/server/src/handlers/location.ts",
+      "summary": "实现 location.get 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 LocationHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/message.ts",
+      "type": "file",
+      "name": "message.ts",
+      "filePath": "packages/server/src/handlers/message.ts",
+      "summary": "实现 session.messages 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 MessageHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/server/src/handlers/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/server/src/handlers/model.ts",
+      "summary": "实现 model.list 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 ModelHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/permission.ts",
+      "type": "file",
+      "name": "permission.ts",
+      "filePath": "packages/server/src/handlers/permission.ts",
+      "summary": "实现 permission.request.list、session.permission.create、session.permission.list、session.permission.get、session.permission.reply、permission.saved.list、permission.saved.remove 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 PermissionHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/server/src/handlers/project-copy.ts",
+      "type": "file",
+      "name": "project-copy.ts",
+      "filePath": "packages/server/src/handlers/project-copy.ts",
+      "summary": "实现 projectCopy.create、projectCopy.remove、projectCopy.refresh 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 ProjectCopyHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/handlers/project-copy.ts:badRequest",
+      "type": "function",
+      "name": "badRequest",
+      "filePath": "packages/server/src/handlers/project-copy.ts",
+      "lineRange": [
+        42,
+        55
+      ],
+      "summary": "在HTTP 端点处理层中执行 badRequest，接收 effect 参数；调用 effect.pipe、Effect.mapError、message 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/handlers/project-copy.ts:message",
+      "type": "function",
+      "name": "message",
+      "filePath": "packages/server/src/handlers/project-copy.ts",
+      "lineRange": [
+        57,
+        68
+      ],
+      "summary": "在HTTP 端点处理层中执行 message，接收 error 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/provider.ts",
+      "type": "file",
+      "name": "provider.ts",
+      "filePath": "packages/server/src/handlers/provider.ts",
+      "summary": "实现 provider.list、provider.get 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 ProviderHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/pty.ts",
+      "type": "file",
+      "name": "pty.ts",
+      "filePath": "packages/server/src/handlers/pty.ts",
+      "summary": "实现 pty.list、pty.create、pty.get、pty.update、pty.remove、pty.connectToken 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 PtyHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/server/src/handlers/question.ts",
+      "type": "file",
+      "name": "question.ts",
+      "filePath": "packages/server/src/handlers/question.ts",
+      "summary": "实现 question.request.list、session.question.list、session.question.reply、session.question.reject 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 QuestionHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/server/src/handlers/reference.ts",
+      "type": "file",
+      "name": "reference.ts",
+      "filePath": "packages/server/src/handlers/reference.ts",
+      "summary": "实现 reference.list 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 ReferenceHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/handlers/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/server/src/handlers/session.ts",
+      "summary": "把会话列表、创建、状态、模型/代理切换及 prompt 请求转交 SessionV2，使用 SessionsCursor 分页并映射领域错误。prompt 原样传递 delivery 和 resume，保持持久化输入准入语义。",
+      "tags": [
+        "typescript",
+        "api-handler",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/server/src/handlers/skill.ts",
+      "type": "file",
+      "name": "skill.ts",
+      "filePath": "packages/server/src/handlers/skill.ts",
+      "summary": "实现 skill.list 等 HTTP 操作，把契约输入交给领域服务并生成响应，导出 SkillHandler。",
+      "tags": [
+        "api-handler",
+        "api-handler",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/location.ts",
+      "type": "file",
+      "name": "location.ts",
+      "filePath": "packages/server/src/location.ts",
+      "summary": "解析请求中的 Location 上下文并提供位置服务层，把位置解析失败转成 HTTP 响应，供需要项目文件系统与工具的处理器使用。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/location.ts:response",
+      "type": "function",
+      "name": "response",
+      "filePath": "packages/server/src/location.ts",
+      "lineRange": [
+        15,
+        27
+      ],
+      "summary": "在packages/server中执行 response，接收 data 参数；调用 Effect.gen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/location.ts:ref",
+      "type": "function",
+      "name": "ref",
+      "filePath": "packages/server/src/location.ts",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "在packages/server中执行 ref，接收 request 参数；调用 query.get、decode、process.cwd、Location.Ref.make、AbsolutePath.make、WorkspaceV2.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/server/src/location.ts:LocationMiddleware",
+      "type": "class",
+      "name": "LocationMiddleware",
+      "filePath": "packages/server/src/location.ts",
+      "lineRange": [
+        11,
+        13
+      ],
+      "summary": "在packages/server中定义 LocationMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/middleware/authorization.ts",
+      "type": "file",
+      "name": "authorization.ts",
+      "filePath": "packages/server/src/middleware/authorization.ts",
+      "summary": "在请求上下文与中间件层中提供 Authorization、authorizationLayer；内部处理包含 emptyCredential、decodeCredential、credentialFromRequest。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/middleware/authorization.ts:decodeCredential",
+      "type": "function",
+      "name": "decodeCredential",
+      "filePath": "packages/server/src/middleware/authorization.ts",
+      "lineRange": [
+        16,
+        27
+      ],
+      "summary": "在请求上下文与中间件层中执行 decodeCredential，接收 input 参数；调用 Effect.fromResult、Encoding.decodeBase64String、Effect.match、header.indexOf、emptyCredential、header.slice、Redacted.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/middleware/schema-error.ts",
+      "type": "file",
+      "name": "schema-error.ts",
+      "filePath": "packages/server/src/middleware/schema-error.ts",
+      "summary": "在请求上下文与中间件层中提供 SchemaErrorMiddleware、schemaErrorLayer；内部处理包含 truncateReason。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/middleware/session-location.ts",
+      "type": "file",
+      "name": "session-location.ts",
+      "filePath": "packages/server/src/middleware/session-location.ts",
+      "summary": "在请求上下文与中间件层中提供 SessionLocationMiddleware、sessionLocationLayer 等接口。",
+      "tags": [
+        "typescript",
+        "middleware",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/server/src/middleware/session-location.ts:SessionLocationMiddleware",
+      "type": "class",
+      "name": "SessionLocationMiddleware",
+      "filePath": "packages/server/src/middleware/session-location.ts",
+      "lineRange": [
+        15,
+        20
+      ],
+      "summary": "在请求上下文与中间件层中定义 SessionLocationMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/pty-environment.ts",
+      "type": "file",
+      "name": "pty-environment.ts",
+      "filePath": "packages/server/src/pty-environment.ts",
+      "summary": "在packages/server中提供 Service、layer、node 等接口。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/server/src/pty-environment.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/server/src/pty-environment.ts",
+      "lineRange": [
+        10,
+        10
+      ],
+      "summary": "在packages/server中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/server/src/routes.ts",
+      "type": "file",
+      "name": "routes.ts",
+      "filePath": "packages/server/src/routes.ts",
+      "summary": "将 Database、EventV2、SessionV2、凭据和 LocationServiceMap 等应用服务组装到 HttpApi 路由。提供独立服务与嵌入式入口，并注入 SessionExecutionLocal、认证、位置和 Schema 错误中间件。",
+      "tags": [
+        "typescript",
+        "模块",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/server/src/routes.ts:createRoutes",
+      "type": "function",
+      "name": "createRoutes",
+      "filePath": "packages/server/src/routes.ts",
+      "lineRange": [
+        39,
+        45
+      ],
+      "summary": "选择默认认证配置或调用方密码，并构建完整的独立 HttpApi 服务层。",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/routes.ts:createEmbeddedRoutes",
+      "type": "function",
+      "name": "createEmbeddedRoutes",
+      "filePath": "packages/server/src/routes.ts",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "用无密码的认证配置构建嵌入式 HttpApi 服务层。",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/routes.ts:makeRoutes",
+      "type": "function",
+      "name": "makeRoutes",
+      "filePath": "packages/server/src/routes.ts",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "在packages/server中执行 makeRoutes，接收 auth 参数；调用 AppNodeBuilder.build、HttpApiBuilder.layer、Layer.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/server/src/routes.ts:webHandler",
+      "type": "function",
+      "name": "webHandler",
+      "filePath": "packages/server/src/routes.ts",
+      "lineRange": [
+        67,
+        68
+      ],
+      "summary": "在packages/server中执行 webHandler；调用 HttpRouter.toWebHandler、routes.pipe、Layer.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/server/src/api.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/api.ts",
+      "target": "file:packages/server/src/middleware/session-location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:required",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:required",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:authorized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:authorized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "function:packages/server/src/auth.ts:headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "class:packages/server/src/auth.ts:Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/auth.ts",
+      "target": "class:packages/server/src/auth.ts:Config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/cors.ts",
+      "target": "function:packages/server/src/cors.ts:isAllowedCorsOrigin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/cors.ts",
+      "target": "function:packages/server/src/cors.ts:isAllowedCorsOrigin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/cors.ts",
+      "target": "function:packages/server/src/cors.ts:isAllowedRequestOrigin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/cors.ts",
+      "target": "function:packages/server/src/cors.ts:isAllowedRequestOrigin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/command.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/credential.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/fs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/integration.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/project-copy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/reference.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers.ts",
+      "target": "file:packages/server/src/handlers/skill.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/agent.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/agent.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/command.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/command.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/credential.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/event.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/fs.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/fs.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/health.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/integration.ts",
+      "target": "function:packages/server/src/handlers/integration.ts:authorize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/handlers/integration.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/integration.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/location.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/message.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/model.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/model.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/permission.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/permission.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/project-copy.ts",
+      "target": "function:packages/server/src/handlers/project-copy.ts:badRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/handlers/project-copy.ts",
+      "target": "function:packages/server/src/handlers/project-copy.ts:message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/handlers/project-copy.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/provider.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/provider.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/pty.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/pty.ts",
+      "target": "file:packages/server/src/cors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/pty.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/pty.ts",
+      "target": "file:packages/server/src/pty-environment.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/question.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/question.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/reference.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/reference.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/session.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/skill.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/handlers/skill.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/location.ts",
+      "target": "function:packages/server/src/location.ts:response",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/location.ts",
+      "target": "function:packages/server/src/location.ts:response",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/location.ts",
+      "target": "function:packages/server/src/location.ts:ref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/location.ts",
+      "target": "class:packages/server/src/location.ts:LocationMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/location.ts",
+      "target": "class:packages/server/src/location.ts:LocationMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/middleware/authorization.ts",
+      "target": "function:packages/server/src/middleware/authorization.ts:decodeCredential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/middleware/authorization.ts",
+      "target": "file:packages/server/src/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/middleware/session-location.ts",
+      "target": "class:packages/server/src/middleware/session-location.ts:SessionLocationMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/middleware/session-location.ts",
+      "target": "class:packages/server/src/middleware/session-location.ts:SessionLocationMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/middleware/session-location.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/pty-environment.ts",
+      "target": "class:packages/server/src/pty-environment.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/pty-environment.ts",
+      "target": "class:packages/server/src/pty-environment.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:createRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:createRoutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:createEmbeddedRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:createEmbeddedRoutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:makeRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:webHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "function:packages/server/src/routes.ts:webHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/handlers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/middleware/schema-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/middleware/session-location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/server/src/routes.ts",
+      "target": "file:packages/server/src/pty-environment.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/server/src/auth.ts:headers",
+      "target": "function:packages/server/src/auth.ts:header",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/server/src/cors.ts:isAllowedRequestOrigin",
+      "target": "function:packages/server/src/cors.ts:isAllowedCorsOrigin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/server/src/handlers/project-copy.ts:badRequest",
+      "target": "function:packages/server/src/handlers/project-copy.ts:message",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/server/src/routes.ts:createRoutes",
+      "target": "function:packages/server/src/routes.ts:makeRoutes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/server/src/routes.ts:createEmbeddedRoutes",
+      "target": "function:packages/server/src/routes.ts:makeRoutes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

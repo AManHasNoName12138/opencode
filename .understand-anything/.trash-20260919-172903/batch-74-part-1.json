@@ -1,0 +1,690 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/acp/service-session.test.ts",
+      "type": "file",
+      "name": "service-session.test.ts",
+      "filePath": "packages/opencode/test/acp/service-session.test.ts",
+      "summary": "验证 Agent Client Protocol 适配层 的行为，实际用例包括「ACP service sessions、creates a backed session with config options and command update、loads a session and restores model variant and mode from messages、replays loaded session transcript chunks、lists sessions sorted by updated time with cursor support、includes live ACP sessions before they appear in server-backed session list、lists all sessions with next cursor when the first page is full」。",
+      "tags": [
+        "test",
+        "acp",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/acp/service-session.test.ts:createEventStream",
+      "type": "function",
+      "name": "createEventStream",
+      "filePath": "packages/opencode/test/acp/service-session.test.ts",
+      "lineRange": [
+        27,
+        51
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 createEventStream；调用 queue.shift、waiters.push、resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/acp/service-session.test.ts:idleEvent",
+      "type": "function",
+      "name": "idleEvent",
+      "filePath": "packages/opencode/test/acp/service-session.test.ts",
+      "lineRange": [
+        53,
+        62
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 idleEvent，接收 sessionID 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/acp/service-session.test.ts:deferred",
+      "type": "function",
+      "name": "deferred",
+      "filePath": "packages/opencode/test/acp/service-session.test.ts",
+      "lineRange": [
+        64,
+        73
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 deferred；调用 state.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/acp/service-session.test.ts:assistantInfo",
+      "type": "function",
+      "name": "assistantInfo",
+      "filePath": "packages/opencode/test/acp/service-session.test.ts",
+      "lineRange": [
+        1344,
+        1356
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 assistantInfo，接收 tokens、error 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/acp/session.test.ts",
+      "type": "file",
+      "name": "session.test.ts",
+      "filePath": "packages/opencode/test/acp/session.test.ts",
+      "summary": "验证 Agent Client Protocol 适配层 的行为，实际用例包括「acp session state」。",
+      "tags": [
+        "test",
+        "acp",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/acp/tool.test.ts",
+      "type": "file",
+      "name": "tool.test.ts",
+      "filePath": "packages/opencode/test/acp/tool.test.ts",
+      "summary": "验证 Agent Client Protocol 适配层 的行为，实际用例包括「acp tool conversion、maps OpenCode tool ids to ACP tool kinds、extracts file locations from tool input、builds completed content with text, edit diffs, and image attachments、omits edit diffs until old and new text fields exist、sends completed tool calls as partial updates、uses clean read display text for completed content」。",
+      "tags": [
+        "test",
+        "acp",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/account.test.ts",
+      "type": "file",
+      "name": "account.test.ts",
+      "filePath": "packages/opencode/test/cli/account.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「console account display、uses opencode.ai/console as the default login URL、includes the account url in account labels、includes the active marker in account labels、includes the account url in org rows」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/error.test.ts",
+      "type": "file",
+      "name": "error.test.ts",
+      "filePath": "packages/opencode/test/cli/error.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「cli.error、formats legacy and tagged config errors the same way、preserves multiline JSONC diagnostics for tagged config errors、formats account transport errors clearly、formats legacy and tagged provider model errors the same way、formats legacy and tagged provider init errors the same way、formats cancelled UI errors as empty output」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/github-remote.test.ts",
+      "type": "file",
+      "name": "github-remote.test.ts",
+      "filePath": "packages/opencode/test/cli/github-remote.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「parses https URL with .git suffix、parses https URL without .git suffix、parses git@ URL with .git suffix、parses git@ URL without .git suffix、parses ssh:// URL with .git suffix、parses ssh:// URL without .git suffix、parses git protocol URLs from package metadata」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/plugin-auth-picker.test.ts",
+      "type": "file",
+      "name": "plugin-auth-picker.test.ts",
+      "filePath": "packages/opencode/test/cli/plugin-auth-picker.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「resolvePluginProviders、returns plugin providers not in models.dev、skips providers already in models.dev、deduplicates across plugins、respects disabled_providers、respects enabled_providers when provider is absent、includes provider when in enabled set」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "type": "file",
+      "name": "runtime.boot.test.ts",
+      "filePath": "packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run runtime boot、reads footer keybinds from resolved keybind config、falls back to default tui keymap config when config load fails、preserves disabled leader from resolved tui config、reads diff style and falls back to auto、prefers configured providers for model selector data、falls back to provider list when configured providers are unavailable」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/runtime.boot.test.ts:model",
+      "type": "function",
+      "name": "model",
+      "filePath": "packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "lineRange": [
+        8,
+        57
+      ],
+      "summary": "在命令行入口与命令执行层中执行 model，接收 id、providerID、context、variants 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/run/runtime.boot.test.ts:config",
+      "type": "function",
+      "name": "config",
+      "filePath": "packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "lineRange": [
+        59,
+        90
+      ],
+      "summary": "在命令行入口与命令执行层中执行 config，接收 input 参数；调用 createTuiResolvedConfig 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/run/runtime.stdin.test.ts",
+      "type": "file",
+      "name": "runtime.stdin.test.ts",
+      "filePath": "packages/opencode/test/cli/run/runtime.stdin.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「run interactive stdin、reuses stdin when it is already a tty、opens the controlling terminal when stdin is piped、uses CONIN$ on windows、throws a clear error when no controlling terminal is available」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "type": "file",
+      "name": "plugin-add.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「adds tui plugin at runtime from spec、retries runtime add for file plugins after dependency wait」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "type": "file",
+      "name": "plugin-install.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「installs plugin without loading it」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-lifecycle.test.ts",
+      "type": "file",
+      "name": "plugin-lifecycle.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-lifecycle.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「runs onDispose callbacks with aborted signal and is idempotent、rolls back failed plugin and continues loading next、assigns sequential slot ids scoped to plugin、times out hanging plugin cleanup on dispose」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "type": "file",
+      "name": "plugin-loader-entrypoint.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「loads npm tui plugin from package ./tui export、does not use npm package exports dot for tui entry、rejects npm tui export that resolves outside plugin directory、rejects npm tui plugin that exports server and tui together、does not use npm package main for tui entry、does not use directory package main for tui entry、uses directory index fallback for tui when package.json is missing」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "function:packages/opencode/test/acp/service-session.test.ts:createEventStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "function:packages/opencode/test/acp/service-session.test.ts:idleEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "function:packages/opencode/test/acp/service-session.test.ts:deferred",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "function:packages/opencode/test/acp/service-session.test.ts:assistantInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/service.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/usage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/acp/usage.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/service-session.test.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/session.test.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/session.test.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/session.test.ts",
+      "target": "file:packages/opencode/src/acp/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/session.test.ts",
+      "target": "file:packages/opencode/src/acp/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/acp/session.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/tool.test.ts",
+      "target": "file:packages/opencode/src/acp/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/acp/tool.test.ts",
+      "target": "file:packages/opencode/src/acp/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/account.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/account.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/account.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/cli/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/cli/error.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/error.test.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-remote.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/github.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/github-remote.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/github.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/plugin-auth-picker.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/plugin-auth-picker.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/providers.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "function:packages/opencode/test/cli/run/runtime.boot.test.ts:model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "function:packages/opencode/test/cli/run/runtime.boot.test.ts:config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.boot.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.boot.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.stdin.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.stdin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/run/runtime.stdin.test.ts",
+      "target": "file:packages/opencode/src/cli/cmd/run/runtime.stdin.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-add.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-install.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/cli/tui/plugin-loader-entrypoint.test.ts",
+      "target": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/test/cli/run/runtime.boot.test.ts:config",
+      "target": "function:packages/opencode/test/fixture/tui-runtime.ts:createTuiResolvedConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

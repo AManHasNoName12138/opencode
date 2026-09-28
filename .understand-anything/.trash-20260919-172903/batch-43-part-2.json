@@ -1,0 +1,456 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/codemode/src/stdlib/collections.ts",
+      "type": "file",
+      "name": "collections.ts",
+      "filePath": "packages/codemode/src/stdlib/collections.ts",
+      "summary": "实现 CodeMode 的集合标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 arrayMethods、mapMethods、setMethods、spreadItems。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "集合标准库"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/collections.ts:spreadItems",
+      "type": "function",
+      "name": "spreadItems",
+      "filePath": "packages/codemode/src/stdlib/collections.ts",
+      "lineRange": [
+        43,
+        50
+      ],
+      "summary": "CodeMode 解释器的集合标准库处理函数 spreadItems，调用 value.map.entries、value.set.values、value.params.entries 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/console.ts",
+      "type": "file",
+      "name": "console.ts",
+      "filePath": "packages/codemode/src/stdlib/console.ts",
+      "summary": "实现 CodeMode 的日志标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 consoleMethods、MAX_CONSOLE_DEPTH。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "日志标准库"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/date.ts",
+      "type": "file",
+      "name": "date.ts",
+      "filePath": "packages/codemode/src/stdlib/date.ts",
+      "summary": "实现 CodeMode 的时间区间白名单及受控操作，将允许的标准库能力提供给解释器；公开 dateMethods、dateStatics、invokeDateStatic、invokeDateMethod。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "时间区间"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/date.ts:invokeDateStatic",
+      "type": "function",
+      "name": "invokeDateStatic",
+      "filePath": "packages/codemode/src/stdlib/date.ts",
+      "lineRange": [
+        28,
+        39
+      ],
+      "summary": "CodeMode 解释器的时间区间处理函数 invokeDateStatic，调用 Date.now、Date.parse、coerceToString、Date.UTC、args.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/date.ts:invokeDateMethod",
+      "type": "function",
+      "name": "invokeDateMethod",
+      "filePath": "packages/codemode/src/stdlib/date.ts",
+      "lineRange": [
+        41,
+        91
+      ],
+      "summary": "CodeMode 解释器的时间区间处理函数 invokeDateMethod，调用 hosted.toISOString、coerceToString、hosted.getFullYear、hosted.getMonth、hosted.getDate 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/json.ts",
+      "type": "file",
+      "name": "json.ts",
+      "filePath": "packages/codemode/src/stdlib/json.ts",
+      "summary": "实现 CodeMode 的JSON 标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 jsonStatics、invokeJsonMethod。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "JSON 标准库"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/json.ts:invokeJsonMethod",
+      "type": "function",
+      "name": "invokeJsonMethod",
+      "filePath": "packages/codemode/src/stdlib/json.ts",
+      "lineRange": [
+        11,
+        42
+      ],
+      "summary": "CodeMode 解释器的JSON 标准库处理函数 invokeJsonMethod，调用 jsonStatics.has、copyOut、copyIn 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/math.ts",
+      "type": "file",
+      "name": "math.ts",
+      "filePath": "packages/codemode/src/stdlib/math.ts",
+      "summary": "实现 CodeMode 的数学标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 mathConstants、mathMethods、invokeMathMethod。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "数学标准库"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/math.ts:invokeMathMethod",
+      "type": "function",
+      "name": "invokeMathMethod",
+      "filePath": "packages/codemode/src/stdlib/math.ts",
+      "lineRange": [
+        22,
+        64
+      ],
+      "summary": "CodeMode 解释器的数学标准库处理函数 invokeMathMethod，调用 mathMethods.has、args.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/number.ts",
+      "type": "file",
+      "name": "number.ts",
+      "filePath": "packages/codemode/src/stdlib/number.ts",
+      "summary": "实现 CodeMode 的数字标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 numberMethods、numberConstants、numberStatics、invokeNumberMethod、invokeNumberStatic。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "数字标准库"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/number.ts:invokeNumberMethod",
+      "type": "function",
+      "name": "invokeNumberMethod",
+      "filePath": "packages/codemode/src/stdlib/number.ts",
+      "lineRange": [
+        7,
+        39
+      ],
+      "summary": "CodeMode 解释器的数字标准库处理函数 invokeNumberMethod，调用 value.toFixed、optNum、value.toExponential、value.toString、value.toPrecision 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/number.ts:invokeNumberStatic",
+      "type": "function",
+      "name": "invokeNumberStatic",
+      "filePath": "packages/codemode/src/stdlib/number.ts",
+      "lineRange": [
+        41,
+        64
+      ],
+      "summary": "CodeMode 解释器的数字标准库处理函数 invokeNumberStatic，调用 parseInt、coerceToString、parseFloat 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/object.ts",
+      "type": "file",
+      "name": "object.ts",
+      "filePath": "packages/codemode/src/stdlib/object.ts",
+      "summary": "实现 CodeMode 的对象标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 objectStatics、invokeObjectMethod。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "对象标准库"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/stdlib/object.ts:invokeObjectMethod",
+      "type": "function",
+      "name": "invokeObjectMethod",
+      "filePath": "packages/codemode/src/stdlib/object.ts",
+      "lineRange": [
+        8,
+        77
+      ],
+      "summary": "CodeMode 解释器的对象标准库处理函数 invokeObjectMethod，调用 objectStatics.has、boundedData、isSandboxValue、requireObject、guardedSet 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/src/stdlib/promise.ts",
+      "type": "file",
+      "name": "promise.ts",
+      "filePath": "packages/codemode/src/stdlib/promise.ts",
+      "summary": "实现 CodeMode 的异步标准库白名单及受控操作，将允许的标准库能力提供给解释器；公开 promiseStatics、TOOL_CALL_CONCURRENCY。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "异步标准库"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/codemode/src/stdlib/collections.ts",
+      "target": "function:packages/codemode/src/stdlib/collections.ts:spreadItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/collections.ts",
+      "target": "function:packages/codemode/src/stdlib/collections.ts:spreadItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/collections.ts",
+      "target": "file:packages/codemode/src/values.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "function:packages/codemode/src/stdlib/date.ts:invokeDateStatic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "function:packages/codemode/src/stdlib/date.ts:invokeDateStatic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "function:packages/codemode/src/stdlib/date.ts:invokeDateMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "function:packages/codemode/src/stdlib/date.ts:invokeDateMethod",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "file:packages/codemode/src/stdlib/value.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/date.ts",
+      "target": "file:packages/codemode/src/values.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/json.ts",
+      "target": "function:packages/codemode/src/stdlib/json.ts:invokeJsonMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/json.ts",
+      "target": "function:packages/codemode/src/stdlib/json.ts:invokeJsonMethod",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/json.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/json.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/math.ts",
+      "target": "function:packages/codemode/src/stdlib/math.ts:invokeMathMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/math.ts",
+      "target": "function:packages/codemode/src/stdlib/math.ts:invokeMathMethod",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/math.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "function:packages/codemode/src/stdlib/number.ts:invokeNumberMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "function:packages/codemode/src/stdlib/number.ts:invokeNumberMethod",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "function:packages/codemode/src/stdlib/number.ts:invokeNumberStatic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "function:packages/codemode/src/stdlib/number.ts:invokeNumberStatic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/number.ts",
+      "target": "file:packages/codemode/src/stdlib/value.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "function:packages/codemode/src/stdlib/object.ts:invokeObjectMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "function:packages/codemode/src/stdlib/object.ts:invokeObjectMethod",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "file:packages/codemode/src/stdlib/value.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/object.ts",
+      "target": "file:packages/codemode/src/values.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/stdlib/promise.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

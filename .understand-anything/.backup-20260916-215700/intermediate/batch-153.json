@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/llm/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/llm/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「LLM Package Guide、Effect、Conventions、Tests、Architecture、Request Flow、Routes」。",
+      "tags": [
+        "文档",
+        "模块",
+        "开发规范"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/llm/DESIGN.md",
+      "type": "document",
+      "name": "DESIGN.md",
+      "filePath": "packages/llm/DESIGN.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「AI Library Design、Status、Goals、Non-goals、Design Principles、Progressive disclosure、Values over registries」。",
+      "tags": [
+        "文档",
+        "模块",
+        "参考"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/llm/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/llm/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「@opencode-ai/llm、Public API、Caching、Auto placement、Opting out、Granular policy、Manual hints」。",
+      "tags": [
+        "文档",
+        "模块",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/llm/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/llm/package.json",
+      "summary": "声明 @opencode-ai/llm 的包信息与公共导出入口，脚本包括 setup:recording-env、test、typecheck；依赖包括 @smithy/eventstream-codec、@smithy/util-utf8、@opencode-ai/schema、aws4fetch、effect。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/llm/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/llm/tsconfig.json",
+      "summary": "配置 packages/llm 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/llm/AGENTS.md",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/llm/DESIGN.md",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/llm/README.md",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/llm/package.json",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/llm/tsconfig.json",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

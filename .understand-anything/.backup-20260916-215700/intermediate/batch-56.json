@@ -1,0 +1,1471 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/test/session-projector.test.ts",
+      "type": "file",
+      "name": "session-projector.test.ts",
+      "filePath": "packages/core/test/session-projector.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionProjector、projects moved sessions without the transitional context epoch table、projects staged, cleared, and committed reverts、orders projected messages and context by durable aggregate sequence、marks an inbox row promoted with the Prompted event sequence、projects durable context messages supported by the updater、rejects distinct creator events that reuse one projected message ID」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/session-projector.test.ts:assistantRow",
+      "type": "function",
+      "name": "assistantRow",
+      "filePath": "packages/core/test/session-projector.test.ts",
+      "lineRange": [
+        34,
+        45
+      ],
+      "summary": "在Core 领域服务层中执行 assistantRow，接收 id、seq、time 参数；调用 encodeMessage、SessionMessage.Assistant.make、DateTime.toEpochMillis 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/session-prompt.test.ts",
+      "type": "file",
+      "name": "session-prompt.test.ts",
+      "filePath": "packages/core/test/session-prompt.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionV2.prompt、exposes the execution registry、delegates execution continuation through SessionExecution、delegates process-local interruption through SessionExecution、delegates interruption without requiring a recorded Session、durably admits one user message before transcript promotion、resolves attachment MIME before admission」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/session-prompt.test.ts:eventCount",
+      "type": "function",
+      "name": "eventCount",
+      "filePath": "packages/core/test/session-prompt.test.ts",
+      "lineRange": [
+        88,
+        99
+      ],
+      "summary": "在Core 领域服务层中执行 eventCount，接收 type 参数；调用 Database.Service.use、eq、Effect.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/session-run-coordinator.test.ts",
+      "type": "file",
+      "name": "session-run-coordinator.test.ts",
+      "filePath": "packages/core/test/session-run-coordinator.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionRunCoordinator、joins concurrent resumes for one key、joins a wake-started execution without forcing a successor、starts execution when woken while idle、snapshots only active executions、cleans active executions after failure and defect、cleans active executions when its scope closes」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/session-runner-model.test.ts",
+      "type": "file",
+      "name": "session-runner-model.test.ts",
+      "filePath": "packages/core/test/session-runner-model.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionRunnerModel、maps catalog OpenAI AI SDK models into native Responses routes、keeps catalog apiKey credentials out of provider JSON、uses merged API settings for OpenAI-compatible auth and request defaults、overlays selected OpenAI Session variant bodies、overlays selected OpenAI-compatible Session variant bodies、rejects an explicit unavailable Session variant during model resolution」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/session-runner-model.test.ts:model",
+      "type": "function",
+      "name": "model",
+      "filePath": "packages/core/test/session-runner-model.test.ts",
+      "lineRange": [
+        25,
+        42
+      ],
+      "summary": "在Core 领域服务层中执行 model，接收 api、variants 参数；调用 ModelV2.Info.make、ModelV2.ID.make、ProviderV2.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/session-runner-recorded.test.ts",
+      "type": "file",
+      "name": "session-runner-recorded.test.ts",
+      "filePath": "packages/core/test/session-runner-recorded.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionRunnerLLM recorded、executes one recorded V2 prompt through the recorded HTTP transport」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/session-runner-tool-registry.test.ts",
+      "type": "file",
+      "name": "session-runner-tool-registry.test.ts",
+      "filePath": "packages/core/test/session-runner-tool-registry.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ToolRegistry、filters disabled tools with edit aliases and ordered wildcard precedence、keeps permission decoration isolated between registrations、reuses model definitions across provider turns、removes a scoped registration、preserves an interrupted registration until its scope closes、returns model errors without swallowing interruption or defects」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/session-runner-tool-registry.test.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/core/test/session-runner-tool-registry.test.ts",
+      "lineRange": [
+        50,
+        59
+      ],
+      "summary": "在Core 领域服务层中执行 make，接收 permission 参数；调用 Tool.make、Schema.Struct、Effect.succeed、Tool.withPermission 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/session-runner.test.ts",
+      "type": "file",
+      "name": "session-runner.test.ts",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionRunnerLLM、advertises and executes a globally attached application tool、starts a real runner turn after default prompt recording、streams one request with registry definitions from chronological V2 user history、retries the first provider turn after system context becomes available、interrupts a source Location runner after a Session moves、fails gracefully when a stored context snapshot cannot 」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:insertSession",
+      "type": "function",
+      "name": "insertSession",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        294,
+        310
+      ],
+      "summary": "在Core 领域服务层中执行 insertSession，接收 id 参数；调用 Effect.gen 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:replaySessionProjection",
+      "type": "function",
+      "name": "replaySessionProjection",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        370,
+        394
+      ],
+      "summary": "在Core 领域服务层中执行 replaySessionProjection，接收 id 参数；调用 Effect.gen、eq、asc、events.remove、db.delete、events.replayAll、recorded.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:fragmentFixture",
+      "type": "function",
+      "name": "fragmentFixture",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        410,
+        469
+      ],
+      "summary": "在Core 领域服务层中执行 fragmentFixture，接收 kind、id、chunks 参数；调用 chunks.join、LLMEvent.stepStart、LLMEvent.textStart、chunks.map、LLMEvent.textDelta、LLMEvent.textEnd、LLMEvent.stepFinish 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:verifyEphemeralDeltas",
+      "type": "function",
+      "name": "verifyEphemeralDeltas",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        471,
+        501
+      ],
+      "summary": "在Core 领域服务层中执行 verifyEphemeralDeltas，接收 kind 参数；调用 Effect.gen、Array.from、fragmentFixture、fragmentID、session.prompt、Prompt.make、events.subscribe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnFailure",
+      "type": "function",
+      "name": "verifyPartialFlushOnFailure",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        503,
+        523
+      ],
+      "summary": "在Core 领域服务层中执行 verifyPartialFlushOnFailure，接收 kind 参数；调用 Effect.gen、fragmentFixture、fragmentID、providerUnavailable、session.prompt、Prompt.make、Stream.concat 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnInterruption",
+      "type": "function",
+      "name": "verifyPartialFlushOnInterruption",
+      "filePath": "packages/core/test/session-runner.test.ts",
+      "lineRange": [
+        525,
+        555
+      ],
+      "summary": "在Core 领域服务层中执行 verifyPartialFlushOnInterruption，接收 kind 参数；调用 Effect.gen、fragmentFixture、fragmentID、Deferred.make、session.prompt、Prompt.make、Stream.concat 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/session-todo.test.ts",
+      "type": "file",
+      "name": "session-todo.test.ts",
+      "filePath": "packages/core/test/session-todo.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SessionTodo、replaces persisted todos in order and publishes updates」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/session-tool-progress.test.ts",
+      "type": "file",
+      "name": "session-tool-progress.test.ts",
+      "filePath": "packages/core/test/session-tool-progress.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Tool.Progress、projects durable progress and keeps final settlements durable」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/skill-discovery.test.ts",
+      "type": "file",
+      "name": "skill-discovery.test.ts",
+      "filePath": "packages/core/test/skill-discovery.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SkillDiscovery.pull、rejects skill name traversal without fetching files、rejects file traversal without fetching files、rejects absolute file paths without fetching files、rejects cross-origin file URLs without fetching files、downloads safe nested files under the skill root、refreshes cached files when the version changes」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/skill-discovery.test.ts:pull",
+      "type": "function",
+      "name": "pull",
+      "filePath": "packages/core/test/skill-discovery.test.ts",
+      "lineRange": [
+        15,
+        42
+      ],
+      "summary": "在Core 领域服务层中执行 pull，接收 skills、files、cache 参数；调用 tmpdir、Layer.succeed、HttpClient.make、Effect.sync、requests.push、Effect.map、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/skill.test.ts",
+      "type": "file",
+      "name": "skill.test.ts",
+      "filePath": "packages/core/test/skill.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SkillV2、registers sources and resolves later source precedence、loads URL sources and filters skills for agents」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/skill.test.ts:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "packages/core/test/skill.test.ts",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "在Core 领域服务层中执行 write，接收 directory、name、description 参数；调用 fs.writeFile、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/skill/guidance.test.ts",
+      "type": "file",
+      "name": "guidance.test.ts",
+      "filePath": "packages/core/test/skill/guidance.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SkillGuidance、renders described agent skills and reconciles the complete available list、omits guidance when the selected agent denies all skills、omits guidance when a resource-specific denial follows the global denial、retains specifically allowed skills after a global denial、omits guidance when a specifically allowed skill is denied again」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/snapshot.test.ts",
+      "type": "file",
+      "name": "snapshot.test.ts",
+      "filePath": "packages/core/test/snapshot.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Snapshot」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/state.test.ts",
+      "type": "file",
+      "name": "state.test.ts",
+      "filePath": "packages/core/test/state.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「State、commits a transform atomically when its updater is interrupted、runs effectful transforms during every reload、disposes a transform once and rebuilds remaining state、batches automatic rebuilds」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/system-context/builtins.test.ts",
+      "type": "file",
+      "name": "builtins.test.ts",
+      "filePath": "packages/core/test/system-context/builtins.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SystemContextBuiltIns、loads location-scoped environment and host-local date context、reconciles the date without repeating unchanged environment context、does not update again within the same local calendar day」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/system-context/index.test.ts",
+      "type": "file",
+      "name": "index.test.ts",
+      "filePath": "packages/core/test/system-context/index.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SystemContext、stores the canonical JSON encoding of the loaded value、loads once and initializes a baseline with a structured snapshot、renders updates only after a structured value changes、uses the baseline for a newly added source、retains admitted snapshots while a source is temporarily unavailable、blocks initialization while a source is unavailable」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/system-context/index.test.ts:stringContext",
+      "type": "function",
+      "name": "stringContext",
+      "filePath": "packages/core/test/system-context/index.test.ts",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "在Core 领域服务层中执行 stringContext，接收 input 参数；调用 SystemContext.make、key、Schema.toCodecJson、Effect.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/system-context/registry.test.ts",
+      "type": "file",
+      "name": "registry.test.ts",
+      "filePath": "packages/core/test/system-context/registry.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SystemContextRegistry、loads empty system context when there are no entries、loads scoped entries in stable key order、re-evaluates entry producers on each load、propagates entry producer failures、rejects duplicate source keys from separate entries、rejects duplicate entry keys」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/system-context/registry.test.ts:entry",
+      "type": "function",
+      "name": "entry",
+      "filePath": "packages/core/test/system-context/registry.test.ts",
+      "lineRange": [
+        8,
+        19
+      ],
+      "summary": "在Core 领域服务层中执行 entry，接收 key、text、sourceKey 参数；调用 SystemContext.Key.make、Effect.succeed、SystemContext.make、Schema.toCodecJson 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-apply-patch.test.ts",
+      "type": "file",
+      "name": "tool-apply-patch.test.ts",
+      "filePath": "packages/core/test/tool-apply-patch.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ApplyPatchTool、registers and sequentially applies add, update, and delete hunks、rejects moves before applying any hunk、approves an external directory and the batch before reading external update content、approves one external directory scope for multiple files under the same parent、rejects invalid later update before applying an earlier add、rejects add hunks targeting an existing file without repla」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-apply-patch.test.ts:reset",
+      "type": "function",
+      "name": "reset",
+      "filePath": "packages/core/test/tool-apply-patch.test.ts",
+      "lineRange": [
+        54,
+        64
+      ],
+      "summary": "在Core 领域服务层中执行 reset。",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/tool-apply-patch.test.ts:withTool",
+      "type": "function",
+      "name": "withTool",
+      "filePath": "packages/core/test/tool-apply-patch.test.ts",
+      "lineRange": [
+        89,
+        115
+      ],
+      "summary": "在Core 领域服务层中执行 withTool，接收 directory、body 参数；调用 Layer.succeed、Location.Service.of、location、AbsolutePath.make、Effect.gen、body、Effect.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-bash.test.ts",
+      "type": "file",
+      "name": "tool-bash.test.ts",
+      "filePath": "packages/core/test/tool-bash.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「BashTool、registers and returns structured successful output from the active Location、resolves a relative workdir from the active Location、rejects a workdir that stops being a directory during approval、executes a real shell command through AppProcess、approves an explicit external workdir before bash execution、does not execute after external-directory or bash denial」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-bash.test.ts:reset",
+      "type": "function",
+      "name": "reset",
+      "filePath": "packages/core/test/tool-bash.test.ts",
+      "lineRange": [
+        82,
+        98
+      ],
+      "summary": "在Core 领域服务层中执行 reset；调用 Buffer.from、Buffer.alloc 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/tool-bash.test.ts:withTool",
+      "type": "function",
+      "name": "withTool",
+      "filePath": "packages/core/test/tool-bash.test.ts",
+      "lineRange": [
+        100,
+        125
+      ],
+      "summary": "在Core 领域服务层中执行 withTool，接收 directory、body、processLayer 参数；调用 Layer.succeed、Location.Service.of、location、AbsolutePath.make、Effect.gen、body、Effect.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-edit.test.ts",
+      "type": "file",
+      "name": "tool-edit.test.ts",
+      "filePath": "packages/core/test/tool-edit.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「EditTool、registers and replaces relative exact text through FileMutation once、accepts an absolute file path inside the active Location、approves an explicit external absolute path before edit、does not write when external_directory or edit approval is denied、denied edit reads no target content and does not disclose whether oldString matches、rejects no-op, empty, missing, and ambiguous exact replacem」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-edit.test.ts:withTool",
+      "type": "function",
+      "name": "withTool",
+      "filePath": "packages/core/test/tool-edit.test.ts",
+      "lineRange": [
+        79,
+        105
+      ],
+      "summary": "在Core 领域服务层中执行 withTool，接收 directory、body 参数；调用 Layer.succeed、Location.Service.of、location、AbsolutePath.make、Effect.gen、body、Effect.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-output-store.test.ts",
+      "type": "file",
+      "name": "tool-output-store.test.ts",
+      "filePath": "packages/core/test/tool-output-store.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ToolOutputStore、bounds the provider-facing text channel with one managed file、uses bounded text for oversized structured-only output、preserves native media and structured metadata without applying a settlement media limit、preserves structured metadata and native media when bounding text、does not double-count structured data duplicated in projected text、fails oversized settlement when complete rete」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-output-store.test.ts:withStore",
+      "type": "function",
+      "name": "withStore",
+      "filePath": "packages/core/test/tool-output-store.test.ts",
+      "lineRange": [
+        17,
+        43
+      ],
+      "summary": "在Core 领域服务层中执行 withStore，接收 body、config 参数；调用 Effect.acquireUseRelease、Effect.promise、tmpdir、Global.layerWith、Layer.succeed、Config.Service.of、Effect.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-question.test.ts",
+      "type": "file",
+      "name": "tool-question.test.ts",
+      "filePath": "packages/core/test/tool-question.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「QuestionTool、omits a denied built-in question and terminally settles a stale call、registers question and projects user answers without a permission assertion、does not invent tool ownership metadata without a durable registry source、keeps dismissed questions out of model-facing output」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/tool-read-filesystem.test.ts",
+      "type": "file",
+      "name": "tool-read-filesystem.test.ts",
+      "filePath": "packages/core/test/tool-read-filesystem.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ReadToolFileSystem、fails with a typed filesystem error when a resolved file disappears、fails when a file becomes the wrong path kind、fails with a typed filesystem error when directory listing fails、reports binary and malformed UTF-8 content as typed errors、reports out-of-range pagination as a typed error、stops reading after the requested page is complete」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/tool-read.test.ts",
+      "type": "file",
+      "name": "tool-read.test.ts",
+      "filePath": "packages/core/test/tool-read.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ReadTool、registers, authorizes, and reads through the location filesystem、asks for external_directory approval before reading an external absolute path、returns a small PNG as native media instead of durable base64 text、preserves a PNG above the generic text limit as native media、rejects invalid image data returned by the filesystem、rejects oversized images when resizing is disabled」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-read.test.ts:readLayer",
+      "type": "function",
+      "name": "readLayer",
+      "filePath": "packages/core/test/tool-read.test.ts",
+      "lineRange": [
+        132,
+        143
+      ],
+      "summary": "在Core 领域服务层中执行 readLayer，接收 imageLayer 参数；调用 AppNodeBuilder.build、LayerNode.group、Global.layerWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/tool-skill.test.ts",
+      "type": "file",
+      "name": "tool-skill.test.ts",
+      "filePath": "packages/core/test/tool-skill.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「SkillTool、lists available skills, authorizes the selected name, and loads model-facing content」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/tool-todowrite.test.ts",
+      "type": "file",
+      "name": "tool-todowrite.test.ts",
+      "filePath": "packages/core/test/tool-todowrite.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「TodoWriteTool、registers, approves the wildcard resource, persists todos, and returns typed output、does not update persisted todos when permission is denied」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/tool-webfetch.test.ts",
+      "type": "file",
+      "name": "tool-webfetch.test.ts",
+      "filePath": "packages/core/test/tool-webfetch.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「WebFetchTool helpers、defaults format and rejects invalid timeout controls、ports HTML text and markdown conversions without active content、WebFetchTool registration、registers and fetches an ordinary hostname HTTP URL without rewriting it、accepts localhost URLs with the same requested-URL permission check、rejects non-HTTP schemes before permission or transport」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/tool-websearch.test.ts",
+      "type": "file",
+      "name": "tool-websearch.test.ts",
+      "filePath": "packages/core/test/tool-websearch.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「WebSearchTool provider selection、rejects out-of-range numeric controls、selects a stable provider per session、supports an explicit operational override、prefers Parallel when both explicit flags are enabled、prefers Exa when only its explicit flag is enabled、WebSearchTool MCP response parser」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/tool-write.test.ts",
+      "type": "file",
+      "name": "tool-write.test.ts",
+      "filePath": "packages/core/test/tool-write.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「WriteTool、registers and creates a relative file through FileMutation once、overwrites a relative existing file and reports that it wrote the file、preserves exactly one BOM when overwriting existing files、accepts an absolute file path inside the active Location、approves an explicit external absolute path before edit、does not write when external_directory or edit approval is denied」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/tool-write.test.ts:withTool",
+      "type": "function",
+      "name": "withTool",
+      "filePath": "packages/core/test/tool-write.test.ts",
+      "lineRange": [
+        63,
+        89
+      ],
+      "summary": "在Core 领域服务层中执行 withTool，接收 directory、body 参数；调用 Layer.succeed、Location.Service.of、location、AbsolutePath.make、Effect.gen、body、Effect.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/util/effect-flock.test.ts",
+      "type": "file",
+      "name": "effect-flock.test.ts",
+      "filePath": "packages/core/test/util/effect-flock.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「util.effect-flock、acquire and release via scoped Effect、withLock data-first、withLock pipeable、writes owner metadata、breaks stale lock dirs、recovers from stale breaker」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/util/effect-flock.test.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/core/test/util/effect-flock.test.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在Core 领域服务层中执行 run，接收 msg 参数；调用 spawn、JSON.stringify、stdout.push、Buffer.from、stderr.push、proc.on、resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/util/effect-flock.test.ts:stopWorker",
+      "type": "function",
+      "name": "stopWorker",
+      "filePath": "packages/core/test/util/effect-flock.test.ts",
+      "lineRange": [
+        69,
+        88
+      ],
+      "summary": "在Core 领域服务层中执行 stopWorker，接收 proc 参数；调用 proc.once、resolve、proc.kill、spawn、String、killProc.on 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/util/which.test.ts",
+      "type": "file",
+      "name": "which.test.ts",
+      "filePath": "packages/core/test/util/which.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「util.which、returns null when command is missing、finds a command from PATH override、uses first PATH match、returns null for non-executable file on unix、uses PATHEXT on windows、uses Windows Path casing fallback」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/util/which.test.ts:cmd",
+      "type": "function",
+      "name": "cmd",
+      "filePath": "packages/core/test/util/which.test.ts",
+      "lineRange": [
+        7,
+        16
+      ],
+      "summary": "在Core 领域服务层中执行 cmd，接收 dir、name、exec 参数；调用 path.join、fs.writeFile、fs.chmod 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/test/session-projector.test.ts",
+      "target": "function:packages/core/test/session-projector.test.ts:assistantRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-projector.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-prompt.test.ts",
+      "target": "function:packages/core/test/session-prompt.test.ts:eventCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-prompt.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-run-coordinator.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-runner-model.test.ts",
+      "target": "function:packages/core/test/session-runner-model.test.ts:model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner-model.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-runner-recorded.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-runner-tool-registry.test.ts",
+      "target": "function:packages/core/test/session-runner-tool-registry.test.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner-tool-registry.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-runner-tool-registry.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:insertSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:replaySessionProjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:fragmentFixture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:verifyEphemeralDeltas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnInterruption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/session-runner.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-todo.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/session-tool-progress.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/skill-discovery.test.ts",
+      "target": "function:packages/core/test/skill-discovery.test.ts:pull",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/skill-discovery.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/skill.test.ts",
+      "target": "function:packages/core/test/skill.test.ts:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/skill.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/skill.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/skill/guidance.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/snapshot.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/snapshot.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/state.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/system-context/builtins.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/system-context/builtins.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/system-context/index.test.ts",
+      "target": "function:packages/core/test/system-context/index.test.ts:stringContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/system-context/index.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/system-context/registry.test.ts",
+      "target": "function:packages/core/test/system-context/registry.test.ts:entry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/system-context/registry.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "function:packages/core/test/tool-apply-patch.test.ts:reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "function:packages/core/test/tool-apply-patch.test.ts:withTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-apply-patch.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "function:packages/core/test/tool-bash.test.ts:reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "function:packages/core/test/tool-bash.test.ts:withTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-bash.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-edit.test.ts",
+      "target": "function:packages/core/test/tool-edit.test.ts:withTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-edit.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-edit.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-edit.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-edit.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-output-store.test.ts",
+      "target": "function:packages/core/test/tool-output-store.test.ts:withStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-output-store.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-output-store.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-question.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-question.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-read-filesystem.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-read.test.ts",
+      "target": "function:packages/core/test/tool-read.test.ts:readLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-read.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-read.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-read.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-skill.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-skill.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-skill.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-todowrite.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-todowrite.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-webfetch.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-webfetch.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-websearch.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-websearch.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-write.test.ts",
+      "target": "function:packages/core/test/tool-write.test.ts:withTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/tool-write.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-write.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-write.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/tool-write.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/util/effect-flock.test.ts",
+      "target": "function:packages/core/test/util/effect-flock.test.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/util/effect-flock.test.ts",
+      "target": "function:packages/core/test/util/effect-flock.test.ts:stopWorker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/util/effect-flock.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/util/which.test.ts",
+      "target": "function:packages/core/test/util/which.test.ts:cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/util/which.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/test/session-runner.test.ts:verifyEphemeralDeltas",
+      "target": "function:packages/core/test/session-runner.test.ts:fragmentFixture",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/session-runner.test.ts:verifyEphemeralDeltas",
+      "target": "function:packages/core/test/session-runner.test.ts:replaySessionProjection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnFailure",
+      "target": "function:packages/core/test/session-runner.test.ts:fragmentFixture",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/session-runner.test.ts:verifyPartialFlushOnInterruption",
+      "target": "function:packages/core/test/session-runner.test.ts:fragmentFixture",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/skill-discovery.test.ts:pull",
+      "target": "function:packages/core/test/fixture/tmpdir.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/tool-apply-patch.test.ts:withTool",
+      "target": "function:packages/core/test/fixture/location.ts:location",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/tool-bash.test.ts:withTool",
+      "target": "function:packages/core/test/fixture/location.ts:location",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/tool-edit.test.ts:withTool",
+      "target": "function:packages/core/test/fixture/location.ts:location",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/tool-output-store.test.ts:withStore",
+      "target": "function:packages/core/test/fixture/tmpdir.ts:tmpdir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/tool-write.test.ts:withTool",
+      "target": "function:packages/core/test/fixture/location.ts:location",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

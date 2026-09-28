@@ -1,0 +1,565 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/test/agent.test.ts",
+      "type": "file",
+      "name": "agent.test.ts",
+      "filePath": "packages/core/test/agent.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「AgentV2、starts without agents、materializes replayable agent transforms、rebuilds state when a transform is replaced、removes a transform when its scope closes、applies direct agent updates、creates agents with runtime defaults and supports direct removal」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/application-tools.test.ts",
+      "type": "file",
+      "name": "application-tools.test.ts",
+      "filePath": "packages/core/test/application-tools.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ApplicationTools、keeps the Core carrier opaque and executes its single handler、exposes narrow scoped Location registration and validates names、filters an application tool by its name without adding execution authorization、advertises and executes a scoped application tool with Session context、removes an application tool when its registration scope closes、removes a tool before settling a call produc」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/application-tools.test.ts:contextual",
+      "type": "function",
+      "name": "contextual",
+      "filePath": "packages/core/test/application-tools.test.ts",
+      "lineRange": [
+        25,
+        39
+      ],
+      "summary": "在Core 领域服务层中执行 contextual，接收 contexts 参数；调用 Tool.make、Schema.Struct、Effect.sync、contexts.push、query.toUpperCase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/background-job.test.ts",
+      "type": "file",
+      "name": "background-job.test.ts",
+      "filePath": "packages/core/test/background-job.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「BackgroundJob、tracks process-local work through explicit observation、publishes jobs before starting immediately settling work、increments pending work before starting immediately settling extensions、interrupts live work without promising settlement after the owning process-local scope closes」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/catalog.test.ts",
+      "type": "file",
+      "name": "catalog.test.ts",
+      "filePath": "packages/core/test/catalog.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「CatalogV2、publishes an updated event after catalog changes、derives availability from active credentials without changing provider state、derives availability from a provider、projects environment connections without a catalog plugin、normalizes provider baseURL into api url、normalizes model baseURL into api url」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/command.test.ts",
+      "type": "file",
+      "name": "command.test.ts",
+      "filePath": "packages/core/test/command.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「CommandV2、applies command transforms and preserves later overrides」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/config/agent.test.ts",
+      "type": "file",
+      "name": "agent.test.ts",
+      "filePath": "packages/core/test/config/agent.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ConfigAgentPlugin.Plugin、matches POSIX paths against home-relative permissions、matches Windows paths against home-relative permissions、applies all global permissions before agent-specific permissions、maps configured agent fields and preserves an unspecified model variant、removes a built-in agent disabled by configuration、loads legacy file-based agents from config directories」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/config/agent.test.ts:loadHomePermissions",
+      "type": "function",
+      "name": "loadHomePermissions",
+      "filePath": "packages/core/test/config/agent.test.ts",
+      "lineRange": [
+        303,
+        349
+      ],
+      "summary": "在Core 领域服务层中执行 loadHomePermissions，接收 home 参数；调用 Effect.gen、AgentV2.ID.make、agents.transform、editor.update、Config.Service.of、Effect.succeed、decode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/config/command.test.ts",
+      "type": "file",
+      "name": "command.test.ts",
+      "filePath": "packages/core/test/config/command.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ConfigCommandPlugin.Plugin、loads inline and file-based commands in config order」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/config/config.test.ts",
+      "type": "file",
+      "name": "config.test.ts",
+      "filePath": "packages/core/test/config/config.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Config、returns the latest defined scalar from priority-ordered documents、detects v1 configuration from any v1-only top-level key、migrates arbitrary v1 configuration into valid v2 configuration、migrates v1 provider setup options into AISDK settings、migrates v1 command configuration、returns an empty configuration when directory files do not exist」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/config/config.test.ts:testLayer",
+      "type": "function",
+      "name": "testLayer",
+      "filePath": "packages/core/test/config/config.test.ts",
+      "lineRange": [
+        24,
+        43
+      ],
+      "summary": "在Core 领域服务层中执行 testLayer，接收 directory、globalDirectory、projectDirectory、vcs 参数；调用 path.join、Layer.succeed、Location.Service.of、location、AbsolutePath.make、AppNodeBuilder.build、LayerNode.group 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/config/plugin.test.ts",
+      "type": "file",
+      "name": "plugin.test.ts",
+      "filePath": "packages/core/test/config/plugin.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ConfigExternalPlugin、resolves and loads a configured Promise plugin with options、loads a configured Effect plugin with options、ignores invalid plugins and continues loading、installs and resolves npm plugin packages、loads plugin files from config directories」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/config/provider.test.ts",
+      "type": "file",
+      "name": "provider.test.ts",
+      "filePath": "packages/core/test/config/provider.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ConfigProviderPlugin.Plugin、keeps configured model variant bodies unchanged、keeps layered model variant bodies unchanged、loads configured providers and applies later model overrides」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/config/provider.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/config/provider.test.ts",
+      "lineRange": [
+        27,
+        46
+      ],
+      "summary": "在Core 领域服务层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/config/skill.test.ts",
+      "type": "file",
+      "name": "skill.test.ts",
+      "filePath": "packages/core/test/config/skill.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ConfigSkillPlugin.Plugin、registers configured skill directories and URLs」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/credential.test.ts",
+      "type": "file",
+      "name": "credential.test.ts",
+      "filePath": "packages/core/test/credential.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Credential、stores, updates, lists, and removes credentials」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/database-migration.test.ts",
+      "type": "file",
+      "name": "database-migration.test.ts",
+      "filePath": "packages/core/test/database-migration.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「DatabaseMigration、defaults missing workspace names while preserving legacy workspace data、imports unnamed legacy Drizzle journal entries by their actual migration timestamps、rejects unknown legacy Drizzle journal timestamps instead of guessing completed migrations、serializes concurrent embedded initialization for one database path、declared schema has no ungenerated migrations、applies tracked migra」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/core/test/effect/cross-spawn-spawner.test.ts",
+      "type": "file",
+      "name": "cross-spawn-spawner.test.ts",
+      "filePath": "packages/core/test/effect/cross-spawn-spawner.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「cross-spawn spawner、basic spawning、cwd option、env option、stderr、combined output (all)、stdin」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/effect/cross-spawn-spawner.test.ts:decodeByteStream",
+      "type": "function",
+      "name": "decodeByteStream",
+      "filePath": "packages/core/test/effect/cross-spawn-spawner.test.ts",
+      "lineRange": [
+        19,
+        32
+      ],
+      "summary": "在Core 领域服务层中执行 decodeByteStream，接收 stream 参数；调用 Stream.runCollect、Effect.map、chunks.reduce、out.set 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/effect/keyed-mutex.test.ts",
+      "type": "file",
+      "name": "keyed-mutex.test.ts",
+      "filePath": "packages/core/test/effect/keyed-mutex.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「KeyedMutex、serializes effects with the same key、allows different keys to proceed independently、removes an interrupted waiter without dropping the holder lock」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/effect/layer-node/node-build.test.ts",
+      "type": "file",
+      "name": "node-build.test.ts",
+      "filePath": "packages/core/test/effect/layer-node/node-build.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「node build、does not build a location service map when the graph does not require it、detects cycles through a replaced location service map、shares top-level project with location services、returns a composed application layer」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/test/agent.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/agent.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/agent.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/application-tools.test.ts",
+      "target": "function:packages/core/test/application-tools.test.ts:contextual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/application-tools.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/application-tools.test.ts",
+      "target": "file:packages/core/test/lib/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/background-job.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/catalog.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/catalog.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/command.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/agent.test.ts",
+      "target": "function:packages/core/test/config/agent.test.ts:loadHomePermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/config/agent.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/agent.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/agent.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/command.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/command.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/command.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/config.test.ts",
+      "target": "function:packages/core/test/config/config.test.ts:testLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/config/config.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/config.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/config.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/plugin.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/plugin.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/provider.test.ts",
+      "target": "function:packages/core/test/config/provider.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/config/provider.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/provider.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/skill.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/skill.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/config/skill.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/credential.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/database-migration.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/effect/cross-spawn-spawner.test.ts",
+      "target": "function:packages/core/test/effect/cross-spawn-spawner.test.ts:decodeByteStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/effect/cross-spawn-spawner.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/effect/keyed-mutex.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/effect/layer-node/node-build.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/test/config/agent.test.ts:loadHomePermissions",
+      "target": "function:packages/core/test/plugin/host.ts:host",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/config/agent.test.ts:loadHomePermissions",
+      "target": "function:packages/core/test/plugin/host.ts:agentHost",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/config/config.test.ts:testLayer",
+      "target": "function:packages/core/test/fixture/location.ts:location",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

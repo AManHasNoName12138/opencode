@@ -1,0 +1,1371 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/format/formatter.ts",
+      "type": "file",
+      "name": "formatter.ts",
+      "filePath": "packages/opencode/src/format/formatter.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 gofmt、mix、prettier、oxfmt、biome、zig、clang 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/format/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/format/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Status、Service、use、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/format/index.ts",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/git/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/git/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Service、node；内部处理包含 out、nuls、fail、kind。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/git/index.ts",
+      "lineRange": [
+        101,
+        101
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/id/id.ts",
+      "type": "file",
+      "name": "id.ts",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 ascending、descending、create、timestamp；内部处理包含 ascending、descending、generateID、randomBase62、create、timestamp。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "function",
+      "name": "ascending",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 ascending，接收 prefix、given 参数；调用 generateID 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "function",
+      "name": "descending",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 descending，接收 prefix、given 参数；调用 generateID 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "function",
+      "name": "generateID",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 generateID，接收 prefix、direction、given 参数；调用 create、given.startsWith 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        51,
+        70
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 create，接收 prefix、direction、timestamp 参数；调用 Date.now、BigInt、Buffer.alloc、Number、timeBytes.toString、randomBase62 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "function",
+      "name": "timestamp",
+      "filePath": "packages/opencode/src/id/id.ts",
+      "lineRange": [
+        73,
+        78
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 timestamp，接收 id 参数；调用 id.split、id.slice、BigInt、Number 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/ide/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/ide/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Event、AlreadyInstalledError、InstallFailedError、ide、alreadyInstalled、install；内部处理包含 ide、alreadyInstalled、install。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/ide/index.ts:ide",
+      "type": "function",
+      "name": "ide",
+      "filePath": "packages/opencode/src/ide/index.ts",
+      "lineRange": [
+        22,
+        30
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 ide。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/ide/index.ts:alreadyInstalled",
+      "type": "function",
+      "name": "alreadyInstalled",
+      "filePath": "packages/opencode/src/ide/index.ts",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 alreadyInstalled。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/ide/index.ts:install",
+      "type": "function",
+      "name": "install",
+      "filePath": "packages/opencode/src/ide/index.ts",
+      "lineRange": [
+        36,
+        52
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 install，接收 ide 参数；调用 SUPPORTED_IDES.find、Process.run、p.stdout.toString、p.stderr.toString、stdout.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/image/image.ts",
+      "type": "file",
+      "name": "image.ts",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 ResizerUnavailableError、InvalidDataUrlError、DecodeError、SizeError、Service、node 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/image/image.ts:ResizerUnavailableError",
+      "type": "class",
+      "name": "ResizerUnavailableError",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "lineRange": [
+        15,
+        22
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 ResizerUnavailableError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/image/image.ts:InvalidDataUrlError",
+      "type": "class",
+      "name": "InvalidDataUrlError",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "lineRange": [
+        24,
+        30
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 InvalidDataUrlError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/image/image.ts:DecodeError",
+      "type": "class",
+      "name": "DecodeError",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 DecodeError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/image/image.ts:SizeError",
+      "type": "class",
+      "name": "SizeError",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "lineRange": [
+        38,
+        49
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 SizeError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/image/image.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/image/image.ts",
+      "lineRange": [
+        57,
+        57
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/installation/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Event、getReleaseType、Info、userAgent、USER_AGENT、isPreview、isLocal；内部处理包含 getReleaseType、userAgent、isPreview、isLocal、latest、method、upgrade。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:getReleaseType",
+      "type": "function",
+      "name": "getReleaseType",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        24,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 getReleaseType，接收 current、latest 参数；调用 semver.major、semver.minor 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:userAgent",
+      "type": "function",
+      "name": "userAgent",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 userAgent，接收 client 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:isPreview",
+      "type": "function",
+      "name": "isPreview",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isPreview。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:isLocal",
+      "type": "function",
+      "name": "isLocal",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isLocal。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:latest",
+      "type": "function",
+      "name": "latest",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        332,
+        332
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 latest，接收 ...args 参数；调用 runPromise、s.latest 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:method",
+      "type": "function",
+      "name": "method",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        333,
+        333
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 method；调用 runPromise、s.method 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/installation/index.ts:upgrade",
+      "type": "function",
+      "name": "upgrade",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        334,
+        334
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 upgrade，接收 ...args 参数；调用 runPromise、s.upgrade 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/installation/index.ts:UpgradeFailedError",
+      "type": "class",
+      "name": "UpgradeFailedError",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        55,
+        61
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 UpgradeFailedError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/installation/index.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/installation/index.ts",
+      "lineRange": [
+        82,
+        82
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/lsp/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "packages/opencode/src/lsp/client.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 InitializeError、create；内部处理包含 getFilePath、getSyncKind、endPosition、dedupeDiagnostics、configurationValue、shouldSeedDiagnosticsOnFirstPush、create。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/client.ts:dedupeDiagnostics",
+      "type": "function",
+      "name": "dedupeDiagnostics",
+      "filePath": "packages/opencode/src/lsp/client.ts",
+      "lineRange": [
+        91,
+        105
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 dedupeDiagnostics，接收 items 参数；调用 items.filter、JSON.stringify、seen.has、seen.add 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/client.ts:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "packages/opencode/src/lsp/client.ts",
+      "lineRange": [
+        123,
+        648
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 create，接收 input 参数；调用 createMessageConnection、connection.onNotification、getFilePath、published.set、Date.now、shouldSeedDiagnosticsOnFirstPush、pushDiagnostics.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/opencode/src/lsp/client.ts:InitializeError",
+      "type": "class",
+      "name": "InitializeError",
+      "filePath": "packages/opencode/src/lsp/client.ts",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 InitializeError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "type": "file",
+      "name": "diagnostic.ts",
+      "filePath": "packages/opencode/src/lsp/diagnostic.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 pretty、report 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/diagnostic.ts:pretty",
+      "type": "function",
+      "name": "pretty",
+      "filePath": "packages/opencode/src/lsp/diagnostic.ts",
+      "lineRange": [
+        5,
+        18
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 pretty，接收 diagnostic 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/diagnostic.ts:report",
+      "type": "function",
+      "name": "report",
+      "filePath": "packages/opencode/src/lsp/diagnostic.ts",
+      "lineRange": [
+        20,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 report，接收 file、issues 参数；调用 issues.filter、errors.slice、limited.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/lsp/language.ts",
+      "type": "file",
+      "name": "language.ts",
+      "filePath": "packages/opencode/src/lsp/language.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 LANGUAGE_EXTENSIONS 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/lsp/launch.ts",
+      "type": "file",
+      "name": "launch.ts",
+      "filePath": "packages/opencode/src/lsp/launch.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 spawn 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/launch.ts:spawn",
+      "type": "function",
+      "name": "spawn",
+      "filePath": "packages/opencode/src/lsp/launch.ts",
+      "lineRange": [
+        8,
+        21
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 spawn，接收 cmd、argsOrOpts、opts 参数；调用 Array.isArray、Process.spawn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "file",
+      "name": "lsp.ts",
+      "filePath": "packages/opencode/src/lsp/lsp.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Event、Range、Symbol、DocumentSymbol、Status、Service、node；内部处理包含 filterExperimentalServers。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/lsp/lsp.ts:filterExperimentalServers",
+      "type": "function",
+      "name": "filterExperimentalServers",
+      "filePath": "packages/opencode/src/lsp/lsp.ts",
+      "lineRange": [
+        98,
+        108
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 filterExperimentalServers，接收 servers、flags 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/lsp/lsp.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/lsp/lsp.ts",
+      "lineRange": [
+        136,
+        136
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/formatter.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "class:packages/opencode/src/format/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/format/formatter.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/format/index.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/git/index.ts",
+      "target": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/git/index.ts",
+      "target": "class:packages/opencode/src/git/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:ascending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:descending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/id/id.ts",
+      "target": "function:packages/opencode/src/id/id.ts:timestamp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:ide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:ide",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:alreadyInstalled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:alreadyInstalled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:install",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "function:packages/opencode/src/ide/index.ts:install",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/ide/index.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:ResizerUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:ResizerUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:InvalidDataUrlError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:InvalidDataUrlError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:DecodeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:DecodeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:SizeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:SizeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "class:packages/opencode/src/image/image.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/image/image.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:getReleaseType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:getReleaseType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:userAgent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:userAgent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:isPreview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:isPreview",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:isLocal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:isLocal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:latest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:latest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:method",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:method",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:upgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "function:packages/opencode/src/installation/index.ts:upgrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "class:packages/opencode/src/installation/index.ts:UpgradeFailedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "class:packages/opencode/src/installation/index.ts:UpgradeFailedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "class:packages/opencode/src/installation/index.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "class:packages/opencode/src/installation/index.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "file:packages/opencode/src/util/effect-http-client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/installation/index.ts",
+      "target": "file:packages/opencode/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "function:packages/opencode/src/lsp/client.ts:dedupeDiagnostics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "function:packages/opencode/src/lsp/client.ts:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "function:packages/opencode/src/lsp/client.ts:create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "class:packages/opencode/src/lsp/client.ts:InitializeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "class:packages/opencode/src/lsp/client.ts:InitializeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/lsp/language.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/client.ts",
+      "target": "file:packages/opencode/src/util/timeout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "target": "function:packages/opencode/src/lsp/diagnostic.ts:pretty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "target": "function:packages/opencode/src/lsp/diagnostic.ts:pretty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "target": "function:packages/opencode/src/lsp/diagnostic.ts:report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "target": "function:packages/opencode/src/lsp/diagnostic.ts:report",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/diagnostic.ts",
+      "target": "file:packages/opencode/src/lsp/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/launch.ts",
+      "target": "function:packages/opencode/src/lsp/launch.ts:spawn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/launch.ts",
+      "target": "function:packages/opencode/src/lsp/launch.ts:spawn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/launch.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "function:packages/opencode/src/lsp/lsp.ts:filterExperimentalServers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "class:packages/opencode/src/lsp/lsp.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "class:packages/opencode/src/lsp/lsp.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/lsp/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/lsp/launch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/lsp/lsp.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:ascending",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:descending",
+      "target": "function:packages/opencode/src/id/id.ts:generateID",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/id/id.ts:generateID",
+      "target": "function:packages/opencode/src/id/id.ts:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/lsp/client.ts:create",
+      "target": "function:packages/opencode/src/util/timeout.ts:withTimeout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

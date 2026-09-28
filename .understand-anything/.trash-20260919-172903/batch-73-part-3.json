@@ -1,0 +1,2690 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/plugin/shared.ts",
+      "type": "file",
+      "name": "shared.ts",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "summary": "在插件扩展与模型集成层中提供 DEPRECATED_PLUGIN_PACKAGES、isDeprecatedPlugin、parsePluginSpecifier、pluginSource、isPathPluginSpec、resolvePathPluginTarget、checkPluginCompatibility；内部处理包含 isDeprecatedPlugin、parse、parsePluginSpecifier、pluginSource、resolveExportPath、isAbsolutePath、extractExportValue。",
+      "tags": [
+        "typescript",
+        "plugin",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:isDeprecatedPlugin",
+      "type": "function",
+      "name": "isDeprecatedPlugin",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "在插件扩展与模型集成层中执行 isDeprecatedPlugin，接收 spec 参数；调用 DEPRECATED_PLUGIN_PACKAGES.some、spec.includes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:parsePluginSpecifier",
+      "type": "function",
+      "name": "parsePluginSpecifier",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        22,
+        34
+      ],
+      "summary": "在插件扩展与模型集成层中执行 parsePluginSpecifier，接收 spec 参数；调用 parse 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "type": "function",
+      "name": "pluginSource",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        56,
+        59
+      ],
+      "summary": "在插件扩展与模型集成层中执行 pluginSource，接收 spec 参数；调用 isPathPluginSpec 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:resolvePackageEntrypoint",
+      "type": "function",
+      "name": "resolvePackageEntrypoint",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        103,
+        114
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolvePackageEntrypoint，接收 spec、kind、pkg 参数；调用 isRecord、extractExportValue、resolvePackagePath、packageMain 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "type": "function",
+      "name": "resolvePluginEntrypoint",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        136,
+        169
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolvePluginEntrypoint，接收 spec、target、kind、pkg 参数；调用 pluginSource、readPluginPackage、resolvePackageEntrypoint、resolveTargetDirectory、resolveDirectoryIndex、pathToFileURL、isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:isPathPluginSpec",
+      "type": "function",
+      "name": "isPathPluginSpec",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        171,
+        173
+      ],
+      "summary": "在插件扩展与模型集成层中执行 isPathPluginSpec，接收 spec 参数；调用 spec.startsWith、isAbsolutePath 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:resolvePathPluginTarget",
+      "type": "function",
+      "name": "resolvePathPluginTarget",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        175,
+        192
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolvePathPluginTarget，接收 spec 参数；调用 spec.startsWith、fileURLToPath、path.isAbsolute、path.resolve、Filesystem.statAsync、pathToFileURL、Filesystem.exists 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:checkPluginCompatibility",
+      "type": "function",
+      "name": "checkPluginCompatibility",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        194,
+        205
+      ],
+      "summary": "在插件扩展与模型集成层中执行 checkPluginCompatibility，接收 target、opencodeVersion、pkg 参数；调用 semver.valid、semver.major、readPluginPackage、isRecord、semver.satisfies 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:resolvePluginTarget",
+      "type": "function",
+      "name": "resolvePluginTarget",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        207,
+        213
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolvePluginTarget，接收 spec 参数；调用 isPathPluginSpec、resolvePathPluginTarget、parse、Npm.add 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "function",
+      "name": "readPluginPackage",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        215,
+        222
+      ],
+      "summary": "在插件扩展与模型集成层中执行 readPluginPackage，接收 target 参数；调用 target.startsWith、fileURLToPath、Filesystem.statAsync、path.dirname、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "type": "function",
+      "name": "createPluginEntry",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        224,
+        236
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createPluginEntry，接收 spec、target、kind 参数；调用 pluginSource、readPluginPackage、resolvePluginEntrypoint 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:readPackageThemes",
+      "type": "function",
+      "name": "readPackageThemes",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        238,
+        262
+      ],
+      "summary": "在插件扩展与模型集成层中执行 readPackageThemes，接收 spec、pkg 参数；调用 Array.isArray、field.map、item.trim、raw.startsWith、isAbsolutePath、resolvePackageFile、Array.from 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:readPluginId",
+      "type": "function",
+      "name": "readPluginId",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        264,
+        270
+      ],
+      "summary": "在插件扩展与模型集成层中执行 readPluginId，接收 id、spec 参数；调用 id.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:readV1Plugin",
+      "type": "function",
+      "name": "readV1Plugin",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        272,
+        304
+      ],
+      "summary": "在插件扩展与模型集成层中执行 readV1Plugin，接收 mod、spec、kind、mode 参数；调用 isRecord 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/shared.ts:resolvePluginId",
+      "type": "function",
+      "name": "resolvePluginId",
+      "filePath": "packages/opencode/src/plugin/shared.ts",
+      "lineRange": [
+        306,
+        323
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolvePluginId，接收 source、spec、target、id、pkg 参数；调用 readPluginPackage、hit.json.name.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/plugin/tui/internal.ts",
+      "type": "file",
+      "name": "internal.ts",
+      "filePath": "packages/opencode/src/plugin/tui/internal.ts",
+      "summary": "在插件扩展与模型集成层中提供 internalTuiPlugins 等接口。",
+      "tags": [
+        "typescript",
+        "plugin",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/internal.ts:internalTuiPlugins",
+      "type": "function",
+      "name": "internalTuiPlugins",
+      "filePath": "packages/opencode/src/plugin/tui/internal.ts",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "在插件扩展与模型集成层中执行 internalTuiPlugins，接收 flags 参数；调用 createBuiltinPlugins 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "summary": "在插件扩展与模型集成层中提供 init、list、activatePlugin、deactivatePlugin、addPlugin、installPlugin、dispose；内部处理包含 fail、warn、createScopedKeymap、createScopedAttention、createScopedMode、runCleanup、isTheme。",
+      "tags": [
+        "typescript",
+        "plugin",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "function",
+      "name": "fail",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        128,
+        137
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fail，接收 message、data 参数；调用 console.error、errorMessage、errorData 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedKeymap",
+      "type": "function",
+      "name": "createScopedKeymap",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        143,
+        160
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createScopedKeymap，接收 keymap、scope 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedAttention",
+      "type": "function",
+      "name": "createScopedAttention",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        162,
+        191
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createScopedAttention，接收 attention、scope、root 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedMode",
+      "type": "function",
+      "name": "createScopedMode",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        193,
+        202
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createScopedMode，接收 mode、scope 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:runCleanup",
+      "type": "function",
+      "name": "runCleanup",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        206,
+        226
+      ],
+      "summary": "在插件扩展与模型集成层中执行 runCleanup，接收 fn、ms 参数；调用 setTimeout、resolve、Promise.resolve、clearTimeout 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createThemeInstaller",
+      "type": "function",
+      "name": "createThemeInstaller",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        245,
+        310
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createThemeInstaller，接收 meta、root、spec、plugin 参数；调用 Filesystem.resolveFilePath、path.basename、path.extname、path.dirname、path.join、Filesystem.statAsync、Math.floor 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createMeta",
+      "type": "function",
+      "name": "createMeta",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        312,
+        339
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createMeta，接收 source、spec、target、meta、id 参数；调用 Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:loadInternalPlugin",
+      "type": "function",
+      "name": "loadInternalPlugin",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        341,
+        361
+      ],
+      "summary": "在插件扩展与模型集成层中执行 loadInternalPlugin，接收 item 参数；调用 process.cwd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:readThemeFiles",
+      "type": "function",
+      "name": "readThemeFiles",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        363,
+        375
+      ],
+      "summary": "在插件扩展与模型集成层中执行 readThemeFiles，接收 spec、pkg 参数；调用 Promise.resolve、readPackageThemes、warn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:syncPluginThemes",
+      "type": "function",
+      "name": "syncPluginThemes",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        377,
+        386
+      ],
+      "summary": "在插件扩展与模型集成层中执行 syncPluginThemes，接收 plugin 参数；调用 createThemeInstaller、install、warn 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createPluginScope",
+      "type": "function",
+      "name": "createPluginScope",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        388,
+        468
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createPluginScope，接收 load、id、disposeTimeoutMs 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "function",
+      "name": "listPluginStatus",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        491,
+        500
+      ],
+      "summary": "在插件扩展与模型集成层中执行 listPluginStatus，接收 state 参数；调用 state.plugins.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePluginEntry",
+      "type": "function",
+      "name": "deactivatePluginEntry",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        502,
+        514
+      ],
+      "summary": "在插件扩展与模型集成层中执行 deactivatePluginEntry，接收 state、plugin、persist 参数；调用 writePluginEnabledState、state.view.update、listPluginStatus、scope.dispose 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "type": "function",
+      "name": "activatePluginEntry",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        516,
+        556
+      ],
+      "summary": "在插件扩展与模型集成层中执行 activatePluginEntry，接收 state、plugin、persist 参数；调用 writePluginEnabledState、state.view.update、listPluginStatus、createPluginScope、pluginApi、Promise.resolve、syncPluginThemes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "type": "function",
+      "name": "pluginApi",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        572,
+        651
+      ],
+      "summary": "在插件扩展与模型集成层中执行 pluginApi，接收 runtime、plugin、scope、base 参数；调用 Object.assign、Object.create、createThemeInstaller、createScopedKeymap、createScopedAttention、createCommandShim、createScopedMode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginEntry",
+      "type": "function",
+      "name": "addPluginEntry",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        653,
+        665
+      ],
+      "summary": "在插件扩展与模型集成层中执行 addPluginEntry，接收 state、plugin 参数；调用 state.plugins_by_id.has、fail、state.plugins_by_id.set、state.plugins.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "type": "function",
+      "name": "resolveExternalPlugins",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        676,
+        774
+      ],
+      "summary": "在插件扩展与模型集成层中执行 resolveExternalPlugins，接收 list、wait 参数；调用 PluginLoader.loadExternal、wait、Promise.resolve、readV1Plugin、fail、resolvePluginId、readPluginId 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "type": "function",
+      "name": "addExternalPluginEntries",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        776,
+        811
+      ],
+      "summary": "在插件扩展与模型集成层中执行 addExternalPluginEntries，接收 state、ready 参数；调用 PluginMeta.touchMany、ready.map、createMeta、addPluginEntry、plugins.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:installDetail",
+      "type": "function",
+      "name": "installDetail",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        827,
+        846
+      ],
+      "summary": "在插件扩展与模型集成层中执行 installDetail，接收 err 参数；调用 installCause、errorMessage、line.trim、lines.filter、line.startsWith、line.replace、lines.at 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "type": "function",
+      "name": "addPluginBySpec",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        848,
+        889
+      ],
+      "summary": "在插件扩展与模型集成层中执行 addPluginBySpec，接收 state、raw 参数；调用 raw.trim、state.pending.get、defaultPluginOrigin、ConfigPlugin.pluginSpecifier、state.plugins.some、state.pending.delete、resolveExternalPlugins 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "type": "function",
+      "name": "installPluginBySpec",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        891,
+        982
+      ],
+      "summary": "在插件扩展与模型集成层中执行 installPluginBySpec，接收 state、raw、global 参数；调用 raw.trim、installModulePlugin、installDetail、readPluginManifest、patchPluginConfig、errorMessage、manifest.targets.find 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        988,
+        1006
+      ],
+      "summary": "在插件扩展与模型集成层中执行 init，接收 input 参数；调用 process.cwd、load、createPluginRuntime 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:list",
+      "type": "function",
+      "name": "list",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1008,
+        1011
+      ],
+      "summary": "在插件扩展与模型集成层中执行 list；调用 attention.soundboard.list、listPluginStatus 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePlugin",
+      "type": "function",
+      "name": "activatePlugin",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1013,
+        1015
+      ],
+      "summary": "在插件扩展与模型集成层中执行 activatePlugin，接收 id 参数；调用 activatePluginById 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePlugin",
+      "type": "function",
+      "name": "deactivatePlugin",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1017,
+        1019
+      ],
+      "summary": "在插件扩展与模型集成层中执行 deactivatePlugin，接收 id 参数；调用 deactivatePluginById 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:addPlugin",
+      "type": "function",
+      "name": "addPlugin",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1021,
+        1023
+      ],
+      "summary": "在插件扩展与模型集成层中执行 addPlugin，接收 spec 参数；调用 addPluginBySpec 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:installPlugin",
+      "type": "function",
+      "name": "installPlugin",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1025,
+        1027
+      ],
+      "summary": "在插件扩展与模型集成层中执行 installPlugin，接收 spec、options 参数；调用 installPluginBySpec 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:dispose",
+      "type": "function",
+      "name": "dispose",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1029,
+        1049
+      ],
+      "summary": "在插件扩展与模型集成层中执行 dispose；调用 ctrl.abort、Date.now、fail、runCleanup、task.catch、deactivatePluginEntry、state.dispose 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "type": "function",
+      "name": "load",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1051,
+        1122
+      ],
+      "summary": "在插件扩展与模型集成层中执行 load，接收 input 参数；调用 process.cwd、input.runtime.setupSlots、next.view.update、listPluginStatus、Effect.runPromise、Effect.gen、Effect.provide 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/plugin/tui/runtime.ts:createLegacyTuiPluginHost",
+      "type": "function",
+      "name": "createLegacyTuiPluginHost",
+      "filePath": "packages/opencode/src/plugin/tui/runtime.ts",
+      "lineRange": [
+        1124,
+        1129
+      ],
+      "summary": "在插件扩展与模型集成层中执行 createLegacyTuiPluginHost。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/temporary.ts",
+      "type": "file",
+      "name": "temporary.ts",
+      "filePath": "packages/opencode/src/temporary.ts",
+      "summary": "通过 yargs 注册 TuiThreadCommand，提供帮助、版本、日志级别及 pure 选项，并把日志选项写入启动环境。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "file",
+      "name": "filesystem.ts",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 exists、isDir、stat、statAsync、size、readText、readJson 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:exists",
+      "type": "function",
+      "name": "exists",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 exists，接收 p 参数；调用 existsSync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:isDir",
+      "type": "function",
+      "name": "isDir",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        16,
+        22
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 isDir，接收 p 参数；调用 statSync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:stat",
+      "type": "function",
+      "name": "stat",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        24,
+        26
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 stat，接收 p 参数；调用 statSync 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:statAsync",
+      "type": "function",
+      "name": "statAsync",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 statAsync，接收 p 参数；调用 statFile、isEnoent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:size",
+      "type": "function",
+      "name": "size",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 size，接收 p 参数；调用 stat、Number 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:readText",
+      "type": "function",
+      "name": "readText",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 readText，接收 p 参数；调用 readFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:readJson",
+      "type": "function",
+      "name": "readJson",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        44,
+        46
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 readJson，接收 p 参数；调用 JSON.parse、readFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:readBytes",
+      "type": "function",
+      "name": "readBytes",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        48,
+        50
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 readBytes，接收 p 参数；调用 readFile 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:readArrayBuffer",
+      "type": "function",
+      "name": "readArrayBuffer",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        52,
+        55
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 readArrayBuffer，接收 p 参数；调用 readFile、buf.buffer.slice 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        61,
+        80
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 write，接收 p、content、mode 参数；调用 writeFile、isEnoent、mkdir、dirname 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:writeJson",
+      "type": "function",
+      "name": "writeJson",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        82,
+        84
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeJson，接收 p、data、mode 参数；调用 write、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:writeStream",
+      "type": "function",
+      "name": "writeStream",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        86,
+        103
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeStream，接收 p、stream、mode 参数；调用 dirname、existsSync、mkdir、Readable.fromWeb、createWriteStream、pipeline、chmod 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:mimeType",
+      "type": "function",
+      "name": "mimeType",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        105,
+        108
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mimeType，接收 p 参数；调用 import、lookup 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "type": "function",
+      "name": "normalizePath",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        115,
+        123
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizePath，接收 p 参数；调用 win32.normalize、win32.resolve、windowsPath、realpathSync.native 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:normalizePathPattern",
+      "type": "function",
+      "name": "normalizePathPattern",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        125,
+        132
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 normalizePathPattern，接收 p 参数；调用 p.match、normalizePath、join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        137,
+        145
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 resolve，接收 p 参数；调用 pathResolve、windowsPath、normalizePath、realpathSync、isEnoent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:resolveFilePath",
+      "type": "function",
+      "name": "resolveFilePath",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        147,
+        151
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 resolveFilePath，接收 root、file 参数；调用 file.startsWith、fileURLToPath、isAbsolute、pathResolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:windowsPath",
+      "type": "function",
+      "name": "windowsPath",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        153,
+        165
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 windowsPath，接收 p 参数；调用 drive.toUpperCase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:overlaps",
+      "type": "function",
+      "name": "overlaps",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        166,
+        168
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 overlaps，接收 a、b 参数；调用 FSUtil.overlaps 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:contains",
+      "type": "function",
+      "name": "contains",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        170,
+        172
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 contains，接收 parent、child 参数；调用 FSUtil.contains 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:findUp",
+      "type": "function",
+      "name": "findUp",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        186,
+        211
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 findUp，接收 target、start、stop、options 参数；调用 dirname、dirs.push、Array.isArray、dirs.toReversed、join、exists、result.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/filesystem.ts:globUp",
+      "type": "function",
+      "name": "globUp",
+      "filePath": "packages/opencode/src/util/filesystem.ts",
+      "lineRange": [
+        228,
+        249
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 globUp，接收 pattern、start、stop 参数；调用 Glob.scan、result.push、dirname 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/rpc.ts",
+      "type": "file",
+      "name": "rpc.ts",
+      "filePath": "packages/opencode/src/util/rpc.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 listen、emit、client 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/util/rpc.ts:listen",
+      "type": "function",
+      "name": "listen",
+      "filePath": "packages/opencode/src/util/rpc.ts",
+      "lineRange": [
+        5,
+        13
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listen，接收 rpc 参数；调用 JSON.parse、postMessage、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/rpc.ts:emit",
+      "type": "function",
+      "name": "emit",
+      "filePath": "packages/opencode/src/util/rpc.ts",
+      "lineRange": [
+        15,
+        17
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 emit，接收 event、data 参数；调用 postMessage、JSON.stringify 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/rpc.ts:client",
+      "type": "function",
+      "name": "client",
+      "filePath": "packages/opencode/src/util/rpc.ts",
+      "lineRange": [
+        19,
+        64
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 client，接收 target 参数；调用 JSON.parse、pending.get、resolve、pending.delete、listeners.get、handler 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/account/repo.test.ts",
+      "type": "file",
+      "name": "repo.test.ts",
+      "filePath": "packages/opencode/test/account/repo.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「list returns empty when no accounts exist、active returns none when no accounts exist、persistAccount inserts and getRow retrieves、persistAccount normalizes trailing slashes in stored server URLs、persistAccount sets the active account and org、list returns all accounts、remove deletes an account」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isDeprecatedPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isDeprecatedPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:parsePluginSpecifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:parsePluginSpecifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePackageEntrypoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isPathPluginSpec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isPathPluginSpec",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePathPluginTarget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePathPluginTarget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:checkPluginCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:checkPluginCompatibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginTarget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginTarget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPackageThemes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPackageThemes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readV1Plugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readV1Plugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/shared.ts",
+      "target": "file:packages/opencode/src/util/record.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/internal.ts",
+      "target": "function:packages/opencode/src/plugin/tui/internal.ts:internalTuiPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/internal.ts",
+      "target": "function:packages/opencode/src/plugin/tui/internal.ts:internalTuiPlugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/internal.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedKeymap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedAttention",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:runCleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createThemeInstaller",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:loadInternalPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:readThemeFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:syncPluginThemes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createPluginScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePluginEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installPlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installPlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:dispose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createLegacyTuiPluginHost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createLegacyTuiPluginHost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/config/plugin.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/config/tui-host-attention.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/plugin/install.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/plugin/loader.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/plugin/meta.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/plugin/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/plugin/tui/internal.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/plugin/tui/runtime.ts",
+      "target": "file:packages/opencode/src/util/process.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/temporary.ts",
+      "target": "file:packages/opencode/src/cli/cmd/tui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:exists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:exists",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:isDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:isDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:stat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:stat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:statAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:statAsync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readArrayBuffer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readArrayBuffer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:writeJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:writeJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:writeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:writeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:mimeType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:mimeType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePathPattern",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePathPattern",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:resolveFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:resolveFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:windowsPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:windowsPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:overlaps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:overlaps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:contains",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:contains",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:findUp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:findUp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:globUp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/filesystem.ts",
+      "target": "function:packages/opencode/src/util/filesystem.ts:globUp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:listen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:listen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:emit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:emit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/rpc.ts",
+      "target": "function:packages/opencode/src/util/rpc.ts:client",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/account/repo.test.ts",
+      "target": "file:packages/opencode/src/account/repo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/account/repo.test.ts",
+      "target": "file:packages/opencode/src/account/repo.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/account/repo.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/account/repo.test.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/account/repo.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isPathPluginSpec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "target": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePackageEntrypoint",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:checkPluginCompatibility",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginTarget",
+      "target": "function:packages/opencode/src/plugin/shared.ts:isPathPluginSpec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginTarget",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePathPluginTarget",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "target": "function:packages/opencode/src/plugin/shared.ts:pluginSource",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:createPluginEntry",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginEntrypoint",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/shared.ts:resolvePluginId",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginPackage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:readThemeFiles",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPackageThemes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:syncPluginThemes",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createThemeInstaller",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createPluginScope",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:syncPluginThemes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createThemeInstaller",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedKeymap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedAttention",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:pluginApi",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createScopedMode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginEntry",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readV1Plugin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "target": "function:packages/opencode/src/plugin/shared.ts:resolvePluginId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "target": "function:packages/opencode/src/plugin/shared.ts:readPluginId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:readThemeFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createMeta",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installDetail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/install.ts:readPluginManifest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "target": "function:packages/opencode/src/plugin/install.ts:patchPluginConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:init",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:list",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:addPlugin",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginBySpec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:installPlugin",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:installPluginBySpec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:dispose",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:dispose",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:deactivatePluginEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:listPluginStatus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/internal.ts:internalTuiPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:loadInternalPlugin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:createMeta",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addPluginEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:resolveExternalPlugins",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:addExternalPluginEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:activatePluginEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/plugin/tui/runtime.ts:load",
+      "target": "function:packages/opencode/src/plugin/tui/runtime.ts:fail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:size",
+      "target": "function:packages/opencode/src/util/filesystem.ts:stat",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:writeJson",
+      "target": "function:packages/opencode/src/util/filesystem.ts:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "target": "function:packages/opencode/src/util/filesystem.ts:windowsPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:normalizePathPattern",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:resolve",
+      "target": "function:packages/opencode/src/util/filesystem.ts:windowsPath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:resolve",
+      "target": "function:packages/opencode/src/util/filesystem.ts:normalizePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/util/filesystem.ts:findUp",
+      "target": "function:packages/opencode/src/util/filesystem.ts:exists",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

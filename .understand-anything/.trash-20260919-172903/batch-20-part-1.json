@@ -1,0 +1,1517 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/tool/registry.ts",
+      "type": "file",
+      "name": "registry.ts",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "summary": "在旧版工具调用层中提供 webSearchEnabled、Service、node；内部处理包含 webSearchEnabled、isZodType、isPluginTool、isJsonSchemaDefinition、legacyJsonSchema、zodJsonSchema、zodMetadataRegistry。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/registry.ts:webSearchEnabled",
+      "type": "function",
+      "name": "webSearchEnabled",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "lineRange": [
+        58,
+        65
+      ],
+      "summary": "在旧版工具调用层中执行 webSearchEnabled，接收 providerID、flags 参数；调用 ProviderV2.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/registry.ts:legacyJsonSchema",
+      "type": "function",
+      "name": "legacyJsonSchema",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "lineRange": [
+        363,
+        372
+      ],
+      "summary": "在旧版工具调用层中执行 legacyJsonSchema，接收 entries 参数；调用 Object.fromEntries、entries.filter、isJsonSchemaDefinition、Object.keys 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/registry.ts:zodMetadataRegistry",
+      "type": "function",
+      "name": "zodMetadataRegistry",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "lineRange": [
+        383,
+        407
+      ],
+      "summary": "在旧版工具调用层中执行 zodMetadataRegistry，接收 schema 参数；调用 z.registry、collect 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/registry.ts:normalizeZodJsonSchema",
+      "type": "function",
+      "name": "normalizeZodJsonSchema",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "lineRange": [
+        409,
+        421
+      ],
+      "summary": "在旧版工具调用层中执行 normalizeZodJsonSchema，接收 value 参数；调用 Array.isArray、value.map、normalizeZodJsonSchema、Object.fromEntries、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/tool/registry.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/tool/registry.ts",
+      "lineRange": [
+        89,
+        89
+      ],
+      "summary": "在旧版工具调用层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/src/tool/schema.ts",
+      "summary": "在旧版工具调用层中提供 ToolID 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/shell.ts",
+      "type": "file",
+      "name": "shell.ts",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、ShellTool；内部处理包含 resolveWasm、parts、source、commands、unquote、home、envValue。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell.ts:parts",
+      "type": "function",
+      "name": "parts",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "lineRange": [
+        91,
+        117
+      ],
+      "summary": "在旧版工具调用层中执行 parts，接收 node 参数；调用 node.child、child.child、out.push 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell.ts:provider",
+      "type": "function",
+      "name": "provider",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "lineRange": [
+        162,
+        172
+      ],
+      "summary": "在旧版工具调用层中执行 provider，接收 text 参数；调用 text.match 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell.ts:pathArgs",
+      "type": "function",
+      "name": "pathArgs",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "lineRange": [
+        188,
+        218
+      ],
+      "summary": "在旧版工具调用层中执行 pathArgs，接收 list、ps、cmd 参数；调用 item.text.startsWith、list.slice、out.push、item.text.toLowerCase、SWITCHES.has、FLAGS.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell.ts:tail",
+      "type": "function",
+      "name": "tail",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "lineRange": [
+        225,
+        255
+      ],
+      "summary": "在旧版工具调用层中执行 tail，接收 text、maxLines、maxBytes 参数；调用 text.split、Buffer.byteLength、Buffer.from、out.unshift、buf.subarray、out.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell.ts:cmd",
+      "type": "function",
+      "name": "cmd",
+      "filePath": "packages/opencode/src/tool/shell.ts",
+      "lineRange": [
+        293,
+        310
+      ],
+      "summary": "在旧版工具调用层中执行 cmd，接收 shell、command、cwd、env 参数；调用 Shell.ps、ChildProcess.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/shell/id.ts",
+      "type": "file",
+      "name": "id.ts",
+      "filePath": "packages/opencode/src/tool/shell/id.ts",
+      "summary": "在旧版工具调用层中提供 toKind、ToolID；内部处理包含 isKind、toKind。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/id.ts:toKind",
+      "type": "function",
+      "name": "toKind",
+      "filePath": "packages/opencode/src/tool/shell/id.ts",
+      "lineRange": [
+        10,
+        12
+      ],
+      "summary": "在旧版工具调用层中执行 toKind，接收 value 参数；调用 isKind 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "type": "file",
+      "name": "prompt.ts",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "summary": "在旧版工具调用层中提供 parameterSchema、Parameters、render；内部处理包含 parameterSchema、renderPrompt、shellDisplayName、powershellNotes、chainGuidance、bashCommandSection、powershellCommandSection。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:parameterSchema",
+      "type": "function",
+      "name": "parameterSchema",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        15,
+        23
+      ],
+      "summary": "在旧版工具调用层中执行 parameterSchema；调用 Schema.Struct、Schema.String.annotate、Schema.optional 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:powershellNotes",
+      "type": "function",
+      "name": "powershellNotes",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        43,
+        63
+      ],
+      "summary": "在旧版工具调用层中执行 powershellNotes，接收 name 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:chainGuidance",
+      "type": "function",
+      "name": "chainGuidance",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        65,
+        76
+      ],
+      "summary": "在旧版工具调用层中执行 chainGuidance，接收 name 参数；调用 PS.has、CMD.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:bashCommandSection",
+      "type": "function",
+      "name": "bashCommandSection",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        78,
+        119
+      ],
+      "summary": "在旧版工具调用层中执行 bashCommandSection，接收 chain、limits、defaultTimeoutMs 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:powershellCommandSection",
+      "type": "function",
+      "name": "powershellCommandSection",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        121,
+        170
+      ],
+      "summary": "在旧版工具调用层中执行 powershellCommandSection，接收 name、chain、pathSep、limits、defaultTimeoutMs 参数；调用 powershellNotes 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:cmdCommandSection",
+      "type": "function",
+      "name": "cmdCommandSection",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        172,
+        219
+      ],
+      "summary": "在旧版工具调用层中执行 cmdCommandSection，接收 chain、limits、defaultTimeoutMs 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "type": "function",
+      "name": "profile",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        221,
+        271
+      ],
+      "summary": "在旧版工具调用层中执行 profile，接收 name、platform、limits、defaultTimeoutMs 参数；调用 PS.has、chainGuidance、CMD.has、shellDisplayName、cmdCommandSection、powershellCommandSection、bashCommandSection 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/shell/prompt.ts:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "packages/opencode/src/tool/shell/prompt.ts",
+      "lineRange": [
+        273,
+        291
+      ],
+      "summary": "在旧版工具调用层中执行 render，接收 name、platform、limits、defaultTimeoutMs 参数；调用 profile、renderPrompt、parameterSchema 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/skill.ts",
+      "type": "file",
+      "name": "skill.ts",
+      "filePath": "packages/opencode/src/tool/skill.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、SkillTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/task.ts",
+      "type": "file",
+      "name": "task.ts",
+      "filePath": "packages/opencode/src/tool/task.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、TaskTool；内部处理包含 renderOutput。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/task.ts:renderOutput",
+      "type": "function",
+      "name": "renderOutput",
+      "filePath": "packages/opencode/src/tool/task.ts",
+      "lineRange": [
+        64,
+        79
+      ],
+      "summary": "在旧版工具调用层中执行 renderOutput，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/todo.ts",
+      "type": "file",
+      "name": "todo.ts",
+      "filePath": "packages/opencode/src/tool/todo.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、TodoWriteTool 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "summary": "在旧版工具调用层中提供 InvalidArgumentsError、define、init；内部处理包含 wrap、define、init。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "function",
+      "name": "wrap",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        99,
+        149
+      ],
+      "summary": "在旧版工具调用层中执行 wrap，接收 id、init、truncate、agents 参数；调用 Effect.gen、init、Schema.decodeUnknownEffect、decode、Effect.mapError、toolInfo.formatValidationError、String 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "function",
+      "name": "define",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        151,
+        169
+      ],
+      "summary": "在旧版工具调用层中执行 define，接收 id、init 参数；调用 Object.assign、Effect.gen、wrap 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        171,
+        181
+      ],
+      "summary": "在旧版工具调用层中执行 init，接收 info 参数；调用 Effect.gen、info.init 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "class",
+      "name": "InvalidArgumentsError",
+      "filePath": "packages/opencode/src/tool/tool.ts",
+      "lineRange": [
+        24,
+        34
+      ],
+      "summary": "在旧版工具调用层中定义 InvalidArgumentsError 类，提供 message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "file",
+      "name": "truncate.ts",
+      "filePath": "packages/opencode/src/tool/truncate.ts",
+      "summary": "在旧版工具调用层中提供 MAX_LINES、MAX_BYTES、DIR、GLOB、Service、node；内部处理包含 hasTaskTool。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/tool/truncate.ts",
+      "lineRange": [
+        46,
+        46
+      ],
+      "summary": "在旧版工具调用层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/truncation-dir.ts",
+      "type": "file",
+      "name": "truncation-dir.ts",
+      "filePath": "packages/opencode/src/tool/truncation-dir.ts",
+      "summary": "在旧版工具调用层中提供 TRUNCATION_DIR 等接口。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/tool/webfetch.ts",
+      "type": "file",
+      "name": "webfetch.ts",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "summary": "在旧版工具调用层中提供 Parameters、WebFetchTool；内部处理包含 extractTextFromHTML、convertHTMLToMarkdown。",
+      "tags": [
+        "typescript",
+        "工具",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/webfetch.ts:extractTextFromHTML",
+      "type": "function",
+      "name": "extractTextFromHTML",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "lineRange": [
+        158,
+        180
+      ],
+      "summary": "在旧版工具调用层中执行 extractTextFromHTML，接收 html 参数；调用 parser.write、parser.end、text.trim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/tool/webfetch.ts:convertHTMLToMarkdown",
+      "type": "function",
+      "name": "convertHTMLToMarkdown",
+      "filePath": "packages/opencode/src/tool/webfetch.ts",
+      "lineRange": [
+        182,
+        192
+      ],
+      "summary": "在旧版工具调用层中执行 convertHTMLToMarkdown，接收 html 参数；调用 turndownService.remove、turndownService.turndown 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "工具"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "function:packages/opencode/src/tool/registry.ts:webSearchEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "function:packages/opencode/src/tool/registry.ts:webSearchEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "function:packages/opencode/src/tool/registry.ts:legacyJsonSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "function:packages/opencode/src/tool/registry.ts:zodMetadataRegistry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "function:packages/opencode/src/tool/registry.ts:normalizeZodJsonSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "class:packages/opencode/src/tool/registry.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "class:packages/opencode/src/tool/registry.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/format/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/mcp/catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/question/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/session/instruction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/apply_patch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/edit.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/glob.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/grep.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/invalid.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/plan.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/read.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/shell.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/skill.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/task.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/webfetch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/websearch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/registry.ts",
+      "target": "file:packages/opencode/src/tool/write.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/schema.ts",
+      "target": "file:packages/opencode/src/id/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "function:packages/opencode/src/tool/shell.ts:parts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "function:packages/opencode/src/tool/shell.ts:provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "function:packages/opencode/src/tool/shell.ts:pathArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "function:packages/opencode/src/tool/shell.ts:tail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "function:packages/opencode/src/tool/shell.ts:cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/effect/instance-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/permission/arity.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/plugin/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/tool/shell/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell.ts",
+      "target": "file:packages/opencode/src/util/lazy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/id.ts",
+      "target": "function:packages/opencode/src/tool/shell/id.ts:toKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/id.ts",
+      "target": "function:packages/opencode/src/tool/shell/id.ts:toKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:parameterSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:parameterSchema",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:powershellNotes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:chainGuidance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:bashCommandSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:powershellCommandSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:cmdCommandSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:render",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "file:packages/opencode/src/tool/shell/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/shell/prompt.ts",
+      "target": "file:packages/opencode/src/tool/shell/shell.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/skill.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/skill.ts",
+      "target": "file:packages/opencode/src/tool/skill.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/skill.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "function:packages/opencode/src/tool/task.ts:renderOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/agent/subagent-permissions.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/background/job.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/effect/bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/tool/json-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/tool/task.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/task.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/session/todo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/tool/todowrite.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/todo.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:define",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "class:packages/opencode/src/tool/tool.ts:InvalidArgumentsError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/permission/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/tool.ts",
+      "target": "file:packages/opencode/src/tool/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "class:packages/opencode/src/tool/truncate.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/agent/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/permission/evaluate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/tool/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/truncate.ts",
+      "target": "file:packages/opencode/src/tool/truncation-dir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "function:packages/opencode/src/tool/webfetch.ts:extractTextFromHTML",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "function:packages/opencode/src/tool/webfetch.ts:convertHTMLToMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/tool/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/tool/webfetch.txt",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/tool/webfetch.ts",
+      "target": "file:packages/opencode/src/util/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:powershellCommandSection",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:powershellNotes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:chainGuidance",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:cmdCommandSection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:powershellCommandSection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:bashCommandSection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:render",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:profile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/shell/prompt.ts:render",
+      "target": "function:packages/opencode/src/tool/shell/prompt.ts:parameterSchema",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "target": "function:packages/opencode/src/tool/tool.ts:init",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/tool/tool.ts:define",
+      "target": "function:packages/opencode/src/tool/tool.ts:wrap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

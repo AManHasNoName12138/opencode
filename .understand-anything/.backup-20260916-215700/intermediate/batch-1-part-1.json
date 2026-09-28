@@ -1,0 +1,1614 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/e2e/performance/benchmark.ts",
+      "type": "file",
+      "name": "benchmark.ts",
+      "filePath": "packages/app/e2e/performance/benchmark.ts",
+      "summary": "提供基准测试性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 benchmark、expect、withBenchmarkPage、benchmarkDiagnostics。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/benchmark.ts:observePerformancePage",
+      "type": "function",
+      "name": "observePerformancePage",
+      "filePath": "packages/app/e2e/performance/benchmark.ts",
+      "lineRange": [
+        78,
+        98
+      ],
+      "summary": "监听页面性能与错误事件，并关联 Chrome 追踪采集。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/benchmark.ts:withBenchmarkPage",
+      "type": "function",
+      "name": "withBenchmarkPage",
+      "filePath": "packages/app/e2e/performance/benchmark.ts",
+      "lineRange": [
+        100,
+        118
+      ],
+      "summary": "为性能场景创建隔离浏览器上下文和页面，执行测量流程后回收资源。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/benchmark.ts:reportPerformancePage",
+      "type": "function",
+      "name": "reportPerformancePage",
+      "filePath": "packages/app/e2e/performance/benchmark.ts",
+      "lineRange": [
+        120,
+        138
+      ],
+      "summary": "停止页面诊断采集并整理性能报告。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/benchmark.ts:benchmarkDiagnostics",
+      "type": "function",
+      "name": "benchmarkDiagnostics",
+      "filePath": "packages/app/e2e/performance/benchmark.ts",
+      "lineRange": [
+        140,
+        144
+      ],
+      "summary": "读取当前页面关联的性能诊断记录。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "type": "file",
+      "name": "chrome-trace.ts",
+      "filePath": "packages/app/e2e/performance/chrome-trace.ts",
+      "summary": "提供Chrome追踪性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 startChromeTrace、prepareChromeTrace。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "type": "function",
+      "name": "startChromeTrace",
+      "filePath": "packages/app/e2e/performance/chrome-trace.ts",
+      "lineRange": [
+        21,
+        67
+      ],
+      "summary": "启动Chrome追踪，调用 prepareChromeTrace、page.context、session.send、category.startsWith 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/chrome-trace.ts:prepareChromeTrace",
+      "type": "function",
+      "name": "prepareChromeTrace",
+      "filePath": "packages/app/e2e/performance/chrome-trace.ts",
+      "lineRange": [
+        69,
+        82
+      ],
+      "summary": "准备 Chrome 追踪文件的目录和唯一名称。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/chrome-trace.ts:writeProtocolStream",
+      "type": "function",
+      "name": "writeProtocolStream",
+      "filePath": "packages/app/e2e/performance/chrome-trace.ts",
+      "lineRange": [
+        84,
+        95
+      ],
+      "summary": "写入协议流，调用 open、session.send、output.write、Buffer.from 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "type": "file",
+      "name": "adverse.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "summary": "验证不利条件相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“timeline adverse visual stability”、“does not pull a scrolled-away user while an active shell grows”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/adverse.spec.ts:history",
+      "type": "function",
+      "name": "history",
+      "filePath": "packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "lineRange": [
+        220,
+        242
+      ],
+      "summary": "构造历史测试数据，由 count、offset 指定场景参数，用于不利条件测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "type": "file",
+      "name": "context-matrix.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "summary": "验证上下文矩阵相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“appends context operations while the group is expanded”、“splits and merges context groups when a middle text part changes”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "type": "file",
+      "name": "environment-matrix.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "summary": "验证环境矩阵相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“keeps shell growth ordered at device scale ${deviceScaleFactor}”、“keeps shell and status transitions ordered with reduced motion ${reducedMotion}”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts:shellPlan",
+      "type": "function",
+      "name": "shellPlan",
+      "filePath": "packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "lineRange": [
+        95,
+        113
+      ],
+      "summary": "实现 shellPlan 的环境矩阵操作，调用 visualPlan 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "type": "file",
+      "name": "file-matrix.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "summary": "验证文件矩阵相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“stabilizes ${profile.name} pending to completed”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:completedPart",
+      "type": "function",
+      "name": "completedPart",
+      "filePath": "packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "lineRange": [
+        81,
+        102
+      ],
+      "summary": "构造完成片段测试数据，由 partID、profile 指定场景参数，用于文件矩阵测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:patchFile",
+      "type": "function",
+      "name": "patchFile",
+      "filePath": "packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "lineRange": [
+        104,
+        114
+      ],
+      "summary": "实现 patchFile 的文件矩阵操作，调用 source 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "type": "file",
+      "name": "file-mutation.spec.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "summary": "验证文件变更相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“adds patch files incrementally without resetting outer expansion”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts:patchFile",
+      "type": "function",
+      "name": "patchFile",
+      "filePath": "packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "lineRange": [
+        97,
+        107
+      ],
+      "summary": "实现 patchFile 的文件变更操作，调用 source 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/fixture.test.ts",
+      "type": "file",
+      "name": "fixture.test.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.test.ts",
+      "summary": "验证测试数据相关行为，通过浏览器场景检查界面状态与操作结果。覆盖案例包括“timeline fixture validation”、“accepts a valid timeline”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "file",
+      "name": "fixture.ts",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "summary": "提供测试数据性能测量或测试场景支持，用于检查会话界面渲染和导航表现。 对外提供 directory、projectID、sessionID、userID、assistantID、title。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "type": "function",
+      "name": "setupTimeline",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        87,
+        205
+      ],
+      "summary": "安装时间线测试的服务器数据和事件支持，检查消息数据是否满足场景契约。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:describeEvent",
+      "type": "function",
+      "name": "describeEvent",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        207,
+        226
+      ],
+      "summary": "实现 describeEvent 的测试数据操作，输入包括 event。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "function",
+      "name": "event",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        232,
+        237
+      ],
+      "summary": "构造事件测试数据，由 type、properties 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineEvent",
+      "type": "function",
+      "name": "validateTimelineEvent",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        239,
+        241
+      ],
+      "summary": "校验时间线事件，调用 decodeEvent 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineMessages",
+      "type": "function",
+      "name": "validateTimelineMessages",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        243,
+        268
+      ],
+      "summary": "校验时间线消息，调用 input.forEach、decodeMessage、messages.filter、messages.forEach 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:waitForVisualSettle",
+      "type": "function",
+      "name": "waitForVisualSettle",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        270,
+        301
+      ],
+      "summary": "等待用于视觉Settle，调用 page.waitForFunction、selectors.map、document.querySelector、elements.some 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "type": "function",
+      "name": "historyMessages",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        303,
+        325
+      ],
+      "summary": "实现 historyMessages 的测试数据操作，调用 String、userMessage、assistantMessage 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partUpdated",
+      "type": "function",
+      "name": "partUpdated",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        327,
+        335
+      ],
+      "summary": "构造片段Updated测试数据，由 part 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partDelta",
+      "type": "function",
+      "name": "partDelta",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        337,
+        339
+      ],
+      "summary": "构造片段Delta测试数据，由 partID、delta、messageID 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:messageUpdated",
+      "type": "function",
+      "name": "messageUpdated",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        341,
+        343
+      ],
+      "summary": "构造消息Updated测试数据，由 info 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:status",
+      "type": "function",
+      "name": "status",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        345,
+        350
+      ],
+      "summary": "构造状态测试数据，由 type、attempt 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "function",
+      "name": "userMessage",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        352,
+        376
+      ],
+      "summary": "构造用户消息测试数据，由 parts、input 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "function",
+      "name": "assistantMessage",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        378,
+        413
+      ],
+      "summary": "构造助手消息测试数据，由 parts、input 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userText",
+      "type": "function",
+      "name": "userText",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        415,
+        420
+      ],
+      "summary": "构造用户文本测试数据，由 text、input 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:textPart",
+      "type": "function",
+      "name": "textPart",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        422,
+        424
+      ],
+      "summary": "构造文本片段测试数据，由 id、text 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:reasoningPart",
+      "type": "function",
+      "name": "reasoningPart",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        426,
+        428
+      ],
+      "summary": "构造推理片段测试数据，由 id、text 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:toolPart",
+      "type": "function",
+      "name": "toolPart",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        458,
+        500
+      ],
+      "summary": "构造工具片段测试数据，由 id、tool、state、input 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:shell",
+      "type": "function",
+      "name": "shell",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        502,
+        514
+      ],
+      "summary": "构造shell测试数据，由 id、state、output、command 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:completedAssistantInfo",
+      "type": "function",
+      "name": "completedAssistantInfo",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        516,
+        518
+      ],
+      "summary": "实现 completedAssistantInfo 的测试数据操作，输入包括 info。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:project",
+      "type": "function",
+      "name": "project",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        520,
+        529
+      ],
+      "summary": "构造项目测试数据，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        531,
+        542
+      ],
+      "summary": "构造会话测试数据，由 input 指定场景参数，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:eventSchema",
+      "type": "function",
+      "name": "eventSchema",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        544,
+        554
+      ],
+      "summary": "实现 eventSchema 的测试数据操作，调用 Schema.Struct、Schema.optional、Schema.Literal 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:provider",
+      "type": "function",
+      "name": "provider",
+      "filePath": "packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "lineRange": [
+        556,
+        568
+      ],
+      "summary": "构造提供商测试数据，用于测试数据测试场景。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:observePerformancePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:withBenchmarkPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:withBenchmarkPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:reportPerformancePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:benchmarkDiagnostics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:benchmarkDiagnostics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/e2e/performance/benchmark.ts:observePerformancePage",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/benchmark.ts:withBenchmarkPage",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:observePerformancePage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/benchmark.ts:withBenchmarkPage",
+      "target": "function:packages/app/e2e/performance/benchmark.ts:reportPerformancePage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:prepareChromeTrace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:prepareChromeTrace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/chrome-trace.ts",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:writeProtocolStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:prepareChromeTrace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/chrome-trace.ts:startChromeTrace",
+      "target": "function:packages/app/e2e/performance/chrome-trace.ts:writeProtocolStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/adverse.spec.ts:history",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "target": "file:packages/app/e2e/utils/visual-stability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/utils/visual-stability.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/adverse.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/adverse.spec.ts:history",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/adverse.spec.ts:history",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/adverse.spec.ts:history",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:textPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "target": "file:packages/app/e2e/utils/visual-stability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/utils/visual-stability.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/context-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts:shellPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "target": "file:packages/app/e2e/utils/visual-stability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/utils/visual-stability.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/environment-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:completedPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:patchFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "target": "file:packages/app/e2e/utils/visual-stability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/utils/visual-stability.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:completedPart",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:toolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:completedPart",
+      "target": "function:packages/app/e2e/performance/timeline-stability/file-matrix.spec.ts:patchFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts:patchFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "target": "file:packages/app/e2e/utils/visual-stability.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/utils/visual-stability.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/file-mutation.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.test.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/fixture.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:describeEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:waitForVisualSettle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:waitForVisualSettle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partUpdated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partDelta",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:messageUpdated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:messageUpdated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:textPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:textPart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:reasoningPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:reasoningPart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:toolPart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:toolPart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:shell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:shell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:completedAssistantInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:completedAssistantInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:project",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:project",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:session",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:eventSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/utils/mock-server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/utils/sse-transport.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/utils/waits.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/utils/mock-server.ts:mockOpenCodeServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:project",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:provider",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:setupTimeline",
+      "target": "function:packages/app/e2e/utils/waits.ts:expectSessionTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:validateTimelineEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:historyMessages",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:assistantMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partUpdated",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:partDelta",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:messageUpdated",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:status",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:event",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userMessage",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:userText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:shell",
+      "target": "function:packages/app/e2e/performance/timeline-stability/fixture.ts:toolPart",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/interaction.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/lifecycle.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/oracle-browser.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/scroll-interaction.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/shell-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/tool-mutation.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/tools.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/timeline-stability/fixture.ts",
+      "target": "file:packages/app/e2e/performance/timeline-stability/transition-matrix.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/first-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/home-tab-navigation-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/review-pane-scaling-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-parent-hydration-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-flash.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-tab-switch-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/e2e/performance/benchmark.ts",
+      "target": "file:packages/app/e2e/performance/timeline/session-timeline-benchmark.spec.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

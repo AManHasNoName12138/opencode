@@ -1,0 +1,394 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/question/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/src/question/schema.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 QuestionID 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/auth.ts",
+      "type": "file",
+      "name": "auth.ts",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Config、required、authorized、header、headers；内部处理包含 required、authorized、header、headers。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/auth.ts:required",
+      "type": "function",
+      "name": "required",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "lineRange": [
+        24,
+        26
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 required，接收 config 参数；调用 Option.isSome 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/auth.ts:authorized",
+      "type": "function",
+      "name": "authorized",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "lineRange": [
+        28,
+        34
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 authorized，接收 credentials、config 参数；调用 Option.isSome、Redacted.value 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/auth.ts:header",
+      "type": "function",
+      "name": "header",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 header，接收 credentials 参数；调用 Buffer.from 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/auth.ts:headers",
+      "type": "function",
+      "name": "headers",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "lineRange": [
+        44,
+        48
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 headers，接收 credentials 参数；调用 header 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/server/auth.ts:Config",
+      "type": "class",
+      "name": "Config",
+      "filePath": "packages/opencode/src/server/auth.ts",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "在OpenCode 应用与兼容层中定义 Config 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/opencode/src/server/event.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Event、InstanceDisposed 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/global-lifecycle.ts",
+      "type": "file",
+      "name": "global-lifecycle.ts",
+      "filePath": "packages/opencode/src/server/global-lifecycle.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 emitGlobalDisposed、disposeAllInstancesAndEmitGlobalDisposed 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/init-projectors.ts",
+      "type": "file",
+      "name": "init-projectors.ts",
+      "filePath": "packages/opencode/src/server/init-projectors.ts",
+      "summary": "作为副作用入口调用 initProjectors，安装旧版服务事件的投影处理器。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/mdns.ts",
+      "type": "file",
+      "name": "mdns.ts",
+      "filePath": "packages/opencode/src/server/mdns.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 publish、unpublish 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/mdns.ts:publish",
+      "type": "function",
+      "name": "publish",
+      "filePath": "packages/opencode/src/server/mdns.ts",
+      "lineRange": [
+        6,
+        34
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 publish，接收 port、domain 参数；调用 unpublish、bonjour.publish、service.on、bonjour.destroy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/mdns.ts:unpublish",
+      "type": "function",
+      "name": "unpublish",
+      "filePath": "packages/opencode/src/server/mdns.ts",
+      "lineRange": [
+        36,
+        45
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 unpublish；调用 bonjour.unpublishAll、bonjour.destroy 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/server/projectors.ts",
+      "type": "file",
+      "name": "projectors.ts",
+      "filePath": "packages/opencode/src/server/projectors.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 initProjectors 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/server/projectors.ts:initProjectors",
+      "type": "function",
+      "name": "initProjectors",
+      "filePath": "packages/opencode/src/server/projectors.ts",
+      "lineRange": [
+        1,
+        1
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 initProjectors。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:required",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:required",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:authorized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:authorized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "function:packages/opencode/src/server/auth.ts:headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "class:packages/opencode/src/server/auth.ts:Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "class:packages/opencode/src/server/auth.ts:Config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/auth.ts",
+      "target": "file:packages/opencode/src/effect/config-service.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/global-lifecycle.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/global-lifecycle.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/global-lifecycle.ts",
+      "target": "file:packages/opencode/src/server/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/init-projectors.ts",
+      "target": "file:packages/opencode/src/server/projectors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/server/mdns.ts",
+      "target": "function:packages/opencode/src/server/mdns.ts:publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/mdns.ts",
+      "target": "function:packages/opencode/src/server/mdns.ts:publish",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/mdns.ts",
+      "target": "function:packages/opencode/src/server/mdns.ts:unpublish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/mdns.ts",
+      "target": "function:packages/opencode/src/server/mdns.ts:unpublish",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/server/projectors.ts",
+      "target": "function:packages/opencode/src/server/projectors.ts:initProjectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/server/projectors.ts",
+      "target": "function:packages/opencode/src/server/projectors.ts:initProjectors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/auth.ts:headers",
+      "target": "function:packages/opencode/src/server/auth.ts:header",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/server/mdns.ts:publish",
+      "target": "function:packages/opencode/src/server/mdns.ts:unpublish",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

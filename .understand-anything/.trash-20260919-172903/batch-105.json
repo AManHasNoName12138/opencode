@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/client/src/generated/client-error.ts",
+      "type": "file",
+      "name": "client-error.ts",
+      "filePath": "packages/client/src/generated/client-error.ts",
+      "summary": "保存自动生成的客户端或数据库接口，公开 ClientError。",
+      "tags": [
+        "代码生成",
+        "客户端",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/client/src/generated/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "packages/client/src/generated/client.ts",
+      "summary": "由 HttpApi 契约生成 Promise 客户端，make 构造端点调用，公共辅助逻辑编码查询参数、处理 JSON 与响应 Content-Type。",
+      "tags": [
+        "typescript",
+        "客户端",
+        "代码生成"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/client/src/generated/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/client/src/generated/types.ts",
+      "summary": "保存自动生成的客户端或数据库接口，公开 isUnauthorizedError、isInvalidRequestError、isInvalidCursorError、isSessionNotFoundError、isConflictError、isServiceUnavailableError、isMessageNotFoundError，包含 isUnauthorizedError、isInvalidRequestError、isInvalidCursorError、isSessionNotFoundError、isConflictError、isServiceUnavailableError、isMessageNotFoundError 等适配操作。",
+      "tags": [
+        "代码生成",
+        "客户端",
+        "typescript"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/client/src/generated/client.ts",
+      "target": "file:packages/client/src/generated/client-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/client/src/generated/client.ts",
+      "target": "file:packages/client/src/generated/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

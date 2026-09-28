@@ -1,0 +1,1055 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/stats/core/src/domain/inference.test.ts",
+      "type": "file",
+      "name": "inference.test.ts",
+      "filePath": "packages/stats/core/src/domain/inference.test.ts",
+      "summary": "验证统计数据的推理统计行为，覆盖 inference stat normalization；normalizes model suffixes used by router/provider variants；maps normalized model ids to public authors；uses provider.model to resolve opencode route providers；keeps stealth model usage without exposing the route provider。",
+      "tags": [
+        "测试",
+        "统计数据",
+        "推理统计"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.test.ts:aggregate",
+      "type": "function",
+      "name": "aggregate",
+      "filePath": "packages/stats/core/src/domain/inference.test.ts",
+      "lineRange": [
+        260,
+        272
+      ],
+      "summary": "统计数据的推理统计处理函数 aggregate，接收 model、provider 参数。",
+      "tags": [
+        "函数",
+        "测试",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/core/src/domain/inference.ts",
+      "type": "file",
+      "name": "inference.ts",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "summary": "生成推理与留存的统计查询，并校验和转换查询结果为模型、提供商、地域与留存聚合，统一时间分桶及模型分类。",
+      "tags": [
+        "接口实现",
+        "统计数据",
+        "推理统计"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:buildStatsQueries",
+      "type": "function",
+      "name": "buildStatsQueries",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        41,
+        50
+      ],
+      "summary": "生成分时间与维度聚合的推理统计查询，用于统计数据的推理统计流程；相关调用包括 statPeriods、buildStatsQuery。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQueries",
+      "type": "function",
+      "name": "buildRetentionQueries",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        52,
+        66
+      ],
+      "summary": "生成按活动周与回访周计算留存的查询，用于统计数据的推理统计流程；相关调用包括 retentionPeriods、periods.map、period.start.toISOString。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQuery",
+      "type": "function",
+      "name": "buildRetentionQuery",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        68,
+        183
+      ],
+      "summary": "统计数据的推理统计处理函数 buildRetentionQuery，调用 periods.at、sqlString、first.start.toISOString、last.returnEnd.toISOString、last.returnEnd.getTime 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:buildStatsQuery",
+      "type": "function",
+      "name": "buildStatsQuery",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        185,
+        332
+      ],
+      "summary": "统计数据的推理统计处理函数 buildStatsQuery，调用 sqlString、period.start.toISOString、period.end.toISOString、period.end.getTime、freeTierSql 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:toModelAggregate",
+      "type": "function",
+      "name": "toModelAggregate",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        334,
+        342
+      ],
+      "summary": "统计数据的推理统计处理函数 toModelAggregate，调用 statModel、statProvider、toStatBaseAggregate 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:toProviderAggregate",
+      "type": "function",
+      "name": "toProviderAggregate",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        344,
+        348
+      ],
+      "summary": "统计数据的推理统计处理函数 toProviderAggregate，调用 toStatBaseAggregate、statProvider 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:toGeoAggregate",
+      "type": "function",
+      "name": "toGeoAggregate",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        350,
+        360
+      ],
+      "summary": "统计数据的推理统计处理函数 toGeoAggregate，调用 toStatBaseAggregate、statProvider、statModel、normalizeCountry 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:toRetentionAggregate",
+      "type": "function",
+      "name": "toRetentionAggregate",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        362,
+        375
+      ],
+      "summary": "统计数据的推理统计处理函数 toRetentionAggregate，调用 statProvider、statModel、integer 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:toStatBaseAggregate",
+      "type": "function",
+      "name": "toStatBaseAggregate",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        377,
+        410
+      ],
+      "summary": "统计数据的推理统计处理函数 toStatBaseAggregate，调用 normalizeTier、integer、nullableNumber、nullableInteger 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:statPeriods",
+      "type": "function",
+      "name": "statPeriods",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        439,
+        452
+      ],
+      "summary": "统计数据的推理统计处理函数 statPeriods，调用 startOfUtcDay、startOfIsoWeek、periodEnd.getTime、first.getTime、periodKeyFor 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:retentionPeriods",
+      "type": "function",
+      "name": "retentionPeriods",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        454,
+        463
+      ],
+      "summary": "统计数据的推理统计处理函数 retentionPeriods，调用 startOfIsoWeek、completeEnd.getTime、first.getTime、start.getTime、end.getTime 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/inference.ts:statModelSql",
+      "type": "function",
+      "name": "statModelSql",
+      "filePath": "packages/stats/core/src/domain/inference.ts",
+      "lineRange": [
+        465,
+        476
+      ],
+      "summary": "统计数据的推理统计处理函数 statModelSql，调用 sqlString 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "type": "file",
+      "name": "model-normalization.ts",
+      "filePath": "packages/stats/core/src/domain/model-normalization.ts",
+      "summary": "统一推理模型名、作者与统计提供商，应用别名、隐藏、免费和退役模型规则，保持统计维度一致。",
+      "tags": [
+        "接口实现",
+        "统计数据",
+        "模型名称归一化"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model-normalization.ts:normalizeInferenceModel",
+      "type": "function",
+      "name": "normalizeInferenceModel",
+      "filePath": "packages/stats/core/src/domain/model-normalization.ts",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "统一推理模型的别名和名称形式，用于统计数据的模型名称归一化流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model-normalization.ts:modelAuthor",
+      "type": "function",
+      "name": "modelAuthor",
+      "filePath": "packages/stats/core/src/domain/model-normalization.ts",
+      "lineRange": [
+        33,
+        38
+      ],
+      "summary": "统计数据的模型名称归一化处理函数 modelAuthor，调用 normalizeInferenceModel、EXCLUDED_MODELS.has、MODEL_AUTHOR_RULES.find、model.includes 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model-normalization.ts:statModel",
+      "type": "function",
+      "name": "statModel",
+      "filePath": "packages/stats/core/src/domain/model-normalization.ts",
+      "lineRange": [
+        40,
+        44
+      ],
+      "summary": "确定推理记录采用的统计模型维度，用于统计数据的模型名称归一化流程；相关调用包括 normalizeInferenceModel、resolved.toLowerCase。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model-normalization.ts:statProvider",
+      "type": "function",
+      "name": "statProvider",
+      "filePath": "packages/stats/core/src/domain/model-normalization.ts",
+      "lineRange": [
+        46,
+        62
+      ],
+      "summary": "确定统计记录采用的提供商维度，用于统计数据的模型名称归一化流程；相关调用包括 statModel、STEALTH_MODELS.has、modelAuthor。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/stats/core/src/domain/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/stats/core/src/domain/model.ts",
+      "summary": "统计数据的模型数据访问与转换模块，提供 ModelStatRepo、rowsFromAggregates。",
+      "tags": [
+        "接口实现",
+        "统计数据",
+        "模型"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model.ts:rowsFromAggregates",
+      "type": "function",
+      "name": "rowsFromAggregates",
+      "filePath": "packages/stats/core/src/domain/model.ts",
+      "lineRange": [
+        219,
+        230
+      ],
+      "summary": "统计数据的模型处理函数 rowsFromAggregates，调用 rankRows、synthesizeAllTierRows、collapseRows、aggregates.filter 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/model.ts:rankRows",
+      "type": "function",
+      "name": "rankRows",
+      "filePath": "packages/stats/core/src/domain/model.ts",
+      "lineRange": [
+        241,
+        259
+      ],
+      "summary": "统计数据的模型处理函数 rankRows，调用 rows.reduce、statPeriodKey、rankBy、group.map、tokenRanks.get 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/stats/core/src/domain/model.ts:ModelStatRepo",
+      "type": "class",
+      "name": "ModelStatRepo",
+      "filePath": "packages/stats/core/src/domain/model.ts",
+      "lineRange": [
+        53,
+        208
+      ],
+      "summary": "统计数据的模型类型 ModelStatRepo，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/stats/core/src/domain/provider.ts",
+      "type": "file",
+      "name": "provider.ts",
+      "filePath": "packages/stats/core/src/domain/provider.ts",
+      "summary": "统计数据的提供商数据访问与转换模块，提供 ProviderStatRepo、rowsFromAggregates。",
+      "tags": [
+        "接口实现",
+        "统计数据",
+        "提供商"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/provider.ts:rowsFromAggregates",
+      "type": "function",
+      "name": "rowsFromAggregates",
+      "filePath": "packages/stats/core/src/domain/provider.ts",
+      "lineRange": [
+        194,
+        205
+      ],
+      "summary": "统计数据的提供商处理函数 rowsFromAggregates，调用 rankRowsWithMarketShare、synthesizeAllTierRows、collapseRows、aggregates.filter 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/stats/core/src/domain/provider.ts:ProviderStatRepo",
+      "type": "class",
+      "name": "ProviderStatRepo",
+      "filePath": "packages/stats/core/src/domain/provider.ts",
+      "lineRange": [
+        48,
+        192
+      ],
+      "summary": "统计数据的提供商类型 ProviderStatRepo，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/stats/core/src/domain/retention.ts",
+      "type": "file",
+      "name": "retention.ts",
+      "filePath": "packages/stats/core/src/domain/retention.ts",
+      "summary": "统计数据的留存统计数据访问与转换模块，提供 RetentionStatRepo、rowsFromAggregates、isMissingRetentionTable。",
+      "tags": [
+        "接口实现",
+        "统计数据",
+        "留存统计"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/retention.ts:rowsFromAggregates",
+      "type": "function",
+      "name": "rowsFromAggregates",
+      "filePath": "packages/stats/core/src/domain/retention.ts",
+      "lineRange": [
+        86,
+        96
+      ],
+      "summary": "统计数据的留存统计处理函数 rowsFromAggregates，调用 aggregates.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/stats/core/src/domain/retention.ts:isMissingRetentionTable",
+      "type": "function",
+      "name": "isMissingRetentionTable",
+      "filePath": "packages/stats/core/src/domain/retention.ts",
+      "lineRange": [
+        98,
+        101
+      ],
+      "summary": "统计数据的留存统计处理函数 isMissingRetentionTable，调用 errorText、text.includes 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/stats/core/src/domain/retention.ts:RetentionStatRepo",
+      "type": "class",
+      "name": "RetentionStatRepo",
+      "filePath": "packages/stats/core/src/domain/retention.ts",
+      "lineRange": [
+        28,
+        84
+      ],
+      "summary": "统计数据的留存统计类型 RetentionStatRepo，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "统计数据"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/stats/core/src/domain/inference.test.ts",
+      "target": "function:packages/stats/core/src/domain/inference.test.ts:aggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.test.ts",
+      "target": "file:packages/stats/core/src/domain/inference.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.test.ts",
+      "target": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/inference.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "file:packages/stats/core/src/domain/inference.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildStatsQueries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildStatsQueries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQueries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQueries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildStatsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toModelAggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toModelAggregate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toProviderAggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toProviderAggregate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toGeoAggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toGeoAggregate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toRetentionAggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toRetentionAggregate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toStatBaseAggregate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:statPeriods",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:retentionPeriods",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "function:packages/stats/core/src/domain/inference.ts:statModelSql",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildStatsQueries",
+      "target": "function:packages/stats/core/src/domain/inference.ts:statPeriods",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildStatsQueries",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildStatsQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQueries",
+      "target": "function:packages/stats/core/src/domain/inference.ts:retentionPeriods",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQueries",
+      "target": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildRetentionQuery",
+      "target": "function:packages/stats/core/src/domain/inference.ts:statModelSql",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:buildStatsQuery",
+      "target": "function:packages/stats/core/src/domain/inference.ts:statModelSql",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:toModelAggregate",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toStatBaseAggregate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:toProviderAggregate",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toStatBaseAggregate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/inference.ts:toGeoAggregate",
+      "target": "function:packages/stats/core/src/domain/inference.ts:toStatBaseAggregate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/geo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/retention.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/domain/stat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/inference.ts",
+      "target": "file:packages/stats/core/src/r2-sql.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:normalizeInferenceModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:normalizeInferenceModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:modelAuthor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:modelAuthor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:statModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:statModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:statProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:statProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/model-normalization.ts:modelAuthor",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:normalizeInferenceModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/model-normalization.ts:statModel",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:normalizeInferenceModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/model-normalization.ts:statProvider",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:statModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/model-normalization.ts:statProvider",
+      "target": "function:packages/stats/core/src/domain/model-normalization.ts:modelAuthor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "function:packages/stats/core/src/domain/model.ts:rowsFromAggregates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "function:packages/stats/core/src/domain/model.ts:rowsFromAggregates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "function:packages/stats/core/src/domain/model.ts:rankRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "class:packages/stats/core/src/domain/model.ts:ModelStatRepo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "class:packages/stats/core/src/domain/model.ts:ModelStatRepo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/stats/core/src/domain/model.ts:rowsFromAggregates",
+      "target": "function:packages/stats/core/src/domain/model.ts:rankRows",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "file:packages/stats/core/src/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "file:packages/stats/core/src/database/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/model.ts",
+      "target": "file:packages/stats/core/src/domain/stat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "function:packages/stats/core/src/domain/provider.ts:rowsFromAggregates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "function:packages/stats/core/src/domain/provider.ts:rowsFromAggregates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "class:packages/stats/core/src/domain/provider.ts:ProviderStatRepo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "class:packages/stats/core/src/domain/provider.ts:ProviderStatRepo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "file:packages/stats/core/src/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "file:packages/stats/core/src/database/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "file:packages/stats/core/src/domain/model-normalization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/provider.ts",
+      "target": "file:packages/stats/core/src/domain/stat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "function:packages/stats/core/src/domain/retention.ts:rowsFromAggregates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "function:packages/stats/core/src/domain/retention.ts:rowsFromAggregates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "function:packages/stats/core/src/domain/retention.ts:isMissingRetentionTable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "function:packages/stats/core/src/domain/retention.ts:isMissingRetentionTable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "class:packages/stats/core/src/domain/retention.ts:RetentionStatRepo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "class:packages/stats/core/src/domain/retention.ts:RetentionStatRepo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "file:packages/stats/core/src/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "file:packages/stats/core/src/database/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/stats/core/src/domain/retention.ts",
+      "target": "file:packages/stats/core/src/domain/stat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

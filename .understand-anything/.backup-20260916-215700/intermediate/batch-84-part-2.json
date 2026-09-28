@@ -1,0 +1,1455 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/ui/src/theme/context.tsx",
+      "type": "file",
+      "name": "context.tsx",
+      "filePath": "packages/ui/src/theme/context.tsx",
+      "summary": "实现应用的上下文界面及相关交互。 对外提供 { use: useTheme, provider: ThemeProvider }。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "type": "function",
+      "name": "applyThemeCss",
+      "filePath": "packages/ui/src/theme/context.tsx",
+      "lineRange": [
+        133,
+        160
+      ],
+      "summary": "应用主题CSS，调用 resolveThemeVariant、themeToCss、themeV2ToCss、resolveThemeVariantV2 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "type": "function",
+      "name": "cacheThemeVariants",
+      "filePath": "packages/ui/src/theme/context.tsx",
+      "lineRange": [
+        162,
+        172
+      ],
+      "summary": "缓存解析后的主题变体及其 CSS，供主题切换复用。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/default-themes.ts",
+      "type": "file",
+      "name": "default-themes.ts",
+      "filePath": "packages/ui/src/theme/default-themes.ts",
+      "summary": "为 ui 提供默认themes相关数据处理接口。 对外提供 oc2Theme、amoledTheme、auraTheme、ayuTheme、carbonfoxTheme、catppuccinTheme。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/ui/src/theme/loader.ts",
+      "type": "file",
+      "name": "loader.ts",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "summary": "从地址加载主题、注入样式并管理当前主题及亮暗色方案。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:ensureLoaderStyleElement",
+      "type": "function",
+      "name": "ensureLoaderStyleElement",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        8,
+        17
+      ],
+      "summary": "确保LoaderStyleElement，调用 document.getElementById、document.createElement、document.head.appendChild 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "type": "function",
+      "name": "applyTheme",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        19,
+        30
+      ],
+      "summary": "应用主题，调用 resolveThemeVariant、resolveThemeVariantV2、buildThemeCss、ensureLoaderStyleElement 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:buildThemeCss",
+      "type": "function",
+      "name": "buildThemeCss",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        32,
+        76
+      ],
+      "summary": "构造主题CSS，调用 themeToCss、themeV2ToCss 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:loadThemeFromUrl",
+      "type": "function",
+      "name": "loadThemeFromUrl",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        78,
+        84
+      ],
+      "summary": "加载主题来源URL，调用 fetch、response.json 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:getActiveTheme",
+      "type": "function",
+      "name": "getActiveTheme",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        86,
+        95
+      ],
+      "summary": "读取活动主题，调用 document.documentElement.getAttribute 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:removeTheme",
+      "type": "function",
+      "name": "removeTheme",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        97,
+        104
+      ],
+      "summary": "移除主题，调用 document.getElementById、existingElement.remove、document.documentElement.removeAttribute 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/loader.ts:setColorScheme",
+      "type": "function",
+      "name": "setColorScheme",
+      "filePath": "packages/ui/src/theme/loader.ts",
+      "lineRange": [
+        106,
+        112
+      ],
+      "summary": "设置颜色配色，调用 document.documentElement.style.removeProperty、document.documentElement.style.setProperty 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/resolve.ts",
+      "type": "file",
+      "name": "resolve.ts",
+      "filePath": "packages/ui/src/theme/resolve.ts",
+      "summary": "把主题变体解析为完整颜色令牌，并序列化为可注入的 CSS。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "function",
+      "name": "resolveThemeVariant",
+      "filePath": "packages/ui/src/theme/resolve.ts",
+      "lineRange": [
+        4,
+        456
+      ],
+      "summary": "解析主题Variant，调用 getColors、generateNeutralScale、generateScale、shift 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/ui/src/theme/resolve.ts:getColors",
+      "type": "function",
+      "name": "getColors",
+      "filePath": "packages/ui/src/theme/resolve.ts",
+      "lineRange": [
+        473,
+        514
+      ],
+      "summary": "读取Colors，输入包括 variant。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/resolve.ts:resolveTheme",
+      "type": "function",
+      "name": "resolveTheme",
+      "filePath": "packages/ui/src/theme/resolve.ts",
+      "lineRange": [
+        529,
+        534
+      ],
+      "summary": "解析主题，调用 resolveThemeVariant 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "function",
+      "name": "themeToCss",
+      "filePath": "packages/ui/src/theme/resolve.ts",
+      "lineRange": [
+        536,
+        540
+      ],
+      "summary": "把解析后的主题颜色令牌序列化为 CSS 变量。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/ui/src/theme/types.ts",
+      "summary": "定义 ui 的类型模块。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/ui/src/theme/v2/avatar.ts",
+      "type": "file",
+      "name": "avatar.ts",
+      "filePath": "packages/ui/src/theme/v2/avatar.ts",
+      "summary": "为 ui 提供头像相关数据处理接口。 对外提供 V2_AVATAR_FG、V2_AVATAR_LIGHT、V2_AVATAR_DARK。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/v2/default-primitives.ts",
+      "type": "file",
+      "name": "default-primitives.ts",
+      "filePath": "packages/ui/src/theme/v2/default-primitives.ts",
+      "summary": "为 ui 提供默认基础色相关数据处理接口。 对外提供 V2_PRIMITIVES_DEFAULT。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/ui/src/theme/v2/foreground.ts",
+      "type": "file",
+      "name": "foreground.ts",
+      "filePath": "packages/ui/src/theme/v2/foreground.ts",
+      "summary": "为 ui 提供前景相关数据处理接口。 对外提供 mapV2Foreground。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "type": "function",
+      "name": "mapV2Foreground",
+      "filePath": "packages/ui/src/theme/v2/foreground.ts",
+      "lineRange": [
+        31,
+        60
+      ],
+      "summary": "根据新版主题语义映射调整前景颜色。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/v2/mapping.ts",
+      "type": "file",
+      "name": "mapping.ts",
+      "filePath": "packages/ui/src/theme/v2/mapping.ts",
+      "summary": "把新版基础色映射到语义用途，并合并主题令牌覆盖。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/mapping.ts:mapV2Semantics",
+      "type": "function",
+      "name": "mapV2Semantics",
+      "filePath": "packages/ui/src/theme/v2/mapping.ts",
+      "lineRange": [
+        164,
+        166
+      ],
+      "summary": "为亮色或暗色模式生成新版 UI 的语义颜色映射。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/mapping.ts:mergeV2Tokens",
+      "type": "function",
+      "name": "mergeV2Tokens",
+      "filePath": "packages/ui/src/theme/v2/mapping.ts",
+      "lineRange": [
+        168,
+        170
+      ],
+      "summary": "合并新版令牌，输入包括 ...layers。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/v2/resolve.ts",
+      "type": "file",
+      "name": "resolve.ts",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "summary": "由基础色生成新版主题原语和语义令牌，并导出 CSS 变量。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:generateV2HueScale",
+      "type": "function",
+      "name": "generateV2HueScale",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        30,
+        56
+      ],
+      "summary": "生成新版Hue色阶，调用 hexToOklch、clamp、lightSteps.map、oklchToHex 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:readPalette",
+      "type": "function",
+      "name": "readPalette",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        72,
+        106
+      ],
+      "summary": "读取面板，调用 shift 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "type": "function",
+      "name": "generateV2Primitives",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        109,
+        133
+      ],
+      "summary": "生成新版基础色，调用 readPalette、generateV2NeutralScale、generateV2HueScale、shift 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "function",
+      "name": "resolveThemeVariantV2",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        135,
+        140
+      ],
+      "summary": "解析主题Variant新版，调用 generateV2Primitives、mapV2Semantics、mapV2Foreground、readPalette 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeV2",
+      "type": "function",
+      "name": "resolveThemeV2",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        142,
+        147
+      ],
+      "summary": "解析主题新版，调用 resolveThemeVariantV2 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "function",
+      "name": "themeV2ToCss",
+      "filePath": "packages/ui/src/theme/v2/resolve.ts",
+      "lineRange": [
+        149,
+        153
+      ],
+      "summary": "把新版主题令牌序列化为 CSS 变量。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "file:packages/ui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "file:packages/ui/src/theme/resolve.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "file:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/context.tsx",
+      "target": "file:packages/ui/src/theme/v2/resolve.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "target": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:applyThemeCss",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "target": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/context.tsx:cacheThemeVariants",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/amoled.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/aura.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/ayu.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/carbonfox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/catppuccin-frappe.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/catppuccin-macchiato.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/catppuccin.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/cobalt2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/cursor.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/dracula.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/everforest.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/flexoki.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/github.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/gruvbox.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/kanagawa.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/lucent-orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/material.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/matrix.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/mercury.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/monokai.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/nightowl.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/nord.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/one-dark.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/onedarkpro.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/opencode.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/orng.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/osaka-jade.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/palenight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/rosepine.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/shadesofpurple.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/solarized.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/synthwave84.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/tokyonight.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/vercel.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/vesper.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/themes/zenburn.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:ensureLoaderStyleElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:buildThemeCss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:loadThemeFromUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:loadThemeFromUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:getActiveTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:getActiveTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:removeTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:removeTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:setColorScheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "function:packages/ui/src/theme/loader.ts:setColorScheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "file:packages/ui/src/theme/resolve.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/loader.ts",
+      "target": "file:packages/ui/src/theme/v2/resolve.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "target": "function:packages/ui/src/theme/loader.ts:buildThemeCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:applyTheme",
+      "target": "function:packages/ui/src/theme/loader.ts:ensureLoaderStyleElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:buildThemeCss",
+      "target": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/loader.ts:buildThemeCss",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:getColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "function:packages/ui/src/theme/resolve.ts:themeToCss",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "file:packages/ui/src/theme/color.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/resolve.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/resolve.ts:getColors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:generateScale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:withAlpha",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "target": "function:packages/ui/src/theme/color.ts:blend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/resolve.ts:resolveTheme",
+      "target": "function:packages/ui/src/theme/resolve.ts:resolveThemeVariant",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/avatar.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/default-primitives.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/foreground.ts",
+      "target": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/foreground.ts",
+      "target": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/foreground.ts",
+      "target": "file:packages/ui/src/theme/color.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/foreground.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/foreground.ts",
+      "target": "file:packages/ui/src/theme/v2/mapping.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mapV2Semantics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "target": "function:packages/ui/src/theme/color.ts:blend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mapV2Semantics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mapV2Semantics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mergeV2Tokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mergeV2Tokens",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/mapping.ts",
+      "target": "file:packages/ui/src/theme/v2/avatar.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:generateV2HueScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:readPalette",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:themeV2ToCss",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "file:packages/ui/src/theme/color.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "file:packages/ui/src/theme/v2/default-primitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "file:packages/ui/src/theme/v2/foreground.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/v2/resolve.ts",
+      "target": "file:packages/ui/src/theme/v2/mapping.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:generateV2HueScale",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:generateV2HueScale",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:readPalette",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:readPalette",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:generateV2HueScale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:generateV2Primitives",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mapV2Semantics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "target": "function:packages/ui/src/theme/v2/foreground.ts:mapV2Foreground",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:readPalette",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "target": "function:packages/ui/src/theme/v2/mapping.ts:mergeV2Tokens",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeV2",
+      "target": "function:packages/ui/src/theme/v2/resolve.ts:resolveThemeVariantV2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

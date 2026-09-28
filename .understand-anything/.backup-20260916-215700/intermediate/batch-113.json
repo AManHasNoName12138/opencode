@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/function/src/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/function/src/api.ts",
+      "summary": "通过 Cloudflare Durable Object 管理分享会话同步，处理 HTTP 与 WebSocket 消息、校验分享 secret，并广播与读取持久分享数据。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "API 调用"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/function/src/api.ts:SyncServer",
+      "type": "class",
+      "name": "SyncServer",
+      "filePath": "packages/function/src/api.ts",
+      "lineRange": [
+        16,
+        115
+      ],
+      "summary": "OpenCode的API 调用类型 SyncServer，提供 constructor、fetch、webSocketMessage、webSocketClose、publish、share 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "OpenCode"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/function/src/github.ts",
+      "type": "file",
+      "name": "github.ts",
+      "filePath": "packages/function/src/github.ts",
+      "summary": "OpenCode的GitHub 身份信息实现模块，提供 parseRepositoryClaim。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "GitHub 身份信息"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/function/src/github.ts:parseRepositoryClaim",
+      "type": "function",
+      "name": "parseRepositoryClaim",
+      "filePath": "packages/function/src/github.ts",
+      "lineRange": [
+        3,
+        14
+      ],
+      "summary": "OpenCode的GitHub 身份信息处理函数 parseRepositoryClaim，调用 claim.split 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "OpenCode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/function/test/github.test.ts",
+      "type": "file",
+      "name": "github.test.ts",
+      "filePath": "packages/function/test/github.test.ts",
+      "summary": "验证OpenCode的GitHub 身份信息行为，覆盖 parseRepositoryClaim；reads repository identity with a legacy subject；reads repository identity with an immutable subject；does not depend on a repository path in a customized subject；rejects a missing repository claim。",
+      "tags": [
+        "测试",
+        "OpenCode",
+        "GitHub 身份信息"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/function/src/api.ts",
+      "target": "class:packages/function/src/api.ts:SyncServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/function/src/api.ts",
+      "target": "class:packages/function/src/api.ts:SyncServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/function/src/api.ts",
+      "target": "file:packages/function/src/github.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/function/src/github.ts",
+      "target": "function:packages/function/src/github.ts:parseRepositoryClaim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/function/src/github.ts",
+      "target": "function:packages/function/src/github.ts:parseRepositoryClaim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/function/test/github.test.ts",
+      "target": "file:packages/function/src/github.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/function/src/github.ts",
+      "target": "file:packages/function/test/github.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

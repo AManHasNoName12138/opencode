@@ -1,0 +1,1130 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/utils/server-compat.test.ts",
+      "type": "file",
+      "name": "server-compat.test.ts",
+      "filePath": "packages/app/src/utils/server-compat.test.ts",
+      "summary": "验证服务器compat相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“createCompatibleApi”、“routes V1 archive through the legacy session update”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-compat.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/app/src/utils/server-compat.test.ts",
+      "lineRange": [
+        5,
+        53
+      ],
+      "summary": "实现 setup 的服务器compat操作，调用 requests.push、Response.json、request.url.endsWith、createCompatibleApi 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-compat.ts",
+      "type": "file",
+      "name": "server-compat.ts",
+      "filePath": "packages/app/src/utils/server-compat.ts",
+      "summary": "把不同服务器协议版本包装为兼容 API，集中处理客户端调用差异。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-compat.ts:sessionInfo",
+      "type": "function",
+      "name": "sessionInfo",
+      "filePath": "packages/app/src/utils/server-compat.ts",
+      "lineRange": [
+        61,
+        84
+      ],
+      "summary": "实现 sessionInfo 的服务器compat操作，输入包括 session。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "function",
+      "name": "createCompatibleApi",
+      "filePath": "packages/app/src/utils/server-compat.ts",
+      "lineRange": [
+        86,
+        92
+      ],
+      "summary": "创建CompatibleApi，调用 createV1Api、lazyApi、input.protocol.then 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-compat.ts:lazyApi",
+      "type": "function",
+      "name": "lazyApi",
+      "filePath": "packages/app/src/utils/server-compat.ts",
+      "lineRange": [
+        94,
+        123
+      ],
+      "summary": "实现 lazyApi 的服务器compat操作，输入包括 implementation、shape。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-compat.ts:createV1Api",
+      "type": "function",
+      "name": "createV1Api",
+      "filePath": "packages/app/src/utils/server-compat.ts",
+      "lineRange": [
+        125,
+        518
+      ],
+      "summary": "创建V1Api，调用 legacy、Date.now、input.legacy、Number 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-errors.test.ts",
+      "type": "file",
+      "name": "server-errors.test.ts",
+      "filePath": "packages/app/src/utils/server-errors.test.ts",
+      "summary": "验证服务器errors相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“parseReadableConfigInvalidError”、“formats issues with file path”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.test.ts:useLanguageMock",
+      "type": "function",
+      "name": "useLanguageMock",
+      "filePath": "packages/app/src/utils/server-errors.test.ts",
+      "lineRange": [
+        15,
+        31
+      ],
+      "summary": "连接语言模拟。",
+      "tags": [
+        "函数",
+        "app",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-errors.ts",
+      "type": "file",
+      "name": "server-errors.ts",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "summary": "为 app 提供服务器errors相关数据处理接口。 对外提供 formatServerError、sessionNotFoundError、isLocalSessionNotFoundError、isSessionNotFoundError、parseReadableConfigInvalidError。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "function",
+      "name": "formatServerError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        28,
+        36
+      ],
+      "summary": "格式化服务器错误，调用 unwrapNamedError、isConfigInvalidErrorLike、parseReadableConfigInvalidError、isProviderModelNotFoundErrorLike 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:sessionNotFoundError",
+      "type": "function",
+      "name": "sessionNotFoundError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "实现 sessionNotFoundError 的服务器errors操作，调用 sessionNotFoundMessage 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:isLocalSessionNotFoundError",
+      "type": "function",
+      "name": "isLocalSessionNotFoundError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "判断本地会话NotFound错误，调用 sessionNotFoundMessage 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:isSessionNotFoundError",
+      "type": "function",
+      "name": "isSessionNotFoundError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        59,
+        64
+      ],
+      "summary": "判断会话NotFound错误，调用 unwrapNamedError 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:parseReadableConfigInvalidError",
+      "type": "function",
+      "name": "parseReadableConfigInvalidError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        78,
+        94
+      ],
+      "summary": "解析可读配置无效错误，调用 errorInput.data.message?.trim、issue.message.trim、issue.path.join、issues.join 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-errors.ts:parseReadableProviderModelNotFoundError",
+      "type": "function",
+      "name": "parseReadableProviderModelNotFoundError",
+      "filePath": "packages/app/src/utils/server-errors.ts",
+      "lineRange": [
+        96,
+        109
+      ],
+      "summary": "解析可读提供商模型NotFound错误，调用 errorInput.data.providerID.trim、errorInput.data.modelID.trim、v.trim、tr 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-health.test.ts",
+      "type": "file",
+      "name": "server-health.test.ts",
+      "filePath": "packages/app/src/utils/server-health.test.ts",
+      "summary": "验证服务器健康相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“checkServerHealth”、“returns healthy response with version”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-health.ts",
+      "type": "file",
+      "name": "server-health.ts",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "summary": "为 app 提供服务器健康相关数据处理接口。 对外提供 checkServerHealth、useCheckServerHealth、useServerHealth。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-health.ts:timeoutSignal",
+      "type": "function",
+      "name": "timeoutSignal",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "lineRange": [
+        30,
+        43
+      ],
+      "summary": "实现 timeoutSignal 的服务器健康操作，调用 timeout.call、setTimeout、controller.abort、clearTimeout 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-health.ts:wait",
+      "type": "function",
+      "name": "wait",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "lineRange": [
+        45,
+        61
+      ],
+      "summary": "等待服务器健康，调用 reject、setTimeout、signal?.removeEventListener、resolve 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "type": "function",
+      "name": "checkServerHealth",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "lineRange": [
+        72,
+        113
+      ],
+      "summary": "检查服务器健康，调用 timeoutSignal、attempt、timeout?.clear 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "type": "function",
+      "name": "useCheckServerHealth",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "lineRange": [
+        117,
+        135
+      ],
+      "summary": "连接检查服务器健康，调用 usePlatform、cacheKey、healthCache.get、Date.now 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-health.ts:useServerHealth",
+      "type": "function",
+      "name": "useServerHealth",
+      "filePath": "packages/app/src/utils/server-health.ts",
+      "lineRange": [
+        137,
+        172
+      ],
+      "summary": "连接服务器健康，调用 useCheckServerHealth、createStore、createEffect、enabled 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-protocol.test.ts",
+      "type": "file",
+      "name": "server-protocol.test.ts",
+      "filePath": "packages/app/src/utils/server-protocol.test.ts",
+      "summary": "验证服务器协议相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“detectServerProtocol”、“prefers the legacy health endpoint when both API generations exist”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-protocol.ts",
+      "type": "file",
+      "name": "server-protocol.ts",
+      "filePath": "packages/app/src/utils/server-protocol.ts",
+      "summary": "探测服务器支持的协议版本，帮助客户端选择兼容的 API 调用路径。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-protocol.ts:probe",
+      "type": "function",
+      "name": "probe",
+      "filePath": "packages/app/src/utils/server-protocol.ts",
+      "lineRange": [
+        13,
+        22
+      ],
+      "summary": "实现 probe 的服务器协议操作，调用 fetch、headers、AbortSignal.timeout、response.headers.get 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-protocol.ts:detectServerProtocol",
+      "type": "function",
+      "name": "detectServerProtocol",
+      "filePath": "packages/app/src/utils/server-protocol.ts",
+      "lineRange": [
+        24,
+        35
+      ],
+      "summary": "先探测旧版健康接口，再检查新版接口响应中的进程标识或健康字段；无法明确识别时返回 V2。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-scope.test.ts",
+      "type": "file",
+      "name": "server-scope.test.ts",
+      "filePath": "packages/app/src/utils/server-scope.test.ts",
+      "summary": "验证服务器scope相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“ServerScope”、“uses a stable local scope for the canonical sidecar”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/server-scope.ts",
+      "type": "file",
+      "name": "server-scope.ts",
+      "filePath": "packages/app/src/utils/server-scope.ts",
+      "summary": "为服务器、会话路由和持久化状态构造带作用域的键，并迁移旧会话键。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/server-scope.ts:migrateLegacySessionStateKeys",
+      "type": "function",
+      "name": "migrateLegacySessionStateKeys",
+      "filePath": "packages/app/src/utils/server-scope.ts",
+      "lineRange": [
+        62,
+        73
+      ],
+      "summary": "迁移旧版会话状态键，调用 entries.every、key.includes、entries.filter、SessionStateKey.from 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server.test.ts",
+      "type": "file",
+      "name": "server.test.ts",
+      "filePath": "packages/app/src/utils/server.test.ts",
+      "summary": "验证服务器相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“authFromToken”、“decodes basic auth credentials from auth_token”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "packages/app/src/utils/server.ts",
+      "summary": "为 app 提供服务器相关数据处理接口。 对外提供 authTokenFromCredentials、authFromToken、createSdkForServer、createApiForServer。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/server.ts:authTokenFromCredentials",
+      "type": "function",
+      "name": "authTokenFromCredentials",
+      "filePath": "packages/app/src/utils/server.ts",
+      "lineRange": [
+        6,
+        8
+      ],
+      "summary": "实现 authTokenFromCredentials 的服务器操作，调用 btoa 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server.ts:authFromToken",
+      "type": "function",
+      "name": "authFromToken",
+      "filePath": "packages/app/src/utils/server.ts",
+      "lineRange": [
+        10,
+        19
+      ],
+      "summary": "实现 authFromToken 的服务器操作，调用 decode64、decoded.indexOf、decoded.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "type": "function",
+      "name": "createSdkForServer",
+      "filePath": "packages/app/src/utils/server.ts",
+      "lineRange": [
+        21,
+        42
+      ],
+      "summary": "创建SDK用于服务器，调用 authTokenFromCredentials、createOpencodeClient、config.headers.entries 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "type": "function",
+      "name": "createApiForServer",
+      "filePath": "packages/app/src/utils/server.ts",
+      "lineRange": [
+        44,
+        60
+      ],
+      "summary": "创建Api用于服务器，调用 OpenCode.make、authTokenFromCredentials 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "file:packages/app/src/utils/persist.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.test.ts",
+      "target": "function:packages/app/src/utils/server-compat.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.test.ts",
+      "target": "file:packages/app/src/utils/server-compat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "file:packages/app/src/utils/server-compat.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.test.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "file:packages/app/src/utils/server-compat.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/app/src/utils/server-compat.test.ts:setup",
+      "target": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-compat.test.ts:setup",
+      "target": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-compat.test.ts:setup",
+      "target": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "function:packages/app/src/utils/server-compat.ts:sessionInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "function:packages/app/src/utils/server-compat.ts:lazyApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "function:packages/app/src/utils/server-compat.ts:createV1Api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "file:packages/app/src/utils/server-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-compat.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "target": "function:packages/app/src/utils/server-compat.ts:createV1Api",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-compat.ts:createCompatibleApi",
+      "target": "function:packages/app/src/utils/server-compat.ts:lazyApi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.test.ts",
+      "target": "function:packages/app/src/utils/server-errors.test.ts:useLanguageMock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.test.ts",
+      "target": "file:packages/app/src/utils/server-errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "file:packages/app/src/utils/server-errors.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:sessionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:sessionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:isLocalSessionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:isLocalSessionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:isSessionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:isSessionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:parseReadableConfigInvalidError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:parseReadableConfigInvalidError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-errors.ts",
+      "target": "function:packages/app/src/utils/server-errors.ts:parseReadableProviderModelNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "target": "function:packages/app/src/utils/server-errors.ts:parseReadableConfigInvalidError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-errors.ts:formatServerError",
+      "target": "function:packages/app/src/utils/server-errors.ts:parseReadableProviderModelNotFoundError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.test.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/server.tsx",
+      "target": "file:packages/app/src/utils/server-health.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.test.ts",
+      "target": "file:packages/app/src/utils/server-health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "file:packages/app/src/utils/server-health.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:timeoutSignal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:wait",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:useServerHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "function:packages/app/src/utils/server-health.ts:useServerHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-health.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "target": "function:packages/app/src/utils/server-health.ts:timeoutSignal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "target": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server-health.ts:useServerHealth",
+      "target": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.test.ts",
+      "target": "file:packages/app/src/utils/server-protocol.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "file:packages/app/src/utils/server-protocol.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "function:packages/app/src/utils/server-protocol.ts:probe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "function:packages/app/src/utils/server-protocol.ts:detectServerProtocol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "function:packages/app/src/utils/server-protocol.ts:detectServerProtocol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-protocol.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/server-protocol.ts:detectServerProtocol",
+      "target": "function:packages/app/src/utils/server-protocol.ts:probe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.test.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "file:packages/app/src/utils/server-scope.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "function:packages/app/src/utils/server-scope.ts:migrateLegacySessionStateKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "function:packages/app/src/utils/server-scope.ts:migrateLegacySessionStateKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server-scope.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server.test.ts",
+      "target": "file:packages/app/src/utils/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "file:packages/app/src/utils/server.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:authTokenFromCredentials",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:authTokenFromCredentials",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:authFromToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:authFromToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/server.ts",
+      "target": "file:packages/app/src/utils/base64.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/server.ts:authFromToken",
+      "target": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server.ts:createSdkForServer",
+      "target": "function:packages/app/src/utils/server.ts:authTokenFromCredentials",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/server.ts:createApiForServer",
+      "target": "function:packages/app/src/utils/server.ts:authTokenFromCredentials",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

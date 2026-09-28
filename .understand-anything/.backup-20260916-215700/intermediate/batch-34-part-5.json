@@ -1,0 +1,1029 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "type": "file",
+      "name": "httpapi-workspace-routing.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「HttpApi workspace routing middleware、proxies remote workspace HTTP requests through the selected workspace target、waits for sync fence headers from remote workspace HTTP responses、returns 503 when a remote workspace is not actively syncing、proxies remote workspace WebSocket requests through the selected workspace target、returns a missing workspace response for unknown workspace ids、keeps control-p」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:localAdapter",
+      "type": "function",
+      "name": "localAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        89,
+        98
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 localAdapter，接收 directory 参数；调用 mkdir 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:remoteAdapter",
+      "type": "function",
+      "name": "remoteAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        100,
+        109
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 remoteAdapter，接收 directory、url、headers 参数；调用 mkdir 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createWorkspace",
+      "type": "function",
+      "name": "createWorkspace",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        123,
+        136
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createWorkspace，接收 input 参数；调用 Effect.acquireRelease、Effect.gen、registerAdapter、workspace.create、Workspace.use.remove 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createRemoteWorkspace",
+      "type": "function",
+      "name": "createRemoteWorkspace",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        138,
+        152
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 createRemoteWorkspace，接收 input 参数；调用 createWorkspace、remoteAdapter、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:insertRemoteWorkspaceWithoutSync",
+      "type": "function",
+      "name": "insertRemoteWorkspaceWithoutSync",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        161,
+        177
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 insertRemoteWorkspaceWithoutSync，接收 input 参数；调用 Effect.gen、WorkspaceV2.ID.ascending、registerAdapter、remoteAdapter、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:startRemoteWorkspaceHttpServer",
+      "type": "function",
+      "name": "startRemoteWorkspaceHttpServer",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        179,
+        196
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 startRemoteWorkspaceHttpServer，接收 handler 参数；调用 listenAdditionalServer、Effect.gen、syncResponse、handler 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:echoWebSocket",
+      "type": "function",
+      "name": "echoWebSocket",
+      "filePath": "packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "lineRange": [
+        206,
+        218
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 echoWebSocket，接收 request 参数；调用 Effect.gen、Effect.orDie、write、String、Effect.catch、HttpServerResponse.empty 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "type": "file",
+      "name": "httpapi-workspace.test.ts",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「workspace HttpApi、serves read endpoints、serves mutation endpoints、serves list sync endpoint、returns a declared not found error when warping into a missing workspace、creates workspace with the TUI payload shape、creates a real git worktree workspace via the builtin adapter」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace.test.ts:localAdapter",
+      "type": "function",
+      "name": "localAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "lineRange": [
+        48,
+        70
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 localAdapter，接收 directory 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace.test.ts:listedAdapter",
+      "type": "function",
+      "name": "listedAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "lineRange": [
+        72,
+        100
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listedAdapter，接收 directory、type 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace.test.ts:remoteAdapter",
+      "type": "function",
+      "name": "remoteAdapter",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "lineRange": [
+        106,
+        129
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 remoteAdapter，接收 directory、url、headers 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace.test.ts:listenRemoteHttp",
+      "type": "function",
+      "name": "listenRemoteHttp",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "lineRange": [
+        138,
+        150
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 listenRemoteHttp，接收 handler 参数；调用 Bun.serve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/server/httpapi-workspace.test.ts:eventStreamResponse",
+      "type": "function",
+      "name": "eventStreamResponse",
+      "filePath": "packages/opencode/test/server/httpapi-workspace.test.ts",
+      "lineRange": [
+        152,
+        168
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 eventStreamResponse。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "type": "file",
+      "name": "negative-tokens-regression.test.ts",
+      "filePath": "packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「messages endpoint tolerates legacy negative token counts、returns 200 even when a step-finish part has tokens.output < 0」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/server/negative-tokens-regression.test.ts:seedNegativeTokenSession",
+      "type": "function",
+      "name": "seedNegativeTokenSession",
+      "filePath": "packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "lineRange": [
+        27,
+        69
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 seedNegativeTokenSession；调用 Effect.gen、session.create、session.updateMessage、MessageID.ascending、ProviderV2.ID.make、ModelV2.ID.make、Date.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/project-copy.test.ts",
+      "type": "file",
+      "name": "project-copy.test.ts",
+      "filePath": "packages/opencode/test/server/project-copy.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「project directories and copies endpoints、lists directories and manages git worktree copies」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "type": "file",
+      "name": "project-init-git.test.ts",
+      "filePath": "packages/opencode/test/server/project-init-git.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「project.initGit endpoint、initializes git and reloads immediately、does not reload when the project is already git」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/server/project-init-git.test.ts:collectGlobalEvents",
+      "type": "function",
+      "name": "collectGlobalEvents",
+      "filePath": "packages/opencode/test/server/project-init-git.test.ts",
+      "lineRange": [
+        38,
+        50
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 collectGlobalEvents；调用 Effect.acquireRelease、Effect.sync、GlobalBus.on、GlobalBus.off 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/server/proxy-util.test.ts",
+      "type": "file",
+      "name": "proxy-util.test.ts",
+      "filePath": "packages/opencode/test/server/proxy-util.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「ProxyUtil、websocketTargetURL、converts http to ws、converts https to wss、preserves query params、accepts URL objects、websocketProtocols」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:localAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:remoteAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createRemoteWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:insertRemoteWorkspaceWithoutSync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:startRemoteWorkspaceHttpServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:echoWebSocket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/middleware/workspace-routing.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/shared/fence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/server/shared/fence.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/test/fixture/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace-routing.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace.test.ts:localAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace.test.ts:listedAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace.test.ts:remoteAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace.test.ts:listenRemoteHttp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "function:packages/opencode/test/server/httpapi-workspace.test.ts:eventStreamResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/adapters/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/event.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/instance.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/server/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-workspace.test.ts",
+      "target": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "function:packages/opencode/test/server/negative-tokens-regression.test.ts:seedNegativeTokenSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/groups/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/negative-tokens-regression.test.ts",
+      "target": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-copy.test.ts",
+      "target": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "function:packages/opencode/test/server/project-init-git.test.ts:collectGlobalEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/src/snapshot/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/test/fixture/db.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/project-init-git.test.ts",
+      "target": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/proxy-util.test.ts",
+      "target": "file:packages/opencode/src/server/proxy-util.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/server/proxy-util.test.ts",
+      "target": "file:packages/opencode/src/server/proxy-util.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createWorkspace",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createRemoteWorkspace",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createWorkspace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:createRemoteWorkspace",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:remoteAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:insertRemoteWorkspaceWithoutSync",
+      "target": "function:packages/opencode/src/control-plane/adapters/index.ts:registerAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:insertRemoteWorkspaceWithoutSync",
+      "target": "function:packages/opencode/test/server/httpapi-workspace-routing.test.ts:remoteAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

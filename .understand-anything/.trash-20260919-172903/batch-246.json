@@ -1,0 +1,514 @@
+{
+  "nodes": [
+    {
+      "id": "config:packages/console/core/migrations/20260819031011_oval_morlocks/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260819031011_oval_morlocks/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:packages/console/core/migrations/20260901161032_workspace_migrated_at/migration.sql",
+      "type": "table",
+      "name": "migration.sql",
+      "filePath": "packages/console/core/migrations/20260901161032_workspace_migrated_at/migration.sql",
+      "summary": "控制台业务数据库迁移，调整 workspace，维护相关字段或索引。",
+      "tags": [
+        "数据库",
+        "迁移",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/migrations/20260901161032_workspace_migrated_at/snapshot.json",
+      "type": "config",
+      "name": "snapshot.json",
+      "filePath": "packages/console/core/migrations/20260901161032_workspace_migrated_at/snapshot.json",
+      "summary": "控制台业务数据库迁移快照，记录当前字段、索引和约束，供迁移比较使用。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "snapshot"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:packages/console/core/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/core/package.json",
+      "summary": "@opencode-ai/console-core 的包清单，声明 db、db-dev、db-prod、shell、shell-dev、shell-prod、update-models、promote-models-to-dev、promote-models-to-prod、pull-models-from-dev、pull-models-from-prod、update-limits、promote-limits-to-dev、promote-limits-to-prod、typecheck 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "package"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/console/core/src/util/crypto.ts",
+      "type": "file",
+      "name": "crypto.ts",
+      "filePath": "packages/console/core/src/util/crypto.ts",
+      "summary": "控制台业务的恒时比较实现模块，提供 safeEqual。",
+      "tags": [
+        "接口实现",
+        "控制台业务",
+        "恒时比较"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/console/core/src/util/crypto.ts:safeEqual",
+      "type": "function",
+      "name": "safeEqual",
+      "filePath": "packages/console/core/src/util/crypto.ts",
+      "lineRange": [
+        3,
+        8
+      ],
+      "summary": "控制台业务的恒时比较处理函数 safeEqual，调用 encoder.encode、timingSafeEqual 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "控制台业务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/core/src/util/env.cloudflare.ts",
+      "type": "file",
+      "name": "env.cloudflare.ts",
+      "filePath": "packages/console/core/src/util/env.cloudflare.ts",
+      "summary": "控制台业务的env.cloudflare实现模块，配置  相关模块。",
+      "tags": [
+        "接口实现",
+        "控制台业务",
+        "env.cloudflare"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/core/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/console/core/sst-env.d.ts",
+      "summary": "控制台业务的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "控制台业务",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/core/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/console/core/tsconfig.json",
+      "summary": "控制台业务的 TypeScript 编译配置，定义 extends、compilerOptions、module、moduleResolution、jsx、jsxImportSource、types 等选项。",
+      "tags": [
+        "配置",
+        "控制台业务",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/function/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/function/package.json",
+      "summary": "@opencode-ai/console-function 的包清单，声明 typecheck 构建或运行命令及依赖。",
+      "tags": [
+        "配置",
+        "控制台云函数",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/function/src/log-processor.ts",
+      "type": "file",
+      "name": "log-processor.ts",
+      "filePath": "packages/console/function/src/log-processor.ts",
+      "summary": "控制台云函数的请求日志转存实现模块，提供 getLakeIngest、toLakeEvent、ipPrefix、string、boolean、integer。",
+      "tags": [
+        "接口实现",
+        "控制台云函数",
+        "请求日志转存"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/console/function/src/log-processor.ts:toLakeEvent",
+      "type": "function",
+      "name": "toLakeEvent",
+      "filePath": "packages/console/function/src/log-processor.ts",
+      "lineRange": [
+        97,
+        155
+      ],
+      "summary": "控制台云函数的请求日志转存处理函数 toLakeEvent，调用 time.slice、string、number、integer、boolean 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "控制台云函数"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/console/function/src/log-processor.ts:ipPrefix",
+      "type": "function",
+      "name": "ipPrefix",
+      "filePath": "packages/console/function/src/log-processor.ts",
+      "lineRange": [
+        162,
+        181
+      ],
+      "summary": "控制台云函数的请求日志转存处理函数 ipPrefix，调用 ip.includes、ip.split、head.split、tail.split、part.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "控制台云函数"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/function/src/stat.ts",
+      "type": "file",
+      "name": "stat.ts",
+      "filePath": "packages/console/function/src/stat.ts",
+      "summary": "控制台云函数的统计聚合实现模块，组合 request.json、Response.json、parseInt、Date.now、toInterval。",
+      "tags": [
+        "接口实现",
+        "控制台云函数",
+        "统计聚合"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/function/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/console/function/sst-env.d.ts",
+      "summary": "控制台云函数的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "控制台云函数",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/function/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/console/function/tsconfig.json",
+      "summary": "控制台云函数的 TypeScript 编译配置，定义 extends、compilerOptions、module、moduleResolution、jsx、jsxImportSource、types 等选项。",
+      "tags": [
+        "配置",
+        "控制台云函数",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/mail/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/mail/package.json",
+      "summary": "@opencode-ai/console-mail 的包清单，声明 dev 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/mail/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/console/mail/sst-env.d.ts",
+      "summary": "OpenCode的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/resource/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/resource/package.json",
+      "summary": "@opencode-ai/console-resource 的包清单，声明依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/resource/resource.cloudflare.ts",
+      "type": "file",
+      "name": "resource.cloudflare.ts",
+      "filePath": "packages/console/resource/resource.cloudflare.ts",
+      "summary": "OpenCode的resource.cloudflare实现模块，提供 waitUntil、Resource。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "resource.cloudflare"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/resource/resource.node.ts",
+      "type": "file",
+      "name": "resource.node.ts",
+      "filePath": "packages/console/resource/resource.node.ts",
+      "summary": "OpenCode的resource.node实现模块，提供 waitUntil、Resource。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "resource.node"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/console/resource/resource.node.ts:waitUntil",
+      "type": "function",
+      "name": "waitUntil",
+      "filePath": "packages/console/resource/resource.node.ts",
+      "lineRange": [
+        5,
+        7
+      ],
+      "summary": "OpenCode的resource.node处理函数 waitUntil，接收 promise 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "OpenCode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/resource/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/console/resource/sst-env.d.ts",
+      "summary": "OpenCode的环境类型声明，补充SST 部署资源接口供 TypeScript 编译检查。",
+      "tags": [
+        "接口实现",
+        "OpenCode",
+        "sst-env.d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/resource/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/console/resource/tsconfig.json",
+      "summary": "OpenCode的 TypeScript 编译配置，定义 extends、compilerOptions、module、moduleResolution、types 等选项。",
+      "tags": [
+        "配置",
+        "OpenCode",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/console/support/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/console/support/package.json",
+      "summary": "@opencode-ai/console-support 的包清单，声明 typecheck、dev 构建或运行命令及依赖。",
+      "tags": [
+        "配置",
+        "客服后台",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/support/src/app.css",
+      "type": "file",
+      "name": "app.css",
+      "filePath": "packages/console/support/src/app.css",
+      "summary": "客服后台的应用入口样式，定义布局、视觉状态与响应式显示。",
+      "tags": [
+        "接口实现",
+        "客服后台",
+        "应用入口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/console/support/src/app.tsx",
+      "type": "file",
+      "name": "app.tsx",
+      "filePath": "packages/console/support/src/app.tsx",
+      "summary": "客服后台的应用入口实现模块，提供 App。",
+      "tags": [
+        "界面组件",
+        "客服后台",
+        "应用入口"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/console/support/src/app.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "packages/console/support/src/app.tsx",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "客服后台的应用入口处理函数 App。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "客服后台"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/support/src/entry-client.tsx",
+      "type": "file",
+      "name": "entry-client.tsx",
+      "filePath": "packages/console/support/src/entry-client.tsx",
+      "summary": "客服后台的浏览器启动实现模块，配置 @solidjs/start/client 相关模块。",
+      "tags": [
+        "界面组件",
+        "客服后台",
+        "浏览器启动"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/console/support/src/entry-server.tsx",
+      "type": "file",
+      "name": "entry-server.tsx",
+      "filePath": "packages/console/support/src/entry-server.tsx",
+      "summary": "客服后台的服务端渲染实现模块，配置 @solidjs/start/server 相关模块。",
+      "tags": [
+        "界面组件",
+        "客服后台",
+        "服务端渲染"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:packages/console/core/package.json",
+      "target": "file:packages/console/core/script/update-models.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/console/core/package.json",
+      "target": "file:packages/console/core/script/promote-models.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/console/core/package.json",
+      "target": "file:packages/console/core/script/pull-models.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/console/core/package.json",
+      "target": "file:packages/console/core/script/update-limits.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/console/core/package.json",
+      "target": "file:packages/console/core/script/promote-limits.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:packages/console/core/src/util/crypto.ts",
+      "target": "function:packages/console/core/src/util/crypto.ts:safeEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/core/src/util/crypto.ts",
+      "target": "function:packages/console/core/src/util/crypto.ts:safeEqual",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/console/function/src/log-processor.ts",
+      "target": "function:packages/console/function/src/log-processor.ts:toLakeEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/function/src/log-processor.ts",
+      "target": "function:packages/console/function/src/log-processor.ts:ipPrefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/resource/resource.node.ts",
+      "target": "function:packages/console/resource/resource.node.ts:waitUntil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/resource/resource.node.ts",
+      "target": "function:packages/console/resource/resource.node.ts:waitUntil",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/console/support/src/app.tsx",
+      "target": "function:packages/console/support/src/app.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/console/support/src/app.tsx",
+      "target": "function:packages/console/support/src/app.tsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/console/support/src/app.tsx",
+      "target": "file:packages/console/support/src/app.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

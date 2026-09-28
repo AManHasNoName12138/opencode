@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": "service:packages/containers/base/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "packages/containers/base/Dockerfile",
+      "summary": "Dockerfile 描述容器、服务或部署入口，支撑 opencode 的运行环境和交付流程。",
+      "tags": [
+        "deployment",
+        "dockerfile",
+        "opencode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/containers/base/Dockerfile:ubuntu",
+      "type": "service",
+      "name": "ubuntu",
+      "filePath": "packages/containers/base/Dockerfile",
+      "lineRange": [
+        1,
+        19
+      ],
+      "summary": "packages/containers/base/Dockerfile 定义服务 ubuntu，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:packages/containers/base/Dockerfile",
+      "target": "service:packages/containers/base/Dockerfile:ubuntu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

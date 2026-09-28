@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "service:packages/opencode/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "packages/opencode/Dockerfile",
+      "summary": "Dockerfile 描述容器、服务或部署入口，支撑 opencode 的运行环境和交付流程。",
+      "tags": [
+        "deployment",
+        "dockerfile",
+        "opencode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/opencode/Dockerfile:base",
+      "type": "service",
+      "name": "base",
+      "filePath": "packages/opencode/Dockerfile",
+      "lineRange": [
+        1,
+        8
+      ],
+      "summary": "packages/opencode/Dockerfile 定义服务 base，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/opencode/Dockerfile:build-amd64",
+      "type": "service",
+      "name": "build-amd64",
+      "filePath": "packages/opencode/Dockerfile",
+      "lineRange": [
+        9,
+        11
+      ],
+      "summary": "packages/opencode/Dockerfile 定义服务 build-amd64，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/opencode/Dockerfile:build-arm64",
+      "type": "service",
+      "name": "build-arm64",
+      "filePath": "packages/opencode/Dockerfile",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "packages/opencode/Dockerfile 定义服务 build-arm64，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/opencode/Dockerfile:build-${TARGETARCH}",
+      "type": "service",
+      "name": "build-${TARGETARCH}",
+      "filePath": "packages/opencode/Dockerfile",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "packages/opencode/Dockerfile 定义服务 build-${TARGETARCH}，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:packages/opencode/Dockerfile",
+      "target": "service:packages/opencode/Dockerfile:base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/opencode/Dockerfile",
+      "target": "service:packages/opencode/Dockerfile:build-amd64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/opencode/Dockerfile",
+      "target": "service:packages/opencode/Dockerfile:build-arm64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:packages/opencode/Dockerfile",
+      "target": "service:packages/opencode/Dockerfile:build-${TARGETARCH}",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

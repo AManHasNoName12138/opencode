@@ -1,0 +1,1572 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "type": "file",
+      "name": "updater-subscriptions.ts",
+      "filePath": "packages/desktop/src/main/updater-subscriptions.ts",
+      "summary": "维护渲染窗口的更新状态订阅，并在窗口或应用退出时清理监听。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/updater-subscriptions.ts:createUpdaterSubscriptions",
+      "type": "function",
+      "name": "createUpdaterSubscriptions",
+      "filePath": "packages/desktop/src/main/updater-subscriptions.ts",
+      "lineRange": [
+        1,
+        20
+      ],
+      "summary": "创建更新器订阅。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/updater.ts",
+      "type": "file",
+      "name": "updater.ts",
+      "filePath": "packages/desktop/src/main/updater.ts",
+      "summary": "为 desktop 提供更新器相关数据处理接口。 对外提供 setupAutoUpdater、showUpdaterDialog。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "type": "function",
+      "name": "setupAutoUpdater",
+      "filePath": "packages/desktop/src/main/updater.ts",
+      "lineRange": [
+        13,
+        61
+      ],
+      "summary": "实现 setupAutoUpdater 的更新器操作，调用 getLogger、logger.log、app.getVersion、getStore 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/updater.ts:showUpdaterDialog",
+      "type": "function",
+      "name": "showUpdaterDialog",
+      "filePath": "packages/desktop/src/main/updater.ts",
+      "lineRange": [
+        63,
+        94
+      ],
+      "summary": "实现 showUpdaterDialog 的更新器操作，调用 controller.check、dialog.showMessageBox、nativeT、controller.install 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/window-registry.test.ts",
+      "type": "file",
+      "name": "window-registry.test.ts",
+      "filePath": "packages/desktop/src/main/window-registry.test.ts",
+      "summary": "验证窗口注册表相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“window registry”、“restores persisted ids and ignores malformed entries”。",
+      "tags": [
+        "desktop",
+        "test",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/window-registry.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/desktop/src/main/window-registry.test.ts",
+      "lineRange": [
+        4,
+        15
+      ],
+      "summary": "实现 setup 的窗口注册表操作，调用 createWindowRegistry、cleaned.push 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/window-registry.ts",
+      "type": "file",
+      "name": "window-registry.ts",
+      "filePath": "packages/desktop/src/main/window-registry.ts",
+      "summary": "为 desktop 提供窗口注册表相关数据处理接口。 对外提供 createWindowRegistry。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/window-registry.ts:createWindowRegistry",
+      "type": "function",
+      "name": "createWindowRegistry",
+      "filePath": "packages/desktop/src/main/window-registry.ts",
+      "lineRange": [
+        3,
+        47
+      ],
+      "summary": "建立桌面窗口登记表并追踪窗口生命周期。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/window-state.ts",
+      "type": "file",
+      "name": "window-state.ts",
+      "filePath": "packages/desktop/src/main/window-state.ts",
+      "summary": "为 desktop 提供窗口状态相关数据处理接口。 对外提供 destroyedWindowURL、safeWebContentsURL、safeWindowURL。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/window-state.ts:safeWebContentsURL",
+      "type": "function",
+      "name": "safeWebContentsURL",
+      "filePath": "packages/desktop/src/main/window-state.ts",
+      "lineRange": [
+        13,
+        20
+      ],
+      "summary": "实现 safeWebContentsURL 的窗口状态操作，调用 webContents.isDestroyed、webContents.getURL 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/window-state.ts:safeWindowURL",
+      "type": "function",
+      "name": "safeWindowURL",
+      "filePath": "packages/desktop/src/main/window-state.ts",
+      "lineRange": [
+        22,
+        29
+      ],
+      "summary": "实现 safeWindowURL 的窗口状态操作，调用 win.isDestroyed、safeWebContentsURL 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/windows.ts",
+      "type": "file",
+      "name": "windows.ts",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "summary": "创建和恢复 Electron 窗口，维护窗口身份、标题栏与缩放设置，并处理外部链接和本地文件协议。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setRelaunchHandler",
+      "type": "function",
+      "name": "setRelaunchHandler",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        68,
+        70
+      ],
+      "summary": "设置RelaunchHandler，输入包括 handler。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setAppQuitting",
+      "type": "function",
+      "name": "setAppQuitting",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        72,
+        74
+      ],
+      "summary": "设置AppQuitting，调用 registry.setQuitting 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setBackgroundColor",
+      "type": "function",
+      "name": "setBackgroundColor",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "设置Background颜色，调用 BrowserWindow.getAllWindows、win.setBackgroundColor、win.invalidateShadow 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:getBackgroundColor",
+      "type": "function",
+      "name": "getBackgroundColor",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "读取Background颜色。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setTitlebar",
+      "type": "function",
+      "name": "setTitlebar",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        114,
+        124
+      ],
+      "summary": "设置标题栏，调用 titlebarThemes.set、updateTitlebar 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:updateTitlebar",
+      "type": "function",
+      "name": "updateTitlebar",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        126,
+        129
+      ],
+      "summary": "更新标题栏，调用 win.setTitleBarOverlay、overlay、titlebarThemes.get、win.webContents.getZoomFactor 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setPinchZoomEnabled",
+      "type": "function",
+      "name": "setPinchZoomEnabled",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        131,
+        139
+      ],
+      "summary": "设置捏合缩放已启用，调用 getStore、BrowserWindow.getAllWindows、pinchZoomEnabled.set、win.webContents.send 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "type": "function",
+      "name": "getPinchZoomEnabled",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        141,
+        143
+      ],
+      "summary": "读取捏合缩放已启用，调用 getStore 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:getWindowID",
+      "type": "function",
+      "name": "getWindowID",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        145,
+        147
+      ],
+      "summary": "读取窗口标识，调用 windowIDs.get 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:getLastFocusedWindow",
+      "type": "function",
+      "name": "getLastFocusedWindow",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        149,
+        155
+      ],
+      "summary": "读取末项Focused窗口，调用 BrowserWindow.getFocusedWindow、registry.lastFocused、win.isDestroyed 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:restoreMainWindows",
+      "type": "function",
+      "name": "restoreMainWindows",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        157,
+        160
+      ],
+      "summary": "恢复Main窗口，调用 registry.persisted、randomUUID、createMainWindow 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:setDockIcon",
+      "type": "function",
+      "name": "setDockIcon",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        162,
+        166
+      ],
+      "summary": "设置Dock图标，调用 nativeImage.createFromPath、join、iconsDir、icon.isEmpty 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "type": "function",
+      "name": "createMainWindow",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        168,
+        234
+      ],
+      "summary": "创建Main窗口，调用 randomUUID、windowState、windowStateFile、tone 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "function",
+      "name": "openExternalURL",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        236,
+        243
+      ],
+      "summary": "打开外部URL，调用 resolveExternalURL、writeLog、shell.openExternal 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:openLocalFileURL",
+      "type": "function",
+      "name": "openLocalFileURL",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        245,
+        254
+      ],
+      "summary": "打开本地文件URL，调用 resolveLocalFilePath、writeLog、shell.openPath 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:wireNavigationPolicy",
+      "type": "function",
+      "name": "wireNavigationPolicy",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        256,
+        268
+      ],
+      "summary": "实现 wireNavigationPolicy 的窗口操作，调用 win.webContents.setWindowOpenHandler、isRendererUrl、openExternalURL、win.webContents.on 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:registerWindow",
+      "type": "function",
+      "name": "registerWindow",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        270,
+        279
+      ],
+      "summary": "注册窗口，调用 windowIDs.set、registry.register、win.on、registry.focused 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:registerRendererProtocol",
+      "type": "function",
+      "name": "registerRendererProtocol",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        291,
+        332
+      ],
+      "summary": "注册渲染器协议，调用 protocol.isProtocolHandled、protocol.handle、writeLog、resolve 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:loadWindow",
+      "type": "function",
+      "name": "loadWindow",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        334,
+        343
+      ],
+      "summary": "加载窗口，调用 win.loadURL、url.toString 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "type": "function",
+      "name": "wireWindowRecovery",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        345,
+        472
+      ],
+      "summary": "实现 wireWindowRecovery 的窗口操作，调用 createUnresponsiveSampler、win.webContents.on、failed、sampler.stopAndFlush 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:allowRendererPermissions",
+      "type": "function",
+      "name": "allowRendererPermissions",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        481,
+        496
+      ],
+      "summary": "实现 allowRendererPermissions 的窗口操作，调用 win.webContents.session.setPermissionRequestHandler、callback、rendererPermissions.has、isTrustedRendererUrl 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:wireZoom",
+      "type": "function",
+      "name": "wireZoom",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        518,
+        531
+      ],
+      "summary": "实现 wireZoom 的窗口操作，调用 pinchZoomEnabled.set、getPinchZoomEnabled、win.webContents.setZoomFactor、win.webContents.on 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/windows.ts:upsertKeyValue",
+      "type": "function",
+      "name": "upsertKeyValue",
+      "filePath": "packages/desktop/src/main/windows.ts",
+      "lineRange": [
+        552,
+        564
+      ],
+      "summary": "实现 upsertKeyValue 的窗口操作，调用 keyToChange.toLowerCase、key.toLowerCase 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "type": "file",
+      "name": "ipc.ts",
+      "filePath": "packages/desktop/src/main/wsl/ipc.ts",
+      "summary": "为 desktop 提供IPC相关数据处理接口。 对外提供 registerWslIpcHandlers。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "type": "function",
+      "name": "registerWslIpcHandlers",
+      "filePath": "packages/desktop/src/main/wsl/ipc.ts",
+      "lineRange": [
+        8,
+        68
+      ],
+      "summary": "注册WSLIPCHandlers，调用 registerUnavailableWslIpcHandlers、app.once、subscriptions.forEach、off 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/ipc.ts:registerUnavailableWslIpcHandlers",
+      "type": "function",
+      "name": "registerUnavailableWslIpcHandlers",
+      "filePath": "packages/desktop/src/main/wsl/ipc.ts",
+      "lineRange": [
+        70,
+        104
+      ],
+      "summary": "注册UnavailableWSLIPCHandlers，调用 ipcMain.handle、event.sender.send、state 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/desktop/src/main/wsl/policy.ts",
+      "type": "file",
+      "name": "policy.ts",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "summary": "为 desktop 提供策略相关数据处理接口。 对外提供 wslServerIdToRestart、clearWslDistroState、wslTerminalArgs、requireWslIpcString、requireWslIpcStrings。",
+      "tags": [
+        "desktop",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/policy.ts:wslServerIdToRestart",
+      "type": "function",
+      "name": "wslServerIdToRestart",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "实现 wslServerIdToRestart 的策略操作，调用 servers.find 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/policy.ts:clearWslDistroState",
+      "type": "function",
+      "name": "clearWslDistroState",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "lineRange": [
+        7,
+        17
+      ],
+      "summary": "清理WSL发行版状态，输入包括 distroProbes、opencodeChecks、distro。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/policy.ts:wslTerminalArgs",
+      "type": "function",
+      "name": "wslTerminalArgs",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "实现 wslTerminalArgs 的策略操作，输入包括 distro。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcString",
+      "type": "function",
+      "name": "requireWslIpcString",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "lineRange": [
+        23,
+        26
+      ],
+      "summary": "实现 requireWslIpcString 的策略操作，输入包括 name、value。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcStrings",
+      "type": "function",
+      "name": "requireWslIpcStrings",
+      "filePath": "packages/desktop/src/main/wsl/policy.ts",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "实现 requireWslIpcStrings 的策略操作，调用 value.map、requireWslIpcString 完成相关步骤。",
+      "tags": [
+        "function",
+        "desktop",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "target": "file:packages/desktop/src/main/updater-subscriptions.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "target": "function:packages/desktop/src/main/updater-subscriptions.ts:createUpdaterSubscriptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater-subscriptions.ts",
+      "target": "function:packages/desktop/src/main/updater-subscriptions.ts:createUpdaterSubscriptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "function:packages/desktop/src/main/updater.ts:showUpdaterDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "function:packages/desktop/src/main/updater.ts:showUpdaterDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/constants.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/updater-controller.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/updater.ts",
+      "target": "file:packages/desktop/src/main/windows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "target": "function:packages/desktop/src/main/logging.ts:getLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "target": "function:packages/desktop/src/main/updater-controller.ts:createUpdaterController",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater.ts:setupAutoUpdater",
+      "target": "function:packages/desktop/src/main/windows.ts:setAppQuitting",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/updater.ts:showUpdaterDialog",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-registry.test.ts",
+      "target": "function:packages/desktop/src/main/window-registry.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-registry.test.ts",
+      "target": "file:packages/desktop/src/main/window-registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-registry.ts",
+      "target": "file:packages/desktop/src/main/window-registry.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/desktop/src/main/window-registry.test.ts:setup",
+      "target": "function:packages/desktop/src/main/window-registry.ts:createWindowRegistry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-registry.ts",
+      "target": "function:packages/desktop/src/main/window-registry.ts:createWindowRegistry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-registry.ts",
+      "target": "function:packages/desktop/src/main/window-registry.ts:createWindowRegistry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-state.ts",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWebContentsURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-state.ts",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWebContentsURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-state.ts",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWindowURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/window-state.ts",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWindowURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/window-state.ts:safeWindowURL",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWebContentsURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setRelaunchHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setRelaunchHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setAppQuitting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setAppQuitting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setBackgroundColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setBackgroundColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getBackgroundColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getBackgroundColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setTitlebar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setTitlebar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:updateTitlebar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:updateTitlebar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setPinchZoomEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setPinchZoomEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getWindowID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getWindowID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getLastFocusedWindow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:getLastFocusedWindow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:restoreMainWindows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:restoreMainWindows",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setDockIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:setDockIcon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:openLocalFileURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:openLocalFileURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:wireNavigationPolicy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:registerWindow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:registerRendererProtocol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:registerRendererProtocol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:loadWindow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:allowRendererPermissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:wireZoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "function:packages/desktop/src/main/windows.ts:upsertKeyValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/external-url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/store-keys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/unresponsive.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/window-registry.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/main/window-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/windows.ts",
+      "target": "file:packages/ui/src/theme/themes/oc-2.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:setTitlebar",
+      "target": "function:packages/desktop/src/main/windows.ts:updateTitlebar",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:setPinchZoomEnabled",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "target": "function:packages/desktop/src/main/store.ts:getStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:restoreMainWindows",
+      "target": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:allowRendererPermissions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:wireNavigationPolicy",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:upsertKeyValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:registerWindow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:loadWindow",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:createMainWindow",
+      "target": "function:packages/desktop/src/main/windows.ts:wireZoom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveExternalURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:openLocalFileURL",
+      "target": "function:packages/desktop/src/main/external-url.ts:resolveLocalFilePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:wireNavigationPolicy",
+      "target": "function:packages/desktop/src/main/windows.ts:openExternalURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "target": "function:packages/desktop/src/main/unresponsive.ts:createUnresponsiveSampler",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "target": "function:packages/desktop/src/main/window-state.ts:safeWindowURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:wireWindowRecovery",
+      "target": "function:packages/desktop/src/main/native-translations.ts:nativeT",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/windows.ts:wireZoom",
+      "target": "function:packages/desktop/src/main/windows.ts:getPinchZoomEnabled",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "function:packages/desktop/src/main/wsl/ipc.ts:registerUnavailableWslIpcHandlers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "file:packages/desktop/src/main/native-translations.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "file:packages/desktop/src/main/wsl/policy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/ipc.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "target": "function:packages/desktop/src/main/wsl/ipc.ts:registerUnavailableWslIpcHandlers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/ipc.ts:registerWslIpcHandlers",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcStrings",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:wslServerIdToRestart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:wslServerIdToRestart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:clearWslDistroState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:clearWslDistroState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:wslTerminalArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:wslTerminalArgs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcStrings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcStrings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "file:packages/desktop/src/preload/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcStrings",
+      "target": "function:packages/desktop/src/main/wsl/policy.ts:requireWslIpcString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/desktop/src/main/wsl/policy.ts",
+      "target": "file:packages/desktop/src/main/wsl/servers.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

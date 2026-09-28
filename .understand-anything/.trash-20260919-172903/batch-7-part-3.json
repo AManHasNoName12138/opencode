@@ -1,0 +1,1034 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/context/global-sync/queue.ts",
+      "type": "file",
+      "name": "queue.ts",
+      "filePath": "packages/app/src/context/global-sync/queue.ts",
+      "summary": "管理队列的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 createRefreshQueue。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/queue.ts:createRefreshQueue",
+      "type": "function",
+      "name": "createRefreshQueue",
+      "filePath": "packages/app/src/context/global-sync/queue.ts",
+      "lineRange": [
+        8,
+        87
+      ],
+      "summary": "创建刷新队列，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/session-cache.test.ts",
+      "type": "file",
+      "name": "session-cache.test.ts",
+      "filePath": "packages/app/src/context/global-sync/session-cache.test.ts",
+      "summary": "验证会话缓存相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“app session cache”、“dropSessionCaches clears orphaned parts without message rows”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "type": "file",
+      "name": "session-cache.ts",
+      "filePath": "packages/app/src/context/global-sync/session-cache.ts",
+      "summary": "选择超过数量限制的会话缓存进行淘汰，并清理对应消息和派生状态。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-cache.ts:dropSessionCaches",
+      "type": "function",
+      "name": "dropSessionCaches",
+      "filePath": "packages/app/src/context/global-sync/session-cache.ts",
+      "lineRange": [
+        19,
+        41
+      ],
+      "summary": "实现 dropSessionCaches 的会话缓存操作，调用 parts?.some、stale.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-cache.ts:pickSessionCacheEvictions",
+      "type": "function",
+      "name": "pickSessionCacheEvictions",
+      "filePath": "packages/app/src/context/global-sync/session-cache.ts",
+      "lineRange": [
+        43,
+        62
+      ],
+      "summary": "选取会话缓存Evictions，调用 input.seen.has、input.seen.delete、input.seen.add、keep.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/session-load.ts",
+      "type": "file",
+      "name": "session-load.ts",
+      "filePath": "packages/app/src/context/global-sync/session-load.ts",
+      "summary": "管理会话加载的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 loadRootSessions、loadRootSessionsV1、estimateRootSessionTotal。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessions",
+      "type": "function",
+      "name": "loadRootSessions",
+      "filePath": "packages/app/src/context/global-sync/session-load.ts",
+      "lineRange": [
+        5,
+        17
+      ],
+      "summary": "加载根Sessions，调用 input.api.list、result.data.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessionsV1",
+      "type": "function",
+      "name": "loadRootSessionsV1",
+      "filePath": "packages/app/src/context/global-sync/session-load.ts",
+      "lineRange": [
+        19,
+        27
+      ],
+      "summary": "加载根SessionsV1，调用 input.client.session.list 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-load.ts:estimateRootSessionTotal",
+      "type": "function",
+      "name": "estimateRootSessionTotal",
+      "filePath": "packages/app/src/context/global-sync/session-load.ts",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "估算根会话Total，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/session-trim.test.ts",
+      "type": "file",
+      "name": "session-trim.test.ts",
+      "filePath": "packages/app/src/context/global-sync/session-trim.test.ts",
+      "summary": "验证会话裁剪相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“trimSessions”、“keeps base roots and recent roots beyond the limit”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-trim.test.ts:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "packages/app/src/context/global-sync/session-trim.test.ts",
+      "lineRange": [
+        5,
+        14
+      ],
+      "summary": "构造会话测试数据，由 input 指定场景参数，用于会话裁剪测试场景。",
+      "tags": [
+        "函数",
+        "app",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "type": "file",
+      "name": "session-trim.ts",
+      "filePath": "packages/app/src/context/global-sync/session-trim.ts",
+      "summary": "管理会话裁剪的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 sessionUpdatedAt、compareSessionRecent、takeRecentSessions、trimSessions。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "function",
+      "name": "sessionUpdatedAt",
+      "filePath": "packages/app/src/context/global-sync/session-trim.ts",
+      "lineRange": [
+        5,
+        7
+      ],
+      "summary": "实现 sessionUpdatedAt 的会话裁剪操作，输入包括 session。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "type": "function",
+      "name": "compareSessionRecent",
+      "filePath": "packages/app/src/context/global-sync/session-trim.ts",
+      "lineRange": [
+        9,
+        14
+      ],
+      "summary": "比较会话最近，调用 sessionUpdatedAt、cmp 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "type": "function",
+      "name": "takeRecentSessions",
+      "filePath": "packages/app/src/context/global-sync/session-trim.ts",
+      "lineRange": [
+        16,
+        31
+      ],
+      "summary": "实现 takeRecentSessions 的会话裁剪操作，调用 seen.has、seen.add、sessionUpdatedAt、selected.findIndex 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "type": "function",
+      "name": "trimSessions",
+      "filePath": "packages/app/src/context/global-sync/session-trim.ts",
+      "lineRange": [
+        33,
+        57
+      ],
+      "summary": "实现 trimSessions 的会话裁剪操作，调用 Date.now、cmp、all.filter、roots.sort 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/app/src/context/global-sync/types.ts",
+      "summary": "管理类型的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 MAX_DIR_STORES、DIR_IDLE_TTL_MS、SESSION_RECENT_WINDOW、SESSION_RECENT_LIMIT。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/utils.test.ts",
+      "type": "file",
+      "name": "utils.test.ts",
+      "filePath": "packages/app/src/context/global-sync/utils.test.ts",
+      "summary": "验证工具相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“normalizeAgentList”、“adapts current agents to the app agent shape”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "summary": "管理工具的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 directoryKey、DirectoryKey、cmp、normalizeAgentList、normalizePermissionRequest、normalizeProviderList。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "function",
+      "name": "cmp",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        13,
+        13
+      ],
+      "summary": "实现 cmp 的工具操作，输入包括 a、b。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:normalizeAgentList",
+      "type": "function",
+      "name": "normalizeAgentList",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        15,
+        37
+      ],
+      "summary": "规范化代理列表，调用 input.every、agent.permissions.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:normalizePermissionRequest",
+      "type": "function",
+      "name": "normalizePermissionRequest",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        39,
+        51
+      ],
+      "summary": "规范化权限请求，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:normalizeProviderList",
+      "type": "function",
+      "name": "normalizeProviderList",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        53,
+        153
+      ],
+      "summary": "规范化提供商列表，调用 providers.all.map、all.set、all.get、model.cost.find 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:sanitizeProject",
+      "type": "function",
+      "name": "sanitizeProject",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        155,
+        165
+      ],
+      "summary": "实现 sanitizeProject 的工具操作，输入包括 project。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/global-sync/utils.ts:normalizeProjectInfo",
+      "type": "function",
+      "name": "normalizeProjectInfo",
+      "filePath": "packages/app/src/context/global-sync/utils.ts",
+      "lineRange": [
+        167,
+        172
+      ],
+      "summary": "规范化项目Info，输入包括 project。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/context/global.tsx",
+      "type": "file",
+      "name": "global.tsx",
+      "filePath": "packages/app/src/context/global.tsx",
+      "summary": "按服务器身份复用 SDK、同步和查询上下文，协调服务器健康状态与项目列表。服务器移除时释放对应响应式根，设置页面独立选择正在编辑的服务器。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/global.tsx:createServerCtx",
+      "type": "function",
+      "name": "createServerCtx",
+      "filePath": "packages/app/src/context/global.tsx",
+      "lineRange": [
+        96,
+        154
+      ],
+      "summary": "创建服务器Ctx，调用 createServerSdkContext、createServerSyncContext、createMemo、projects.list 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/context/highlights.tsx",
+      "type": "file",
+      "name": "highlights.tsx",
+      "filePath": "packages/app/src/context/highlights.tsx",
+      "summary": "管理highlights的共享状态与读取接口，为 app 下游组件提供上下文。 对外提供 { use: useHighlights, provider: HighlightsProvider }。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/context/highlights.tsx:parseHighlight",
+      "type": "function",
+      "name": "parseHighlight",
+      "filePath": "packages/app/src/context/highlights.tsx",
+      "lineRange": [
+        51,
+        62
+      ],
+      "summary": "解析Highlight，调用 isRecord、getText、parseMedia 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/highlights.tsx:parseRelease",
+      "type": "function",
+      "name": "parseRelease",
+      "filePath": "packages/app/src/context/highlights.tsx",
+      "lineRange": [
+        64,
+        89
+      ],
+      "summary": "解析发布，调用 isRecord、getText、value.highlights.flatMap、source.toLowerCase 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/highlights.tsx:parseChangelog",
+      "type": "function",
+      "name": "parseChangelog",
+      "filePath": "packages/app/src/context/highlights.tsx",
+      "lineRange": [
+        91,
+        100
+      ],
+      "summary": "解析Changelog，调用 value.map、isRecord、value.releases.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/context/highlights.tsx:sliceHighlights",
+      "type": "function",
+      "name": "sliceHighlights",
+      "filePath": "packages/app/src/context/highlights.tsx",
+      "lineRange": [
+        102,
+        128
+      ],
+      "summary": "实现 sliceHighlights 的highlights操作，调用 normalizeVersion、releases.findIndex、releases.slice、highlights.filter 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/context/global-sync/types.ts",
+      "target": "file:packages/app/src/context/global-sync/bootstrap.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/types.ts",
+      "target": "file:packages/app/src/context/global-sync/child-store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/types.ts",
+      "target": "file:packages/app/src/context/global-sync/event-reducer.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/queue.ts",
+      "target": "file:packages/app/src/context/global-sync/queue.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "file:packages/app/src/context/global-sync/queue.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/queue.ts",
+      "target": "function:packages/app/src/context/global-sync/queue.ts:createRefreshQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/queue.ts",
+      "target": "function:packages/app/src/context/global-sync/queue.ts:createRefreshQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.test.ts",
+      "target": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "target": "file:packages/app/src/context/global-sync/session-cache.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:dropSessionCaches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:dropSessionCaches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:pickSessionCacheEvictions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-cache.ts",
+      "target": "function:packages/app/src/context/global-sync/session-cache.ts:pickSessionCacheEvictions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessionsV1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:loadRootSessionsV1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:estimateRootSessionTotal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "function:packages/app/src/context/global-sync/session-load.ts:estimateRootSessionTotal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-load.ts",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.test.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.test.ts:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.test.ts",
+      "target": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "file:packages/app/src/context/global-sync/session-trim.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "file:packages/app/src/context/global-sync/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/session-trim.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:compareSessionRecent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:takeRecentSessions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global-sync/session-trim.ts:trimSessions",
+      "target": "function:packages/app/src/context/global-sync/session-trim.ts:sessionUpdatedAt",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.test.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "file:packages/app/src/context/global-sync/utils.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:cmp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeAgentList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeAgentList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizePermissionRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizePermissionRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeProviderList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeProviderList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:sanitizeProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:sanitizeProject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeProjectInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global-sync/utils.ts",
+      "target": "function:packages/app/src/context/global-sync/utils.ts:normalizeProjectInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "function:packages/app/src/context/global.tsx:createServerCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/utils/server-health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/global.tsx",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/global.tsx:createServerCtx",
+      "target": "function:packages/app/src/context/server-sdk.tsx:createServerSdkContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global.tsx:createServerCtx",
+      "target": "function:packages/app/src/context/server-sync.tsx:createServerSyncContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/context/global.tsx:createServerCtx",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "function:packages/app/src/context/highlights.tsx:parseHighlight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "function:packages/app/src/context/highlights.tsx:parseRelease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "function:packages/app/src/context/highlights.tsx:parseChangelog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "function:packages/app/src/context/highlights.tsx:sliceHighlights",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "file:packages/app/src/components/dialog-release-notes.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/highlights.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/context/highlights.tsx:parseRelease",
+      "target": "function:packages/app/src/context/highlights.tsx:parseHighlight",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

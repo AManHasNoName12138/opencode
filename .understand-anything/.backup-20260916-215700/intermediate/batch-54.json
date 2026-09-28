@@ -1,0 +1,1553 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/core/test/location.test.ts",
+      "type": "file",
+      "name": "location.test.ts",
+      "filePath": "packages/core/test/location.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Location、resolves the current project and vcs information」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/models.test.ts",
+      "type": "file",
+      "name": "models.test.ts",
+      "filePath": "packages/core/test/models.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「ModelsDev Service、get() returns providers from disk when cache file exists、get() returns empty catalog when disk empty, fetch disabled, and no bundled snapshot is injected、get() recovers from a corrupted cache file by fetching a fresh catalog、get() is single-flight under concurrent calls、get() caches across calls (later disk writes are ignored until invalidate)、refresh(true) fetches via HttpClient」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/models.test.ts:makeMockClient",
+      "type": "function",
+      "name": "makeMockClient",
+      "filePath": "packages/core/test/models.test.ts",
+      "lineRange": [
+        78,
+        88
+      ],
+      "summary": "在Core 领域服务层中执行 makeMockClient，接收 state 参数；调用 HttpClient.make、Effect.gen、Ref.update、Ref.get、HttpClientResponse.fromWeb 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/move-session.test.ts",
+      "type": "file",
+      "name": "move-session.test.ts",
+      "filePath": "packages/core/test/move-session.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「MoveSession、moves session changes to another project directory、moves within a checkout without transferring existing changes、moves nested session changes without cleaning unrelated files」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/move-session.test.ts:initRepo",
+      "type": "function",
+      "name": "initRepo",
+      "filePath": "packages/core/test/move-session.test.ts",
+      "lineRange": [
+        41,
+        51
+      ],
+      "summary": "在Core 领域服务层中执行 initRepo，接收 directory 参数；调用 $、fs.writeFile、path.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/npm-config.test.ts",
+      "type": "file",
+      "name": "npm-config.test.ts",
+      "filePath": "packages/core/test/npm-config.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「NpmConfig.load、reads registry from project .npmrc、reads scoped registries from project .npmrc、flattens boolean and list options、NpmConfig.registry、normalizes configured registry without trailing slash、leaves configured registry without trailing slash unchanged」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/npm.test.ts",
+      "type": "file",
+      "name": "npm.test.ts",
+      "filePath": "packages/core/test/npm.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「Npm.sanitize、keeps normal scoped package specs unchanged、handles git https specs、Npm.add、reifies when package cache directory exists without the package installed、Npm.install、respects omit from project .npmrc」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/permission.test.ts",
+      "type": "file",
+      "name": "permission.test.ts",
+      "filePath": "packages/core/test/permission.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「PermissionV2、returns the evaluated effect and only queues prompts、evaluates against an explicit provider-turn agent、allows and denies from explicit rules without asking、allows managed output reads without granting external directory access、uses build permissions when the Session agent is omitted、denies omitted-agent permissions when no primary default agent exists」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/permission.test.ts:setup",
+      "type": "function",
+      "name": "setup",
+      "filePath": "packages/core/test/permission.test.ts",
+      "lineRange": [
+        40,
+        65
+      ],
+      "summary": "在Core 领域服务层中执行 setup，接收 rules 参数；调用 Effect.gen、AbsolutePath.make、SessionV2.ID.make、setRules 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/permission.test.ts:setRules",
+      "type": "function",
+      "name": "setRules",
+      "filePath": "packages/core/test/permission.test.ts",
+      "lineRange": [
+        67,
+        76
+      ],
+      "summary": "在Core 领域服务层中执行 setRules，接收 rules 参数；调用 Effect.gen、agents.transform、editor.update、AgentV2.ID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/permission.test.ts:waitForRequest",
+      "type": "function",
+      "name": "waitForRequest",
+      "filePath": "packages/core/test/permission.test.ts",
+      "lineRange": [
+        88,
+        103
+      ],
+      "summary": "在Core 领域服务层中执行 waitForRequest；调用 Effect.gen、Deferred.make、events.listen、Deferred.succeed、Effect.addFinalizer、service.assert、assertion 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "领域服务"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin.test.ts",
+      "type": "file",
+      "name": "plugin.test.ts",
+      "filePath": "packages/core/test/plugin.test.ts",
+      "summary": "验证 Core 领域服务层 的行为，实际用例包括「PluginV2、waits for a plugin and returns immediately once active、propagates plugin activation defects to waiters、adds, replaces, and removes plugins」。",
+      "tags": [
+        "test",
+        "领域服务",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/command.test.ts",
+      "type": "file",
+      "name": "command.test.ts",
+      "filePath": "packages/core/test/plugin/command.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CommandPlugin.Plugin、registers built-in init and review commands」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/fixture.ts",
+      "type": "file",
+      "name": "fixture.ts",
+      "filePath": "packages/core/test/plugin/fixture.ts",
+      "summary": "为 插件扩展与模型集成层 测试提供 PluginTestLayer 等测试辅助接口。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/host.ts",
+      "type": "file",
+      "name": "host.ts",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "summary": "为 插件扩展与模型集成层 测试提供 host、agentHost、catalogHost、integrationHost 等测试辅助接口。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:host",
+      "type": "function",
+      "name": "host",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        13,
+        53
+      ],
+      "summary": "在插件扩展与模型集成层中执行 host，接收 overrides 参数；调用 Effect.die 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:agentHost",
+      "type": "function",
+      "name": "agentHost",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        55,
+        77
+      ],
+      "summary": "在插件扩展与模型集成层中执行 agentHost，接收 agent 参数；调用 agent.transform、callback、draft.list、draft.get、AgentV2.ID.make、agentInfo、draft.default 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:catalogHost",
+      "type": "function",
+      "name": "catalogHost",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        79,
+        141
+      ],
+      "summary": "在插件扩展与模型集成层中执行 catalogHost，接收 catalog 参数；调用 catalog.transform、callback、draft.provider.list、providerInfo、Array.from、modelInfo、draft.provider.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:integrationHost",
+      "type": "function",
+      "name": "integrationHost",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        143,
+        236
+      ],
+      "summary": "在插件扩展与模型集成层中执行 integrationHost，接收 integration 参数；调用 integration.connection.active、Integration.ID.make、integration.connection.resolve、Credential.ID.make、integration.transform、callback、draft.list 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:method",
+      "type": "function",
+      "name": "method",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        238,
+        250
+      ],
+      "summary": "在插件扩展与模型集成层中执行 method，接收 value 参数；调用 prompt.options.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:internalMethod",
+      "type": "function",
+      "name": "internalMethod",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        252,
+        261
+      ],
+      "summary": "在插件扩展与模型集成层中执行 internalMethod，接收 value 参数；调用 Integration.MethodID.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/host.ts:modelInfo",
+      "type": "function",
+      "name": "modelInfo",
+      "filePath": "packages/core/test/plugin/host.ts",
+      "lineRange": [
+        280,
+        303
+      ],
+      "summary": "在插件扩展与模型集成层中执行 modelInfo，接收 value 参数；调用 value.variants.map、value.cost.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/models-dev.test.ts",
+      "type": "file",
+      "name": "models-dev.test.ts",
+      "filePath": "packages/core/test/plugin/models-dev.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「ModelsDevPlugin、projects models.dev modes as separate models instead of variants、registers key methods for providers with environment variables」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/promise.test.ts",
+      "type": "file",
+      "name": "promise.test.ts",
+      "filePath": "packages/core/test/plugin/promise.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「fromPromise、loads a promise plugin and registers a transform hook、disposes a hook registration on request」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-alibaba.test.ts",
+      "type": "file",
+      "name": "provider-alibaba.test.ts",
+      "filePath": "packages/core/test/plugin/provider-alibaba.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「AlibabaPlugin、creates an Alibaba SDK for @ai-sdk/alibaba、ignores non-Alibaba SDK packages、matches the old bundled Alibaba SDK provider naming、uses the old default languageModel(api.id) behavior」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "type": "file",
+      "name": "provider-amazon-bedrock.test.ts",
+      "filePath": "packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「AmazonBedrockPlugin、moves endpoint option to api URL、prefers endpoint over baseURL for SDK base URL、uses baseURL as SDK base URL、creates SDK without explicit credential env so the default AWS chain can resolve credentials、uses config region over AWS_REGION for SDK base URL、uses AWS_REGION for SDK base URL when config region is absent」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-amazon-bedrock.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "lineRange": [
+        28,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、fx 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-amazon-bedrock.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-anthropic.test.ts",
+      "type": "file",
+      "name": "provider-anthropic.test.ts",
+      "filePath": "packages/core/test/plugin/provider-anthropic.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「AnthropicPlugin、applies legacy beta headers、ignores non-Anthropic providers、creates Anthropic SDKs with the model provider ID as the SDK name、uses the Anthropic provider ID as the SDK name for the bundled Anthropic provider」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "type": "file",
+      "name": "provider-azure-cognitive-services.test.ts",
+      "filePath": "packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「AzureCognitiveServicesPlugin、maps the resource env var to the Azure SDK baseURL、leaves baseURL unset without resource env and ignores other providers、selects chat only for completion URLs、uses the legacy Azure selector order and provider guard、falls back from responses to messages, chat, then languageModel」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-azure-cognitive-services.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "lineRange": [
+        28,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、fx 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-azure-cognitive-services.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-azure.test.ts",
+      "type": "file",
+      "name": "provider-azure.test.ts",
+      "filePath": "packages/core/test/plugin/provider-azure.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「AzurePlugin、resolves resourceName from env、keeps explicit resourceName over env and ignores other providers、falls back to env when configured resourceName is blank、falls back to env when configured resourceName is whitespace、allows configured baseURL without resourceName、rejects missing resourceName when baseURL is not configured」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-azure.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-azure.test.ts",
+      "lineRange": [
+        28,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、fx 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-azure.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-azure.test.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-cerebras.test.ts",
+      "type": "file",
+      "name": "provider-cerebras.test.ts",
+      "filePath": "packages/core/test/plugin/provider-cerebras.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CerebrasPlugin、applies the legacy integration header、ignores non-Cerebras providers、creates a bundled Cerebras SDK with the model provider ID as the SDK name、preserves an explicit bundled Cerebras SDK name option、ignores non-Cerebras SDK packages」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "type": "file",
+      "name": "provider-cloudflare-ai-gateway.test.ts",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CloudflareAIGatewayPlugin、requires account, gateway, and token before creating the unified SDK、passes legacy metadata, cache, log, and User-Agent values under the AI Gateway options key、parses legacy cf-aig-metadata header when metadata option is absent、prefers Cloudflare env values over auth/config-derived options、accepts gatewayId metadata copied from auth into provider options、falls back to CF_」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "lineRange": [
+        21,
+        40
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、fx 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts:captureAiGatewayOptions",
+      "type": "function",
+      "name": "captureAiGatewayOptions",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "lineRange": [
+        46,
+        63
+      ],
+      "summary": "在插件扩展与模型集成层中执行 captureAiGatewayOptions，接收 options 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "type": "file",
+      "name": "provider-cloudflare-workers-ai.test.ts",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CloudflareWorkersAIPlugin、maps account ID to endpoint URL and creates an OpenAI-compatible SDK、preserves a configured endpoint URL instead of deriving one from account ID、allows a configured baseURL without account ID、uses env account ID over configured account ID、uses env API key over auth or configured API key and keeps the Cloudflare User-Agent、expands account ID vars in endpoint URLs」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "lineRange": [
+        28,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-cohere.test.ts",
+      "type": "file",
+      "name": "provider-cohere.test.ts",
+      "filePath": "packages/core/test/plugin/provider-cohere.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「CoherePlugin、creates a Cohere SDK only for @ai-sdk/cohere、uses the model provider ID as the bundled SDK name、leaves language selection to the default languageModel fallback」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-cohere.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-cohere.test.ts",
+      "lineRange": [
+        23,
+        34
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-deepinfra.test.ts",
+      "type": "file",
+      "name": "provider-deepinfra.test.ts",
+      "filePath": "packages/core/test/plugin/provider-deepinfra.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「DeepInfraPlugin、creates a DeepInfra SDK for @ai-sdk/deepinfra、passes the model provider ID as the bundled DeepInfra SDK name、uses the canonical provider ID as the bundled DeepInfra SDK name、matches only the exact bundled DeepInfra package、uses the default languageModel selection for DeepInfra models」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-dynamic.test.ts",
+      "type": "file",
+      "name": "provider-dynamic.test.ts",
+      "filePath": "packages/core/test/plugin/provider-dynamic.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「DynamicProviderPlugin、creates an SDK from a provider factory export、does not override an SDK already supplied by an earlier plugin、injects the provider ID as the SDK factory name、loads npm packages through their resolved import entrypoint」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-dynamic.test.ts:tempEntrypoint",
+      "type": "function",
+      "name": "tempEntrypoint",
+      "filePath": "packages/core/test/plugin/provider-dynamic.test.ts",
+      "lineRange": [
+        37,
+        47
+      ],
+      "summary": "在插件扩展与模型集成层中执行 tempEntrypoint，接收 source 参数；调用 Effect.acquireRelease、Effect.promise、fs.mkdtemp、path.join、os.tmpdir、Bun.write、fs.rm 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-gateway.test.ts",
+      "type": "file",
+      "name": "provider-gateway.test.ts",
+      "filePath": "packages/core/test/plugin/provider-gateway.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GatewayPlugin、creates a Gateway SDK for @ai-sdk/gateway、passes the model providerID as the Gateway SDK name、matches Vercel AI Gateway models by their @ai-sdk/gateway package」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-github-copilot.test.ts",
+      "type": "file",
+      "name": "provider-github-copilot.test.ts",
+      "filePath": "packages/core/test/plugin/provider-github-copilot.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GithubCopilotPlugin、creates the bundled Copilot SDK for the GitHub Copilot package、selects languageModel when responses and chat are absent、selects languageModel with the API model ID when responses and chat are absent、uses responses for gpt-5 models except gpt-5-mini、uses advertised Copilot endpoint metadata before model ID fallbacks、uses the API model ID when selecting responses or chat」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-github-copilot.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-github-copilot.test.ts",
+      "lineRange": [
+        28,
+        39
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-gitlab.test.ts",
+      "type": "file",
+      "name": "provider-gitlab.test.ts",
+      "filePath": "packages/core/test/plugin/provider-gitlab.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GitLabPlugin、creates SDKs with legacy default instance URL, token env, headers, and feature flags、uses GITLAB_INSTANCE_URL when instanceUrl is not configured、keeps configured instance URL, apiKey, aiGatewayHeaders, and featureFlags over env/defaults、ignores non-GitLab SDK packages、uses workflowChat for duo workflow models and preserves selectedModelRef、uses exact static workflow model ids when the」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-gitlab.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-gitlab.test.ts",
+      "lineRange": [
+        23,
+        42
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "type": "file",
+      "name": "provider-google-vertex-anthropic.test.ts",
+      "filePath": "packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GoogleVertexAnthropicPlugin、resolves legacy project and location env on provider update、keeps configured project and location over env fallback、creates SDKs from legacy env fallback and default location、uses GOOGLE_CLOUD_LOCATION before VERTEX_LOCATION when creating SDKs、creates SDKs for google-vertex Anthropic models with multi-region endpoints、keeps configured baseURL for google-vertex Anthropic」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "lineRange": [
+        23,
+        42
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-google-vertex.test.ts",
+      "type": "file",
+      "name": "provider-google-vertex.test.ts",
+      "filePath": "packages/core/test/plugin/provider-google-vertex.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GoogleVertexPlugin、ignores OpenAI-compatible providers that are not Google Vertex、resolves project and location from env using legacy precedence、resolves the advertised GOOGLE_VERTEX_PROJECT env for provider updates and SDKs、keeps configured project and location over env and uses global endpoint、keeps OpenAI-compatible Vertex endpoint templates regional for eu、defaults location to us-central1 when」。",
+      "tags": [
+        "test",
+        "plugin",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-google-vertex.test.ts:withEnv",
+      "type": "function",
+      "name": "withEnv",
+      "filePath": "packages/core/test/plugin/provider-google-vertex.test.ts",
+      "lineRange": [
+        30,
+        49
+      ],
+      "summary": "在插件扩展与模型集成层中执行 withEnv，接收 vars、effect 参数；调用 Effect.acquireUseRelease、Effect.sync、Object.fromEntries、Object.keys、Object.entries 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/core/test/plugin/provider-google-vertex.test.ts:fakeSelectorSdk",
+      "type": "function",
+      "name": "fakeSelectorSdk",
+      "filePath": "packages/core/test/plugin/provider-google-vertex.test.ts",
+      "lineRange": [
+        51,
+        62
+      ],
+      "summary": "在插件扩展与模型集成层中执行 fakeSelectorSdk，接收 calls 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "plugin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-google.test.ts",
+      "type": "file",
+      "name": "provider-google.test.ts",
+      "filePath": "packages/core/test/plugin/provider-google.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GooglePlugin、creates a Google Generative AI SDK for @ai-sdk/google using the provider ID as SDK name、ignores non-Google SDK packages、uses default languageModel loading with provider ID parity」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-groq.test.ts",
+      "type": "file",
+      "name": "provider-groq.test.ts",
+      "filePath": "packages/core/test/plugin/provider-groq.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「GroqPlugin、creates a Groq SDK for @ai-sdk/groq、ignores non-Groq SDK packages、only matches the bundled @ai-sdk/groq package exactly、matches the old bundled Groq SDK provider naming、uses the default languageModel(api.id) behavior」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/core/test/plugin/provider-kilo.test.ts",
+      "type": "file",
+      "name": "provider-kilo.test.ts",
+      "filePath": "packages/core/test/plugin/provider-kilo.test.ts",
+      "summary": "验证 插件扩展与模型集成层 的行为，实际用例包括「KiloPlugin、is registered so legacy referer headers can be applied、applies legacy referer headers only to kilo、uses the exact legacy Kilo header casing and set、uses the legacy provider-id guard instead of endpoint package matching」。",
+      "tags": [
+        "test",
+        "plugin",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/core/test/location.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/models.test.ts",
+      "target": "function:packages/core/test/models.test.ts:makeMockClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/models.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/move-session.test.ts",
+      "target": "function:packages/core/test/move-session.test.ts:initRepo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/move-session.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/move-session.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/npm-config.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/npm.test.ts",
+      "target": "file:packages/core/test/fixture/tmpdir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/permission.test.ts",
+      "target": "function:packages/core/test/permission.test.ts:setup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/permission.test.ts",
+      "target": "function:packages/core/test/permission.test.ts:setRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/permission.test.ts",
+      "target": "function:packages/core/test/permission.test.ts:waitForRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/permission.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/permission.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/command.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/command.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/command.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/fixture.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:host",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:host",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:agentHost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:agentHost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:catalogHost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:catalogHost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:integrationHost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:integrationHost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:method",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:internalMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/host.ts",
+      "target": "function:packages/core/test/plugin/host.ts:modelInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/models-dev.test.ts",
+      "target": "file:packages/core/test/fixture/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/models-dev.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/models-dev.test.ts",
+      "target": "file:packages/core/test/plugin/host.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/promise.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/promise.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-alibaba.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-alibaba.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "target": "function:packages/core/test/plugin/provider-amazon-bedrock.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "target": "function:packages/core/test/plugin/provider-amazon-bedrock.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-amazon-bedrock.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-anthropic.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-anthropic.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "target": "function:packages/core/test/plugin/provider-azure-cognitive-services.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "target": "function:packages/core/test/plugin/provider-azure-cognitive-services.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure-cognitive-services.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure.test.ts",
+      "target": "function:packages/core/test/plugin/provider-azure.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure.test.ts",
+      "target": "function:packages/core/test/plugin/provider-azure.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-azure.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cerebras.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cerebras.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "target": "function:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "target": "function:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts:captureAiGatewayOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-ai-gateway.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "target": "function:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "target": "function:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cloudflare-workers-ai.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cohere.test.ts",
+      "target": "function:packages/core/test/plugin/provider-cohere.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cohere.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-cohere.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-deepinfra.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-deepinfra.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-dynamic.test.ts",
+      "target": "function:packages/core/test/plugin/provider-dynamic.test.ts:tempEntrypoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-dynamic.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-dynamic.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-gateway.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-gateway.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-github-copilot.test.ts",
+      "target": "function:packages/core/test/plugin/provider-github-copilot.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-github-copilot.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-github-copilot.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-gitlab.test.ts",
+      "target": "function:packages/core/test/plugin/provider-gitlab.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-gitlab.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-gitlab.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "target": "function:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex-anthropic.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex.test.ts",
+      "target": "function:packages/core/test/plugin/provider-google-vertex.test.ts:withEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex.test.ts",
+      "target": "function:packages/core/test/plugin/provider-google-vertex.test.ts:fakeSelectorSdk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google-vertex.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-google.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-groq.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-groq.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-kilo.test.ts",
+      "target": "file:packages/core/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/core/test/plugin/provider-kilo.test.ts",
+      "target": "file:packages/core/test/plugin/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/core/test/permission.test.ts:setup",
+      "target": "function:packages/core/test/permission.test.ts:setRules",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/plugin/host.ts:catalogHost",
+      "target": "function:packages/core/test/plugin/host.ts:modelInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/core/test/plugin/host.ts:integrationHost",
+      "target": "function:packages/core/test/plugin/host.ts:internalMethod",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

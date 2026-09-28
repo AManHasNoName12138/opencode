@@ -1,0 +1,1528 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/src/route/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/llm/src/route/index.ts",
+      "summary": "在LLM 请求路由与传输层中提供 Route、LLMClient、RouteShape、RouteModelInput、RouteRoutedModelInput、RouteDefaults、RouteDefaultsInput 等接口。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/protocol.ts",
+      "type": "file",
+      "name": "protocol.ts",
+      "filePath": "packages/llm/src/route/protocol.ts",
+      "summary": "在LLM 请求路由与传输层中提供 make、jsonEvent 等接口。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/protocol.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/llm/src/route/protocol.ts",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 make，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/protocol.ts:jsonEvent",
+      "type": "function",
+      "name": "jsonEvent",
+      "filePath": "packages/llm/src/route/protocol.ts",
+      "lineRange": [
+        82,
+        82
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 jsonEvent，接收 schema 参数；调用 Schema.fromJsonString 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/transport/http.ts",
+      "type": "file",
+      "name": "http.ts",
+      "filePath": "packages/llm/src/route/transport/http.ts",
+      "summary": "构造带查询参数和 JSON 请求体覆盖的 HTTP 请求，限制覆盖保留字段，并提供普通 JSON 与 SSE JSON 两种传输形式。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/http.ts:bodyWithOverlay",
+      "type": "function",
+      "name": "bodyWithOverlay",
+      "filePath": "packages/llm/src/route/transport/http.ts",
+      "lineRange": [
+        73,
+        86
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 bodyWithOverlay，接收 body、request、encodeBody 参数；调用 Effect.gen、encodeBody、forbiddenBodyOverlayKeys、ProviderShared.invalidRequest、forbiddenKeys.join、ProviderShared.isRecord、mergeJsonRecords 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/http.ts:jsonRequestParts",
+      "type": "function",
+      "name": "jsonRequestParts",
+      "filePath": "packages/llm/src/route/transport/http.ts",
+      "lineRange": [
+        88,
+        106
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 jsonRequestParts，接收 input 参数；调用 Effect.gen、applyQuery、renderEndpoint、bodyWithOverlay、Auth.toEffect、Headers.fromInput、input.headers 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/http.ts:httpJson",
+      "type": "function",
+      "name": "httpJson",
+      "filePath": "packages/llm/src/route/transport/http.ts",
+      "lineRange": [
+        118,
+        150
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 httpJson，接收 input 参数；调用 httpJson、jsonRequestParts、Effect.map、ProviderShared.jsonPost、Stream.unwrap、prepared.framing.frame、response.stream.pipe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/transport/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/llm/src/route/transport/index.ts",
+      "summary": "在LLM 请求路由与传输层中提供 WebSocketExecutor、WebSocketTransport 等接口。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "file",
+      "name": "websocket.ts",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "summary": "提供 WebSocketExecutor 服务与 WebSocket 传输适配，处理连接打开、事件/二进制消息、消息文本转换和 JSON 流解码。",
+      "tags": [
+        "typescript",
+        "transport",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "function",
+      "name": "transportError",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        29,
+        38
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 transportError，接收 method、message、input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:waitOpen",
+      "type": "function",
+      "name": "waitOpen",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        52,
+        102
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 waitOpen，接收 ws、input 参数；调用 Effect.fail、transportError、Effect.callback、ws.addEventListener、signal.addEventListener 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:webSocketUrl",
+      "type": "function",
+      "name": "webSocketUrl",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        104,
+        123
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 webSocketUrl，接收 value 参数；调用 Effect.try、url.toString、transportError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:open",
+      "type": "function",
+      "name": "open",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        125,
+        134
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 open，接收 input 参数；调用 Effect.try、transportError、Effect.flatMap、fromWebSocket 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "type": "function",
+      "name": "fromWebSocket",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        138,
+        204
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 fromWebSocket，接收 ws、input 参数；调用 Effect.gen、waitOpen、Queue.bounded、Effect.sync、ws.removeEventListener、Effect.andThen、Queue.shutdown 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:messageText",
+      "type": "function",
+      "name": "messageText",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        206,
+        207
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 messageText，接收 message、decoder 参数；调用 decoder.decode 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "type": "function",
+      "name": "json",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        226,
+        262
+      ],
+      "summary": "在LLM 请求路由与传输层中执行 json，接收 input 参数；调用 json、Effect.gen、HttpTransport.jsonRequestParts、webSocketUrl、input.encodeMessage、input.toMessage、Stream.fail 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/route/transport/websocket.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/llm/src/route/transport/websocket.ts",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "在LLM 请求路由与传输层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "transport"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/schema/errors.ts",
+      "type": "file",
+      "name": "errors.ts",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "summary": "定义 ProviderFailureClassification、HttpRequestDetails、HttpResponseDetails、HttpRateLimitDetails、HttpContext、InvalidRequestReason、NoRouteReason 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:HttpRequestDetails",
+      "type": "class",
+      "name": "HttpRequestDetails",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 HttpRequestDetails 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:HttpResponseDetails",
+      "type": "class",
+      "name": "HttpResponseDetails",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        13,
+        16
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 HttpResponseDetails 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:HttpRateLimitDetails",
+      "type": "class",
+      "name": "HttpRateLimitDetails",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        18,
+        23
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 HttpRateLimitDetails 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:HttpContext",
+      "type": "class",
+      "name": "HttpContext",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 HttpContext 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:InvalidRequestReason",
+      "type": "class",
+      "name": "InvalidRequestReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        34,
+        45
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 InvalidRequestReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:NoRouteReason",
+      "type": "class",
+      "name": "NoRouteReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        47,
+        60
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 NoRouteReason 类，提供 retryable、message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:AuthenticationReason",
+      "type": "class",
+      "name": "AuthenticationReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        62,
+        72
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 AuthenticationReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:RateLimitReason",
+      "type": "class",
+      "name": "RateLimitReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        74,
+        85
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 RateLimitReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:QuotaExceededReason",
+      "type": "class",
+      "name": "QuotaExceededReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        87,
+        96
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 QuotaExceededReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:ContentPolicyReason",
+      "type": "class",
+      "name": "ContentPolicyReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        98,
+        107
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ContentPolicyReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:ProviderInternalReason",
+      "type": "class",
+      "name": "ProviderInternalReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        109,
+        120
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ProviderInternalReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:TransportReason",
+      "type": "class",
+      "name": "TransportReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        122,
+        132
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 TransportReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:InvalidProviderOutputReason",
+      "type": "class",
+      "name": "InvalidProviderOutputReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        134,
+        146
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 InvalidProviderOutputReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:UnknownProviderReason",
+      "type": "class",
+      "name": "UnknownProviderReason",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        148,
+        158
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 UnknownProviderReason 类，提供 retryable 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:LLMError",
+      "type": "class",
+      "name": "LLMError",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        174,
+        192
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 LLMError 类，提供 retryable、retryAfterMs、message 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/errors.ts:ToolFailure",
+      "type": "class",
+      "name": "ToolFailure",
+      "filePath": "packages/llm/src/schema/errors.ts",
+      "lineRange": [
+        203,
+        207
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 ToolFailure 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/schema/events.ts",
+      "type": "file",
+      "name": "events.ts",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "summary": "定义 Usage、StepStart、TextStart、TextDelta、TextEnd、ReasoningStart、ReasoningDelta 等共享数据契约，并通过 contentBlockID、toolCallID、responseText、responseReasoning、responseUsage、emptyResponseState、appendEvent 提供转换操作，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:appendEvent",
+      "type": "function",
+      "name": "appendEvent",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        368,
+        390
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 appendEvent，接收 state、event 参数；调用 LLMEvent.is.finish、LLMEvent.is.providerError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:ensureText",
+      "type": "function",
+      "name": "ensureText",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        411,
+        420
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 ensureText，接收 state、id、providerMetadata 参数；调用 appendContent、textContent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:reduceTextDelta",
+      "type": "function",
+      "name": "reduceTextDelta",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        422,
+        432
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 reduceTextDelta，接收 state、event 参数；调用 ensureText、replaceContent、textContent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:ensureReasoning",
+      "type": "function",
+      "name": "ensureReasoning",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        444,
+        453
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 ensureReasoning，接收 state、id、providerMetadata 参数；调用 appendContent、reasoningContent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:reduceReasoningDelta",
+      "type": "function",
+      "name": "reduceReasoningDelta",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        455,
+        465
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 reduceReasoningDelta，接收 state、event 参数；调用 ensureReasoning、replaceContent、reasoningContent 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:reduceToolInputEnd",
+      "type": "function",
+      "name": "reduceToolInputEnd",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        493,
+        506
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 reduceToolInputEnd，接收 state、event 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "type": "function",
+      "name": "reduceResponseState",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        531,
+        559
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中执行 reduceResponseState，接收 state、event 参数；调用 appendEvent、ensureText、reduceTextDelta、reduceTextEnd、ensureReasoning、reduceReasoningDelta、reduceReasoningEnd 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/events.ts:Usage",
+      "type": "class",
+      "name": "Usage",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        51,
+        74
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 Usage 类，提供 visibleOutputTokens、from 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/events.ts:PreparedRequest",
+      "type": "class",
+      "name": "PreparedRequest",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        297,
+        304
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 PreparedRequest 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/llm/src/schema/events.ts:LLMResponse",
+      "type": "class",
+      "name": "LLMResponse",
+      "filePath": "packages/llm/src/schema/events.ts",
+      "lineRange": [
+        561,
+        581
+      ],
+      "summary": "在统一 LLM 请求与响应数据契约中定义 LLMResponse 类，提供 text、reasoning、toolCalls 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "数据模型"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/schema/ids.ts",
+      "type": "file",
+      "name": "ids.ts",
+      "filePath": "packages/llm/src/schema/ids.ts",
+      "summary": "定义 ProviderMetadata、ProtocolID、RouteID、ModelID、ProviderID、ResponseID、ContentBlockID 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/src/schema/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/llm/src/schema/index.ts",
+      "summary": "定义 index 等共享数据契约，供序列化、校验和跨模块通信使用。",
+      "tags": [
+        "数据模型",
+        "schema",
+        "typescript"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/src/route/protocol.ts",
+      "target": "function:packages/llm/src/route/protocol.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/protocol.ts",
+      "target": "function:packages/llm/src/route/protocol.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/protocol.ts",
+      "target": "function:packages/llm/src/route/protocol.ts:jsonEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/protocol.ts",
+      "target": "function:packages/llm/src/route/protocol.ts:jsonEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/protocol.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "function:packages/llm/src/route/transport/http.ts:bodyWithOverlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "function:packages/llm/src/route/transport/http.ts:jsonRequestParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "function:packages/llm/src/route/transport/http.ts:jsonRequestParts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "function:packages/llm/src/route/transport/http.ts:httpJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "function:packages/llm/src/route/transport/http.ts:httpJson",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/route/endpoint.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/route/framing.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/route/transport/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/http.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/index.ts",
+      "target": "file:packages/llm/src/route/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/index.ts",
+      "target": "file:packages/llm/src/route/endpoint.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/index.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/index.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/index.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:waitOpen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:webSocketUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:messageText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:messageText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "class:packages/llm/src/route/transport/websocket.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "class:packages/llm/src/route/transport/websocket.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "file:packages/llm/src/route/transport/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "file:packages/llm/src/route/transport/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/route/transport/websocket.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpRequestDetails",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpRequestDetails",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpResponseDetails",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpResponseDetails",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpRateLimitDetails",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpRateLimitDetails",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:HttpContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:InvalidRequestReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:InvalidRequestReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:NoRouteReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:NoRouteReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:AuthenticationReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:AuthenticationReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:RateLimitReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:RateLimitReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:QuotaExceededReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:QuotaExceededReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ContentPolicyReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ContentPolicyReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ProviderInternalReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ProviderInternalReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:TransportReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:TransportReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:InvalidProviderOutputReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:InvalidProviderOutputReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:UnknownProviderReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:UnknownProviderReason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:LLMError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:LLMError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ToolFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "class:packages/llm/src/schema/errors.ts:ToolFailure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/errors.ts",
+      "target": "file:packages/llm/src/schema/ids.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:appendEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:ensureText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:reduceTextDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:ensureReasoning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:reduceReasoningDelta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:reduceToolInputEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:Usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:Usage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:PreparedRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:PreparedRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:LLMResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "class:packages/llm/src/schema/events.ts:LLMResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "file:packages/llm/src/schema/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "file:packages/llm/src/schema/ids.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "file:packages/llm/src/schema/messages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/src/schema/events.ts",
+      "target": "file:packages/llm/src/schema/options.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/http.ts:jsonRequestParts",
+      "target": "function:packages/llm/src/route/transport/http.ts:bodyWithOverlay",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/http.ts:httpJson",
+      "target": "function:packages/llm/src/route/transport/http.ts:jsonRequestParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:waitOpen",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:webSocketUrl",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:open",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:open",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:waitOpen",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:fromWebSocket",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:webSocketUrl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:transportError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/route/transport/websocket.ts:json",
+      "target": "function:packages/llm/src/route/transport/websocket.ts:messageText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceTextDelta",
+      "target": "function:packages/llm/src/schema/events.ts:ensureText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceReasoningDelta",
+      "target": "function:packages/llm/src/schema/events.ts:ensureReasoning",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:appendEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:ensureText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:reduceTextDelta",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:ensureReasoning",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:reduceReasoningDelta",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/src/schema/events.ts:reduceResponseState",
+      "target": "function:packages/llm/src/schema/events.ts:reduceToolInputEnd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

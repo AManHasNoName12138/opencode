@@ -1,0 +1,771 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/test/lsp/jdtls-root.test.ts",
+      "type": "file",
+      "name": "jdtls-root.test.ts",
+      "filePath": "packages/opencode/test/lsp/jdtls-root.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「JDTLS.root、Maven、single-module Maven project returns pom.xml directory、multi-module Maven project follows <module> chain to top-level pom.xml、Maven project inside a nested directory (ctx.directory is workspace root)、nested independent Maven project stops at its own pom.xml、three-level Maven module chain resolves to top-level」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/lsp/launch.test.ts",
+      "type": "file",
+      "name": "launch.test.ts",
+      "filePath": "packages/opencode/test/lsp/launch.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「lsp.launch、spawns cmd scripts with spaces on Windows」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "type": "file",
+      "name": "lifecycle.test.ts",
+      "filePath": "packages/opencode/test/lsp/lifecycle.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「LSP service lifecycle、init() completes without error、status() returns empty array initially、diagnostics() returns empty object initially、hasClients() returns false for .ts files in instance when LSP is unset、hasClients() returns true for .ts files in instance when lsp is true、hasClients() keeps built-in LSPs when config object is provided」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/auth.test.ts",
+      "type": "file",
+      "name": "auth.test.ts",
+      "filePath": "packages/opencode/test/mcp/auth.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「serializes concurrent auth file updates across service instances」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/auth.test.ts:authFile",
+      "type": "function",
+      "name": "authFile",
+      "filePath": "packages/opencode/test/mcp/auth.test.ts",
+      "lineRange": [
+        8,
+        47
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 authFile；调用 Layer.effect、Effect.gen、FSUtil.Service.of、file.endsWith、Effect.try、JSON.parse、fs.readJson 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "type": "file",
+      "name": "catalog.test.ts",
+      "filePath": "packages/opencode/test/mcp/catalog.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「McpCatalog.convertTool、preserves content when structuredContent is also present、falls back to structuredContent only when content is absent、preserves output schema validation across paginated tool discovery」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/catalog.test.ts:mcpTool",
+      "type": "function",
+      "name": "mcpTool",
+      "filePath": "packages/opencode/test/mcp/catalog.test.ts",
+      "lineRange": [
+        17,
+        27
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 mcpTool。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/headers.test.ts",
+      "type": "file",
+      "name": "headers.test.ts",
+      "filePath": "packages/opencode/test/mcp/headers.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「mcp.headers、headers are passed to transports when oauth is enabled (default)、headers are passed to transports when oauth is explicitly disabled、no requestInit when headers are not provided」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "type": "file",
+      "name": "lifecycle.test.ts",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「advertises and lists the instance directory as its root、local mcp cwd resolves relative paths against instance directory、tools() reuses cached definitions until a protocol notification、instructions() returns non-empty connected server instructions with tool names、follows cursors when listing tools, prompts, resources, and templates、accepts empty cursors and rejects repeated cursors、disconnect remo」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/lifecycle.test.ts:lifecycleServer",
+      "type": "function",
+      "name": "lifecycleServer",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "lineRange": [
+        45,
+        142
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 lifecycleServer，接收 input 参数；调用 Effect.acquireRelease、Effect.promise、makeProtocol、Bun.serve、http.url.toString、current.protocol.sendToolListChanged、current.protocol.close 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/lifecycle.test.ts:hangingLifecycleServer",
+      "type": "function",
+      "name": "hangingLifecycleServer",
+      "filePath": "packages/opencode/test/mcp/lifecycle.test.ts",
+      "lineRange": [
+        144,
+        176
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 hangingLifecycleServer；调用 Effect.acquireRelease、Effect.promise、protocol.setRequestHandler、Promise.resolve、crypto.randomUUID、protocol.connect、Bun.serve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "type": "file",
+      "name": "oauth-auto-connect.test.ts",
+      "filePath": "packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 serveOAuthMcp、remote 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/oauth-auto-connect.test.ts:serveOAuthMcp",
+      "type": "function",
+      "name": "serveOAuthMcp",
+      "filePath": "packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "lineRange": [
+        27,
+        132
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 serveOAuthMcp，接收 options 参数；调用 Effect.acquireRelease、Effect.promise、crypto.randomUUID、protocol.setRequestHandler、Promise.resolve、protocol.connect、Bun.serve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "type": "file",
+      "name": "oauth-browser.test.ts",
+      "filePath": "packages/opencode/test/mcp/oauth-browser.test.ts",
+      "summary": "为 OpenCode 应用与兼容层 测试提供 trackBrowserOpen 等测试辅助接口。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "type": "file",
+      "name": "oauth-callback.test.ts",
+      "filePath": "packages/opencode/test/mcp/oauth-callback.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「parseRedirectUri、returns defaults when no URI provided、parses port and path from URI、returns defaults for invalid URI、McpOAuthCallback.ensureRunning、starts server with custom redirectUri port and path、stops after the callback completes」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/oauth-callback.test.ts:getFreeLoopbackPort",
+      "type": "function",
+      "name": "getFreeLoopbackPort",
+      "filePath": "packages/opencode/test/mcp/oauth-callback.test.ts",
+      "lineRange": [
+        6,
+        21
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 getFreeLoopbackPort；调用 createNetServer、probe.once、probe.listen、probe.address、probe.close、resolve、reject 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/test/mcp/oauth-callback.test.ts:canConnect",
+      "type": "function",
+      "name": "canConnect",
+      "filePath": "packages/opencode/test/mcp/oauth-callback.test.ts",
+      "lineRange": [
+        23,
+        37
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 canConnect，接收 host、port 参数；调用 createConnection、socket.setTimeout、socket.once、done 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/mcp/oauth-provider.test.ts",
+      "type": "file",
+      "name": "oauth-provider.test.ts",
+      "filePath": "packages/opencode/test/mcp/oauth-provider.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「McpOAuthProvider.redirectUrl、defaults to 127.0.0.1:19876/mcp/oauth/callback、uses callbackPort when set、redirectUri takes precedence over callbackPort、uses explicit redirectUri when set without callbackPort、McpOAuthProvider.clientMetadata、includes redirect_uris from redirectUrl」。",
+      "tags": [
+        "test",
+        "应用",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/patch/patch.test.ts",
+      "type": "file",
+      "name": "patch.test.ts",
+      "filePath": "packages/opencode/test/patch/patch.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「Patch namespace、parsePatch、should parse simple add file patch、should parse delete file patch、should parse patch with multiple hunks、should parse file move operation、should throw error for invalid patch format」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/test/lsp/jdtls-root.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/jdtls-root.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/jdtls-root.test.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/jdtls-root.test.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/launch.test.ts",
+      "target": "file:packages/opencode/src/lsp/launch.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/launch.test.ts",
+      "target": "file:packages/opencode/src/lsp/launch.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/launch.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/lsp.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/lsp/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/lsp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/auth.test.ts",
+      "target": "function:packages/opencode/test/mcp/auth.test.ts:authFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/auth.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/auth.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "function:packages/opencode/test/mcp/catalog.test.ts:mcpTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "file:packages/opencode/src/mcp/catalog.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/catalog.test.ts",
+      "target": "file:packages/opencode/src/mcp/catalog.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/headers.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "function:packages/opencode/test/mcp/lifecycle.test.ts:lifecycleServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "function:packages/opencode/test/mcp/lifecycle.test.ts:hangingLifecycleServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/fixture/fixture.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/lifecycle.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "function:packages/opencode/test/mcp/oauth-auto-connect.test.ts:serveOAuthMcp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-auto-connect.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/browser.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/browser.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-browser.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "function:packages/opencode/test/mcp/oauth-callback.test.ts:getFreeLoopbackPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "function:packages/opencode/test/mcp/oauth-callback.test.ts:canConnect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-callback.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-callback.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-provider.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-provider.test.ts",
+      "target": "file:packages/opencode/src/mcp/auth.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-provider.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/mcp/oauth-provider.test.ts",
+      "target": "file:packages/opencode/src/mcp/oauth-provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/patch/patch.test.ts",
+      "target": "file:packages/opencode/src/patch/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/test/patch/patch.test.ts",
+      "target": "file:packages/opencode/src/patch/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/opencode/test/patch/patch.test.ts",
+      "target": "file:packages/opencode/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

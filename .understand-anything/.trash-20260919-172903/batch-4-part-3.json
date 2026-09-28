@@ -1,0 +1,1153 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/components/prompt-input/history.test.ts",
+      "type": "file",
+      "name": "history.test.ts",
+      "filePath": "packages/app/src/components/prompt-input/history.test.ts",
+      "summary": "验证历史相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“prompt-input history”、“prependHistoryEntry skips empty prompt and deduplicates consecutive entries”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/history.ts",
+      "type": "file",
+      "name": "history.ts",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "summary": "规范化、复制和限制提示词历史条目，并根据光标位置控制上下历史导航。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:canNavigateHistoryAtCursor",
+      "type": "function",
+      "name": "canNavigateHistoryAtCursor",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "判断能否Navigate历史At光标，输入包括 direction、text、cursor、inHistory。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "function",
+      "name": "clonePromptParts",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        34,
+        44
+      ],
+      "summary": "复制提示词片段，调用 prompt.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "function",
+      "name": "clonePromptHistoryComments",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        55,
+        60
+      ],
+      "summary": "复制提示词历史评论，调用 comments.map、cloneSelection 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "type": "function",
+      "name": "normalizePromptHistoryEntry",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        62,
+        73
+      ],
+      "summary": "规范化提示词历史Entry，调用 clonePromptParts、clonePromptHistoryComments 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:promptLength",
+      "type": "function",
+      "name": "promptLength",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        75,
+        77
+      ],
+      "summary": "实现 promptLength 的历史操作，调用 prompt.reduce 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "type": "function",
+      "name": "prependHistoryEntry",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        79,
+        100
+      ],
+      "summary": "实现 prependHistoryEntry 的历史操作，调用 prompt.some、comments.some、comment.comment.trim、clonePromptParts 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:isCommentEqual",
+      "type": "function",
+      "name": "isCommentEqual",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        102,
+        113
+      ],
+      "summary": "判断评论相等，输入包括 commentA、commentB。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:isPromptEqual",
+      "type": "function",
+      "name": "isPromptEqual",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        115,
+        148
+      ],
+      "summary": "判断提示词相等，调用 normalizePromptHistoryEntry、isCommentEqual 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "type": "function",
+      "name": "navigatePromptHistory",
+      "filePath": "packages/app/src/components/prompt-input/history.ts",
+      "lineRange": [
+        173,
+        256
+      ],
+      "summary": "实现 navigatePromptHistory 的历史操作，调用 normalizePromptHistoryEntry、clonePromptParts、clonePromptHistoryComments 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/image-attachments.tsx",
+      "type": "file",
+      "name": "image-attachments.tsx",
+      "filePath": "packages/app/src/components/prompt-input/image-attachments.tsx",
+      "summary": "实现应用的图像附件界面及相关交互。 对外提供 PromptImageAttachments。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/image-attachments.tsx:PromptImageAttachments",
+      "type": "function",
+      "name": "PromptImageAttachments",
+      "filePath": "packages/app/src/components/prompt-input/image-attachments.tsx",
+      "lineRange": [
+        40,
+        169
+      ],
+      "summary": "渲染提示词图像附件组件，组织图像附件的界面内容和交互；使用 props.commentActive、props.onOpenComment、props.onRemoveComment、attachment.mime.startsWith 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/paste.ts",
+      "type": "file",
+      "name": "paste.ts",
+      "filePath": "packages/app/src/components/prompt-input/paste.ts",
+      "summary": "为 app 提供粘贴相关数据处理接口。 对外提供 normalizePaste、pasteMode。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/paste.ts:largePaste",
+      "type": "function",
+      "name": "largePaste",
+      "filePath": "packages/app/src/components/prompt-input/paste.ts",
+      "lineRange": [
+        4,
+        13
+      ],
+      "summary": "实现 largePaste 的粘贴操作，输入包括 text。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/paste.ts:normalizePaste",
+      "type": "function",
+      "name": "normalizePaste",
+      "filePath": "packages/app/src/components/prompt-input/paste.ts",
+      "lineRange": [
+        15,
+        18
+      ],
+      "summary": "规范化粘贴，调用 text.includes、text.replace 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/paste.ts:pasteMode",
+      "type": "function",
+      "name": "pasteMode",
+      "filePath": "packages/app/src/components/prompt-input/paste.ts",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "实现 pasteMode 的粘贴操作，调用 largePaste、text.includes 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/placeholder.test.ts",
+      "type": "file",
+      "name": "placeholder.test.ts",
+      "filePath": "packages/app/src/components/prompt-input/placeholder.test.ts",
+      "summary": "验证占位文本相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“promptPlaceholder”、“returns shell placeholder in shell mode”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "type": "file",
+      "name": "placeholder.ts",
+      "filePath": "packages/app/src/components/prompt-input/placeholder.ts",
+      "summary": "为 app 提供占位文本相关数据处理接口。 对外提供 promptPlaceholder、promptDesignPlaceholder。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/placeholder.ts:promptPlaceholder",
+      "type": "function",
+      "name": "promptPlaceholder",
+      "filePath": "packages/app/src/components/prompt-input/placeholder.ts",
+      "lineRange": [
+        9,
+        15
+      ],
+      "summary": "实现 promptPlaceholder 的占位文本操作，调用 input.t 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/placeholder.ts:promptDesignPlaceholder",
+      "type": "function",
+      "name": "promptDesignPlaceholder",
+      "filePath": "packages/app/src/components/prompt-input/placeholder.ts",
+      "lineRange": [
+        17,
+        24
+      ],
+      "summary": "实现 promptDesignPlaceholder 的占位文本操作，调用 t 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/slash-popover.tsx",
+      "type": "file",
+      "name": "slash-popover.tsx",
+      "filePath": "packages/app/src/components/prompt-input/slash-popover.tsx",
+      "summary": "实现应用的slash弹出层界面及相关交互。 对外提供 PromptPopover。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/slash-popover.tsx:PromptPopover",
+      "type": "function",
+      "name": "PromptPopover",
+      "filePath": "packages/app/src/components/prompt-input/slash-popover.tsx",
+      "lineRange": [
+        54,
+        376
+      ],
+      "summary": "渲染提示词弹出层组件，组织slash弹出层的界面内容和交互；使用 props.setSlashPopoverRef、e.preventDefault、props.t、props.atFlat.slice 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/submission-state.ts",
+      "type": "file",
+      "name": "submission-state.ts",
+      "filePath": "packages/app/src/components/prompt-input/submission-state.ts",
+      "summary": "为 app 提供提交状态相关数据处理接口。 对外提供 createPromptSubmissionState。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/submission-state.ts:createPromptSubmissionState",
+      "type": "function",
+      "name": "createPromptSubmissionState",
+      "filePath": "packages/app/src/components/prompt-input/submission-state.ts",
+      "lineRange": [
+        5,
+        33
+      ],
+      "summary": "创建提示词提交状态，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "type": "file",
+      "name": "submit.test.ts",
+      "filePath": "packages/app/src/components/prompt-input/submit.test.ts",
+      "summary": "验证提交相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“prompt submit worktree selection”、“reads the latest worktree accessor value per submit”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/submit.test.ts:clientFor",
+      "type": "function",
+      "name": "clientFor",
+      "filePath": "packages/app/src/components/prompt-input/submit.test.ts",
+      "lineRange": [
+        73,
+        116
+      ],
+      "summary": "实现 clientFor 的提交操作，调用 createdClients.push、createdSessions.push、sessionCreateInputs.push、sentPrompts.push 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/submit.ts",
+      "type": "file",
+      "name": "submit.ts",
+      "filePath": "packages/app/src/components/prompt-input/submit.ts",
+      "summary": "发送提示词及后续草稿，衔接输入提交状态、会话创建和服务器请求。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "type": "function",
+      "name": "sendFollowupDraft",
+      "filePath": "packages/app/src/components/prompt-input/submit.ts",
+      "lineRange": [
+        58,
+        208
+      ],
+      "summary": "发送后续输入草稿，调用 draftText、draftImages、text.split、head?.startsWith 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/submit.ts:createPromptSubmit",
+      "type": "function",
+      "name": "createPromptSubmit",
+      "filePath": "packages/app/src/components/prompt-input/submit.ts",
+      "lineRange": [
+        234,
+        645
+      ],
+      "summary": "创建提示词发送控制器，协调草稿、附件、会话选择与提交状态。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/components/prompt-input/transient-state.ts",
+      "type": "file",
+      "name": "transient-state.ts",
+      "filePath": "packages/app/src/components/prompt-input/transient-state.ts",
+      "summary": "为 app 提供transient状态相关数据处理接口。 对外提供 createPromptInputTransientState。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/transient-state.ts:resetPromptInputTransientState",
+      "type": "function",
+      "name": "resetPromptInputTransientState",
+      "filePath": "packages/app/src/components/prompt-input/transient-state.ts",
+      "lineRange": [
+        17,
+        28
+      ],
+      "summary": "重置提示词输入Transient状态，调用 setStore 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/prompt-input/transient-state.ts:createPromptInputTransientState",
+      "type": "function",
+      "name": "createPromptInputTransientState",
+      "filePath": "packages/app/src/components/prompt-input/transient-state.ts",
+      "lineRange": [
+        30,
+        46
+      ],
+      "summary": "创建提示词输入Transient状态，调用 createStore、createComputed、on、resetPromptInputTransientState 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "file:packages/app/src/components/prompt-input/attachments.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.test.ts",
+      "target": "file:packages/app/src/components/prompt-input/history.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "file:packages/app/src/components/prompt-input/history.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.test.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/components/prompt-input/history.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:canNavigateHistoryAtCursor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:canNavigateHistoryAtCursor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:promptLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:promptLength",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:isCommentEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:isPromptEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/history.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:prependHistoryEntry",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:isPromptEqual",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:isPromptEqual",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:isPromptEqual",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:isCommentEqual",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:normalizePromptHistoryEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/history.ts:navigatePromptHistory",
+      "target": "function:packages/app/src/components/prompt-input/history.ts:clonePromptHistoryComments",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/image-attachments.tsx",
+      "target": "function:packages/app/src/components/prompt-input/image-attachments.tsx:PromptImageAttachments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/image-attachments.tsx",
+      "target": "function:packages/app/src/components/prompt-input/image-attachments.tsx:PromptImageAttachments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/image-attachments.tsx",
+      "target": "file:packages/app/src/components/prompt-input/image-attachments.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/image-attachments.tsx",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:largePaste",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:normalizePaste",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:normalizePaste",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:pasteMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/paste.ts",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:pasteMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/paste.ts:pasteMode",
+      "target": "function:packages/app/src/components/prompt-input/paste.ts:largePaste",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.test.ts",
+      "target": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "target": "file:packages/app/src/components/prompt-input/placeholder.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "target": "function:packages/app/src/components/prompt-input/placeholder.ts:promptPlaceholder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "target": "function:packages/app/src/components/prompt-input/placeholder.ts:promptPlaceholder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "target": "function:packages/app/src/components/prompt-input/placeholder.ts:promptDesignPlaceholder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/placeholder.ts",
+      "target": "function:packages/app/src/components/prompt-input/placeholder.ts:promptDesignPlaceholder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/slash-popover.tsx",
+      "target": "function:packages/app/src/components/prompt-input/slash-popover.tsx:PromptPopover",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/slash-popover.tsx",
+      "target": "function:packages/app/src/components/prompt-input/slash-popover.tsx:PromptPopover",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submission-state.ts",
+      "target": "function:packages/app/src/components/prompt-input/submission-state.ts:createPromptSubmissionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submission-state.ts",
+      "target": "function:packages/app/src/components/prompt-input/submission-state.ts:createPromptSubmissionState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submission-state.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "target": "function:packages/app/src/components/prompt-input/submit.test.ts:clientFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/local.tsx",
+      "target": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/context/prompt.tsx",
+      "target": "file:packages/app/src/components/prompt-input/submit.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "function:packages/app/src/components/prompt-input/submit.ts:createPromptSubmit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "function:packages/app/src/components/prompt-input/submit.ts:createPromptSubmit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/components/prompt-input/build-request-parts.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/components/prompt-input/editor-dom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/components/prompt-input/submission-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/draft-store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/id.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/server-errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/server-scope.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/submit.ts",
+      "target": "file:packages/app/src/utils/worktree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "target": "function:packages/app/src/utils/draft-store.ts:blobDataUrl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/submit.ts:sendFollowupDraft",
+      "target": "function:packages/app/src/components/prompt-input/build-request-parts.ts:buildRequestParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/submit.ts:createPromptSubmit",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/transient-state.ts",
+      "target": "function:packages/app/src/components/prompt-input/transient-state.ts:resetPromptInputTransientState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/transient-state.ts",
+      "target": "function:packages/app/src/components/prompt-input/transient-state.ts:createPromptInputTransientState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/transient-state.ts",
+      "target": "function:packages/app/src/components/prompt-input/transient-state.ts:createPromptInputTransientState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/prompt-input/transient-state.ts",
+      "target": "file:packages/app/src/components/prompt-input/history.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/components/prompt-input/transient-state.ts:createPromptInputTransientState",
+      "target": "function:packages/app/src/components/prompt-input/transient-state.ts:resetPromptInputTransientState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

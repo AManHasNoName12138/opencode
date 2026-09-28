@@ -1,0 +1,1889 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/acp/permission.ts",
+      "type": "file",
+      "name": "permission.ts",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "summary": "在Agent Client Protocol 适配层中提供 Handler；内部处理包含 permissionToolCall、permissionTitle、editTitle、permissionLocations、permissionContent、diffContentForFiles、diffContentForPatch。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "type": "function",
+      "name": "permissionToolCall",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        118,
+        137
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 permissionToolCall，接收 input 参数；调用 pendingToolCall、permissionTitle、permissionContent、permissionLocations 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:permissionTitle",
+      "type": "function",
+      "name": "permissionTitle",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        139,
+        163
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 permissionTitle，接收 toolName、input 参数；调用 toolName.toLocaleLowerCase、stringValue、editTitle 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:permissionLocations",
+      "type": "function",
+      "name": "permissionLocations",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        172,
+        181
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 permissionLocations，接收 toolName、input 参数；调用 fileMetadata、Array.from、files.flatMap、toLocations 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "type": "function",
+      "name": "permissionContent",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        183,
+        194
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 permissionContent，接收 toolName、input 参数；调用 toolName.toLocaleLowerCase、fileMetadata、diffContentForFiles、stringValue、diffContentForPatch 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:diffContentForFiles",
+      "type": "function",
+      "name": "diffContentForFiles",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        196,
+        205
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 diffContentForFiles，接收 files 参数；调用 Promise.all、files.map、diffContentForPatch、content.flat 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "type": "function",
+      "name": "diffContentForPatch",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        207,
+        217
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 diffContentForPatch，接收 filepath、diff、displayPath 参数；调用 exists、readText、applyPatch 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/permission.ts:fileMetadata",
+      "type": "function",
+      "name": "fileMetadata",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        236,
+        252
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 fileMetadata，接收 input 参数；调用 Array.isArray、input.files.flatMap、stringValue 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/permission.ts:Handler",
+      "type": "class",
+      "name": "Handler",
+      "filePath": "packages/opencode/src/acp/permission.ts",
+      "lineRange": [
+        26,
+        116
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Handler 类，提供 constructor、handle、process、reply、writeProposedEdit 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/profile.ts",
+      "type": "file",
+      "name": "profile.ts",
+      "filePath": "packages/opencode/src/acp/profile.ts",
+      "summary": "在Agent Client Protocol 适配层中提供 mark、duration、measure；内部处理包含 mark、duration、measure、write。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/profile.ts:mark",
+      "type": "function",
+      "name": "mark",
+      "filePath": "packages/opencode/src/acp/profile.ts",
+      "lineRange": [
+        4,
+        7
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 mark，接收 name、fields 参数；调用 write、performance.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/profile.ts:duration",
+      "type": "function",
+      "name": "duration",
+      "filePath": "packages/opencode/src/acp/profile.ts",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 duration，接收 name、startedAt、fields 参数；调用 write、performance.now 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/profile.ts:measure",
+      "type": "function",
+      "name": "measure",
+      "filePath": "packages/opencode/src/acp/profile.ts",
+      "lineRange": [
+        18,
+        30
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 measure，接收 name、fn、fields 参数；调用 fn、performance.now、write 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/service.ts",
+      "type": "file",
+      "name": "service.ts",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "summary": "把 Agent Client Protocol 初始化、认证、会话加载/恢复/分叉、模型与模式配置以及 prompt/cancel 操作适配到 OpenCode SDK。维护会话快照、MCP 注册与事件订阅，等待会话执行进入空闲边界。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        75,
+        578
+      ],
+      "summary": "连接 SDK、ACP 连接和会话/目录/用量服务，创建认证、会话生命周期、配置、prompt 与取消请求的 Effect 操作集合。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:makeDirectoryService",
+      "type": "function",
+      "name": "makeDirectoryService",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        586,
+        600
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 makeDirectoryService，接收 sdk 参数；调用 ManagedRuntime.make、AppNodeBuilder.build、Layer.succeed、Directory.Loader.of、request、loadDirectorySnapshot、Directory.Service.use 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:makeUsageService",
+      "type": "function",
+      "name": "makeUsageService",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        602,
+        675
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 makeUsageService，接收 sdk 参数；调用 Effect.fn、limits.get、Effect.promise、Object.fromEntries、UsageService.findContextLimit、limits.set、request 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        710,
+        722
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 request，接收 fn、service 参数；调用 Effect.tryPromise、fn、isSdkResponse、fromUnknownError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:loadDirectorySnapshot",
+      "type": "function",
+      "name": "loadDirectorySnapshot",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        728,
+        783
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 loadDirectorySnapshot，接收 sdk、directory 参数；调用 ACPProfile.measure、Promise.all、sdk.config.providers、sdk.app.agents、sdk.command.list、sdk.app.skills、sdk.config.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:defaultModelFromConfig",
+      "type": "function",
+      "name": "defaultModelFromConfig",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        785,
+        802
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 defaultModelFromConfig，接收 configuredModel、providers 参数；调用 Provider.parseModel、ProviderV2.ID.make、Provider.sort、Object.values 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:detectSlashCommand",
+      "type": "function",
+      "name": "detectSlashCommand",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        811,
+        822
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 detectSlashCommand，接收 parts 参数；调用 text.startsWith、text.slice、rest.join 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:sendUsageUpdate",
+      "type": "function",
+      "name": "sendUsageUpdate",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        880,
+        893
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 sendUsageUpdate，接收 usage、sdk、connection、sessionID、directory 参数；调用 makeUsageService 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:parseSelectedModel",
+      "type": "function",
+      "name": "parseSelectedModel",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        912,
+        934
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 parseSelectedModel，接收 snapshot、modelId 参数；调用 parseModelSelection、Object.values、ProviderV2.ID.make、ModelV2.ID.make、Effect.fail、Effect.succeed 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:sendAvailableCommands",
+      "type": "function",
+      "name": "sendAvailableCommands",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        936,
+        956
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 sendAvailableCommands，接收 connection、sessionId、snapshot 参数；调用 Effect.sync、setTimeout、connection.sessionUpdate、snapshot.availableCommands.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:registerMcpServers",
+      "type": "function",
+      "name": "registerMcpServers",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        958,
+        1007
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 registerMcpServers，接收 sdk、registered、directory、sessionId、servers 参数；调用 performance.now、registered.get、registered.set、Effect.all、mcpConfig、mcpRegistrationKey、current.has 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:mcpConfig",
+      "type": "function",
+      "name": "mcpConfig",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        1013,
+        1026
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 mcpConfig，接收 server 参数；调用 Object.fromEntries、server.headers.map、server.env.map 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:restoreFromMessages",
+      "type": "function",
+      "name": "restoreFromMessages",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        1037,
+        1059
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 restoreFromMessages，接收 messages 参数；调用 messages.findLast 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/service.ts:isAuthRequired",
+      "type": "function",
+      "name": "isAuthRequired",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        1083,
+        1097
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 isAuthRequired，接收 value 参数；调用 value.message.includes、isAuthRequired 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/service.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/acp/service.ts",
+      "lineRange": [
+        73,
+        73
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/opencode/src/acp/session.ts",
+      "summary": "在Agent Client Protocol 适配层中提供 Service、node；内部处理包含 makeSession、snapshot、partMetadataKey。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/session.ts:makeSession",
+      "type": "function",
+      "name": "makeSession",
+      "filePath": "packages/opencode/src/acp/session.ts",
+      "lineRange": [
+        206,
+        217
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 makeSession，接收 input 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/src/acp/session.ts:Service",
+      "type": "class",
+      "name": "Service",
+      "filePath": "packages/opencode/src/acp/session.ts",
+      "lineRange": [
+        93,
+        93
+      ],
+      "summary": "在Agent Client Protocol 适配层中定义 Service 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/acp/tool.ts",
+      "type": "file",
+      "name": "tool.ts",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "summary": "将 OpenCode 工具调用状态转换为 ACP 的 pending/running/completed/error 更新，补充文件位置、图片附件、原始输出与 shell 输出快照。",
+      "tags": [
+        "typescript",
+        "acp",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "function",
+      "name": "toToolKind",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        38,
+        71
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 toToolKind，接收 toolName 参数；调用 toolName.toLocaleLowerCase 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "function",
+      "name": "toLocations",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        73,
+        101
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 toLocations，接收 toolName、input、cwd 参数；调用 toolName.toLocaleLowerCase、shellWorkdir、locationFrom 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "type": "function",
+      "name": "completedToolContent",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        103,
+        122
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 completedToolContent，接收 toolName、state 参数；调用 toolName.toLocaleLowerCase、readDisplayText、toToolKind、content.push、diffContent、imageContents 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "type": "function",
+      "name": "pendingToolCall",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        124,
+        138
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 pendingToolCall，接收 input 参数；调用 toolTitle、toToolKind、toLocations、rawInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:runningToolUpdate",
+      "type": "function",
+      "name": "runningToolUpdate",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        140,
+        168
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 runningToolUpdate，接收 input 参数；调用 toToolKind、toolTitle、toLocations、rawInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:duplicateRunningToolUpdate",
+      "type": "function",
+      "name": "duplicateRunningToolUpdate",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        170,
+        184
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 duplicateRunningToolUpdate，接收 input 参数；调用 toToolKind、toolTitle、toLocations、rawInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:completedToolUpdate",
+      "type": "function",
+      "name": "completedToolUpdate",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        186,
+        199
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 completedToolUpdate，接收 input 参数；调用 completedToolContent、completedToolRawOutput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:errorToolUpdate",
+      "type": "function",
+      "name": "errorToolUpdate",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        201,
+        228
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 errorToolUpdate，接收 input 参数；调用 toToolKind、toolTitle、toLocations、rawInput 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:completedToolRawOutput",
+      "type": "function",
+      "name": "completedToolRawOutput",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        230,
+        236
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 completedToolRawOutput，接收 state 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:imageContents",
+      "type": "function",
+      "name": "imageContents",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        238,
+        249
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 imageContents，接收 attachments 参数；调用 extractImageAttachments 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:extractImageAttachments",
+      "type": "function",
+      "name": "extractImageAttachments",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        251,
+        256
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 extractImageAttachments，接收 attachments 参数；调用 attachments.flatMap、dataUrlImage 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:shellOutputSnapshot",
+      "type": "function",
+      "name": "shellOutputSnapshot",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        258,
+        261
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 shellOutputSnapshot，接收 state 参数；调用 stringValue 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:locationFrom",
+      "type": "function",
+      "name": "locationFrom",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        310,
+        323
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 locationFrom，接收 ...values 参数；调用 Array.from、values.flatMap、Array.isArray、value.filter、stringValue 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:diffContent",
+      "type": "function",
+      "name": "diffContent",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        325,
+        338
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 diffContent，接收 input 参数；调用 stringValue 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/acp/tool.ts:readDisplayText",
+      "type": "function",
+      "name": "readDisplayText",
+      "filePath": "packages/opencode/src/acp/tool.ts",
+      "lineRange": [
+        340,
+        350
+      ],
+      "summary": "在Agent Client Protocol 适配层中执行 readDisplayText，接收 metadata 参数；调用 stringValue、Array.isArray、info.entries.filter 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "acp"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/account.ts",
+      "type": "file",
+      "name": "account.ts",
+      "filePath": "packages/opencode/src/cli/cmd/account.ts",
+      "summary": "在命令行入口与命令执行层中提供 defaultConsoleUrl、formatAccountLabel、formatOrgLine、LoginCommand、LogoutCommand、SwitchCommand、OrgsCommand；内部处理包含 openBrowser、println、dim、activeSuffix、formatAccountLabel、formatOrgChoiceLabel、formatOrgLine。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/account.ts:formatAccountLabel",
+      "type": "function",
+      "name": "formatAccountLabel",
+      "filePath": "packages/opencode/src/cli/cmd/account.ts",
+      "lineRange": [
+        20,
+        21
+      ],
+      "summary": "在命令行入口与命令执行层中执行 formatAccountLabel，接收 account、isActive 参数；调用 dim、activeSuffix 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/cmd/account.ts:formatOrgLine",
+      "type": "function",
+      "name": "formatOrgLine",
+      "filePath": "packages/opencode/src/cli/cmd/account.ts",
+      "lineRange": [
+        26,
+        34
+      ],
+      "summary": "在命令行入口与命令执行层中执行 formatOrgLine，接收 account、org、isActive 参数；调用 dim 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/acp.ts",
+      "type": "file",
+      "name": "acp.ts",
+      "filePath": "packages/opencode/src/cli/cmd/acp.ts",
+      "summary": "在命令行入口与命令执行层中提供 AcpCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/opencode/src/cli/cmd/agent.ts",
+      "summary": "在命令行入口与命令执行层中提供 AgentCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/attach.ts",
+      "type": "file",
+      "name": "attach.ts",
+      "filePath": "packages/opencode/src/cli/cmd/attach.ts",
+      "summary": "在命令行入口与命令执行层中提供 AttachCommand 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionLocations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:diffContentForFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "function:packages/opencode/src/acp/permission.ts:fileMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "class:packages/opencode/src/acp/permission.ts:Handler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "class:packages/opencode/src/acp/permission.ts:Handler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "file:packages/opencode/src/acp/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "file:packages/opencode/src/acp/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/permission.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:mark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:mark",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:duration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:duration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:measure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/profile.ts",
+      "target": "function:packages/opencode/src/acp/profile.ts:measure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:makeDirectoryService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:makeUsageService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:loadDirectorySnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:defaultModelFromConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:detectSlashCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:sendUsageUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:parseSelectedModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:sendAvailableCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:registerMcpServers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:mcpConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:restoreFromMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "function:packages/opencode/src/acp/service.ts:isAuthRequired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "class:packages/opencode/src/acp/service.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "class:packages/opencode/src/acp/service.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/config-option.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/content.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/directory.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/profile.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/acp/usage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/command/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/service.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/session.ts",
+      "target": "function:packages/opencode/src/acp/session.ts:makeSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/session.ts",
+      "target": "class:packages/opencode/src/acp/session.ts:Service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/session.ts",
+      "target": "class:packages/opencode/src/acp/session.ts:Service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/session.ts",
+      "target": "file:packages/opencode/src/acp/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:runningToolUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:runningToolUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:duplicateRunningToolUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:duplicateRunningToolUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:errorToolUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:errorToolUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolRawOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolRawOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:imageContents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:imageContents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:extractImageAttachments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:extractImageAttachments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:shellOutputSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:shellOutputSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:locationFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:diffContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/acp/tool.ts",
+      "target": "function:packages/opencode/src/acp/tool.ts:readDisplayText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "function:packages/opencode/src/cli/cmd/account.ts:formatAccountLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "function:packages/opencode/src/cli/cmd/account.ts:formatAccountLabel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "function:packages/opencode/src/cli/cmd/account.ts:formatOrgLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "function:packages/opencode/src/cli/cmd/account.ts:formatOrgLine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/account/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/cli/effect/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/account.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/acp.ts",
+      "target": "file:packages/opencode/src/acp/profile.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/acp.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/acp.ts",
+      "target": "file:packages/opencode/src/cli/network.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/acp.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/agent.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/agent.ts",
+      "target": "file:packages/opencode/src/cli/effect-cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/agent.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/agent.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/attach.ts",
+      "target": "file:packages/opencode/src/cli/cmd/cmd.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/attach.ts",
+      "target": "file:packages/opencode/src/cli/tui/validate-session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/attach.ts",
+      "target": "file:packages/opencode/src/cli/ui.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/opencode/src/cli/cmd/attach.ts",
+      "target": "file:packages/opencode/src/server/auth.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "target": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionTitle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionToolCall",
+      "target": "function:packages/opencode/src/acp/permission.ts:permissionLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionLocations",
+      "target": "function:packages/opencode/src/acp/permission.ts:fileMetadata",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionLocations",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "target": "function:packages/opencode/src/acp/permission.ts:fileMetadata",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "target": "function:packages/opencode/src/acp/permission.ts:diffContentForFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:permissionContent",
+      "target": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:diffContentForFiles",
+      "target": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "target": "function:packages/opencode/src/util/filesystem.ts:exists",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/permission.ts:diffContentForPatch",
+      "target": "function:packages/opencode/src/util/filesystem.ts:readText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:makeDirectoryService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:registerMcpServers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:sendAvailableCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:restoreFromMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:parseSelectedModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/content.ts:promptContentToParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:detectSlashCommand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:make",
+      "target": "function:packages/opencode/src/acp/service.ts:sendUsageUpdate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:makeDirectoryService",
+      "target": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:makeDirectoryService",
+      "target": "function:packages/opencode/src/acp/service.ts:loadDirectorySnapshot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:makeUsageService",
+      "target": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:loadDirectorySnapshot",
+      "target": "function:packages/opencode/src/acp/service.ts:defaultModelFromConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:sendUsageUpdate",
+      "target": "function:packages/opencode/src/acp/service.ts:makeUsageService",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:parseSelectedModel",
+      "target": "function:packages/opencode/src/acp/config-option.ts:parseModelSelection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:registerMcpServers",
+      "target": "function:packages/opencode/src/acp/service.ts:mcpConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/service.ts:registerMcpServers",
+      "target": "function:packages/opencode/src/acp/service.ts:request",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "target": "function:packages/opencode/src/acp/tool.ts:locationFrom",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "target": "function:packages/opencode/src/acp/tool.ts:readDisplayText",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "target": "function:packages/opencode/src/acp/tool.ts:diffContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "target": "function:packages/opencode/src/acp/tool.ts:imageContents",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:pendingToolCall",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:runningToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:runningToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:duplicateRunningToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:duplicateRunningToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:completedToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:completedToolRawOutput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:errorToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toToolKind",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:errorToolUpdate",
+      "target": "function:packages/opencode/src/acp/tool.ts:toLocations",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/opencode/src/acp/tool.ts:imageContents",
+      "target": "function:packages/opencode/src/acp/tool.ts:extractImageAttachments",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

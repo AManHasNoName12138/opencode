@@ -1,0 +1,1599 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "type": "file",
+      "name": "review-diff-kinds.ts",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "summary": "为 app 提供审阅差异种类相关数据处理接口。 对外提供 normalizePath、filterRenderableDiff、reviewDiffNeedsLoad、reviewRootDirectory、reviewDiffDirectory、reviewDiffKinds。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "function",
+      "name": "normalizePath",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "规范化路径，调用 normalizeFileTreeV2Path 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterRenderableDiff",
+      "type": "function",
+      "name": "filterRenderableDiff",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "筛选Renderable差异，输入包括 value。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffNeedsLoad",
+      "type": "function",
+      "name": "reviewDiffNeedsLoad",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "实现 reviewDiffNeedsLoad 的审阅差异种类操作，输入包括 diff。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewRootDirectory",
+      "type": "function",
+      "name": "reviewRootDirectory",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        21,
+        23
+      ],
+      "summary": "实现 reviewRootDirectory 的审阅差异种类操作，调用 root.replace 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffDirectory",
+      "type": "function",
+      "name": "reviewDiffDirectory",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "实现 reviewDiffDirectory 的审阅差异种类操作，调用 normalizePath、path.lastIndexOf、root.includes、reviewRootDirectory 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffKinds",
+      "type": "function",
+      "name": "reviewDiffKinds",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        34,
+        56
+      ],
+      "summary": "实现 reviewDiffKinds 的审阅差异种类操作，调用 normalizePath、out.set、file.split、parts.slice 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterReviewFiles",
+      "type": "function",
+      "name": "filterReviewFiles",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "lineRange": [
+        58,
+        62
+      ],
+      "summary": "筛选审阅文件，调用 query.trim、files.filter、file.toLowerCase 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "type": "file",
+      "name": "review-panel-v2-state.ts",
+      "filePath": "packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "summary": "为 app 提供审阅面板新版状态相关数据处理接口。 对外提供 createReviewPanelV2State。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-panel-v2-state.ts:createReviewPanelV2State",
+      "type": "function",
+      "name": "createReviewPanelV2State",
+      "filePath": "packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "lineRange": [
+        11,
+        39
+      ],
+      "summary": "创建审阅面板新版状态，调用 persisted、Persist.global、createStore、createSignal 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "type": "file",
+      "name": "review-panel-v2.tsx",
+      "filePath": "packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "summary": "实现应用的审阅面板新版界面及相关交互。 对外提供 ReviewPanelV2。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "type": "function",
+      "name": "ReviewPanelV2",
+      "filePath": "packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "lineRange": [
+        57,
+        169
+      ],
+      "summary": "渲染审阅面板新版组件，组织审阅面板新版的界面内容和交互；使用 useSDK、createMemo、props.diffs、filterReviewFiles 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2Sidebar",
+      "type": "function",
+      "name": "ReviewPanelV2Sidebar",
+      "filePath": "packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "lineRange": [
+        171,
+        255
+      ],
+      "summary": "渲染审阅面板新版侧栏组件，组织审阅面板新版的界面内容和交互；使用 useLanguage、createSignal、createMemo、props.searching 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "type": "file",
+      "name": "session-file-browser-tab.tsx",
+      "filePath": "packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "summary": "实现应用的会话文件浏览器标签页界面及相关交互。 对外提供 SessionFileBrowserTab。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "type": "function",
+      "name": "SessionFileBrowserTab",
+      "filePath": "packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "lineRange": [
+        27,
+        182
+      ],
+      "summary": "渲染会话文件浏览器标签页组件，组织会话文件浏览器标签页的界面内容和交互；使用 useFile、useLanguage、useLayout、useSDK 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "type": "file",
+      "name": "session-file-list-v2.tsx",
+      "filePath": "packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "summary": "实现应用的会话文件列表新版界面及相关交互。 对外提供 applyFileListKeyDown、SessionFileListV2。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:applyFileListKeyDown",
+      "type": "function",
+      "name": "applyFileListKeyDown",
+      "filePath": "packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "lineRange": [
+        12,
+        35
+      ],
+      "summary": "应用文件列表键Down，调用 files.indexOf、options.onHighlight、event.preventDefault、options.onSelect 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "type": "function",
+      "name": "SessionFileListV2",
+      "filePath": "packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "lineRange": [
+        41,
+        166
+      ],
+      "summary": "渲染会话文件列表新版组件，组织会话文件列表新版的界面内容和交互；使用 createMemo、props.files.map、createSignal、createVirtualizer 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/updater.ts",
+      "type": "file",
+      "name": "updater.ts",
+      "filePath": "packages/app/src/updater.ts",
+      "summary": "定义 app 的更新器模块。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/app/src/utils/agent.ts",
+      "summary": "为 app 提供代理相关数据处理接口。 对外提供 agentColor、messageAgentColor。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/agent.ts:agentColor",
+      "type": "function",
+      "name": "agentColor",
+      "filePath": "packages/app/src/utils/agent.ts",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "实现 agentColor 的代理操作，调用 name.toLowerCase、tone 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/agent.ts:messageAgentColor",
+      "type": "function",
+      "name": "messageAgentColor",
+      "filePath": "packages/app/src/utils/agent.ts",
+      "lineRange": [
+        34,
+        44
+      ],
+      "summary": "实现 messageAgentColor 的代理操作，调用 agentColor、agents.find 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/aim.ts",
+      "type": "file",
+      "name": "aim.ts",
+      "filePath": "packages/app/src/utils/aim.ts",
+      "summary": "为 app 提供aim相关数据处理接口。 对外提供 createAim。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/aim.ts:createAim",
+      "type": "function",
+      "name": "createAim",
+      "filePath": "packages/app/src/utils/aim.ts",
+      "lineRange": [
+        3,
+        138
+      ],
+      "summary": "创建Aim，输入包括 props。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/base64.ts",
+      "type": "file",
+      "name": "base64.ts",
+      "filePath": "packages/app/src/utils/base64.ts",
+      "summary": "为 app 提供base64相关数据处理接口。 对外提供 decode64。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "function",
+      "name": "decode64",
+      "filePath": "packages/app/src/utils/base64.ts",
+      "lineRange": [
+        3,
+        10
+      ],
+      "summary": "实现 decode64 的base64操作，调用 base64Decode 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/comment-note.ts",
+      "type": "file",
+      "name": "comment-note.ts",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "summary": "为 app 提供评论note相关数据处理接口。 对外提供 createCommentMetadata、readCommentMetadata、formatCommentNote、parseCommentNote。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/comment-note.ts:selection",
+      "type": "function",
+      "name": "selection",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "lineRange": [
+        11,
+        24
+      ],
+      "summary": "实现 selection 的评论note操作，调用 Number 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/comment-note.ts:createCommentMetadata",
+      "type": "function",
+      "name": "createCommentMetadata",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "lineRange": [
+        26,
+        36
+      ],
+      "summary": "创建评论Metadata，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/comment-note.ts:readCommentMetadata",
+      "type": "function",
+      "name": "readCommentMetadata",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "lineRange": [
+        38,
+        54
+      ],
+      "summary": "读取评论Metadata，调用 selection 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/comment-note.ts:formatCommentNote",
+      "type": "function",
+      "name": "formatCommentNote",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "lineRange": [
+        56,
+        66
+      ],
+      "summary": "格式化评论Note，输入包括 input。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/comment-note.ts:parseCommentNote",
+      "type": "function",
+      "name": "parseCommentNote",
+      "filePath": "packages/app/src/utils/comment-note.ts",
+      "lineRange": [
+        68,
+        88
+      ],
+      "summary": "解析评论Note，调用 text.match、Number 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/diffs.test.ts",
+      "type": "file",
+      "name": "diffs.test.ts",
+      "filePath": "packages/app/src/utils/diffs.test.ts",
+      "summary": "验证diffs相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“diffs”、“keeps valid arrays”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/utils/diffs.ts",
+      "type": "file",
+      "name": "diffs.ts",
+      "filePath": "packages/app/src/utils/diffs.ts",
+      "summary": "为 app 提供diffs相关数据处理接口。 对外提供 diffs、message。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/diffs.ts:diffs",
+      "type": "function",
+      "name": "diffs",
+      "filePath": "packages/app/src/utils/diffs.ts",
+      "lineRange": [
+        21,
+        27
+      ],
+      "summary": "实现 diffs 的diffs操作，调用 value.every、value.filter、diff、object 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/diffs.ts:message",
+      "type": "function",
+      "name": "message",
+      "filePath": "packages/app/src/utils/diffs.ts",
+      "lineRange": [
+        29,
+        50
+      ],
+      "summary": "实现 message 的diffs操作，调用 object、diffs 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/draft-store.ts",
+      "type": "file",
+      "name": "draft-store.ts",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "summary": "定义草稿与 Blob 引用存储，在浏览器中保存提示词附件并迁移旧附件引用。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/draft-store.ts:createBlobReference",
+      "type": "function",
+      "name": "createBlobReference",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "创建BlobReference，调用 blobID、blobUrl 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/draft-store.ts:createDraftStore",
+      "type": "function",
+      "name": "createDraftStore",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "lineRange": [
+        36,
+        95
+      ],
+      "summary": "创建草稿存储，调用 driver.get、decode、versions.get、versions.set 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/draft-store.ts:createBrowserDraftStore",
+      "type": "function",
+      "name": "createBrowserDraftStore",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "lineRange": [
+        97,
+        154
+      ],
+      "summary": "创建浏览器草稿存储，调用 indexedDB.open、request.addEventListener、request.result.createObjectStore、database.transaction 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/draft-store.ts:blobDataUrl",
+      "type": "function",
+      "name": "blobDataUrl",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "lineRange": [
+        156,
+        167
+      ],
+      "summary": "实现 blobDataUrl 的草稿存储操作，调用 fetch、response.blob、reader.addEventListener、reject 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/draft-store.ts:createLegacyBlobReference",
+      "type": "function",
+      "name": "createLegacyBlobReference",
+      "filePath": "packages/app/src/utils/draft-store.ts",
+      "lineRange": [
+        169,
+        171
+      ],
+      "summary": "创建旧版BlobReference，输入包括 dataUrl。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/file-manager.ts",
+      "type": "file",
+      "name": "file-manager.ts",
+      "filePath": "packages/app/src/utils/file-manager.ts",
+      "summary": "为 app 提供文件manager相关数据处理接口。 对外提供 fileManagerApp。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/file-manager.ts:fileManagerApp",
+      "type": "function",
+      "name": "fileManagerApp",
+      "filePath": "packages/app/src/utils/file-manager.ts",
+      "lineRange": [
+        3,
+        24
+      ],
+      "summary": "实现 fileManagerApp 的文件manager操作，输入包括 os。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/id.ts",
+      "type": "file",
+      "name": "id.ts",
+      "filePath": "packages/app/src/utils/id.ts",
+      "summary": "定义 app 的标识模块，组织 generateID、create、bytesToHex、randomBase62 等函数。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/utils/id.ts:generateID",
+      "type": "function",
+      "name": "generateID",
+      "filePath": "packages/app/src/utils/id.ts",
+      "lineRange": [
+        25,
+        35
+      ],
+      "summary": "生成标识，调用 create、given.startsWith 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/id.ts:create",
+      "type": "function",
+      "name": "create",
+      "filePath": "packages/app/src/utils/id.ts",
+      "lineRange": [
+        37,
+        59
+      ],
+      "summary": "创建标识，调用 Date.now、BigInt、Number、bytesToHex 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/id.ts:getRandomBytes",
+      "type": "function",
+      "name": "getRandomBytes",
+      "filePath": "packages/app/src/utils/id.ts",
+      "lineRange": [
+        79,
+        93
+      ],
+      "summary": "读取Random字节，调用 cryptoObj.getRandomValues 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/menu-dismiss-controller.ts",
+      "type": "file",
+      "name": "menu-dismiss-controller.ts",
+      "filePath": "packages/app/src/utils/menu-dismiss-controller.ts",
+      "summary": "为 app 提供菜单dismiss控制器相关数据处理接口。 对外提供 createMenuDismissController。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/menu-dismiss-controller.ts:createMenuDismissController",
+      "type": "function",
+      "name": "createMenuDismissController",
+      "filePath": "packages/app/src/utils/menu-dismiss-controller.ts",
+      "lineRange": [
+        2,
+        30
+      ],
+      "summary": "创建菜单Dismiss控制器，输入包括 content。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/utils/path-key.ts",
+      "type": "file",
+      "name": "path-key.ts",
+      "filePath": "packages/app/src/utils/path-key.ts",
+      "summary": "为 app 提供路径键相关数据处理接口。 对外提供 pathKey。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "function",
+      "name": "pathKey",
+      "filePath": "packages/app/src/utils/path-key.ts",
+      "lineRange": [
+        18,
+        24
+      ],
+      "summary": "实现 pathKey 的路径键操作，调用 isWindowsPath、path.replaceAll、trimTrailingSlashes、value.startsWith 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "file:packages/app/src/pages/session/v2/review-diff-kinds.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterRenderableDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterRenderableDiff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffNeedsLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffNeedsLoad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewRootDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewRootDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffKinds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffKinds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterReviewFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterReviewFiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "file:packages/app/src/components/file-tree-v2-model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "target": "file:packages/app/src/components/file-tree-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "target": "function:packages/app/src/components/file-tree-v2-model.ts:normalizeFileTreeV2Path",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffDirectory",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffDirectory",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewRootDirectory",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffKinds",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2-state.ts:createReviewPanelV2State",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2-state.ts:createReviewPanelV2State",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-panel-v2-state.ts:createReviewPanelV2State",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2Sidebar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/components/file-tree-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-panel-v2-state.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-panel-v2.tsx",
+      "target": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:filterReviewFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffKinds",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/review-panel-v2.tsx:ReviewPanelV2",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:reviewDiffNeedsLoad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/components/file-tree-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/pages/session/file-tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-browser-tab.tsx",
+      "target": "file:packages/app/src/utils/path-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-browser-tab.tsx:SessionFileBrowserTab",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:applyFileListKeyDown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:applyFileListKeyDown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "file:packages/app/src/components/file-tree-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "file:packages/app/src/components/virtual-scroll-element.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/session-file-list-v2.tsx",
+      "target": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "target": "function:packages/app/src/components/virtual-scroll-element.ts:virtualScrollElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "target": "function:packages/app/src/pages/session/v2/review-diff-kinds.ts:normalizePath",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "target": "function:packages/app/src/components/file-tree-v2.tsx:kindChange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/v2/session-file-list-v2.tsx:SessionFileListV2",
+      "target": "function:packages/app/src/components/file-tree-v2.tsx:kindLabel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/agent.ts",
+      "target": "function:packages/app/src/utils/agent.ts:agentColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/agent.ts",
+      "target": "function:packages/app/src/utils/agent.ts:agentColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/agent.ts",
+      "target": "function:packages/app/src/utils/agent.ts:messageAgentColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/agent.ts",
+      "target": "function:packages/app/src/utils/agent.ts:messageAgentColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/agent.ts:messageAgentColor",
+      "target": "function:packages/app/src/utils/agent.ts:agentColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/aim.ts",
+      "target": "function:packages/app/src/utils/aim.ts:createAim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/aim.ts",
+      "target": "function:packages/app/src/utils/aim.ts:createAim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/base64.ts",
+      "target": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/base64.ts",
+      "target": "function:packages/app/src/utils/base64.ts:decode64",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:createCommentMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:createCommentMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:readCommentMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:readCommentMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:formatCommentNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:formatCommentNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:parseCommentNote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "function:packages/app/src/utils/comment-note.ts:parseCommentNote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/comment-note.ts",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/utils/comment-note.ts:readCommentMetadata",
+      "target": "function:packages/app/src/utils/comment-note.ts:selection",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.test.ts",
+      "target": "file:packages/app/src/utils/diffs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.ts",
+      "target": "file:packages/app/src/utils/diffs.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.ts",
+      "target": "function:packages/app/src/utils/diffs.ts:diffs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.ts",
+      "target": "function:packages/app/src/utils/diffs.ts:diffs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.ts",
+      "target": "function:packages/app/src/utils/diffs.ts:message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/diffs.ts",
+      "target": "function:packages/app/src/utils/diffs.ts:message",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/diffs.ts:message",
+      "target": "function:packages/app/src/utils/diffs.ts:diffs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createBlobReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createBlobReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createDraftStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createDraftStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createBrowserDraftStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createBrowserDraftStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:blobDataUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:blobDataUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createLegacyBlobReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/draft-store.ts",
+      "target": "function:packages/app/src/utils/draft-store.ts:createLegacyBlobReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/utils/draft-store.ts:createBrowserDraftStore",
+      "target": "function:packages/app/src/utils/draft-store.ts:createDraftStore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/file-manager.ts",
+      "target": "function:packages/app/src/utils/file-manager.ts:fileManagerApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/file-manager.ts",
+      "target": "function:packages/app/src/utils/file-manager.ts:fileManagerApp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/id.ts",
+      "target": "function:packages/app/src/utils/id.ts:generateID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/id.ts",
+      "target": "function:packages/app/src/utils/id.ts:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/id.ts",
+      "target": "function:packages/app/src/utils/id.ts:getRandomBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/app/src/utils/id.ts:generateID",
+      "target": "function:packages/app/src/utils/id.ts:create",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/menu-dismiss-controller.ts",
+      "target": "function:packages/app/src/utils/menu-dismiss-controller.ts:createMenuDismissController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/menu-dismiss-controller.ts",
+      "target": "function:packages/app/src/utils/menu-dismiss-controller.ts:createMenuDismissController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/utils/path-key.ts",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/utils/path-key.ts",
+      "target": "function:packages/app/src/utils/path-key.ts:pathKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

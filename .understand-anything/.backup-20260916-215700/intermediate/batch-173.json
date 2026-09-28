@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/sdk-next/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/sdk-next/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「@opencode-ai/sdk-next」。",
+      "tags": [
+        "文档",
+        "模块",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/sdk-next/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/sdk-next/package.json",
+      "summary": "声明 @opencode-ai/sdk-next 的包信息与公共导出入口，脚本包括 test、typecheck；依赖包括 @opencode-ai/client、@opencode-ai/core、@opencode-ai/server、effect。",
+      "tags": [
+        "配置",
+        "依赖",
+        "构建"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/sdk-next/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/sdk-next/tsconfig.json",
+      "summary": "配置 packages/sdk-next 的 TypeScript 编译与文件范围，包含 $schema、extends、compilerOptions。",
+      "tags": [
+        "配置",
+        "typescript",
+        "构建"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/sdk-next/README.md",
+      "target": "file:packages/sdk-next/src/index.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:packages/sdk-next/package.json",
+      "target": "file:packages/sdk-next/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:packages/sdk-next/tsconfig.json",
+      "target": "file:packages/sdk-next/src/index.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

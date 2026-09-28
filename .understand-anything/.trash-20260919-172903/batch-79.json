@@ -1,0 +1,1461 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/protocol/src/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "packages/protocol/src/api.ts",
+      "summary": "组合公共 HttpApi 分组及认证、Schema 错误和位置中间件契约。由调用者注入位置服务键，使 Protocol 无需依赖 Core，实现 Server 与 Client 共享的 API 边界。",
+      "tags": [
+        "typescript",
+        "api-schema",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "type": "function",
+      "name": "makeApiFromGroup",
+      "filePath": "packages/protocol/src/api.ts",
+      "lineRange": [
+        26,
+        64
+      ],
+      "summary": "组合所有公共端点分组，将 Location 与 SessionLocation 中间件放在正确分组上，并附加 OpenAPI、认证和 Schema 错误配置。",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/protocol/src/api.ts:makeApi",
+      "type": "function",
+      "name": "makeApi",
+      "filePath": "packages/protocol/src/api.ts",
+      "lineRange": [
+        66,
+        76
+      ],
+      "summary": "用调用者提供的事件定义创建事件分组，再结合位置中间件构建公共 API。",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/protocol/src/api.ts:makeDefaultApi",
+      "type": "function",
+      "name": "makeDefaultApi",
+      "filePath": "packages/protocol/src/api.ts",
+      "lineRange": [
+        78,
+        86
+      ],
+      "summary": "使用默认事件分组和调用者的位置中间件创建完整公共 API。",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/errors.ts",
+      "type": "file",
+      "name": "errors.ts",
+      "filePath": "packages/protocol/src/errors.ts",
+      "summary": "在公共 HTTP 协议中提供 InvalidRequestError、UnauthorizedError、ConflictError、ServiceUnavailableError、UnknownError、ProviderNotFoundError、SessionNotFoundError 等接口。",
+      "tags": [
+        "typescript",
+        "api-schema",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:InvalidRequestError",
+      "type": "class",
+      "name": "InvalidRequestError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        3,
+        11
+      ],
+      "summary": "在公共 HTTP 协议中定义 InvalidRequestError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:UnauthorizedError",
+      "type": "class",
+      "name": "UnauthorizedError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        13,
+        17
+      ],
+      "summary": "在公共 HTTP 协议中定义 UnauthorizedError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:ConflictError",
+      "type": "class",
+      "name": "ConflictError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        19,
+        26
+      ],
+      "summary": "在公共 HTTP 协议中定义 ConflictError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:ServiceUnavailableError",
+      "type": "class",
+      "name": "ServiceUnavailableError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        28,
+        35
+      ],
+      "summary": "在公共 HTTP 协议中定义 ServiceUnavailableError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:UnknownError",
+      "type": "class",
+      "name": "UnknownError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        37,
+        44
+      ],
+      "summary": "在公共 HTTP 协议中定义 UnknownError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:ProviderNotFoundError",
+      "type": "class",
+      "name": "ProviderNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        46,
+        53
+      ],
+      "summary": "在公共 HTTP 协议中定义 ProviderNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:SessionNotFoundError",
+      "type": "class",
+      "name": "SessionNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        55,
+        62
+      ],
+      "summary": "在公共 HTTP 协议中定义 SessionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:MessageNotFoundError",
+      "type": "class",
+      "name": "MessageNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        64,
+        72
+      ],
+      "summary": "在公共 HTTP 协议中定义 MessageNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:InvalidCursorError",
+      "type": "class",
+      "name": "InvalidCursorError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        74,
+        78
+      ],
+      "summary": "在公共 HTTP 协议中定义 InvalidCursorError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:PermissionNotFoundError",
+      "type": "class",
+      "name": "PermissionNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        80,
+        87
+      ],
+      "summary": "在公共 HTTP 协议中定义 PermissionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:QuestionNotFoundError",
+      "type": "class",
+      "name": "QuestionNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        89,
+        96
+      ],
+      "summary": "在公共 HTTP 协议中定义 QuestionNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:ForbiddenError",
+      "type": "class",
+      "name": "ForbiddenError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        98,
+        102
+      ],
+      "summary": "在公共 HTTP 协议中定义 ForbiddenError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/errors.ts:PtyNotFoundError",
+      "type": "class",
+      "name": "PtyNotFoundError",
+      "filePath": "packages/protocol/src/errors.ts",
+      "lineRange": [
+        104,
+        111
+      ],
+      "summary": "在公共 HTTP 协议中定义 PtyNotFoundError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/agent.ts",
+      "type": "file",
+      "name": "agent.ts",
+      "filePath": "packages/protocol/src/groups/agent.ts",
+      "summary": "声明 AgentGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/command.ts",
+      "type": "file",
+      "name": "command.ts",
+      "filePath": "packages/protocol/src/groups/command.ts",
+      "summary": "声明 CommandGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/credential.ts",
+      "type": "file",
+      "name": "credential.ts",
+      "filePath": "packages/protocol/src/groups/credential.ts",
+      "summary": "声明 CredentialGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/event.ts",
+      "type": "file",
+      "name": "event.ts",
+      "filePath": "packages/protocol/src/groups/event.ts",
+      "summary": "声明 makeEventGroup、EventGroup、OpenCodeEvent HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/event.ts:schema",
+      "type": "function",
+      "name": "schema",
+      "filePath": "packages/protocol/src/groups/event.ts",
+      "lineRange": [
+        15,
+        27
+      ],
+      "summary": "在公共 HTTP 协议中执行 schema，接收 definitions 参数；调用 Schema.Union、definitions.some、Schema.Struct、Schema.Literal 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/event.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/protocol/src/groups/event.ts",
+      "lineRange": [
+        29,
+        47
+      ],
+      "summary": "在公共 HTTP 协议中执行 make，接收 definitions 参数；调用 schema、HttpApiGroup.make、HttpApiEndpoint.get、HttpApiSchema.StreamSse、OpenApi.annotations 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/event.ts:makeEventGroup",
+      "type": "function",
+      "name": "makeEventGroup",
+      "filePath": "packages/protocol/src/groups/event.ts",
+      "lineRange": [
+        49,
+        50
+      ],
+      "summary": "在公共 HTTP 协议中执行 makeEventGroup，接收 definitions 参数；调用 make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/fs.ts",
+      "type": "file",
+      "name": "fs.ts",
+      "filePath": "packages/protocol/src/groups/fs.ts",
+      "summary": "声明 FileSystemGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/health.ts",
+      "type": "file",
+      "name": "health.ts",
+      "filePath": "packages/protocol/src/groups/health.ts",
+      "summary": "声明 HealthGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/integration.ts",
+      "type": "file",
+      "name": "integration.ts",
+      "filePath": "packages/protocol/src/groups/integration.ts",
+      "summary": "声明 IntegrationGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/location.ts",
+      "type": "file",
+      "name": "location.ts",
+      "filePath": "packages/protocol/src/groups/location.ts",
+      "summary": "声明 LocationQuery、locationQueryOpenApi、LocationGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/message.ts",
+      "type": "file",
+      "name": "message.ts",
+      "filePath": "packages/protocol/src/groups/message.ts",
+      "summary": "声明 SessionMessagesQuery、MessageGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/protocol/src/groups/model.ts",
+      "summary": "声明 ModelGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/permission.ts",
+      "type": "file",
+      "name": "permission.ts",
+      "filePath": "packages/protocol/src/groups/permission.ts",
+      "summary": "声明 makePermissionGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/permission.ts:makePermissionGroup",
+      "type": "function",
+      "name": "makePermissionGroup",
+      "filePath": "packages/protocol/src/groups/permission.ts",
+      "lineRange": [
+        12,
+        137
+      ],
+      "summary": "在公共 HTTP 协议中执行 makePermissionGroup，接收 locationMiddleware、sessionLocationMiddleware 参数；调用 HttpApiGroup.make、HttpApiEndpoint.get、Location.response、Schema.Array、OpenApi.annotations、Schema.Struct、Project.ID.pipe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/project-copy.ts",
+      "type": "file",
+      "name": "project-copy.ts",
+      "filePath": "packages/protocol/src/groups/project-copy.ts",
+      "summary": "声明 ProjectCopyError、ProjectCopyGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/protocol/src/groups/project-copy.ts:ProjectCopyError",
+      "type": "class",
+      "name": "ProjectCopyError",
+      "filePath": "packages/protocol/src/groups/project-copy.ts",
+      "lineRange": [
+        9,
+        18
+      ],
+      "summary": "在公共 HTTP 协议中定义 ProjectCopyError 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/provider.ts",
+      "type": "file",
+      "name": "provider.ts",
+      "filePath": "packages/protocol/src/groups/provider.ts",
+      "summary": "声明 ProviderGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/pty.ts",
+      "type": "file",
+      "name": "pty.ts",
+      "filePath": "packages/protocol/src/groups/pty.ts",
+      "summary": "声明 PTY_CONNECT_TICKET_QUERY、PTY_CONNECT_TOKEN_HEADER、PTY_CONNECT_TOKEN_HEADER_VALUE、hasPtyConnectTicketURL、PtyGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/pty.ts:hasPtyConnectTicketURL",
+      "type": "function",
+      "name": "hasPtyConnectTicketURL",
+      "filePath": "packages/protocol/src/groups/pty.ts",
+      "lineRange": [
+        17,
+        19
+      ],
+      "summary": "在公共 HTTP 协议中执行 hasPtyConnectTicketURL，接收 url 参数；调用 PTY_CONNECT_PATH.test、url.searchParams.get 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/question.ts",
+      "type": "file",
+      "name": "question.ts",
+      "filePath": "packages/protocol/src/groups/question.ts",
+      "summary": "声明 makeQuestionGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/question.ts:makeQuestionGroup",
+      "type": "function",
+      "name": "makeQuestionGroup",
+      "filePath": "packages/protocol/src/groups/question.ts",
+      "lineRange": [
+        9,
+        84
+      ],
+      "summary": "在公共 HTTP 协议中执行 makeQuestionGroup，接收 locationMiddleware、sessionLocationMiddleware 参数；调用 HttpApiGroup.make、HttpApiEndpoint.get、Location.response、Schema.Array、OpenApi.annotations、Schema.Struct、HttpApiEndpoint.post 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/reference.ts",
+      "type": "file",
+      "name": "reference.ts",
+      "filePath": "packages/protocol/src/groups/reference.ts",
+      "summary": "声明 ReferenceGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/session.ts",
+      "type": "file",
+      "name": "session.ts",
+      "filePath": "packages/protocol/src/groups/session.ts",
+      "summary": "声明 SessionsCursor、SessionHistoryQuery、SessionsQuery、makeSessionGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/protocol/src/groups/session.ts:makeSessionGroup",
+      "type": "function",
+      "name": "makeSessionGroup",
+      "filePath": "packages/protocol/src/groups/session.ts",
+      "lineRange": [
+        106,
+        379
+      ],
+      "summary": "在公共 HTTP 协议中执行 makeSessionGroup，接收 sessionLocationMiddleware 参数；调用 HttpApiGroup.make、HttpApiEndpoint.get、Schema.Struct、Schema.Array、SessionsCursor.pipe、OpenApi.annotations、HttpApiEndpoint.post 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "api-schema"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/protocol/src/groups/skill.ts",
+      "type": "file",
+      "name": "skill.ts",
+      "filePath": "packages/protocol/src/groups/skill.ts",
+      "summary": "声明 SkillGroup HTTP 契约，集中描述端点输入、输出与错误类型，供服务处理器和客户端复用。",
+      "tags": [
+        "api-schema",
+        "协议",
+        "effect"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/middleware/authorization.ts",
+      "type": "file",
+      "name": "authorization.ts",
+      "filePath": "packages/protocol/src/middleware/authorization.ts",
+      "summary": "在公共 HTTP 协议中提供 Authorization 等接口。",
+      "tags": [
+        "typescript",
+        "api-schema",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/middleware/authorization.ts:Authorization",
+      "type": "class",
+      "name": "Authorization",
+      "filePath": "packages/protocol/src/middleware/authorization.ts",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "在公共 HTTP 协议中定义 Authorization 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/src/middleware/schema-error.ts",
+      "type": "file",
+      "name": "schema-error.ts",
+      "filePath": "packages/protocol/src/middleware/schema-error.ts",
+      "summary": "在公共 HTTP 协议中提供 SchemaErrorMiddleware 等接口。",
+      "tags": [
+        "typescript",
+        "api-schema",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/protocol/src/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "class",
+      "name": "SchemaErrorMiddleware",
+      "filePath": "packages/protocol/src/middleware/schema-error.ts",
+      "lineRange": [
+        4,
+        7
+      ],
+      "summary": "在公共 HTTP 协议中定义 SchemaErrorMiddleware 类，用于表达服务或结构化数据。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "api-schema"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/protocol/test/session-cursor.test.ts",
+      "type": "file",
+      "name": "session-cursor.test.ts",
+      "filePath": "packages/protocol/test/session-cursor.test.ts",
+      "summary": "验证 packages/protocol 的行为，实际用例包括「SessionsCursor、round trips without Node globals、SessionHistoryQuery、decodes numeric paging inputs」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "function:packages/protocol/src/api.ts:makeApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "function:packages/protocol/src/api.ts:makeApi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "function:packages/protocol/src/api.ts:makeDefaultApi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "function:packages/protocol/src/api.ts:makeDefaultApi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/command.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/credential.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/fs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/integration.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/permission.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/project-copy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/provider.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/pty.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/question.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/reference.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/groups/skill.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/middleware/authorization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/api.ts",
+      "target": "file:packages/protocol/src/middleware/schema-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:InvalidRequestError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:InvalidRequestError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:UnauthorizedError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:UnauthorizedError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ConflictError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ConflictError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ServiceUnavailableError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ServiceUnavailableError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:UnknownError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:UnknownError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ProviderNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ProviderNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:SessionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:SessionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:MessageNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:MessageNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:InvalidCursorError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:InvalidCursorError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:PermissionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:PermissionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:QuestionNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:QuestionNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ForbiddenError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:ForbiddenError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:PtyNotFoundError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/errors.ts",
+      "target": "class:packages/protocol/src/errors.ts:PtyNotFoundError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/agent.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/command.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/credential.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/event.ts",
+      "target": "function:packages/protocol/src/groups/event.ts:schema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/event.ts",
+      "target": "function:packages/protocol/src/groups/event.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/event.ts",
+      "target": "function:packages/protocol/src/groups/event.ts:makeEventGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/event.ts",
+      "target": "function:packages/protocol/src/groups/event.ts:makeEventGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/fs.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/integration.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/integration.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/message.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/model.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/model.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/permission.ts",
+      "target": "function:packages/protocol/src/groups/permission.ts:makePermissionGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/permission.ts",
+      "target": "function:packages/protocol/src/groups/permission.ts:makePermissionGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/permission.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/permission.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/project-copy.ts",
+      "target": "class:packages/protocol/src/groups/project-copy.ts:ProjectCopyError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/project-copy.ts",
+      "target": "class:packages/protocol/src/groups/project-copy.ts:ProjectCopyError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/project-copy.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/provider.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/provider.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/pty.ts",
+      "target": "function:packages/protocol/src/groups/pty.ts:hasPtyConnectTicketURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/pty.ts",
+      "target": "function:packages/protocol/src/groups/pty.ts:hasPtyConnectTicketURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/pty.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/pty.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/question.ts",
+      "target": "function:packages/protocol/src/groups/question.ts:makeQuestionGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/question.ts",
+      "target": "function:packages/protocol/src/groups/question.ts:makeQuestionGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/question.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/question.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/reference.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/session.ts",
+      "target": "function:packages/protocol/src/groups/session.ts:makeSessionGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/groups/session.ts",
+      "target": "function:packages/protocol/src/groups/session.ts:makeSessionGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/groups/session.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/groups/skill.ts",
+      "target": "file:packages/protocol/src/groups/location.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/authorization.ts",
+      "target": "class:packages/protocol/src/middleware/authorization.ts:Authorization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/authorization.ts",
+      "target": "class:packages/protocol/src/middleware/authorization.ts:Authorization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/authorization.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/schema-error.ts",
+      "target": "class:packages/protocol/src/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/schema-error.ts",
+      "target": "class:packages/protocol/src/middleware/schema-error.ts:SchemaErrorMiddleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/protocol/src/middleware/schema-error.ts",
+      "target": "file:packages/protocol/src/errors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/test/session-cursor.test.ts",
+      "target": "file:packages/protocol/src/groups/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/protocol/test/session-cursor.test.ts",
+      "target": "file:packages/protocol/src/groups/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "target": "function:packages/protocol/src/groups/session.ts:makeSessionGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "target": "function:packages/protocol/src/groups/permission.ts:makePermissionGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "target": "function:packages/protocol/src/groups/question.ts:makeQuestionGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeApi",
+      "target": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeApi",
+      "target": "function:packages/protocol/src/groups/event.ts:makeEventGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/api.ts:makeDefaultApi",
+      "target": "function:packages/protocol/src/api.ts:makeApiFromGroup",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/groups/event.ts:make",
+      "target": "function:packages/protocol/src/groups/event.ts:schema",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/protocol/src/groups/event.ts:makeEventGroup",
+      "target": "function:packages/protocol/src/groups/event.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

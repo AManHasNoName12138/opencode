@@ -1,0 +1,694 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/tui/src/prompt/part.ts",
+      "type": "file",
+      "name": "part.ts",
+      "filePath": "packages/tui/src/prompt/part.ts",
+      "summary": "为 tui 提供片段相关数据处理接口。 对外提供 stripPromptPartIDs、expandPastedTextPlaceholders、expandTrackedPastedText。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/part.ts:stripPromptPartIDs",
+      "type": "function",
+      "name": "stripPromptPartIDs",
+      "filePath": "packages/tui/src/prompt/part.ts",
+      "lineRange": [
+        3,
+        6
+      ],
+      "summary": "实现 stripPromptPartIDs 的片段操作，输入包括 part。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/part.ts:expandPastedTextPlaceholders",
+      "type": "function",
+      "name": "expandPastedTextPlaceholders",
+      "filePath": "packages/tui/src/prompt/part.ts",
+      "lineRange": [
+        8,
+        13
+      ],
+      "summary": "实现 expandPastedTextPlaceholders 的片段操作，调用 parts.reduce、isPastedTextPart、result.replace 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/part.ts:expandTrackedPastedText",
+      "type": "function",
+      "name": "expandTrackedPastedText",
+      "filePath": "packages/tui/src/prompt/part.ts",
+      "lineRange": [
+        24,
+        29
+      ],
+      "summary": "实现 expandTrackedPastedText 的片段操作，调用 displaySlice 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/prompt/stash.tsx",
+      "type": "file",
+      "name": "stash.tsx",
+      "filePath": "packages/tui/src/prompt/stash.tsx",
+      "summary": "实现终端的暂存界面及相关交互。 对外提供 MAX_STASH_ENTRIES、parsePromptStash、{ use: usePromptStash, provider: PromptStashProvider }。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/stash.tsx:parsePromptStash",
+      "type": "function",
+      "name": "parsePromptStash",
+      "filePath": "packages/tui/src/prompt/stash.tsx",
+      "lineRange": [
+        17,
+        30
+      ],
+      "summary": "解析提示词暂存，输入包括 text。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/prompt/traits.ts",
+      "type": "file",
+      "name": "traits.ts",
+      "filePath": "packages/tui/src/prompt/traits.ts",
+      "summary": "为 tui 提供特征相关数据处理接口。 对外提供 computePromptTraits。",
+      "tags": [
+        "tui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/prompt/traits.ts:computePromptTraits",
+      "type": "function",
+      "name": "computePromptTraits",
+      "filePath": "packages/tui/src/prompt/traits.ts",
+      "lineRange": [
+        16,
+        29
+      ],
+      "summary": "计算提示词特征，输入包括 input。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/routes/home.tsx",
+      "type": "file",
+      "name": "home.tsx",
+      "filePath": "packages/tui/src/routes/home.tsx",
+      "summary": "实现终端的首页界面及相关交互。 对外提供 Home。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/routes/home.tsx:Home",
+      "type": "function",
+      "name": "Home",
+      "filePath": "packages/tui/src/routes/home.tsx",
+      "lineRange": [
+        22,
+        95
+      ],
+      "summary": "渲染首页组件，组织首页的界面内容和交互；使用 usePluginRuntime、useSync、useRouteData、usePromptRef 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "type": "file",
+      "name": "session-destination.tsx",
+      "filePath": "packages/tui/src/routes/home/session-destination.tsx",
+      "summary": "实现终端的会话目标界面及相关交互。 对外提供 HomeSessionDestinationProvider、useHomeSessionDestination。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/routes/home/session-destination.tsx:HomeSessionDestinationProvider",
+      "type": "function",
+      "name": "HomeSessionDestinationProvider",
+      "filePath": "packages/tui/src/routes/home/session-destination.tsx",
+      "lineRange": [
+        23,
+        37
+      ],
+      "summary": "渲染首页会话目标提供商组件，组织会话目标的界面内容和交互；使用 useSync、useTuiPaths、createSignal、createMemo 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/routes/home/session-destination.tsx:useHomeSessionDestination",
+      "type": "function",
+      "name": "useHomeSessionDestination",
+      "filePath": "packages/tui/src/routes/home/session-destination.tsx",
+      "lineRange": [
+        39,
+        41
+      ],
+      "summary": "连接首页会话目标，调用 useContext 完成相关步骤。",
+      "tags": [
+        "function",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "type": "file",
+      "name": "dialog-fork-from-timeline.tsx",
+      "filePath": "packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "summary": "实现终端的对话框分叉来源时间线界面及相关交互。 对外提供 DialogForkFromTimeline。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx:DialogForkFromTimeline",
+      "type": "function",
+      "name": "DialogForkFromTimeline",
+      "filePath": "packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "lineRange": [
+        12,
+        76
+      ],
+      "summary": "渲染对话框分叉来源时间线组件，组织对话框分叉来源时间线的界面内容和交互；使用 useSync、useDialog、useSDK、useRoute 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "type": "file",
+      "name": "dialog-message.tsx",
+      "filePath": "packages/tui/src/routes/session/dialog-message.tsx",
+      "summary": "实现终端的对话框消息界面及相关交互。 对外提供 DialogMessage。",
+      "tags": [
+        "tui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/routes/session/dialog-message.tsx:DialogMessage",
+      "type": "function",
+      "name": "DialogMessage",
+      "filePath": "packages/tui/src/routes/session/dialog-message.tsx",
+      "lineRange": [
+        10,
+        109
+      ],
+      "summary": "渲染对话框消息组件，组织对话框消息的界面内容和交互；使用 useSync、useSDK、createMemo、useRoute 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "tui",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:stripPromptPartIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:stripPromptPartIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:expandPastedTextPlaceholders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:expandPastedTextPlaceholders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:expandTrackedPastedText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "function:packages/tui/src/prompt/part.ts:expandTrackedPastedText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/part.ts",
+      "target": "file:packages/tui/src/prompt/display.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/prompt/part.ts:expandTrackedPastedText",
+      "target": "function:packages/tui/src/prompt/display.ts:displaySlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "function:packages/tui/src/prompt/stash.tsx:parsePromptStash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "function:packages/tui/src/prompt/stash.tsx:parsePromptStash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "file:packages/tui/src/prompt/history.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/stash.tsx",
+      "target": "file:packages/tui/src/util/persistence.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/prompt/traits.ts",
+      "target": "function:packages/tui/src/prompt/traits.ts:computePromptTraits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/prompt/traits.ts",
+      "target": "function:packages/tui/src/prompt/traits.ts:computePromptTraits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "function:packages/tui/src/routes/home.tsx:Home",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "function:packages/tui/src/routes/home.tsx:Home",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/component/logo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/component/prompt/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/args.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/editor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/route.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/plugin/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home.tsx",
+      "target": "file:packages/tui/src/ui/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/routes/home.tsx:Home",
+      "target": "function:packages/tui/src/plugin/runtime.tsx:usePluginRuntime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/routes/home.tsx:Home",
+      "target": "function:packages/tui/src/context/route.tsx:useRouteData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/routes/home.tsx:Home",
+      "target": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:HomeSessionDestinationProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:HomeSessionDestinationProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:useHomeSessionDestination",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:useHomeSessionDestination",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/routes/home/session-destination.tsx:HomeSessionDestinationProvider",
+      "target": "function:packages/tui/src/context/runtime.tsx:useTuiPaths",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "function:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx:DialogForkFromTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "function:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx:DialogForkFromTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/component/prompt/history.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/context/route.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/prompt/part.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/ui/dialog-select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx",
+      "target": "file:packages/tui/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/routes/session/dialog-fork-from-timeline.tsx:DialogForkFromTimeline",
+      "target": "function:packages/tui/src/ui/dialog.tsx:useDialog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "function:packages/tui/src/routes/session/dialog-message.tsx:DialogMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "function:packages/tui/src/routes/session/dialog-message.tsx:DialogMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/component/prompt/history.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/context/clipboard.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/context/route.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/prompt/part.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/routes/session/dialog-message.tsx",
+      "target": "file:packages/tui/src/ui/dialog-select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/routes/session/dialog-message.tsx:DialogMessage",
+      "target": "function:packages/tui/src/context/clipboard.tsx:useClipboard",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

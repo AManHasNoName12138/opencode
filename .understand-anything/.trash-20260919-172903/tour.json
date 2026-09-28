@@ -1,0 +1,90 @@
+[
+  {
+    "order": 1,
+    "title": "认识 OpenCode",
+    "description": "从 README 认识这个开源 AI 编程代理及其安装入口，再用工作区清单定位 CLI、桌面应用和 Web 界面。这个仓库包含多个产品入口和共享包，后续导览将沿一次会话请求串起契约、执行、持久化与界面。",
+    "nodeIds": ["document:README.md", "config:package.json"]
+  },
+  {
+    "order": 2,
+    "title": "从命令进入运行时",
+    "description": "CLI 入口用 yargs 注册 run、serve、TUI 等命令，并设置日志、插件和进程相关选项；先读命令分派，就能区分交互入口与服务启动入口。沿 run 和 serve 继续阅读时，要留意 packages/opencode 仍保留旧版实现与兼容路径，而新的 V2 领域能力已经拆入独立包。",
+    "nodeIds": ["file:packages/opencode/src/index.ts", "file:packages/opencode/src/cli/cmd/run.ts", "file:packages/opencode/src/cli/cmd/serve.ts"]
+  },
+  {
+    "order": 3,
+    "title": "建立跨包契约地图",
+    "description": "先认识 Schema 中的会话与持久化输入，再看 Protocol 如何组合 HTTP 分组和中间件契约。Schema 为 Core 与 Protocol 提供共享数据，Server 组合 Core 与 Protocol；Client 只依赖 Schema 与 Protocol，避免把服务器实现带进客户端。Protocol 由调用者注入位置服务键，Client 则通过契约适配保留公共错误和端点信息。",
+    "nodeIds": ["file:packages/schema/src/session.ts", "file:packages/schema/src/session-input.ts", "file:packages/protocol/src/api.ts", "file:packages/client/src/contract.ts", "config:packages/client/package.json"],
+    "languageLesson": "TypeScript 类型只能在编译期约束调用；Schema 同时提供运行时解码与校验，让跨进程的数据也能遵守契约。"
+  },
+  {
+    "order": 4,
+    "title": "请求穿过服务边界",
+    "description": "有了公共契约，再看 Server 如何注入真实的 Location 中间件、认证和处理器，并装配 Core 服务。Session 处理器把 prompt、delivery 和 resume 交给 SessionV2，路由装配则把抽象执行接口替换为进程本地实现；HTTP 层因此承担协议转换，而会话状态规则留在领域层。",
+    "nodeIds": ["file:packages/server/src/api.ts", "file:packages/server/src/routes.ts", "file:packages/server/src/location.ts", "file:packages/server/src/handlers/session.ts"]
+  },
+  {
+    "order": 5,
+    "title": "提示先持久化准入",
+    "description": "进入 SessionV2 后，prompt 先持久化一条 session_input，再默认发送 advisory wake；resume:false 只完成准入。输入已接受与已进入可见历史是两个阶段，SessionInput 用准入和提升序号记录它们，相同消息 ID 仅允许会话、内容及 delivery 完全一致的重试。默认 steer 在安全边界提升，queue 则等到会话原本将空闲时才逐条提升。",
+    "nodeIds": ["file:packages/core/src/session.ts", "file:packages/core/src/session/input.ts", "file:packages/core/src/session/sql.ts", "file:packages/schema/src/session-delivery.ts"]
+  },
+  {
+    "order": 6,
+    "title": "按会话协调执行",
+    "description": "持久化准入之后，进程全局的 SessionExecution 按 Session ID 接受唤醒、显式恢复与中断，协调器让同一会话串行执行并允许不同会话并行。真正开始 drain 时才从 SessionStore 找到位置，再经 LocationServiceMap 获取该位置的 Runner。这里的协调与所有权属于当前进程，不能把一次 drain 当作持久化任务，也不能把 advisory wake 理解为崩溃后自动重试模型调用。",
+    "nodeIds": ["file:packages/core/src/session/execution.ts", "file:packages/core/src/session/execution/local.ts", "file:packages/core/src/session/run-coordinator.ts", "file:packages/core/src/session/store.ts", "file:packages/core/src/location-service-map.ts"],
+    "languageLesson": "Effect 的 Service 与 Layer 把能力接口和构造方式分开；理解进程作用域与 Location 作用域，是判断服务生命周期和隔离边界的关键。"
+  },
+  {
+    "order": 7,
+    "title": "模型轮次与工具权限",
+    "description": "位置确定后，Runner 解析模型、读取历史并执行显式的提供方轮次，每轮只有一次 llm.stream(request)。模型协议适配由 LLM 包承担，而工具注册、权限规则和工具执行仍由位置作用域的领域服务提供；工具调用先记录，再执行并等待结果结算。需要继续时重新加载投影历史，新增用户输入会重置代理的轮次额度。",
+    "nodeIds": ["file:packages/core/src/session/runner/llm.ts", "file:packages/core/src/session/runner/model.ts", "file:packages/core/src/tool/registry.ts", "file:packages/core/src/permission.ts", "file:packages/llm/src/route/client.ts"]
+  },
+  {
+    "order": 8,
+    "title": "上下文如何进入模型",
+    "description": "上一站的模型请求还依赖系统上下文：SystemContext 定义来源组合与快照规则，Registry 在 Location 范围注册来源，内置来源提供环境与日期。Session 自己持久化 Context Epoch，并通过 History 选择压缩点和基线之后的消息，因此上下文变化可以随会话历史被解释。来源暂时不可用与来源被移除有不同语义，刷新时会保留暂不可用来源的原有快照。",
+    "nodeIds": ["file:packages/core/src/system-context/index.ts", "file:packages/core/src/system-context/registry.ts", "file:packages/core/src/system-context/builtins.ts", "file:packages/core/src/session/context-epoch.ts", "file:packages/core/src/session/history.ts"]
+  },
+  {
+    "order": 9,
+    "title": "事件与数据库投影",
+    "description": "回看前面反复出现的持久化与历史，可以沿事件服务、事件表、Session 投影器和会话表理解数据如何落盘。事件记录与读模型各有职责，迁移文件展示 session_input 如何转为事件序号驱动的结构。事件回放的 owner 声明属于事件体系，应与上一站之前介绍的进程内会话执行所有权分开理解。",
+    "nodeIds": ["file:packages/core/src/event.ts", "file:packages/core/src/event/sql.ts", "file:packages/core/src/session/projector.ts", "file:packages/core/src/session/sql.ts", "file:packages/core/src/database/migration/20260604172448_event_sourced_session_input.ts"]
+  },
+  {
+    "order": 10,
+    "title": "客户端与嵌入式组合",
+    "description": "了解服务端状态后，再看外部程序如何通过 Client 使用同一套公共契约；客户端提供 Promise 与 Effect 入口，生成代码由包内 generate 流程维护。sdk-next 则把 Client、Core 和 Server 组合在同一 Layer memoMap 中，通过内存 fetch 调用嵌入式 HTTP handler，并提供同进程工具注册。普通客户端和嵌入式 SDK 因而共享协议，但后者有明确的运行时组合职责。",
+    "nodeIds": ["file:packages/client/src/index.ts", "file:packages/client/src/effect.ts", "config:packages/client/package.json", "file:packages/sdk-next/src/opencode.ts", "file:packages/sdk-next/src/tool.ts"]
+  },
+  {
+    "order": 11,
+    "title": "Solid 界面与同步",
+    "description": "沿客户端回到用户界面，App 组合服务器、同步、主题、语言和标签页等 Provider，再把会话路由交给页面。服务器 SDK 负责连接和事件流，同步上下文维护服务器范围的数据，会话页面把时间线、输入、审阅、权限请求与终端面板串起来。这组紧密协作的模块还区分服务器身份和工作区身份，让同一工作区内切换会话时保留终端与文件状态。",
+    "nodeIds": ["file:packages/app/src/app.tsx", "file:packages/app/src/context/server-sdk.tsx", "file:packages/app/src/context/server-sync.tsx", "file:packages/app/src/pages/session.tsx"],
+    "languageLesson": "Solid 的 Provider 传递共享上下文，响应式依赖驱动局部更新；阅读状态代码时应同时检查作用域、订阅来源与清理时机。"
+  },
+  {
+    "order": 12,
+    "title": "终端与桌面宿主",
+    "description": "同一产品还通过 TUI 提供终端交互，通过 Electron 提供桌面宿主；先看 TUI 的入口和应用装配，再看桌面主进程如何启动窗口与后台服务。Electron 主进程负责单实例、IPC、深层链接、更新及退出清理，并根据 sidecar 版本选择旧版子进程或 V2 后台 CLI。区分界面状态与宿主进程生命周期，有助于定位连接、启动和退出问题。",
+    "nodeIds": ["file:packages/tui/src/index.tsx", "file:packages/tui/src/app.tsx", "file:packages/desktop/src/main/index.ts", "file:packages/desktop/src/main/sidecar.ts"]
+  },
+  {
+    "order": 13,
+    "title": "用测试验证整条链路",
+    "description": "现在可以用测试回查前面的关键承诺：协调器测试覆盖同会话执行合并、唤醒和清理，Runner 测试覆盖真实轮次、工具及上下文行为，App 的 Playwright 配置连接界面端到端验证。CI 在 Linux 与 Windows 上运行测试，并在 Linux 校验生成客户端与 HttpApi 契约。新增验证应放在对应包执行，遵守仓库禁止从根目录直接运行测试的约定。",
+    "nodeIds": ["file:packages/core/test/session-run-coordinator.test.ts", "file:packages/core/test/session-runner.test.ts", "file:packages/app/playwright.config.ts", "pipeline:.github/workflows/test.yml", "document:AGENTS.md"]
+  },
+  {
+    "order": 14,
+    "title": "从源码走向发布",
+    "description": "最后用发布工作流把本地理解延伸到交付：流水线串起版本、CLI 构建、Windows 签名、Electron 构建和发布。SST 入口与 infra/app 则展示云端基础设施、公共 Worker、文档站和 Web 应用的部署边界。至此可以从用户入口追到会话执行和数据，再按目标产品找到测试与发布路径。",
+    "nodeIds": ["pipeline:.github/workflows/publish.yml", "file:sst.config.ts", "file:infra/app.ts", "document:CONTRIBUTING.md"],
+    "languageLesson": "GitHub Actions 用 jobs 表达任务及依赖，用 steps 表达任务内部顺序；理解这两层结构，就能把源码构建、签名与发布阶段对应起来。"
+  }
+]

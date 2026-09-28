@@ -1,0 +1,908 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/test/continuation-scenarios.ts",
+      "type": "file",
+      "name": "continuation-scenarios.ts",
+      "filePath": "packages/llm/test/continuation-scenarios.ts",
+      "summary": "为 packages/llm 测试提供 basicContinuation、toolContinuation、reasoningContinuation、mediaContinuation、maximalContinuation、nativeOpenAIResponsesContinuation、nativeAnthropicMessagesContinuation 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/test/continuation-scenarios.ts:continuationRequest",
+      "type": "function",
+      "name": "continuationRequest",
+      "filePath": "packages/llm/test/continuation-scenarios.ts",
+      "lineRange": [
+        41,
+        104
+      ],
+      "summary": "在packages/llm中执行 continuationRequest，接收 input 参数；调用 features.has、firstUser.push、messages.push、Message.user、firstAssistant.push、Message.assistant、ToolCallPart.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/endpoint.test.ts",
+      "type": "file",
+      "name": "endpoint.test.ts",
+      "filePath": "packages/llm/test/endpoint.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Endpoint、appends a static path to the model、endpoint query params are appended to the rendered URL、path may be a function of the validated body」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/executor.test.ts",
+      "type": "file",
+      "name": "executor.test.ts",
+      "filePath": "packages/llm/test/executor.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「RequestExecutor、classifies context overflow responses、does not classify generic HTTP 413 payload errors as context overflow、does not classify ordinary invalid requests as context overflow、returns redacted diagnostics for retryable rate limits、honors current redacted header names in diagnostics、extracts OpenAI-style rate-limit diagnostics」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/llm/test/executor.test.ts:responsesLayer",
+      "type": "function",
+      "name": "responsesLayer",
+      "filePath": "packages/llm/test/executor.test.ts",
+      "lineRange": [
+        21,
+        39
+      ],
+      "summary": "在packages/llm中执行 responsesLayer，接收 responses 参数；调用 RequestExecutor.layer.pipe、Layer.provide、Layer.unwrap、Effect.gen、Ref.make、Layer.succeed、HttpClient.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/executor.test.ts:countedResponsesLayer",
+      "type": "function",
+      "name": "countedResponsesLayer",
+      "filePath": "packages/llm/test/executor.test.ts",
+      "lineRange": [
+        41,
+        60
+      ],
+      "summary": "在packages/llm中执行 countedResponsesLayer，接收 attempts、responses 参数；调用 RequestExecutor.layer.pipe、Layer.provide、Layer.unwrap、Effect.gen、Ref.make、Layer.succeed、HttpClient.make 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/generate-object.test.ts",
+      "type": "file",
+      "name": "generate-object.test.ts",
+      "filePath": "packages/llm/test/generate-object.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Tool.make (dynamic JSON Schema)、forwards JSON Schema and description through toDefinitions、execute receives the raw input untouched、LLM.generateObject、forces a synthetic tool call and decodes the input、accepts a raw JSON Schema and returns the input untouched、fails when the model does not call the synthetic tool」。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/lib/effect.ts",
+      "type": "file",
+      "name": "effect.ts",
+      "filePath": "packages/llm/test/lib/effect.ts",
+      "summary": "为 packages/llm 测试提供 it、testEffect 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/effect.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/llm/test/lib/effect.ts",
+      "lineRange": [
+        11,
+        20
+      ],
+      "summary": "在packages/llm中执行 run，接收 value、layer 参数；调用 Effect.gen、body、Effect.provide、Exit.isFailure、Cause.prettyErrors、Effect.logError 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/effect.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/llm/test/lib/effect.ts",
+      "lineRange": [
+        22,
+        42
+      ],
+      "summary": "在packages/llm中执行 make，接收 testLayer、liveLayer 参数；调用 test.only、run、test.skip 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/effect.ts:testEffect",
+      "type": "function",
+      "name": "testEffect",
+      "filePath": "packages/llm/test/lib/effect.ts",
+      "lineRange": [
+        49,
+        50
+      ],
+      "summary": "在packages/llm中执行 testEffect，接收 layer 参数；调用 make、Layer.provideMerge 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/lib/http.ts",
+      "type": "file",
+      "name": "http.ts",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "summary": "为 packages/llm 测试提供 runtimeLayer、fixedResponse、dynamicResponse、truncatedStream、scriptedResponses 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:handlerLayer",
+      "type": "function",
+      "name": "handlerLayer",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        19,
+        33
+      ],
+      "summary": "在packages/llm中执行 handlerLayer，接收 handler 参数；调用 Layer.succeed、HttpClient.make、Effect.gen、HttpClientRequest.toWeb、Effect.promise、web.text、handler 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:runtimeLayer",
+      "type": "function",
+      "name": "runtimeLayer",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        37,
+        42
+      ],
+      "summary": "在packages/llm中执行 runtimeLayer，接收 layer 参数；调用 RequestExecutor.layer.pipe、Layer.provide、Layer.mergeAll、LLMClient.layer.pipe 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:fixedResponse",
+      "type": "function",
+      "name": "fixedResponse",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        52,
+        55
+      ],
+      "summary": "在packages/llm中执行 fixedResponse，接收 body、init 参数；调用 runtimeLayer、handlerLayer、Effect.succeed、input.respond 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "type": "function",
+      "name": "dynamicResponse",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        60,
+        60
+      ],
+      "summary": "在packages/llm中执行 dynamicResponse，接收 handler 参数；调用 runtimeLayer、handlerLayer 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:truncatedStream",
+      "type": "function",
+      "name": "truncatedStream",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        66,
+        78
+      ],
+      "summary": "在packages/llm中执行 truncatedStream，接收 chunks 参数；调用 dynamicResponse、Effect.sync、input.respond 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/http.ts:scriptedResponses",
+      "type": "function",
+      "name": "scriptedResponses",
+      "filePath": "packages/llm/test/lib/http.ts",
+      "lineRange": [
+        85,
+        98
+      ],
+      "summary": "在packages/llm中执行 scriptedResponses，接收 bodies、init 参数；调用 Layer.unwrap、Effect.gen、Ref.make、dynamicResponse、Ref.getAndUpdate、input.respond 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "file",
+      "name": "openai-chunks.ts",
+      "filePath": "packages/llm/test/lib/openai-chunks.ts",
+      "summary": "为 packages/llm 测试提供 deltaChunk、usageChunk、finishChunk、toolCallChunk 等测试辅助接口。",
+      "tags": [
+        "test",
+        "模块",
+        "测试辅助"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/openai-chunks.ts:deltaChunk",
+      "type": "function",
+      "name": "deltaChunk",
+      "filePath": "packages/llm/test/lib/openai-chunks.ts",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "在packages/llm中执行 deltaChunk，接收 delta、finishReason 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/openai-chunks.ts:usageChunk",
+      "type": "function",
+      "name": "usageChunk",
+      "filePath": "packages/llm/test/lib/openai-chunks.ts",
+      "lineRange": [
+        15,
+        19
+      ],
+      "summary": "在packages/llm中执行 usageChunk，接收 usage 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/openai-chunks.ts:finishChunk",
+      "type": "function",
+      "name": "finishChunk",
+      "filePath": "packages/llm/test/lib/openai-chunks.ts",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "在packages/llm中执行 finishChunk，接收 reason 参数；调用 deltaChunk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/llm/test/lib/openai-chunks.ts:toolCallChunk",
+      "type": "function",
+      "name": "toolCallChunk",
+      "filePath": "packages/llm/test/lib/openai-chunks.ts",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "在packages/llm中执行 toolCallChunk，接收 id、name、args、index 参数；调用 deltaChunk 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "模块"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/test/continuation-scenarios.ts",
+      "target": "function:packages/llm/test/continuation-scenarios.ts:continuationRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/continuation-scenarios.ts",
+      "target": "function:packages/llm/test/continuation-scenarios.ts:continuationRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/continuation-scenarios.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/continuation-scenarios.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/endpoint.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "function:packages/llm/test/executor.test.ts:responsesLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "function:packages/llm/test/executor.test.ts:countedResponsesLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/executor.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/generate-object.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/effect.ts",
+      "target": "function:packages/llm/test/lib/effect.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/effect.ts",
+      "target": "function:packages/llm/test/lib/effect.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/effect.ts",
+      "target": "function:packages/llm/test/lib/effect.ts:testEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/effect.ts",
+      "target": "function:packages/llm/test/lib/effect.ts:testEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:handlerLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:runtimeLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:runtimeLayer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:fixedResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:fixedResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:truncatedStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:truncatedStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:scriptedResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "function:packages/llm/test/lib/http.ts:scriptedResponses",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:deltaChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:deltaChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:usageChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:usageChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:finishChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:finishChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:toolCallChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/llm/test/lib/openai-chunks.ts",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:toolCallChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/effect.ts:make",
+      "target": "function:packages/llm/test/lib/effect.ts:run",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/effect.ts:testEffect",
+      "target": "function:packages/llm/test/lib/effect.ts:make",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:fixedResponse",
+      "target": "function:packages/llm/test/lib/http.ts:runtimeLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:fixedResponse",
+      "target": "function:packages/llm/test/lib/http.ts:handlerLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "target": "function:packages/llm/test/lib/http.ts:runtimeLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "target": "function:packages/llm/test/lib/http.ts:handlerLayer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:truncatedStream",
+      "target": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/http.ts:scriptedResponses",
+      "target": "function:packages/llm/test/lib/http.ts:dynamicResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/openai-chunks.ts:finishChunk",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:deltaChunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/llm/test/lib/openai-chunks.ts:toolCallChunk",
+      "target": "function:packages/llm/test/lib/openai-chunks.ts:deltaChunk",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

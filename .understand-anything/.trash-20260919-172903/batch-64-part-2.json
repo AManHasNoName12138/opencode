@@ -1,0 +1,1152 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "type": "file",
+      "name": "interaction.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "summary": "为会话界面提供提示输入交互，通过 createPromptInputV2State、createPromptInputV2Controller 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "提示输入交互"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2State",
+      "type": "function",
+      "name": "createPromptInputV2State",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "会话界面的提示输入交互处理函数 createPromptInputV2State，调用 createStore、createPromptInputV2InteractionState 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2Controller",
+      "type": "function",
+      "name": "createPromptInputV2Controller",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "lineRange": [
+        56,
+        433
+      ],
+      "summary": "会话界面的提示输入交互处理函数 createPromptInputV2Controller，调用 createPromptInputV2Store、createPromptInputV2State、createEffect、on、setState 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:setEditorCursor",
+      "type": "function",
+      "name": "setEditorCursor",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "lineRange": [
+        463,
+        482
+      ],
+      "summary": "会话界面的提示输入交互处理函数 setEditorCursor，调用 document.createTreeWalker、walker.nextNode、document.createRange、range.setStart、range.collapse 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "type": "file",
+      "name": "machine.test.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "summary": "验证会话界面的提示输入状态机行为，覆盖 prompt input v2 interaction machine；opens inline commands only when slash is the entire prompt；completes nested slash command names；opens context completion at the cursor；enters shell mode from an initial exclamation mark。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "提示输入状态机"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "type": "file",
+      "name": "machine.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "summary": "为会话界面提供提示输入状态机，通过 createPromptInputV2InteractionState、transitionPromptInputV2 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "提示输入状态机"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:createPromptInputV2InteractionState",
+      "type": "function",
+      "name": "createPromptInputV2InteractionState",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        49,
+        57
+      ],
+      "summary": "初始化提示输入框的交互状态，用于会话界面的提示输入状态机流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "type": "function",
+      "name": "transitionPromptInputV2",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        59,
+        82
+      ],
+      "summary": "依据交互事件计算提示输入框的下一状态，用于会话界面的提示输入状态机流程；相关调用包括 inputChanged、openCommands、openContext。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:inputChanged",
+      "type": "function",
+      "name": "inputChanged",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        84,
+        118
+      ],
+      "summary": "会话界面的提示输入状态机处理函数 inputChanged，调用 changed、value.slice、value.match 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openCommands",
+      "type": "function",
+      "name": "openCommands",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        120,
+        135
+      ],
+      "summary": "会话界面的提示输入状态机处理函数 openCommands，调用 populated、changed、promptText 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openContext",
+      "type": "function",
+      "name": "openContext",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        137,
+        146
+      ],
+      "summary": "会话界面的提示输入状态机处理函数 openContext，调用 changed、promptText 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:suggestionSelected",
+      "type": "function",
+      "name": "suggestionSelected",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        168,
+        190
+      ],
+      "summary": "会话界面的提示输入状态机处理函数 suggestionSelected，调用 promptText、commands.push、current.trim、replaceTrigger、changed 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:keyDown",
+      "type": "function",
+      "name": "keyDown",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "lineRange": [
+        192,
+        228
+      ],
+      "summary": "会话界面的提示输入状态机处理函数 keyDown，调用 event.key.toLowerCase、unchanged、changed、event.ids.indexOf 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "type": "file",
+      "name": "prompt-input.stories.tsx",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "summary": "会话界面的 prompt-input Storybook 示例，提供 ControlledComposition展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "prompt-input"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx:ControlledPromptInput",
+      "type": "function",
+      "name": "ControlledPromptInput",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "lineRange": [
+        107,
+        211
+      ],
+      "summary": "会话界面的prompt-input处理函数 ControlledPromptInput，调用 createStore、createPromptInputV2Store、createPromptInputV2Controller、query.trim、contextSuggestions.filter 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "type": "file",
+      "name": "store.test.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "summary": "验证会话界面的提示输入状态存储行为，覆盖 prompt input v2 store；accepts an accessor for the backing store；updates prompt text and cursor together while preserving attachments；inserts text without flattening structured mentions；mutates context, attachments, and model through shared actions。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "提示输入状态存储"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/store.test.ts:createPromptStore",
+      "type": "function",
+      "name": "createPromptStore",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "lineRange": [
+        6,
+        24
+      ],
+      "summary": "会话界面的提示输入状态存储处理函数 createPromptStore，调用 createPromptInputV2Store、createStore 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "summary": "为会话界面提供提示输入状态存储，通过 createPromptInputV2Store 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "提示输入状态存储"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:createPromptInputV2Store",
+      "type": "function",
+      "name": "createPromptInputV2Store",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "lineRange": [
+        20,
+        92
+      ],
+      "summary": "建立提示输入、附件与持久状态的存储，用于会话界面的提示输入状态存储流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:insertText",
+      "type": "function",
+      "name": "insertText",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "lineRange": [
+        96,
+        115
+      ],
+      "summary": "会话界面的提示输入状态存储处理函数 insertText，调用 prompt.flatMap、part.content.slice、parts.push、withOffsets 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:insertMention",
+      "type": "function",
+      "name": "insertMention",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "lineRange": [
+        117,
+        138
+      ],
+      "summary": "会话界面的提示输入状态存储处理函数 insertMention，调用 prompt.flatMap、part.content.slice、withOffsets 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "summary": "为会话界面提供types，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "types"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "type": "file",
+      "name": "session-file-panel-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "summary": "为会话界面提供V2 会话文件面板，通过 SessionFilePanelV2、SessionFilePanelV2Title、SessionFilePanelV2Empty 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "V2 会话文件面板"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2",
+      "type": "function",
+      "name": "SessionFilePanelV2",
+      "filePath": "packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "lineRange": [
+        4,
+        35
+      ],
+      "summary": "会话界面的V2 会话文件面板处理函数 SessionFilePanelV2，调用 toolbar 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Title",
+      "type": "function",
+      "name": "SessionFilePanelV2Title",
+      "filePath": "packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "会话界面的V2 会话文件面板处理函数 SessionFilePanelV2Title，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Empty",
+      "type": "function",
+      "name": "SessionFilePanelV2Empty",
+      "filePath": "packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "会话界面的V2 会话文件面板处理函数 SessionFilePanelV2Empty，接收 props 参数。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.stories.tsx",
+      "type": "file",
+      "name": "session-progress-indicator-v2.stories.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-progress-indicator-v2.stories.tsx",
+      "summary": "会话界面的 V2 会话进度 Storybook 示例，提供 Basic、Sizes、OnDark展示场景以检查界面状态。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "V2 会话进度"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "type": "file",
+      "name": "session-progress-indicator-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "summary": "为会话界面提供V2 会话进度，通过 SessionProgressIndicatorV2 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "V2 会话进度"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx:SessionProgressIndicatorV2",
+      "type": "function",
+      "name": "SessionProgressIndicatorV2",
+      "filePath": "packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "lineRange": [
+        14,
+        32
+      ],
+      "summary": "会话界面的V2 会话进度处理函数 SessionProgressIndicatorV2，调用 splitProps 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.test.ts",
+      "type": "file",
+      "name": "session-review-file-preview-v2-virtualize.test.ts",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.test.ts",
+      "summary": "验证会话界面的V2 差异虚拟化判定行为，覆盖 shouldVirtualizeReviewDiff；renders small diffs directly；virtualizes large diffs。",
+      "tags": [
+        "测试",
+        "会话界面",
+        "V2 差异虚拟化判定"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "type": "file",
+      "name": "session-review-file-preview-v2-virtualize.ts",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "summary": "为会话界面提供V2 差异虚拟化判定，通过 shouldVirtualizeReviewDiff 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "接口实现",
+        "会话界面",
+        "V2 差异虚拟化判定"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts:shouldVirtualizeReviewDiff",
+      "type": "function",
+      "name": "shouldVirtualizeReviewDiff",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "lineRange": [
+        3,
+        5
+      ],
+      "summary": "根据差异规模判断是否启用审查视图虚拟化，用于会话界面的V2 差异虚拟化判定流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "type": "file",
+      "name": "session-review-file-preview-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "summary": "为会话界面提供V2 文件差异预览，通过 SessionReviewFilePreviewV2 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "V2 文件差异预览"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx:ReviewCommentMenuV2",
+      "type": "function",
+      "name": "ReviewCommentMenuV2",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "lineRange": [
+        71,
+        96
+      ],
+      "summary": "会话界面的V2 文件差异预览处理函数 ReviewCommentMenuV2，调用 event.stopPropagation 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx:SessionReviewFilePreviewV2",
+      "type": "function",
+      "name": "SessionReviewFilePreviewV2",
+      "filePath": "packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "lineRange": [
+        98,
+        290
+      ],
+      "summary": "会话界面的V2 文件差异预览处理函数 SessionReviewFilePreviewV2，调用 useI18n、useFileComponent、createStore、createMemo、normalize 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "type": "file",
+      "name": "session-review-v2.tsx",
+      "filePath": "packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "summary": "为会话界面提供V2 会话审查布局，通过 SESSION_REVIEW_V2_SIDEBAR_WIDTH_DEFAULT、SESSION_REVIEW_V2_SIDEBAR_WIDTH_MIN、SESSION_REVIEW_V2_SIDEBAR_WIDTH_MAX、SessionReviewV2Sidebar、SessionReviewV2、SessionReviewV2SidebarToggle 暴露渲染或状态操作接口，用于消息、工具、文件与交互状态的展示。",
+      "tags": [
+        "界面组件",
+        "会话界面",
+        "V2 会话审查布局"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2Sidebar",
+      "type": "function",
+      "name": "SessionReviewV2Sidebar",
+      "filePath": "packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "lineRange": [
+        62,
+        149
+      ],
+      "summary": "会话界面的V2 会话审查布局处理函数 SessionReviewV2Sidebar，调用 useI18n、createSignal、createEffect、resizing、makeEventListener 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2",
+      "type": "function",
+      "name": "SessionReviewV2",
+      "filePath": "packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "lineRange": [
+        151,
+        327
+      ],
+      "summary": "会话界面的V2 会话审查布局处理函数 SessionReviewV2，调用 useI18n、useLocale、createEffect、getWorkerPool、createMemo 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2SidebarToggle",
+      "type": "function",
+      "name": "SessionReviewV2SidebarToggle",
+      "filePath": "packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "lineRange": [
+        329,
+        347
+      ],
+      "summary": "会话界面的V2 会话审查布局处理函数 SessionReviewV2SidebarToggle，调用 useI18n、i18n.t 完成该步骤。",
+      "tags": [
+        "函数",
+        "界面组件",
+        "会话界面"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2State",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2State",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2Controller",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2Controller",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:setEditorCursor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2Controller",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/interaction.ts:createPromptInputV2State",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/attachments.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/machine.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:createPromptInputV2InteractionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:createPromptInputV2InteractionState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:inputChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:suggestionSelected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:keyDown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:inputChanged",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openCommands",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:openContext",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:suggestionSelected",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:transitionPromptInputV2",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/machine.ts:keyDown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/machine.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx:ControlledPromptInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/interaction.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/prompt-input.stories.tsx",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/store.test.ts:createPromptStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/store.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:createPromptInputV2Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:createPromptInputV2Store",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:insertText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "function:packages/session-ui/src/v2/components/prompt-input/store.ts:insertMention",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/prompt-input/store.ts",
+      "target": "file:packages/session-ui/src/v2/components/prompt-input/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Title",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Title",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Empty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-file-panel-v2.tsx:SessionFilePanelV2Empty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.stories.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx:SessionProgressIndicatorV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx:SessionProgressIndicatorV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-progress-indicator-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.test.ts",
+      "target": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "target": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "target": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts:shouldVirtualizeReviewDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "target": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts:shouldVirtualizeReviewDiff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx:ReviewCommentMenuV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx:SessionReviewFilePreviewV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx:SessionReviewFilePreviewV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/components/session-diff.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/components/session-review.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/pierre/media.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/pierre/selection-bridge.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/line-comment-annotations-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2-virtualize.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-file-preview-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2Sidebar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2Sidebar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2SidebarToggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "function:packages/session-ui/src/v2/components/session-review-v2.tsx:SessionReviewV2SidebarToggle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "file:packages/session-ui/src/components/session-review.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "file:packages/session-ui/src/pierre/worker.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/session-ui/src/v2/components/session-review-v2.tsx",
+      "target": "file:packages/session-ui/src/v2/components/session-file-panel-v2.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

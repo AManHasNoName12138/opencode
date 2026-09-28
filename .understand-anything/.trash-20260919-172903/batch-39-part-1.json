@@ -1,0 +1,1633 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/tui/src/component/prompt/history.tsx",
+      "type": "file",
+      "name": "history.tsx",
+      "filePath": "packages/tui/src/component/prompt/history.tsx",
+      "summary": "实现终端的历史界面及相关交互。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/prompt/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/tui/src/component/prompt/index.tsx",
+      "summary": "实现终端的索引界面及相关交互。 对外提供 Prompt。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/index.tsx:pastedFilepath",
+      "type": "function",
+      "name": "pastedFilepath",
+      "filePath": "packages/tui/src/component/prompt/index.tsx",
+      "lineRange": [
+        78,
+        87
+      ],
+      "summary": "实现 pastedFilepath 的索引操作，调用 value.replace、raw.startsWith、fileURLToPath、raw.replace 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/index.tsx:formatEditorContext",
+      "type": "function",
+      "name": "formatEditorContext",
+      "filePath": "packages/tui/src/component/prompt/index.tsx",
+      "lineRange": [
+        128,
+        139
+      ],
+      "summary": "格式化Editor上下文，调用 selection.ranges.filter、selected.map、getEditorRangeLabel、ranges.join 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "type": "function",
+      "name": "Prompt",
+      "filePath": "packages/tui/src/component/prompt/index.tsx",
+      "lineRange": [
+        143,
+        1716
+      ],
+      "summary": "渲染提示词组件，组织索引的界面内容和交互；使用 createSignal、useLeaderActive、useLocal、useArgs 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "type": "file",
+      "name": "local-attachment.ts",
+      "filePath": "packages/tui/src/component/prompt/local-attachment.ts",
+      "summary": "为 tui 提供本地附件相关数据处理接口。 对外提供 readLocalAttachment、readLocalAttachmentWith。",
+      "tags": [
+        "tui",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachment",
+      "type": "function",
+      "name": "readLocalAttachment",
+      "filePath": "packages/tui/src/component/prompt/local-attachment.ts",
+      "lineRange": [
+        14,
+        23
+      ],
+      "summary": "读取本地附件，调用 readLocalAttachmentWith、readFile、path.extname 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachmentWith",
+      "type": "function",
+      "name": "readLocalAttachmentWith",
+      "filePath": "packages/tui/src/component/prompt/local-attachment.ts",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "读取本地附件附带，调用 files.mime、files.readText、mime.startsWith、files.readBytes 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/prompt/move.tsx",
+      "type": "file",
+      "name": "move.tsx",
+      "filePath": "packages/tui/src/component/prompt/move.tsx",
+      "summary": "实现终端的移动界面及相关交互。 对外提供 usePromptMove。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "type": "function",
+      "name": "usePromptMove",
+      "filePath": "packages/tui/src/component/prompt/move.tsx",
+      "lineRange": [
+        18,
+        205
+      ],
+      "summary": "连接提示词移动，调用 useDialog、useSDK、useSync、useToast 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/component/prompt/stash.tsx",
+      "type": "file",
+      "name": "stash.tsx",
+      "filePath": "packages/tui/src/component/prompt/stash.tsx",
+      "summary": "实现终端的暂存界面及相关交互。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "type": "file",
+      "name": "workspace.tsx",
+      "filePath": "packages/tui/src/component/prompt/workspace.tsx",
+      "summary": "实现终端的工作区界面及相关交互。 对外提供 usePromptWorkspace。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "type": "function",
+      "name": "usePromptWorkspace",
+      "filePath": "packages/tui/src/component/prompt/workspace.tsx",
+      "lineRange": [
+        16,
+        137
+      ],
+      "summary": "连接提示词工作区，调用 useDialog、useSDK、useProject、useSync 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/component/register-spinner.ts",
+      "type": "file",
+      "name": "register-spinner.ts",
+      "filePath": "packages/tui/src/component/register-spinner.ts",
+      "summary": "为 tui 提供register加载指示器相关数据处理接口。 对外提供 registerOpencodeSpinner。",
+      "tags": [
+        "tui",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/register-spinner.ts:registerOpencodeSpinner",
+      "type": "function",
+      "name": "registerOpencodeSpinner",
+      "filePath": "packages/tui/src/component/register-spinner.ts",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "注册Opencode加载指示器，调用 getComponentCatalogue、registerSpinner 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/spinner.tsx",
+      "type": "file",
+      "name": "spinner.tsx",
+      "filePath": "packages/tui/src/component/spinner.tsx",
+      "summary": "实现终端的加载指示器界面及相关交互。 对外提供 SPINNER_FRAMES、Spinner。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/spinner.tsx:Spinner",
+      "type": "function",
+      "name": "Spinner",
+      "filePath": "packages/tui/src/component/spinner.tsx",
+      "lineRange": [
+        12,
+        26
+      ],
+      "summary": "渲染加载指示器组件，组织加载指示器的界面内容和交互；使用 useTheme、useKV、kv.get、color 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/startup-loading.tsx",
+      "type": "file",
+      "name": "startup-loading.tsx",
+      "filePath": "packages/tui/src/component/startup-loading.tsx",
+      "summary": "实现终端的启动加载界面及相关交互。 对外提供 StartupLoading。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/component/startup-loading.tsx:StartupLoading",
+      "type": "function",
+      "name": "StartupLoading",
+      "filePath": "packages/tui/src/component/startup-loading.tsx",
+      "lineRange": [
+        5,
+        63
+      ],
+      "summary": "渲染启动加载组件，组织启动加载的界面内容和交互；使用 useTheme、createSignal、createMemo、props.ready 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/tui/src/component/todo-item.tsx",
+      "type": "file",
+      "name": "todo-item.tsx",
+      "filePath": "packages/tui/src/component/todo-item.tsx",
+      "summary": "实现终端的待办条目界面及相关交互。 对外提供 TodoItem。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/todo-item.tsx:TodoItem",
+      "type": "function",
+      "name": "TodoItem",
+      "filePath": "packages/tui/src/component/todo-item.tsx",
+      "lineRange": [
+        8,
+        32
+      ],
+      "summary": "渲染待办条目组件，组织待办条目的界面内容和交互；使用 useTheme 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/use-connected.tsx",
+      "type": "file",
+      "name": "use-connected.tsx",
+      "filePath": "packages/tui/src/component/use-connected.tsx",
+      "summary": "实现终端的使用已连接界面及相关交互。 对外提供 useConnected。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/use-connected.tsx:useConnected",
+      "type": "function",
+      "name": "useConnected",
+      "filePath": "packages/tui/src/component/use-connected.tsx",
+      "lineRange": [
+        4,
+        12
+      ],
+      "summary": "连接已连接，调用 useSync、createMemo、sync.data.provider.some 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/component/workspace-label.tsx",
+      "type": "file",
+      "name": "workspace-label.tsx",
+      "filePath": "packages/tui/src/component/workspace-label.tsx",
+      "summary": "实现终端的工作区标签界面及相关交互。 对外提供 WorkspaceLabel。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/component/workspace-label.tsx:WorkspaceLabel",
+      "type": "function",
+      "name": "WorkspaceLabel",
+      "filePath": "packages/tui/src/component/workspace-label.tsx",
+      "lineRange": [
+        5,
+        19
+      ],
+      "summary": "渲染工作区标签组件，组织工作区标签的界面内容和交互；使用 useTheme、color 读取状态或构造子视图。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/config/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "packages/tui/src/config/index.tsx",
+      "summary": "实现终端的索引界面及相关交互。 对外提供 AttentionSoundName、PluginOptions、PluginSpec、LeaderTimeoutDefault、LeaderTimeout、ScrollSpeed。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/tui/src/config/index.tsx:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "packages/tui/src/config/index.tsx",
+      "lineRange": [
+        101,
+        136
+      ],
+      "summary": "解析索引，调用 TuiKeybind.defaultValue、inputUndo.split、values.indexOf、createBindingLookup 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/index.tsx:TuiConfigProvider",
+      "type": "function",
+      "name": "TuiConfigProvider",
+      "filePath": "packages/tui/src/config/index.tsx",
+      "lineRange": [
+        140,
+        142
+      ],
+      "summary": "渲染Tui配置提供商组件，组织索引的界面内容和交互。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "function",
+      "name": "useTuiConfig",
+      "filePath": "packages/tui/src/config/index.tsx",
+      "lineRange": [
+        144,
+        148
+      ],
+      "summary": "连接Tui配置，调用 useContext 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/config/keybind.ts",
+      "type": "file",
+      "name": "keybind.ts",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "summary": "为 tui 提供快捷键相关数据处理接口。 对外提供 BindingValueSchema、LeaderDefault、Definitions、KeybindOverrides、Descriptions、CommandMap。",
+      "tags": [
+        "tui",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/tui/src/config/keybind.ts:toBindingConfig",
+      "type": "function",
+      "name": "toBindingConfig",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "lineRange": [
+        439,
+        441
+      ],
+      "summary": "实现 toBindingConfig 的快捷键操作，输入包括 keybinds。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/keybind.ts:defaultValue",
+      "type": "function",
+      "name": "defaultValue",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "lineRange": [
+        445,
+        447
+      ],
+      "summary": "实现 defaultValue 的快捷键操作，输入包括 name。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/keybind.ts:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "lineRange": [
+        449,
+        458
+      ],
+      "summary": "解析快捷键，调用 unknownKeys、invalid.join、decodeBindingValue 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/keybind.ts:unknownKeys",
+      "type": "function",
+      "name": "unknownKeys",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "lineRange": [
+        462,
+        464
+      ],
+      "summary": "实现 unknownKeys 的快捷键操作，调用 KeybindNames.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/config/keybind.ts:bindingDefaults",
+      "type": "function",
+      "name": "bindingDefaults",
+      "filePath": "packages/tui/src/config/keybind.ts",
+      "lineRange": [
+        466,
+        471
+      ],
+      "summary": "实现 bindingDefaults 的快捷键操作。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/context/args.tsx",
+      "type": "file",
+      "name": "args.tsx",
+      "filePath": "packages/tui/src/context/args.tsx",
+      "summary": "管理args的共享状态与读取接口，为 tui 下游组件提供上下文。 对外提供 { use: useArgs, provider: ArgsProvider }。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/context/clipboard.tsx",
+      "type": "file",
+      "name": "clipboard.tsx",
+      "filePath": "packages/tui/src/context/clipboard.tsx",
+      "summary": "管理clipboard的共享状态与读取接口，为 tui 下游组件提供上下文。 对外提供 ClipboardProvider、useClipboard。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/clipboard.tsx:ClipboardProvider",
+      "type": "function",
+      "name": "ClipboardProvider",
+      "filePath": "packages/tui/src/context/clipboard.tsx",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "渲染Clipboard提供商组件，组织clipboard的界面内容和交互。",
+      "tags": [
+        "界面组件",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/tui/src/context/clipboard.tsx:useClipboard",
+      "type": "function",
+      "name": "useClipboard",
+      "filePath": "packages/tui/src/context/clipboard.tsx",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "连接Clipboard，调用 useContext 完成相关步骤。",
+      "tags": [
+        "函数",
+        "tui",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/tui/src/context/data.tsx",
+      "type": "file",
+      "name": "data.tsx",
+      "filePath": "packages/tui/src/context/data.tsx",
+      "summary": "维护 V2 会话消息、权限及问题数据，并以目录和工作区身份缓存 Location 级代理、模型、命令等资源；通过事件更新响应式存储。",
+      "tags": [
+        "tui",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "function:packages/tui/src/component/prompt/index.tsx:pastedFilepath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "function:packages/tui/src/component/prompt/index.tsx:formatEditorContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/dialog-provider.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/dialog-skill.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/dialog-stash.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/dialog-workspace-unavailable.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/prompt/autocomplete.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/prompt/move.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/register-spinner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/component/spinner.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/config/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/args.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/clipboard.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/editor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/exit.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/location.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/project.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/route.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/editor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/keymap.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/prompt/display.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/prompt/history.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/prompt/part.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/prompt/stash.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/prompt/traits.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/ui/border.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/ui/dialog-alert.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/ui/spinner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/ui/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/util/format.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/util/locale.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/index.tsx",
+      "target": "file:packages/tui/src/util/signal.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/keymap.tsx:useLeaderActive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/runtime.tsx:useTuiPaths",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/location.tsx:useLocation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/runtime.tsx:useTuiTerminalEnvironment",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/clipboard.tsx:useClipboard",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/ui/dialog.tsx:useDialog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/ui/toast.tsx:useToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/keymap.tsx:useCommandShortcut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/editor.ts:editorSelectionKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/context/event.ts:useEvent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/editor.ts:openEditor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/editor.ts:normalizePromptContent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/prompt/traits.ts:computePromptTraits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/util/signal.ts:createFadeIn",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/ui/spinner.ts:createFrames",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/ui/spinner.ts:createColors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/index.tsx:Prompt",
+      "target": "function:packages/tui/src/prompt/part.ts:expandPastedTextPlaceholders",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "target": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "target": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "target": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachmentWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/local-attachment.ts",
+      "target": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachmentWith",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachment",
+      "target": "function:packages/tui/src/component/prompt/local-attachment.ts:readLocalAttachmentWith",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/component/dialog-move-session.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/component/dialog-workspace-file-changes.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/context/project.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/context/runtime.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/routes/home/session-destination.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/ui/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/move.tsx",
+      "target": "file:packages/tui/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "target": "function:packages/tui/src/ui/dialog.tsx:useDialog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "target": "function:packages/tui/src/ui/toast.tsx:useToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "target": "function:packages/tui/src/routes/home/session-destination.tsx:useHomeSessionDestination",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/move.tsx:usePromptMove",
+      "target": "function:packages/tui/src/context/runtime.tsx:useTuiPaths",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/component/dialog-workspace-create.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/component/workspace-label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/context/project.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/ui/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/prompt/workspace.tsx",
+      "target": "file:packages/tui/src/util/error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "target": "function:packages/tui/src/ui/dialog.tsx:useDialog",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/component/prompt/workspace.tsx:usePromptWorkspace",
+      "target": "function:packages/tui/src/ui/toast.tsx:useToast",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/register-spinner.ts",
+      "target": "function:packages/tui/src/component/register-spinner.ts:registerOpencodeSpinner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/register-spinner.ts",
+      "target": "function:packages/tui/src/component/register-spinner.ts:registerOpencodeSpinner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/spinner.tsx",
+      "target": "function:packages/tui/src/component/spinner.tsx:Spinner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/spinner.tsx",
+      "target": "function:packages/tui/src/component/spinner.tsx:Spinner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/spinner.tsx",
+      "target": "file:packages/tui/src/component/register-spinner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/spinner.tsx",
+      "target": "file:packages/tui/src/context/kv.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/spinner.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/startup-loading.tsx",
+      "target": "function:packages/tui/src/component/startup-loading.tsx:StartupLoading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/startup-loading.tsx",
+      "target": "function:packages/tui/src/component/startup-loading.tsx:StartupLoading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/startup-loading.tsx",
+      "target": "file:packages/tui/src/component/spinner.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/startup-loading.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/todo-item.tsx",
+      "target": "function:packages/tui/src/component/todo-item.tsx:TodoItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/todo-item.tsx",
+      "target": "function:packages/tui/src/component/todo-item.tsx:TodoItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/todo-item.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/use-connected.tsx",
+      "target": "function:packages/tui/src/component/use-connected.tsx:useConnected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/use-connected.tsx",
+      "target": "function:packages/tui/src/component/use-connected.tsx:useConnected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/use-connected.tsx",
+      "target": "file:packages/tui/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/component/workspace-label.tsx",
+      "target": "function:packages/tui/src/component/workspace-label.tsx:WorkspaceLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/component/workspace-label.tsx",
+      "target": "function:packages/tui/src/component/workspace-label.tsx:WorkspaceLabel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/component/workspace-label.tsx",
+      "target": "file:packages/tui/src/context/theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:TuiConfigProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:TuiConfigProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "function:packages/tui/src/config/index.tsx:useTuiConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "file:packages/tui/src/config/keybind.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:toBindingConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:toBindingConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:defaultValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:defaultValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:unknownKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:unknownKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:bindingDefaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "function:packages/tui/src/config/keybind.ts:bindingDefaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/tui/src/config/keybind.ts:parse",
+      "target": "function:packages/tui/src/config/keybind.ts:unknownKeys",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/args.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/clipboard.tsx",
+      "target": "function:packages/tui/src/context/clipboard.tsx:ClipboardProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/clipboard.tsx",
+      "target": "function:packages/tui/src/context/clipboard.tsx:ClipboardProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/clipboard.tsx",
+      "target": "function:packages/tui/src/context/clipboard.tsx:useClipboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/tui/src/context/clipboard.tsx",
+      "target": "function:packages/tui/src/context/clipboard.tsx:useClipboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/tui/src/context/clipboard.tsx",
+      "target": "file:packages/tui/src/clipboard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/data.tsx",
+      "target": "file:packages/tui/src/context/event.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/data.tsx",
+      "target": "file:packages/tui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/tui/src/context/data.tsx",
+      "target": "file:packages/tui/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

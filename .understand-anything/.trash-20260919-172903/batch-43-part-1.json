@@ -1,0 +1,2638 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/codemode/src/codemode.ts",
+      "type": "file",
+      "name": "codemode.ts",
+      "filePath": "packages/codemode/src/codemode.ts",
+      "summary": "定义 CodeMode 输入、成功或失败结果与诊断 Schema；校验执行限额并向单次 execute 或可复用 make 运行时注入工具目录与搜索索引。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "代码执行接口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/codemode.ts:validateLimit",
+      "type": "function",
+      "name": "validateLimit",
+      "filePath": "packages/codemode/src/codemode.ts",
+      "lineRange": [
+        119,
+        128
+      ],
+      "summary": "校验执行限额是否为满足下界的安全整数，用于CodeMode 解释器的代码执行接口流程。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/codemode.ts:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "packages/codemode/src/codemode.ts",
+      "lineRange": [
+        137,
+        143
+      ],
+      "summary": "校验工具定义与执行限额后运行一次受限程序，返回包含诊断或结果及工具调用记录的 Effect。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/codemode.ts:make",
+      "type": "function",
+      "name": "make",
+      "filePath": "packages/codemode/src/codemode.ts",
+      "lineRange": [
+        146,
+        159
+      ],
+      "summary": "预先准备工具目录、索引和执行限额，创建支持多次执行的 CodeMode 运行时。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/codemode/src/index.ts",
+      "summary": "CodeMode 解释器的index公开入口，提供 ToolError、toolError。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "index"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "summary": "定义受限解释器的 AST 访问、运行时引用和程序异常模型，统一未支持语法的诊断以及源码位置格式。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "模型"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:unsupportedSyntax",
+      "type": "function",
+      "name": "unsupportedSyntax",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        148,
+        154
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 unsupportedSyntax，接收 kind、node 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:isRecord",
+      "type": "function",
+      "name": "isRecord",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        156,
+        157
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 isRecord，接收 value 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "type": "function",
+      "name": "asNode",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        159,
+        164
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 asNode，调用 isRecord 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:getArray",
+      "type": "function",
+      "name": "getArray",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        166,
+        170
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 getArray，接收 node、key 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:getString",
+      "type": "function",
+      "name": "getString",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        172,
+        176
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 getString，接收 node、key 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:getBoolean",
+      "type": "function",
+      "name": "getBoolean",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        178,
+        182
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 getBoolean，接收 node、key 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:getOptionalNode",
+      "type": "function",
+      "name": "getOptionalNode",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        184,
+        188
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 getOptionalNode，调用 asNode 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:getNode",
+      "type": "function",
+      "name": "getNode",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        190,
+        190
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 getNode，调用 asNode 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:sourceLocation",
+      "type": "function",
+      "name": "sourceLocation",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        192,
+        195
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 sourceLocation，接收 node 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/model.ts:formatLocation",
+      "type": "function",
+      "name": "formatLocation",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        197,
+        201
+      ],
+      "summary": "CodeMode 解释器的模型处理函数 formatLocation，调用 sourceLocation 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:CodeModeFunction",
+      "type": "class",
+      "name": "CodeModeFunction",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        43,
+        49
+      ],
+      "summary": "CodeMode 解释器的模型类型 CodeModeFunction，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:IntrinsicReference",
+      "type": "class",
+      "name": "IntrinsicReference",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        51,
+        56
+      ],
+      "summary": "CodeMode 解释器的模型类型 IntrinsicReference，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:ComputedValue",
+      "type": "class",
+      "name": "ComputedValue",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "CodeMode 解释器的模型类型 ComputedValue，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:PromiseNamespace",
+      "type": "class",
+      "name": "PromiseNamespace",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        62,
+        62
+      ],
+      "summary": "CodeMode 解释器的模型类型 PromiseNamespace，封装服务依赖或类型化错误。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:PromiseMethodReference",
+      "type": "class",
+      "name": "PromiseMethodReference",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "CodeMode 解释器的模型类型 PromiseMethodReference，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:GlobalNamespace",
+      "type": "class",
+      "name": "GlobalNamespace",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        83,
+        85
+      ],
+      "summary": "CodeMode 解释器的模型类型 GlobalNamespace，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:GlobalMethodReference",
+      "type": "class",
+      "name": "GlobalMethodReference",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        87,
+        92
+      ],
+      "summary": "CodeMode 解释器的模型类型 GlobalMethodReference，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:CoercionFunction",
+      "type": "class",
+      "name": "CoercionFunction",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        94,
+        96
+      ],
+      "summary": "CodeMode 解释器的模型类型 CoercionFunction，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:UriFunction",
+      "type": "class",
+      "name": "UriFunction",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        98,
+        100
+      ],
+      "summary": "CodeMode 解释器的模型类型 UriFunction，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:ProgramThrow",
+      "type": "class",
+      "name": "ProgramThrow",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        102,
+        104
+      ],
+      "summary": "CodeMode 解释器的模型类型 ProgramThrow，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:ErrorConstructorReference",
+      "type": "class",
+      "name": "ErrorConstructorReference",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        106,
+        108
+      ],
+      "summary": "CodeMode 解释器的模型类型 ErrorConstructorReference，提供 constructor 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/model.ts:InterpreterRuntimeError",
+      "type": "class",
+      "name": "InterpreterRuntimeError",
+      "filePath": "packages/codemode/src/interpreter/model.ts",
+      "lineRange": [
+        127,
+        146
+      ],
+      "summary": "CodeMode 解释器的模型类型 InterpreterRuntimeError，提供 constructor、as 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/interpreter/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "summary": "解析并解释模型生成的受限程序，通过受控工具运行时和标准库求值；处理异步任务、运行异常、执行限额及 UTF-8 输出截断。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "运行时"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:parseProgram",
+      "type": "function",
+      "name": "parseProgram",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        115,
+        149
+      ],
+      "summary": "将输入代码解析为解释器可执行的程序，并收集语法诊断，用于CodeMode 解释器的运行时流程；相关调用包括 transpileModule、flattenDiagnosticMessageText、transpiled.outputText.indexOf。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:normalizeError",
+      "type": "function",
+      "name": "normalizeError",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        154,
+        220
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 normalizeError，调用 formatLocation、sourceLocation、publicErrorMessage、containsRuntimeReference、copyOut 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:isRuntimeReference",
+      "type": "function",
+      "name": "isRuntimeReference",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        230,
+        242
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 isRuntimeReference，调用 isSandboxValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:containsRuntimeReference",
+      "type": "function",
+      "name": "containsRuntimeReference",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        244,
+        254
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 containsRuntimeReference，调用 isRuntimeReference、seen.has、seen.add、value.some、containsRuntimeReference 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:containsOpaqueReference",
+      "type": "function",
+      "name": "containsOpaqueReference",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        259,
+        270
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 containsOpaqueReference，调用 isSandboxValue、isRuntimeReference、seen.has、seen.add、value.some 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:typeofValue",
+      "type": "function",
+      "name": "typeofValue",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        275,
+        292
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 typeofValue，接收 value 参数。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:instanceofValue",
+      "type": "function",
+      "name": "instanceofValue",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        298,
+        333
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 instanceofValue，调用 errorBrandName、typeofValue 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:invokeStringMethod",
+      "type": "function",
+      "name": "invokeStringMethod",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        335,
+        509
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 invokeStringMethod，调用 value.toLowerCase、value.toUpperCase、value.trim、value.trimStart、value.trimEnd 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:invokeArrayStatic",
+      "type": "function",
+      "name": "invokeArrayStatic",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        511,
+        548
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 invokeArrayStatic，调用 boundedData 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:invokeGlobalMethod",
+      "type": "function",
+      "name": "invokeGlobalMethod",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        550,
+        573
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 invokeGlobalMethod，调用 invokeObjectMethod、invokeMathMethod、invokeArrayStatic、invokeNumberStatic、invokeStringStatic 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:collectPatternNames",
+      "type": "function",
+      "name": "collectPatternNames",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        576,
+        600
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 collectPatternNames，调用 out.push、getString、collectPatternNames、getNode、getArray 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "type": "function",
+      "name": "executeWithLimits",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        3340,
+        3407
+      ],
+      "summary": "在执行限额内解释程序并归并结果、日志及工具调用记录，用于CodeMode 解释器的运行时流程；相关调用包括 ToolRuntime.make、options.code.trim、Effect.succeed。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/interpreter/runtime.ts:boundOutput",
+      "type": "function",
+      "name": "boundOutput",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        3427,
+        3465
+      ],
+      "summary": "将结果和日志限制在输出大小预算内，用于CodeMode 解释器的运行时流程；相关调用包括 utf8ByteLength、utf8Truncate、kept.push。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:packages/codemode/src/interpreter/runtime.ts:Interpreter",
+      "type": "class",
+      "name": "Interpreter",
+      "filePath": "packages/codemode/src/interpreter/runtime.ts",
+      "lineRange": [
+        602,
+        3327
+      ],
+      "summary": "CodeMode 解释器的运行时类型 Interpreter，提供 constructor、run、drainPendingSettlements、createToolCallPromise、observePromise、settlePromise 方法。",
+      "tags": [
+        "类型定义",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/codemode/src/openapi/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "packages/codemode/src/openapi/index.ts",
+      "summary": "将 OpenAPI 操作编排为 CodeMode 工具树，合并操作命名、输入输出 Schema、服务器地址及认证计划，并返回无法转换的操作信息。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "index"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/index.ts:fromSpec",
+      "type": "function",
+      "name": "fromSpec",
+      "filePath": "packages/codemode/src/openapi/index.ts",
+      "lineRange": [
+        39,
+        116
+      ],
+      "summary": "把 OpenAPI 文档转换为工具子树，记录不能支持的操作，并为可用操作连接 Schema 与请求执行计划。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/index.ts:setTool",
+      "type": "function",
+      "name": "setTool",
+      "filePath": "packages/codemode/src/openapi/index.ts",
+      "lineRange": [
+        118,
+        130
+      ],
+      "summary": "CodeMode 解释器的index处理函数 setTool，调用 isRecord、setTool 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/openapi/runtime.ts",
+      "type": "file",
+      "name": "runtime.ts",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "summary": "依据 OpenAPI 操作计划建立 HTTP 请求，解析认证凭据，序列化路径与查询参数，并读取响应为工具输出。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "运行时"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "type": "function",
+      "name": "invoke",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        11,
+        52
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 invoke，调用 Effect.gen、isRecord、buildRequest、resolveAuth、HttpClientRequest.setUrlParam 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "type": "function",
+      "name": "buildRequest",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        54,
+        114
+      ],
+      "summary": "根据操作计划建立带认证与输入数据的 HTTP 请求，用于CodeMode 解释器的运行时流程；相关调用包括 Effect.gen、buildUrl、Effect.fail。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:resolveAuth",
+      "type": "function",
+      "name": "resolveAuth",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        116,
+        153
+      ],
+      "summary": "解析操作要求的认证方案及宿主提供的凭据，用于CodeMode 解释器的运行时流程；相关调用包括 Effect.gen、own、unavailable.push。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:applyCredentials",
+      "type": "function",
+      "name": "applyCredentials",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        155,
+        198
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 applyCredentials，调用 add、Buffer.from、credential.name.toLowerCase、toolError、definition.name.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:buildUrl",
+      "type": "function",
+      "name": "buildUrl",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        200,
+        225
+      ],
+      "summary": "把路径与查询输入序列化到操作 URL，用于CodeMode 解释器的运行时流程；相关调用包括 own、toolError、serializeSimple。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:serializeSimple",
+      "type": "function",
+      "name": "serializeSimple",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        227,
+        249
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 serializeSimple，调用 value.map、items.find、items.join、isRecord、scalar 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:serializeQuery",
+      "type": "function",
+      "name": "serializeQuery",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        251,
+        286
+      ],
+      "summary": "CodeMode 解释器的运行时处理函数 serializeQuery，调用 isRecord、toolError、HttpClientRequest.appendUrlParam、serializeSimple、value.some 完成该步骤。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/runtime.ts:readResponseBody",
+      "type": "function",
+      "name": "readResponseBody",
+      "filePath": "packages/codemode/src/openapi/runtime.ts",
+      "lineRange": [
+        288,
+        326
+      ],
+      "summary": "根据响应内容类型读取工具返回值，用于CodeMode 解释器的运行时流程；相关调用包括 Effect.gen、Effect.fail、toolError。",
+      "tags": [
+        "函数",
+        "接口实现",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/codemode/src/openapi/spec.ts",
+      "type": "file",
+      "name": "spec.ts",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "summary": "解析 OpenAPI 引用、参数与 JSON 请求体，投影工具输入输出 Schema、确定操作路径、校验服务器地址并整理安全方案。",
+      "tags": [
+        "测试",
+        "CodeMode 解释器",
+        "命令规范"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "function",
+      "name": "isRecord",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        18,
+        19
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 isRecord，接收 value 参数。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "function",
+      "name": "nonEmptyString",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        23,
+        24
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 nonEmptyString，接收 value 参数。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:own",
+      "type": "function",
+      "name": "own",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        28,
+        29
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 own，接收 record、key 参数。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        31,
+        44
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 resolve，调用 next 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:componentDefinitions",
+      "type": "function",
+      "name": "componentDefinitions",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        56,
+        60
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 componentDefinitions，调用 isRecord、projectSchema 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:isFlattenableObjectBody",
+      "type": "function",
+      "name": "isFlattenableObjectBody",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        88,
+        100
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 isFlattenableObjectBody，调用 isRecord 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "type": "function",
+      "name": "operationParameters",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        104,
+        179
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 operationParameters，调用 asArray、resolve、isRecord、nonEmptyString、declared.set 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "type": "function",
+      "name": "operationBody",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        181,
+        232
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 operationBody，调用 resolve、isRecord、jsonContent、isFlattenableObjectBody、projectSchema 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationInput",
+      "type": "function",
+      "name": "operationInput",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        234,
+        268
+      ],
+      "summary": "合并 OpenAPI 路径、查询、请求头及请求体输入，用于CodeMode 解释器的命令规范流程；相关调用包括 operationParameters、operationBody、Map.groupBy。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:inputSchema",
+      "type": "function",
+      "name": "inputSchema",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        270,
+        283
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 inputSchema，调用 fields.filter、withDefinitions、fields.map 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "type": "function",
+      "name": "successfulResponses",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        285,
+        304
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 successfulResponses，调用 isRecord、entries.filter、a.localeCompare、status.toUpperCase、resolve 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationOutput",
+      "type": "function",
+      "name": "operationOutput",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        306,
+        351
+      ],
+      "summary": "将成功响应 Schema 转换为工具输出契约，用于CodeMode 解释器的命令规范流程；相关调用包括 successfulResponses、responses.value.some、isRecord。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:fallbackOperationId",
+      "type": "function",
+      "name": "fallbackOperationId",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        362,
+        375
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 fallbackOperationId，调用 part.startsWith、part.endsWith、part.slice、part.split、word.toLowerCase 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationPath",
+      "type": "function",
+      "name": "operationPath",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        377,
+        406
+      ],
+      "summary": "将操作标识转为经清理且不冲突的工具命名路径，用于CodeMode 解释器的命令规范流程；相关调用包括 nonEmptyString、fallbackOperationId、raw.split。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:specServerUrl",
+      "type": "function",
+      "name": "specServerUrl",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        418,
+        426
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 specServerUrl，调用 asArray、nonEmptyString、validateBaseUrl 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:validateBaseUrl",
+      "type": "function",
+      "name": "validateBaseUrl",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        428,
+        438
+      ],
+      "summary": "校验工具 HTTP 请求使用的基础 URL，用于CodeMode 解释器的命令规范流程；相关调用包括 URL.parse。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:securityRequirements",
+      "type": "function",
+      "name": "securityRequirements",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        440,
+        458
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 securityRequirements，调用 isRecord、scopes.filter、requirements.push 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:operationSecurityRequirements",
+      "type": "function",
+      "name": "operationSecurityRequirements",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        460,
+        487
+      ],
+      "summary": "CodeMode 解释器的命令规范处理函数 operationSecurityRequirements，调用 securityRequirements、parsed.value.filter、own、parsed.value.flatMap、names.find 完成该步骤。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "type": "function",
+      "name": "securitySchemes",
+      "filePath": "packages/codemode/src/openapi/spec.ts",
+      "lineRange": [
+        489,
+        511
+      ],
+      "summary": "读取 OpenAPI 安全方案并确定可支持的认证结构，用于CodeMode 解释器的命令规范流程；相关调用包括 isRecord、resolve、nonEmptyString。",
+      "tags": [
+        "函数",
+        "测试",
+        "CodeMode 解释器"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/codemode/src/openapi/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "packages/codemode/src/openapi/types.ts",
+      "summary": "CodeMode 解释器的types实现模块，配置 effect、effect/unstable/http、../tool.js 相关模块。",
+      "tags": [
+        "接口实现",
+        "CodeMode 解释器",
+        "types"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "function:packages/codemode/src/codemode.ts:validateLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "function:packages/codemode/src/codemode.ts:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "function:packages/codemode/src/codemode.ts:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "function:packages/codemode/src/codemode.ts:make",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "function:packages/codemode/src/codemode.ts:make",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "file:packages/codemode/src/interpreter/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/codemode.ts",
+      "target": "file:packages/codemode/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:unsupportedSyntax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:unsupportedSyntax",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:isRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:isRecord",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getArray",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getArray",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getBoolean",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getBoolean",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getOptionalNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getOptionalNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:getNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:sourceLocation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:sourceLocation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:formatLocation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "function:packages/codemode/src/interpreter/model.ts:formatLocation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:CodeModeFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:CodeModeFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:IntrinsicReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:IntrinsicReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ComputedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ComputedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:PromiseNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:PromiseNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:PromiseMethodReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:PromiseMethodReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:GlobalNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:GlobalNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:GlobalMethodReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:GlobalMethodReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:CoercionFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:CoercionFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:UriFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:UriFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ProgramThrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ProgramThrow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ErrorConstructorReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:ErrorConstructorReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:InterpreterRuntimeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "class:packages/codemode/src/interpreter/model.ts:InterpreterRuntimeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "target": "function:packages/codemode/src/interpreter/model.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/model.ts:getOptionalNode",
+      "target": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/model.ts:getNode",
+      "target": "function:packages/codemode/src/interpreter/model.ts:asNode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/model.ts:formatLocation",
+      "target": "function:packages/codemode/src/interpreter/model.ts:sourceLocation",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/model.ts",
+      "target": "file:packages/codemode/src/values.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:parseProgram",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:normalizeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:isRuntimeReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:containsRuntimeReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:containsOpaqueReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:typeofValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:instanceofValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:invokeStringMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:invokeArrayStatic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:invokeGlobalMethod",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:collectPatternNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:boundOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "class:packages/codemode/src/interpreter/runtime.ts:Interpreter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:normalizeError",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:containsRuntimeReference",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:containsRuntimeReference",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:isRuntimeReference",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:containsOpaqueReference",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:isRuntimeReference",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:instanceofValue",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:typeofValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:invokeGlobalMethod",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:invokeArrayStatic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:parseProgram",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:normalizeError",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/interpreter/runtime.ts:executeWithLimits",
+      "target": "function:packages/codemode/src/interpreter/runtime.ts:boundOutput",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/codemode.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/interpreter/model.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/collections.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/console.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/date.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/json.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/math.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/number.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/object.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/promise.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/regexp.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/string.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/url.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/stdlib/value.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/tool-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/interpreter/runtime.ts",
+      "target": "file:packages/codemode/src/values.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "function:packages/codemode/src/openapi/index.ts:fromSpec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "function:packages/codemode/src/openapi/index.ts:fromSpec",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "function:packages/codemode/src/openapi/index.ts:setTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/index.ts:fromSpec",
+      "target": "function:packages/codemode/src/openapi/index.ts:setTool",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "file:packages/codemode/src/openapi/runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "file:packages/codemode/src/openapi/spec.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "file:packages/codemode/src/openapi/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/index.ts",
+      "target": "file:packages/codemode/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:resolveAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:applyCredentials",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:buildUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeSimple",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:readResponseBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:resolveAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:invoke",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:readResponseBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:buildUrl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeQuery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:buildRequest",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeSimple",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:resolveAuth",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:applyCredentials",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:buildUrl",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeSimple",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/runtime.ts:serializeQuery",
+      "target": "function:packages/codemode/src/openapi/runtime.ts:serializeSimple",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "file:packages/codemode/src/openapi/spec.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "file:packages/codemode/src/openapi/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/runtime.ts",
+      "target": "file:packages/codemode/src/tool-error.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:own",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:own",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:componentDefinitions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:componentDefinitions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isFlattenableObjectBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationInput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:inputSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:inputSchema",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationOutput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationOutput",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:fallbackOperationId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:specServerUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:specServerUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:validateBaseUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:validateBaseUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:securityRequirements",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:securityRequirements",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationSecurityRequirements",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationSecurityRequirements",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:componentDefinitions",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:isFlattenableObjectBody",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isFlattenableObjectBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationInput",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationParameters",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationInput",
+      "target": "function:packages/codemode/src/openapi/spec.ts:operationBody",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationOutput",
+      "target": "function:packages/codemode/src/openapi/spec.ts:successfulResponses",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationOutput",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationPath",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationPath",
+      "target": "function:packages/codemode/src/openapi/spec.ts:fallbackOperationId",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:specServerUrl",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:specServerUrl",
+      "target": "function:packages/codemode/src/openapi/spec.ts:validateBaseUrl",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:securityRequirements",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationSecurityRequirements",
+      "target": "function:packages/codemode/src/openapi/spec.ts:securityRequirements",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:operationSecurityRequirements",
+      "target": "function:packages/codemode/src/openapi/spec.ts:own",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "target": "function:packages/codemode/src/openapi/spec.ts:isRecord",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "target": "function:packages/codemode/src/openapi/spec.ts:resolve",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/codemode/src/openapi/spec.ts:securitySchemes",
+      "target": "function:packages/codemode/src/openapi/spec.ts:nonEmptyString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "file:packages/codemode/src/openapi/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "file:packages/codemode/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/spec.ts",
+      "target": "file:packages/codemode/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/openapi/types.ts",
+      "target": "file:packages/codemode/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/codemode.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/enumeration.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/openapi.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/parity.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/promise.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/signature.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/codemode/src/index.ts",
+      "target": "file:packages/codemode/test/stdlib.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": "service:packages/containers/rust/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "packages/containers/rust/Dockerfile",
+      "summary": "Dockerfile 描述容器、服务或部署入口，支撑 opencode 的运行环境和交付流程。",
+      "tags": [
+        "deployment",
+        "dockerfile",
+        "opencode"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:packages/containers/rust/Dockerfile:bun-node",
+      "type": "service",
+      "name": "bun-node",
+      "filePath": "packages/containers/rust/Dockerfile",
+      "lineRange": [
+        2,
+        14
+      ],
+      "summary": "packages/containers/rust/Dockerfile 定义服务 bun-node，用于本项目的容器化或运行时部署。",
+      "tags": [
+        "service",
+        "containerization",
+        "deployment"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:packages/containers/rust/Dockerfile",
+      "target": "service:packages/containers/rust/Dockerfile:bun-node",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

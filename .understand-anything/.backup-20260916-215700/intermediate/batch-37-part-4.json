@@ -1,0 +1,455 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/llm/test/route.test.ts",
+      "type": "file",
+      "name": "route.test.ts",
+      "filePath": "packages/llm/test/route.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「Route.with、merges endpoint query and header defaults while replacing auth and id」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/llm/test/schema.test.ts",
+      "type": "file",
+      "name": "schema.test.ts",
+      "filePath": "packages/llm/test/schema.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「llm schema、decodes a minimal request、accepts custom route ids、rejects invalid event type、finish constructors accept usage input、content part tagged union exposes guards、LLM.Usage」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/tool-runtime.test.ts",
+      "type": "file",
+      "name": "tool-runtime.test.ts",
+      "filePath": "packages/llm/test/tool-runtime.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「LLMClient tools、uses the registered model route when adding runtime tools、sends tool-call history and request options on the follow-up request、dispatches a tool call, appends results, and resumes streaming、projects encoded typed tool success into canonical model content、uses the narrow default projection for encoded typed success、can retain model media while redacting duplicated structured payload」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "type": "file",
+      "name": "tool-schema-projection.test.ts",
+      "filePath": "packages/llm/test/tool-schema-projection.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「tool schema projections、moonshot strips $ref siblings and converts tuple arrays to a schema object、gemini handles numeric enums, dangling required fields, untyped arrays, and scalar object keys、openai keeps one flat object top-level schema、applies model compatibility before protocol projection」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/tool-stream.test.ts",
+      "type": "file",
+      "name": "tool-stream.test.ts",
+      "filePath": "packages/llm/test/tool-stream.test.ts",
+      "summary": "验证 packages/llm 的行为，实际用例包括「ToolStream、starts from OpenAI-style deltas and finalizes parsed input、fails appendExisting when the provider skipped the tool start、uses final input override without losing accumulated deltas、preserves providerExecuted and clears all tools」。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/llm/test/tool.types.ts",
+      "type": "file",
+      "name": "tool.types.ts",
+      "filePath": "packages/llm/test/tool.types.ts",
+      "summary": "为 packages/llm 测试提供样本与环境，用于运行相关验证。",
+      "tags": [
+        "test",
+        "模块",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/llm/test/route.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/route.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/route.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/route.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/protocols/shared.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/schema.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/anthropic-messages.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/protocols/openai-responses.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/tool-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/test/lib/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/test/lib/openai-chunks.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/test/lib/sse.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-runtime.test.ts",
+      "target": "file:packages/llm/test/lib/tool-runtime.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/protocols/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/protocols/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/protocols/utils/tool-schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-schema-projection.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-stream.test.ts",
+      "target": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-stream.test.ts",
+      "target": "file:packages/llm/src/protocols/utils/tool-stream.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-stream.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool-stream.test.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool-stream.test.ts",
+      "target": "file:packages/llm/test/lib/effect.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/protocols/openai-chat.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/llm/test/tool.types.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

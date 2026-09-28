@@ -1,0 +1,95 @@
+[
+  {
+    "order": 1,
+    "title": "从主入口认识项目",
+    "description": "从 packages/opencode/src/index.ts 开始，把它与 README.zh.md 和根 package.json 对照阅读：OpenCode 是开源 AI 编程代理，而根 dev 命令实际启动这个基于 yargs 的入口。这里登记 run、serve、web、tui 等命令，说明同一仓库同时承载命令行、服务端和交互界面；后面的导览将沿一次会话请求进入核心，再返回用户看到的消息。",
+    "nodeIds": ["file:packages/opencode/src/index.ts", "document:README.zh.md", "config:package.json"]
+  },
+  {
+    "order": 2,
+    "title": "辨认入口与宿主",
+    "description": "沿旧入口的 tui 命令可以进入 packages/tui 的 OpenTUI/Solid 界面，Web 应用由 packages/app 装配 Provider 与路由，Electron 主进程则负责窗口、本地服务器和 IPC。另一个 packages/cli/src/index.ts 使用 Effect 命令运行时与按需加载的处理器，属于独立的新命令入口，不能据此认为根 dev 已切换过去。先分清启动宿主，再看它们调用的契约与服务，就不会把界面包误当成模型执行器。",
+    "nodeIds": ["file:packages/opencode/src/cli/cmd/tui.ts", "file:packages/cli/src/index.ts", "file:packages/tui/src/app.tsx", "file:packages/app/src/app.tsx", "file:packages/desktop/src/main/index.ts"]
+  },
+  {
+    "order": 3,
+    "title": "建立新架构边界",
+    "description": "新架构先把可序列化领域数据放进 Schema，再由 Protocol 声明浏览器安全的 HTTP 契约；Core 与 Protocol 建立在 Schema 之上，Server 才把领域运行时与协议接起来。Client 的运行时代码依赖 Schema 和 Protocol，不依赖 Core 或 Server，sdk-next 则有意组合 Client、Core、Server 提供嵌入式运行。用这条依赖方向理解下面的会话链路，比把所有带 session 名字的文件视为同一层更可靠。",
+    "nodeIds": ["file:packages/schema/src/session-input.ts", "file:packages/protocol/src/api.ts", "file:packages/server/src/routes.ts", "file:packages/client/src/contract.ts", "file:packages/sdk-next/src/opencode.ts"],
+    "languageLesson": "Effect 的 Service 描述可被请求的能力，Layer 负责构造并连接这些能力；依赖注入的边界同时决定服务实例的共享范围与释放时机。"
+  },
+  {
+    "order": 4,
+    "title": "从协议走到处理器",
+    "description": "Protocol 的 session 端点组声明创建、输入接纳、历史重放与中断，Server 处理器负责调用 Core 并把领域错误转换成 HTTP 响应。SessionLocation 中间件从持久 Session 记录读取目录和 workspaceID，再注入相应 Location 服务层，因此请求定位不应只依赖调用方当前目录。这里还要区分契约与实现：compact、wait 虽有接口，当前 Core 仍可能返回 OperationUnavailable，并由处理器映射为服务不可用。",
+    "nodeIds": ["file:packages/protocol/src/groups/session.ts", "file:packages/server/src/api.ts", "file:packages/server/src/handlers/session.ts", "file:packages/server/src/middleware/session-location.ts"]
+  },
+  {
+    "order": 5,
+    "title": "先接纳再执行输入",
+    "description": "SessionV2.prompt 首先持久接纳 session_input，再根据 resume 决定是否提示执行器有新工作；resume:false 只接纳，返回值也不是模型最终回复。SessionInput 使用接纳序号与提升序号区分待处理输入和已经成为可见用户消息的输入，精确重试还会核对 Session、内容与 delivery，冲突复用消息 ID 会失败。默认 steer 在安全的模型轮次边界提升，queue 则等会话本将空闲时一次提升一条，这些语义都应从持久记录理解。",
+    "nodeIds": ["file:packages/core/src/session.ts", "file:packages/core/src/session/input.ts", "file:packages/core/src/session/sql.ts", "file:packages/schema/src/session-input.ts"]
+  },
+  {
+    "order": 6,
+    "title": "协调执行与位置路由",
+    "description": "接纳后的 wake 进入进程全局 SessionExecution，本地实现用 SessionRunCoordinator 按 Session ID 合并唤醒、让同一会话的显式恢复共享结果，并允许不同会话并发。每次 drain 启动才重新读取 Session placement，经 LocationServiceMap 找到位置服务；runner、权限、工具与文件系统属于 Location，协调器本身不属于某个 Location。这里的 active 与 interrupt 只描述当前进程，内存协调也不意味着已经实现跨进程执行所有权或崩溃后的自动模型续跑。",
+    "nodeIds": ["file:packages/core/src/session/execution.ts", "file:packages/core/src/session/execution/local.ts", "file:packages/core/src/session/run-coordinator.ts", "file:packages/core/src/location-service-map.ts", "file:packages/core/src/location-services.ts"]
+  },
+  {
+    "order": 7,
+    "title": "跟随一次模型轮次",
+    "description": "进入 Location runner 后，循环校验会话位置、提升合格输入，再从持久投影历史构造模型消息；模型解析器从当前位置的 Catalog 和 Integration 选择模型、凭据与协议路由。每个 provider turn 都有一次明确的 llm.stream(request)，流结束及工具结算后重新读取历史，才决定下一轮是否继续。这个循环直接组织 V2 的持久执行，并没有转交旧 SessionPrompt.loop；新输入提升还会重置当前代理的轮次额度。",
+    "nodeIds": ["file:packages/core/src/session/runner/index.ts", "file:packages/core/src/session/runner/llm.ts", "file:packages/core/src/session/runner/model.ts", "file:packages/core/src/session/runner/to-llm-message.ts", "file:packages/llm/src/index.ts"]
+  },
+  {
+    "order": 8,
+    "title": "工具如何获得执行权",
+    "description": "上一轮模型看见的工具定义来自 Location ToolRegistry：位置注册可以覆盖应用级工具，权限规则参与过滤，结算时会捕获有效工具并校验、限制返回给模型的内容。具体执行授权仍由工具承担，可用 bash 工具与 Permission 服务对照理解可见性过滤和实际操作授权的区别。runner 先记录工具调用事件，再执行并等待工具结算，因此持久消息能表达执行中、成功、失败和中断，而不只保存一段最终文本。",
+    "nodeIds": ["file:packages/core/src/tool/registry.ts", "file:packages/core/src/permission.ts", "file:packages/core/src/tool/bash.ts", "file:packages/core/src/session/runner/publish-llm-event.ts"]
+  },
+  {
+    "order": 9,
+    "title": "上下文为何拥有纪元",
+    "description": "模型请求中的系统信息不是每轮随意拼接：system-context 定义来源、基线与快照的代数，Location 注册表组合来源，而 SessionContextEpoch 持久保存本会话已经接纳的上下文状态。来源变化可生成 ContextUpdated 增量，来源暂时不可用与删除有不同语义；SessionHistory 再根据压缩边界和纪元基线选择仍有效的消息。runner 的自动压缩与溢出恢复由 compaction 支持，这与尚未开放的显式 compact 操作需要分开理解。",
+    "nodeIds": ["file:packages/core/src/system-context/index.ts", "file:packages/core/src/system-context/registry.ts", "file:packages/core/src/session/context-epoch.ts", "file:packages/core/src/session/history.ts", "file:packages/core/src/session/compaction.ts"]
+  },
+  {
+    "order": 10,
+    "title": "从流事件生成投影",
+    "description": "模型流先由 publish-llm-event 转成持久 Session 事件，再经 EventV2 的事务提交与 SessionProjector 更新会话、消息、输入和 usage 等投影。事件清单同时定义公开事件与保留的兼容事件，消费者可以按序号追读或重放，而 runner 下一轮读取的是这些已投影的历史。EventV2 的 owner claim 服务于事件重放归属，应与第六步尚属进程本地的模型执行所有权分开阅读。",
+    "nodeIds": ["file:packages/core/src/session/runner/publish-llm-event.ts", "file:packages/core/src/event.ts", "file:packages/core/src/session/projector.ts", "file:packages/schema/src/event-manifest.ts", "file:packages/schema/src/durable-event-manifest.ts"]
+  },
+  {
+    "order": 11,
+    "title": "让事件回到界面",
+    "description": "回到 Web 应用，server-sdk 管理每个服务器的客户端和事件连接，server-session 加载历史，V2 reducer 把提升后的输入及 assistant 流内容归并为前端会话状态。session-ui 的 DataProvider 再把数据交给会话轮次组件，形成用户看到的文本、工具结果和交互。app 与 session-ui 仍使用 vendor 客户端及兼容数据形状，存在新旧消息适配，所以看到 V2 reducer 并不代表前端已经全部迁移到新 Client。",
+    "nodeIds": ["file:packages/app/src/context/server-sdk.tsx", "file:packages/app/src/context/server-session.ts", "file:packages/app/src/context/server-session-v2-reducer.ts", "file:packages/session-ui/src/context/data.tsx", "file:packages/session-ui/src/components/session-turn.tsx"],
+    "languageLesson": "Solid 的 signal/store 通过读取建立响应式依赖，Provider 把状态与操作传给组件树；事件 reducer 更新状态后，相关视图会随依赖变化更新。"
+  },
+  {
+    "order": 12,
+    "title": "定位扩展与兼容层",
+    "description": "理解主链路后，再看 Core 的插件服务和 provider 插件如何扩展模型集成，以及旧 opencode 的 MCP、插件注册入口如何继续服务现有功能。配置、工具、协议和前端都仍保留部分兼容路径，旧 SessionPrompt 与旧工具注册表仍值得单独定位，不能把它们的行为直接套到 V2 runner。二次开发时应先确认调用从哪个入口进入、绑定哪套服务，再决定扩展点放在 Core 还是兼容层。",
+    "nodeIds": ["file:packages/core/src/plugin.ts", "file:packages/core/src/plugin/provider.ts", "file:packages/opencode/src/mcp/index.ts", "file:packages/opencode/src/plugin/index.ts", "file:packages/opencode/src/session/prompt.ts"]
+  },
+  {
+    "order": 13,
+    "title": "生成客户端与嵌入运行",
+    "description": "新 Client 的 contract 把 Protocol 变成生成输入，build 脚本分别产出 Promise 与 Effect 客户端，因此修改公共 Protocol 或 Server HttpApi 后应在 packages/client 运行 bun run generate，而非手改生成目录。sdk-next 在此基础上共享 Layer memoMap，把内存 Web handler 接到 Effect HTTP 客户端，并提供作用域化应用工具注册。旧 packages/sdk/js 另有自己的构建脚本，两条生成链并存，分别对应需要维护的客户端边界。",
+    "nodeIds": ["file:packages/client/src/contract.ts", "file:packages/client/script/build.ts", "file:packages/client/src/effect.ts", "file:packages/sdk-next/src/opencode.ts", "file:packages/sdk/js/script/build.ts"],
+    "languageLesson": "Effect.scoped 让资源随作用域结束释放；共享 Layer memoMap 可以复用同一批服务实例，但作用域化工具注册仍需要明确的生命周期。"
+  },
+  {
+    "order": 14,
+    "title": "用测试验证关键语义",
+    "description": "把前面的架构假设落实到测试：session-prompt 检查持久接纳和执行委托，run-coordinator 检查同会话加入与活动状态，session-runner 验证真实 runner 的请求、工具和中断边界。前端 V2 reducer 测试则验证提升输入与流内容怎样成为显示状态，把后端持久语义和前端观察连接起来。按 AGENTS.md 在相应包目录运行测试与 bun typecheck；根 test 明确拒绝执行，不能把仓库根当成统一测试入口。",
+    "nodeIds": ["file:packages/core/test/session-prompt.test.ts", "file:packages/core/test/session-run-coordinator.test.ts", "file:packages/core/test/session-runner.test.ts", "file:packages/app/src/context/server-session-v2-reducer.test.ts", "document:AGENTS.md"]
+  },
+  {
+    "order": 15,
+    "title": "从构建走到交付",
+    "description": "最后从发布工作流回看第一步的宿主：publish.yml 分开组织 CLI 构建、Windows 签名和 Electron 构建，opencode 的构建脚本负责对应可分发产物。test.yml 提供 unit 与 e2e 自动化，而 SST 配置及 infra/console.ts 描述在线产品所需的基础设施，属于与本地代理发行相关但不同的交付面。这样既能找到日常修改的验证入口，也能避免把运行本地 CLI 等同于部署整个云端 Console。",
+    "nodeIds": ["pipeline:.github/workflows/publish.yml", "file:packages/opencode/script/build.ts", "pipeline:.github/workflows/test.yml", "file:sst.config.ts", "file:infra/console.ts"]
+  }
+]

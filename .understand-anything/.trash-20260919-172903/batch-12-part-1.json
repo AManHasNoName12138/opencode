@@ -1,0 +1,1274 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/src/pages/session/timeline/model.ts",
+      "type": "file",
+      "name": "model.ts",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "summary": "管理会话消息历史的加载、缓存新鲜度与分页，筛选撤销边界之前可见的用户消息并公开时间线就绪状态。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "type": "function",
+      "name": "createTimelineModel",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "lineRange": [
+        10,
+        95
+      ],
+      "summary": "创建会话历史资源及可见用户消息选择器，延迟刷新过期缓存并公开分页接口。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/model.ts:selectUserMessages",
+      "type": "function",
+      "name": "selectUserMessages",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "lineRange": [
+        97,
+        99
+      ],
+      "summary": "从会话历史中选择用户角色消息。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/model.ts:isTimelineReady",
+      "type": "function",
+      "name": "isTimelineReady",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "lineRange": [
+        101,
+        103
+      ],
+      "summary": "判断会话历史是否已有可呈现数据且满足当前加载状态要求。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/model.ts:selectVisibleUserMessages",
+      "type": "function",
+      "name": "selectVisibleUserMessages",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "lineRange": [
+        105,
+        109
+      ],
+      "summary": "根据撤销消息边界筛选应显示的用户消息。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/model.ts:loadOlderTimeline",
+      "type": "function",
+      "name": "loadOlderTimeline",
+      "filePath": "packages/app/src/pages/session/timeline/model.ts",
+      "lineRange": [
+        111,
+        129
+      ],
+      "summary": "检查会话历史是否允许继续分页，并在加载前后执行滚动协调回调。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/observe-element-offset.test.ts",
+      "type": "file",
+      "name": "observe-element-offset.test.ts",
+      "filePath": "packages/app/src/pages/session/timeline/observe-element-offset.test.ts",
+      "summary": "验证观察element偏移相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“matches only the scroll element or an ancestor containing it”、“reports a divergent native offset once and ignores equal offsets and unrelated mutations”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "type": "file",
+      "name": "observe-element-offset.ts",
+      "filePath": "packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "summary": "观察元素滚动偏移并适应 DOM 断开后重新连接，避免时间线测量订阅失效。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:observeElementOffsetReconnectAware",
+      "type": "function",
+      "name": "observeElementOffsetReconnectAware",
+      "filePath": "packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "lineRange": [
+        3,
+        69
+      ],
+      "summary": "实现 observeElementOffsetReconnectAware 的观察element偏移操作，调用 observeElementOffset、element?.closest、cleanupOffset、records.forEach 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:mutationNodesContainElement",
+      "type": "function",
+      "name": "mutationNodesContainElement",
+      "filePath": "packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "lineRange": [
+        71,
+        73
+      ],
+      "summary": "实现 mutationNodesContainElement 的观察element偏移操作，调用 node.contains 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "type": "file",
+      "name": "projection.test.ts",
+      "filePath": "packages/app/src/pages/session/timeline/projection.test.ts",
+      "summary": "验证投影相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“reuseTimelineRows”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/projection.test.ts:context",
+      "type": "function",
+      "name": "context",
+      "filePath": "packages/app/src/pages/session/timeline/projection.test.ts",
+      "lineRange": [
+        6,
+        15
+      ],
+      "summary": "实现 context 的投影操作，调用 partIDs.map 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/projection.ts",
+      "type": "file",
+      "name": "projection.ts",
+      "filePath": "packages/app/src/pages/session/timeline/projection.ts",
+      "summary": "把消息、消息片段和会话状态投影为时间线行，复用稳定行对象并建立消息、行键与助手分组索引。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/projection.ts:createTimelineProjection",
+      "type": "function",
+      "name": "createTimelineProjection",
+      "filePath": "packages/app/src/pages/session/timeline/projection.ts",
+      "lineRange": [
+        9,
+        81
+      ],
+      "summary": "把会话消息构造成时间线行，并建立行键、消息位置和助手分组索引。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "type": "file",
+      "name": "row-reconciliation.ts",
+      "filePath": "packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "summary": "比较新旧时间线行并复用相同对象，减少增量消息更新导致的界面重建。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:reuseTimelineRows",
+      "type": "function",
+      "name": "reuseTimelineRows",
+      "filePath": "packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "lineRange": [
+        6,
+        29
+      ],
+      "summary": "复用新旧投影中内容一致的时间线行对象，保持响应式引用稳定。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:stabilizeContextKey",
+      "type": "function",
+      "name": "stabilizeContextKey",
+      "filePath": "packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "lineRange": [
+        31,
+        56
+      ],
+      "summary": "实现 stabilizeContextKey 的行协调操作，调用 row.group.refs.reduce、contextByPart.get、TimelineRow.key、claimed.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/rows-current.test.ts",
+      "type": "file",
+      "name": "rows-current.test.ts",
+      "filePath": "packages/app/src/pages/session/timeline/rows-current.test.ts",
+      "summary": "验证行当前相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“current session timeline rows”、“derives turns and tagged rows from chronological current messages”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "type": "file",
+      "name": "rows.ts",
+      "filePath": "packages/app/src/pages/session/timeline/rows.ts",
+      "summary": "定义时间线行数据结构及消息片段到行的构造规则，区分用户消息、助手片段、上下文与差异摘要。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/summary-diffs.test.ts",
+      "type": "file",
+      "name": "summary-diffs.test.ts",
+      "filePath": "packages/app/src/pages/session/timeline/summary-diffs.test.ts",
+      "summary": "验证摘要diffs相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“uniqueSummaryDiffs”、“drops entries without files and preserves unique input”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "type": "file",
+      "name": "summary-diffs.ts",
+      "filePath": "packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "summary": "为 app 提供摘要diffs相关数据处理接口。 对外提供 uniqueSummaryDiffs。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/summary-diffs.ts:uniqueSummaryDiffs",
+      "type": "function",
+      "name": "uniqueSummaryDiffs",
+      "filePath": "packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "lineRange": [
+        4,
+        16
+      ],
+      "summary": "实现 uniqueSummaryDiffs 的摘要diffs操作，调用 isSummaryDiff、files.has、files.add、result.push 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "type": "file",
+      "name": "timeline-row.ts",
+      "filePath": "packages/app/src/pages/session/timeline/timeline-row.ts",
+      "summary": "定义 app 的时间线行模块。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/timeline/virtual-items.ts",
+      "type": "file",
+      "name": "virtual-items.ts",
+      "filePath": "packages/app/src/pages/session/timeline/virtual-items.ts",
+      "summary": "为 app 提供虚拟化条目相关数据处理接口。 对外提供 filterVirtualIndexes。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/timeline/virtual-items.ts:filterVirtualIndexes",
+      "type": "function",
+      "name": "filterVirtualIndexes",
+      "filePath": "packages/app/src/pages/session/timeline/virtual-items.ts",
+      "lineRange": [
+        1,
+        3
+      ],
+      "summary": "筛选需要保留的时间线虚拟行索引。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "type": "file",
+      "name": "usage-exceeded-dialogs.tsx",
+      "filePath": "packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "summary": "实现应用的用量超限dialogs界面及相关交互。 对外提供 useUsageExceededDialogs。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:goUpsellKeys",
+      "type": "function",
+      "name": "goUpsellKeys",
+      "filePath": "packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "lineRange": [
+        18,
+        34
+      ],
+      "summary": "实现 goUpsellKeys 的用量超限dialogs操作，调用 GO_UPSELL_PROVIDERS.has 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "type": "function",
+      "name": "useUsageExceededDialogs",
+      "filePath": "packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "lineRange": [
+        36,
+        104
+      ],
+      "summary": "连接用量超限Dialogs，调用 useSDK、useDialog、useSessionLayout、useI18n 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "type": "file",
+      "name": "use-composer-commands.tsx",
+      "filePath": "packages/app/src/pages/session/use-composer-commands.tsx",
+      "summary": "实现应用的使用composercommands界面及相关交互。 对外提供 useComposerCommands。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "type": "function",
+      "name": "useComposerCommands",
+      "filePath": "packages/app/src/pages/session/use-composer-commands.tsx",
+      "lineRange": [
+        16,
+        83
+      ],
+      "summary": "连接ComposerCommands，调用 useCommand、useDialog、useLanguage、useLocal 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "type": "file",
+      "name": "use-session-commands.tsx",
+      "filePath": "packages/app/src/pages/session/use-session-commands.tsx",
+      "summary": "实现应用的使用会话commands界面及相关交互。 对外提供 useSessionCommands。",
+      "tags": [
+        "app",
+        "界面组件",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "type": "function",
+      "name": "useSessionCommands",
+      "filePath": "packages/app/src/pages/session/use-session-commands.tsx",
+      "lineRange": [
+        40,
+        657
+      ],
+      "summary": "连接会话Commands，调用 useCommand、useDialog、useFile、useLanguage 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/use-session-hash-scroll.test.ts",
+      "type": "file",
+      "name": "use-session-hash-scroll.test.ts",
+      "filePath": "packages/app/src/pages/session/use-session-hash-scroll.test.ts",
+      "summary": "验证使用会话hash滚动相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“messageIdFromHash”、“parses hash with leading #”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "type": "file",
+      "name": "use-session-hash-scroll.ts",
+      "filePath": "packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "summary": "为 app 提供使用会话hash滚动相关数据处理接口。 对外提供 useSessionHashScroll。",
+      "tags": [
+        "app",
+        "数据处理",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/pages/session/use-session-hash-scroll.ts:useSessionHashScroll",
+      "type": "function",
+      "name": "useSessionHashScroll",
+      "filePath": "packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "lineRange": [
+        6,
+        202
+      ],
+      "summary": "连接会话Hash滚动，调用 createMemo、input.visibleUserMessages、visibleUserMessages、useLocation 完成相关步骤。",
+      "tags": [
+        "函数",
+        "app",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/pages/session/v2/review-diff-kinds.test.ts",
+      "type": "file",
+      "name": "review-diff-kinds.test.ts",
+      "filePath": "packages/app/src/pages/session/v2/review-diff-kinds.test.ts",
+      "summary": "验证审阅差异种类相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“reviewDiffKinds”、“maps file and directory kinds”。",
+      "tags": [
+        "app",
+        "测试",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectUserMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectUserMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:isTimelineReady",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:isTimelineReady",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectVisibleUserMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectVisibleUserMessages",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:loadOlderTimeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:loadOlderTimeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/model.ts",
+      "target": "file:packages/app/src/utils/same.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:isTimelineReady",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectUserMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/model.ts:createTimelineModel",
+      "target": "function:packages/app/src/pages/session/timeline/model.ts:selectVisibleUserMessages",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.test.ts",
+      "target": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "target": "file:packages/app/src/pages/session/timeline/observe-element-offset.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "target": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:observeElementOffsetReconnectAware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "target": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:observeElementOffsetReconnectAware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "target": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:mutationNodesContainElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "target": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:mutationNodesContainElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:observeElementOffsetReconnectAware",
+      "target": "function:packages/app/src/pages/session/timeline/observe-element-offset.ts:mutationNodesContainElement",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "target": "function:packages/app/src/pages/session/timeline/projection.test.ts:context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "target": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "target": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "target": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "target": "file:packages/app/src/pages/session/timeline/projection.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.ts",
+      "target": "function:packages/app/src/pages/session/timeline/projection.ts:createTimelineProjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.ts",
+      "target": "function:packages/app/src/pages/session/timeline/projection.ts:createTimelineProjection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.ts",
+      "target": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/projection.ts",
+      "target": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/projection.ts:createTimelineProjection",
+      "target": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:reuseTimelineRows",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "target": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:reuseTimelineRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "target": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:reuseTimelineRows",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "target": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:stabilizeContextKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/row-reconciliation.ts",
+      "target": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:reuseTimelineRows",
+      "target": "function:packages/app/src/pages/session/timeline/row-reconciliation.ts:stabilizeContextKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/rows-current.test.ts",
+      "target": "file:packages/app/src/utils/session-message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/utils/session-message.ts",
+      "target": "file:packages/app/src/pages/session/timeline/rows-current.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "target": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "target": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "target": "file:packages/app/src/utils/comment-note.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/rows.ts",
+      "target": "file:packages/app/src/utils/session-message.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/summary-diffs.test.ts",
+      "target": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "target": "file:packages/app/src/pages/session/timeline/summary-diffs.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "target": "function:packages/app/src/pages/session/timeline/summary-diffs.ts:uniqueSummaryDiffs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "target": "function:packages/app/src/pages/session/timeline/summary-diffs.ts:uniqueSummaryDiffs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/summary-diffs.ts",
+      "target": "file:packages/app/src/pages/session/timeline/timeline-row.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/virtual-items.ts",
+      "target": "function:packages/app/src/pages/session/timeline/virtual-items.ts:filterVirtualIndexes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/timeline/virtual-items.ts",
+      "target": "function:packages/app/src/pages/session/timeline/virtual-items.ts:filterVirtualIndexes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:goUpsellKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "file:packages/app/src/components/dialog-usage-exceeded.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/usage-exceeded-dialogs.tsx",
+      "target": "file:packages/app/src/utils/persist.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "target": "function:packages/app/src/utils/persist.ts:persisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:useUsageExceededDialogs",
+      "target": "function:packages/app/src/pages/session/usage-exceeded-dialogs.tsx:goUpsellKeys",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/components/prompt-input/editor-dom.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-composer-commands.tsx",
+      "target": "file:packages/app/src/pages/session/session-ownership.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-composer-commands.tsx:useComposerCommands",
+      "target": "function:packages/app/src/pages/session/session-ownership.ts:createSessionOwnership",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/local.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/context/terminal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/pages/session/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/pages/session/session-archive.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/pages/session/session-ownership.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/utils/prompt.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/utils/session-export.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-commands.tsx",
+      "target": "file:packages/app/src/utils/toast.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "target": "function:packages/app/src/context/sync.tsx:useSync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "target": "function:packages/app/src/pages/session/session-ownership.ts:createSessionOwnership",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "target": "function:packages/app/src/pages/session/session-archive.ts:useSessionArchive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-commands.tsx:useSessionCommands",
+      "target": "function:packages/app/src/pages/session/helpers.ts:createSessionTabs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-hash-scroll.test.ts",
+      "target": "file:packages/app/src/pages/session/message-id-from-hash.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/pages/session/message-id-from-hash.ts",
+      "target": "file:packages/app/src/pages/session/use-session-hash-scroll.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "target": "function:packages/app/src/pages/session/use-session-hash-scroll.ts:useSessionHashScroll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "target": "function:packages/app/src/pages/session/use-session-hash-scroll.ts:useSessionHashScroll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/use-session-hash-scroll.ts",
+      "target": "file:packages/app/src/pages/session/message-id-from-hash.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/pages/session/use-session-hash-scroll.ts:useSessionHashScroll",
+      "target": "function:packages/app/src/pages/session/message-id-from-hash.ts:messageIdFromHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/pages/session/v2/review-diff-kinds.test.ts",
+      "target": "file:packages/app/src/pages/session/v2/review-diff-kinds.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

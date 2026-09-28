@@ -1,0 +1,113 @@
+{
+  "nodes": [
+    {
+      "id": "document:packages/codemode/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/codemode/AGENTS.md",
+      "summary": "规定 CodeMode 仅负责显式工具上的受限执行，授权、持久化与交付由宿主负责；同时约束 OpenAPI 序列化、错误公开范围和未来外部能力设计。",
+      "tags": [
+        "文档",
+        "CodeMode 解释器",
+        "AGENTS"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/codemode/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/codemode/README.md",
+      "summary": "介绍基于 Effect 的受限代码执行器：工具 Schema、单次与复用运行时、诊断返回、工具调用观察、执行限额及 OpenAPI 工具适配。",
+      "tags": [
+        "文档",
+        "CodeMode 解释器",
+        "README"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:packages/codemode/codemode.md",
+      "type": "document",
+      "name": "codemode.md",
+      "filePath": "packages/codemode/codemode.md",
+      "summary": "CodeMode 解释器的专题文档，主题为 CodeMode Design and Status；包含 CodeMode Design and Status、How CodeMode Works、Intentionally Unsupported、Decisions and Rationale 等章节。",
+      "tags": [
+        "文档",
+        "CodeMode 解释器",
+        "代码执行接口"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:packages/codemode/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "packages/codemode/package.json",
+      "summary": "@opencode-ai/codemode 的包清单，声明 typecheck、test 构建或运行命令及依赖，并配置公开导出入口。",
+      "tags": [
+        "配置",
+        "CodeMode 解释器",
+        "package"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:packages/codemode/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "packages/codemode/tsconfig.json",
+      "summary": "CodeMode 解释器的 TypeScript 编译配置，定义 extends、compilerOptions、noUncheckedIndexedAccess 等选项。",
+      "tags": [
+        "配置",
+        "CodeMode 解释器",
+        "tsconfig"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:packages/codemode/README.md",
+      "target": "document:packages/codemode/src/openapi/TODO.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/README.md",
+      "target": "file:packages/codemode/src/openapi/types.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/codemode.md",
+      "target": "document:packages/codemode/README.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/codemode.md",
+      "target": "document:packages/codemode/src/openapi/TODO.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/codemode.md",
+      "target": "file:packages/opencode/src/tool/code-mode.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/codemode/codemode.md",
+      "target": "file:packages/core/src/tool/registry.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

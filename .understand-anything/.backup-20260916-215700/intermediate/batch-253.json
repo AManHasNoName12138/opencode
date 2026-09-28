@@ -1,0 +1,599 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/opencode/src/audio.d.ts",
+      "type": "file",
+      "name": "audio.d.ts",
+      "filePath": "packages/opencode/src/audio.d.ts",
+      "summary": "声明 音频资源导入，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/cmd/prompt-display.ts",
+      "type": "file",
+      "name": "prompt-display.ts",
+      "filePath": "packages/opencode/src/cli/cmd/prompt-display.ts",
+      "summary": "汇总命令行入口与命令执行层的类型或模块导出，提供统一导入边界。",
+      "tags": [
+        "入口点",
+        "barrel",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/cli/tui/layer.ts",
+      "type": "file",
+      "name": "layer.ts",
+      "filePath": "packages/opencode/src/cli/tui/layer.ts",
+      "summary": "在命令行入口与命令执行层中提供 run 等接口。",
+      "tags": [
+        "typescript",
+        "cli",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/cli/tui/layer.ts:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "packages/opencode/src/cli/tui/layer.ts",
+      "lineRange": [
+        6,
+        8
+      ],
+      "summary": "在命令行入口与命令执行层中执行 run，接收 input 参数；调用 runTui、Effect.provide、AppNodeBuilder.build 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/command/template/initialize.txt",
+      "type": "document",
+      "name": "initialize.txt",
+      "filePath": "packages/opencode/src/command/template/initialize.txt",
+      "summary": "提供模型/代理的提示指令，内容涵盖「Create or update `AGENTS.md` for this repository.、The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely 」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/command/template/review.txt",
+      "type": "document",
+      "name": "review.txt",
+      "filePath": "packages/opencode/src/command/template/review.txt",
+      "summary": "提供模型/代理的提示指令，内容涵盖「You are a code reviewer. Your job is to review code changes and provide actionable feedback.、---」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "type": "file",
+      "name": "debug-workspace-plugin.ts",
+      "filePath": "packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 DebugWorkspacePlugin；内部处理包含 waitForHealth、writeDebugData、DebugWorkspacePlugin。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:waitForHealth",
+      "type": "function",
+      "name": "waitForHealth",
+      "filePath": "packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "lineRange": [
+        9,
+        25
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 waitForHealth，接收 port 参数；调用 Date.now、fetch、sleep 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:writeDebugData",
+      "type": "function",
+      "name": "writeDebugData",
+      "filePath": "packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "lineRange": [
+        29,
+        44
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 writeDebugData，接收 port、id、env 参数；调用 writeFile、JSON.stringify、rename 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:DebugWorkspacePlugin",
+      "type": "function",
+      "name": "DebugWorkspacePlugin",
+      "filePath": "packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "lineRange": [
+        46,
+        71
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 DebugWorkspacePlugin，接收 { experimental_workspace } 参数；调用 experimental_workspace.register 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/control-plane/dev/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/opencode/src/control-plane/dev/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「This is a plugin to simulate a remote environment locally. Add this to `.opencode/opencode.jsonc`:、\"plugin\": [\"../packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts\"],」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/markdown.d.ts",
+      "type": "file",
+      "name": "markdown.d.ts",
+      "filePath": "packages/opencode/src/markdown.d.ts",
+      "summary": "声明 Markdown/文本资源导入，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/node.ts",
+      "type": "file",
+      "name": "node.ts",
+      "filePath": "packages/opencode/src/node.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 Config、Server、bootstrap、Database 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/plugin/openai/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/opencode/src/plugin/openai/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「OpenAI Responses WebSocket、Flow、Lifetime、Retries、Next Steps」。",
+      "tags": [
+        "文档",
+        "plugin",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/server/routes/instance/httpapi/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/opencode/src/server/routes/instance/httpapi/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「HttpApi Route Patterns」。",
+      "tags": [
+        "文档",
+        "应用",
+        "开发规范"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/session/llm/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/opencode/src/session/llm/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「Session LLM Runtime Boundaries、File Structure、Runtime selection」。",
+      "tags": [
+        "文档",
+        "会话",
+        "开发规范"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/src/sql.d.ts",
+      "type": "file",
+      "name": "sql.d.ts",
+      "filePath": "packages/opencode/src/sql.d.ts",
+      "summary": "声明 SQL 资源导入，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/storage/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "packages/opencode/src/storage/schema.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 AccountTable、AccountStateTable、ControlAccountTable、ProjectTable、SessionTable、MessageTable、PartTable 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/src/sync/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/opencode/src/sync/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「Goal、Syncing with only one writer、Bus event integration and backwards compatibility、My approach、Event shape、Event flow、Backwards compatibility」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:packages/opencode/src/tool/shell/shell.txt",
+      "type": "document",
+      "name": "shell.txt",
+      "filePath": "packages/opencode/src/tool/shell/shell.txt",
+      "summary": "说明该模块的使用或设计，内容涵盖「${intro}、Be aware: OS: ${os}, Shell: ${shell}」。",
+      "tags": [
+        "文档",
+        "工具",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/defer.ts",
+      "type": "file",
+      "name": "defer.ts",
+      "filePath": "packages/opencode/src/util/defer.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 defer 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/defer.ts:defer",
+      "type": "function",
+      "name": "defer",
+      "filePath": "packages/opencode/src/util/defer.ts",
+      "lineRange": [
+        1,
+        10
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 defer，接收 fn 参数；调用 fn、Promise.resolve 完成处理",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/src/util/signal.ts",
+      "type": "file",
+      "name": "signal.ts",
+      "filePath": "packages/opencode/src/util/signal.ts",
+      "summary": "在OpenCode 应用与兼容层中提供 signal 等接口。",
+      "tags": [
+        "typescript",
+        "应用",
+        "实现"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/opencode/src/util/signal.ts:signal",
+      "type": "function",
+      "name": "signal",
+      "filePath": "packages/opencode/src/util/signal.ts",
+      "lineRange": [
+        1,
+        12
+      ],
+      "summary": "在OpenCode 应用与兼容层中执行 signal。",
+      "tags": [
+        "typescript",
+        "函数",
+        "应用"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/sst-env.d.ts",
+      "type": "file",
+      "name": "sst-env.d.ts",
+      "filePath": "packages/opencode/sst-env.d.ts",
+      "summary": "声明 SST 基础设施资源绑定，为 TypeScript 提供编译期接口。",
+      "tags": [
+        "类型定义",
+        "typescript",
+        "编译"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/test/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "packages/opencode/test/AGENTS.md",
+      "summary": "记录该目录的开发约定和架构约束，内容涵盖「Test Fixtures Guide、Temporary Directory Fixture、Basic Usage、Options、Examples、Returned Object、Notes」。",
+      "tags": [
+        "文档",
+        "应用",
+        "开发规范"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "type": "file",
+      "name": "attention.test.ts",
+      "filePath": "packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「createTuiAttention、defaults to sound always and notification blurred、supports blurred-only requests、supports focused-only requests、notification can deliver while focused when requested、notifies while blurred、when requested, blurred-only calls do not notify or play sound while focused」。",
+      "tags": [
+        "test",
+        "cli",
+        "测试辅助"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/opencode/test/cli/cmd/tui/attention.test.ts:config",
+      "type": "function",
+      "name": "config",
+      "filePath": "packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "lineRange": [
+        85,
+        97
+      ],
+      "summary": "在命令行入口与命令执行层中执行 config，接收 attention 参数。",
+      "tags": [
+        "typescript",
+        "函数",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeRenderer",
+      "type": "class",
+      "name": "FakeRenderer",
+      "filePath": "packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "lineRange": [
+        10,
+        43
+      ],
+      "summary": "在命令行入口与命令执行层中定义 FakeRenderer 类，提供 on、off、emit、listenerCount、triggerNotification 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeAudioEngine",
+      "type": "class",
+      "name": "FakeAudioEngine",
+      "filePath": "packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "lineRange": [
+        45,
+        67
+      ],
+      "summary": "在命令行入口与命令执行层中定义 FakeAudioEngine 类，提供 loadSoundFile、play 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeKV",
+      "type": "class",
+      "name": "FakeKV",
+      "filePath": "packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "lineRange": [
+        69,
+        83
+      ],
+      "summary": "在命令行入口与命令执行层中定义 FakeKV 类，提供 ready、get、set 等成员方法。",
+      "tags": [
+        "typescript",
+        "类型定义",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/help/__snapshots__/help-snapshots.test.ts.snap",
+      "type": "file",
+      "name": "help-snapshots.test.ts.snap",
+      "filePath": "packages/opencode/test/cli/help/__snapshots__/help-snapshots.test.ts.snap",
+      "summary": "为 命令行入口与命令执行层 测试提供样本与环境，用于运行相关验证。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/opencode/test/cli/tui/attach.test.ts",
+      "type": "file",
+      "name": "attach.test.ts",
+      "filePath": "packages/opencode/test/cli/tui/attach.test.ts",
+      "summary": "验证 命令行入口与命令执行层 的行为，实际用例包括「tui attach、loads the TUI integration lazily」。",
+      "tags": [
+        "test",
+        "cli",
+        "回归测试"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:packages/opencode/test/config/fixtures/v2-compat/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "packages/opencode/test/config/fixtures/v2-compat/README.md",
+      "summary": "说明该模块的使用或设计，内容涵盖「Config Transformation Fixtures、Operations、Run」。",
+      "tags": [
+        "文档",
+        "应用",
+        "参考"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/opencode/test/config/lsp.test.ts",
+      "type": "file",
+      "name": "lsp.test.ts",
+      "filePath": "packages/opencode/test/config/lsp.test.ts",
+      "summary": "验证 OpenCode 应用与兼容层 的行为，实际用例包括「ConfigLSPV1.Info refinement、accepted inputs、true and false pass (top-level toggle)、builtin server with no extensions passes、custom server WITH extensions passes、disabled custom server passes (no extensions needed)、mix of builtin and custom with extensions passes」。",
+      "tags": [
+        "test",
+        "应用",
+        "回归测试"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/opencode/src/cli/tui/layer.ts",
+      "target": "function:packages/opencode/src/cli/tui/layer.ts:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/cli/tui/layer.ts",
+      "target": "function:packages/opencode/src/cli/tui/layer.ts:run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "target": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:waitForHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "target": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:writeDebugData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "target": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:DebugWorkspacePlugin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts",
+      "target": "function:packages/opencode/src/control-plane/dev/debug-workspace-plugin.ts:DebugWorkspacePlugin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/defer.ts",
+      "target": "function:packages/opencode/src/util/defer.ts:defer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/defer.ts",
+      "target": "function:packages/opencode/src/util/defer.ts:defer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/src/util/signal.ts",
+      "target": "function:packages/opencode/src/util/signal.ts:signal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/src/util/signal.ts",
+      "target": "function:packages/opencode/src/util/signal.ts:signal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "target": "function:packages/opencode/test/cli/cmd/tui/attention.test.ts:config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "target": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "target": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeAudioEngine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/opencode/test/cli/cmd/tui/attention.test.ts",
+      "target": "class:packages/opencode/test/cli/cmd/tui/attention.test.ts:FakeKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

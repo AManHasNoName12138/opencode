@@ -1,0 +1,2061 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 19,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "semanticEdgesRemoved": 146,
+  "notes": [
+    "本审核计数只记录审核阶段新增修复；前置补充阶段恢复的116条导入单独列入先前修复，避免重复计数。",
+    "合并日志的1094项自动修正由1008条tested_by反向修复和86条丢弃组成；没有节点ID或复杂度映射修正，因此不存在超过30%的节点ID批量纠正问题。",
+    "复核86条被丢弃的非导入边：19条来自三个含@ts-expect-error断言且纳入包类型检查的真实类型测试，已按生产代码→测试文件恢复；其余67条连接测试夹具、模拟服务、通用测试运行器或场景辅助模块，不能仅据导入关系认定覆盖，保持删除。",
+    "最终所有10959个节点均有真实文件路径；4988个扫描文件全部由对应节点覆盖，包括pipeline、table、service类型文件，不应只统计file/config/document类型。",
+    "importMap中的8834条已解析导入全部存在。合并日志Could not fix的116项均为导入到config/document节点的错误file前缀，已由前置补充阶段全部恢复，无残留。",
+    "frontend-report.validation.passed=false是批次阶段的历史状态，其所列JSON导入端点已全部映射到真实config节点。最终全图对此重新验证通过，该历史标志不代表仍有未解决错误。",
+    "移除146条泛指AGENTS.md却错误连接本仓库根AGENTS.md的documents边；用户指南、CONTEXT与会话规范描述用户项目/全局指令文件，不能等同于当前仓库根文件。已保留明确描述本仓库开发规则的文档关系，未凭空反转关系方向。",
+    "所有节点类型与复杂度均为合法值；零悬挂引用、自环、重复节点、重复边；未发现需要恢复的缺失节点。",
+    "tested标签与tested_by表示静态可见的测试联系，不表示测试已运行或覆盖率已测量。审核未运行产品代码。"
+  ],
+  "priorCorrections": {
+    "restoredImports": 116,
+    "packageEdgesReported": 74,
+    "semanticOverrides": 38,
+    "semanticEdgesReported": 46,
+    "mergeFlippedTestEdges": 1008,
+    "mergeDroppedTestEdges": 86
+  },
+  "validation": {
+    "nodes": 10959,
+    "edges": 23916,
+    "inventoryFiles": 4988,
+    "coveredFiles": 4988,
+    "expectedImports": 8834,
+    "actualImports": 8834,
+    "missingImports": 0,
+    "invalidPaths": 0,
+    "danglingEdges": 0,
+    "selfEdges": 0,
+    "duplicateNodes": 0,
+    "duplicateEdges": 0,
+    "frontendErrorsResolved": 53,
+    "frontendErrorsUnresolved": 0
+  },
+  "restoredEdges": [
+    {
+      "source": "file:packages/llm/src/protocols/openai-chat.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/amazon-bedrock.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/anthropic.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/azure.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/cloudflare.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/github-copilot.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/google.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai-compatible.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/openai.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/openrouter.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/providers/xai.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/route/auth-options.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/route/auth.ts",
+      "target": "file:packages/llm/test/auth-options.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/provider.ts",
+      "target": "file:packages/llm/test/provider.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/schema/index.ts",
+      "target": "file:packages/llm/test/provider.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/index.ts",
+      "target": "file:packages/llm/test/tool.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/protocols/openai-chat.ts",
+      "target": "file:packages/llm/test/tool.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/route/index.ts",
+      "target": "file:packages/llm/test/tool.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/llm/src/tool.ts",
+      "target": "file:packages/llm/test/tool.types.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ],
+  "retainedDrops": [
+    {
+      "source": "file:packages/llm/test/continuation-scenarios.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-23-part-4.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-23-part-4.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-23-part-4.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-23-part-4.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/http.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-23-part-4.json"
+    },
+    {
+      "source": "file:packages/opencode/test/config/snapshot.ts",
+      "target": "file:packages/opencode/src/config/parse.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-31-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fake/account.ts",
+      "target": "file:packages/opencode/src/account/account.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-31-part-3.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fake/auth.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-31-part-3.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fake/provider.ts",
+      "target": "file:packages/opencode/src/provider/provider.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fake/skill.ts",
+      "target": "file:packages/opencode/src/skill/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/config.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/effect/instance-ref.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/project/bootstrap-service.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/project/instance-context.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/project/instance-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/fixture.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/auth/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/control-plane/workspace.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/effect/runtime-flags.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/event-v2-bridge.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/project/bootstrap.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/project/vcs.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/session/prompt.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/workspace.ts",
+      "target": "file:packages/opencode/src/session/session.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/lib/effect.ts",
+      "target": "file:packages/opencode/src/project/instance-store.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-32-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/global-bus.ts",
+      "target": "file:packages/opencode/src/bus/global.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-33-part-3.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-layer.ts",
+      "target": "file:packages/opencode/src/server/routes/instance/httpapi/server.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-34-part-2.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-1.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/schema/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-1.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-1.json"
+    },
+    {
+      "source": "file:packages/llm/test/lib/tool-runtime.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-1.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-golden.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-scenarios.ts",
+      "target": "file:packages/llm/src/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-scenarios.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-scenarios.ts",
+      "target": "file:packages/llm/src/tool.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-test.ts",
+      "target": "file:packages/llm/src/route/client.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-test.ts",
+      "target": "file:packages/llm/src/route/executor.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-test.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-test.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-websocket.ts",
+      "target": "file:packages/llm/src/route/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/llm/test/recorded-websocket.ts",
+      "target": "file:packages/llm/src/route/transport/websocket.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-37-part-3.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/args.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/exit.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/kv.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/permission.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/project.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/sdk.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/sync.tsx",
+      "target": "file:packages/tui/test/cli/cmd/tui/sync-fixture.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-44-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/cli/cmd/plug.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-47-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/plug-worker.ts",
+      "target": "file:packages/opencode/src/util/filesystem.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-47-part-1.json"
+    },
+    {
+      "source": "file:packages/opencode/test/fixture/tui-runtime.ts",
+      "target": "file:packages/opencode/src/config/tui.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-47-part-2.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/runtime.tsx",
+      "target": "file:packages/tui/test/fixture/tui-environment.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-48.json"
+    },
+    {
+      "source": "file:packages/tui/src/config/index.tsx",
+      "target": "file:packages/tui/test/fixture/tui-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-48.json"
+    },
+    {
+      "source": "file:packages/tui/src/config/keybind.ts",
+      "target": "file:packages/tui/test/fixture/tui-runtime.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-48.json"
+    },
+    {
+      "source": "file:packages/tui/src/context/sdk.tsx",
+      "target": "file:packages/tui/test/fixture/tui-sdk.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-48.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/runner.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/runner.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/runner.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/types.ts",
+      "target": "file:packages/opencode/src/config/config.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/types.ts",
+      "target": "file:packages/opencode/src/project/project.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/types.ts",
+      "target": "file:packages/opencode/src/session/message-v2.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/types.ts",
+      "target": "file:packages/opencode/src/session/schema.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    },
+    {
+      "source": "file:packages/opencode/test/server/httpapi-exercise/types.ts",
+      "target": "file:packages/opencode/src/worktree/index.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "batch": "batch-94-part-2.json"
+    }
+  ],
+  "removedSemanticEdges": [
+    {
+      "source": "document:CONTEXT.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ar/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/bs/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/da/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/de/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/es/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/fr/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/it/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ja/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ko/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/nb/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pl/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/pt-br/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/ru/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/th/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/tr/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-cn/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/acp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/index.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/lsp.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/mcp-servers.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/rules.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/sdk.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/server.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:packages/web/src/content/docs/zh-tw/tui.mdx",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/schema-changelog.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:specs/v2/session.md",
+      "target": "document:AGENTS.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ],
+  "frontendResolution": [
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/aura.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/aura.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/ayu.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/ayu.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/carbonfox.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/carbonfox.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/catppuccin-frappe.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/catppuccin-frappe.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/catppuccin-macchiato.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/catppuccin-macchiato.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/catppuccin.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/catppuccin.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/cobalt2.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/cobalt2.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/cursor.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/cursor.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/dracula.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/dracula.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/everforest.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/everforest.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/flexoki.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/flexoki.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/github.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/github.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/gruvbox.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/gruvbox.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/kanagawa.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/kanagawa.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/lucent-orng.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/lucent-orng.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/material.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/material.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/matrix.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/matrix.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/mercury.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/mercury.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/monokai.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/monokai.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/nightowl.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/nightowl.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/nord.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/nord.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/one-dark.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/one-dark.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/opencode.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/opencode.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/orng.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/orng.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/osaka-jade.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/osaka-jade.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/palenight.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/palenight.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/rosepine.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/rosepine.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/solarized.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/solarized.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/synthwave84.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/synthwave84.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/tokyonight.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/tokyonight.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/vercel.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/vercel.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/vesper.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/vesper.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/tui/src/theme/index.ts",
+      "originalTarget": "file:packages/tui/src/theme/assets/zenburn.json",
+      "correctedTarget": "config:packages/tui/src/theme/assets/zenburn.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/amoled.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/amoled.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/aura.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/aura.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/ayu.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/ayu.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/carbonfox.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/carbonfox.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/catppuccin-frappe.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/catppuccin-frappe.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/catppuccin-macchiato.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/catppuccin-macchiato.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/catppuccin.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/catppuccin.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/cobalt2.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/cobalt2.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/cursor.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/cursor.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/dracula.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/dracula.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/everforest.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/everforest.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/flexoki.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/flexoki.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/github.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/github.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/gruvbox.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/gruvbox.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/kanagawa.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/kanagawa.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/lucent-orng.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/lucent-orng.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/material.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/material.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/matrix.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/matrix.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/mercury.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/mercury.json",
+      "resolved": true
+    },
+    {
+      "source": "file:packages/ui/src/theme/default-themes.ts",
+      "originalTarget": "file:packages/ui/src/theme/themes/monokai.json",
+      "correctedTarget": "config:packages/ui/src/theme/themes/monokai.json",
+      "resolved": true
+    }
+  ]
+}

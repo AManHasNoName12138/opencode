@@ -1,0 +1,1056 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/ui/script/build-oc2-v2-overrides.ts",
+      "type": "file",
+      "name": "build-oc2-v2-overrides.ts",
+      "filePath": "packages/ui/script/build-oc2-v2-overrides.ts",
+      "summary": "配置或执行 ui 的构建oc2新版overrides开发流程。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/script/build-oc2-v2-overrides.ts:readTokens",
+      "type": "function",
+      "name": "readTokens",
+      "filePath": "packages/ui/script/build-oc2-v2-overrides.ts",
+      "lineRange": [
+        22,
+        32
+      ],
+      "summary": "读取令牌，调用 css.match、block.matchAll、value!.replace 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/file.tsx",
+      "type": "file",
+      "name": "file.tsx",
+      "filePath": "packages/ui/src/context/file.tsx",
+      "summary": "管理文件的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 FileComponentProvider、useFileComponent。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/helper.tsx",
+      "type": "file",
+      "name": "helper.tsx",
+      "filePath": "packages/ui/src/context/helper.tsx",
+      "summary": "管理辅助的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 createSimpleContext。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/context/helper.tsx:createSimpleContext",
+      "type": "function",
+      "name": "createSimpleContext",
+      "filePath": "packages/ui/src/context/helper.tsx",
+      "lineRange": [
+        3,
+        38
+      ],
+      "summary": "创建Simple上下文，调用 createContext、input.init、createMemo、ready 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/marked-parser.test.ts",
+      "type": "file",
+      "name": "marked-parser.test.ts",
+      "filePath": "packages/ui/src/context/marked-parser.test.ts",
+      "summary": "验证markedparser相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“renders links with application attributes”、“renders inline and block math”。",
+      "tags": [
+        "ui",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/marked-parser.tsx",
+      "type": "file",
+      "name": "marked-parser.tsx",
+      "filePath": "packages/ui/src/context/marked-parser.tsx",
+      "summary": "配置 Markdown 解析和代码处理，供共享 UI 的 Marked 上下文使用。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/ui/src/context/marked-parser.tsx:createMarkdownParser",
+      "type": "function",
+      "name": "createMarkdownParser",
+      "filePath": "packages/ui/src/context/marked-parser.tsx",
+      "lineRange": [
+        5,
+        18
+      ],
+      "summary": "创建MarkdownParser，调用 markedShiki 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/marked-theme-register.tsx",
+      "type": "file",
+      "name": "marked-theme-register.tsx",
+      "filePath": "packages/ui/src/context/marked-theme-register.tsx",
+      "summary": "管理marked主题register的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 registerOpenCodeTheme。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/context/marked-theme-register.tsx:registerOpenCodeTheme",
+      "type": "function",
+      "name": "registerOpenCodeTheme",
+      "filePath": "packages/ui/src/context/marked-theme-register.tsx",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "注册打开代码主题，调用 registerCustomTheme、Promise.resolve 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/marked-theme.tsx",
+      "type": "file",
+      "name": "marked-theme.tsx",
+      "filePath": "packages/ui/src/context/marked-theme.tsx",
+      "summary": "管理marked主题的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 OpenCodeTheme。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/ui/src/context/marked.tsx",
+      "type": "file",
+      "name": "marked.tsx",
+      "filePath": "packages/ui/src/context/marked.tsx",
+      "summary": "管理marked的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 OpenCodeTheme、{ use: useMarked, provider: MarkedProvider }。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/context/worker-pool.tsx",
+      "type": "file",
+      "name": "worker-pool.tsx",
+      "filePath": "packages/ui/src/context/worker-pool.tsx",
+      "summary": "管理Workerpool的共享状态与读取接口，为 ui 下游组件提供上下文。 对外提供 WorkerPoolProvider、useWorkerPool。",
+      "tags": [
+        "ui",
+        "component",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/context/worker-pool.tsx:useWorkerPool",
+      "type": "function",
+      "name": "useWorkerPool",
+      "filePath": "packages/ui/src/context/worker-pool.tsx",
+      "lineRange": [
+        16,
+        20
+      ],
+      "summary": "连接WorkerPool，调用 ctx.use 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/ui/src/theme/color.ts",
+      "type": "file",
+      "name": "color.ts",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "summary": "实现 RGB、Hex、OKLCH 色彩转换、色阶生成、混色和对比度计算，支撑主题派生。",
+      "tags": [
+        "ui",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "function",
+      "name": "hexToRgb",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        11,
+        28
+      ],
+      "summary": "把十六进制颜色字符串转换为 RGB 通道值。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "function",
+      "name": "rgbToHex",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        30,
+        37
+      ],
+      "summary": "把 RGB 通道值编码为十六进制颜色字符串。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:rgbToOklch",
+      "type": "function",
+      "name": "rgbToOklch",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        49,
+        71
+      ],
+      "summary": "将 sRGB 颜色线性化后转换为 OKLCH 色彩空间。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:oklchToRgb",
+      "type": "function",
+      "name": "oklchToRgb",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        73,
+        96
+      ],
+      "summary": "将 OKLCH 颜色转换为 sRGB 通道值。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "function",
+      "name": "hexToOklch",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        98,
+        101
+      ],
+      "summary": "把十六进制颜色转换为 OKLCH 的亮度、色度与色相。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:fitOklch",
+      "type": "function",
+      "name": "fitOklch",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        103,
+        126
+      ],
+      "summary": "调整 OKLCH 颜色使其落入 RGB 可显示色域。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "function",
+      "name": "oklchToHex",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        128,
+        131
+      ],
+      "summary": "把 OKLCH 颜色适配到可显示色域并转换为十六进制表示。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:generateScale",
+      "type": "function",
+      "name": "generateScale",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        133,
+        169
+      ],
+      "summary": "基于基础颜色生成主题使用的多级色阶。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "type": "function",
+      "name": "generateNeutralScale",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        171,
+        216
+      ],
+      "summary": "生成中性色色阶，调用 hexToOklch、sink、clamp、lift 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:generateAlphaScale",
+      "type": "function",
+      "name": "generateAlphaScale",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        218,
+        234
+      ],
+      "summary": "生成透明度色阶，调用 scale.map、hexToRgb、rgbToHex 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:mixColors",
+      "type": "function",
+      "name": "mixColors",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        236,
+        246
+      ],
+      "summary": "在 OKLCH 色彩空间中混合两个颜色。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "function",
+      "name": "shift",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        248,
+        255
+      ],
+      "summary": "实现 shift 的颜色操作，调用 hexToOklch、oklchToHex 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:contrastRatio",
+      "type": "function",
+      "name": "contrastRatio",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        257,
+        268
+      ],
+      "summary": "计算两个颜色之间的对比度。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:blend",
+      "type": "function",
+      "name": "blend",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        270,
+        278
+      ],
+      "summary": "实现 blend 的颜色操作，调用 hexToRgb、rgbToHex 完成相关步骤。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:lighten",
+      "type": "function",
+      "name": "lighten",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        280,
+        286
+      ],
+      "summary": "提高颜色亮度并保持结果落在有效范围。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:darken",
+      "type": "function",
+      "name": "darken",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        288,
+        294
+      ],
+      "summary": "降低颜色亮度并保持结果落在有效范围。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/ui/src/theme/color.ts:withAlpha",
+      "type": "function",
+      "name": "withAlpha",
+      "filePath": "packages/ui/src/theme/color.ts",
+      "lineRange": [
+        296,
+        299
+      ],
+      "summary": "为颜色生成带透明度的 RGB 表示。",
+      "tags": [
+        "function",
+        "ui",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/ui/script/build-oc2-v2-overrides.ts",
+      "target": "function:packages/ui/script/build-oc2-v2-overrides.ts:readTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/script/build-oc2-v2-overrides.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/script/build-oc2-v2-overrides.ts",
+      "target": "file:packages/ui/src/theme/v2/default-primitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/file.tsx",
+      "target": "file:packages/ui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/helper.tsx",
+      "target": "function:packages/ui/src/context/helper.tsx:createSimpleContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/context/helper.tsx",
+      "target": "function:packages/ui/src/context/helper.tsx:createSimpleContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-parser.test.ts",
+      "target": "file:packages/ui/src/context/marked-parser.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-parser.tsx",
+      "target": "file:packages/ui/src/context/marked-parser.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-parser.tsx",
+      "target": "function:packages/ui/src/context/marked-parser.tsx:createMarkdownParser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-parser.tsx",
+      "target": "function:packages/ui/src/context/marked-parser.tsx:createMarkdownParser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-theme-register.tsx",
+      "target": "function:packages/ui/src/context/marked-theme-register.tsx:registerOpenCodeTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-theme-register.tsx",
+      "target": "function:packages/ui/src/context/marked-theme-register.tsx:registerOpenCodeTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/context/marked-theme-register.tsx",
+      "target": "file:packages/ui/src/context/marked-theme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/marked.tsx",
+      "target": "file:packages/ui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/marked.tsx",
+      "target": "file:packages/ui/src/context/marked-parser.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/marked.tsx",
+      "target": "file:packages/ui/src/context/marked-theme-register.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/context/worker-pool.tsx",
+      "target": "function:packages/ui/src/context/worker-pool.tsx:useWorkerPool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/context/worker-pool.tsx",
+      "target": "function:packages/ui/src/context/worker-pool.tsx:useWorkerPool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/context/worker-pool.tsx",
+      "target": "file:packages/ui/src/context/helper.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToOklch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToOklch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToRgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToRgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:fitOklch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:fitOklch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateScale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateAlphaScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:generateAlphaScale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:mixColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:mixColors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:shift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:contrastRatio",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:contrastRatio",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:blend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:blend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:lighten",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:lighten",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:darken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:darken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:withAlpha",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "function:packages/ui/src/theme/color.ts:withAlpha",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/ui/src/theme/color.ts",
+      "target": "file:packages/ui/src/theme/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:fitOklch",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "target": "function:packages/ui/src/theme/color.ts:fitOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateScale",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateScale",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "target": "function:packages/ui/src/theme/color.ts:mixColors",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateNeutralScale",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateAlphaScale",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:generateAlphaScale",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:mixColors",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:mixColors",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:shift",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:shift",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:blend",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:blend",
+      "target": "function:packages/ui/src/theme/color.ts:rgbToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:lighten",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:lighten",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:darken",
+      "target": "function:packages/ui/src/theme/color.ts:hexToOklch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:darken",
+      "target": "function:packages/ui/src/theme/color.ts:oklchToHex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/ui/src/theme/color.ts:withAlpha",
+      "target": "function:packages/ui/src/theme/color.ts:hexToRgb",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

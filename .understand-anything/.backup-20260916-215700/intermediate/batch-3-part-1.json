@@ -1,0 +1,1790 @@
+{
+  "nodes": [
+    {
+      "id": "file:packages/app/e2e/reproduction/timeline-suspense/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "packages/app/e2e/reproduction/timeline-suspense/main.tsx",
+      "summary": "实现应用的main界面及相关交互。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/e2e/reproduction/timeline-suspense/main.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "packages/app/e2e/reproduction/timeline-suspense/main.tsx",
+      "lineRange": [
+        73,
+        313
+      ],
+      "summary": "渲染App组件，组织main的界面内容和交互；使用 createSignal、createResource、resolve 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/addons/serialize.test.ts",
+      "type": "file",
+      "name": "serialize.test.ts",
+      "filePath": "packages/app/src/addons/serialize.test.ts",
+      "summary": "验证序列化相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“SerializeAddon”、“preserves color scheme reporting mode”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/addons/serialize.test.ts:createTerminal",
+      "type": "function",
+      "name": "createTerminal",
+      "filePath": "packages/app/src/addons/serialize.test.ts",
+      "lineRange": [
+        20,
+        31
+      ],
+      "summary": "创建终端，调用 document.createElement、document.body.appendChild、term.loadAddon、term.open 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/addons/serialize.ts",
+      "type": "file",
+      "name": "serialize.ts",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "summary": "为 app 提供序列化相关数据处理接口。 对外提供 SerializeAddon。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/addons/serialize.ts:isBuffer",
+      "type": "function",
+      "name": "isBuffer",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "lineRange": [
+        69,
+        79
+      ],
+      "summary": "判断Buffer，调用 isRecord 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/addons/serialize.ts:getTerminalBuffers",
+      "type": "function",
+      "name": "getTerminalBuffers",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "lineRange": [
+        81,
+        90
+      ],
+      "summary": "读取终端Buffers，调用 isRecord、isBuffer 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/addons/serialize.ts:equalFlags",
+      "type": "function",
+      "name": "equalFlags",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "lineRange": [
+        180,
+        191
+      ],
+      "summary": "实现 equalFlags 的序列化操作，调用 cell1.isInverse、cell2.isInverse、cell1.isBold、cell2.isBold 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:packages/app/src/addons/serialize.ts:StringSerializeHandler",
+      "type": "class",
+      "name": "StringSerializeHandler",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "lineRange": [
+        246,
+        506
+      ],
+      "summary": "封装 StringSerializeHandler 的序列化状态和方法，包含 constructor、_beforeSerialize、_rowEnd、_diffStyle、_isAttributeDefault、_nextCell。",
+      "tags": [
+        "class",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:packages/app/src/addons/serialize.ts:SerializeAddon",
+      "type": "class",
+      "name": "SerializeAddon",
+      "filePath": "packages/app/src/addons/serialize.ts",
+      "lineRange": [
+        512,
+        642
+      ],
+      "summary": "封装 SerializeAddon 的序列化状态和方法，包含 activate、dispose、serialize、serializeAsText、_serializeBufferByScrollback、_serializeBufferByRange。",
+      "tags": [
+        "class",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/app.tsx",
+      "type": "file",
+      "name": "app.tsx",
+      "filePath": "packages/app/src/app.tsx",
+      "summary": "组合主题、语言、服务器连接、同步、草稿与标签页 Provider，构建新旧布局及会话路由；旧会话地址会迁移到带服务器标识的路由。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:SessionRoute",
+      "type": "function",
+      "name": "SessionRoute",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        74,
+        108
+      ],
+      "summary": "渲染会话路由组件，组织app的界面内容和交互；使用 useSettings、useParams、useSearchParams、useSDK 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:TargetServerRoute",
+      "type": "function",
+      "name": "TargetServerRoute",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        110,
+        128
+      ],
+      "summary": "渲染Target服务器路由组件，组织app的界面内容和交互；使用 useParams、useGlobal、createMemo、requireServerKey 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:LegacyTargetSessionRoute",
+      "type": "function",
+      "name": "LegacyTargetSessionRoute",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        136,
+        145
+      ],
+      "summary": "渲染旧版Target会话路由组件，组织app的界面内容和交互；使用 useParams、requireServerKey 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:LegacyTargetSessionRedirect",
+      "type": "function",
+      "name": "LegacyTargetSessionRedirect",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        147,
+        163
+      ],
+      "summary": "渲染旧版Target会话Redirect组件，组织app的界面内容和交互；使用 useParams、useNavigate、useServerSync、createSessionLineage 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:DraftRoute",
+      "type": "function",
+      "name": "DraftRoute",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        185,
+        207
+      ],
+      "summary": "渲染草稿路由组件，组织app的界面内容和交互；使用 useSearchParams、useSettings、useTabs、tabs.ready 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:ResolvedDraftRoute",
+      "type": "function",
+      "name": "ResolvedDraftRoute",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        209,
+        232
+      ],
+      "summary": "渲染Resolved草稿路由组件，组织app的界面内容和交互；使用 useGlobal、createMemo、global.servers.list、ServerConnection.key 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:UiI18nBridge",
+      "type": "function",
+      "name": "UiI18nBridge",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        234,
+        243
+      ],
+      "summary": "渲染UiI18n桥接组件，组织app的界面内容和交互；使用 useLanguage 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:LayoutCompatibility",
+      "type": "function",
+      "name": "LayoutCompatibility",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        245,
+        267
+      ],
+      "summary": "渲染布局Compatibility组件，组织app的界面内容和交互；使用 useGlobal、useNavigate、useServer、useSettings 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:QueryProvider",
+      "type": "function",
+      "name": "QueryProvider",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        281,
+        292
+      ],
+      "summary": "渲染Query提供商组件，组织app的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:BodyDesignClass",
+      "type": "function",
+      "name": "BodyDesignClass",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        294,
+        309
+      ],
+      "summary": "渲染BodyDesignClass组件，组织app的界面内容和交互；使用 useSettings、createRenderEffect、settings.general.newLayoutDesigns、document.body.toggleAttribute 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:SharedProviders",
+      "type": "function",
+      "name": "SharedProviders",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        313,
+        323
+      ],
+      "summary": "渲染共享提供商组件，组织app的界面内容和交互。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:DesktopCommands",
+      "type": "function",
+      "name": "DesktopCommands",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        325,
+        346
+      ],
+      "summary": "渲染桌面Commands组件，组织app的界面内容和交互；使用 useCommand、useLanguage、usePlatform、command.register 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:AppBaseProviders",
+      "type": "function",
+      "name": "AppBaseProviders",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        393,
+        428
+      ],
+      "summary": "渲染AppBase提供商组件，组织app的界面内容和交互；使用 window.api?.setTitlebar、Sentry.captureException 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:ConnectionGate",
+      "type": "function",
+      "name": "ConnectionGate",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        430,
+        499
+      ],
+      "summary": "渲染ConnectionGate组件，组织app的界面内容和交互；使用 useServer、useCheckServerHealth、createSignal、createResource 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:ConnectionError",
+      "type": "function",
+      "name": "ConnectionError",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        501,
+        546
+      ],
+      "summary": "渲染Connection错误组件，组织app的界面内容和交互；使用 useLanguage、useServer、createMemo、language.t 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:AppInterface",
+      "type": "function",
+      "name": "AppInterface",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        557,
+        613
+      ],
+      "summary": "渲染AppInterface组件，组织app的界面内容和交互；使用 useSettings 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:Routes",
+      "type": "function",
+      "name": "Routes",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        615,
+        646
+      ],
+      "summary": "渲染路由组件，组织app的界面内容和交互；使用 useSettings、settings.general.newLayoutDesigns 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/app.tsx:NewLayoutLegacySessionRedirect",
+      "type": "function",
+      "name": "NewLayoutLegacySessionRedirect",
+      "filePath": "packages/app/src/app.tsx",
+      "lineRange": [
+        648,
+        667
+      ],
+      "summary": "渲染新建布局旧版会话Redirect组件，组织app的界面内容和交互；使用 useServer、useTabs、useParams、tabs.ready 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/command-palette.ts",
+      "type": "file",
+      "name": "command-palette.ts",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "summary": "生成去重的命令面板条目，统一命令、文件搜索及跨服务器会话入口。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:uniqueCommandPaletteEntries",
+      "type": "function",
+      "name": "uniqueCommandPaletteEntries",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        46,
+        53
+      ],
+      "summary": "实现 uniqueCommandPaletteEntries 的命令面板操作，调用 items.filter、seen.has、seen.add 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileEntry",
+      "type": "function",
+      "name": "createCommandPaletteFileEntry",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        55,
+        63
+      ],
+      "summary": "创建命令面板文件Entry，输入包括 path、category。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileOpener",
+      "type": "function",
+      "name": "createCommandPaletteFileOpener",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        65,
+        79
+      ],
+      "summary": "创建命令面板文件Opener，调用 useFile、useLayout、useSessionLayout、file.tab 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "type": "function",
+      "name": "createCommandPaletteModel",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        81,
+        205
+      ],
+      "summary": "创建命令面板模型，调用 useCommand、useGlobal、useLanguage、useFile 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:createCommandPaletteCommandEntry",
+      "type": "function",
+      "name": "createCommandPaletteCommandEntry",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        207,
+        217
+      ],
+      "summary": "创建命令面板命令Entry，输入包括 option、category。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "type": "function",
+      "name": "createServerSessionEntries",
+      "filePath": "packages/app/src/components/command-palette.ts",
+      "lineRange": [
+        219,
+        281
+      ],
+      "summary": "创建服务器会话Entries，调用 onCleanup、abort?.abort、text.trim、setTimeout 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:packages/app/src/components/command-tooltip-keybind.test.ts",
+      "type": "file",
+      "name": "command-tooltip-keybind.test.ts",
+      "filePath": "packages/app/src/components/command-tooltip-keybind.test.ts",
+      "summary": "验证命令提示快捷键相关行为，通过测试用例检查实现的边界条件与状态变化。覆盖案例包括“command tooltip keybinds”、“keeps localized review shortcut modifiers”。",
+      "tags": [
+        "app",
+        "test",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "type": "file",
+      "name": "command-tooltip-keybind.ts",
+      "filePath": "packages/app/src/components/command-tooltip-keybind.ts",
+      "summary": "为 app 提供命令提示快捷键相关数据处理接口。 对外提供 reviewTooltipKeybind、newTabTooltipKeybind。",
+      "tags": [
+        "app",
+        "data-flow",
+        "typescript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-tooltip-keybind.ts:reviewTooltipKeybind",
+      "type": "function",
+      "name": "reviewTooltipKeybind",
+      "filePath": "packages/app/src/components/command-tooltip-keybind.ts",
+      "lineRange": [
+        5,
+        7
+      ],
+      "summary": "实现 reviewTooltipKeybind 的命令提示快捷键操作，调用 command.keybindParts 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/command-tooltip-keybind.ts:newTabTooltipKeybind",
+      "type": "function",
+      "name": "newTabTooltipKeybind",
+      "filePath": "packages/app/src/components/command-tooltip-keybind.ts",
+      "lineRange": [
+        9,
+        11
+      ],
+      "summary": "实现 newTabTooltipKeybind 的命令提示快捷键操作，调用 command.keybindParts 完成相关步骤。",
+      "tags": [
+        "function",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:packages/app/src/components/debug-bar.tsx",
+      "type": "file",
+      "name": "debug-bar.tsx",
+      "filePath": "packages/app/src/components/debug-bar.tsx",
+      "summary": "实现应用的调试bar界面及相关交互。 对外提供 DebugBar。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/debug-bar.tsx:Cell",
+      "type": "function",
+      "name": "Cell",
+      "filePath": "packages/app/src/components/debug-bar.tsx",
+      "lineRange": [
+        56,
+        118
+      ],
+      "summary": "渲染Cell组件，组织调试bar的界面内容和交互；使用 content 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/debug-bar.tsx:ToggleCell",
+      "type": "function",
+      "name": "ToggleCell",
+      "filePath": "packages/app/src/components/debug-bar.tsx",
+      "lineRange": [
+        120,
+        167
+      ],
+      "summary": "渲染切换Cell组件，组织调试bar的界面内容和交互；使用 content 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/debug-bar.tsx:DebugBar",
+      "type": "function",
+      "name": "DebugBar",
+      "filePath": "packages/app/src/components/debug-bar.tsx",
+      "lineRange": [
+        169,
+        587
+      ],
+      "summary": "渲染调试Bar组件，组织调试bar的界面内容和交互；使用 useLanguage、usePlatform、useLocation、useIsRouting 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "type": "file",
+      "name": "dialog-command-palette-v2.tsx",
+      "filePath": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "summary": "实现应用的对话框命令面板新版界面及相关交互。 对外提供 DialogCommandPaletteV2、DialogHomeCommandPaletteV2。",
+      "tags": [
+        "app",
+        "component",
+        "typescript"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogCommandPaletteV2",
+      "type": "function",
+      "name": "DialogCommandPaletteV2",
+      "filePath": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "lineRange": [
+        38,
+        62
+      ],
+      "summary": "渲染对话框命令面板新版组件，组织对话框命令面板新版的界面内容和交互；使用 createCommandPaletteModel、palette.language.t 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "type": "function",
+      "name": "DialogHomeCommandPaletteV2",
+      "filePath": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "lineRange": [
+        64,
+        124
+      ],
+      "summary": "渲染对话框首页命令面板新版组件，组织对话框命令面板新版的界面内容和交互；使用 useCommand、useDialog、useGlobal、useLanguage 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/dialog-command-palette-v2.tsx:CommandPaletteView",
+      "type": "function",
+      "name": "CommandPaletteView",
+      "filePath": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "lineRange": [
+        126,
+        247
+      ],
+      "summary": "渲染命令面板View组件，组织对话框命令面板新版的界面内容和交互；使用 useLanguage、useTabs、createSignal、createResource 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:packages/app/src/components/dialog-command-palette-v2.tsx:PaletteRow",
+      "type": "function",
+      "name": "PaletteRow",
+      "filePath": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "lineRange": [
+        249,
+        342
+      ],
+      "summary": "渲染面板行组件，组织对话框命令面板新版的界面内容和交互；使用 props.onActive、event.preventDefault、getDirectory、getFilename 读取状态或构造子视图。",
+      "tags": [
+        "component",
+        "app",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:packages/app/e2e/reproduction/timeline-suspense/main.tsx",
+      "target": "function:packages/app/e2e/reproduction/timeline-suspense/main.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/e2e/reproduction/timeline-suspense/main.tsx",
+      "target": "file:packages/app/src/pages/session/timeline/observe-element-offset.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.test.ts",
+      "target": "function:packages/app/src/addons/serialize.test.ts:createTerminal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.test.ts",
+      "target": "file:packages/app/src/addons/serialize.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "file:packages/app/src/addons/serialize.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "function:packages/app/src/addons/serialize.ts:isBuffer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "function:packages/app/src/addons/serialize.ts:getTerminalBuffers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "function:packages/app/src/addons/serialize.ts:equalFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "class:packages/app/src/addons/serialize.ts:StringSerializeHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "class:packages/app/src/addons/serialize.ts:SerializeAddon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/addons/serialize.ts",
+      "target": "class:packages/app/src/addons/serialize.ts:SerializeAddon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/addons/serialize.ts:getTerminalBuffers",
+      "target": "function:packages/app/src/addons/serialize.ts:isBuffer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:SessionRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:TargetServerRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:LegacyTargetSessionRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:LegacyTargetSessionRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:DraftRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:ResolvedDraftRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:UiI18nBridge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:LayoutCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:QueryProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:BodyDesignClass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:SharedProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:DesktopCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:AppBaseProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:AppBaseProviders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:ConnectionGate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:ConnectionError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:AppInterface",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:AppInterface",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:Routes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "function:packages/app/src/app.tsx:NewLayoutLegacySessionRedirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/comments.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/highlights.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/models.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/notification.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/permission.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/prompt.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/server-sync.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/settings.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/directory-layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/error.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/home.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/home/legacy-home.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/layout-new.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/session.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/pages/session/session-lineage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/utils/server-health.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/utils/session-route.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/app.tsx",
+      "target": "file:packages/app/src/wsl/context.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:SessionRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:sessionHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:SessionRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:legacySessionServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:TargetServerRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:requireServerKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:LegacyTargetSessionRoute",
+      "target": "function:packages/app/src/utils/session-route.ts:requireServerKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:LegacyTargetSessionRedirect",
+      "target": "function:packages/app/src/pages/session/session-lineage.ts:createSessionLineage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:LegacyTargetSessionRedirect",
+      "target": "function:packages/app/src/utils/session-route.ts:legacySessionHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:ConnectionGate",
+      "target": "function:packages/app/src/utils/server-health.ts:useCheckServerHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:ConnectionGate",
+      "target": "function:packages/app/src/utils/server-health.ts:checkServerHealth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:ConnectionError",
+      "target": "function:packages/app/src/context/server.tsx:serverName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:NewLayoutLegacySessionRedirect",
+      "target": "function:packages/app/src/utils/session-route.ts:sessionHref",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/app.tsx:NewLayoutLegacySessionRedirect",
+      "target": "function:packages/app/src/utils/session-route.ts:legacySessionServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:uniqueCommandPaletteEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:uniqueCommandPaletteEntries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileOpener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileOpener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteCommandEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteCommandEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/file.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/layout.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/server-sdk.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/pages/layout/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/pages/session/helpers.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/pages/session/session-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-palette.ts",
+      "target": "file:packages/app/src/utils/session.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileOpener",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/pages/session/session-layout.ts:useSessionLayout",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileOpener",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/context/command.tsx:commandPaletteOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteCommandEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/pages/session/helpers.ts:createSessionTabs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteFileEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "target": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:projectForSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "target": "function:packages/app/src/pages/layout/helpers.ts:displayName",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.test.ts",
+      "target": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "target": "file:packages/app/src/components/command-tooltip-keybind.test.ts",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "target": "function:packages/app/src/components/command-tooltip-keybind.ts:reviewTooltipKeybind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "target": "function:packages/app/src/components/command-tooltip-keybind.ts:reviewTooltipKeybind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "target": "function:packages/app/src/components/command-tooltip-keybind.ts:newTabTooltipKeybind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/command-tooltip-keybind.ts",
+      "target": "function:packages/app/src/components/command-tooltip-keybind.ts:newTabTooltipKeybind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "function:packages/app/src/components/debug-bar.tsx:Cell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "function:packages/app/src/components/debug-bar.tsx:ToggleCell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "function:packages/app/src/components/debug-bar.tsx:DebugBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "function:packages/app/src/components/debug-bar.tsx:DebugBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/debug-bar.tsx",
+      "target": "file:packages/app/src/context/platform.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogCommandPaletteV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogCommandPaletteV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:CommandPaletteView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "function:packages/app/src/components/dialog-command-palette-v2.tsx:PaletteRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/components/command-palette.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/components/dialog-command-palette-v2.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/context/command.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/context/global.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/context/language.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/context/server.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/context/tabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/pages/layout/session-tab-avatar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:packages/app/src/components/dialog-command-palette-v2.tsx",
+      "target": "file:packages/app/src/utils/time.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogCommandPaletteV2",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteModel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "target": "function:packages/app/src/context/command.tsx:commandPaletteOptions",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "target": "function:packages/app/src/components/command-palette.ts:createCommandPaletteCommandEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:DialogHomeCommandPaletteV2",
+      "target": "function:packages/app/src/components/command-palette.ts:createServerSessionEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:CommandPaletteView",
+      "target": "function:packages/app/src/components/command-palette.ts:uniqueCommandPaletteEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:PaletteRow",
+      "target": "function:packages/app/src/context/command.tsx:formatKeybindParts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:packages/app/src/components/dialog-command-palette-v2.tsx:PaletteRow",
+      "target": "function:packages/app/src/utils/time.ts:getRelativeTime",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
