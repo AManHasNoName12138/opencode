@@ -1,0 +1,1947 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "OpenCode",
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Rust"
+    ],
+    "frameworks": [
+      "Effect",
+      "SolidJS",
+      "SolidStart",
+      "Hono",
+      "Drizzle ORM",
+      "Bun",
+      "Tauri"
+    ],
+    "description": "开源 AI 编程代理，围绕项目目录开展多轮模型会话、受权限约束的代码操作和会话分享，并提供 Zen / Go 模型接入与商业计费。当前代码同时保留 legacy 会话链路和独立演进的 V2 Session Core；商业推理还包含迁移到新服务的转发边界。",
+    "analyzedAt": "2026-10-07T20:05:27.511Z",
+    "gitCommitHash": "907b3bc518fa48e90e8ec24dd327d13eee71c36c"
+  },
+  "nodes": [
+    {
+      "id": "domain:agent-sessions",
+      "type": "domain",
+      "name": "智能体会话与持续执行",
+      "summary": "把用户请求转化为可持久记录、多轮推进的编程会话。V2 通过 durable inbox、安全边界和显式 provider turn 组织执行；legacy SessionPrompt 仍保留独立实现，二者不能被视为同一条运行链路。",
+      "tags": [
+        "agent-sessions"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "SessionV2",
+          "session_input",
+          "SessionMessage",
+          "SessionRunCoordinator",
+          "SessionContextEpoch",
+          "SessionPrompt"
+        ],
+        "businessRules": [
+          "复用 Session ID 采用已有 Session；复用 prompt message ID 仅在 Session、prompt 和 delivery 完全匹配时构成重试，否则冲突。",
+          "prompt 先完成持久接纳，resume:false 仅接纳；默认 steer，queue 在会话将闲置时一次提升一条。",
+          "同一 Session 的进程内执行串行化，不同 Session 可并发；wake 仅排空待处理输入，不承担崩溃后 provider 工作恢复。",
+          "V2 每个 provider turn 显式调用一次 llm.stream，并从持久投影重新装配后续历史；EventV2 replay owner 不是分布式 Session 执行锁。",
+          "自动压缩已接入 runner；公开 compact、wait、shell、skill 操作仍返回 OperationUnavailableError。"
+        ],
+        "crossDomainInteractions": [
+          "从模型接入领域解析当前 Location 可用模型。",
+          "向工具领域派发本地调用，并将结果写回历史。",
+          "使用项目 Location 与快照；legacy 会话可进入分享流程。"
+        ]
+      }
+    },
+    {
+      "id": "flow:admit-session-input",
+      "type": "flow",
+      "name": "接纳 V2 用户输入",
+      "summary": "建立或采用 Session，持久接纳用户 prompt，并按 resume 选项发出执行提示。接纳成功并不等于用户消息已经出现在可见历史中。",
+      "tags": [
+        "agent-sessions"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "SessionV2.create / SessionV2.prompt；server.session session.create / session.prompt",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:admit-session-input:adopt-session",
+      "type": "step",
+      "name": "建立或采用 Session",
+      "filePath": "packages/core/src/session.ts",
+      "summary": "create 先查询指定 ID；已有 Session 直接返回，否则解析项目并发布 Created，投影创建竞态也采用已存在的身份。",
+      "tags": [
+        "agent-sessions",
+        "admit-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:admit-session-input:normalize-prompt",
+      "type": "step",
+      "name": "规范化 prompt 与投递方式",
+      "filePath": "packages/core/src/session.ts",
+      "summary": "resolvePrompt 规范化附件 MIME；没有指定 delivery 时使用 steer，没有 message ID 时生成 ID。",
+      "tags": [
+        "agent-sessions",
+        "admit-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:admit-session-input:persist-admission",
+      "type": "step",
+      "name": "发布 PromptAdmitted 并落入 inbox",
+      "filePath": "packages/core/src/session/input.ts",
+      "summary": "SessionInput.admit 查找既有记录或发布持久 PromptAdmitted；投影将接纳信息保存到 session_input，保留 admittedSeq。",
+      "tags": [
+        "agent-sessions",
+        "admit-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:admit-session-input:reconcile-retry",
+      "type": "step",
+      "name": "核对精确重试",
+      "filePath": "packages/core/src/session/input.ts",
+      "summary": "对照 Session、prompt 内容和 delivery；不一致转为 PromptConflictError。历史已投影 prompt 的兼容读取可补出 promoted inbox 记录。",
+      "tags": [
+        "agent-sessions",
+        "admit-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:admit-session-input:schedule-wake",
+      "type": "step",
+      "name": "按 resume 选项唤醒",
+      "filePath": "packages/core/src/session.ts",
+      "summary": "resume 不为 false 时调用进程全局 SessionExecution.wake；返回接纳结果而不等待模型完成。",
+      "tags": [
+        "agent-sessions",
+        "admit-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:drain-session-input",
+      "type": "flow",
+      "name": "串行推进 V2 会话",
+      "summary": "按 Session ID 协调本地 drain，在安全边界提升 durable 输入，运行明确的模型轮次并根据工具结果和新输入继续。",
+      "tags": [
+        "agent-sessions"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "SessionExecution.wake / resume；SessionV2.interrupt",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:drain-session-input:coordinate",
+      "type": "step",
+      "name": "合并 wake 并串行化同会话执行",
+      "filePath": "packages/core/src/session/run-coordinator.ts",
+      "summary": "SessionRunCoordinator 将同一 Session 的显式 resume 加入已有执行，合并 wake；interrupt 停止当前拥有的 fiber，空闲时无操作。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:drain-session-input:locate",
+      "type": "step",
+      "name": "在 drain 开始时解析 Location",
+      "filePath": "packages/core/src/session/execution/local.ts",
+      "summary": "SessionExecutionLocal 从 SessionStore 读取最新 session.location，通过 LocationServiceMap.get 提供 runner 所需的 Location 服务。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:drain-session-input:promote",
+      "type": "step",
+      "name": "在安全边界提升 steer 或 queue",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "提升截止序列内的 steer；queue 仅在将闲置时提升一条并重新评估继续条件。新用户输入将当前 agent 的 provider-turn 计数重置为 1。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:drain-session-input:assemble",
+      "type": "step",
+      "name": "重载历史并构造本轮请求",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "选择 agent、准备 Context Epoch、解析模型、读取 SessionHistory，附上可见工具定义；到达 agent 步数上限时禁用工具。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:drain-session-input:stream",
+      "type": "step",
+      "name": "执行一个 provider turn",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "显式调用 llm.stream(request)，把 LLMEvent 发布为会话事件；providerExecuted 工具由供应商处理，其余本地调用进入工具结算。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:drain-session-input:continue",
+      "type": "step",
+      "name": "结算结果并检查下一轮",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "等待本地工具结果，随后重新读取持久历史。需要继续或存在 steer 时继续当前 drain，闲置边界再检查 queue；无 eligible 输入的 advisory wake 直接结束。",
+      "tags": [
+        "agent-sessions",
+        "drain-session-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:maintain-session-context",
+      "type": "flow",
+      "name": "维护系统上下文与自动压缩",
+      "summary": "把动态系统信息与会话历史边界分开管理，在上下文过大时生成可持久重用的压缩摘要。",
+      "tags": [
+        "agent-sessions"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionRunner.runTurn 的上下文准备与自动压缩检查",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:maintain-session-context:collect-context",
+      "type": "step",
+      "name": "组合系统、技能与引用上下文",
+      "filePath": "packages/core/src/session/runner/llm.ts",
+      "summary": "runner 并发加载 SystemContextRegistry、SkillGuidance 与 ReferenceGuidance，再合并成 SystemContext。",
+      "tags": [
+        "agent-sessions",
+        "maintain-session-context"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:maintain-session-context:reconcile-epoch",
+      "type": "step",
+      "name": "建立或协调 Context Epoch",
+      "filePath": "packages/core/src/session/context-epoch.ts",
+      "summary": "首次持久保存 baseline 与 snapshot；上下文变化可发布 ContextUpdated，压缩后的 replacement 条件决定何时替换 baseline。",
+      "tags": [
+        "agent-sessions",
+        "maintain-session-context"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:maintain-session-context:select-history",
+      "type": "step",
+      "name": "选取与 baseline 对齐的历史",
+      "filePath": "packages/core/src/session/history.ts",
+      "summary": "SessionHistory 基于最新 compaction 和 baselineSeq 选择消息，保留需要的后续 system 更新并解码成运行历史。",
+      "tags": [
+        "agent-sessions",
+        "maintain-session-context"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:maintain-session-context:compact-history",
+      "type": "step",
+      "name": "自动压缩后重建请求",
+      "filePath": "packages/core/src/session/compaction.ts",
+      "summary": "SessionCompaction 检查预算或处理适用的 context overflow，发布 Compaction.Started / Ended 并保存摘要；runner 再加载投影。此流程不代表公开 compact API 已开放。",
+      "tags": [
+        "agent-sessions",
+        "maintain-session-context"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:run-legacy-session",
+      "type": "flow",
+      "name": "运行 legacy 会话链路",
+      "summary": "保留 packages/opencode 中的 SessionPrompt、消息 parts、MCP 和插件集成。该流程独立于 V2 durable inbox，不能把 legacy 能力直接归因于 V2。",
+      "tags": [
+        "agent-sessions"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionPrompt.prompt / SessionPrompt.loop",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:run-legacy-session:create-message",
+      "type": "step",
+      "name": "立即建立 legacy 用户消息",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "summary": "读取 Session、清理 revert、createUserMessage 并 touch；输入中的 tools 开关可转换为 legacy permission 规则。",
+      "tags": [
+        "agent-sessions",
+        "run-legacy-session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:run-legacy-session:start-loop",
+      "type": "step",
+      "name": "按 noReply 决定启动循环",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "summary": "noReply 为 true 时直接返回消息，否则进入 SessionPrompt.loop，由 legacy runner 管理继续条件。",
+      "tags": [
+        "agent-sessions",
+        "run-legacy-session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:run-legacy-session:resolve-tools",
+      "type": "step",
+      "name": "解析 legacy 工具与插件",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "summary": "SessionTools.resolve 结合 agent、permission、MCP 与 registry；插件可变换消息，系统提示包含环境、指令、MCP 与技能。",
+      "tags": [
+        "agent-sessions",
+        "run-legacy-session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:run-legacy-session:process-result",
+      "type": "step",
+      "name": "处理流输出与完成条件",
+      "filePath": "packages/opencode/src/session/prompt.ts",
+      "summary": "SessionProcessor handle.process 运行本轮，维护 assistant 消息及结构化输出；根据 finish、工具调用和错误决定继续或结束。",
+      "tags": [
+        "agent-sessions",
+        "run-legacy-session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:tools-and-approvals",
+      "type": "domain",
+      "name": "代码操作、工具与用户授权",
+      "summary": "把模型的本地工具调用转成受 Location 约束的文件、命令和技能操作。canonical Tool 表达执行契约，叶子工具负责副作用前授权，registry 负责有效注册与统一输出结算。",
+      "tags": [
+        "tools-and-approvals"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "Tool",
+          "ToolRegistry",
+          "ApplicationTools",
+          "PermissionV2",
+          "PermissionSaved",
+          "SkillV2",
+          "ToolOutputStore"
+        ],
+        "businessRules": [
+          "Location 注册覆盖 application 注册；同位置最新活跃注册优先，scope 关闭后恢复前一项。",
+          "定义过滤仅控制模型可见性，registry 不执行授权；叶子工具必须在副作用之前调用 PermissionV2。",
+          "配置中的 deny 不可被已记住的 allow 覆盖；always 按项目保存规则。",
+          "V2 canonical registry 的 MCP、插件工具注册仍有设计缺口，不能假定 legacy 集成已全部迁移。"
+        ],
+        "crossDomainInteractions": [
+          "接收会话 runner 的 tool-call，并把结算结果交还会话历史。",
+          "使用项目 Location 解析路径，按项目保存授权。"
+        ]
+      }
+    },
+    {
+      "id": "flow:execute-local-tool",
+      "type": "flow",
+      "name": "执行并结算本地工具",
+      "summary": "通过有效工具目录执行模型调用，处理过期注册、输入输出校验和有限的模型可见输出。",
+      "tags": [
+        "tools-and-approvals"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionRunner 捕获非 providerExecuted 的 tool-call",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:execute-local-tool:materialize",
+      "type": "step",
+      "name": "形成有效工具目录",
+      "filePath": "packages/core/src/tool/registry.ts",
+      "summary": "ToolRegistry 合并 application 与 Location 注册，并根据 agent 规则过滤整项禁用的工具定义。",
+      "tags": [
+        "tools-and-approvals",
+        "execute-local-tool"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:execute-local-tool:capture-tool",
+      "type": "step",
+      "name": "校验工具身份与调用契约",
+      "filePath": "packages/core/src/tool/registry.ts",
+      "summary": "settle 检查 advertised registration 是否仍有效，再通过 canonical Tool 执行输入解码与输出契约；未知或过期调用得到错误结果。",
+      "tags": [
+        "tools-and-approvals",
+        "execute-local-tool"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:execute-local-tool:perform-edit",
+      "type": "step",
+      "name": "授权后执行文件修改",
+      "filePath": "packages/core/src/tool/edit.ts",
+      "summary": "以 edit 为例：解析真实路径，必要时先申请 external_directory，再申请 edit；精确匹配文本并用 writeIfUnchanged 避免覆盖并发修改。",
+      "tags": [
+        "tools-and-approvals",
+        "execute-local-tool"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:execute-local-tool:bound-output",
+      "type": "step",
+      "name": "结算结果并限制模型输出",
+      "filePath": "packages/core/src/tool/registry.ts",
+      "summary": "捕获预期 ToolFailure，使用 ToolOutputStore.bound 统一控制模型输出并保留 managed outputPaths；runner 随后持久化结果。",
+      "tags": [
+        "tools-and-approvals",
+        "execute-local-tool"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:resolve-permission",
+      "type": "flow",
+      "name": "处理权限请求与用户回复",
+      "summary": "根据 agent 配置和已保存规则判定 allow、deny 或 ask；ask 在用户回复前挂起具体操作。",
+      "tags": [
+        "tools-and-approvals"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "PermissionV2.assert；server.permission 的回复接口",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:resolve-permission:evaluate",
+      "type": "step",
+      "name": "评估 action 与 resource 规则",
+      "filePath": "packages/core/src/permission.ts",
+      "summary": "组合配置与项目保存规则，优先执行配置 deny；多资源请求中任何 deny 阻止执行，任何 ask 要求询问。",
+      "tags": [
+        "tools-and-approvals",
+        "resolve-permission"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-permission:ask",
+      "type": "step",
+      "name": "发布 Asked 并等待",
+      "filePath": "packages/core/src/permission.ts",
+      "summary": "创建带 Session、来源 tool call 和资源的 pending request，发布 Permission Asked；assert 等待 Deferred 完成。",
+      "tags": [
+        "tools-and-approvals",
+        "resolve-permission"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-permission:reply",
+      "type": "step",
+      "name": "应用允许或拒绝回复",
+      "filePath": "packages/core/src/permission.ts",
+      "summary": "回复发布 Replied；reject 终止当前请求并拒绝同会话其余待定请求，有文字反馈时使用 CorrectedError。",
+      "tags": [
+        "tools-and-approvals",
+        "resolve-permission"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-permission:remember",
+      "type": "step",
+      "name": "保存 always 并释放匹配请求",
+      "filePath": "packages/core/src/permission.ts",
+      "summary": "always 在请求提供 save patterns 时保存项目规则，重新评估其余 pending requests；符合允许条件且没有配置 deny 的请求一起放行。",
+      "tags": [
+        "tools-and-approvals",
+        "resolve-permission"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:load-agent-skill",
+      "type": "flow",
+      "name": "发现并加载技能说明",
+      "summary": "从 Location 技能来源形成目录，按名称及权限加载工作流说明和少量资源路径到工具结果中。",
+      "tags": [
+        "tools-and-approvals"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "skill 工具调用",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:load-agent-skill:discover",
+      "type": "step",
+      "name": "加载并缓存技能来源",
+      "filePath": "packages/core/src/skill.ts",
+      "summary": "SkillV2 从目录、URL 或 embedded 来源加载技能；目录识别 Markdown 与 SKILL.md，按来源缓存并按名字合并。",
+      "tags": [
+        "tools-and-approvals",
+        "load-agent-skill"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:load-agent-skill:authorize",
+      "type": "step",
+      "name": "查找名称并申请 skill 权限",
+      "filePath": "packages/core/src/tool/skill.ts",
+      "summary": "skill 工具只接受当前目录中的技能名称，使用 skill action 和该名称申请权限。",
+      "tags": [
+        "tools-and-approvals",
+        "load-agent-skill"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:load-agent-skill:return-guidance",
+      "type": "step",
+      "name": "返回说明与相对资源基准",
+      "filePath": "packages/core/src/tool/skill.ts",
+      "summary": "返回 skill_content、技能目录和最多十个采样资源路径，供后续模型步骤使用。",
+      "tags": [
+        "tools-and-approvals",
+        "load-agent-skill"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:projects-and-changes",
+      "type": "domain",
+      "name": "项目位置、工作副本与变更恢复",
+      "summary": "以 Project 和 Location 界定会话运行的代码目录，并管理同项目的 Git worktree 副本。快照和 SessionRevert 提供按消息边界暂存、取消或确认文件回退的能力。",
+      "tags": [
+        "projects-and-changes"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "Project",
+          "Location",
+          "ProjectDirectories",
+          "ProjectCopy",
+          "Snapshot",
+          "SessionRevert"
+        ],
+        "businessRules": [
+          "项目身份优先从规范化 remote 推导，其次使用缓存或根提交；非 Git 目录使用 global 身份。",
+          "Location 由 directory 与可选 workspaceID 表示；省略 workspaceID 为 implicit-local，不能据此声称已实现分布式放置。",
+          "项目副本必须来自已登记目录；移除必须有可识别的 copy strategy。",
+          "回退按持久消息序列和 assistant snapshot 计划文件恢复；stage、clear、commit 具有不同含义。"
+        ],
+        "crossDomainInteractions": [
+          "会话创建和 drain 从此领域获取项目身份与运行位置。",
+          "工具在 Location 内执行文件操作；权限保存按 Project 归属。"
+        ]
+      }
+    },
+    {
+      "id": "flow:resolve-project-location",
+      "type": "flow",
+      "name": "识别项目与运行位置",
+      "summary": "将目录解析为稳定项目身份，再为该位置提供独立运行服务。",
+      "tags": [
+        "projects-and-changes"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Project.resolve / Location.boundNode",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:resolve-project-location:discover-repository",
+      "type": "step",
+      "name": "发现 Git 仓库",
+      "filePath": "packages/core/src/project.ts",
+      "summary": "从输入目录发现 repository；非 Git 路径返回 global 项目与文件系统根目录。",
+      "tags": [
+        "projects-and-changes",
+        "resolve-project-location"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-project-location:identify-project",
+      "type": "step",
+      "name": "计算项目身份",
+      "filePath": "packages/core/src/project.ts",
+      "summary": "规范化 remote 主机和路径形成 hash，后备依次使用 repo-local 缓存与根提交，同时返回 commonDirectory 和 worktree。",
+      "tags": [
+        "projects-and-changes",
+        "resolve-project-location"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-project-location:bind-location",
+      "type": "step",
+      "name": "绑定 Location 服务",
+      "filePath": "packages/core/src/location.ts",
+      "summary": "Location.boundNode 保存输入目录、workspaceID、解析出的项目和 VCS 信息；LocationServiceMap 为执行提供对应服务集合。",
+      "tags": [
+        "projects-and-changes",
+        "resolve-project-location"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:manage-project-copy",
+      "type": "flow",
+      "name": "创建并登记 Git 工作副本",
+      "summary": "使用 ProjectCopy 的 strategy 创建可独立工作的项目目录，并与目录登记及刷新机制保持一致。",
+      "tags": [
+        "projects-and-changes"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "ProjectCopy.create；server.project-copy",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:manage-project-copy:validate-source",
+      "type": "step",
+      "name": "验证 strategy 与项目来源目录",
+      "filePath": "packages/core/src/project/copy.ts",
+      "summary": "选择已注册的 strategy，将 sourceDirectory 规范化，并确认来源属于项目目录登记。",
+      "tags": [
+        "projects-and-changes",
+        "manage-project-copy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:manage-project-copy:choose-destination",
+      "type": "step",
+      "name": "生成可用目标目录",
+      "filePath": "packages/core/src/project/copy.ts",
+      "summary": "使用输入 name 或生成 slug；目标冲突时尝试带数字后缀，超过限定次数报告 DestinationExistsError。",
+      "tags": [
+        "projects-and-changes",
+        "manage-project-copy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:manage-project-copy:create-worktree",
+      "type": "step",
+      "name": "创建 Git worktree",
+      "filePath": "packages/core/src/project/copy-strategies.ts",
+      "summary": "git_worktree strategy 发现源仓库，调用 Git.worktree.create，并返回规范化的新目录。",
+      "tags": [
+        "projects-and-changes",
+        "manage-project-copy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:manage-project-copy:record-directory",
+      "type": "step",
+      "name": "记录副本并通知更新",
+      "filePath": "packages/core/src/project/copy.ts",
+      "summary": "登记新 directory 与 strategy，发布目录更新事件；refresh 可重新发现现存 worktree 并清除失效登记。",
+      "tags": [
+        "projects-and-changes",
+        "manage-project-copy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:revert-session-changes",
+      "type": "flow",
+      "name": "按会话消息边界恢复变更",
+      "summary": "从 assistant 快照生成回退计划，暂存文件和消息边界的回退；随后可以取消或确认。",
+      "tags": [
+        "projects-and-changes"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionV2.revert.stage / clear / commit",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:revert-session-changes:plan",
+      "type": "step",
+      "name": "定位消息边界与受影响文件",
+      "filePath": "packages/core/src/session/revert.ts",
+      "summary": "读取指定 message 的 seq，查找后续 assistant 消息的 snapshot.start 与文件列表，为每个文件保留首个恢复快照。",
+      "tags": [
+        "projects-and-changes",
+        "revert-session-changes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:revert-session-changes:stage-files",
+      "type": "step",
+      "name": "保留原状态并暂存文件恢复",
+      "filePath": "packages/core/src/session/revert.ts",
+      "summary": "捕获当前或复用已有原始快照；除 files:false 外，按计划恢复文件并计算相对原状态的 diff。",
+      "tags": [
+        "projects-and-changes",
+        "revert-session-changes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:revert-session-changes:publish-stage",
+      "type": "step",
+      "name": "发布 Revert.Staged",
+      "filePath": "packages/core/src/session/revert.ts",
+      "summary": "持久记录 messageID、原快照、patch 与文件变化；Session 投影据此展现待确认的回退边界。",
+      "tags": [
+        "projects-and-changes",
+        "revert-session-changes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:revert-session-changes:resolve-stage",
+      "type": "step",
+      "name": "取消或确认回退",
+      "filePath": "packages/core/src/session/revert.ts",
+      "summary": "clear 根据原始快照恢复文件并发布 Cleared；commit 发布 Committed，确认所选消息边界。两者是互斥后续选择。",
+      "tags": [
+        "projects-and-changes",
+        "revert-session-changes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:models-and-integrations",
+      "type": "domain",
+      "name": "模型目录与供应商连接",
+      "summary": "维护 Location 可用的供应商、模型和变体，并通过 integration 管理 API key、环境变量和 OAuth 连接。V2 runner 从该目录选择模型，构造当前已支持的协议 route。",
+      "tags": [
+        "models-and-integrations"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "Catalog",
+          "ProviderV2",
+          "ModelV2",
+          "Integration",
+          "Credential",
+          "SessionRunnerModel"
+        ],
+        "businessRules": [
+          "OAuth attempt 有独立生命周期，连接解析可刷新临近过期的 OAuth 凭据。",
+          "显式选择不可用模型或变体必须报错，不能静默改用另一个选择。",
+          "V2 SessionRunnerModel 当前支持 AI SDK 元数据对应的 OpenAI Responses、Anthropic Messages 和带 URL 的 OpenAI-compatible Chat；不能将 llm 包全部供应商能力视为 V2 已接通。"
+        ],
+        "crossDomainInteractions": [
+          "为会话执行提供带鉴权、模型参数和上下文限额的 route。",
+          "可连接商业领域的 OpenCode 服务，也可独立连接其他供应商。"
+        ]
+      }
+    },
+    {
+      "id": "flow:connect-provider",
+      "type": "flow",
+      "name": "建立供应商连接",
+      "summary": "让用户通过 API key 或 OAuth 连接 integration，并在以后请求中获得可用凭据。",
+      "tags": [
+        "models-and-integrations"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Integration.connection.key / oauth；Integration.attempt.complete",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:connect-provider:list-methods",
+      "type": "step",
+      "name": "列出连接方式与现有连接",
+      "filePath": "packages/core/src/integration.ts",
+      "summary": "Integration.list / get 返回注册 methods，并组合已存 Credential 与可用环境变量连接。",
+      "tags": [
+        "models-and-integrations",
+        "connect-provider"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:connect-provider:authorize",
+      "type": "step",
+      "name": "执行 key 或 OAuth 连接",
+      "filePath": "packages/core/src/integration.ts",
+      "summary": "key method 验证用户输入后保存凭据；OAuth method 发起授权并创建可查询、完成或取消的 attempt。",
+      "tags": [
+        "models-and-integrations",
+        "connect-provider"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:connect-provider:persist",
+      "type": "step",
+      "name": "完成授权并通知目录",
+      "filePath": "packages/core/src/integration.ts",
+      "summary": "OAuth attempt 成功后写入 Credential；连接创建、更新或移除发布 ConnectionUpdated，驱动可用目录变化。",
+      "tags": [
+        "models-and-integrations",
+        "connect-provider"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:connect-provider:resolve",
+      "type": "step",
+      "name": "解析当前可用凭据",
+      "filePath": "packages/core/src/integration.ts",
+      "summary": "active 选择当前连接；resolve 读取 key、环境值或 OAuth token，支持在临近过期时刷新并保存。",
+      "tags": [
+        "models-and-integrations",
+        "connect-provider"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:resolve-provider-model",
+      "type": "flow",
+      "name": "解析本轮模型与协议",
+      "summary": "根据 Session 选择和 Location 目录取得可执行模型，并附加变体、连接和供应商请求设置。",
+      "tags": [
+        "models-and-integrations"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionRunnerModel.resolve(session)",
+        "entryType": "event"
+      }
+    },
+    {
+      "id": "step:resolve-provider-model:select",
+      "type": "step",
+      "name": "选择显式或默认模型",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "显式 Session model 在 available 目录中查找；未显式选择时优先使用受支持的默认模型，再选择受支持的可用模型。",
+      "tags": [
+        "models-and-integrations",
+        "resolve-provider-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-provider-model:connect",
+      "type": "step",
+      "name": "取得供应商活动连接",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "按 provider.integrationID 或 provider ID 查找 active connection，再解析 Credential；缺失或不支持的模型产生明确错误。",
+      "tags": [
+        "models-and-integrations",
+        "resolve-provider-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-provider-model:apply-variant",
+      "type": "step",
+      "name": "应用变体与请求默认值",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "验证 variant ID，合并 headers / body，附上 baseURL、上下文与输出限制，并避免把 apiKey 留在普通 HTTP body。",
+      "tags": [
+        "models-and-integrations",
+        "resolve-provider-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:resolve-provider-model:build-route",
+      "type": "step",
+      "name": "构造受支持的协议 route",
+      "filePath": "packages/core/src/session/runner/model.ts",
+      "summary": "根据 api.package 映射到 Responses、Messages 或 compatible Chat，设置 bearer 或 x-api-key 认证并返回 executable model。",
+      "tags": [
+        "models-and-integrations",
+        "resolve-provider-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:hosted-service-commerce",
+      "type": "domain",
+      "name": "托管模型服务与商业计费",
+      "summary": "Console 管理账户下的组织空间、API key、余额和订阅用量，Zen / Go 接口提供托管推理入口。当前实现同时包含 legacy 推理计费和已迁移 workspace / 新 key 的远端转发路径。",
+      "tags": [
+        "hosted-service-commerce"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "Console Workspace",
+          "Account",
+          "User",
+          "Key",
+          "Billing",
+          "Usage",
+          "Lite",
+          "Stripe",
+          "ConsoleMigration"
+        ],
+        "businessRules": [
+          "Console Workspace 是商业租户，不等同于本地 Location.workspaceID。",
+          "新 oc_sk_ key 与迁移 workspace 请求交由新推理服务鉴权和计费，不先执行 legacy 余额校验。",
+          "legacy 路径按匿名、免费、BYOK、订阅或余额等来源处理费用，并实施模型、地区和用量限制。",
+          "Stripe webhook 验证签名及 workspace/customer 信息后更新付款与余额；Black 属于保留的历史订阅逻辑，不可将其视为正常续订新品。"
+        ],
+        "crossDomainInteractions": [
+          "模型连接领域可将 OpenCode 托管服务作为供应商。",
+          "会话请求间接消费托管推理，但本地会话持久化与商业账务归属不同边界。"
+        ]
+      }
+    },
+    {
+      "id": "flow:create-console-workspace",
+      "type": "flow",
+      "name": "创建商业工作空间与 API key",
+      "summary": "为活跃账户创建 Console 租户、管理员和初始账单，再生成默认 API key。",
+      "tags": [
+        "hosted-service-commerce"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Workspace.create({ name })",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:create-console-workspace:verify-account",
+      "type": "step",
+      "name": "确认账户仍然活跃",
+      "filePath": "packages/console/core/src/workspace.ts",
+      "summary": "Actor.assert(account) 提供当前账户身份，事务读取 AccountTable 并拒绝已删除账户。",
+      "tags": [
+        "hosted-service-commerce",
+        "create-console-workspace"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:create-console-workspace:create-tenant",
+      "type": "step",
+      "name": "建立 workspace 与管理员",
+      "filePath": "packages/console/core/src/workspace.ts",
+      "summary": "同一事务插入 WorkspaceTable 与 UserTable，将创建者设为该 workspace 的 admin。",
+      "tags": [
+        "hosted-service-commerce",
+        "create-console-workspace"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:create-console-workspace:initialize-billing",
+      "type": "step",
+      "name": "初始化零余额账单",
+      "filePath": "packages/console/core/src/workspace.ts",
+      "summary": "为 workspace 插入 BillingTable，初始 balance 为零，等待充值或订阅。",
+      "tags": [
+        "hosted-service-commerce",
+        "create-console-workspace"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:create-console-workspace:issue-key",
+      "type": "step",
+      "name": "创建默认 API key",
+      "filePath": "packages/console/core/src/key.ts",
+      "summary": "以该 workspace 的 system Actor 调用 Key.create；key 关联 workspace 与 user。列出 key 时其他用户的完整值不会返回。",
+      "tags": [
+        "hosted-service-commerce",
+        "create-console-workspace"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:serve-hosted-inference",
+      "type": "flow",
+      "name": "路由并计量 Zen / Go 推理",
+      "summary": "托管接口先判断迁移边界；迁移请求直接转发，未迁移请求继续走本仓库的模型检查、供应商路由和计费。后续 legacy 步骤仅适用于未转发分支。",
+      "tags": [
+        "hosted-service-commerce"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "POST /zen/v1/chat/completions、/zen/v1/responses、/zen/v1/messages 及 Go 对应接口",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:serve-hosted-inference:parse",
+      "type": "step",
+      "name": "提取模型与请求流",
+      "filePath": "packages/console/app/src/routes/zen/util/handler.ts",
+      "summary": "handler 准备可重放的请求 body，解析模型、API key 与请求格式，为迁移分流和后续 streaming 保留 body。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:serve-hosted-inference:migration-route",
+      "type": "step",
+      "name": "识别迁移流量并转发",
+      "filePath": "packages/console/app/src/lib/inference-proxy.ts",
+      "summary": "proxyInference 将新 oc_sk_ key 或已迁移 workspace 路由到 ConsoleMigration.inferenceUrl；BYOK 使用工作空间/供应商连接 ID 与原生模型映射。成功转发即返回，由目标服务负责认证和计费。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:serve-hosted-inference:validate-legacy",
+      "type": "step",
+      "name": "验证 legacy 模型与消费资格",
+      "filePath": "packages/console/app/src/routes/zen/util/handler.ts",
+      "summary": "未迁移分支验证模型、地区、速率、key、训练授权与订阅/余额；超出配额或消费上限时返回对应错误。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:serve-hosted-inference:select-provider",
+      "type": "step",
+      "name": "选择 legacy 上游",
+      "filePath": "packages/console/app/src/routes/zen/util/handler.ts",
+      "summary": "结合 trial、sticky provider、TPM/TPS 限制和预算选择可用供应商，设置 BYOK 或平台凭据并保留对应协议格式。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:serve-hosted-inference:stream-response",
+      "type": "step",
+      "name": "转发请求并解析 usage",
+      "filePath": "packages/console/app/src/routes/zen/util/handler.ts",
+      "summary": "发送上游请求并流式返回内容，利用 provider adapter 抽取 token 与缓存等 usage 信息以计算费用。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:serve-hosted-inference:account",
+      "type": "step",
+      "name": "记录 legacy 消费与余额",
+      "filePath": "packages/console/app/src/routes/zen/util/handler.ts",
+      "summary": "trackUsage 写入 Usage 并更新订阅窗口或余额/月用量，部分高频 workspace 经 Redis 合并；余额模式符合条件时尝试自动充值。",
+      "tags": [
+        "hosted-service-commerce",
+        "serve-hosted-inference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:fund-console-billing",
+      "type": "flow",
+      "name": "充值并同步 Stripe 付款结果",
+      "summary": "创建充值 Checkout，接收经签名验证的付款通知并更新余额及支付记录；余额消费后可触发自动补充。",
+      "tags": [
+        "hosted-service-commerce"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Billing.generateCheckoutUrl；POST /stripe/webhook",
+        "entryType": "http"
+      }
+    },
+    {
+      "id": "step:fund-console-billing:checkout",
+      "type": "step",
+      "name": "创建充值 Checkout",
+      "filePath": "packages/console/core/src/billing.ts",
+      "summary": "根据输入金额或 reloadAmount 计算充值金额和处理费，创建带 workspace 元信息的 Stripe payment Checkout。",
+      "tags": [
+        "hosted-service-commerce",
+        "fund-console-billing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:fund-console-billing:verify-webhook",
+      "type": "step",
+      "name": "验证 Stripe 通知",
+      "filePath": "packages/console/app/src/routes/stripe/webhook.ts",
+      "summary": "webhooks.constructEventAsync 校验原始 body 与 stripe-signature；处理 checkout.session.completed 时核对 workspace、customer、payment 与 invoice 信息。",
+      "tags": [
+        "hosted-service-commerce",
+        "fund-console-billing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:fund-console-billing:credit",
+      "type": "step",
+      "name": "入账并保存支付方式",
+      "filePath": "packages/console/app/src/routes/stripe/webhook.ts",
+      "summary": "在事务内增加 Billing.balance，更新 customer 与 payment method，再插入 PaymentTable 付款记录。",
+      "tags": [
+        "hosted-service-commerce",
+        "fund-console-billing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:fund-console-billing:reload",
+      "type": "step",
+      "name": "按配置自动补充余额",
+      "filePath": "packages/console/core/src/billing.ts",
+      "summary": "消费路径检查 reload 开关、阈值与锁定窗口后调用 Billing.reload 创建并支付 invoice；失败时记录 reloadError 并关闭自动充值。",
+      "tags": [
+        "hosted-service-commerce",
+        "fund-console-billing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:session-sharing",
+      "type": "domain",
+      "name": "会话发布与分享",
+      "summary": "把 legacy 会话的消息、parts、模型信息和 diff 发布为可阅读的分享快照。分享 ID 用于访问，secret 用于同步与删除；此链路仍属于 legacy SessionShare / ShareNext 与 enterprise 服务。",
+      "tags": [
+        "session-sharing"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "SessionShare",
+          "ShareNext",
+          "Share.Info",
+          "Share.Data",
+          "share_snapshot"
+        ],
+        "businessRules": [
+          "配置 share:disabled 禁止分享；自动分享只针对适用的顶层会话。",
+          "同步与删除必须匹配 share secret；共享读取使用 share ID。",
+          "ShareNext 订阅 legacy 消息事件；当前 V2 server.session 不能被假定已经具有等价分享 API。"
+        ],
+        "crossDomainInteractions": [
+          "消费 legacy 会话消息、模型资料和变更 diff。",
+          "enterprise 服务保存并提供可公开读取的分享快照。"
+        ]
+      }
+    },
+    {
+      "id": "flow:publish-session-share",
+      "type": "flow",
+      "name": "发布并持续同步会话",
+      "summary": "创建分享身份，发送现有历史，并将后续 legacy 会话变更合并进服务端快照。",
+      "tags": [
+        "session-sharing"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionShare.share(sessionID)；POST /api/share",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:publish-session-share:check-config",
+      "type": "step",
+      "name": "检查分享配置",
+      "filePath": "packages/opencode/src/share/session.ts",
+      "summary": "SessionShare.share 读取配置，disabled 时拒绝；允许时调用 ShareNext.create，随后把分享 URL 写入本地 Session。",
+      "tags": [
+        "session-sharing",
+        "publish-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:publish-session-share:create-identity",
+      "type": "step",
+      "name": "建立分享 ID 与 secret",
+      "filePath": "packages/enterprise/src/core/share.ts",
+      "summary": "enterprise Share.create 从 Session ID 派生短 share ID，创建随机 secret 并初始化快照；既有 ID 会报告 AlreadyExists。",
+      "tags": [
+        "session-sharing",
+        "publish-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:publish-session-share:sync-history",
+      "type": "step",
+      "name": "发送历史并订阅后续事件",
+      "filePath": "packages/opencode/src/share/share-next.ts",
+      "summary": "ShareNext 保存返回的分享身份，full sync 发送已有数据，监听 session、message、part、diff 更新并排队发送。",
+      "tags": [
+        "session-sharing",
+        "publish-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:publish-session-share:merge-snapshot",
+      "type": "step",
+      "name": "验证 secret 并合并快照",
+      "filePath": "packages/enterprise/src/core/share.ts",
+      "summary": "Share.sync 校验身份，以 session / message / part 等稳定键合并最新数据，Share.data 提供快照读取并兼容旧存储。",
+      "tags": [
+        "session-sharing",
+        "publish-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "flow:revoke-session-share",
+      "type": "flow",
+      "name": "撤销已发布的分享",
+      "summary": "删除服务端分享及快照，并清除本地分享状态。",
+      "tags": [
+        "session-sharing"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "SessionShare.unshare(sessionID)；DELETE /api/share/:shareID",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:revoke-session-share:request-delete",
+      "type": "step",
+      "name": "使用保存的 secret 请求删除",
+      "filePath": "packages/opencode/src/share/share-next.ts",
+      "summary": "ShareNext.remove 查找本地分享记录，向远端 share endpoint 发送带 secret 的 DELETE。",
+      "tags": [
+        "session-sharing",
+        "revoke-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:revoke-session-share:remove-storage",
+      "type": "step",
+      "name": "删除分享身份及关联数据",
+      "filePath": "packages/enterprise/src/core/share.ts",
+      "summary": "Share.remove 检查 secret，移除 share 记录以及 snapshot、compaction、event 和旧 data 存储。",
+      "tags": [
+        "session-sharing",
+        "revoke-session-share"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "step:revoke-session-share:clear-local",
+      "type": "step",
+      "name": "清除本地 Session 分享状态",
+      "filePath": "packages/opencode/src/share/session.ts",
+      "summary": "远端删除完成后，SessionShare.unshare 将本地 share 信息设为空。",
+      "tags": [
+        "session-sharing",
+        "revoke-session-share"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "domain:agent-sessions",
+      "target": "flow:admit-session-input",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:admit-session-input",
+      "target": "step:admit-session-input:adopt-session",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:admit-session-input",
+      "target": "step:admit-session-input:normalize-prompt",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:admit-session-input",
+      "target": "step:admit-session-input:persist-admission",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "flow:admit-session-input",
+      "target": "step:admit-session-input:reconcile-retry",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:admit-session-input",
+      "target": "step:admit-session-input:schedule-wake",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "flow:drain-session-input",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:coordinate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:locate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:promote",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:assemble",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:stream",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:drain-session-input",
+      "target": "step:drain-session-input:continue",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "flow:maintain-session-context",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:maintain-session-context",
+      "target": "step:maintain-session-context:collect-context",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:maintain-session-context",
+      "target": "step:maintain-session-context:reconcile-epoch",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:maintain-session-context",
+      "target": "step:maintain-session-context:select-history",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:maintain-session-context",
+      "target": "step:maintain-session-context:compact-history",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "flow:run-legacy-session",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:run-legacy-session",
+      "target": "step:run-legacy-session:create-message",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:run-legacy-session",
+      "target": "step:run-legacy-session:start-loop",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:run-legacy-session",
+      "target": "step:run-legacy-session:resolve-tools",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:run-legacy-session",
+      "target": "step:run-legacy-session:process-result",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:tools-and-approvals",
+      "target": "flow:execute-local-tool",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:execute-local-tool",
+      "target": "step:execute-local-tool:materialize",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:execute-local-tool",
+      "target": "step:execute-local-tool:capture-tool",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:execute-local-tool",
+      "target": "step:execute-local-tool:perform-edit",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:execute-local-tool",
+      "target": "step:execute-local-tool:bound-output",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:tools-and-approvals",
+      "target": "flow:resolve-permission",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:resolve-permission",
+      "target": "step:resolve-permission:evaluate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:resolve-permission",
+      "target": "step:resolve-permission:ask",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:resolve-permission",
+      "target": "step:resolve-permission:reply",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:resolve-permission",
+      "target": "step:resolve-permission:remember",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:tools-and-approvals",
+      "target": "flow:load-agent-skill",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:load-agent-skill",
+      "target": "step:load-agent-skill:discover",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:load-agent-skill",
+      "target": "step:load-agent-skill:authorize",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:load-agent-skill",
+      "target": "step:load-agent-skill:return-guidance",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:projects-and-changes",
+      "target": "flow:resolve-project-location",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:resolve-project-location",
+      "target": "step:resolve-project-location:discover-repository",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:resolve-project-location",
+      "target": "step:resolve-project-location:identify-project",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:resolve-project-location",
+      "target": "step:resolve-project-location:bind-location",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:projects-and-changes",
+      "target": "flow:manage-project-copy",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:manage-project-copy",
+      "target": "step:manage-project-copy:validate-source",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:manage-project-copy",
+      "target": "step:manage-project-copy:choose-destination",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:manage-project-copy",
+      "target": "step:manage-project-copy:create-worktree",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:manage-project-copy",
+      "target": "step:manage-project-copy:record-directory",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:projects-and-changes",
+      "target": "flow:revert-session-changes",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:revert-session-changes",
+      "target": "step:revert-session-changes:plan",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:revert-session-changes",
+      "target": "step:revert-session-changes:stage-files",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:revert-session-changes",
+      "target": "step:revert-session-changes:publish-stage",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:revert-session-changes",
+      "target": "step:revert-session-changes:resolve-stage",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:models-and-integrations",
+      "target": "flow:connect-provider",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:connect-provider",
+      "target": "step:connect-provider:list-methods",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:connect-provider",
+      "target": "step:connect-provider:authorize",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:connect-provider",
+      "target": "step:connect-provider:persist",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:connect-provider",
+      "target": "step:connect-provider:resolve",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:models-and-integrations",
+      "target": "flow:resolve-provider-model",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:resolve-provider-model",
+      "target": "step:resolve-provider-model:select",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:resolve-provider-model",
+      "target": "step:resolve-provider-model:connect",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:resolve-provider-model",
+      "target": "step:resolve-provider-model:apply-variant",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:resolve-provider-model",
+      "target": "step:resolve-provider-model:build-route",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:hosted-service-commerce",
+      "target": "flow:create-console-workspace",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:create-console-workspace",
+      "target": "step:create-console-workspace:verify-account",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:create-console-workspace",
+      "target": "step:create-console-workspace:create-tenant",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:create-console-workspace",
+      "target": "step:create-console-workspace:initialize-billing",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:create-console-workspace",
+      "target": "step:create-console-workspace:issue-key",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:hosted-service-commerce",
+      "target": "flow:serve-hosted-inference",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:parse",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:migration-route",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:validate-legacy",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:select-provider",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:stream-response",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:serve-hosted-inference",
+      "target": "step:serve-hosted-inference:account",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:hosted-service-commerce",
+      "target": "flow:fund-console-billing",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:fund-console-billing",
+      "target": "step:fund-console-billing:checkout",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:fund-console-billing",
+      "target": "step:fund-console-billing:verify-webhook",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:fund-console-billing",
+      "target": "step:fund-console-billing:credit",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:fund-console-billing",
+      "target": "step:fund-console-billing:reload",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:session-sharing",
+      "target": "flow:publish-session-share",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:publish-session-share",
+      "target": "step:publish-session-share:check-config",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:publish-session-share",
+      "target": "step:publish-session-share:create-identity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:publish-session-share",
+      "target": "step:publish-session-share:sync-history",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "flow:publish-session-share",
+      "target": "step:publish-session-share:merge-snapshot",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:session-sharing",
+      "target": "flow:revoke-session-share",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:revoke-session-share",
+      "target": "step:revoke-session-share:request-delete",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:revoke-session-share",
+      "target": "step:revoke-session-share:remove-storage",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:revoke-session-share",
+      "target": "step:revoke-session-share:clear-local",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "domain:models-and-integrations",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "每轮执行从当前 Location 目录解析所选模型、变体与供应商连接。",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "domain:tools-and-approvals",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "本地 tool-call 经 canonical registry、叶子授权和输出结算后回写持久会话。",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "domain:projects-and-changes",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "会话绑定项目 Location，runner 使用该位置服务和快照；回退依赖消息边界。",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:tools-and-approvals",
+      "target": "domain:projects-and-changes",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "文件路径、副作用和已记住的授权分别受 Location 与 Project 约束。",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:models-and-integrations",
+      "target": "domain:hosted-service-commerce",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "OpenCode 供应商连接可以消费 Zen / Go 的托管推理接口，其他供应商连接独立存在。",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:agent-sessions",
+      "target": "domain:session-sharing",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "legacy SessionShare / ShareNext 发布会话事件与 diff；不表示 V2 运行链路已具备分享接口。",
+      "weight": 0.6
+    }
+  ],
+  "layers": [],
+  "tour": []
+}
