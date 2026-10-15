@@ -1,87 +1,163 @@
 # OpenCode 中文代码库分析
 
-OpenCode 是开源 AI 编程代理，提供 CLI、TUI、Web 和桌面界面。仓库通过 Schema、Core、Protocol、Server、Client 等包组织领域契约、会话执行、模型接入、工具权限与客户端通信，并包含 SDK、控制台和部署设施。
+开源 AI 编程代理，以 Bun 和 TypeScript 工作区组织持久会话执行核心、模型与工具能力、HTTP 服务、终端、Web 和 Electron 桌面界面，并提供 GUI 扩展、嵌入式 SDK 与独立分发服务。
 
-分析时间：2026-09-19T09:26:09.615Z；提交：`7c2199d84a5830f70a8250731a42ff958145b4d6`。
+分析提交：`57e0614a5eb2acd08bb23e50b09ea9362168168d`；生成时间：2026-10-14T15:52:06.564Z。输出语言：简体中文。
 
-覆盖 4988 个文件；本次重分析 4569 个，复用未变更文件 419 个。生成 10956 个节点、23973 条关系、10 个架构层和 14 步导览。
+覆盖 **7191/7191 个文件**，生成 **15038 个节点、36414 条关系、10 个架构层和 15 步导览**。
+本次涉及 5904 个新增或变更文件；1287 个未变文件在复用前通过内容指纹核验。366 个批次共带入 6964 个文件，其余 227 个未变文件直接保留。
 
-## 文件类别
+## 从入口到一次模型调用
 
-- infra：34
-- code：3446
-- config：410
-- docs：823
-- markup：178
-- data：95
-- script：2
+`packages/cli/src/index.ts` 使用 Effect 命令框架和延迟导入选择命令。TUI、Web 与桌面界面通过客户端接口调用服务。Schema 定义共享数据，Protocol 定义 HTTP 与事件契约，Server 绑定领域处理器；Client 只需要 Schema/Protocol 的运行时契约，SDK 进一步组合客户端与可嵌入服务。
 
-## 节点与关系
+`Session.prompt` 先准入 durable inbox，再请求进程内执行协调器唤醒。交付时将 inbox 消费与可见消息写入放在同一投影事务。执行模块读取 Session，再由 `Instance.Service.provide(session)` 选择环境能力；Runner 组织模型请求与工具执行，每次物理尝试有显式的 `llm.stream` 调用。
 
-- 节点 file：3620
-- 节点 function：5404
-- 节点 class：535
-- 节点 service：20
-- 节点 document：823
-- 节点 config：417
-- 节点 table：111
-- 节点 pipeline：26
+```mermaid
+flowchart LR
+  UI[CLI / TUI / Web / Desktop] --> Client[Client]
+  Client --> Server[Server 与 Protocol]
+  Server --> Session[Session 准入]
+  Session --> Inbox[持久化 inbox]
+  Session --> Execution[进程内执行协调]
+  Execution --> Instance[Instance 选择环境]
+  Instance --> Runner[SessionRunner]
+  Runner --> AI[AI 模型接入]
+  Runner --> Tools[工具与权限]
+  Runner --> Events[事件与数据库投影]
+  Events --> Client
+```
 
-- 关系 contains：5953
-- 关系 exports：3454
-- 关系 calls：3197
-- 关系 imports：8834
-- 关系 tested_by：1451
-- 关系 deploys：11
-- 关系 triggers：16
-- 关系 documents：811
-- 关系 configures：163
-- 关系 defines_schema：15
-- 关系 depends_on：68
+## 关键概念
 
-## 架构分层
+- **准入和执行分开**：输入已接受不代表已经出现在模型可见历史；steer 和 queue 在不同边界交付。
+- **重试采用首次准入结果**：用户和合成输入 ID 在 Session、类型相符时幂等，已交付输入可从消息投影恢复身份。
+- **执行协调属于当前进程**：同一会话的请求协调到同一执行链，不同会话可以并发。durable claim 用于重启恢复，不代表集群所有权。
+- **历史驱动继续执行**：逻辑 Step 与物理尝试不同；继续时从持久化历史恢复，避免仅靠内存工具循环推进。
+- **指令由领域产生、会话保存**：Instructions 组合来源，InstructionState 与 History 保存值、epoch 和历史更新；当前实现没有旧版 SystemContext Registry。
+- **扩展与宿主通过契约交互**：GUI 扩展通过 SDK 契约、IPC、注册表和存储访问宿主；App 组织数据与交互，session-ui 负责共享消息呈现。
+- **发布服务单独部署**：files 服务负责 R2 公共下载，update 服务选择渠道制品和渐进更新，www 服务提供新的 Astro 文档站。
 
-- **共享数据契约与协议**：Schema 定义跨包共享的会话、输入、消息、位置、模型和工具数据；Protocol 定义 HTTP 与事件协议，作为 Core、Server 与 Client 之间稳定的契约边界。
-- **会话核心与模型执行**：Core 承担 V2 会话持久化、输入准入、进程内执行协调、位置作用域服务、工具和权限；LLM、CodeMode 与 Effect SQLite 适配包提供模型调用和存储能力。
-- **服务端 API 与事件分发**：Server 将 Core 领域能力接到 Protocol 定义的 HTTP API，装配处理器、服务层和事件流，是客户端访问会话与工作区能力的服务端边界。
-- **旧版运行时与兼容实现**：packages/opencode 保留旧版命令入口、会话与模型编排、配置、工具、权限、数据迁移及桥接实现；该层与拆分后的 Core、Protocol、Server 同时存在。
-- **终端、桌面与共享界面**：CLI、TUI、App 和 Desktop 提供用户入口；UI、Session UI 和 Storybook 承担可复用组件、会话呈现、状态交互、主题与组件展示。
-- **客户端 SDK 与外部集成**：Client 通过 Schema 和 Protocol 访问服务；SDK Next 组合 Client、Core 与 Server 提供嵌入式入口。另含旧版 SDK、插件契约、HTTP API 代码生成、VS Code、GitHub 与 Slack 集成。
-- **云端控制台与站点服务**：Console 提供账户、组织、计费、模型网关及控制台界面和数据库迁移；Enterprise、Function、Stats 与 Web 提供企业页面、云函数、指标展示和公开站点。
-- **测试与验证**：集中展示各包单元测试、集成测试、端到端测试及夹具、快照和基准场景，并纳入 HTTP 录制回放工具，便于追踪行为保障与跨实现一致性。
-- **工程配置、基础设施与发布**：管理工作区与各包配置、CI/CD、构建生成脚本、依赖补丁、Nix 环境、容器镜像、SST 基础设施及发布打包资源。
-- **文档与设计规范**：收纳项目说明、使用指南、多语言文档、贡献约定、设计规范及开发说明，为代码结构与协议演进提供背景。
+## 架构层
+
+- **共享数据契约与协议**（137 个文件级节点）：Schema 定义共享领域数据，Protocol 定义 HTTP 与事件接口，为 Core、Server 和 Client 提供可校验的公共契约。
+- **会话核心与模型执行**（732 个文件级节点）：Core 管理会话准入、持久事件、执行协调、指令历史、工具与权限，AI、CodeMode 和共享运行工具提供模型接入与受控执行能力。
+- **服务端 API 与事件分发**（53 个文件级节点）：Server 装配 Protocol 的请求处理器、认证、事件流与进程或嵌入入口，并连接 Core 领域服务与恢复生命周期。
+- **终端、桌面与共享界面**（1483 个文件级节点）：CLI、TUI、Web App 与 Electron 提供用户入口，session-ui、UI、主题、图表和公式包提供共用呈现与交互能力。
+- **GUI 扩展与窗口宿主**（850 个文件级节点）：GUI 扩展实现浏览器、终端、文件预览和更新等功能，通过 SDK 契约、IPC、注册表与存储连接 App 窗口扩展宿主。
+- **客户端 SDK 与外部集成**（129 个文件级节点）：Client 提供契约驱动的 Promise、Effect 与 Solid 接口，SDK 组合嵌入式服务，插件、浏览器与外部集成暴露扩展边界。
+- **云端控制台与站点服务**（696 个文件级节点）：Console、Stats、企业与分享站点承载云端功能，独立 files、update 和 www 服务提供下载分发、更新选择和文档站运行。
+- **测试与验证**（1864 个文件级节点）：包内测试、录制夹具、组件故事、性能场景、simulation 与 HTTP 录制工具验证跨层行为、协议适配和界面状态。
+- **工程配置、基础设施与发布**（461 个文件级节点）：工作区清单、构建与生成脚本、CI/CD、容器、基础设施和发布工具组织仓库检查、制品生成及部署。
+- **文档与设计规范**（828 个文件级节点）：README、开发约定、多语言用户文档、设计规范与学习笔记解释产品使用、架构决策和协作流程。
 
 ## 推荐阅读路径
 
-1. **认识 OpenCode**：从 README 认识这个开源 AI 编程代理及其安装入口，再用工作区清单定位 CLI、桌面应用和 Web 界面。这个仓库包含多个产品入口和共享包，后续导览将沿一次会话请求串起契约、执行、持久化与界面。
-2. **从命令进入运行时**：CLI 入口用 yargs 注册 run、serve、TUI 等命令，并设置日志、插件和进程相关选项；先读命令分派，就能区分交互入口与服务启动入口。沿 run 和 serve 继续阅读时，要留意 packages/opencode 仍保留旧版实现与兼容路径，而新的 V2 领域能力已经拆入独立包。
-3. **建立跨包契约地图**：先认识 Schema 中的会话与持久化输入，再看 Protocol 如何组合 HTTP 分组和中间件契约。Schema 为 Core 与 Protocol 提供共享数据，Server 组合 Core 与 Protocol；Client 只依赖 Schema 与 Protocol，避免把服务器实现带进客户端。Protocol 由调用者注入位置服务键，Client 则通过契约适配保留公共错误和端点信息。
-4. **请求穿过服务边界**：有了公共契约，再看 Server 如何注入真实的 Location 中间件、认证和处理器，并装配 Core 服务。Session 处理器把 prompt、delivery 和 resume 交给 SessionV2，路由装配则把抽象执行接口替换为进程本地实现；HTTP 层因此承担协议转换，而会话状态规则留在领域层。
-5. **提示先持久化准入**：进入 SessionV2 后，prompt 先持久化一条 session_input，再默认发送 advisory wake；resume:false 只完成准入。输入已接受与已进入可见历史是两个阶段，SessionInput 用准入和提升序号记录它们，相同消息 ID 仅允许会话、内容及 delivery 完全一致的重试。默认 steer 在安全边界提升，queue 则等到会话原本将空闲时才逐条提升。
-6. **按会话协调执行**：持久化准入之后，进程全局的 SessionExecution 按 Session ID 接受唤醒、显式恢复与中断，协调器让同一会话串行执行并允许不同会话并行。真正开始 drain 时才从 SessionStore 找到位置，再经 LocationServiceMap 获取该位置的 Runner。这里的协调与所有权属于当前进程，不能把一次 drain 当作持久化任务，也不能把 advisory wake 理解为崩溃后自动重试模型调用。
-7. **模型轮次与工具权限**：位置确定后，Runner 解析模型、读取历史并执行显式的提供方轮次，每轮只有一次 llm.stream(request)。模型协议适配由 LLM 包承担，而工具注册、权限规则和工具执行仍由位置作用域的领域服务提供；工具调用先记录，再执行并等待结果结算。需要继续时重新加载投影历史，新增用户输入会重置代理的轮次额度。
-8. **上下文如何进入模型**：上一站的模型请求还依赖系统上下文：SystemContext 定义来源组合与快照规则，Registry 在 Location 范围注册来源，内置来源提供环境与日期。Session 自己持久化 Context Epoch，并通过 History 选择压缩点和基线之后的消息，因此上下文变化可以随会话历史被解释。来源暂时不可用与来源被移除有不同语义，刷新时会保留暂不可用来源的原有快照。
-9. **事件与数据库投影**：回看前面反复出现的持久化与历史，可以沿事件服务、事件表、Session 投影器和会话表理解数据如何落盘。事件记录与读模型各有职责，迁移文件展示 session_input 如何转为事件序号驱动的结构。事件回放的 owner 声明属于事件体系，应与上一站之前介绍的进程内会话执行所有权分开理解。
-10. **客户端与嵌入式组合**：了解服务端状态后，再看外部程序如何通过 Client 使用同一套公共契约；客户端提供 Promise 与 Effect 入口，生成代码由包内 generate 流程维护。sdk-next 则把 Client、Core 和 Server 组合在同一 Layer memoMap 中，通过内存 fetch 调用嵌入式 HTTP handler，并提供同进程工具注册。普通客户端和嵌入式 SDK 因而共享协议，但后者有明确的运行时组合职责。
-11. **Solid 界面与同步**：沿客户端回到用户界面，App 组合服务器、同步、主题、语言和标签页等 Provider，再把会话路由交给页面。服务器 SDK 负责连接和事件流，同步上下文维护服务器范围的数据，会话页面把时间线、输入、审阅、权限请求与终端面板串起来。这组紧密协作的模块还区分服务器身份和工作区身份，让同一工作区内切换会话时保留终端与文件状态。
-12. **终端与桌面宿主**：同一产品还通过 TUI 提供终端交互，通过 Electron 提供桌面宿主；先看 TUI 的入口和应用装配，再看桌面主进程如何启动窗口与后台服务。Electron 主进程负责单实例、IPC、深层链接、更新及退出清理，并根据 sidecar 版本选择旧版子进程或 V2 后台 CLI。区分界面状态与宿主进程生命周期，有助于定位连接、启动和退出问题。
-13. **用测试验证整条链路**：现在可以用测试回查前面的关键承诺：协调器测试覆盖同会话执行合并、唤醒和清理，Runner 测试覆盖真实轮次、工具及上下文行为，App 的 Playwright 配置连接界面端到端验证。CI 在 Linux 与 Windows 上运行测试，并在 Linux 校验生成客户端与 HttpApi 契约。新增验证应放在对应包执行，遵守仓库禁止从根目录直接运行测试的约定。
-14. **从源码走向发布**：最后用发布工作流把本地理解延伸到交付：流水线串起版本、CLI 构建、Windows 签名、Electron 构建和发布。SST 入口与 infra/app 则展示云端基础设施、公共 Worker、文档站和 Web 应用的部署边界。至此可以从用户入口追到会话执行和数据，再按目标产品找到测试与发布路径。
+1. **认识产品与工作区**：先从 README 理解 OpenCode 的 AI 编程代理用途，再看根清单如何组织 Bun 工作区。会话核心、服务器、终端和桌面界面分包演进；后续导览沿着一次用户输入经过的边界展开。
+   [README.md](../README.md) · [package.json](../package.json)
 
-## 校验与边界
+2. **命令入口与延迟装配**：CLI 入口把 Effect 命令树交给 Runtime 执行，具体处理器在命令被选择后才加载。默认命令连接服务器并启动 TUI，因此命令行参数、服务连接和交互界面分别有自己的职责。
+   [packages/cli/src/index.ts](../packages/cli/src/index.ts) · [packages/cli/src/commands/commands.ts](../packages/cli/src/commands/commands.ts) · [packages/cli/src/framework/runtime.ts](../packages/cli/src/framework/runtime.ts) · [packages/cli/src/commands/handlers/default.ts](../packages/cli/src/commands/handlers/default.ts)
 
-Schema、全文件覆盖、节点引用、架构层归属、导览引用、中文摘要及行号范围校验通过。保留 1414 条孤立节点等提示，详情见 analysis-report.json。
+3. **公共契约到 HTTP 服务**：共享 Schema 定义会话等领域数据，Protocol 用这些数据声明 HTTP 与事件接口。Server 汇总契约并组合处理器，再把请求交给 Core；Client 的运行时契约来自 Schema 和 Protocol，这一方向也约束客户端生成。
+   [packages/schema/src/session.ts](../packages/schema/src/session.ts) · [packages/protocol/src/api.ts](../packages/protocol/src/api.ts) · [packages/server/src/api.ts](../packages/server/src/api.ts) · [packages/server/src/handlers.ts](../packages/server/src/handlers.ts) · [packages/client/README.md](../packages/client/README.md)
 
-- 这是静态结构与语义分析，未运行产品代码或测试；导入关系不等于运行时调用。
-- 部分工作区包别名未被 bundled 导入解析器识别；依据清单和已核对源码补充包依赖，跨包函数调用不保证完整。
-- Effect.fn、namespace 内成员及动态调用的符号覆盖有限，关键流程通过文件级中文摘要表达。
-- 生成代码、重复语言文档和二进制资源采用较粗粒度；英文测试标题及代码标识符保留原文。
-- 高连接模块的批次邻居提示存在截断；完整的已解析 importMap 仍在组装时核对。
-- 无关系的文档、配置、资源等节点作为独立节点保留；不会为了连通图而创建推测边。
+4. **先准入，再交付输入**：Session.prompt 先持久接纳输入，再按 resume 选项唤醒执行。inbox 只保存尚未交付的工作；交付事件在同一投影事务内消费 inbox 并写入可见消息。同 Session、同类型的用户或合成输入 ID 重试采用首次准入结果，避免重复输入。
+   [packages/core/src/session/session.ts](../packages/core/src/session/session.ts) · [packages/core/src/session/inbox.ts](../packages/core/src/session/inbox.ts) · [packages/core/src/session/event.ts](../packages/core/src/session/event.ts) · [packages/core/src/session/projector.ts](../packages/core/src/session/projector.ts)
 
-包含当前工作区已暂存的两份中文开发指南；未改动产品源码。
+5. **执行协调与重启恢复**：SessionExecution 和 RunCoordinator 以 Session ID 在当前进程内协调 resume、wake 与中断。drain 开始时读取会话，再通过 Instance 服务取得环境能力；持久 claim 保留需在重启后恢复的执行事实。服务启动恢复这些 claim，它不构成集群所有权或恰好执行一次的保证。
+   [packages/core/src/session/execution.ts](../packages/core/src/session/execution.ts) · [packages/core/src/session/run-coordinator.ts](../packages/core/src/session/run-coordinator.ts) · [packages/core/src/instance/service.ts](../packages/core/src/instance/service.ts) · [packages/server/src/process.ts](../packages/server/src/process.ts)
 
-结构指纹阶段对 packages/docs/openapi.json 给出 JSON 解析提示：当前 Windows 检出保存的是 ../sdk/openapi.json 路径文本；指纹流程仍成功生成全部 4988 个文件的基线。
+6. **逻辑步骤与物理尝试**：Runner 在安全边界选择输入并装配历史，一次逻辑 Step 可以包含重试或续接。step.ts 对每次物理尝试显式调用 llm.stream，并把模型输出和工具结果写回持久历史。AI 层统一模型协议与流式能力，让 Core 保持执行策略的所有权。
+   [packages/core/src/session/runner/llm.ts](../packages/core/src/session/runner/llm.ts) · [packages/core/src/session/runner/step.ts](../packages/core/src/session/runner/step.ts) · [packages/ai/src/llm.ts](../packages/ai/src/llm.ts) · [packages/ai/src/route.ts](../packages/ai/src/route.ts)
 
-看板已启动并验证页面及图谱数据均返回 200。启动恢复过程与非阻塞 tsconfig 提示已记录在 analysis-report.json。
+7. **指令历史与上下文压缩**：Instructions 组合领域产生的指令，Discovery 观察环境来源，Session 的 InstructionState 保存内容哈希与基线。后续指令变化进入可重放历史，压缩则调整上下文和指令 epoch。SessionCompaction 选择摘要或模型原生压缩，统一处理中断、重试、用量和检查点。
+   [packages/core/src/instructions/index.ts](../packages/core/src/instructions/index.ts) · [packages/core/src/instruction-discovery.ts](../packages/core/src/instruction-discovery.ts) · [packages/core/src/session/instruction-state.ts](../packages/core/src/session/instruction-state.ts) · [packages/core/src/session/history.ts](../packages/core/src/session/history.ts) · [packages/core/src/session/compaction.ts](../packages/core/src/session/compaction.ts)
+
+8. **工具执行与能力边界**：模型产生的工具请求进入工具运行时，由权限服务和插件契约决定可用能力与执行方式。CodeMode 在受限 JavaScript 解释器中组合工具，并显式处理宿主值、资源限制和异常。这里把模型提出的操作转换成可控制、可观察的领域行为。
+   [packages/core/src/tool/runtime.ts](../packages/core/src/tool/runtime.ts) · [packages/core/src/permission.ts](../packages/core/src/permission.ts) · [packages/codemode/src/codemode.ts](../packages/codemode/src/codemode.ts) · [packages/plugin/src/effect/plugin.ts](../packages/plugin/src/effect/plugin.ts)
+
+9. **客户端与嵌入式 SDK**：Client 把服务器契约投影为 Promise、Effect 等调用表面，成为终端与 Web 界面的公共入口。SDK 进一步组合 Client、Core 和 Server，在进程内直接执行装配好的路由，并管理插件与关闭生命周期。阅读 SDK 文档可分清远程连接和嵌入宿主这两种使用方式。
+   [packages/client/src/promise/index.ts](../packages/client/src/promise/index.ts) · [packages/sdk/src/internal/host.ts](../packages/sdk/src/internal/host.ts) · [packages/sdk/README.md](../packages/sdk/README.md)
+
+10. **会话数据如何成为界面**：Web App 装配多服务器环境，再由会话模型与屏幕绑定当前路由、输入框、请求面板和时间线。MountedSession 固定一次挂载的身份，SessionScreen 承接该会话的界面动作。session-ui 从消息构造共享文档视图，使数据获取和消息呈现能够分别演进。
+   [packages/app/src/app.tsx](../packages/app/src/app.tsx) · [packages/app/src/session/model.ts](../packages/app/src/session/model.ts) · [packages/app/src/session/screen.tsx](../packages/app/src/session/screen.tsx) · [packages/session-ui/src/document.ts](../packages/session-ui/src/document.ts)
+
+11. **GUI 扩展连接宿主**：窗口扩展宿主加载并管理扩展依赖与生命周期，host-apis 将界面能力暴露给扩展。GUI 包通过 Contract、Ipc、Registry 和 Store 声明交互边界，主进程与渲染进程分别装配入口。浏览器、终端和文件预览因此可以按需加载，又共享一致的宿主协议。
+   [packages/app/src/runtime/extension/host.tsx](../packages/app/src/runtime/extension/host.tsx) · [packages/app/src/runtime/extension/host-apis.tsx](../packages/app/src/runtime/extension/host-apis.tsx) · [packages/gui-extensions/src/sdk/index.ts](../packages/gui-extensions/src/sdk/index.ts) · [packages/gui-extensions/src/main.ts](../packages/gui-extensions/src/main.ts) · [packages/gui-extensions/src/renderer.ts](../packages/gui-extensions/src/renderer.ts)
+
+12. **终端组件与语义主题**：TUI 用 OpenTUI 和 Solid 组合真实生产组件，主题解析把语义角色转换成可显示颜色。反馈、动作和表单字段拥有各自的 token，避免组件依赖某一套配色。storybook 以本地夹具展示这些组件的状态与键盘操作，可直接用于界面探索。
+   [packages/tui/src/app.tsx](../packages/tui/src/app.tsx) · [packages/theme/src/tui/schema.ts](../packages/theme/src/tui/schema.ts) · [packages/theme/src/tui/resolve.ts](../packages/theme/src/tui/resolve.ts) · [packages/tui/src/feature-plugins/system/storybook/index.tsx](../packages/tui/src/feature-plugins/system/storybook/index.tsx)
+
+13. **云端功能与分发服务**：Console 的账单领域和 Stats 同步服务展示了代理运行之外的云端能力。独立 files 服务处理公共下载，update 服务按渠道、版本和渐进发布条件选择更新制品。它们拥有独立部署边界，阅读时需要与本地会话服务区分。
+   [packages/console/core/src/billing.ts](../packages/console/core/src/billing.ts) · [packages/stats/server/src/stat-sync.ts](../packages/stats/server/src/stat-sync.ts) · [services/files/src/index.ts](../services/files/src/index.ts) · [services/update/src/index.ts](../services/update/src/index.ts)
+
+14. **验证行为与契约生成**：测试流水线与检查流水线覆盖包级行为、类型和工程约束，HTTP 录制器支持真实传输的可重复验证。Client 生成脚本从 Server HttpApi 派生客户端表面，因此公共协议改变后应重新生成并检查结果。测试、故事和夹具在图谱中保留独立层，便于沿依赖寻找验证入口。
+   [.github/workflows/test.yml](../.github/workflows/test.yml) · [.github/workflows/check.yml](../.github/workflows/check.yml) · [packages/http-recorder/src/index.ts](../packages/http-recorder/src/index.ts) · [packages/client/script/build.ts](../packages/client/script/build.ts)
+
+15. **从源码到发布产物**：最后查看服务说明、CLI 容器和发布工作流，理解代码如何成为安装包与可部署服务。独立更新服务有自己的部署流程，文档站也随服务目录演进。由此把前面的运行链与构建、检查和交付链连接起来。
+   [services/README.md](../services/README.md) · [packages/cli/Dockerfile](../packages/cli/Dockerfile) · [.github/workflows/publish.yml](../.github/workflows/publish.yml) · [.github/workflows/deploy-update.yml](../.github/workflows/deploy-update.yml)
+
+## 文件类别
+
+| 类别 | 数量 |
+| --- | ---: |
+| 基础设施 (infra) | 36 |
+| 代码类（含少量资源） (code) | 5348 |
+| 配置 (config) | 677 |
+| 文档 (docs) | 828 |
+| 标记与样式 (markup) | 193 |
+| 脚本 (script) | 7 |
+| 数据与迁移 (data) | 102 |
+
+## 节点类别
+
+| 类别 | 数量 |
+| --- | ---: |
+| 文件 (file) | 5548 |
+| 函数 (function) | 7273 |
+| 类与接口 (class) | 532 |
+| 服务与容器阶段 (service) | 21 |
+| 流水线 (pipeline) | 28 |
+| 表与迁移 (table) | 125 |
+| 配置 (config) | 683 |
+| 文档 (document) | 828 |
+
+## 关系类别
+
+| 关系 | 数量 |
+| --- | ---: |
+| imports (imports) | 19523 |
+| tested_by (tested_by) | 2058 |
+| contains (contains) | 7818 |
+| exports (exports) | 4722 |
+| related (related) | 754 |
+| calls (calls) | 1356 |
+| deploys (deploys) | 6 |
+| triggers (triggers) | 2 |
+| defines_schema (defines_schema) | 17 |
+| documents (documents) | 100 |
+| configures (configures) | 52 |
+| migrates (migrates) | 6 |
+
+## 验证与分析边界
+
+图谱通过插件 KnowledgeGraph Schema、文件覆盖、路径存在性、实际源码行号范围、节点与关系唯一性、关系目标、分层归属和导览引用校验；扫描器给出的全部内部导入都经过完整性检查。修正了一处 Docker 阶段的末尾空行范围，并对扫描器末行计数差异使用实际源码核验。
+
+另以 TypeScript AST 和工作区清单补充 7194 条真实导入关系，覆盖包导出别名、条件实现和字面量动态导入。类型引用、可选宿主实现与运行时调用含义不同，条件导出不能理解为所有分支同时运行。
+
+仍有 9 条引用不建边：5 条音频资源按既有忽略配置排除，4 条 packages/web 旧类型引用没有当前包清单导出。没有为这些引用创建不存在的文件节点。生成客户端的机械端点保留文件节点；Effect.fn 的关键生成器入口已按源码补充，但静态图谱不承诺枚举所有动态行为。
+
+独立节点共 1206 个，通常是未被直接导入的文档、资源、配置或测试夹具。保留这些节点可维持完整文件清单；没有为消除独立节点而虚构调用关系。
+
+分批工具记录了 61 条大依赖群拆分或邻居上下文上限提示。它们影响分析批次的组织；完整 importMap 仍参与最终校验。分析代理多次因账户用量限制中断，最后由主任务接管并复用已保存产物完成。初次扫描误纳入分析自身产物、接口批次遗漏范围外邻居，以及合并器忽略 batch-existing.json 和跨类别导入的问题均已修复；没有跳过批次。
+
+图谱表示静态结构与经源码核对的关系，不承诺覆盖所有动态运行路径。部分旧 README 已落后于当前目录，例如 Stats 的旧 function 路径；本导览使用实际存在的 app/core/server 文件。
+
+完整机器可读结果见 [knowledge-graph.json](knowledge-graph.json)；计数、阶段记录与警告见 [analysis-report.json](analysis-report.json)。
+
+## 本地交互面板
+
+面板已作为本机后台进程启动，HTTP 返回的提交、节点和关系数量与保存图谱一致，浏览器已显示完整的 15 步中文导览。当前访问地址保存在 `dashboard.knowledge.session.json`。
+
+启动过程中已解决配置加载模式、沙箱回环连接和终端进程生命周期问题；配置打包仍提示仓库未安装 `@tsconfig/bun`，不影响本次已验证的面板显示。
